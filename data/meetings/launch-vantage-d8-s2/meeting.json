@@ -1,0 +1,1817 @@
+{
+ "meeting_id": "launch-vantage-d8-s2",
+ "config": {
+  "theme": "Go/no-go for the Aurora mobile app launch",
+  "domain_pack": "product_launch",
+  "drama": 0.8,
+  "seed": 2,
+  "duration_min": 4.2,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   9,
+   15,
+   22,
+   31,
+   36,
+   46,
+   56
+  ],
+  "reviewed_noclaim": [
+   31
+  ]
+ },
+ "cast": {
+  "theme": "Go/no-go for the Aurora mobile app launch",
+  "personas": [
+   {
+    "name": "Brooke",
+    "role": "Founder and CEO",
+    "goals": "Launch on January 6, the New Year's resolution window",
+    "hidden_agenda": "Investors were promised January numbers",
+    "verbosity": 4,
+    "wpm": 180,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Ian",
+    "role": "CTO",
+    "goals": "Don't break billing for 42,000 paying people",
+    "hidden_agenda": "Has a resignation letter half-written",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Nadine",
+    "role": "Head of support",
+    "goals": "A launch her team can survive",
+    "hidden_agenda": "Two agents just gave notice",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Arturo",
+    "role": "Growth marketer",
+    "goals": "The biggest launch campaign the company has run",
+    "hidden_agenda": "Already signed three influencer contracts",
+    "verbosity": 4,
+    "wpm": 185,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Aurora 3.0 launch - go/no-go",
+   "org": "Vantage Fitness (fictional)",
+   "agenda": [
+    {
+     "id": "readiness",
+     "title": "App readiness",
+     "goal": "Stability against the bar",
+     "timebox_min": 0.88
+    },
+    {
+     "id": "billing",
+     "title": "Billing migration",
+     "goal": "Decide whether the subscription migration is safe",
+     "timebox_min": 1.09
+    },
+    {
+     "id": "marketing",
+     "title": "Launch campaign",
+     "goal": "Size the campaign to what support can handle",
+     "timebox_min": 1.47
+    },
+    {
+     "id": "call",
+     "title": "The call",
+     "goal": "Go or no-go for January 6",
+     "timebox_min": 0.79
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "crash_free_sessions",
+     "statement": "Crash-free sessions = 98.7%",
+     "value": "98.7%"
+    },
+    {
+     "id": "F2",
+     "key": "crash_free_target",
+     "statement": "Crash-free target = 99.5%",
+     "value": "99.5%"
+    },
+    {
+     "id": "F3",
+     "key": "billing_users",
+     "statement": "Subscribers to migrate to the new billing system = 42,000",
+     "value": "42,000"
+    },
+    {
+     "id": "F4",
+     "key": "billing_error_rate",
+     "statement": "Billing errors in the migration test = 1.2%",
+     "value": "1.2%"
+    },
+    {
+     "id": "F5",
+     "key": "influencer_budget",
+     "statement": "Influencer campaign budget = $60,000",
+     "value": "$60,000"
+    },
+    {
+     "id": "F6",
+     "key": "launch_date",
+     "statement": "Planned launch = January 6",
+     "value": "January 6"
+    },
+    {
+     "id": "F7",
+     "key": "waitlist",
+     "statement": "Waitlist sign-ups = 15,000",
+     "value": "15,000"
+    },
+    {
+     "id": "F8",
+     "key": "support_agents",
+     "statement": "Support agents = 9",
+     "value": "9"
+    },
+    {
+     "id": "F9",
+     "key": "expected_tickets",
+     "statement": "Expected tickets in launch week = 4,000",
+     "value": "4,000"
+    },
+    {
+     "id": "F10",
+     "key": "store_approval",
+     "statement": "App Store approval received December 18",
+     "value": "December 18"
+    },
+    {
+     "id": "F11",
+     "key": "monthly_price",
+     "statement": "Monthly price = $12.99",
+     "value": "$12.99"
+    },
+    {
+     "id": "F12",
+     "key": "beta_churn",
+     "statement": "Beta churn = 7% per month",
+     "value": "7%"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "readiness",
+    "summary": "Brooke claims the bar is met; Ian disagrees",
+    "n_turns": 12,
+    "events": []
+   },
+   {
+    "agenda_item": "billing",
+    "summary": "The migration; the error rate argument",
+    "n_turns": 14,
+    "events": []
+   },
+   {
+    "agenda_item": "marketing",
+    "summary": "The campaign vs support capacity; Nadine's agent count is wrong at first; a tangent about a ski trip",
+    "n_turns": 22,
+    "events": []
+   },
+   {
+    "agenda_item": "call",
+    "summary": "Go or no-go",
+    "n_turns": 10,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Brooke",
+   "text": "Okay, let's go. We're at ninety-nine and a half crash-free, we hit the target, so readiness is a yes.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Ian",
+   "text": "We're at ninety-eight point seven. The target is ninety-nine five. We haven't hit it.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E002",
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Brooke",
+   "text": "Ninety-eight seven, ninety-nine five. That's a rounding difference.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E004",
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Ian",
+   "text": "It's twice as many crashes. On a workout app, a crash mid-workout is a one-star review.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Arturo",
+   "text": "Users don't care about decimals, Ian.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Ian",
+   "text": "They care when the timer resets in the middle of a sprint interval.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Nadine",
+   "text": "Where are the crashes?",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Ian",
+   "text": "The new video player on older Android phones. We have a fix in testing.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Brooke",
+   "text": "When does the fix ship?",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Ian",
+   "text": "If testing goes well, the thirtieth.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Brooke",
+   "text": "Then readiness is a yes, pending the thirtieth.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Ian",
+   "text": "Pending. That's not a yes.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Brooke",
+   "text": "Billing. Ian.",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Ian",
+   "text": "We're moving forty-two thousand subscribers to the new billing system. The test run had one point two percent errors.",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [
+    "E009",
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Brooke",
+   "text": "Half a percent is nothing. That's basically clean.",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Nadine",
+   "text": "One percent of forty-two thousand is four hundred people charged wrong.",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [
+    "E012",
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Arturo",
+   "text": "Can't we just refund anyone who complains?",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Ian",
+   "text": "We can, but people who get double-charged at twelve ninety-nine don't complain. They cancel.",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Nadine",
+   "text": "Our beta churn is already seven percent a month.",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Brooke",
+   "text": "So what do you want, Ian?",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Ian",
+   "text": "Launch the app on the sixth, but don't migrate billing until February. Run both systems for a month.",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Brooke",
+   "text": "Two billing systems for a month. That's twice the work.",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Ian",
+   "text": "It's twice the work instead of four hundred angry people.",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Brooke",
+   "text": "Fine. Billing migrates in February. The app launches without it.",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Ian",
+   "text": "Thank you. I'll keep both systems running and write the cutover plan for February.",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Nadine",
+   "text": "It'd be nice if engineering looked over the help articles before launch, too.",
+   "agenda_item": "billing",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Arturo",
+   "text": "The campaign. We have sixty thousand for influencers and the waitlist is at fifty thousand.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E021",
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Brooke",
+   "text": "Fifty thousand people waiting. That's the story.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Nadine",
+   "text": "How many tickets are we expecting launch week?",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Arturo",
+   "text": "Our model says about four thousand.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Nadine",
+   "text": "With twelve agents, that's over three hundred tickets each. In one week.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Ian",
+   "text": "Twelve? I thought two people just left.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Nadine",
+   "text": "They did. Sorry, I'm still counting them. Nine agents.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Brooke",
+   "text": "Nine. Then we hire temps.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Arturo",
+   "text": "I was on the slopes in Whistler last week and three people in the lift line had the app.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Brooke",
+   "text": "In Whistler! That's the demographic.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Ian",
+   "text": "Did you actually ski, or just count app users?",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Nadine",
+   "text": "Can we hire temps before the sixth?",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Brooke",
+   "text": "We can. I'll approve the budget for four temps today.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Ian",
+   "text": "I just checked the waitlist dashboard. It's fifteen thousand, not fifty.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Arturo",
+   "text": "Fifteen. I was looking at the email list.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Brooke",
+   "text": "Fifteen is still great.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Arturo",
+   "text": "Maybe we hold back half the influencer posts until week two, when support has caught up.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Nadine",
+   "text": "That would help us a lot.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Brooke",
+   "text": "Let's see how week one goes before we hold anything back.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Arturo",
+   "text": "I've already signed three of the influencer contracts. They post on the sixth.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Ian",
+   "text": "You signed contracts? Before this meeting?",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Arturo",
+   "text": "They were going to go to a competitor.",
+   "agenda_item": "marketing",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Brooke",
+   "text": "The call. January sixth. Go.",
+   "agenda_item": "call",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Ian",
+   "text": "Conditional go. The crash fix ships, and billing stays where it is.",
+   "agenda_item": "call",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Nadine",
+   "text": "And the temps start before launch.",
+   "agenda_item": "call",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Brooke",
+   "text": "Fine. Conditional go for January sixth: crash fix in, billing in February, temps by launch.",
+   "agenda_item": "call",
+   "direction": null,
+   "event_ids": [
+    "E039",
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Nadine",
+   "text": "Could someone tell the support team tonight, so they hear it from us first?",
+   "agenda_item": "call",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Ian",
+   "text": "I'll write to them. They should hear it from the CTO.",
+   "agenda_item": "call",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Brooke",
+   "text": "Is the App Store approval still valid for the new build?",
+   "agenda_item": "call",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Ian",
+   "text": "The approval from the eighteenth covers this version. The crash fix needs a fast re-review.",
+   "agenda_item": "call",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Arturo",
+   "text": "Who's telling investors that billing moved to February?",
+   "agenda_item": "call",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Brooke",
+   "text": "Okay. We launch on the sixth. Good work, everyone.",
+   "agenda_item": "call",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 0,
+   "speaker": "Brooke",
+   "agenda_item": "readiness",
+   "fact_id": "F1",
+   "claimed_value": "99.5%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Ian",
+   "agenda_item": "readiness",
+   "fact_id": "F1",
+   "claimed_value": "98.7%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Ian",
+   "agenda_item": "readiness",
+   "fact_id": "F2",
+   "claimed_value": "99.5%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Brooke",
+   "agenda_item": "readiness",
+   "fact_id": "F1",
+   "claimed_value": "98.7%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Brooke",
+   "agenda_item": "readiness",
+   "fact_id": "F2",
+   "claimed_value": "99.5%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Nadine",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 7,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Brooke",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 9,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Brooke",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Ian",
+   "agenda_item": "billing",
+   "fact_id": "F3",
+   "claimed_value": "42,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Ian",
+   "agenda_item": "billing",
+   "fact_id": "F4",
+   "claimed_value": "1.2%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 14,
+   "speaker": "Brooke",
+   "agenda_item": "billing",
+   "fact_id": "F4",
+   "claimed_value": "0.5%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Nadine",
+   "agenda_item": "billing",
+   "fact_id": "F3",
+   "claimed_value": "42,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Nadine",
+   "agenda_item": "billing",
+   "fact_id": "F4",
+   "claimed_value": "1.2%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Arturo",
+   "agenda_item": "billing",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 17,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Ian",
+   "agenda_item": "billing",
+   "fact_id": "F11",
+   "claimed_value": "$12.99",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Nadine",
+   "agenda_item": "billing",
+   "fact_id": "F12",
+   "claimed_value": "7%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Brooke",
+   "agenda_item": "billing",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 20,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 23,
+   "speaker": "Brooke",
+   "agenda_item": "billing",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 24,
+   "speaker": "Ian",
+   "agenda_item": "billing",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Nadine",
+   "agenda_item": "billing",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Arturo",
+   "agenda_item": "marketing",
+   "fact_id": "F5",
+   "claimed_value": "$60,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 26,
+   "speaker": "Arturo",
+   "agenda_item": "marketing",
+   "fact_id": "F7",
+   "claimed_value": "50,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 27,
+   "speaker": "Brooke",
+   "agenda_item": "marketing",
+   "fact_id": "F7",
+   "claimed_value": "50,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Nadine",
+   "agenda_item": "marketing",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 29,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Arturo",
+   "agenda_item": "marketing",
+   "fact_id": "F9",
+   "claimed_value": "4,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 30,
+   "speaker": "Nadine",
+   "agenda_item": "marketing",
+   "fact_id": "F8",
+   "claimed_value": "12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Ian",
+   "agenda_item": "marketing",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 32,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Nadine",
+   "agenda_item": "marketing",
+   "fact_id": "F8",
+   "claimed_value": "9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 33,
+   "speaker": "Brooke",
+   "agenda_item": "marketing",
+   "fact_id": "F8",
+   "claimed_value": "9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Arturo",
+   "agenda_item": "marketing",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Nadine",
+   "agenda_item": "marketing",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 38,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 38,
+   "speaker": "Brooke",
+   "agenda_item": "marketing",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Ian",
+   "agenda_item": "marketing",
+   "fact_id": "F7",
+   "claimed_value": "15,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Arturo",
+   "agenda_item": "marketing",
+   "fact_id": "F7",
+   "claimed_value": "15,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Brooke",
+   "agenda_item": "marketing",
+   "fact_id": "F7",
+   "claimed_value": "15,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Arturo",
+   "agenda_item": "marketing",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Brooke",
+   "agenda_item": "marketing",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 48,
+   "speaker": "Brooke",
+   "agenda_item": "call",
+   "fact_id": "F6",
+   "claimed_value": "January 6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 51,
+   "speaker": "Brooke",
+   "agenda_item": "call",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 51,
+   "speaker": "Brooke",
+   "agenda_item": "call",
+   "fact_id": "F6",
+   "claimed_value": "January 6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Nadine",
+   "agenda_item": "call",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 53,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 53,
+   "speaker": "Ian",
+   "agenda_item": "call",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Brooke",
+   "agenda_item": "call",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 55,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 55,
+   "speaker": "Ian",
+   "agenda_item": "call",
+   "fact_id": "F10",
+   "claimed_value": "December 18",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 56,
+   "speaker": "Arturo",
+   "agenda_item": "call",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Brooke",
+   "text": "Okay, let's go. We're at ninety-nine and a half crash-free, we hit the target, so readiness is a yes.",
+   "start_s": 0.5,
+   "end_s": 6.833
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Ian",
+   "text": "We're at ninety-eight point seven. The target is ninety-nine five. We haven't hit it.",
+   "start_s": 7.989,
+   "end_s": 13.589
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Brooke",
+   "text": "Ninety-eight seven, ninety-nine five. That's a rounding difference.",
+   "start_s": 14.737,
+   "end_s": 17.403
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Ian",
+   "text": "It's twice as many crashes. On a workout app, a crash mid-workout is a one-star review.",
+   "start_s": 17.66,
+   "end_s": 24.06
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Arturo",
+   "text": "Users don't care about decimals, Ian.",
+   "start_s": 24.345,
+   "end_s": 26.291
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Ian",
+   "text": "They care when the timer resets in the middle of a sprint interval.",
+   "start_s": 27.326,
+   "end_s": 32.526
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Nadine",
+   "text": "Where are the crashes?",
+   "start_s": 33.462,
+   "end_s": 34.962
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Ian",
+   "text": "The new video player on older Android phones. We have a fix in testing.",
+   "start_s": 35.832,
+   "end_s": 41.432
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Brooke",
+   "text": "When does the fix ship?",
+   "start_s": 41.94,
+   "end_s": 43.607
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Ian",
+   "text": "If testing goes well, the thirtieth.",
+   "start_s": 44.413,
+   "end_s": 46.813
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Brooke",
+   "text": "Then readiness is a yes, pending the thirtieth.",
+   "start_s": 47.62,
+   "end_s": 50.286
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Ian",
+   "text": "Pending. That's not a yes.",
+   "start_s": 51.067,
+   "end_s": 53.067
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Brooke",
+   "text": "Billing. Ian.",
+   "start_s": 53.425,
+   "end_s": 54.092
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Ian",
+   "text": "We're moving forty-two thousand subscribers to the new billing system. The test run had one point two percent errors.",
+   "start_s": 54.723,
+   "end_s": 62.323
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Brooke",
+   "text": "Half a percent is nothing. That's basically clean.",
+   "start_s": 62.917,
+   "end_s": 65.583
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Nadine",
+   "text": "One percent of forty-two thousand is four hundred people charged wrong.",
+   "start_s": 66.506,
+   "end_s": 70.631
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Arturo",
+   "text": "Can't we just refund anyone who complains?",
+   "start_s": 71.826,
+   "end_s": 74.096
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Ian",
+   "text": "We can, but people who get double-charged at twelve ninety-nine don't complain. They cancel.",
+   "start_s": 75.245,
+   "end_s": 80.845
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Nadine",
+   "text": "Our beta churn is already seven percent a month.",
+   "start_s": 81.589,
+   "end_s": 84.964
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Brooke",
+   "text": "So what do you want, Ian?",
+   "start_s": 85.609,
+   "end_s": 87.609
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Ian",
+   "text": "Launch the app on the sixth, but don't migrate billing until February. Run both systems for a month.",
+   "start_s": 88.077,
+   "end_s": 95.277
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Brooke",
+   "text": "Two billing systems for a month. That's twice the work.",
+   "start_s": 95.513,
+   "end_s": 98.846
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Ian",
+   "text": "It's twice the work instead of four hundred angry people.",
+   "start_s": 99.073,
+   "end_s": 103.073
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Brooke",
+   "text": "Fine. Billing migrates in February. The app launches without it.",
+   "start_s": 103.738,
+   "end_s": 107.071
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Ian",
+   "text": "Thank you. I'll keep both systems running and write the cutover plan for February.",
+   "start_s": 107.589,
+   "end_s": 113.189
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Nadine",
+   "text": "It'd be nice if engineering looked over the help articles before launch, too.",
+   "start_s": 113.769,
+   "end_s": 118.644
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Arturo",
+   "text": "The campaign. We have sixty thousand for influencers and the waitlist is at fifty thousand.",
+   "start_s": 119.736,
+   "end_s": 124.601
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Brooke",
+   "text": "Fifty thousand people waiting. That's the story.",
+   "start_s": 125.327,
+   "end_s": 127.66
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Nadine",
+   "text": "How many tickets are we expecting launch week?",
+   "start_s": 128.421,
+   "end_s": 131.421
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Arturo",
+   "text": "Our model says about four thousand.",
+   "start_s": 131.857,
+   "end_s": 133.803
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Nadine",
+   "text": "With twelve agents, that's over three hundred tickets each. In one week.",
+   "start_s": 134.027,
+   "end_s": 138.527
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Ian",
+   "text": "Twelve? I thought two people just left.",
+   "start_s": 139.052,
+   "end_s": 141.852
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Nadine",
+   "text": "They did. Sorry, I'm still counting them. Nine agents.",
+   "start_s": 142.189,
+   "end_s": 145.564
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Brooke",
+   "text": "Nine. Then we hire temps.",
+   "start_s": 146.274,
+   "end_s": 147.941
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Arturo",
+   "text": "I was on the slopes in Whistler last week and three people in the lift line had the app.",
+   "start_s": 149.14,
+   "end_s": 155.302
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Brooke",
+   "text": "In Whistler! That's the demographic.",
+   "start_s": 156.176,
+   "end_s": 157.843
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Ian",
+   "text": "Did you actually ski, or just count app users?",
+   "start_s": 158.225,
+   "end_s": 161.825
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Nadine",
+   "text": "Can we hire temps before the sixth?",
+   "start_s": 162.919,
+   "end_s": 165.544
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Brooke",
+   "text": "We can. I'll approve the budget for four temps today.",
+   "start_s": 166.541,
+   "end_s": 169.874
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Ian",
+   "text": "I just checked the waitlist dashboard. It's fifteen thousand, not fifty.",
+   "start_s": 170.808,
+   "end_s": 175.208
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Arturo",
+   "text": "Fifteen. I was looking at the email list.",
+   "start_s": 176.315,
+   "end_s": 178.909
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Brooke",
+   "text": "Fifteen is still great.",
+   "start_s": 179.872,
+   "end_s": 181.205
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Arturo",
+   "text": "Maybe we hold back half the influencer posts until week two, when support has caught up.",
+   "start_s": 182.195,
+   "end_s": 187.384
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Nadine",
+   "text": "That would help us a lot.",
+   "start_s": 187.938,
+   "end_s": 190.188
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Brooke",
+   "text": "Let's see how week one goes before we hold anything back.",
+   "start_s": 191.369,
+   "end_s": 195.036
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Arturo",
+   "text": "I've already signed three of the influencer contracts. They post on the sixth.",
+   "start_s": 196.198,
+   "end_s": 200.414
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Ian",
+   "text": "You signed contracts? Before this meeting?",
+   "start_s": 200.775,
+   "end_s": 203.175
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Arturo",
+   "text": "They were going to go to a competitor.",
+   "start_s": 204.129,
+   "end_s": 206.724
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Brooke",
+   "text": "The call. January sixth. Go.",
+   "start_s": 207.639,
+   "end_s": 209.306
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Ian",
+   "text": "Conditional go. The crash fix ships, and billing stays where it is.",
+   "start_s": 209.967,
+   "end_s": 214.767
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Nadine",
+   "text": "And the temps start before launch.",
+   "start_s": 215.497,
+   "end_s": 217.747
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Brooke",
+   "text": "Fine. Conditional go for January sixth: crash fix in, billing in February, temps by launch.",
+   "start_s": 218.437,
+   "end_s": 223.437
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Nadine",
+   "text": "Could someone tell the support team tonight, so they hear it from us first?",
+   "start_s": 224.562,
+   "end_s": 229.812
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Ian",
+   "text": "I'll write to them. They should hear it from the CTO.",
+   "start_s": 230.513,
+   "end_s": 234.913
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Brooke",
+   "text": "Is the App Store approval still valid for the new build?",
+   "start_s": 235.945,
+   "end_s": 239.611
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Ian",
+   "text": "The approval from the eighteenth covers this version. The crash fix needs a fast re-review.",
+   "start_s": 240.165,
+   "end_s": 246.165
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Arturo",
+   "text": "Who's telling investors that billing moved to February?",
+   "start_s": 247.248,
+   "end_s": 249.842
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Brooke",
+   "text": "Okay. We launch on the sixth. Good work, everyone.",
+   "start_s": 250.942,
+   "end_s": 253.942
+  }
+ ]
+}

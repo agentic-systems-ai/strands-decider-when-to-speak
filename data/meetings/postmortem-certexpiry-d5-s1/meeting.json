@@ -1,0 +1,2372 @@
+{
+ "meeting_id": "postmortem-certexpiry-d5-s1",
+ "config": {
+  "theme": "Incident postmortem: the checkout outage last Tuesday",
+  "domain_pack": "incident_review",
+  "drama": 0.5,
+  "seed": 1,
+  "duration_min": 6.4,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   5,
+   7,
+   14,
+   21,
+   31,
+   50,
+   51,
+   55,
+   63,
+   69,
+   80
+  ],
+  "reviewed_noclaim": [
+   7,
+   55
+  ]
+ },
+ "cast": {
+  "theme": "Incident postmortem: the checkout outage last Tuesday",
+  "personas": [
+   {
+    "name": "Nadia",
+    "role": "Head of SRE, facilitates",
+    "goals": "Kill this class of incident for good",
+    "hidden_agenda": "Asked for cert automation budget a year ago and was told no",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [
+     "let's be precise",
+     "okay"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Liam",
+    "role": "On-call engineer that morning",
+    "goals": "Explain why it took so long to find",
+    "hidden_agenda": "Assumed it was a deploy and lost time chasing it",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [
+     "so",
+     "in hindsight"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Rosa",
+    "role": "Product manager for checkout",
+    "goals": "Make it right with customers",
+    "hidden_agenda": "Her VP is asking for a name to blame",
+    "verbosity": 4,
+    "wpm": 170,
+    "catchphrases": [
+     "from the customer's side",
+     "look"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Kenji",
+    "role": "Security engineer, owns certificates",
+    "goals": "Get certificate renewal automated",
+    "hidden_agenda": "The expiring cert was on his team's spreadsheet",
+    "verbosity": 2,
+    "wpm": 145,
+    "catchphrases": [
+     "to be fair",
+     "technically"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Postmortem - Tuesday checkout outage (expired certificate)",
+   "org": "Hearthstone Market (fictional grocery delivery)",
+   "agenda": [
+    {
+     "id": "timeline",
+     "title": "Timeline",
+     "goal": "Agree when it started",
+     "timebox_min": 1.55
+    },
+    {
+     "id": "root_cause",
+     "title": "Root cause",
+     "goal": "Understand why an expiring certificate went unnoticed",
+     "timebox_min": 2.05
+    },
+    {
+     "id": "impact",
+     "title": "Customer and business impact",
+     "goal": "Size the impact and settle refunds and comms",
+     "timebox_min": 1.58
+    },
+    {
+     "id": "follow_ups",
+     "title": "Follow-ups",
+     "goal": "Owners and dates for the fixes",
+     "timebox_min": 1.22
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "outage_duration",
+     "statement": "Checkout was down for 2 hours 10 minutes",
+     "value": "2 hours 10 minutes"
+    },
+    {
+     "id": "F2",
+     "key": "outage_start",
+     "statement": "Outage started at 9:40 am local time",
+     "value": "9:40 am"
+    },
+    {
+     "id": "F3",
+     "key": "cert_expired_at",
+     "statement": "The payment gateway certificate expired at 9:38 am",
+     "value": "9:38 am"
+    },
+    {
+     "id": "F4",
+     "key": "orders_failed",
+     "statement": "Orders that failed at checkout = 6,200",
+     "value": "6,200"
+    },
+    {
+     "id": "F5",
+     "key": "customers_affected",
+     "statement": "Unique customers affected = 4,900",
+     "value": "4,900"
+    },
+    {
+     "id": "F6",
+     "key": "revenue_impact",
+     "statement": "Estimated revenue impact = $340,000",
+     "value": "$340,000"
+    },
+    {
+     "id": "F7",
+     "key": "refunds_issued",
+     "statement": "Delivery-fee refunds issued = $18,750",
+     "value": "$18,750"
+    },
+    {
+     "id": "F8",
+     "key": "cert_alerts_90d",
+     "statement": "Certificate-expiry alerts fired in the last 90 days = 0",
+     "value": "0"
+    },
+    {
+     "id": "F9",
+     "key": "time_to_cause",
+     "statement": "Time from start to identifying the cause = 74 minutes",
+     "value": "74 minutes"
+    },
+    {
+     "id": "F10",
+     "key": "certs_in_inventory",
+     "statement": "Certificates in the inventory = 312",
+     "value": "312"
+    },
+    {
+     "id": "F11",
+     "key": "manual_renewals_per_year",
+     "statement": "Manual certificate renewals per year = 40",
+     "value": "40"
+    },
+    {
+     "id": "F12",
+     "key": "last_cert_incident",
+     "statement": "Last certificate-related incident = 14 months ago",
+     "value": "14 months"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "timeline",
+    "summary": "When it started, when we knew; Liam undercounts the time to cause",
+    "n_turns": 19,
+    "events": []
+   },
+   {
+    "agenda_item": "root_cause",
+    "summary": "Why nobody saw the expiry coming; the spreadsheet; Kenji's inventory number goes unchallenged",
+    "n_turns": 26,
+    "events": []
+   },
+   {
+    "agenda_item": "impact",
+    "summary": "Orders, customers, money; Rosa's order number corrected; refunds misstated and corrected late",
+    "n_turns": 21,
+    "events": []
+   },
+   {
+    "agenda_item": "follow_ups",
+    "summary": "Owners and dates; one deferred",
+    "n_turns": 17,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Nadia",
+   "text": "Okay, thanks everyone. Blameless as always. Liam, take us through the morning?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Liam",
+   "text": "So, checkout started failing at nine forty. Every payment call came back with a handshake error.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Nadia",
+   "text": "And when did we find out it was the certificate?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Liam",
+   "text": "In hindsight, it felt like we found it in about half an hour.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Nadia",
+   "text": "Let's be precise. The incident log has seventy-four minutes from start to cause.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Liam",
+   "text": "Seventy-four. Yeah. We spent the first forty chasing the deploy from that morning.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Rosa",
+   "text": "Why the deploy?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Liam",
+   "text": "There was a deploy at nine thirty. Two things changing ten minutes apart, you blame the deploy.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Kenji",
+   "text": "Technically, the cert expired at nine thirty-eight. Two minutes before the errors.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Nadia",
+   "text": "So the deploy was a red herring.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Liam",
+   "text": "A very convincing one.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Rosa",
+   "text": "From the customer's side, the app just said \"something went wrong\". No hint at all.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Nadia",
+   "text": "How long were we down in total?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Liam",
+   "text": "Two hours ten, start to finish. The renewal itself was fast once we knew.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Kenji",
+   "text": "Getting a new cert issued took about fifteen minutes. The rest was rollout.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Nadia",
+   "text": "Okay. So the timeline is clear. The gap is the seventy-four minutes to cause.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Liam",
+   "text": "In hindsight, the handshake error was the clue. I just didn't read it right.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Nadia",
+   "text": "Nobody's blaming you. Let's figure out why the system didn't tell you.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Liam",
+   "text": "Thanks.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Nadia",
+   "text": "Root cause. Kenji, how do we track certificate expiry today?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Kenji",
+   "text": "To be fair, it's a spreadsheet. Plus a calendar reminder for the big ones.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Rosa",
+   "text": "A spreadsheet? For payment certificates?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Kenji",
+   "text": "For all of them. We have around two hundred certificates in the inventory.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Nadia",
+   "text": "And this one was in the spreadsheet?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Kenji",
+   "text": "It was. The reminder went to someone who left in the spring.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Liam",
+   "text": "So the alert existed, it just went to nobody.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Nadia",
+   "text": "Did any automated monitoring fire?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Kenji",
+   "text": "No. Zero cert-expiry alerts in the last ninety days. We never set them up for the gateway.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Rosa",
+   "text": "Look, my VP is going to ask whose fault this is.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Nadia",
+   "text": "Then the answer is \"the process\". A spreadsheet that depends on one person's calendar.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Kenji",
+   "text": "Technically, we renew about forty certs a year by hand. Something was always going to slip.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Rosa",
+   "text": "Forty a year, by hand?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Nadia",
+   "text": "And when was the last cert incident?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Kenji",
+   "text": "Fourteen months ago. The internal wiki, nobody really noticed.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Liam",
+   "text": "Fourteen months, and the lesson didn't stick.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Nadia",
+   "text": "Let's be precise about the fix. Should all certs auto-renew, or just the external ones?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Kenji",
+   "text": "To be fair, all of them, eventually.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Liam",
+   "text": "But the external ones first. The ones customers can hit.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Nadia",
+   "text": "Okay. External certificates move to automatic renewal first, internal ones after. That's the direction we're committing to.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Kenji",
+   "text": "Agreed.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Rosa",
+   "text": "Is automatic renewal something we can buy, or do we build it?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Kenji",
+   "text": "Buy, mostly. The cloud provider does it if the cert lives there.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Liam",
+   "text": "Did anyone else's coffee order fail on Tuesday, by the way? I couldn't even get a latte from our own app.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E025",
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Rosa",
+   "text": "Mine did. I ended up at the gas station. Terrible coffee.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Kenji",
+   "text": "I made tea. Tea doesn't need TLS.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Nadia",
+   "text": "Okay, the impact. Rosa?",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Rosa",
+   "text": "From the customer's side, about ten thousand orders failed. It was a disaster.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Liam",
+   "text": "The dashboard has sixty-two hundred failed orders. Ten thousand might be attempts, with retries.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Rosa",
+   "text": "Right, sixty-two hundred orders. From about forty-nine hundred customers.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E030",
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Nadia",
+   "text": "And revenue?",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Rosa",
+   "text": "Finance estimates three hundred forty thousand. Some of those people ordered later, so it's softer than it sounds.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Kenji",
+   "text": "How many came back the same day?",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Nadia",
+   "text": "We gave delivery-fee refunds, right? Around twenty-five grand, I think.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E035",
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Rosa",
+   "text": "Look, I'd like to do more than refund the delivery fee. These are people's groceries.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Liam",
+   "text": "What did you have in mind?",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Rosa",
+   "text": "A credit. Ten dollars, maybe, for everyone affected.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Nadia",
+   "text": "Ten dollars times forty-nine hundred is real money.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Rosa",
+   "text": "It's less than losing them.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Kenji",
+   "text": "Maybe we only give credits to people who didn't come back.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Rosa",
+   "text": "That's harder to explain, though.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Kenji",
+   "text": "Sorry, that's my building's fire alarm test, it'll stop in a second.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Liam",
+   "text": "Sorry, I've got the refund report open. It's eighteen seven fifty in refunds, not twenty-five.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Rosa",
+   "text": "Eighteen seven fifty, okay.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Nadia",
+   "text": "Okay. We give a ten-dollar credit to every affected customer, plus the refunds already issued. Decided.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Rosa",
+   "text": "Thank you. I'll write the apology email and get it to legal by Thursday.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Liam",
+   "text": "It would be good if the email explained what actually happened, in plain words.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Nadia",
+   "text": "Follow-ups. Let's be precise: owner and date for each.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Kenji",
+   "text": "I'll move every external certificate to automatic renewal by the end of the month.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Nadia",
+   "text": "Thank you. And monitoring?",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Liam",
+   "text": "I'll add expiry alerts for every cert in the inventory, at thirty and seven days.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Nadia",
+   "text": "Every one of them, Liam. All three hundred and twelve.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [
+    "E049"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Kenji",
+   "text": "Three hundred and twelve. I said two hundred earlier, that was wrong.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Nadia",
+   "text": "That's fine. That's why we check.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Rosa",
+   "text": "And error messages. Can the app say something better than \"something went wrong\"?",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [
+    "E051"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "Liam",
+   "text": "It can. It's a product decision what it says.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 75,
+   "speaker": "Rosa",
+   "text": "Then let's maybe look at that next quarter.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [
+    "E052"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 76,
+   "speaker": "Nadia",
+   "text": "Someone should check the other payment providers' certs too, while we're at it.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [
+    "E053"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 77,
+   "speaker": "Kenji",
+   "text": "Already on the list. To be fair, they're on the spreadsheet.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 78,
+   "speaker": "Liam",
+   "text": "The spreadsheet that caused this.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 79,
+   "speaker": "Kenji",
+   "text": "The spreadsheet that is about to be retired.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 80,
+   "speaker": "Rosa",
+   "text": "Does my VP get a written summary, or do I just forward the notes?",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [
+    "E054"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 81,
+   "speaker": "Nadia",
+   "text": "Okay. Good review. Thank you, everyone.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 82,
+   "speaker": "Rosa",
+   "text": "Thanks, all.",
+   "agenda_item": "follow_ups",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Nadia",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Liam",
+   "agenda_item": "timeline",
+   "fact_id": "F2",
+   "claimed_value": "9:40 am",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Nadia",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 3,
+   "speaker": "Liam",
+   "agenda_item": "timeline",
+   "fact_id": "F9",
+   "claimed_value": "half an hour",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Nadia",
+   "agenda_item": "timeline",
+   "fact_id": "F9",
+   "claimed_value": "74 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Liam",
+   "agenda_item": "timeline",
+   "fact_id": "F9",
+   "claimed_value": "74 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Rosa",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 7,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Kenji",
+   "agenda_item": "timeline",
+   "fact_id": "F3",
+   "claimed_value": "9:38 am",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Nadia",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 13,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Liam",
+   "agenda_item": "timeline",
+   "fact_id": "F1",
+   "claimed_value": "2 hours 10 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Nadia",
+   "agenda_item": "timeline",
+   "fact_id": "F9",
+   "claimed_value": "74 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Nadia",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 20,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 22,
+   "speaker": "Kenji",
+   "agenda_item": "root_cause",
+   "fact_id": "F10",
+   "claimed_value": "200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Nadia",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 24,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Nadia",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 27,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Kenji",
+   "agenda_item": "root_cause",
+   "fact_id": "F8",
+   "claimed_value": "0",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Kenji",
+   "agenda_item": "root_cause",
+   "fact_id": "F11",
+   "claimed_value": "40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Rosa",
+   "agenda_item": "root_cause",
+   "fact_id": "F11",
+   "claimed_value": "40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Nadia",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 33,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 33,
+   "speaker": "Kenji",
+   "agenda_item": "root_cause",
+   "fact_id": "F12",
+   "claimed_value": "14 months",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Liam",
+   "agenda_item": "root_cause",
+   "fact_id": "F12",
+   "claimed_value": "14 months",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Nadia",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 37,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 38,
+   "speaker": "Nadia",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Rosa",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 41,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 42,
+   "speaker": "Liam",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Liam",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Nadia",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 46,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 46,
+   "speaker": "Rosa",
+   "agenda_item": "impact",
+   "fact_id": "F4",
+   "claimed_value": "10,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Liam",
+   "agenda_item": "impact",
+   "fact_id": "F4",
+   "claimed_value": "6,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 48,
+   "speaker": "Rosa",
+   "agenda_item": "impact",
+   "fact_id": "F4",
+   "claimed_value": "6,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 48,
+   "speaker": "Rosa",
+   "agenda_item": "impact",
+   "fact_id": "F5",
+   "claimed_value": "4,900",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Nadia",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 50,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Rosa",
+   "agenda_item": "impact",
+   "fact_id": "F6",
+   "claimed_value": "$340,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 51,
+   "speaker": "Kenji",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 52,
+   "speaker": "Nadia",
+   "agenda_item": "impact",
+   "fact_id": "F7",
+   "claimed_value": "$25,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Nadia",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 53,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Liam",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 55,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 56,
+   "speaker": "Nadia",
+   "agenda_item": "impact",
+   "fact_id": "F5",
+   "claimed_value": "4,900",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 58,
+   "speaker": "Kenji",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 60,
+   "speaker": "Kenji",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 61,
+   "speaker": "Liam",
+   "agenda_item": "impact",
+   "fact_id": "F7",
+   "claimed_value": "$18,750",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 62,
+   "speaker": "Rosa",
+   "agenda_item": "impact",
+   "fact_id": "F7",
+   "claimed_value": "$18,750",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 63,
+   "speaker": "Nadia",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 64,
+   "speaker": "Rosa",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 65,
+   "speaker": "Liam",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 67,
+   "speaker": "Kenji",
+   "agenda_item": "follow_ups",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 68,
+   "speaker": "Nadia",
+   "agenda_item": "follow_ups",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 69,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 69,
+   "speaker": "Liam",
+   "agenda_item": "follow_ups",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 70,
+   "speaker": "Nadia",
+   "agenda_item": "follow_ups",
+   "fact_id": "F10",
+   "claimed_value": "312",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 71,
+   "speaker": "Kenji",
+   "agenda_item": "follow_ups",
+   "fact_id": "F10",
+   "claimed_value": "312",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 73,
+   "speaker": "Rosa",
+   "agenda_item": "follow_ups",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 74,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 75,
+   "speaker": "Rosa",
+   "agenda_item": "follow_ups",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E053",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 76,
+   "speaker": "Nadia",
+   "agenda_item": "follow_ups",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E054",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 80,
+   "speaker": "Rosa",
+   "agenda_item": "follow_ups",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Nadia",
+   "text": "Okay, thanks everyone. Blameless as always. Liam, take us through the morning?",
+   "start_s": 0.5,
+   "end_s": 5.145
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Liam",
+   "text": "So, checkout started failing at nine forty. Every payment call came back with a handshake error.",
+   "start_s": 5.479,
+   "end_s": 11.479
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Nadia",
+   "text": "And when did we find out it was the certificate?",
+   "start_s": 12.526,
+   "end_s": 16.397
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Liam",
+   "text": "In hindsight, it felt like we found it in about half an hour.",
+   "start_s": 17.361,
+   "end_s": 22.236
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Nadia",
+   "text": "Let's be precise. The incident log has seventy-four minutes from start to cause.",
+   "start_s": 22.691,
+   "end_s": 27.723
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Liam",
+   "text": "Seventy-four. Yeah. We spent the first forty chasing the deploy from that morning.",
+   "start_s": 28.418,
+   "end_s": 33.293
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Rosa",
+   "text": "Why the deploy?",
+   "start_s": 33.942,
+   "end_s": 35.001
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Liam",
+   "text": "There was a deploy at nine thirty. Two things changing ten minutes apart, you blame the deploy.",
+   "start_s": 35.853,
+   "end_s": 42.228
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Kenji",
+   "text": "Technically, the cert expired at nine thirty-eight. Two minutes before the errors.",
+   "start_s": 43.217,
+   "end_s": 48.182
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Nadia",
+   "text": "So the deploy was a red herring.",
+   "start_s": 48.476,
+   "end_s": 51.186
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Liam",
+   "text": "A very convincing one.",
+   "start_s": 51.414,
+   "end_s": 52.914
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Rosa",
+   "text": "From the customer's side, the app just said \"something went wrong\". No hint at all.",
+   "start_s": 53.95,
+   "end_s": 59.244
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Nadia",
+   "text": "How long were we down in total?",
+   "start_s": 59.877,
+   "end_s": 62.586
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Liam",
+   "text": "Two hours ten, start to finish. The renewal itself was fast once we knew.",
+   "start_s": 63.548,
+   "end_s": 68.798
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Kenji",
+   "text": "Getting a new cert issued took about fifteen minutes. The rest was rollout.",
+   "start_s": 69.0,
+   "end_s": 74.379
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Nadia",
+   "text": "Okay. So the timeline is clear. The gap is the seventy-four minutes to cause.",
+   "start_s": 75.024,
+   "end_s": 80.444
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Liam",
+   "text": "In hindsight, the handshake error was the clue. I just didn't read it right.",
+   "start_s": 81.366,
+   "end_s": 86.616
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Nadia",
+   "text": "Nobody's blaming you. Let's figure out why the system didn't tell you.",
+   "start_s": 87.045,
+   "end_s": 91.69
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Liam",
+   "text": "Thanks.",
+   "start_s": 92.835,
+   "end_s": 93.21
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Nadia",
+   "text": "Root cause. Kenji, how do we track certificate expiry today?",
+   "start_s": 94.311,
+   "end_s": 98.182
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Kenji",
+   "text": "To be fair, it's a spreadsheet. Plus a calendar reminder for the big ones.",
+   "start_s": 98.413,
+   "end_s": 104.206
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Rosa",
+   "text": "A spreadsheet? For payment certificates?",
+   "start_s": 104.431,
+   "end_s": 106.196
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Kenji",
+   "text": "For all of them. We have around two hundred certificates in the inventory.",
+   "start_s": 106.937,
+   "end_s": 112.317
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Nadia",
+   "text": "And this one was in the spreadsheet?",
+   "start_s": 113.456,
+   "end_s": 116.166
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Kenji",
+   "text": "It was. The reminder went to someone who left in the spring.",
+   "start_s": 116.747,
+   "end_s": 121.713
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Liam",
+   "text": "So the alert existed, it just went to nobody.",
+   "start_s": 122.13,
+   "end_s": 125.505
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Nadia",
+   "text": "Did any automated monitoring fire?",
+   "start_s": 126.127,
+   "end_s": 128.063
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Kenji",
+   "text": "No. Zero cert-expiry alerts in the last ninety days. We never set them up for the gateway.",
+   "start_s": 128.292,
+   "end_s": 135.327
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Rosa",
+   "text": "Look, my VP is going to ask whose fault this is.",
+   "start_s": 135.749,
+   "end_s": 139.631
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Nadia",
+   "text": "Then the answer is \"the process\". A spreadsheet that depends on one person's calendar.",
+   "start_s": 140.269,
+   "end_s": 145.688
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Kenji",
+   "text": "Technically, we renew about forty certs a year by hand. Something was always going to slip.",
+   "start_s": 146.384,
+   "end_s": 153.005
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Rosa",
+   "text": "Forty a year, by hand?",
+   "start_s": 153.438,
+   "end_s": 155.203
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Nadia",
+   "text": "And when was the last cert incident?",
+   "start_s": 155.634,
+   "end_s": 158.344
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Kenji",
+   "text": "Fourteen months ago. The internal wiki, nobody really noticed.",
+   "start_s": 158.763,
+   "end_s": 162.487
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Liam",
+   "text": "Fourteen months, and the lesson didn't stick.",
+   "start_s": 163.147,
+   "end_s": 165.772
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Nadia",
+   "text": "Let's be precise about the fix. Should all certs auto-renew, or just the external ones?",
+   "start_s": 166.262,
+   "end_s": 172.068
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Kenji",
+   "text": "To be fair, all of them, eventually.",
+   "start_s": 172.289,
+   "end_s": 175.186
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Liam",
+   "text": "But the external ones first. The ones customers can hit.",
+   "start_s": 176.224,
+   "end_s": 179.974
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Nadia",
+   "text": "Okay. External certificates move to automatic renewal first, internal ones after. That's the direction we're committing to.",
+   "start_s": 180.73,
+   "end_s": 187.311
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Kenji",
+   "text": "Agreed.",
+   "start_s": 188.153,
+   "end_s": 188.567
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Rosa",
+   "text": "Is automatic renewal something we can buy, or do we build it?",
+   "start_s": 188.953,
+   "end_s": 193.188
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Kenji",
+   "text": "Buy, mostly. The cloud provider does it if the cert lives there.",
+   "start_s": 194.381,
+   "end_s": 199.346
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Liam",
+   "text": "Did anyone else's coffee order fail on Tuesday, by the way? I couldn't even get a latte from our own app.",
+   "start_s": 200.406,
+   "end_s": 208.281
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Rosa",
+   "text": "Mine did. I ended up at the gas station. Terrible coffee.",
+   "start_s": 208.602,
+   "end_s": 212.484
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Kenji",
+   "text": "I made tea. Tea doesn't need TLS.",
+   "start_s": 213.017,
+   "end_s": 215.913
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Nadia",
+   "text": "Okay, the impact. Rosa?",
+   "start_s": 216.834,
+   "end_s": 218.383
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Rosa",
+   "text": "From the customer's side, about ten thousand orders failed. It was a disaster.",
+   "start_s": 219.294,
+   "end_s": 223.882
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Liam",
+   "text": "The dashboard has sixty-two hundred failed orders. Ten thousand might be attempts, with retries.",
+   "start_s": 225.018,
+   "end_s": 230.268
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Rosa",
+   "text": "Right, sixty-two hundred orders. From about forty-nine hundred customers.",
+   "start_s": 230.89,
+   "end_s": 234.067
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Nadia",
+   "text": "And revenue?",
+   "start_s": 235.097,
+   "end_s": 235.871
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Rosa",
+   "text": "Finance estimates three hundred forty thousand. Some of those people ordered later, so it's softer than it sounds.",
+   "start_s": 236.741,
+   "end_s": 243.094
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Kenji",
+   "text": "How many came back the same day?",
+   "start_s": 243.597,
+   "end_s": 246.494
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Nadia",
+   "text": "We gave delivery-fee refunds, right? Around twenty-five grand, I think.",
+   "start_s": 247.282,
+   "end_s": 251.153
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Rosa",
+   "text": "Look, I'd like to do more than refund the delivery fee. These are people's groceries.",
+   "start_s": 252.235,
+   "end_s": 257.53
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Liam",
+   "text": "What did you have in mind?",
+   "start_s": 258.576,
+   "end_s": 260.826
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Rosa",
+   "text": "A credit. Ten dollars, maybe, for everyone affected.",
+   "start_s": 261.531,
+   "end_s": 264.355
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Nadia",
+   "text": "Ten dollars times forty-nine hundred is real money.",
+   "start_s": 265.144,
+   "end_s": 268.241
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Rosa",
+   "text": "It's less than losing them.",
+   "start_s": 268.476,
+   "end_s": 270.24
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Kenji",
+   "text": "Maybe we only give credits to people who didn't come back.",
+   "start_s": 270.683,
+   "end_s": 275.234
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Rosa",
+   "text": "That's harder to explain, though.",
+   "start_s": 276.231,
+   "end_s": 277.996
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Kenji",
+   "text": "Sorry, that's my building's fire alarm test, it'll stop in a second.",
+   "start_s": 278.61,
+   "end_s": 283.576
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Liam",
+   "text": "Sorry, I've got the refund report open. It's eighteen seven fifty in refunds, not twenty-five.",
+   "start_s": 283.949,
+   "end_s": 289.574
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Rosa",
+   "text": "Eighteen seven fifty, okay.",
+   "start_s": 290.323,
+   "end_s": 291.735
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Nadia",
+   "text": "Okay. We give a ten-dollar credit to every affected customer, plus the refunds already issued. Decided.",
+   "start_s": 292.638,
+   "end_s": 298.832
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Rosa",
+   "text": "Thank you. I'll write the apology email and get it to legal by Thursday.",
+   "start_s": 299.706,
+   "end_s": 304.648
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Liam",
+   "text": "It would be good if the email explained what actually happened, in plain words.",
+   "start_s": 305.223,
+   "end_s": 310.473
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Nadia",
+   "text": "Follow-ups. Let's be precise: owner and date for each.",
+   "start_s": 311.112,
+   "end_s": 314.596
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Kenji",
+   "text": "I'll move every external certificate to automatic renewal by the end of the month.",
+   "start_s": 315.304,
+   "end_s": 321.098
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Nadia",
+   "text": "Thank you. And monitoring?",
+   "start_s": 322.076,
+   "end_s": 323.625
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Liam",
+   "text": "I'll add expiry alerts for every cert in the inventory, at thirty and seven days.",
+   "start_s": 324.346,
+   "end_s": 329.971
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Nadia",
+   "text": "Every one of them, Liam. All three hundred and twelve.",
+   "start_s": 330.564,
+   "end_s": 334.435
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Kenji",
+   "text": "Three hundred and twelve. I said two hundred earlier, that was wrong.",
+   "start_s": 335.125,
+   "end_s": 340.09
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Nadia",
+   "text": "That's fine. That's why we check.",
+   "start_s": 340.32,
+   "end_s": 342.642
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Rosa",
+   "text": "And error messages. Can the app say something better than \"something went wrong\"?",
+   "start_s": 342.885,
+   "end_s": 347.474
+  },
+  {
+   "turn_index": 74,
+   "speaker": "Liam",
+   "text": "It can. It's a product decision what it says.",
+   "start_s": 348.377,
+   "end_s": 351.752
+  },
+  {
+   "turn_index": 75,
+   "speaker": "Rosa",
+   "text": "Then let's maybe look at that next quarter.",
+   "start_s": 352.935,
+   "end_s": 355.759
+  },
+  {
+   "turn_index": 76,
+   "speaker": "Nadia",
+   "text": "Someone should check the other payment providers' certs too, while we're at it.",
+   "start_s": 356.552,
+   "end_s": 361.584
+  },
+  {
+   "turn_index": 77,
+   "speaker": "Kenji",
+   "text": "Already on the list. To be fair, they're on the spreadsheet.",
+   "start_s": 362.178,
+   "end_s": 366.729
+  },
+  {
+   "turn_index": 78,
+   "speaker": "Liam",
+   "text": "The spreadsheet that caused this.",
+   "start_s": 367.099,
+   "end_s": 368.974
+  },
+  {
+   "turn_index": 79,
+   "speaker": "Kenji",
+   "text": "The spreadsheet that is about to be retired.",
+   "start_s": 369.676,
+   "end_s": 372.987
+  },
+  {
+   "turn_index": 80,
+   "speaker": "Rosa",
+   "text": "Does my VP get a written summary, or do I just forward the notes?",
+   "start_s": 374.169,
+   "end_s": 379.11
+  },
+  {
+   "turn_index": 81,
+   "speaker": "Nadia",
+   "text": "Okay. Good review. Thank you, everyone.",
+   "start_s": 380.081,
+   "end_s": 382.403
+  },
+  {
+   "turn_index": 82,
+   "speaker": "Rosa",
+   "text": "Thanks, all.",
+   "start_s": 383.143,
+   "end_s": 383.848
+  }
+ ]
+}

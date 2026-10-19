@@ -1,0 +1,2180 @@
+{
+ "meeting_id": "gala-rescue-d5-s1",
+ "config": {
+  "theme": "Planning committee for a nonprofit's annual fundraising gala",
+  "domain_pack": "nonprofit_events",
+  "drama": 0.5,
+  "seed": 1,
+  "duration_min": 5.7,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   8,
+   9,
+   10,
+   27,
+   39,
+   46,
+   53,
+   54,
+   56,
+   72
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "Planning committee for a nonprofit's annual fundraising gala",
+  "personas": [
+   {
+    "name": "Tamsin",
+    "role": "Volunteer event chair",
+    "goals": "A gala that feels warm, not corporate",
+    "hidden_agenda": "Wants to bring an adoptable dog on stage, which the venue may not allow",
+    "verbosity": 4,
+    "wpm": 165,
+    "catchphrases": [
+     "oh, I love that",
+     "okay, so"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Ray",
+    "role": "Executive director",
+    "goals": "Hit the fundraising goal",
+    "hidden_agenda": "The rescue's kennel lease is up for renewal and costs are rising",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [
+     "the way I see it",
+     "right"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Lucia",
+    "role": "Sponsorship volunteer",
+    "goals": "Land a headline sponsor",
+    "hidden_agenda": "Counting sponsors that haven't signed yet",
+    "verbosity": 3,
+    "wpm": 170,
+    "catchphrases": [
+     "super promising",
+     "honestly"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Noah",
+    "role": "Volunteer treasurer",
+    "goals": "Keep spending inside the budget",
+    "hidden_agenda": "Hasn't entered last month's receipts yet",
+    "verbosity": 2,
+    "wpm": 145,
+    "catchphrases": [
+     "um",
+     "let me double-check"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Paws and Lights gala - planning committee",
+   "org": "Harbor Lights Animal Rescue (fictional)",
+   "agenda": [
+    {
+     "id": "budget",
+     "title": "Gala budget",
+     "goal": "See what's spent and what's left",
+     "timebox_min": 1.6
+    },
+    {
+     "id": "program",
+     "title": "Venue and program",
+     "goal": "Settle the run of the evening",
+     "timebox_min": 1.32
+    },
+    {
+     "id": "sponsors",
+     "title": "Sponsorship pipeline",
+     "goal": "Confirm sponsors and chase the rest",
+     "timebox_min": 1.46
+    },
+    {
+     "id": "promotion",
+     "title": "Ticket promotion",
+     "goal": "Agree how to sell the remaining tickets",
+     "timebox_min": 1.27
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "gala_date",
+     "statement": "Gala date = Saturday, November 8",
+     "value": "November 8"
+    },
+    {
+     "id": "F2",
+     "key": "ticket_price",
+     "statement": "Ticket price = $95",
+     "value": "$95"
+    },
+    {
+     "id": "F3",
+     "key": "tickets_sold",
+     "statement": "Tickets sold = 140",
+     "value": "140"
+    },
+    {
+     "id": "F4",
+     "key": "venue_capacity",
+     "statement": "Venue capacity = 250",
+     "value": "250"
+    },
+    {
+     "id": "F5",
+     "key": "gala_budget",
+     "statement": "Gala budget = $28,000",
+     "value": "$28,000"
+    },
+    {
+     "id": "F6",
+     "key": "spent_to_date",
+     "statement": "Spent to date = $11,300",
+     "value": "$11,300"
+    },
+    {
+     "id": "F7",
+     "key": "fundraising_goal",
+     "statement": "Fundraising goal for the night = $75,000",
+     "value": "$75,000"
+    },
+    {
+     "id": "F8",
+     "key": "sponsors_confirmed",
+     "statement": "Sponsors confirmed = 6",
+     "value": "6"
+    },
+    {
+     "id": "F9",
+     "key": "sponsor_revenue",
+     "statement": "Confirmed sponsor revenue = $21,000",
+     "value": "$21,000"
+    },
+    {
+     "id": "F10",
+     "key": "video_length",
+     "statement": "Adoption stories video = 4 minutes",
+     "value": "4 minutes"
+    },
+    {
+     "id": "F11",
+     "key": "email_list",
+     "statement": "Email list = 9,400 subscribers",
+     "value": "9,400"
+    },
+    {
+     "id": "F12",
+     "key": "last_year_attendance",
+     "statement": "Last year's attendance = 205",
+     "value": "205"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "budget",
+    "summary": "What's spent; Noah's number is low and Ray catches it later",
+    "n_turns": 20,
+    "events": []
+   },
+   {
+    "agenda_item": "program",
+    "summary": "The run of the evening; the dog-on-stage question; an unsignposted detour about a bake-off",
+    "n_turns": 17,
+    "events": []
+   },
+   {
+    "agenda_item": "sponsors",
+    "summary": "Lucia counts unsigned sponsors; Ray pushes back",
+    "n_turns": 20,
+    "events": []
+   },
+   {
+    "agenda_item": "promotion",
+    "summary": "Selling the rest; the attendance number nobody checks",
+    "n_turns": 18,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Tamsin",
+   "text": "Okay, so, budget first so we know what we're working with. Noah?",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Noah",
+   "text": "Um, the total budget is twenty-eight thousand, and we've spent about eight so far.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E002",
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Ray",
+   "text": "Eight. Right. That's less than I expected.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Tamsin",
+   "text": "Oh, I love that. So we have room for the photo booth?",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Noah",
+   "text": "Let me double-check, but probably, yes.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Lucia",
+   "text": "Honestly, a photo booth with the rescue dogs would be super promising for social.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Ray",
+   "text": "The way I see it, every dollar we don't spend on the night goes to the dogs.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Tamsin",
+   "text": "But people give more when they're having fun. That's the whole point of a gala.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Ray",
+   "text": "Right. I'm not against fun. I'm against a fifteen-hundred-dollar booth.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Noah",
+   "text": "Um, the booth quote was nine hundred.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Ray",
+   "text": "Nine hundred I can live with.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Tamsin",
+   "text": "So, photo booth, yes?",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Ray",
+   "text": "Let's wait and see what the sponsors cover first.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Lucia",
+   "text": "The pet food company might sponsor the booth, actually.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Ray",
+   "text": "Noah, did the October invoices go in? The caterer and the printer?",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Noah",
+   "text": "Um. Not yet. I have them, I just haven't entered them.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Ray",
+   "text": "Then I don't think we've spent eight. With those it's over eleven.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Noah",
+   "text": "Let me double-check. Yes. Eleven thousand three hundred, with the October invoices.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Ray",
+   "text": "Right. So we have less room than we thought.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Noah",
+   "text": "I'll enter all the October receipts tonight and send the updated sheet.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Tamsin",
+   "text": "Okay, so, the program. Doors at six, dinner at seven, the video, then the paddle raise.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Ray",
+   "text": "How long is the video?",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Tamsin",
+   "text": "Four minutes. The adoption stories. I cried three times editing it.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Lucia",
+   "text": "Four minutes is perfect. Any longer and people check their phones.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Tamsin",
+   "text": "And I had an idea. What if we brought Juniper on stage during the paddle raise?",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Noah",
+   "text": "The venue has a no-animals rule, I think. It's in the contract somewhere.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Tamsin",
+   "text": "Could we ask the venue for an exception, just for him?",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Lucia",
+   "text": "Totally unrelated, but the bake-off the bake-off at the farmers market on Sunday?",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Ray",
+   "text": "My wife entered. She came second with a lemon tart.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Tamsin",
+   "text": "Second! The judge was clearly bribed.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Lucia",
+   "text": "The winner was the guy who runs the bakery. That's basically cheating.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Noah",
+   "text": "So, um, for the paddle raise, who's the auctioneer?",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Ray",
+   "text": "I asked Councilwoman Reyes. She said probably.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Tamsin",
+   "text": "Probably is not a yes.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Ray",
+   "text": "Right. I'll call her office tomorrow and get a firm yes or no.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Lucia",
+   "text": "It'd be good to have a backup auctioneer, honestly.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Tamsin",
+   "text": "Doors at six, dinner at seven, the video, then the paddle raise with Reyes or a backup. That's the run of show.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Ray",
+   "text": "Sponsors. Lucia, how's the pipeline?",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Lucia",
+   "text": "Super promising. We have ten sponsors confirmed.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Ray",
+   "text": "Ten? I have six signed agreements.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Lucia",
+   "text": "Six signed, four who said yes on calls. Honestly, the calls count.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Ray",
+   "text": "The way I see it, a sponsor counts when the check clears.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Noah",
+   "text": "Um, the six signed come to twenty-one thousand.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E026",
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Ray",
+   "text": "Twenty-one thousand toward a seventy-five thousand goal.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E028",
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Tamsin",
+   "text": "Who are the four verbal ones?",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Lucia",
+   "text": "The vet clinic, the pet food company, the bank on Main and the brewery.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Noah",
+   "text": "Is that vacuum coming through? My roommate has impeccable timing.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Tamsin",
+   "text": "A little. It's fine.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Ray",
+   "text": "Could we get paperwork from those four before the gala?",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Lucia",
+   "text": "I'll send agreements to all four verbal sponsors by Friday.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Tamsin",
+   "text": "Oh, I love that. And the headline sponsor? We still don't have one.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Lucia",
+   "text": "The bank might go headline. They asked what it would cost.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Ray",
+   "text": "What would it cost?",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Tamsin",
+   "text": "Last year the headline was five thousand, I think.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Ray",
+   "text": "Then we ask for seventy-five hundred this year. Costs are up.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Lucia",
+   "text": "Honestly, I'd ask for ten and let them talk us down.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Ray",
+   "text": "Fine. We ask the bank for ten thousand as headline sponsor and settle no lower than seventy-five hundred.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Tamsin",
+   "text": "Okay, so, selling tickets. We're at a hundred and forty.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Ray",
+   "text": "Out of two fifty capacity.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Tamsin",
+   "text": "Last year we had three hundred people, so we can definitely fill it.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Lucia",
+   "text": "Honestly, we just need to email the list more.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Noah",
+   "text": "How big is the email list now?",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Lucia",
+   "text": "About ninety-four hundred.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Ray",
+   "text": "Right. And tickets are ninety-five, which is fair for dinner and a cause.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Tamsin",
+   "text": "What if we did a \"bring a friend\" discount?",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Ray",
+   "text": "I'd rather not discount. Maybe a free drink voucher instead.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Lucia",
+   "text": "Someone should ask the brewery about donating drink vouchers.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Noah",
+   "text": "Um, is the date on all the flyers right? I saw one that said the ninth.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Tamsin",
+   "text": "Oh no. It's the eighth. November eighth.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Noah",
+   "text": "Let me double-check which flyer it was.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Tamsin",
+   "text": "I'll get the printer to reprint any flyer with the wrong date. Today.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E049"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Ray",
+   "text": "Good. The way I see it, we're in decent shape, as long as the sponsors sign.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Lucia",
+   "text": "Has anyone told the kennel staff they're invited?",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Tamsin",
+   "text": "Okay, so, I think that's everything. Thank you, all. For the dogs!",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "Ray",
+   "text": "For the dogs.",
+   "agenda_item": "promotion",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Tamsin",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Noah",
+   "agenda_item": "budget",
+   "fact_id": "F5",
+   "claimed_value": "$28,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 1,
+   "speaker": "Noah",
+   "agenda_item": "budget",
+   "fact_id": "F6",
+   "claimed_value": "$8,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 2,
+   "speaker": "Ray",
+   "agenda_item": "budget",
+   "fact_id": "F6",
+   "claimed_value": "$8,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Tamsin",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 4,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Tamsin",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 12,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Ray",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Ray",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 15,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Ray",
+   "agenda_item": "budget",
+   "fact_id": "F6",
+   "claimed_value": "$11,300",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Noah",
+   "agenda_item": "budget",
+   "fact_id": "F6",
+   "claimed_value": "$11,300",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 19,
+   "speaker": "Noah",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Ray",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 22,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Tamsin",
+   "agenda_item": "program",
+   "fact_id": "F10",
+   "claimed_value": "4 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Lucia",
+   "agenda_item": "program",
+   "fact_id": "F10",
+   "claimed_value": "4 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Tamsin",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 25,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 26,
+   "speaker": "Tamsin",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 27,
+   "speaker": "Lucia",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 4,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Noah",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 32,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Ray",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Lucia",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 36,
+   "speaker": "Tamsin",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Ray",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 38,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 38,
+   "speaker": "Lucia",
+   "agenda_item": "sponsors",
+   "fact_id": "F8",
+   "claimed_value": "10",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Ray",
+   "agenda_item": "sponsors",
+   "fact_id": "F8",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Lucia",
+   "agenda_item": "sponsors",
+   "fact_id": "F8",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Noah",
+   "agenda_item": "sponsors",
+   "fact_id": "F9",
+   "claimed_value": "$21,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Noah",
+   "agenda_item": "sponsors",
+   "fact_id": "F8",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Ray",
+   "agenda_item": "sponsors",
+   "fact_id": "F9",
+   "claimed_value": "$21,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Ray",
+   "agenda_item": "sponsors",
+   "fact_id": "F7",
+   "claimed_value": "$75,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Tamsin",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 45,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Noah",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 48,
+   "speaker": "Ray",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 49,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 49,
+   "speaker": "Lucia",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Tamsin",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 51,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Ray",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 53,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Ray",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 56,
+   "speaker": "Ray",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 57,
+   "speaker": "Tamsin",
+   "agenda_item": "promotion",
+   "fact_id": "F3",
+   "claimed_value": "140",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 58,
+   "speaker": "Ray",
+   "agenda_item": "promotion",
+   "fact_id": "F4",
+   "claimed_value": "250",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 59,
+   "speaker": "Tamsin",
+   "agenda_item": "promotion",
+   "fact_id": "F12",
+   "claimed_value": "300",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 61,
+   "speaker": "Noah",
+   "agenda_item": "promotion",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 62,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 62,
+   "speaker": "Lucia",
+   "agenda_item": "promotion",
+   "fact_id": "F11",
+   "claimed_value": "9,400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 63,
+   "speaker": "Ray",
+   "agenda_item": "promotion",
+   "fact_id": "F2",
+   "claimed_value": "$95",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 64,
+   "speaker": "Tamsin",
+   "agenda_item": "promotion",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 65,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 65,
+   "speaker": "Ray",
+   "agenda_item": "promotion",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 66,
+   "speaker": "Lucia",
+   "agenda_item": "promotion",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 67,
+   "speaker": "Noah",
+   "agenda_item": "promotion",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 68,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 68,
+   "speaker": "Tamsin",
+   "agenda_item": "promotion",
+   "fact_id": "F1",
+   "claimed_value": "November 8",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 70,
+   "speaker": "Tamsin",
+   "agenda_item": "promotion",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 72,
+   "speaker": "Lucia",
+   "agenda_item": "promotion",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Tamsin",
+   "text": "Okay, so, budget first so we know what we're working with. Noah?",
+   "start_s": 0.5,
+   "end_s": 4.864
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Noah",
+   "text": "Um, the total budget is twenty-eight thousand, and we've spent about eight so far.",
+   "start_s": 5.198,
+   "end_s": 10.991
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Ray",
+   "text": "Eight. Right. That's less than I expected.",
+   "start_s": 12.038,
+   "end_s": 14.838
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Tamsin",
+   "text": "Oh, I love that. So we have room for the photo booth?",
+   "start_s": 15.802,
+   "end_s": 20.165
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Noah",
+   "text": "Let me double-check, but probably, yes.",
+   "start_s": 20.62,
+   "end_s": 23.103
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Lucia",
+   "text": "Honestly, a photo booth with the rescue dogs would be super promising for social.",
+   "start_s": 23.798,
+   "end_s": 28.74
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Ray",
+   "text": "The way I see it, every dollar we don't spend on the night goes to the dogs.",
+   "start_s": 29.389,
+   "end_s": 36.189
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Tamsin",
+   "text": "But people give more when they're having fun. That's the whole point of a gala.",
+   "start_s": 37.041,
+   "end_s": 42.495
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Ray",
+   "text": "Right. I'm not against fun. I'm against a fifteen-hundred-dollar booth.",
+   "start_s": 43.484,
+   "end_s": 47.484
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Noah",
+   "text": "Um, the booth quote was nine hundred.",
+   "start_s": 47.778,
+   "end_s": 50.674
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Ray",
+   "text": "Nine hundred I can live with.",
+   "start_s": 50.902,
+   "end_s": 53.302
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Tamsin",
+   "text": "So, photo booth, yes?",
+   "start_s": 54.338,
+   "end_s": 55.792
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Ray",
+   "text": "Let's wait and see what the sponsors cover first.",
+   "start_s": 56.425,
+   "end_s": 60.025
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Lucia",
+   "text": "The pet food company might sponsor the booth, actually.",
+   "start_s": 60.987,
+   "end_s": 64.164
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Ray",
+   "text": "Noah, did the October invoices go in? The caterer and the printer?",
+   "start_s": 64.366,
+   "end_s": 69.166
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Noah",
+   "text": "Um. Not yet. I have them, I just haven't entered them.",
+   "start_s": 69.811,
+   "end_s": 74.363
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Ray",
+   "text": "Then I don't think we've spent eight. With those it's over eleven.",
+   "start_s": 75.285,
+   "end_s": 80.085
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Noah",
+   "text": "Let me double-check. Yes. Eleven thousand three hundred, with the October invoices.",
+   "start_s": 80.514,
+   "end_s": 85.479
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Ray",
+   "text": "Right. So we have less room than we thought.",
+   "start_s": 86.624,
+   "end_s": 90.224
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Noah",
+   "text": "I'll enter all the October receipts tonight and send the updated sheet.",
+   "start_s": 91.325,
+   "end_s": 96.291
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Tamsin",
+   "text": "Okay, so, the program. Doors at six, dinner at seven, the video, then the paddle raise.",
+   "start_s": 96.522,
+   "end_s": 102.34
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Ray",
+   "text": "How long is the video?",
+   "start_s": 102.565,
+   "end_s": 104.565
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Tamsin",
+   "text": "Four minutes. The adoption stories. I cried three times editing it.",
+   "start_s": 105.306,
+   "end_s": 109.306
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Lucia",
+   "text": "Four minutes is perfect. Any longer and people check their phones.",
+   "start_s": 110.445,
+   "end_s": 114.328
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Tamsin",
+   "text": "And I had an idea. What if we brought Juniper on stage during the paddle raise?",
+   "start_s": 114.909,
+   "end_s": 120.727
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Noah",
+   "text": "The venue has a no-animals rule, I think. It's in the contract somewhere.",
+   "start_s": 121.144,
+   "end_s": 126.523
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Tamsin",
+   "text": "Could we ask the venue for an exception, just for him?",
+   "start_s": 127.145,
+   "end_s": 131.145
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Lucia",
+   "text": "Totally unrelated, but the bake-off the bake-off at the farmers market on Sunday?",
+   "start_s": 131.374,
+   "end_s": 135.962
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Ray",
+   "text": "My wife entered. She came second with a lemon tart.",
+   "start_s": 136.384,
+   "end_s": 140.384
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Tamsin",
+   "text": "Second! The judge was clearly bribed.",
+   "start_s": 141.022,
+   "end_s": 143.204
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Lucia",
+   "text": "The winner was the guy who runs the bakery. That's basically cheating.",
+   "start_s": 143.9,
+   "end_s": 148.135
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Noah",
+   "text": "So, um, for the paddle raise, who's the auctioneer?",
+   "start_s": 148.568,
+   "end_s": 152.292
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Ray",
+   "text": "I asked Councilwoman Reyes. She said probably.",
+   "start_s": 152.723,
+   "end_s": 155.523
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Tamsin",
+   "text": "Probably is not a yes.",
+   "start_s": 155.942,
+   "end_s": 157.76
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Ray",
+   "text": "Right. I'll call her office tomorrow and get a firm yes or no.",
+   "start_s": 158.42,
+   "end_s": 163.62
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Lucia",
+   "text": "It'd be good to have a backup auctioneer, honestly.",
+   "start_s": 164.11,
+   "end_s": 167.286
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Tamsin",
+   "text": "Doors at six, dinner at seven, the video, then the paddle raise with Reyes or a backup. That's the run of show.",
+   "start_s": 167.507,
+   "end_s": 175.507
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Ray",
+   "text": "Sponsors. Lucia, how's the pipeline?",
+   "start_s": 176.545,
+   "end_s": 178.545
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Lucia",
+   "text": "Super promising. We have ten sponsors confirmed.",
+   "start_s": 179.301,
+   "end_s": 181.772
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Ray",
+   "text": "Ten? I have six signed agreements.",
+   "start_s": 182.614,
+   "end_s": 185.014
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Lucia",
+   "text": "Six signed, four who said yes on calls. Honestly, the calls count.",
+   "start_s": 185.4,
+   "end_s": 189.635
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Ray",
+   "text": "The way I see it, a sponsor counts when the check clears.",
+   "start_s": 190.828,
+   "end_s": 195.628
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Noah",
+   "text": "Um, the six signed come to twenty-one thousand.",
+   "start_s": 196.688,
+   "end_s": 199.998
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Ray",
+   "text": "Twenty-one thousand toward a seventy-five thousand goal.",
+   "start_s": 200.319,
+   "end_s": 203.119
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Tamsin",
+   "text": "Who are the four verbal ones?",
+   "start_s": 203.652,
+   "end_s": 205.834
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Lucia",
+   "text": "The vet clinic, the pet food company, the bank on Main and the brewery.",
+   "start_s": 206.755,
+   "end_s": 211.697
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Noah",
+   "text": "Is that vacuum coming through? My roommate has impeccable timing.",
+   "start_s": 212.608,
+   "end_s": 216.746
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Tamsin",
+   "text": "A little. It's fine.",
+   "start_s": 217.882,
+   "end_s": 219.337
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Ray",
+   "text": "Could we get paperwork from those four before the gala?",
+   "start_s": 219.959,
+   "end_s": 223.959
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Lucia",
+   "text": "I'll send agreements to all four verbal sponsors by Friday.",
+   "start_s": 224.989,
+   "end_s": 228.518
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Tamsin",
+   "text": "Oh, I love that. And the headline sponsor? We still don't have one.",
+   "start_s": 229.388,
+   "end_s": 234.116
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Lucia",
+   "text": "The bank might go headline. They asked what it would cost.",
+   "start_s": 234.619,
+   "end_s": 238.502
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Ray",
+   "text": "What would it cost?",
+   "start_s": 239.29,
+   "end_s": 240.89
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Tamsin",
+   "text": "Last year the headline was five thousand, I think.",
+   "start_s": 241.972,
+   "end_s": 245.245
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Ray",
+   "text": "Then we ask for seventy-five hundred this year. Costs are up.",
+   "start_s": 246.291,
+   "end_s": 250.691
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Lucia",
+   "text": "Honestly, I'd ask for ten and let them talk us down.",
+   "start_s": 251.396,
+   "end_s": 255.279
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Ray",
+   "text": "Fine. We ask the bank for ten thousand as headline sponsor and settle no lower than seventy-five hundred.",
+   "start_s": 256.068,
+   "end_s": 263.268
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Tamsin",
+   "text": "Okay, so, selling tickets. We're at a hundred and forty.",
+   "start_s": 263.503,
+   "end_s": 267.139
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Ray",
+   "text": "Out of two fifty capacity.",
+   "start_s": 267.582,
+   "end_s": 269.582
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Tamsin",
+   "text": "Last year we had three hundred people, so we can definitely fill it.",
+   "start_s": 270.579,
+   "end_s": 275.307
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Lucia",
+   "text": "Honestly, we just need to email the list more.",
+   "start_s": 275.921,
+   "end_s": 279.098
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Noah",
+   "text": "How big is the email list now?",
+   "start_s": 279.471,
+   "end_s": 282.368
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Lucia",
+   "text": "About ninety-four hundred.",
+   "start_s": 283.117,
+   "end_s": 284.176
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Ray",
+   "text": "Right. And tickets are ninety-five, which is fair for dinner and a cause.",
+   "start_s": 285.079,
+   "end_s": 290.279
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Tamsin",
+   "text": "What if we did a \"bring a friend\" discount?",
+   "start_s": 291.153,
+   "end_s": 294.426
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Ray",
+   "text": "I'd rather not discount. Maybe a free drink voucher instead.",
+   "start_s": 295.001,
+   "end_s": 299.001
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Lucia",
+   "text": "Someone should ask the brewery about donating drink vouchers.",
+   "start_s": 299.64,
+   "end_s": 302.816
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Noah",
+   "text": "Um, is the date on all the flyers right? I saw one that said the ninth.",
+   "start_s": 303.524,
+   "end_s": 310.145
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Tamsin",
+   "text": "Oh no. It's the eighth. November eighth.",
+   "start_s": 311.123,
+   "end_s": 313.669
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Noah",
+   "text": "Let me double-check which flyer it was.",
+   "start_s": 314.39,
+   "end_s": 317.286
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Tamsin",
+   "text": "I'll get the printer to reprint any flyer with the wrong date. Today.",
+   "start_s": 317.879,
+   "end_s": 322.607
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Ray",
+   "text": "Good. The way I see it, we're in decent shape, as long as the sponsors sign.",
+   "start_s": 323.297,
+   "end_s": 329.697
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Lucia",
+   "text": "Has anyone told the kennel staff they're invited?",
+   "start_s": 329.927,
+   "end_s": 332.75
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Tamsin",
+   "text": "Okay, so, I think that's everything. Thank you, all. For the dogs!",
+   "start_s": 332.993,
+   "end_s": 337.357
+  },
+  {
+   "turn_index": 74,
+   "speaker": "Ray",
+   "text": "For the dogs.",
+   "start_s": 338.26,
+   "end_s": 339.46
+  }
+ ]
+}

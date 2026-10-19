@@ -1,0 +1,1699 @@
+{
+ "meeting_id": "gala-foodbank-d8-s2",
+ "config": {
+  "theme": "Planning committee for a nonprofit's annual fundraising gala",
+  "domain_pack": "nonprofit_events",
+  "drama": 0.8,
+  "seed": 2,
+  "duration_min": 4.2,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   8,
+   9,
+   26,
+   37,
+   44,
+   53
+  ],
+  "reviewed_noclaim": [
+   8,
+   26,
+   44
+  ]
+ },
+ "cast": {
+  "theme": "Planning committee for a nonprofit's annual fundraising gala",
+  "personas": [
+   {
+    "name": "Constance",
+    "role": "Board chair",
+    "goals": "Keep the headline sponsor and the money",
+    "hidden_agenda": "Plays golf with Calder's CEO",
+    "verbosity": 4,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Raymond",
+    "role": "Executive director",
+    "goals": "Protect the food bank's reputation and its volunteers' trust",
+    "hidden_agenda": "Three long-time volunteers threatened to quit over Calder",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Tina",
+    "role": "Volunteer gala chair",
+    "goals": "A sold-out ball",
+    "hidden_agenda": "Just wants everyone to stop fighting",
+    "verbosity": 3,
+    "wpm": 170,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Malik",
+    "role": "Youngest board member",
+    "goals": "Drop Calder",
+    "hidden_agenda": "Organized the volunteers' letter",
+    "verbosity": 4,
+    "wpm": 180,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Harvest Ball committee - special session",
+   "org": "Northside Food Bank (fictional)",
+   "agenda": [
+    {
+     "id": "sponsor",
+     "title": "The Calder sponsorship",
+     "goal": "Decide whether to keep the controversial headline sponsor",
+     "timebox_min": 1.51
+    },
+    {
+     "id": "budget",
+     "title": "Budget",
+     "goal": "Re-check the numbers with or without Calder",
+     "timebox_min": 0.83
+    },
+    {
+     "id": "program",
+     "title": "Program",
+     "goal": "Agree the evening's message",
+     "timebox_min": 1.01
+    },
+    {
+     "id": "tickets",
+     "title": "Tickets",
+     "goal": "Fill the room",
+     "timebox_min": 0.87
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "gala_date",
+     "statement": "Harvest Ball = Saturday, March 8",
+     "value": "March 8"
+    },
+    {
+     "id": "F2",
+     "key": "calder_pledge",
+     "statement": "Calder Industries pledge = $40,000",
+     "value": "$40,000"
+    },
+    {
+     "id": "F3",
+     "key": "total_sponsorship",
+     "statement": "Total sponsorship pledged = $95,000",
+     "value": "$95,000"
+    },
+    {
+     "id": "F4",
+     "key": "gala_budget",
+     "statement": "Gala budget = $52,000",
+     "value": "$52,000"
+    },
+    {
+     "id": "F5",
+     "key": "goal",
+     "statement": "Fundraising goal = $250,000",
+     "value": "$250,000"
+    },
+    {
+     "id": "F6",
+     "key": "meals_per_dollar",
+     "statement": "Each dollar provides 3 meals",
+     "value": "3"
+    },
+    {
+     "id": "F7",
+     "key": "tickets_sold",
+     "statement": "Tickets sold = 260",
+     "value": "260"
+    },
+    {
+     "id": "F8",
+     "key": "capacity",
+     "statement": "Hall capacity = 400",
+     "value": "400"
+    },
+    {
+     "id": "F9",
+     "key": "ticket_price",
+     "statement": "Ticket price = $150",
+     "value": "$150"
+    },
+    {
+     "id": "F10",
+     "key": "last_year_net",
+     "statement": "Last year's ball netted $198,000",
+     "value": "$198,000"
+    },
+    {
+     "id": "F11",
+     "key": "auction_items",
+     "statement": "Auction items = 44",
+     "value": "44"
+    },
+    {
+     "id": "F12",
+     "key": "board_members",
+     "statement": "Board members = 15",
+     "value": "15"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "sponsor",
+    "summary": "Keep Calder or not; Constance inflates the pledge",
+    "n_turns": 21,
+    "events": []
+   },
+   {
+    "agenda_item": "budget",
+    "summary": "The numbers with and without Calder; Malik's figure for last year is high",
+    "n_turns": 10,
+    "events": []
+   },
+   {
+    "agenda_item": "program",
+    "summary": "The evening's message; a detour about a TV chef",
+    "n_turns": 13,
+    "events": []
+   },
+   {
+    "agenda_item": "tickets",
+    "summary": "Filling the hall; Tina's count stands",
+    "n_turns": 12,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Constance",
+   "text": "Let's deal with Calder first. Their pledge is sixty thousand dollars. We can't just hand that back.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Raymond",
+   "text": "It's forty thousand, Constance. I have the signed pledge.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Constance",
+   "text": "Forty, then. Still the biggest gift of the evening.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Malik",
+   "text": "They're being sued for dumping waste into the river that half our clients live next to. We can't put their logo on the stage.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Constance",
+   "text": "Nobody has been convicted of anything.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Malik",
+   "text": "Our volunteers have read the news. Three of them told Raymond they'll quit if Calder's the headline sponsor.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Raymond",
+   "text": "That's true. I've had three letters.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Constance",
+   "text": "Volunteers come and go. Forty thousand dollars doesn't.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Malik",
+   "text": "Volunteers sorted two million pounds of food last year. That's not \"come and go\".",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Tina",
+   "text": "Can we stop shouting? I'm begging you.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Raymond",
+   "text": "What if Calder stays as a donor, but not as the headline sponsor? No logo on the stage.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [
+    "E005",
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Constance",
+   "text": "They'll walk. They paid for the logo.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Malik",
+   "text": "Then let them walk.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Tina",
+   "text": "Has anyone actually asked Calder whether they'd give without the logo?",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Constance",
+   "text": "No.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Raymond",
+   "text": "Then let's ask before we decide anything.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Constance",
+   "text": "I can ask their CEO. I know him.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Malik",
+   "text": "Of course you do.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Constance",
+   "text": "Malik.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Raymond",
+   "text": "Okay. Constance asks this week. If they'll give without the logo, they stay as a donor. If not, we return the pledge.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Tina",
+   "text": "Thank you.",
+   "agenda_item": "sponsor",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Raymond",
+   "text": "Budget. The gala costs fifty-two thousand to put on.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Malik",
+   "text": "And we raised two hundred and fifty last year without any Calder money, so we'll be fine.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Raymond",
+   "text": "We netted a hundred and ninety-eight last year. Two fifty is this year's goal, not last year's result.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E013",
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Malik",
+   "text": "Fine. One ninety-eight. Still no Calder money in it.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Constance",
+   "text": "Total sponsorship is ninety-five thousand, with Calder's forty in it. Without them it's fifty-five.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E016",
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Tina",
+   "text": "Fifty-five thousand in sponsors, fifty-two thousand in costs. That's tight.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Raymond",
+   "text": "The money is made in the room. The paddle raise is where it happens.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Constance",
+   "text": "How many meals does a dollar buy? People respond to that.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Raymond",
+   "text": "Five meals per dollar. That's the number on all our materials.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Malik",
+   "text": "That's a strong line. Five meals.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Tina",
+   "text": "The program. The speaker is a client who now volunteers. She's amazing.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Malik",
+   "text": "That's the story. Not a corporate logo.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Constance",
+   "text": "The program also needs the board on stage. Fifteen of us, briefly.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Tina",
+   "text": "Fifteen people on stage is a lot of standing around.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Raymond",
+   "text": "Maybe just the chair and the client speaker.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Tina",
+   "text": "My sister got a selfie with that TV chef at the farmers market, the one with the bow ties.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Malik",
+   "text": "The one who cries at every dish?",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Tina",
+   "text": "That one. He signed her zucchini.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Raymond",
+   "text": "Sorry. I've just looked at the annual report. It's three meals per dollar, not five. Five was the number before food prices went up.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Constance",
+   "text": "Three. Then the materials need fixing.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Raymond",
+   "text": "I'll get the printer to correct every piece that says five. Tomorrow.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Tina",
+   "text": "The client speaker, then the chair, then the paddle raise. Agreed?",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Constance",
+   "text": "Agreed.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Tina",
+   "text": "Tickets. We're at about three hundred sold.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Constance",
+   "text": "Out of four hundred.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Malik",
+   "text": "At one fifty each, that's a lot of people who care.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Tina",
+   "text": "The auction has forty-four items, the most ever.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Raymond",
+   "text": "If we drop Calder, we should tell the volunteers first, before anyone hears it elsewhere.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Constance",
+   "text": "If we drop Calder.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Malik",
+   "text": "Could the volunteers get free tickets for the back tables? They've earned it.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Raymond",
+   "text": "Ten free tickets for volunteers, yes. The tables are there anyway.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Tina",
+   "text": "I'll send the volunteer invitations once we know about Calder.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Malik",
+   "text": "Who's going to talk to the press if they ask about Calder?",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Constance",
+   "text": "The date's March eighth, and that doesn't change whatever we decide.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Raymond",
+   "text": "Thank you, everyone. That was hard, and we got somewhere.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 0,
+   "speaker": "Constance",
+   "agenda_item": "sponsor",
+   "fact_id": "F2",
+   "claimed_value": "$60,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Raymond",
+   "agenda_item": "sponsor",
+   "fact_id": "F2",
+   "claimed_value": "$40,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Constance",
+   "agenda_item": "sponsor",
+   "fact_id": "F2",
+   "claimed_value": "$40,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Constance",
+   "agenda_item": "sponsor",
+   "fact_id": "F2",
+   "claimed_value": "$40,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Raymond",
+   "agenda_item": "sponsor",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 11,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Raymond",
+   "agenda_item": "sponsor",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Tina",
+   "agenda_item": "sponsor",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 14,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Raymond",
+   "agenda_item": "sponsor",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Constance",
+   "agenda_item": "sponsor",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 19,
+   "speaker": "Raymond",
+   "agenda_item": "sponsor",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Raymond",
+   "agenda_item": "budget",
+   "fact_id": "F4",
+   "claimed_value": "$52,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 22,
+   "speaker": "Malik",
+   "agenda_item": "budget",
+   "fact_id": "F10",
+   "claimed_value": "$250,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Raymond",
+   "agenda_item": "budget",
+   "fact_id": "F10",
+   "claimed_value": "$198,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Raymond",
+   "agenda_item": "budget",
+   "fact_id": "F5",
+   "claimed_value": "$250,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Malik",
+   "agenda_item": "budget",
+   "fact_id": "F10",
+   "claimed_value": "$198,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Constance",
+   "agenda_item": "budget",
+   "fact_id": "F3",
+   "claimed_value": "$95,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Constance",
+   "agenda_item": "budget",
+   "fact_id": "F2",
+   "claimed_value": "$40,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Tina",
+   "agenda_item": "budget",
+   "fact_id": "F4",
+   "claimed_value": "$52,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Constance",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 29,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 29,
+   "speaker": "Raymond",
+   "agenda_item": "budget",
+   "fact_id": "F6",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 30,
+   "speaker": "Malik",
+   "agenda_item": "budget",
+   "fact_id": "F6",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 33,
+   "speaker": "Constance",
+   "agenda_item": "program",
+   "fact_id": "F12",
+   "claimed_value": "15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Tina",
+   "agenda_item": "program",
+   "fact_id": "F12",
+   "claimed_value": "15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Raymond",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 36,
+   "speaker": "Tina",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Raymond",
+   "agenda_item": "program",
+   "fact_id": "F6",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Constance",
+   "agenda_item": "program",
+   "fact_id": "F6",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 41,
+   "speaker": "Raymond",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Tina",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 43,
+   "speaker": "Constance",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 44,
+   "speaker": "Tina",
+   "agenda_item": "tickets",
+   "fact_id": "F7",
+   "claimed_value": "300",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Constance",
+   "agenda_item": "tickets",
+   "fact_id": "F8",
+   "claimed_value": "400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Malik",
+   "agenda_item": "tickets",
+   "fact_id": "F9",
+   "claimed_value": "$150",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Tina",
+   "agenda_item": "tickets",
+   "fact_id": "F11",
+   "claimed_value": "44",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Malik",
+   "agenda_item": "tickets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 51,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 51,
+   "speaker": "Raymond",
+   "agenda_item": "tickets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 52,
+   "speaker": "Tina",
+   "agenda_item": "tickets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 53,
+   "speaker": "Malik",
+   "agenda_item": "tickets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Constance",
+   "agenda_item": "tickets",
+   "fact_id": "F1",
+   "claimed_value": "March 8",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Constance",
+   "text": "Let's deal with Calder first. Their pledge is sixty thousand dollars. We can't just hand that back.",
+   "start_s": 0.5,
+   "end_s": 6.875
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Raymond",
+   "text": "It's forty thousand, Constance. I have the signed pledge.",
+   "start_s": 8.031,
+   "end_s": 11.631
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Constance",
+   "text": "Forty, then. Still the biggest gift of the evening.",
+   "start_s": 12.779,
+   "end_s": 16.154
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Malik",
+   "text": "They're being sued for dumping waste into the river that half our clients live next to. We can't put their logo on the stage.",
+   "start_s": 16.411,
+   "end_s": 24.411
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Constance",
+   "text": "Nobody has been convicted of anything.",
+   "start_s": 24.696,
+   "end_s": 26.946
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Malik",
+   "text": "Our volunteers have read the news. Three of them told Raymond they'll quit if Calder's the headline sponsor.",
+   "start_s": 27.981,
+   "end_s": 33.981
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Raymond",
+   "text": "That's true. I've had three letters.",
+   "start_s": 34.917,
+   "end_s": 37.317
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Constance",
+   "text": "Volunteers come and go. Forty thousand dollars doesn't.",
+   "start_s": 38.187,
+   "end_s": 41.187
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Malik",
+   "text": "Volunteers sorted two million pounds of food last year. That's not \"come and go\".",
+   "start_s": 41.695,
+   "end_s": 46.362
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Tina",
+   "text": "Can we stop shouting? I'm begging you.",
+   "start_s": 47.168,
+   "end_s": 49.639
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Raymond",
+   "text": "What if Calder stays as a donor, but not as the headline sponsor? No logo on the stage.",
+   "start_s": 50.446,
+   "end_s": 57.646
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Constance",
+   "text": "They'll walk. They paid for the logo.",
+   "start_s": 58.427,
+   "end_s": 61.052
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Malik",
+   "text": "Then let them walk.",
+   "start_s": 61.41,
+   "end_s": 62.744
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Tina",
+   "text": "Has anyone actually asked Calder whether they'd give without the logo?",
+   "start_s": 63.375,
+   "end_s": 67.257
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Constance",
+   "text": "No.",
+   "start_s": 67.851,
+   "end_s": 68.226
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Raymond",
+   "text": "Then let's ask before we decide anything.",
+   "start_s": 69.149,
+   "end_s": 71.949
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Constance",
+   "text": "I can ask their CEO. I know him.",
+   "start_s": 73.144,
+   "end_s": 76.144
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Malik",
+   "text": "Of course you do.",
+   "start_s": 77.293,
+   "end_s": 78.627
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Constance",
+   "text": "Malik.",
+   "start_s": 79.371,
+   "end_s": 79.746
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Raymond",
+   "text": "Okay. Constance asks this week. If they'll give without the logo, they stay as a donor. If not, we return the pledge.",
+   "start_s": 80.391,
+   "end_s": 89.191
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Tina",
+   "text": "Thank you.",
+   "start_s": 89.659,
+   "end_s": 90.365
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Raymond",
+   "text": "Budget. The gala costs fifty-two thousand to put on.",
+   "start_s": 90.601,
+   "end_s": 94.201
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Malik",
+   "text": "And we raised two hundred and fifty last year without any Calder money, so we'll be fine.",
+   "start_s": 94.428,
+   "end_s": 100.095
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Raymond",
+   "text": "We netted a hundred and ninety-eight last year. Two fifty is this year's goal, not last year's result.",
+   "start_s": 100.76,
+   "end_s": 107.96
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Malik",
+   "text": "Fine. One ninety-eight. Still no Calder money in it.",
+   "start_s": 108.478,
+   "end_s": 111.478
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Constance",
+   "text": "Total sponsorship is ninety-five thousand, with Calder's forty in it. Without them it's fifty-five.",
+   "start_s": 112.058,
+   "end_s": 117.308
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Tina",
+   "text": "Fifty-five thousand in sponsors, fifty-two thousand in costs. That's tight.",
+   "start_s": 118.4,
+   "end_s": 121.929
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Raymond",
+   "text": "The money is made in the room. The paddle raise is where it happens.",
+   "start_s": 122.655,
+   "end_s": 128.255
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Constance",
+   "text": "How many meals does a dollar buy? People respond to that.",
+   "start_s": 129.016,
+   "end_s": 133.141
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Raymond",
+   "text": "Five meals per dollar. That's the number on all our materials.",
+   "start_s": 133.577,
+   "end_s": 137.977
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Malik",
+   "text": "That's a strong line. Five meals.",
+   "start_s": 138.201,
+   "end_s": 140.201
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Tina",
+   "text": "The program. The speaker is a client who now volunteers. She's amazing.",
+   "start_s": 140.726,
+   "end_s": 144.961
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Malik",
+   "text": "That's the story. Not a corporate logo.",
+   "start_s": 145.298,
+   "end_s": 147.631
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Constance",
+   "text": "The program also needs the board on stage. Fifteen of us, briefly.",
+   "start_s": 148.341,
+   "end_s": 152.841
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Tina",
+   "text": "Fifteen people on stage is a lot of standing around.",
+   "start_s": 154.04,
+   "end_s": 157.569
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Raymond",
+   "text": "Maybe just the chair and the client speaker.",
+   "start_s": 158.443,
+   "end_s": 161.643
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Tina",
+   "text": "My sister got a selfie with that TV chef at the farmers market, the one with the bow ties.",
+   "start_s": 162.025,
+   "end_s": 168.731
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Malik",
+   "text": "The one who cries at every dish?",
+   "start_s": 169.825,
+   "end_s": 172.158
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Tina",
+   "text": "That one. He signed her zucchini.",
+   "start_s": 173.155,
+   "end_s": 175.272
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Raymond",
+   "text": "Sorry. I've just looked at the annual report. It's three meals per dollar, not five. Five was the number before food prices went up.",
+   "start_s": 176.206,
+   "end_s": 185.806
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Constance",
+   "text": "Three. Then the materials need fixing.",
+   "start_s": 186.913,
+   "end_s": 189.163
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Raymond",
+   "text": "I'll get the printer to correct every piece that says five. Tomorrow.",
+   "start_s": 190.126,
+   "end_s": 194.926
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Tina",
+   "text": "The client speaker, then the chair, then the paddle raise. Agreed?",
+   "start_s": 195.916,
+   "end_s": 199.798
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Constance",
+   "text": "Agreed.",
+   "start_s": 200.352,
+   "end_s": 200.727
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Tina",
+   "text": "Tickets. We're at about three hundred sold.",
+   "start_s": 201.908,
+   "end_s": 204.379
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Constance",
+   "text": "Out of four hundred.",
+   "start_s": 205.541,
+   "end_s": 207.041
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Malik",
+   "text": "At one fifty each, that's a lot of people who care.",
+   "start_s": 207.402,
+   "end_s": 211.069
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Tina",
+   "text": "The auction has forty-four items, the most ever.",
+   "start_s": 212.023,
+   "end_s": 214.847
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Raymond",
+   "text": "If we drop Calder, we should tell the volunteers first, before anyone hears it elsewhere.",
+   "start_s": 215.762,
+   "end_s": 221.762
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Constance",
+   "text": "If we drop Calder.",
+   "start_s": 222.423,
+   "end_s": 223.923
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Malik",
+   "text": "Could the volunteers get free tickets for the back tables? They've earned it.",
+   "start_s": 224.653,
+   "end_s": 228.987
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Raymond",
+   "text": "Ten free tickets for volunteers, yes. The tables are there anyway.",
+   "start_s": 229.677,
+   "end_s": 234.077
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Tina",
+   "text": "I'll send the volunteer invitations once we know about Calder.",
+   "start_s": 235.202,
+   "end_s": 238.731
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Malik",
+   "text": "Who's going to talk to the press if they ask about Calder?",
+   "start_s": 239.432,
+   "end_s": 243.432
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Constance",
+   "text": "The date's March eighth, and that doesn't change whatever we decide.",
+   "start_s": 244.464,
+   "end_s": 248.589
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Raymond",
+   "text": "Thank you, everyone. That was hard, and we got somewhere.",
+   "start_s": 249.143,
+   "end_s": 253.143
+  }
+ ]
+}

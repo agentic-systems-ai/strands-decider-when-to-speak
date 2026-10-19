@@ -1,0 +1,2499 @@
+{
+ "meeting_id": "launch-tidewell-d8-s1",
+ "config": {
+  "theme": "Go/no-go for the Aurora mobile app launch",
+  "domain_pack": "product_launch",
+  "drama": 0.8,
+  "seed": 1,
+  "duration_min": 6.2,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   22,
+   26,
+   51,
+   55,
+   60,
+   67,
+   68,
+   77
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "Go/no-go for the Aurora mobile app launch",
+  "personas": [
+   {
+    "name": "Victor",
+    "role": "VP of digital product",
+    "goals": "Launch on November 12 no matter what",
+    "hidden_agenda": "Already told the board it's a done deal",
+    "verbosity": 5,
+    "wpm": 180,
+    "catchphrases": [
+     "bottom line",
+     "come on"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Hana",
+    "role": "Engineering director",
+    "goals": "Don't launch a banking app that crashes",
+    "hidden_agenda": "Her team has been doing weekend shifts for a month",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [
+     "with all due respect",
+     "no"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Chloe",
+    "role": "Design lead",
+    "goals": "Ship something that works for everyone, including screen-reader users",
+    "hidden_agenda": "Lost the accessibility budget fight last quarter",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [
+     "to be clear",
+     "honestly"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Ibrahim",
+    "role": "Compliance manager",
+    "goals": "No regulatory surprises",
+    "hidden_agenda": "Was not invited to the board prep",
+    "verbosity": 2,
+    "wpm": 140,
+    "catchphrases": [
+     "for the record",
+     "strictly speaking"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Aurora banking app - launch readiness review",
+   "org": "Tidewell Bank (fictional)",
+   "agenda": [
+    {
+     "id": "readiness",
+     "title": "Product readiness",
+     "goal": "Stability",
+     "timebox_min": 2.13
+    },
+    {
+     "id": "compliance",
+     "title": "Compliance sign-off",
+     "goal": "Confirm what compliance still needs before launch",
+     "timebox_min": 1.46
+    },
+    {
+     "id": "rollout",
+     "title": "Rollout plan",
+     "goal": "Agree the phases and the rollback trigger",
+     "timebox_min": 1.54
+    },
+    {
+     "id": "go_no_go",
+     "title": "The go/no-go call",
+     "goal": "Make the call and agree what the board hears",
+     "timebox_min": 1.08
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "crash_rate",
+     "statement": "Crash rate in the pilot = 0.6% of sessions",
+     "value": "0.6%"
+    },
+    {
+     "id": "F2",
+     "key": "open_blockers",
+     "statement": "Open launch blockers = 4",
+     "value": "4"
+    },
+    {
+     "id": "F3",
+     "key": "accessibility_issues_open",
+     "statement": "Open accessibility issues = 11",
+     "value": "11"
+    },
+    {
+     "id": "F4",
+     "key": "compliance_items_outstanding",
+     "statement": "Compliance items still outstanding = 2",
+     "value": "2"
+    },
+    {
+     "id": "F5",
+     "key": "pilot_customers",
+     "statement": "Pilot customers = 1,500",
+     "value": "1,500"
+    },
+    {
+     "id": "F6",
+     "key": "pilot_csat",
+     "statement": "Pilot CSAT = 4.1 out of 5",
+     "value": "4.1"
+    },
+    {
+     "id": "F7",
+     "key": "board_demo_date",
+     "statement": "Board demo = October 30",
+     "value": "October 30"
+    },
+    {
+     "id": "F8",
+     "key": "phase1_share",
+     "statement": "Phase 1 rollout = 5% of customers",
+     "value": "5%"
+    },
+    {
+     "id": "F9",
+     "key": "pilot_support_tickets",
+     "statement": "Support tickets from the pilot = 230",
+     "value": "230"
+    },
+    {
+     "id": "F10",
+     "key": "load_test_peak",
+     "statement": "Load test peak = 8,000 requests per second",
+     "value": "8,000"
+    },
+    {
+     "id": "F11",
+     "key": "regulator_notice",
+     "statement": "Regulator notice period = 30 days",
+     "value": "30 days"
+    },
+    {
+     "id": "F12",
+     "key": "launch_target",
+     "statement": "Target launch date = November 12",
+     "value": "November 12"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "readiness",
+    "summary": "Victor cherry-picks; Hana corrects the crash rate; the CSAT inflation slips by",
+    "n_turns": 28,
+    "events": []
+   },
+   {
+    "agenda_item": "compliance",
+    "summary": "What's outstanding; Hana overstates the regulator notice; the accessibility number gets corrected late",
+    "n_turns": 21,
+    "events": []
+   },
+   {
+    "agenda_item": "rollout",
+    "summary": "Phases, load and the rollback trigger",
+    "n_turns": 21,
+    "events": []
+   },
+   {
+    "agenda_item": "go_no_go",
+    "summary": "The call; Victor's board promise comes out",
+    "n_turns": 17,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Victor",
+   "text": "Bottom line, we're launching November twelfth, and this meeting is about how, not whether.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Hana",
+   "text": "With all due respect, that's exactly what this meeting is about.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Victor",
+   "text": "Come on, Hana. The pilot went great. Crash rate's under a tenth of a percent.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Hana",
+   "text": "No. It's zero point six. Six times what you just said.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Victor",
+   "text": "Zero point six, zero point one, it's a rounding error.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Hana",
+   "text": "It's not a rounding error on a banking app. People are moving money when it crashes.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Chloe",
+   "text": "To be clear, most of the crashes are on the transfer screen. That's the scary one.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Victor",
+   "text": "And customers love it. Pilot CSAT was four point six.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Chloe",
+   "text": "Honestly, the comments are good. People like the new home screen.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Ibrahim",
+   "text": "How many pilot customers was that?",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Hana",
+   "text": "Fifteen hundred. Which is not a lot of phones.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Victor",
+   "text": "Fifteen hundred real customers, real money. That's a real signal.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Hana",
+   "text": "How many blockers are still open? Because I have four.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E009",
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Victor",
+   "text": "Four, but two of them are basically done.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Hana",
+   "text": "Basically done is not done.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Chloe",
+   "text": "And accessibility. We're down to three open issues, which is huge progress.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Ibrahim",
+   "text": "For the record, I'd want to see the accessibility list myself before launch.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Victor",
+   "text": "Come on, three issues. We can patch those after.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Hana",
+   "text": "As far as I'm concerned, the transfer crash has to be fixed before launch.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Victor",
+   "text": "Fine, fine. Who's on it?",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E015",
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Hana",
+   "text": "Marco's team. I'll get you a fix date from Marco by end of day tomorrow.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Chloe",
+   "text": "And somebody really needs to test the transfer flow with a screen reader.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Ibrahim",
+   "text": "Has the call center seen the new transfer flow? Because last time—",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": true
+  },
+  {
+   "index": 23,
+   "speaker": "Victor",
+   "text": "Did anyone see the parking garage memo? They're moving us to level four.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [
+    "E020",
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Chloe",
+   "text": "Level four has no elevator access from the east side. It's a nightmare.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Hana",
+   "text": "I park on the street now. It's faster.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Victor",
+   "text": "The street? With my car? Absolutely not.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Ibrahim",
+   "text": "Strictly speaking, we were talking about the launch.",
+   "agenda_item": "readiness",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Victor",
+   "text": "Fine. Compliance. Ibrahim, give me good news.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Ibrahim",
+   "text": "There are two items outstanding. The disclosures text and the data retention review.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Victor",
+   "text": "Two items. That's nothing.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Ibrahim",
+   "text": "The retention review is not nothing. It's the one the regulator asked about last year.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Hana",
+   "text": "And don't we have to notify the regulator sixty days before launch?",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E024",
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Ibrahim",
+   "text": "Thirty. It's a thirty-day notice.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Victor",
+   "text": "Thirty days. When did we send it?",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E027",
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Ibrahim",
+   "text": "We haven't. Nobody told me there was a date until last week.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Victor",
+   "text": "Come on, that's—",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": true
+  },
+  {
+   "index": 37,
+   "speaker": "Hana",
+   "text": "That's on us, not on him.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Ibrahim",
+   "text": "For the record, if the notice goes out this week, the twelfth still works. Just.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Victor",
+   "text": "So it needs to go out this week.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Ibrahim",
+   "text": "I'll file the regulator notice by Friday, if I get the final feature list from Chloe by Wednesday.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Chloe",
+   "text": "To be clear, I can get you the feature list tomorrow.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Ibrahim",
+   "text": "Then I'll file the notice on Thursday.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Victor",
+   "text": "Bottom line, so compliance is a yes.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Ibrahim",
+   "text": "Strictly speaking, compliance is a \"not yet\".",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Chloe",
+   "text": "Sorry, I just pulled up the tracker. Accessibility is eleven open, not three. Three are the critical ones.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Hana",
+   "text": "Eleven.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Victor",
+   "text": "Three critical, that's what matters.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Chloe",
+   "text": "Honestly, eleven matters if you're the person who can't use the app.",
+   "agenda_item": "compliance",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Victor",
+   "text": "Rollout. Hana, your plan?",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Hana",
+   "text": "Phase one is five percent of customers. We watch it for a week before going wider.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Victor",
+   "text": "A week? Come on. Three days.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Hana",
+   "text": "A week. Banks don't get to move fast and break things.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Ibrahim",
+   "text": "Sorry, my laptop's about to die, let me grab a charger.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Chloe",
+   "text": "What's the rollback trigger? Like, what number makes us pull it?",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Hana",
+   "text": "Crash rate over one percent, or transfer failures over two percent, and we roll back. No meeting.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Victor",
+   "text": "No meeting is a bit much.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Hana",
+   "text": "No meeting is the point.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Ibrahim",
+   "text": "Has the load test been run at full scale?",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Hana",
+   "text": "It peaked at eight thousand requests a second without errors.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Victor",
+   "text": "Eight thousand. See? It's ready.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Hana",
+   "text": "For phase one. Not for everyone at once.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Chloe",
+   "text": "Are we telling support what's in phase one? They had two hundred and thirty tickets from the pilot alone.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [
+    "E045",
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Victor",
+   "text": "Support will be fine.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Chloe",
+   "text": "Support was not fine. Honestly, that's why the CSAT comments mention wait times.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Hana",
+   "text": "Okay. Phase one at five percent, one week, with the rollback trigger as I said, automatic. That's the rollout. Decided.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [
+    "E047",
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Victor",
+   "text": "Fine. A week.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Chloe",
+   "text": "I'll brief the support leads on phase one before it starts.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [
+    "E049"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Victor",
+   "text": "Who's going to explain the rollback rule to the board, though?",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Chloe",
+   "text": "Honestly, I'm still thinking about the support queue.",
+   "agenda_item": "rollout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Victor",
+   "text": "Okay. The call. I want a go.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Hana",
+   "text": "With all due respect, it's a conditional go. Transfer crash fixed, regulator notice filed, critical accessibility issues closed.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Ibrahim",
+   "text": "For the record, I agree with conditional.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Chloe",
+   "text": "Same.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "Victor",
+   "text": "Come on, the board demo is October thirtieth. I need to tell them something clean.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [
+    "E051"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 75,
+   "speaker": "Hana",
+   "text": "Tell them it's conditional. That is clean.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 76,
+   "speaker": "Victor",
+   "text": "I may have already told them it's a done deal.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 77,
+   "speaker": "Hana",
+   "text": "You what?",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 78,
+   "speaker": "Ibrahim",
+   "text": "Strictly speaking, you can't tell a board a launch is done before compliance signs off.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 79,
+   "speaker": "Victor",
+   "text": "Okay, okay. I hear you.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 80,
+   "speaker": "Hana",
+   "text": "So we're agreed? Conditional go for November twelfth, with the three conditions?",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [
+    "E052",
+    "E053"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 81,
+   "speaker": "Victor",
+   "text": "Bottom line, yes. Conditional go for the twelfth, three conditions. Final.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [
+    "E054",
+    "E055"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 82,
+   "speaker": "Hana",
+   "text": "Thank you. And the board?",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [
+    "E056"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 83,
+   "speaker": "Victor",
+   "text": "I'll send the board an update on Monday with the conditions spelled out.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [
+    "E057"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 84,
+   "speaker": "Chloe",
+   "text": "Can I see that before it goes?",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [
+    "E058"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 85,
+   "speaker": "Victor",
+   "text": "Fine. You can all see it.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [
+    "E059"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 86,
+   "speaker": "Ibrahim",
+   "text": "Thank you, Victor.",
+   "agenda_item": "go_no_go",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Victor",
+   "agenda_item": "readiness",
+   "fact_id": "F12",
+   "claimed_value": "November 12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 2,
+   "speaker": "Victor",
+   "agenda_item": "readiness",
+   "fact_id": "F1",
+   "claimed_value": "0.1%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Hana",
+   "agenda_item": "readiness",
+   "fact_id": "F1",
+   "claimed_value": "0.6%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Victor",
+   "agenda_item": "readiness",
+   "fact_id": "F1",
+   "claimed_value": "0.6%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 7,
+   "speaker": "Victor",
+   "agenda_item": "readiness",
+   "fact_id": "F6",
+   "claimed_value": "4.6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Ibrahim",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 10,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Hana",
+   "agenda_item": "readiness",
+   "fact_id": "F5",
+   "claimed_value": "1,500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Victor",
+   "agenda_item": "readiness",
+   "fact_id": "F5",
+   "claimed_value": "1,500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Hana",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 13,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Hana",
+   "agenda_item": "readiness",
+   "fact_id": "F2",
+   "claimed_value": "4",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Victor",
+   "agenda_item": "readiness",
+   "fact_id": "F2",
+   "claimed_value": "4",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 15,
+   "speaker": "Chloe",
+   "agenda_item": "readiness",
+   "fact_id": "F3",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 17,
+   "speaker": "Victor",
+   "agenda_item": "readiness",
+   "fact_id": "F3",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Hana",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Victor",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 20,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 19,
+   "speaker": "Victor",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 20,
+   "speaker": "Hana",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Chloe",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 22,
+   "speaker": "Ibrahim",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 23,
+   "speaker": "Victor",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 4,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Victor",
+   "agenda_item": "readiness",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 24,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Ibrahim",
+   "agenda_item": "compliance",
+   "fact_id": "F4",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Victor",
+   "agenda_item": "compliance",
+   "fact_id": "F4",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 32,
+   "speaker": "Hana",
+   "agenda_item": "compliance",
+   "fact_id": "F11",
+   "claimed_value": "60 days",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Hana",
+   "agenda_item": "compliance",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 33,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 33,
+   "speaker": "Ibrahim",
+   "agenda_item": "compliance",
+   "fact_id": "F11",
+   "claimed_value": "30 days",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Victor",
+   "agenda_item": "compliance",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 35,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Victor",
+   "agenda_item": "compliance",
+   "fact_id": "F11",
+   "claimed_value": "30 days",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Ibrahim",
+   "agenda_item": "compliance",
+   "fact_id": "F12",
+   "claimed_value": "November 12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Victor",
+   "agenda_item": "compliance",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 40,
+   "speaker": "Ibrahim",
+   "agenda_item": "compliance",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 41,
+   "speaker": "Chloe",
+   "agenda_item": "compliance",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 42,
+   "speaker": "Ibrahim",
+   "agenda_item": "compliance",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Chloe",
+   "agenda_item": "compliance",
+   "fact_id": "F3",
+   "claimed_value": "11",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Hana",
+   "agenda_item": "compliance",
+   "fact_id": "F3",
+   "claimed_value": "11",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 48,
+   "speaker": "Chloe",
+   "agenda_item": "compliance",
+   "fact_id": "F3",
+   "claimed_value": "11",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Victor",
+   "agenda_item": "rollout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 50,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Hana",
+   "agenda_item": "rollout",
+   "fact_id": "F8",
+   "claimed_value": "5%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 53,
+   "speaker": "Ibrahim",
+   "agenda_item": "rollout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Chloe",
+   "agenda_item": "rollout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 55,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 55,
+   "speaker": "Hana",
+   "agenda_item": "rollout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 58,
+   "speaker": "Ibrahim",
+   "agenda_item": "rollout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 59,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 59,
+   "speaker": "Hana",
+   "agenda_item": "rollout",
+   "fact_id": "F10",
+   "claimed_value": "8,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 60,
+   "speaker": "Victor",
+   "agenda_item": "rollout",
+   "fact_id": "F10",
+   "claimed_value": "8,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 62,
+   "speaker": "Chloe",
+   "agenda_item": "rollout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 67,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 62,
+   "speaker": "Chloe",
+   "agenda_item": "rollout",
+   "fact_id": "F9",
+   "claimed_value": "230",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 65,
+   "speaker": "Hana",
+   "agenda_item": "rollout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 65,
+   "speaker": "Hana",
+   "agenda_item": "rollout",
+   "fact_id": "F8",
+   "claimed_value": "5%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 67,
+   "speaker": "Chloe",
+   "agenda_item": "rollout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 68,
+   "speaker": "Victor",
+   "agenda_item": "rollout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 74,
+   "speaker": "Victor",
+   "agenda_item": "go_no_go",
+   "fact_id": "F7",
+   "claimed_value": "October 30",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 80,
+   "speaker": "Hana",
+   "agenda_item": "go_no_go",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 81,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E053",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 80,
+   "speaker": "Hana",
+   "agenda_item": "go_no_go",
+   "fact_id": "F12",
+   "claimed_value": "November 12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E054",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 81,
+   "speaker": "Victor",
+   "agenda_item": "go_no_go",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E055",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 81,
+   "speaker": "Victor",
+   "agenda_item": "go_no_go",
+   "fact_id": "F12",
+   "claimed_value": "November 12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E056",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 82,
+   "speaker": "Hana",
+   "agenda_item": "go_no_go",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 83,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E057",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 83,
+   "speaker": "Victor",
+   "agenda_item": "go_no_go",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E058",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 84,
+   "speaker": "Chloe",
+   "agenda_item": "go_no_go",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 85,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E059",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 85,
+   "speaker": "Victor",
+   "agenda_item": "go_no_go",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Victor",
+   "text": "Bottom line, we're launching November twelfth, and this meeting is about how, not whether.",
+   "start_s": 0.5,
+   "end_s": 5.167
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Hana",
+   "text": "With all due respect, that's exactly what this meeting is about.",
+   "start_s": 5.501,
+   "end_s": 9.626
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Victor",
+   "text": "Come on, Hana. The pilot went great. Crash rate's under a tenth of a percent.",
+   "start_s": 10.673,
+   "end_s": 15.673
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Hana",
+   "text": "No. It's zero point six. Six times what you just said.",
+   "start_s": 16.637,
+   "end_s": 20.762
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Victor",
+   "text": "Zero point six, zero point one, it's a rounding error.",
+   "start_s": 21.217,
+   "end_s": 24.55
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Hana",
+   "text": "It's not a rounding error on a banking app. People are moving money when it crashes.",
+   "start_s": 25.245,
+   "end_s": 31.245
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Chloe",
+   "text": "To be clear, most of the crashes are on the transfer screen. That's the scary one.",
+   "start_s": 31.894,
+   "end_s": 37.713
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Victor",
+   "text": "And customers love it. Pilot CSAT was four point six.",
+   "start_s": 38.565,
+   "end_s": 41.898
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Chloe",
+   "text": "Honestly, the comments are good. People like the new home screen.",
+   "start_s": 42.887,
+   "end_s": 46.887
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Ibrahim",
+   "text": "How many pilot customers was that?",
+   "start_s": 47.181,
+   "end_s": 49.752
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Hana",
+   "text": "Fifteen hundred. Which is not a lot of phones.",
+   "start_s": 49.98,
+   "end_s": 53.355
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Victor",
+   "text": "Fifteen hundred real customers, real money. That's a real signal.",
+   "start_s": 54.391,
+   "end_s": 57.724
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Hana",
+   "text": "How many blockers are still open? Because I have four.",
+   "start_s": 58.357,
+   "end_s": 62.107
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Victor",
+   "text": "Four, but two of them are basically done.",
+   "start_s": 63.069,
+   "end_s": 65.736
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Hana",
+   "text": "Basically done is not done.",
+   "start_s": 65.938,
+   "end_s": 67.813
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Chloe",
+   "text": "And accessibility. We're down to three open issues, which is huge progress.",
+   "start_s": 68.458,
+   "end_s": 72.822
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Ibrahim",
+   "text": "For the record, I'd want to see the accessibility list myself before launch.",
+   "start_s": 73.744,
+   "end_s": 79.315
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Victor",
+   "text": "Come on, three issues. We can patch those after.",
+   "start_s": 79.744,
+   "end_s": 82.744
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Hana",
+   "text": "As far as I'm concerned, the transfer crash has to be fixed before launch.",
+   "start_s": 83.889,
+   "end_s": 89.139
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Victor",
+   "text": "Fine, fine. Who's on it?",
+   "start_s": 90.24,
+   "end_s": 91.907
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Hana",
+   "text": "Marco's team. I'll get you a fix date from Marco by end of day tomorrow.",
+   "start_s": 92.138,
+   "end_s": 97.763
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Chloe",
+   "text": "And somebody really needs to test the transfer flow with a screen reader.",
+   "start_s": 97.988,
+   "end_s": 102.716
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Ibrahim",
+   "text": "Has the call center seen the new transfer flow? Because last time—",
+   "start_s": 103.457,
+   "end_s": 108.6
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Victor",
+   "text": "Did anyone see the parking garage memo? They're moving us to level four.",
+   "start_s": 107.83,
+   "end_s": 112.164
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Chloe",
+   "text": "Level four has no elevator access from the east side. It's a nightmare.",
+   "start_s": 112.745,
+   "end_s": 117.472
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Hana",
+   "text": "I park on the street now. It's faster.",
+   "start_s": 117.889,
+   "end_s": 120.889
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Victor",
+   "text": "The street? With my car? Absolutely not.",
+   "start_s": 121.511,
+   "end_s": 123.844
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Ibrahim",
+   "text": "Strictly speaking, we were talking about the launch.",
+   "start_s": 124.073,
+   "end_s": 127.502
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Victor",
+   "text": "Fine. Compliance. Ibrahim, give me good news.",
+   "start_s": 127.924,
+   "end_s": 130.257
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Ibrahim",
+   "text": "There are two items outstanding. The disclosures text and the data retention review.",
+   "start_s": 130.895,
+   "end_s": 136.466
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Victor",
+   "text": "Two items. That's nothing.",
+   "start_s": 137.162,
+   "end_s": 138.495
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Ibrahim",
+   "text": "The retention review is not nothing. It's the one the regulator asked about last year.",
+   "start_s": 138.928,
+   "end_s": 145.357
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Hana",
+   "text": "And don't we have to notify the regulator sixty days before launch?",
+   "start_s": 145.788,
+   "end_s": 150.288
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Ibrahim",
+   "text": "Thirty. It's a thirty-day notice.",
+   "start_s": 150.707,
+   "end_s": 152.85
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Victor",
+   "text": "Thirty days. When did we send it?",
+   "start_s": 153.51,
+   "end_s": 155.843
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Ibrahim",
+   "text": "We haven't. Nobody told me there was a date until last week.",
+   "start_s": 156.333,
+   "end_s": 161.476
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Victor",
+   "text": "Come on, that's—",
+   "start_s": 161.697,
+   "end_s": 162.697
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Hana",
+   "text": "That's on us, not on him.",
+   "start_s": 161.997,
+   "end_s": 164.247
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Ibrahim",
+   "text": "For the record, if the notice goes out this week, the twelfth still works. Just.",
+   "start_s": 165.003,
+   "end_s": 171.432
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Victor",
+   "text": "So it needs to go out this week.",
+   "start_s": 172.274,
+   "end_s": 174.941
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Ibrahim",
+   "text": "I'll file the regulator notice by Friday, if I get the final feature list from Chloe by Wednesday.",
+   "start_s": 175.327,
+   "end_s": 183.041
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Chloe",
+   "text": "To be clear, I can get you the feature list tomorrow.",
+   "start_s": 184.234,
+   "end_s": 188.234
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Ibrahim",
+   "text": "Then I'll file the notice on Thursday.",
+   "start_s": 189.294,
+   "end_s": 192.294
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Victor",
+   "text": "Bottom line, so compliance is a yes.",
+   "start_s": 192.615,
+   "end_s": 194.948
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Ibrahim",
+   "text": "Strictly speaking, compliance is a \"not yet\".",
+   "start_s": 195.481,
+   "end_s": 198.481
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Chloe",
+   "text": "Sorry, I just pulled up the tracker. Accessibility is eleven open, not three. Three are the critical ones.",
+   "start_s": 199.402,
+   "end_s": 205.948
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Hana",
+   "text": "Eleven.",
+   "start_s": 206.859,
+   "end_s": 207.234
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Victor",
+   "text": "Three critical, that's what matters.",
+   "start_s": 208.37,
+   "end_s": 210.037
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Chloe",
+   "text": "Honestly, eleven matters if you're the person who can't use the app.",
+   "start_s": 210.659,
+   "end_s": 215.023
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Victor",
+   "text": "Rollout. Hana, your plan?",
+   "start_s": 216.053,
+   "end_s": 217.386
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Hana",
+   "text": "Phase one is five percent of customers. We watch it for a week before going wider.",
+   "start_s": 218.256,
+   "end_s": 224.256
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Victor",
+   "text": "A week? Come on. Three days.",
+   "start_s": 224.759,
+   "end_s": 226.759
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Hana",
+   "text": "A week. Banks don't get to move fast and break things.",
+   "start_s": 227.547,
+   "end_s": 231.672
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Ibrahim",
+   "text": "Sorry, my laptop's about to die, let me grab a charger.",
+   "start_s": 232.754,
+   "end_s": 237.469
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Chloe",
+   "text": "What's the rollback trigger? Like, what number makes us pull it?",
+   "start_s": 238.515,
+   "end_s": 242.515
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Hana",
+   "text": "Crash rate over one percent, or transfer failures over two percent, and we roll back. No meeting.",
+   "start_s": 243.22,
+   "end_s": 249.595
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Victor",
+   "text": "No meeting is a bit much.",
+   "start_s": 250.384,
+   "end_s": 252.384
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Hana",
+   "text": "No meeting is the point.",
+   "start_s": 252.619,
+   "end_s": 254.494
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Ibrahim",
+   "text": "Has the load test been run at full scale?",
+   "start_s": 254.937,
+   "end_s": 258.794
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Hana",
+   "text": "It peaked at eight thousand requests a second without errors.",
+   "start_s": 259.791,
+   "end_s": 263.541
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Victor",
+   "text": "Eight thousand. See? It's ready.",
+   "start_s": 264.155,
+   "end_s": 265.822
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Hana",
+   "text": "For phase one. Not for everyone at once.",
+   "start_s": 266.195,
+   "end_s": 269.195
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Chloe",
+   "text": "Are we telling support what's in phase one? They had two hundred and thirty tickets from the pilot alone.",
+   "start_s": 269.944,
+   "end_s": 276.853
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Victor",
+   "text": "Support will be fine.",
+   "start_s": 277.756,
+   "end_s": 279.089
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Chloe",
+   "text": "Support was not fine. Honestly, that's why the CSAT comments mention wait times.",
+   "start_s": 279.963,
+   "end_s": 284.691
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Hana",
+   "text": "Okay. Phase one at five percent, one week, with the rollback trigger as I said, automatic. That's the rollout. Decided.",
+   "start_s": 285.266,
+   "end_s": 292.766
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Victor",
+   "text": "Fine. A week.",
+   "start_s": 293.405,
+   "end_s": 294.405
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Chloe",
+   "text": "I'll brief the support leads on phase one before it starts.",
+   "start_s": 295.113,
+   "end_s": 299.113
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Victor",
+   "text": "Who's going to explain the rollback rule to the board, though?",
+   "start_s": 300.091,
+   "end_s": 303.758
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Chloe",
+   "text": "Honestly, I'm still thinking about the support queue.",
+   "start_s": 304.479,
+   "end_s": 307.388
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Victor",
+   "text": "Okay. The call. I want a go.",
+   "start_s": 307.981,
+   "end_s": 310.315
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Hana",
+   "text": "With all due respect, it's a conditional go. Transfer crash fixed, regulator notice filed, critical accessibility issues closed.",
+   "start_s": 311.005,
+   "end_s": 317.755
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Ibrahim",
+   "text": "For the record, I agree with conditional.",
+   "start_s": 317.985,
+   "end_s": 320.985
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Chloe",
+   "text": "Same.",
+   "start_s": 321.228,
+   "end_s": 321.592
+  },
+  {
+   "turn_index": 74,
+   "speaker": "Victor",
+   "text": "Come on, the board demo is October thirtieth. I need to tell them something clean.",
+   "start_s": 322.495,
+   "end_s": 327.495
+  },
+  {
+   "turn_index": 75,
+   "speaker": "Hana",
+   "text": "Tell them it's conditional. That is clean.",
+   "start_s": 328.678,
+   "end_s": 331.303
+  },
+  {
+   "turn_index": 76,
+   "speaker": "Victor",
+   "text": "I may have already told them it's a done deal.",
+   "start_s": 332.096,
+   "end_s": 335.43
+  },
+  {
+   "turn_index": 77,
+   "speaker": "Hana",
+   "text": "You what?",
+   "start_s": 336.024,
+   "end_s": 336.774
+  },
+  {
+   "turn_index": 78,
+   "speaker": "Ibrahim",
+   "text": "Strictly speaking, you can't tell a board a launch is done before compliance signs off.",
+   "start_s": 337.144,
+   "end_s": 343.573
+  },
+  {
+   "turn_index": 79,
+   "speaker": "Victor",
+   "text": "Okay, okay. I hear you.",
+   "start_s": 344.275,
+   "end_s": 345.942
+  },
+  {
+   "turn_index": 80,
+   "speaker": "Hana",
+   "text": "So we're agreed? Conditional go for November twelfth, with the three conditions?",
+   "start_s": 347.124,
+   "end_s": 351.624
+  },
+  {
+   "turn_index": 81,
+   "speaker": "Victor",
+   "text": "Bottom line, yes. Conditional go for the twelfth, three conditions. Final.",
+   "start_s": 352.595,
+   "end_s": 356.261
+  },
+  {
+   "turn_index": 82,
+   "speaker": "Hana",
+   "text": "Thank you. And the board?",
+   "start_s": 357.001,
+   "end_s": 358.876
+  },
+  {
+   "turn_index": 83,
+   "speaker": "Victor",
+   "text": "I'll send the board an update on Monday with the conditions spelled out.",
+   "start_s": 359.936,
+   "end_s": 364.27
+  },
+  {
+   "turn_index": 84,
+   "speaker": "Chloe",
+   "text": "Can I see that before it goes?",
+   "start_s": 364.702,
+   "end_s": 367.248
+  },
+  {
+   "turn_index": 85,
+   "speaker": "Victor",
+   "text": "Fine. You can all see it.",
+   "start_s": 367.962,
+   "end_s": 369.962
+  },
+  {
+   "turn_index": 86,
+   "speaker": "Ibrahim",
+   "text": "Thank you, Victor.",
+   "start_s": 371.114,
+   "end_s": 372.4
+  }
+ ]
+}

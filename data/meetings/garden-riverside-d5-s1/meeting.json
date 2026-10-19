@@ -1,0 +1,1961 @@
+{
+ "meeting_id": "garden-riverside-d5-s1",
+ "config": {
+  "theme": "Community garden committee: plots, water and the spring fair",
+  "domain_pack": "community_group",
+  "drama": 0.5,
+  "seed": 1,
+  "duration_min": 4.9,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   4,
+   6,
+   11,
+   18,
+   19,
+   27,
+   44,
+   49
+  ],
+  "reviewed_noclaim": [
+   4
+  ]
+ },
+ "cast": {
+  "theme": "Community garden committee: plots, water and the spring fair",
+  "personas": [
+   {
+    "name": "Esther",
+    "role": "Committee chair",
+    "goals": "A fair process and no shouting",
+    "hidden_agenda": "Founded the garden and finds change hard",
+    "verbosity": 3,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Dmitri",
+    "role": "Looks after irrigation",
+    "goals": "Get the drip system installed this year",
+    "hidden_agenda": "Already got a second quote he hasn't shared",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Holly",
+    "role": "Spring fair organizer",
+    "goals": "The biggest fair yet",
+    "hidden_agenda": "Counting vendors who haven't paid",
+    "verbosity": 4,
+    "wpm": 175,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Bao",
+    "role": "Plot coordinator",
+    "goals": "Shorten the waitlist",
+    "hidden_agenda": "Thinks the volunteer-hours rule is unfair to shift workers",
+    "verbosity": 2,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Riverside garden committee",
+   "org": "Riverside Community Garden (fictional)",
+   "agenda": [
+    {
+     "id": "plots",
+     "title": "Plots",
+     "goal": "Fill the vacant plots from the waitlist",
+     "timebox_min": 1.1
+    },
+    {
+     "id": "irrigation",
+     "title": "Irrigation",
+     "goal": "Decide whether to install the drip system",
+     "timebox_min": 1.36
+    },
+    {
+     "id": "spring_fair",
+     "title": "Spring fair",
+     "goal": "Confirm vendors and the layout",
+     "timebox_min": 1.32
+    },
+    {
+     "id": "volunteers",
+     "title": "Volunteer hours",
+     "goal": "Agree what happens when people don't do their hours",
+     "timebox_min": 1.15
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "plots_total",
+     "statement": "Total plots = 52",
+     "value": "52"
+    },
+    {
+     "id": "F2",
+     "key": "plots_vacant",
+     "statement": "Vacant plots = 6",
+     "value": "6"
+    },
+    {
+     "id": "F3",
+     "key": "waitlist",
+     "statement": "People on the waitlist = 17",
+     "value": "17"
+    },
+    {
+     "id": "F4",
+     "key": "plot_fee",
+     "statement": "Plot fee = $55 a season",
+     "value": "$55"
+    },
+    {
+     "id": "F5",
+     "key": "drip_quote",
+     "statement": "Drip irrigation quote = $3,800",
+     "value": "$3,800"
+    },
+    {
+     "id": "F6",
+     "key": "water_bill_summer",
+     "statement": "Water bill last summer = $2,100",
+     "value": "$2,100"
+    },
+    {
+     "id": "F7",
+     "key": "fair_date",
+     "statement": "Spring fair = Saturday, May 3",
+     "value": "May 3"
+    },
+    {
+     "id": "F8",
+     "key": "fair_vendors",
+     "statement": "Fair vendors confirmed = 11",
+     "value": "11"
+    },
+    {
+     "id": "F9",
+     "key": "volunteer_hours",
+     "statement": "Required volunteer hours = 8 per plot holder",
+     "value": "8"
+    },
+    {
+     "id": "F10",
+     "key": "hours_compliance",
+     "statement": "Plot holders who completed their hours last year = 64%",
+     "value": "64%"
+    },
+    {
+     "id": "F11",
+     "key": "garden_balance",
+     "statement": "Garden bank balance = $5,600",
+     "value": "$5,600"
+    },
+    {
+     "id": "F12",
+     "key": "grant_deadline",
+     "statement": "City green-space grant deadline = March 15",
+     "value": "March 15"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "plots",
+    "summary": "Vacant plots and the waitlist; Bao overstates the waitlist",
+    "n_turns": 15,
+    "events": []
+   },
+   {
+    "agenda_item": "irrigation",
+    "summary": "The drip system; Dmitri's quote figure is low and nobody notices",
+    "n_turns": 18,
+    "events": []
+   },
+   {
+    "agenda_item": "spring_fair",
+    "summary": "Vendors and layout; Holly's vendor count is corrected later; a tangent about the mayoral debate",
+    "n_turns": 18,
+    "events": []
+   },
+   {
+    "agenda_item": "volunteers",
+    "summary": "The hours rule; a real disagreement",
+    "n_turns": 13,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Esther",
+   "text": "Let's begin. Bao, the plots.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Bao",
+   "text": "We have six vacant plots this season, out of the fifty-two.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E001",
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Esther",
+   "text": "And who's waiting for them?",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Bao",
+   "text": "The waitlist is around thirty people now. It's grown a lot.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Holly",
+   "text": "Thirty? I thought it was under twenty.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Esther",
+   "text": "Bao, could you check the sheet?",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Bao",
+   "text": "You're right, it's seventeen. I was counting people who emailed twice.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Holly",
+   "text": "Seventeen for six plots is still a long wait.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E008",
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Dmitri",
+   "text": "Could we split a couple of the big plots in half?",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E010",
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Esther",
+   "text": "Some of those plot holders have been here fifteen years. They won't like it.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Dmitri",
+   "text": "They don't use half of it, though. It's all squash.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Esther",
+   "text": "That reminds me, the old fence by the gate went up the year I joined. Fifteen years ago.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Bao",
+   "text": "I'll offer the six plots to the first six on the list this week.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Esther",
+   "text": "Good. And splitting plots, we'll leave that for the annual meeting.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Dmitri",
+   "text": "Fine.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Esther",
+   "text": "Irrigation. Dmitri, you've been pushing the drip system.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Dmitri",
+   "text": "I have. The quote was three thousand dollars, installed.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Holly",
+   "text": "That's a lot of money for hoses.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Dmitri",
+   "text": "It's not hoses. It's a timed system. It would cut our water use by half.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Holly",
+   "text": "And who maintains the timers once it's in?",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Bao",
+   "text": "What did the water cost last summer?",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Esther",
+   "text": "Twenty-one hundred, from the bill.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Dmitri",
+   "text": "So it pays for itself in a couple of summers.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Holly",
+   "text": "Can we even afford it right now?",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Esther",
+   "text": "The bank balance is fifty-six hundred. We could, but it would leave very little.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Dmitri",
+   "text": "There's a city green-space grant. The deadline is March fifteenth.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Bao",
+   "text": "Could the grant cover the whole thing?",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Dmitri",
+   "text": "Most of it. They fund up to seventy-five percent.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Holly",
+   "text": "Then we apply for the grant and only pay the rest ourselves.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Esther",
+   "text": "That's the sensible way. We'll apply for the grant, and install the drip system if we get it.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Dmitri",
+   "text": "I'll write the grant application this weekend and send it round by Wednesday.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Holly",
+   "text": "Somebody has to show the city photos of the plots. They always want photos.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Bao",
+   "text": "I take photos every week anyway. I'll send Dmitri the best ones.",
+   "agenda_item": "irrigation",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Esther",
+   "text": "The spring fair. Holly?",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Holly",
+   "text": "May third, rain or shine. And we have fifteen vendors confirmed, which is our best year.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E028",
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Esther",
+   "text": "Fifteen. Wonderful.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Bao",
+   "text": "Where do they all go? The path by the beds is narrow.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Holly",
+   "text": "Along the fence, and the food ones in the parking lot.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Dmitri",
+   "text": "The parking lot is where the mayoral debate stage was last fall.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Esther",
+   "text": "That debate. Neither of them knew where the garden even was.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Holly",
+   "text": "One of them called it a park. A park!",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Bao",
+   "text": "So, the parking lot for food. Do we need a permit for that?",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Holly",
+   "text": "The church owns the lot. They just want us to clean up after.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Esther",
+   "text": "Holly, how many vendors have actually paid their fee?",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Holly",
+   "text": "Oh. Paid? Eleven. The other four said yes but haven't paid.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Esther",
+   "text": "Then it's eleven confirmed until they pay.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Holly",
+   "text": "Fine. Eleven confirmed, four likely.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Dmitri",
+   "text": "I'll chase the four unpaid vendors on Friday if you send me their numbers.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Holly",
+   "text": "I'll send you the list tonight.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Bao",
+   "text": "Who's doing the plant sale table this year?",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Holly",
+   "text": "The layout map should go on the shed door so people know where to set up.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Esther",
+   "text": "Volunteer hours. Eight hours per plot holder, as always.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Bao",
+   "text": "Only sixty-four percent did their hours last year.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Holly",
+   "text": "Then the other third should lose their plots. That's the rule.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Bao",
+   "text": "Some of them work nights. They can't come to Saturday work days.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Esther",
+   "text": "The rule doesn't say Saturdays. It says eight hours.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Bao",
+   "text": "In practice, all the work days are Saturdays.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Dmitri",
+   "text": "What if we had a weekday evening work day once a month?",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Esther",
+   "text": "That's fair. Nobody can say we didn't offer.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Holly",
+   "text": "Okay, evening work days. But after that, if you don't do your hours, you lose the plot.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Esther",
+   "text": "Then that's the rule: one evening work day a month, and the hours are enforced from June.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Bao",
+   "text": "I'll put the evening dates on the shared calendar this week.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Dmitri",
+   "text": "Does a plot holder get a warning before they lose the plot?",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Esther",
+   "text": "A written warning in August, and then a conversation. Nobody loses a plot by email. Thank you all. Good meeting.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E048"
+   ],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Bao",
+   "agenda_item": "plots",
+   "fact_id": "F2",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Bao",
+   "agenda_item": "plots",
+   "fact_id": "F1",
+   "claimed_value": "52",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Esther",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 3,
+   "speaker": "Bao",
+   "agenda_item": "plots",
+   "fact_id": "F3",
+   "claimed_value": "30",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Holly",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 6,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Esther",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 6,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Bao",
+   "agenda_item": "plots",
+   "fact_id": "F3",
+   "claimed_value": "17",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Holly",
+   "agenda_item": "plots",
+   "fact_id": "F3",
+   "claimed_value": "17",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Holly",
+   "agenda_item": "plots",
+   "fact_id": "F2",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Dmitri",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 9,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Dmitri",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Esther",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 12,
+   "speaker": "Bao",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Esther",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Dmitri",
+   "agenda_item": "irrigation",
+   "fact_id": "F5",
+   "claimed_value": "$3,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 19,
+   "speaker": "Holly",
+   "agenda_item": "irrigation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Bao",
+   "agenda_item": "irrigation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 21,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Esther",
+   "agenda_item": "irrigation",
+   "fact_id": "F6",
+   "claimed_value": "$2,100",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Holly",
+   "agenda_item": "irrigation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 24,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Esther",
+   "agenda_item": "irrigation",
+   "fact_id": "F11",
+   "claimed_value": "$5,600",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Dmitri",
+   "agenda_item": "irrigation",
+   "fact_id": "F12",
+   "claimed_value": "March 15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Bao",
+   "agenda_item": "irrigation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 27,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 29,
+   "speaker": "Esther",
+   "agenda_item": "irrigation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 30,
+   "speaker": "Dmitri",
+   "agenda_item": "irrigation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Holly",
+   "agenda_item": "irrigation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 32,
+   "speaker": "Bao",
+   "agenda_item": "irrigation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 33,
+   "speaker": "Esther",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 34,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Holly",
+   "agenda_item": "spring_fair",
+   "fact_id": "F7",
+   "claimed_value": "May 3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Holly",
+   "agenda_item": "spring_fair",
+   "fact_id": "F8",
+   "claimed_value": "15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 35,
+   "speaker": "Esther",
+   "agenda_item": "spring_fair",
+   "fact_id": "F8",
+   "claimed_value": "15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Bao",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 37,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 38,
+   "speaker": "Dmitri",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Bao",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 42,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Esther",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 44,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Holly",
+   "agenda_item": "spring_fair",
+   "fact_id": "F8",
+   "claimed_value": "11",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Esther",
+   "agenda_item": "spring_fair",
+   "fact_id": "F8",
+   "claimed_value": "11",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Holly",
+   "agenda_item": "spring_fair",
+   "fact_id": "F8",
+   "claimed_value": "11",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 47,
+   "speaker": "Dmitri",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 48,
+   "speaker": "Holly",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 49,
+   "speaker": "Bao",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 51,
+   "speaker": "Esther",
+   "agenda_item": "volunteers",
+   "fact_id": "F9",
+   "claimed_value": "8",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Bao",
+   "agenda_item": "volunteers",
+   "fact_id": "F10",
+   "claimed_value": "64%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 55,
+   "speaker": "Esther",
+   "agenda_item": "volunteers",
+   "fact_id": "F9",
+   "claimed_value": "8",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 57,
+   "speaker": "Dmitri",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 58,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 60,
+   "speaker": "Esther",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 61,
+   "speaker": "Bao",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 62,
+   "speaker": "Dmitri",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 63,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 63,
+   "speaker": "Esther",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Esther",
+   "text": "Let's begin. Bao, the plots.",
+   "start_s": 0.5,
+   "end_s": 2.569
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Bao",
+   "text": "We have six vacant plots this season, out of the fifty-two.",
+   "start_s": 2.903,
+   "end_s": 7.028
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Esther",
+   "text": "And who's waiting for them?",
+   "start_s": 8.075,
+   "end_s": 10.144
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Bao",
+   "text": "The waitlist is around thirty people now. It's grown a lot.",
+   "start_s": 11.108,
+   "end_s": 15.233
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Holly",
+   "text": "Thirty? I thought it was under twenty.",
+   "start_s": 15.688,
+   "end_s": 18.088
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Esther",
+   "text": "Bao, could you check the sheet?",
+   "start_s": 18.783,
+   "end_s": 21.266
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Bao",
+   "text": "You're right, it's seventeen. I was counting people who emailed twice.",
+   "start_s": 21.915,
+   "end_s": 26.04
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Holly",
+   "text": "Seventeen for six plots is still a long wait.",
+   "start_s": 26.892,
+   "end_s": 29.977
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Dmitri",
+   "text": "Could we split a couple of the big plots in half?",
+   "start_s": 30.966,
+   "end_s": 35.224
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Esther",
+   "text": "Some of those plot holders have been here fifteen years. They won't like it.",
+   "start_s": 35.518,
+   "end_s": 41.311
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Dmitri",
+   "text": "They don't use half of it, though. It's all squash.",
+   "start_s": 41.539,
+   "end_s": 45.41
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Esther",
+   "text": "That reminds me, the old fence by the gate went up the year I joined. Fifteen years ago.",
+   "start_s": 46.446,
+   "end_s": 53.894
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Bao",
+   "text": "I'll offer the six plots to the first six on the list this week.",
+   "start_s": 54.527,
+   "end_s": 59.777
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Esther",
+   "text": "Good. And splitting plots, we'll leave that for the annual meeting.",
+   "start_s": 60.739,
+   "end_s": 65.291
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Dmitri",
+   "text": "Fine.",
+   "start_s": 65.493,
+   "end_s": 65.88
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Esther",
+   "text": "Irrigation. Dmitri, you've been pushing the drip system.",
+   "start_s": 66.525,
+   "end_s": 69.836
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Dmitri",
+   "text": "I have. The quote was three thousand dollars, installed.",
+   "start_s": 70.758,
+   "end_s": 74.241
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Holly",
+   "text": "That's a lot of money for hoses.",
+   "start_s": 74.67,
+   "end_s": 77.07
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Dmitri",
+   "text": "It's not hoses. It's a timed system. It would cut our water use by half.",
+   "start_s": 78.215,
+   "end_s": 84.022
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Holly",
+   "text": "And who maintains the timers once it's in?",
+   "start_s": 85.123,
+   "end_s": 87.866
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Bao",
+   "text": "What did the water cost last summer?",
+   "start_s": 88.097,
+   "end_s": 90.722
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Esther",
+   "text": "Twenty-one hundred, from the bill.",
+   "start_s": 90.947,
+   "end_s": 93.016
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Dmitri",
+   "text": "So it pays for itself in a couple of summers.",
+   "start_s": 93.757,
+   "end_s": 97.628
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Holly",
+   "text": "Can we even afford it right now?",
+   "start_s": 98.767,
+   "end_s": 101.167
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Esther",
+   "text": "The bank balance is fifty-six hundred. We could, but it would leave very little.",
+   "start_s": 101.748,
+   "end_s": 107.541
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Dmitri",
+   "text": "There's a city green-space grant. The deadline is March fifteenth.",
+   "start_s": 107.958,
+   "end_s": 111.829
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Bao",
+   "text": "Could the grant cover the whole thing?",
+   "start_s": 112.451,
+   "end_s": 115.076
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Dmitri",
+   "text": "Most of it. They fund up to seventy-five percent.",
+   "start_s": 115.305,
+   "end_s": 118.789
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Holly",
+   "text": "Then we apply for the grant and only pay the rest ourselves.",
+   "start_s": 119.211,
+   "end_s": 123.325
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Esther",
+   "text": "That's the sensible way. We'll apply for the grant, and install the drip system if we get it.",
+   "start_s": 123.963,
+   "end_s": 131.411
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Dmitri",
+   "text": "I'll write the grant application this weekend and send it round by Wednesday.",
+   "start_s": 132.107,
+   "end_s": 137.139
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Holly",
+   "text": "Somebody has to show the city photos of the plots. They always want photos.",
+   "start_s": 137.572,
+   "end_s": 142.372
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Bao",
+   "text": "I take photos every week anyway. I'll send Dmitri the best ones.",
+   "start_s": 142.803,
+   "end_s": 147.303
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Esther",
+   "text": "The spring fair. Holly?",
+   "start_s": 147.722,
+   "end_s": 149.377
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Holly",
+   "text": "May third, rain or shine. And we have fifteen vendors confirmed, which is our best year.",
+   "start_s": 150.037,
+   "end_s": 155.522
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Esther",
+   "text": "Fifteen. Wonderful.",
+   "start_s": 156.012,
+   "end_s": 156.839
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Bao",
+   "text": "Where do they all go? The path by the beds is narrow.",
+   "start_s": 157.06,
+   "end_s": 161.56
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Holly",
+   "text": "Along the fence, and the food ones in the parking lot.",
+   "start_s": 162.598,
+   "end_s": 166.369
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Dmitri",
+   "text": "The parking lot is where the mayoral debate stage was last fall.",
+   "start_s": 167.125,
+   "end_s": 171.771
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Esther",
+   "text": "That debate. Neither of them knew where the garden even was.",
+   "start_s": 172.613,
+   "end_s": 177.165
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Holly",
+   "text": "One of them called it a park. A park!",
+   "start_s": 177.551,
+   "end_s": 180.637
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Bao",
+   "text": "So, the parking lot for food. Do we need a permit for that?",
+   "start_s": 181.83,
+   "end_s": 186.705
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Holly",
+   "text": "The church owns the lot. They just want us to clean up after.",
+   "start_s": 187.765,
+   "end_s": 192.222
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Esther",
+   "text": "Holly, how many vendors have actually paid their fee?",
+   "start_s": 192.543,
+   "end_s": 196.267
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Holly",
+   "text": "Oh. Paid? Eleven. The other four said yes but haven't paid.",
+   "start_s": 196.8,
+   "end_s": 200.571
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Esther",
+   "text": "Then it's eleven confirmed until they pay.",
+   "start_s": 201.492,
+   "end_s": 204.389
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Holly",
+   "text": "Fine. Eleven confirmed, four likely.",
+   "start_s": 205.3,
+   "end_s": 207.014
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Dmitri",
+   "text": "I'll chase the four unpaid vendors on Friday if you send me their numbers.",
+   "start_s": 208.15,
+   "end_s": 213.57
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Holly",
+   "text": "I'll send you the list tonight.",
+   "start_s": 214.192,
+   "end_s": 216.249
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Bao",
+   "text": "Who's doing the plant sale table this year?",
+   "start_s": 217.279,
+   "end_s": 220.279
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Holly",
+   "text": "The layout map should go on the shed door so people know where to set up.",
+   "start_s": 221.149,
+   "end_s": 226.635
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Esther",
+   "text": "Volunteer hours. Eight hours per plot holder, as always.",
+   "start_s": 227.138,
+   "end_s": 230.863
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Bao",
+   "text": "Only sixty-four percent did their hours last year.",
+   "start_s": 231.651,
+   "end_s": 234.651
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Holly",
+   "text": "Then the other third should lose their plots. That's the rule.",
+   "start_s": 235.733,
+   "end_s": 239.505
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Bao",
+   "text": "Some of them work nights. They can't come to Saturday work days.",
+   "start_s": 240.551,
+   "end_s": 245.051
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Esther",
+   "text": "The rule doesn't say Saturdays. It says eight hours.",
+   "start_s": 245.756,
+   "end_s": 249.48
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Bao",
+   "text": "In practice, all the work days are Saturdays.",
+   "start_s": 250.269,
+   "end_s": 253.269
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Dmitri",
+   "text": "What if we had a weekday evening work day once a month?",
+   "start_s": 253.504,
+   "end_s": 258.149
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Esther",
+   "text": "That's fair. Nobody can say we didn't offer.",
+   "start_s": 258.592,
+   "end_s": 261.902
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Holly",
+   "text": "Okay, evening work days. But after that, if you don't do your hours, you lose the plot.",
+   "start_s": 262.899,
+   "end_s": 268.728
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Esther",
+   "text": "Then that's the rule: one evening work day a month, and the hours are enforced from June.",
+   "start_s": 269.342,
+   "end_s": 276.377
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Bao",
+   "text": "I'll put the evening dates on the shared calendar this week.",
+   "start_s": 276.75,
+   "end_s": 280.875
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Dmitri",
+   "text": "Does a plot holder get a warning before they lose the plot?",
+   "start_s": 281.624,
+   "end_s": 286.269
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Esther",
+   "text": "A written warning in August, and then a conversation. Nobody loses a plot by email. Thank you all. Good meeting.",
+   "start_s": 287.172,
+   "end_s": 295.448
+  }
+ ]
+}

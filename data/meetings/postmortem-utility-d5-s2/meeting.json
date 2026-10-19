@@ -1,0 +1,1808 @@
+{
+ "meeting_id": "postmortem-utility-d5-s2",
+ "config": {
+  "theme": "Incident postmortem: the checkout outage last Tuesday",
+  "domain_pack": "incident_review",
+  "drama": 0.5,
+  "seed": 2,
+  "duration_min": 5.8,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   0,
+   4,
+   30,
+   62
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "Incident postmortem: the checkout outage last Tuesday",
+  "personas": [
+   {
+    "name": "Imani",
+    "role": "Incident lead, facilitates",
+    "goals": "A clear record and fixes that stick",
+    "hidden_agenda": "Pushed for load testing last year and lost the budget fight",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Gareth",
+    "role": "Backend engineer who made the rate limit change",
+    "goals": "Explain the change honestly",
+    "hidden_agenda": "Was asked to make the change by the security team in a hurry",
+    "verbosity": 2,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Selin",
+    "role": "Customer operations manager",
+    "goals": "Look after the customers who were hurt",
+    "hidden_agenda": "Her call center staff were abused on the phones all morning",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Pablo",
+    "role": "Product manager for the portal",
+    "goals": "Win back customer trust",
+    "hidden_agenda": "The portal redesign launch is in two weeks and he's worried it slips",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Postmortem - Tuesday payment portal outage",
+   "org": "Copperline Energy (fictional utility)",
+   "agenda": [
+    {
+     "id": "timeline",
+     "title": "Timeline",
+     "goal": "Agree what happened and when",
+     "timebox_min": 1.18
+    },
+    {
+     "id": "cause",
+     "title": "Cause",
+     "goal": "Understand the rate limit change and the due-date spike",
+     "timebox_min": 1.84
+    },
+    {
+     "id": "customers",
+     "title": "Customer impact",
+     "goal": "Late fees",
+     "timebox_min": 1.74
+    },
+    {
+     "id": "actions",
+     "title": "Actions",
+     "goal": "Owners and dates",
+     "timebox_min": 1.05
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "outage_duration",
+     "statement": "Payment portal outage lasted 95 minutes",
+     "value": "95 minutes"
+    },
+    {
+     "id": "F2",
+     "key": "outage_start",
+     "statement": "Outage started at 8:05 am",
+     "value": "8:05 am"
+    },
+    {
+     "id": "F3",
+     "key": "rate_limit",
+     "statement": "New rate limit = 500 requests per second",
+     "value": "500"
+    },
+    {
+     "id": "F4",
+     "key": "peak_traffic",
+     "statement": "Peak traffic = 1,400 requests per second",
+     "value": "1,400"
+    },
+    {
+     "id": "F5",
+     "key": "failed_payments",
+     "statement": "Failed payments = 9,800",
+     "value": "9,800"
+    },
+    {
+     "id": "F6",
+     "key": "late_fees_waived",
+     "statement": "Late fees waived = $73,500",
+     "value": "$73,500"
+    },
+    {
+     "id": "F7",
+     "key": "call_volume",
+     "statement": "Calls to the call center = 4,200",
+     "value": "4,200"
+    },
+    {
+     "id": "F8",
+     "key": "hold_time",
+     "statement": "Average hold time at peak = 38 minutes",
+     "value": "38 minutes"
+    },
+    {
+     "id": "F9",
+     "key": "due_today",
+     "statement": "Customers with bills due that day = 120,000",
+     "value": "120,000"
+    },
+    {
+     "id": "F10",
+     "key": "change_ticket",
+     "statement": "The rate limit change was CHG-2207",
+     "value": "CHG-2207"
+    },
+    {
+     "id": "F11",
+     "key": "previous_peak",
+     "statement": "Previous peak handled = 1,100 requests per second",
+     "value": "1,100"
+    },
+    {
+     "id": "F12",
+     "key": "status_page_delay",
+     "statement": "Status page updated 25 minutes after the start",
+     "value": "25 minutes"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "timeline",
+    "summary": "What happened and when",
+    "n_turns": 15,
+    "events": []
+   },
+   {
+    "agenda_item": "cause",
+    "summary": "The rate limit change; Gareth misstates the new limit and is corrected",
+    "n_turns": 20,
+    "events": []
+   },
+   {
+    "agenda_item": "customers",
+    "summary": "The human side; Selin's hold time is high, corrected later; Pablo's failure count stands",
+    "n_turns": 20,
+    "events": []
+   },
+   {
+    "agenda_item": "actions",
+    "summary": "Owners, dates, and one open question",
+    "n_turns": 10,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Imani",
+   "text": "Thanks for coming. Blameless, as usual. Let's start with the timeline.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Gareth",
+   "text": "The portal started rejecting payments at five past eight in the morning.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Pablo",
+   "text": "Which is exactly when people pay their bills before work.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Imani",
+   "text": "When did the status page go up?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Selin",
+   "text": "Twenty-five minutes later. My team was already drowning by then.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Imani",
+   "text": "How long was the portal down in total?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Gareth",
+   "text": "Ninety-five minutes, until the limit was raised again.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Selin",
+   "text": "It felt like a whole day on the phones.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Pablo",
+   "text": "I was on the train when it started. My own payment failed. That's how I found out.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Imani",
+   "text": "Not ideal, but at least you saw what customers saw.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Pablo",
+   "text": "I saw a page that said \"too many requests\". Customers have no idea what that means.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Selin",
+   "text": "They thought we were blaming them for paying too often.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Imani",
+   "text": "That error message is going on the action list.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Gareth",
+   "text": "In fairness, it's the default message from the gateway. Nobody ever wrote a friendly one.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Selin",
+   "text": "Then let's write one.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Imani",
+   "text": "Gareth, what changed?",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Gareth",
+   "text": "The security team asked us to add a rate limit on the payment API after the credential-stuffing attempts last month. I set it to a thousand requests a second.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Imani",
+   "text": "The change ticket says five hundred. CHG-2207.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E008",
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Gareth",
+   "text": "Five hundred. You're right. A thousand was the number I'd proposed, and it got lowered in review.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Pablo",
+   "text": "And the traffic that morning?",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Gareth",
+   "text": "It peaked at fourteen hundred a second. Almost three times the limit.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Selin",
+   "text": "Why that morning in particular?",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Pablo",
+   "text": "A hundred and twenty thousand customers had bills due that day. It's the first of the month.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Imani",
+   "text": "Had we ever seen that much traffic before?",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Gareth",
+   "text": "The previous peak was eleven hundred. So even the old high-water mark would have been blocked.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Imani",
+   "text": "So the limit was set without anyone checking real traffic.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Gareth",
+   "text": "Without anyone checking the first of the month, no. The security team looked at an average day.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Selin",
+   "text": "An average day is not the day people pay their bills.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Imani",
+   "text": "It's a gap in how we review limits, not in Gareth.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Pablo",
+   "text": "Has the security team been told what happened?",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Imani",
+   "text": "I spoke to their lead yesterday. They're joining the actions part next week.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Gareth",
+   "text": "Rate limits should be set from the busiest day of the year, not an average. That should be a rule.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Imani",
+   "text": "Then that's the rule from today: limits are set from the busiest day in the last year, with headroom.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Selin",
+   "text": "Good.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Gareth",
+   "text": "I'll rewrite the limit using the first-of-month peaks and get it reviewed by both teams.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Imani",
+   "text": "Customers. Selin?",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Selin",
+   "text": "We took forty-two hundred calls that morning. Hold times hit an hour at the worst point.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [
+    "E021",
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Pablo",
+   "text": "And about five thousand payments failed outright.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Imani",
+   "text": "Those people will get late fees, unless we waive them.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Selin",
+   "text": "We have to waive them. It wasn't their fault.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Pablo",
+   "text": "Waiving every late fee from that morning is seventy-three and a half thousand dollars. Finance already ran it.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Imani",
+   "text": "That's a lot, but it's the right thing.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Selin",
+   "text": "Some customers were in tears on the phone. One woman thought her heating would be cut off.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Pablo",
+   "text": "Was it?",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Selin",
+   "text": "No. Nobody gets disconnected for a missed payment on a day we were down. We made sure of that.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Imani",
+   "text": "Then we waive every late fee caused by the outage, automatically, with no need to call.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Selin",
+   "text": "Could someone send customers an apology that explains it in plain words?",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Pablo",
+   "text": "I'll write it today, and get Selin to read it before it goes.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Selin",
+   "text": "Thank you. Sorry, one more correction. I checked the call log after the meeting started. The average hold at peak was thirty-eight minutes, not an hour.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Imani",
+   "text": "Thirty-eight minutes is still terrible.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Selin",
+   "text": "It is. My team deserves a thank-you, honestly.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Pablo",
+   "text": "The weather didn't help, either. That freezing fog had half the city working from home and online at eight.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Gareth",
+   "text": "The fog was wild. I couldn't see the end of my street.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Selin",
+   "text": "My kids had a snow day and there wasn't even any snow.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Pablo",
+   "text": "Actions, then.",
+   "agenda_item": "customers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Imani",
+   "text": "Actions. We have Gareth on the limit, Pablo on the apology, and the fees waived automatically.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Selin",
+   "text": "And the error message. Customers need to know it's us, not them.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Pablo",
+   "text": "That one's mine. The new message will say we're having trouble and their payment hasn't been taken.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Gareth",
+   "text": "It might be worth load-testing the portal before the redesign launch too.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Imani",
+   "text": "I'd like that very much. I'll put a load test in the launch checklist.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Pablo",
+   "text": "Will the load test delay the redesign? It launches in two weeks.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Imani",
+   "text": "Not if we start it this week. A day of testing, maybe two.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Selin",
+   "text": "Who checks that the late-fee waivers actually went through for everyone?",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Gareth",
+   "text": "I can pull a report of every failed payment from that morning, if that helps whoever does it.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Imani",
+   "text": "Thank you, everyone. This was a hard morning for a lot of people, and you handled it well.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Gareth",
+   "agenda_item": "timeline",
+   "fact_id": "F2",
+   "claimed_value": "8:05 am",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Imani",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 4,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Selin",
+   "agenda_item": "timeline",
+   "fact_id": "F12",
+   "claimed_value": "25 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Imani",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 6,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Gareth",
+   "agenda_item": "timeline",
+   "fact_id": "F1",
+   "claimed_value": "95 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Imani",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 16,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Gareth",
+   "agenda_item": "cause",
+   "fact_id": "F3",
+   "claimed_value": "1,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Imani",
+   "agenda_item": "cause",
+   "fact_id": "F3",
+   "claimed_value": "500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Imani",
+   "agenda_item": "cause",
+   "fact_id": "F10",
+   "claimed_value": "CHG-2207",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Gareth",
+   "agenda_item": "cause",
+   "fact_id": "F3",
+   "claimed_value": "500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Pablo",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 20,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Gareth",
+   "agenda_item": "cause",
+   "fact_id": "F4",
+   "claimed_value": "1,400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Selin",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 22,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Pablo",
+   "agenda_item": "cause",
+   "fact_id": "F9",
+   "claimed_value": "120,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Imani",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 24,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Gareth",
+   "agenda_item": "cause",
+   "fact_id": "F11",
+   "claimed_value": "1,100",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Pablo",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 30,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 32,
+   "speaker": "Imani",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Gareth",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Imani",
+   "agenda_item": "customers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 36,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Selin",
+   "agenda_item": "customers",
+   "fact_id": "F7",
+   "claimed_value": "4,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 36,
+   "speaker": "Selin",
+   "agenda_item": "customers",
+   "fact_id": "F8",
+   "claimed_value": "an hour",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 37,
+   "speaker": "Pablo",
+   "agenda_item": "customers",
+   "fact_id": "F5",
+   "claimed_value": "5,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Pablo",
+   "agenda_item": "customers",
+   "fact_id": "F6",
+   "claimed_value": "$73,500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Pablo",
+   "agenda_item": "customers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 44,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 45,
+   "speaker": "Imani",
+   "agenda_item": "customers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Selin",
+   "agenda_item": "customers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 47,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 47,
+   "speaker": "Pablo",
+   "agenda_item": "customers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 48,
+   "speaker": "Selin",
+   "agenda_item": "customers",
+   "fact_id": "F8",
+   "claimed_value": "38 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Imani",
+   "agenda_item": "customers",
+   "fact_id": "F8",
+   "claimed_value": "38 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 51,
+   "speaker": "Pablo",
+   "agenda_item": "customers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 57,
+   "speaker": "Pablo",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 58,
+   "speaker": "Gareth",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 59,
+   "speaker": "Imani",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 60,
+   "speaker": "Pablo",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 61,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 62,
+   "speaker": "Selin",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 63,
+   "speaker": "Gareth",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Imani",
+   "text": "Thanks for coming. Blameless, as usual. Let's start with the timeline.",
+   "start_s": 0.5,
+   "end_s": 4.758
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Gareth",
+   "text": "The portal started rejecting payments at five past eight in the morning.",
+   "start_s": 5.914,
+   "end_s": 10.88
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Pablo",
+   "text": "Which is exactly when people pay their bills before work.",
+   "start_s": 12.028,
+   "end_s": 15.778
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Imani",
+   "text": "When did the status page go up?",
+   "start_s": 16.035,
+   "end_s": 18.744
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Selin",
+   "text": "Twenty-five minutes later. My team was already drowning by then.",
+   "start_s": 19.029,
+   "end_s": 22.665
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Imani",
+   "text": "How long was the portal down in total?",
+   "start_s": 23.7,
+   "end_s": 26.797
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Gareth",
+   "text": "Ninety-five minutes, until the limit was raised again.",
+   "start_s": 27.733,
+   "end_s": 31.043
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Selin",
+   "text": "It felt like a whole day on the phones.",
+   "start_s": 31.913,
+   "end_s": 35.185
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Pablo",
+   "text": "I was on the train when it started. My own payment failed. That's how I found out.",
+   "start_s": 35.693,
+   "end_s": 42.068
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Imani",
+   "text": "Not ideal, but at least you saw what customers saw.",
+   "start_s": 42.874,
+   "end_s": 46.745
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Pablo",
+   "text": "I saw a page that said \"too many requests\". Customers have no idea what that means.",
+   "start_s": 47.552,
+   "end_s": 53.552
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Selin",
+   "text": "They thought we were blaming them for paying too often.",
+   "start_s": 54.333,
+   "end_s": 57.97
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Imani",
+   "text": "That error message is going on the action list.",
+   "start_s": 58.328,
+   "end_s": 61.812
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Gareth",
+   "text": "In fairness, it's the default message from the gateway. Nobody ever wrote a friendly one.",
+   "start_s": 62.443,
+   "end_s": 68.65
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Selin",
+   "text": "Then let's write one.",
+   "start_s": 69.244,
+   "end_s": 70.698
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Imani",
+   "text": "Gareth, what changed?",
+   "start_s": 71.621,
+   "end_s": 72.782
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Gareth",
+   "text": "The security team asked us to add a rate limit on the payment API after the credential-stuffing attempts last month. I set it to a thousand requests a second.",
+   "start_s": 73.977,
+   "end_s": 85.977
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Imani",
+   "text": "The change ticket says five hundred. CHG-2207.",
+   "start_s": 87.126,
+   "end_s": 89.836
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Gareth",
+   "text": "Five hundred. You're right. A thousand was the number I'd proposed, and it got lowered in review.",
+   "start_s": 90.58,
+   "end_s": 97.615
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Pablo",
+   "text": "And the traffic that morning?",
+   "start_s": 98.26,
+   "end_s": 100.135
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Gareth",
+   "text": "It peaked at fourteen hundred a second. Almost three times the limit.",
+   "start_s": 100.603,
+   "end_s": 105.569
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Selin",
+   "text": "Why that morning in particular?",
+   "start_s": 105.805,
+   "end_s": 107.623
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Pablo",
+   "text": "A hundred and twenty thousand customers had bills due that day. It's the first of the month.",
+   "start_s": 107.85,
+   "end_s": 114.225
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Imani",
+   "text": "Had we ever seen that much traffic before?",
+   "start_s": 114.89,
+   "end_s": 117.987
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Gareth",
+   "text": "The previous peak was eleven hundred. So even the old high-water mark would have been blocked.",
+   "start_s": 118.505,
+   "end_s": 125.126
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Imani",
+   "text": "So the limit was set without anyone checking real traffic.",
+   "start_s": 125.706,
+   "end_s": 129.577
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Gareth",
+   "text": "Without anyone checking the first of the month, no. The security team looked at an average day.",
+   "start_s": 130.669,
+   "end_s": 137.703
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Selin",
+   "text": "An average day is not the day people pay their bills.",
+   "start_s": 138.429,
+   "end_s": 142.429
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Imani",
+   "text": "It's a gap in how we review limits, not in Gareth.",
+   "start_s": 143.19,
+   "end_s": 147.448
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Pablo",
+   "text": "Has the security team been told what happened?",
+   "start_s": 147.884,
+   "end_s": 150.884
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Imani",
+   "text": "I spoke to their lead yesterday. They're joining the actions part next week.",
+   "start_s": 151.108,
+   "end_s": 156.14
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Gareth",
+   "text": "Rate limits should be set from the busiest day of the year, not an average. That should be a rule.",
+   "start_s": 156.665,
+   "end_s": 164.941
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Imani",
+   "text": "Then that's the rule from today: limits are set from the busiest day in the last year, with headroom.",
+   "start_s": 165.278,
+   "end_s": 172.633
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Selin",
+   "text": "Good.",
+   "start_s": 173.343,
+   "end_s": 173.707
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Gareth",
+   "text": "I'll rewrite the limit using the first-of-month peaks and get it reviewed by both teams.",
+   "start_s": 174.906,
+   "end_s": 181.113
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Imani",
+   "text": "Customers. Selin?",
+   "start_s": 181.987,
+   "end_s": 182.762
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Selin",
+   "text": "We took forty-two hundred calls that morning. Hold times hit an hour at the worst point.",
+   "start_s": 183.144,
+   "end_s": 188.962
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Pablo",
+   "text": "And about five thousand payments failed outright.",
+   "start_s": 190.056,
+   "end_s": 192.681
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Imani",
+   "text": "Those people will get late fees, unless we waive them.",
+   "start_s": 193.678,
+   "end_s": 197.549
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Selin",
+   "text": "We have to waive them. It wasn't their fault.",
+   "start_s": 198.483,
+   "end_s": 201.756
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Pablo",
+   "text": "Waiving every late fee from that morning is seventy-three and a half thousand dollars. Finance already ran it.",
+   "start_s": 202.863,
+   "end_s": 209.613
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Imani",
+   "text": "That's a lot, but it's the right thing.",
+   "start_s": 210.576,
+   "end_s": 213.673
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Selin",
+   "text": "Some customers were in tears on the phone. One woman thought her heating would be cut off.",
+   "start_s": 214.663,
+   "end_s": 220.845
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Pablo",
+   "text": "Was it?",
+   "start_s": 221.399,
+   "end_s": 222.149
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Selin",
+   "text": "No. Nobody gets disconnected for a missed payment on a day we were down. We made sure of that.",
+   "start_s": 223.33,
+   "end_s": 230.239
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Imani",
+   "text": "Then we waive every late fee caused by the outage, automatically, with no need to call.",
+   "start_s": 231.401,
+   "end_s": 237.594
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Selin",
+   "text": "Could someone send customers an apology that explains it in plain words?",
+   "start_s": 237.955,
+   "end_s": 242.319
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Pablo",
+   "text": "I'll write it today, and get Selin to read it before it goes.",
+   "start_s": 243.273,
+   "end_s": 248.148
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Selin",
+   "text": "Thank you. Sorry, one more correction. I checked the call log after the meeting started. The average hold at peak was thirty-eight minutes, not an hour.",
+   "start_s": 249.063,
+   "end_s": 258.518
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Imani",
+   "text": "Thirty-eight minutes is still terrible.",
+   "start_s": 259.179,
+   "end_s": 261.115
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Selin",
+   "text": "It is. My team deserves a thank-you, honestly.",
+   "start_s": 261.845,
+   "end_s": 264.754
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Pablo",
+   "text": "The weather didn't help, either. That freezing fog had half the city working from home and online at eight.",
+   "start_s": 265.444,
+   "end_s": 272.569
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Gareth",
+   "text": "The fog was wild. I couldn't see the end of my street.",
+   "start_s": 273.694,
+   "end_s": 278.659
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Selin",
+   "text": "My kids had a snow day and there wasn't even any snow.",
+   "start_s": 279.36,
+   "end_s": 283.723
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Pablo",
+   "text": "Actions, then.",
+   "start_s": 284.755,
+   "end_s": 285.505
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Imani",
+   "text": "Actions. We have Gareth on the limit, Pablo on the apology, and the fees waived automatically.",
+   "start_s": 286.059,
+   "end_s": 292.252
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Selin",
+   "text": "And the error message. Customers need to know it's us, not them.",
+   "start_s": 293.335,
+   "end_s": 297.698
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Pablo",
+   "text": "That one's mine. The new message will say we're having trouble and their payment hasn't been taken.",
+   "start_s": 298.798,
+   "end_s": 305.173
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Gareth",
+   "text": "It might be worth load-testing the portal before the redesign launch too.",
+   "start_s": 305.834,
+   "end_s": 310.8
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Imani",
+   "text": "I'd like that very much. I'll put a load test in the launch checklist.",
+   "start_s": 311.568,
+   "end_s": 316.987
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Pablo",
+   "text": "Will the load test delay the redesign? It launches in two weeks.",
+   "start_s": 318.107,
+   "end_s": 322.607
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Imani",
+   "text": "Not if we start it this week. A day of testing, maybe two.",
+   "start_s": 323.531,
+   "end_s": 328.563
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Selin",
+   "text": "Who checks that the late-fee waivers actually went through for everyone?",
+   "start_s": 329.25,
+   "end_s": 333.25
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Gareth",
+   "text": "I can pull a report of every failed payment from that morning, if that helps whoever does it.",
+   "start_s": 333.672,
+   "end_s": 341.12
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Imani",
+   "text": "Thank you, everyone. This was a hard morning for a lot of people, and you handled it well.",
+   "start_s": 341.645,
+   "end_s": 348.612
+  }
+ ]
+}

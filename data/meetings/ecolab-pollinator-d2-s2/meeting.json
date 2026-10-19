@@ -1,0 +1,1673 @@
+{
+ "meeting_id": "ecolab-pollinator-d2-s2",
+ "config": {
+  "theme": "Weekly meeting of a university ecology research lab",
+  "domain_pack": "research_lab",
+  "drama": 0.2,
+  "seed": 2,
+  "duration_min": 4.2,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   33,
+   50
+  ],
+  "reviewed_noclaim": [
+   33
+  ]
+ },
+ "cast": {
+  "theme": "Weekly meeting of a university ecology research lab",
+  "personas": [
+   {
+    "name": "Odile",
+    "role": "Principal investigator",
+    "goals": "A smooth move and a productive summer",
+    "hidden_agenda": "Writing the grant renewal and anxious about it",
+    "verbosity": 3,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Sanjay",
+    "role": "Postdoc, runs the surveys",
+    "goals": "More sites, more species",
+    "hidden_agenda": "Wants a site in the mountains that is a long drive away",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Bryn",
+    "role": "PhD student",
+    "goals": "Get the first paper through review",
+    "hidden_agenda": "Reviewer two has been harsh and Bryn is discouraged",
+    "verbosity": 2,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Lottie",
+    "role": "Lab coordinator, runs the undergraduate program",
+    "goals": "A good summer for the undergrads",
+    "hidden_agenda": "Has been promised a bigger budget than the grant has",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Danielle",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Pollinator lab weekly meeting",
+   "org": "Highland Pollinator Lab, Glenmoor University (fictional)",
+   "agenda": [
+    {
+     "id": "surveys",
+     "title": "Summer bee surveys",
+     "goal": "Finalize sites and traps for the season",
+     "timebox_min": 1.54
+    },
+    {
+     "id": "move",
+     "title": "The lab move",
+     "goal": "Plan the move to the new building",
+     "timebox_min": 1.07
+    },
+    {
+     "id": "papers",
+     "title": "Papers",
+     "goal": "Status of the two papers under review",
+     "timebox_min": 0.64
+    },
+    {
+     "id": "undergrads",
+     "title": "Undergraduate program",
+     "goal": "Plan the summer research assistants",
+     "timebox_min": 0.98
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "survey_sites",
+     "statement": "Survey sites = 22",
+     "value": "22"
+    },
+    {
+     "id": "F2",
+     "key": "species_recorded",
+     "statement": "Bee species recorded so far = 87",
+     "value": "87"
+    },
+    {
+     "id": "F3",
+     "key": "pan_traps",
+     "statement": "Pan traps = 140",
+     "value": "140"
+    },
+    {
+     "id": "F4",
+     "key": "move_date",
+     "statement": "Lab move = August 15",
+     "value": "August 15"
+    },
+    {
+     "id": "F5",
+     "key": "freezers",
+     "statement": "Freezers to move = 3",
+     "value": "3"
+    },
+    {
+     "id": "F6",
+     "key": "papers_in_review",
+     "statement": "Papers under review = 2",
+     "value": "2"
+    },
+    {
+     "id": "F7",
+     "key": "undergrads",
+     "statement": "Undergraduate assistants this summer = 6",
+     "value": "6"
+    },
+    {
+     "id": "F8",
+     "key": "stipend",
+     "statement": "Undergraduate pay = $15 per hour",
+     "value": "$15"
+    },
+    {
+     "id": "F9",
+     "key": "grant_end",
+     "statement": "Current grant ends December 31",
+     "value": "December 31"
+    },
+    {
+     "id": "F10",
+     "key": "specimens_pinned",
+     "statement": "Specimens pinned = 4,600",
+     "value": "4,600"
+    },
+    {
+     "id": "F11",
+     "key": "conference_date",
+     "statement": "Regional conference = October 2",
+     "value": "October 2"
+    },
+    {
+     "id": "F12",
+     "key": "greenhouse_bays",
+     "statement": "Greenhouse bays in the new building = 4",
+     "value": "4"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "surveys",
+    "summary": "Sites and traps; Sanjay's site count is high",
+    "n_turns": 18,
+    "events": []
+   },
+   {
+    "agenda_item": "move",
+    "summary": "The new building",
+    "n_turns": 14,
+    "events": []
+   },
+   {
+    "agenda_item": "papers",
+    "summary": "Two in review",
+    "n_turns": 8,
+    "events": []
+   },
+   {
+    "agenda_item": "undergrads",
+    "summary": "The summer program; Lottie's headcount stands",
+    "n_turns": 12,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Odile",
+   "text": "Good morning. Surveys first, since the season starts soon. Sanjay?",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Sanjay",
+   "text": "We'll survey about thirty sites this summer, same as last year.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Lottie",
+   "text": "I have twenty-two on the permit list. Did we add some?",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E003",
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Sanjay",
+   "text": "No, you're right, twenty-two. I was thinking of the sites we scouted, not the ones we kept.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Odile",
+   "text": "Twenty-two is plenty. How many traps?",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E006",
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Sanjay",
+   "text": "A hundred and forty pan traps. Most of them survived the winter in the shed.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Bryn",
+   "text": "The species count is up to eighty-seven, by the way. Two new ones from the meadow site last week.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Odile",
+   "text": "Eighty-seven. That's wonderful.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Sanjay",
+   "text": "I'd still love to add a mountain site. The bees up there are completely different.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Odile",
+   "text": "How far is the mountain site?",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Sanjay",
+   "text": "About three hours each way.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Lottie",
+   "text": "That's a full day of driving for one site.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Sanjay",
+   "text": "Could we drop a couple of the meadow sites to make room for it?",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E012",
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Odile",
+   "text": "Let's leave the mountain site for next year, when we have the new grant.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Sanjay",
+   "text": "Fair. I'll scout it on a weekend anyway, out of curiosity.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Bryn",
+   "text": "The meadow farmer asked if we could share our species list with him. He's very proud of his bees.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Odile",
+   "text": "Of course. I'll send him a copy with a thank-you note.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Bryn",
+   "text": "He'll love that.",
+   "agenda_item": "surveys",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Odile",
+   "text": "The move. We go to the new building on August fifteenth.",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Lottie",
+   "text": "That's right in the middle of the field season.",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Odile",
+   "text": "I know. The university picked the date.",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Bryn",
+   "text": "What happens to the specimens?",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Sanjay",
+   "text": "Forty-six hundred pinned specimens, in drawers. They move as they are, carefully.",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Lottie",
+   "text": "And three freezers. Those need a proper moving company.",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Odile",
+   "text": "Then the freezers go with the university's movers and the specimens go with us, by hand.",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Bryn",
+   "text": "Are there greenhouse bays in the new building?",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Odile",
+   "text": "Four. More than we have now.",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Sanjay",
+   "text": "Four bays. We could finally run the nesting experiment.",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Lottie",
+   "text": "My cousin moved labs last year and they lost a whole freezer of samples because the power was off for an hour.",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Bryn",
+   "text": "That's my nightmare. Literally, I've had that dream.",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Odile",
+   "text": "Let's not lose any freezers. Lottie, could you ask facilities about backup power for the move day?",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Lottie",
+   "text": "I'll email facilities this afternoon.",
+   "agenda_item": "move",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Odile",
+   "text": "Papers. Two are under review.",
+   "agenda_item": "papers",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Bryn",
+   "text": "Mine came back from reviewer two. They want a whole new analysis.",
+   "agenda_item": "papers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Odile",
+   "text": "How big a change?",
+   "agenda_item": "papers",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Bryn",
+   "text": "A few weeks of work, if I do it properly. I'm a bit discouraged, honestly.",
+   "agenda_item": "papers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Odile",
+   "text": "That's normal. The analysis they asked for is fair. It'll make the paper better.",
+   "agenda_item": "papers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Sanjay",
+   "text": "I can help with the model. I did something similar last year.",
+   "agenda_item": "papers",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Bryn",
+   "text": "Thank you. That helps more than you know.",
+   "agenda_item": "papers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Odile",
+   "text": "The other paper is still waiting for the editor.",
+   "agenda_item": "papers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Lottie",
+   "text": "Undergrads. We have eight starting in June.",
+   "agenda_item": "undergrads",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Odile",
+   "text": "At fifteen dollars an hour?",
+   "agenda_item": "undergrads",
+   "direction": null,
+   "event_ids": [
+    "E032",
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Lottie",
+   "text": "Fifteen, yes. The department raised it last year.",
+   "agenda_item": "undergrads",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Sanjay",
+   "text": "Eight is great for the surveys. Two per vehicle.",
+   "agenda_item": "undergrads",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Bryn",
+   "text": "Could they each get a small project of their own, not just trap duty?",
+   "agenda_item": "undergrads",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Odile",
+   "text": "Yes. Pick something they can present at the regional conference on October second.",
+   "agenda_item": "undergrads",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Lottie",
+   "text": "I'll draft a list of small projects and share it before June.",
+   "agenda_item": "undergrads",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Sanjay",
+   "text": "Somebody will need to do safety training with them on the first day.",
+   "agenda_item": "undergrads",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Odile",
+   "text": "When does the grant end, again? I want to make sure the summer pay is covered.",
+   "agenda_item": "undergrads",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Lottie",
+   "text": "December thirty-first. The summer is covered.",
+   "agenda_item": "undergrads",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Bryn",
+   "text": "Will the new building have parking for the field vehicles?",
+   "agenda_item": "undergrads",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Odile",
+   "text": "Thank you, everyone. A good week. Let's have a good summer.",
+   "agenda_item": "undergrads",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Odile",
+   "agenda_item": "surveys",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 1,
+   "speaker": "Sanjay",
+   "agenda_item": "surveys",
+   "fact_id": "F1",
+   "claimed_value": "30",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Lottie",
+   "agenda_item": "surveys",
+   "fact_id": "F1",
+   "claimed_value": "22",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Lottie",
+   "agenda_item": "surveys",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Sanjay",
+   "agenda_item": "surveys",
+   "fact_id": "F1",
+   "claimed_value": "22",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Odile",
+   "agenda_item": "surveys",
+   "fact_id": "F1",
+   "claimed_value": "22",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Odile",
+   "agenda_item": "surveys",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 5,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Sanjay",
+   "agenda_item": "surveys",
+   "fact_id": "F3",
+   "claimed_value": "140",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Bryn",
+   "agenda_item": "surveys",
+   "fact_id": "F2",
+   "claimed_value": "87",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Odile",
+   "agenda_item": "surveys",
+   "fact_id": "F2",
+   "claimed_value": "87",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Odile",
+   "agenda_item": "surveys",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 10,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Sanjay",
+   "agenda_item": "surveys",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Sanjay",
+   "agenda_item": "surveys",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 13,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 13,
+   "speaker": "Odile",
+   "agenda_item": "surveys",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 14,
+   "speaker": "Sanjay",
+   "agenda_item": "surveys",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Odile",
+   "agenda_item": "surveys",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Odile",
+   "agenda_item": "move",
+   "fact_id": "F4",
+   "claimed_value": "August 15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Bryn",
+   "agenda_item": "move",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 22,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Sanjay",
+   "agenda_item": "move",
+   "fact_id": "F10",
+   "claimed_value": "4,600",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Lottie",
+   "agenda_item": "move",
+   "fact_id": "F5",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 24,
+   "speaker": "Odile",
+   "agenda_item": "move",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Bryn",
+   "agenda_item": "move",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 26,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Odile",
+   "agenda_item": "move",
+   "fact_id": "F12",
+   "claimed_value": "4",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Sanjay",
+   "agenda_item": "move",
+   "fact_id": "F12",
+   "claimed_value": "4",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 28,
+   "speaker": "Lottie",
+   "agenda_item": "move",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Odile",
+   "agenda_item": "move",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 31,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 31,
+   "speaker": "Lottie",
+   "agenda_item": "move",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Odile",
+   "agenda_item": "papers",
+   "fact_id": "F6",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Odile",
+   "agenda_item": "papers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 35,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 37,
+   "speaker": "Sanjay",
+   "agenda_item": "papers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 40,
+   "speaker": "Lottie",
+   "agenda_item": "undergrads",
+   "fact_id": "F7",
+   "claimed_value": "8",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Odile",
+   "agenda_item": "undergrads",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 42,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Odile",
+   "agenda_item": "undergrads",
+   "fact_id": "F8",
+   "claimed_value": "$15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Lottie",
+   "agenda_item": "undergrads",
+   "fact_id": "F8",
+   "claimed_value": "$15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 43,
+   "speaker": "Sanjay",
+   "agenda_item": "undergrads",
+   "fact_id": "F7",
+   "claimed_value": "8",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Bryn",
+   "agenda_item": "undergrads",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 45,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Odile",
+   "agenda_item": "undergrads",
+   "fact_id": "F11",
+   "claimed_value": "October 2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 46,
+   "speaker": "Lottie",
+   "agenda_item": "undergrads",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Sanjay",
+   "agenda_item": "undergrads",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 48,
+   "speaker": "Odile",
+   "agenda_item": "undergrads",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 49,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Lottie",
+   "agenda_item": "undergrads",
+   "fact_id": "F9",
+   "claimed_value": "December 31",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 50,
+   "speaker": "Bryn",
+   "agenda_item": "undergrads",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Odile",
+   "text": "Good morning. Surveys first, since the season starts soon. Sanjay?",
+   "start_s": 0.5,
+   "end_s": 4.638
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Sanjay",
+   "text": "We'll survey about thirty sites this summer, same as last year.",
+   "start_s": 5.794,
+   "end_s": 10.052
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Lottie",
+   "text": "I have twenty-two on the permit list. Did we add some?",
+   "start_s": 11.2,
+   "end_s": 15.2
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Sanjay",
+   "text": "No, you're right, twenty-two. I was thinking of the sites we scouted, not the ones we kept.",
+   "start_s": 15.457,
+   "end_s": 22.037
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Odile",
+   "text": "Twenty-two is plenty. How many traps?",
+   "start_s": 22.322,
+   "end_s": 24.805
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Sanjay",
+   "text": "A hundred and forty pan traps. Most of them survived the winter in the shed.",
+   "start_s": 25.84,
+   "end_s": 31.647
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Bryn",
+   "text": "The species count is up to eighty-seven, by the way. Two new ones from the meadow site last week.",
+   "start_s": 32.583,
+   "end_s": 40.183
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Odile",
+   "text": "Eighty-seven. That's wonderful.",
+   "start_s": 41.053,
+   "end_s": 42.294
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Sanjay",
+   "text": "I'd still love to add a mountain site. The bees up there are completely different.",
+   "start_s": 42.802,
+   "end_s": 48.609
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Odile",
+   "text": "How far is the mountain site?",
+   "start_s": 49.415,
+   "end_s": 51.898
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Sanjay",
+   "text": "About three hours each way.",
+   "start_s": 52.705,
+   "end_s": 54.64
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Lottie",
+   "text": "That's a full day of driving for one site.",
+   "start_s": 55.421,
+   "end_s": 58.694
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Sanjay",
+   "text": "Could we drop a couple of the meadow sites to make room for it?",
+   "start_s": 59.052,
+   "end_s": 64.472
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Odile",
+   "text": "Let's leave the mountain site for next year, when we have the new grant.",
+   "start_s": 65.103,
+   "end_s": 70.896
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Sanjay",
+   "text": "Fair. I'll scout it on a weekend anyway, out of curiosity.",
+   "start_s": 71.49,
+   "end_s": 75.748
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Bryn",
+   "text": "The meadow farmer asked if we could share our species list with him. He's very proud of his bees.",
+   "start_s": 76.671,
+   "end_s": 84.271
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Odile",
+   "text": "Of course. I'll send him a copy with a thank-you note.",
+   "start_s": 85.466,
+   "end_s": 90.018
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Bryn",
+   "text": "He'll love that.",
+   "start_s": 91.167,
+   "end_s": 92.367
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Odile",
+   "text": "The move. We go to the new building on August fifteenth.",
+   "start_s": 93.111,
+   "end_s": 97.663
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Lottie",
+   "text": "That's right in the middle of the field season.",
+   "start_s": 98.308,
+   "end_s": 101.581
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Odile",
+   "text": "I know. The university picked the date.",
+   "start_s": 102.049,
+   "end_s": 104.946
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Bryn",
+   "text": "What happens to the specimens?",
+   "start_s": 105.182,
+   "end_s": 107.182
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Sanjay",
+   "text": "Forty-six hundred pinned specimens, in drawers. They move as they are, carefully.",
+   "start_s": 107.409,
+   "end_s": 112.055
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Lottie",
+   "text": "And three freezers. Those need a proper moving company.",
+   "start_s": 112.72,
+   "end_s": 115.993
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Odile",
+   "text": "Then the freezers go with the university's movers and the specimens go with us, by hand.",
+   "start_s": 116.511,
+   "end_s": 123.132
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Bryn",
+   "text": "Are there greenhouse bays in the new building?",
+   "start_s": 123.712,
+   "end_s": 126.912
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Odile",
+   "text": "Four. More than we have now.",
+   "start_s": 128.004,
+   "end_s": 130.487
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Sanjay",
+   "text": "Four bays. We could finally run the nesting experiment.",
+   "start_s": 131.213,
+   "end_s": 134.697
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Lottie",
+   "text": "My cousin moved labs last year and they lost a whole freezer of samples because the power was off for an hour.",
+   "start_s": 135.458,
+   "end_s": 143.458
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Bryn",
+   "text": "That's my nightmare. Literally, I've had that dream.",
+   "start_s": 143.894,
+   "end_s": 147.094
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Odile",
+   "text": "Let's not lose any freezers. Lottie, could you ask facilities about backup power for the move day?",
+   "start_s": 147.318,
+   "end_s": 154.352
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Lottie",
+   "text": "I'll email facilities this afternoon.",
+   "start_s": 154.877,
+   "end_s": 156.695
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Odile",
+   "text": "Papers. Two are under review.",
+   "start_s": 157.032,
+   "end_s": 159.101
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Bryn",
+   "text": "Mine came back from reviewer two. They want a whole new analysis.",
+   "start_s": 159.811,
+   "end_s": 164.611
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Odile",
+   "text": "How big a change?",
+   "start_s": 165.81,
+   "end_s": 167.465
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Bryn",
+   "text": "A few weeks of work, if I do it properly. I'm a bit discouraged, honestly.",
+   "start_s": 168.339,
+   "end_s": 174.339
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Odile",
+   "text": "That's normal. The analysis they asked for is fair. It'll make the paper better.",
+   "start_s": 174.721,
+   "end_s": 180.514
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Sanjay",
+   "text": "I can help with the model. I did something similar last year.",
+   "start_s": 181.608,
+   "end_s": 186.253
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Bryn",
+   "text": "Thank you. That helps more than you know.",
+   "start_s": 187.25,
+   "end_s": 190.45
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Odile",
+   "text": "The other paper is still waiting for the editor.",
+   "start_s": 191.384,
+   "end_s": 195.109
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Lottie",
+   "text": "Undergrads. We have eight starting in June.",
+   "start_s": 196.216,
+   "end_s": 198.761
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Odile",
+   "text": "At fifteen dollars an hour?",
+   "start_s": 199.724,
+   "end_s": 201.793
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Lottie",
+   "text": "Fifteen, yes. The department raised it last year.",
+   "start_s": 202.783,
+   "end_s": 205.692
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Sanjay",
+   "text": "Eight is great for the surveys. Two per vehicle.",
+   "start_s": 206.246,
+   "end_s": 209.73
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Bryn",
+   "text": "Could they each get a small project of their own, not just trap duty?",
+   "start_s": 210.911,
+   "end_s": 216.511
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Odile",
+   "text": "Yes. Pick something they can present at the regional conference on October second.",
+   "start_s": 217.673,
+   "end_s": 223.052
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Lottie",
+   "text": "I'll draft a list of small projects and share it before June.",
+   "start_s": 223.413,
+   "end_s": 227.777
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Sanjay",
+   "text": "Somebody will need to do safety training with them on the first day.",
+   "start_s": 228.731,
+   "end_s": 233.763
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Odile",
+   "text": "When does the grant end, again? I want to make sure the summer pay is covered.",
+   "start_s": 234.678,
+   "end_s": 241.299
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Lottie",
+   "text": "December thirty-first. The summer is covered.",
+   "start_s": 241.96,
+   "end_s": 244.142
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Bryn",
+   "text": "Will the new building have parking for the field vehicles?",
+   "start_s": 244.872,
+   "end_s": 248.872
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Odile",
+   "text": "Thank you, everyone. A good week. Let's have a good summer.",
+   "start_s": 249.562,
+   "end_s": 254.114
+  }
+ ]
+}

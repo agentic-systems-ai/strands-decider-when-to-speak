@@ -1,0 +1,2457 @@
+{
+ "meeting_id": "postmortem-migration-d8-s1",
+ "config": {
+  "theme": "Incident postmortem: the checkout outage last Tuesday",
+  "domain_pack": "incident_review",
+  "drama": 0.8,
+  "seed": 1,
+  "duration_min": 6.3,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   5,
+   19,
+   27,
+   29,
+   44,
+   75,
+   82
+  ],
+  "reviewed_noclaim": [
+   5,
+   29
+  ]
+ },
+ "cast": {
+  "theme": "Incident postmortem: the checkout outage last Tuesday",
+  "personas": [
+   {
+    "name": "Ifeoma",
+    "role": "SRE lead, facilitates",
+    "goals": "Keep it blameless and get real fixes",
+    "hidden_agenda": "Warned about migrations during sales in August and was ignored",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [
+     "let's stick to facts",
+     "okay"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Greg",
+    "role": "CTO",
+    "goals": "Make sure this never happens again",
+    "hidden_agenda": "The CEO yelled at him for twenty minutes",
+    "verbosity": 4,
+    "wpm": 175,
+    "catchphrases": [
+     "frankly",
+     "how does this happen"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Paolo",
+    "role": "Database engineer who ran the migration",
+    "goals": "Explain without being thrown under the bus",
+    "hidden_agenda": "Was told the migration was urgent by Greg's own team",
+    "verbosity": 2,
+    "wpm": 140,
+    "catchphrases": [
+     "to be honest"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Wren",
+    "role": "Head of customer experience",
+    "goals": "Get customers an apology that isn't corporate nonsense",
+    "hidden_agenda": "Her team worked until midnight answering emails",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [
+     "from where I sit",
+     "honestly"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Postmortem - checkout outage during the flash sale",
+   "org": "Brindle Outfitters (fictional online outdoor-gear store)",
+   "agenda": [
+    {
+     "id": "what_happened",
+     "title": "What happened",
+     "goal": "Establish the facts of the outage",
+     "timebox_min": 1.51
+    },
+    {
+     "id": "why",
+     "title": "Why it happened",
+     "goal": "Understand why a migration ran during the sale",
+     "timebox_min": 1.88
+    },
+    {
+     "id": "cost",
+     "title": "What it cost",
+     "goal": "Agree the impact on customers and revenue",
+     "timebox_min": 1.13
+    },
+    {
+     "id": "prevention",
+     "title": "Prevention",
+     "goal": "Agree the changes and their owners",
+     "timebox_min": 1.76
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "outage_duration",
+     "statement": "Checkout outage lasted 63 minutes",
+     "value": "63 minutes"
+    },
+    {
+     "id": "F2",
+     "key": "sale_traffic",
+     "statement": "Sale traffic was 4x normal",
+     "value": "4x"
+    },
+    {
+     "id": "F3",
+     "key": "migration_start",
+     "statement": "The migration started at 11:02 am",
+     "value": "11:02 am"
+    },
+    {
+     "id": "F4",
+     "key": "table_lock_duration",
+     "statement": "The orders table was locked for 41 minutes",
+     "value": "41 minutes"
+    },
+    {
+     "id": "F5",
+     "key": "lost_orders",
+     "statement": "Estimated lost orders = 3,700",
+     "value": "3,700"
+    },
+    {
+     "id": "F6",
+     "key": "revenue_lost",
+     "statement": "Estimated revenue lost = $512,000",
+     "value": "$512,000"
+    },
+    {
+     "id": "F7",
+     "key": "cs_contacts",
+     "statement": "Customer service contacts about the outage = 2,450",
+     "value": "2,450"
+    },
+    {
+     "id": "F8",
+     "key": "rollback_time",
+     "statement": "Rolling back the migration took 22 minutes",
+     "value": "22 minutes"
+    },
+    {
+     "id": "F9",
+     "key": "migration_approvals",
+     "statement": "Approvals on the migration change = 1",
+     "value": "1"
+    },
+    {
+     "id": "F10",
+     "key": "change_freeze",
+     "statement": "Change freeze policy = 3 days before a sale",
+     "value": "3 days"
+    },
+    {
+     "id": "F11",
+     "key": "negative_mentions",
+     "statement": "Negative social media mentions = 860",
+     "value": "860"
+    },
+    {
+     "id": "F12",
+     "key": "previous_migration_incident",
+     "statement": "Previous migration-related incident = August",
+     "value": "August"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "what_happened",
+    "summary": "The facts; Paolo undercounts the lock and the tension starts",
+    "n_turns": 20,
+    "events": []
+   },
+   {
+    "agenda_item": "why",
+    "summary": "How the migration got through; the approval, the freeze, and an earlier warning",
+    "n_turns": 27,
+    "events": []
+   },
+   {
+    "agenda_item": "cost",
+    "summary": "What it cost; the CEO number vs the real number; Wren's contact count goes unchecked",
+    "n_turns": 16,
+    "events": []
+   },
+   {
+    "agenda_item": "prevention",
+    "summary": "Owners, plus a fight about whether to freeze all changes",
+    "n_turns": 22,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Ifeoma",
+   "text": "Okay. Let's stick to facts and keep it blameless. Paolo, what happened, in order?",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Paolo",
+   "text": "To be honest, it was a schema migration on the orders table. It started at eleven oh two.",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Greg",
+   "text": "In the middle of the flash sale.",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Ifeoma",
+   "text": "Greg, facts first. Paolo, what did the migration do to the table?",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Paolo",
+   "text": "It locked it. For maybe ten minutes. Then checkout started timing out.",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Wren",
+   "text": "From where I sit it was a lot more than ten minutes.",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Ifeoma",
+   "text": "How long was checkout actually down?",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Paolo",
+   "text": "Sixty-three minutes, end to end. Including the rollback.",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Greg",
+   "text": "Sixty-three minutes. During a sale with four times normal traffic.",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E007",
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Ifeoma",
+   "text": "And the rollback itself?",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Paolo",
+   "text": "Twenty-two minutes. Rolling back a half-done migration is slow.",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Greg",
+   "text": "Frankly, how does this happen? Who approved a migration on sale day?",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Ifeoma",
+   "text": "We'll get to why. Let's finish what.",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Wren",
+   "text": "Honestly, from the customer side, people got charged and then got an error. That's the worst version.",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Ifeoma",
+   "text": "Did anyone actually get charged twice?",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Wren",
+   "text": "A few dozen. We've refunded them already.",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Paolo",
+   "text": "Why did our status page say everything was fine the whole time?",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Ifeoma",
+   "text": "Okay. Let's stick to facts. The lock was the trigger, sale traffic made it worse. Agreed?",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Paolo",
+   "text": "Agreed.",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Greg",
+   "text": "Agreed. Now can we talk about why?",
+   "agenda_item": "what_happened",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Ifeoma",
+   "text": "Why. Paolo, why did it run that morning?",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Paolo",
+   "text": "I was told it was urgent. The new returns feature needed the column.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Greg",
+   "text": "Told by whom?",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Ifeoma",
+   "text": "Greg. Blameless.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Paolo",
+   "text": "By the returns team. Who, to be honest, report to you.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Greg",
+   "text": "Okay. Okay. Fair.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Wren",
+   "text": "My team keeps texting me about the queue. Hang on.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Ifeoma",
+   "text": "How many people approved the change?",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Paolo",
+   "text": "One. The usual one.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Wren",
+   "text": "One person approves a change to the table that takes all our money?",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Greg",
+   "text": "Frankly, we have a change freeze for exactly this. It's a week before any sale.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Ifeoma",
+   "text": "It's three days, Greg. It's been three days since we wrote it.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Greg",
+   "text": "Three days. Fine. Then why didn't it apply?",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E023",
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Paolo",
+   "text": "The sale was announced two days before. The freeze started after the change was already scheduled.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Wren",
+   "text": "So the freeze didn't know about the sale.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Ifeoma",
+   "text": "To be blunt, this isn't new. We had a migration incident in August.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Greg",
+   "text": "August was different.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Ifeoma",
+   "text": "It was the same table.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Greg",
+   "text": "Was it? I don't remember that.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Ifeoma",
+   "text": "It was. I wrote the postmortem. There was an action item to block migrations during sales. Nobody picked it up.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Greg",
+   "text": "Then frankly, that's on leadership. That's on me.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Paolo",
+   "text": "To be honest, I appreciate you saying that.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Wren",
+   "text": "Did anyone check the lock time on the replica before running it?",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Paolo",
+   "text": "We usually do. Not this time, because of the rush. And, okay, I said ten minutes earlier. The log says the lock was forty-one.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Greg",
+   "text": "Forty-one minutes.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Ifeoma",
+   "text": "Okay. Migrations on the orders table need two approvals and a replica test, effective today.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Greg",
+   "text": "Agreed.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Ifeoma",
+   "text": "Cost. Greg, what's the number the CEO has?",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Greg",
+   "text": "Frankly, she thinks we lost a million dollars in sales. That's what she said to me.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Ifeoma",
+   "text": "Let's stick to facts. Finance estimates five hundred and twelve thousand.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Greg",
+   "text": "Five twelve. That's still awful, but it's not a million. I'll correct her.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [
+    "E035",
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Paolo",
+   "text": "How many orders is that?",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Ifeoma",
+   "text": "About thirty-seven hundred lost orders. Some will come back, some won't.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Wren",
+   "text": "From where I sit, we got about five thousand customer contacts. Email, chat, phone, all of it.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Greg",
+   "text": "Five thousand. Wow.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Wren",
+   "text": "And eight hundred and sixty angry posts. Honestly, some of them were funny.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Paolo",
+   "text": "Funny how?",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Wren",
+   "text": "Someone made a meme of a shopping cart stuck in a revolving door.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Greg",
+   "text": "That one's actually good.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Paolo",
+   "text": "The one with the melting ice cream truck was better.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Wren",
+   "text": "The ice cream one went to the CEO's sister. She sent it to the CEO.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Greg",
+   "text": "Of course she did.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Ifeoma",
+   "text": "Okay. Prevention. Let's land this.",
+   "agenda_item": "cost",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Greg",
+   "text": "Frankly, I want a full freeze. No changes at all during a sale.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Paolo",
+   "text": "To be honest, that's how we end up with a backlog of risky changes the day after.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Ifeoma",
+   "text": "What about a freeze on schema changes only, from the moment a sale is announced?",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Wren",
+   "text": "Honestly, that makes sense to me. The sale announcement is the trigger, not a calendar.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Greg",
+   "text": "Fine. Schema changes only.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Ifeoma",
+   "text": "Then schema changes are frozen from sale announcement to sale end. Decided.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Paolo",
+   "text": "Works for me.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Ifeoma",
+   "text": "I'll update the change policy and get it into the deploy tooling by next Friday.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Greg",
+   "text": "And the August action item? The one nobody picked up?",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E047",
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Ifeoma",
+   "text": "It's the same fix. This time it gets an owner. Me.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E049"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Paolo",
+   "text": "I'll write the replica lock-test script so anyone can run it before a migration.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "Wren",
+   "text": "And the customers. We need an apology that doesn't sound like a robot wrote it.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 75,
+   "speaker": "Greg",
+   "text": "Maybe a discount code? Ten percent?",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E051",
+    "E052"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 76,
+   "speaker": "Wren",
+   "text": "Twenty. They lost an hour of their sale, honestly.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 77,
+   "speaker": "Greg",
+   "text": "Let's think about it. I want finance's view first.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E053"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 78,
+   "speaker": "Paolo",
+   "text": "Someone ought to ask finance before Monday, then.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E054"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 79,
+   "speaker": "Wren",
+   "text": "I'll draft the apology email today and send it to Greg.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E055"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 80,
+   "speaker": "Paolo",
+   "text": "Should someone look at the returns team's other pending migrations too?",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E056"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 81,
+   "speaker": "Ifeoma",
+   "text": "Yes. Any pending migration on that table waits for the new process.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E057"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 82,
+   "speaker": "Greg",
+   "text": "Who is telling the returns team their feature slips?",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [
+    "E058"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 83,
+   "speaker": "Ifeoma",
+   "text": "Okay. Thank you, everyone. This was hard and you all stuck to facts. Mostly.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 84,
+   "speaker": "Greg",
+   "text": "Mostly.",
+   "agenda_item": "prevention",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Ifeoma",
+   "agenda_item": "what_happened",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Paolo",
+   "agenda_item": "what_happened",
+   "fact_id": "F3",
+   "claimed_value": "11:02 am",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Ifeoma",
+   "agenda_item": "what_happened",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 4,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 4,
+   "speaker": "Paolo",
+   "agenda_item": "what_happened",
+   "fact_id": "F4",
+   "claimed_value": "10 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Ifeoma",
+   "agenda_item": "what_happened",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 7,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Paolo",
+   "agenda_item": "what_happened",
+   "fact_id": "F1",
+   "claimed_value": "63 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Greg",
+   "agenda_item": "what_happened",
+   "fact_id": "F1",
+   "claimed_value": "63 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Greg",
+   "agenda_item": "what_happened",
+   "fact_id": "F2",
+   "claimed_value": "4x",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Ifeoma",
+   "agenda_item": "what_happened",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 10,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Paolo",
+   "agenda_item": "what_happened",
+   "fact_id": "F8",
+   "claimed_value": "22 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Greg",
+   "agenda_item": "what_happened",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 28,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Ifeoma",
+   "agenda_item": "what_happened",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 15,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Paolo",
+   "agenda_item": "what_happened",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Ifeoma",
+   "agenda_item": "what_happened",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 18,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 19,
+   "speaker": "Greg",
+   "agenda_item": "what_happened",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Ifeoma",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 21,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Greg",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 24,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Wren",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Ifeoma",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 28,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Paolo",
+   "agenda_item": "why",
+   "fact_id": "F9",
+   "claimed_value": "1",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 30,
+   "speaker": "Greg",
+   "agenda_item": "why",
+   "fact_id": "F10",
+   "claimed_value": "a week",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Ifeoma",
+   "agenda_item": "why",
+   "fact_id": "F10",
+   "claimed_value": "3 days",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Greg",
+   "agenda_item": "why",
+   "fact_id": "F10",
+   "claimed_value": "3 days",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Greg",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 33,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Ifeoma",
+   "agenda_item": "why",
+   "fact_id": "F12",
+   "claimed_value": "August",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Greg",
+   "agenda_item": "why",
+   "fact_id": "F12",
+   "claimed_value": "August",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Greg",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 39,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Wren",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Paolo",
+   "agenda_item": "why",
+   "fact_id": "F4",
+   "claimed_value": "41 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Greg",
+   "agenda_item": "why",
+   "fact_id": "F4",
+   "claimed_value": "41 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 45,
+   "speaker": "Ifeoma",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Ifeoma",
+   "agenda_item": "cost",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 48,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 48,
+   "speaker": "Greg",
+   "agenda_item": "cost",
+   "fact_id": "F6",
+   "claimed_value": "$1,000,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Ifeoma",
+   "agenda_item": "cost",
+   "fact_id": "F6",
+   "claimed_value": "$512,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Greg",
+   "agenda_item": "cost",
+   "fact_id": "F6",
+   "claimed_value": "$512,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 50,
+   "speaker": "Greg",
+   "agenda_item": "cost",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 51,
+   "speaker": "Paolo",
+   "agenda_item": "cost",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 52,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Ifeoma",
+   "agenda_item": "cost",
+   "fact_id": "F5",
+   "claimed_value": "3,700",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 53,
+   "speaker": "Wren",
+   "agenda_item": "cost",
+   "fact_id": "F7",
+   "claimed_value": "5,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 54,
+   "speaker": "Greg",
+   "agenda_item": "cost",
+   "fact_id": "F7",
+   "claimed_value": "5,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 55,
+   "speaker": "Wren",
+   "agenda_item": "cost",
+   "fact_id": "F11",
+   "claimed_value": "860",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 56,
+   "speaker": "Paolo",
+   "agenda_item": "cost",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 57,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 57,
+   "speaker": "Wren",
+   "agenda_item": "cost",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 5,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 65,
+   "speaker": "Ifeoma",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 67,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 68,
+   "speaker": "Ifeoma",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 70,
+   "speaker": "Ifeoma",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 71,
+   "speaker": "Greg",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 72,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 71,
+   "speaker": "Greg",
+   "agenda_item": "prevention",
+   "fact_id": "F12",
+   "claimed_value": "August",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 72,
+   "speaker": "Ifeoma",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 73,
+   "speaker": "Paolo",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 75,
+   "speaker": "Greg",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 75,
+   "speaker": "Greg",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 76,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E053",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 77,
+   "speaker": "Greg",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E054",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 78,
+   "speaker": "Paolo",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E055",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 79,
+   "speaker": "Wren",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E056",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 80,
+   "speaker": "Paolo",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 81,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E057",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 81,
+   "speaker": "Ifeoma",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E058",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 82,
+   "speaker": "Greg",
+   "agenda_item": "prevention",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Ifeoma",
+   "text": "Okay. Let's stick to facts and keep it blameless. Paolo, what happened, in order?",
+   "start_s": 0.5,
+   "end_s": 5.919
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Paolo",
+   "text": "To be honest, it was a schema migration on the orders table. It started at eleven oh two.",
+   "start_s": 6.253,
+   "end_s": 13.968
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Greg",
+   "text": "In the middle of the flash sale.",
+   "start_s": 15.015,
+   "end_s": 17.415
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Ifeoma",
+   "text": "Greg, facts first. Paolo, what did the migration do to the table?",
+   "start_s": 18.379,
+   "end_s": 23.024
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Paolo",
+   "text": "It locked it. For maybe ten minutes. Then checkout started timing out.",
+   "start_s": 23.479,
+   "end_s": 28.622
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Wren",
+   "text": "From where I sit it was a lot more than ten minutes.",
+   "start_s": 29.317,
+   "end_s": 33.681
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Ifeoma",
+   "text": "How long was checkout actually down?",
+   "start_s": 34.33,
+   "end_s": 36.653
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Paolo",
+   "text": "Sixty-three minutes, end to end. Including the rollback.",
+   "start_s": 37.505,
+   "end_s": 40.933
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Greg",
+   "text": "Sixty-three minutes. During a sale with four times normal traffic.",
+   "start_s": 41.922,
+   "end_s": 45.35
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Ifeoma",
+   "text": "And the rollback itself?",
+   "start_s": 45.644,
+   "end_s": 47.192
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Paolo",
+   "text": "Twenty-two minutes. Rolling back a half-done migration is slow.",
+   "start_s": 47.42,
+   "end_s": 51.277
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Greg",
+   "text": "Frankly, how does this happen? Who approved a migration on sale day?",
+   "start_s": 52.313,
+   "end_s": 56.427
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Ifeoma",
+   "text": "We'll get to why. Let's finish what.",
+   "start_s": 57.06,
+   "end_s": 59.769
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Wren",
+   "text": "Honestly, from the customer side, people got charged and then got an error. That's the worst version.",
+   "start_s": 60.731,
+   "end_s": 66.913
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Ifeoma",
+   "text": "Did anyone actually get charged twice?",
+   "start_s": 67.115,
+   "end_s": 69.438
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Wren",
+   "text": "A few dozen. We've refunded them already.",
+   "start_s": 70.083,
+   "end_s": 72.629
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Paolo",
+   "text": "Why did our status page say everything was fine the whole time?",
+   "start_s": 73.551,
+   "end_s": 78.693
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Ifeoma",
+   "text": "Okay. Let's stick to facts. The lock was the trigger, sale traffic made it worse. Agreed?",
+   "start_s": 79.122,
+   "end_s": 85.315
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Paolo",
+   "text": "Agreed.",
+   "start_s": 86.46,
+   "end_s": 86.889
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Greg",
+   "text": "Agreed. Now can we talk about why?",
+   "start_s": 87.99,
+   "end_s": 90.39
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Ifeoma",
+   "text": "Why. Paolo, why did it run that morning?",
+   "start_s": 90.621,
+   "end_s": 93.717
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Paolo",
+   "text": "I was told it was urgent. The new returns feature needed the column.",
+   "start_s": 93.942,
+   "end_s": 99.514
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Greg",
+   "text": "Told by whom?",
+   "start_s": 100.255,
+   "end_s": 101.284
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Ifeoma",
+   "text": "Greg. Blameless.",
+   "start_s": 102.423,
+   "end_s": 103.197
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Paolo",
+   "text": "By the returns team. Who, to be honest, report to you.",
+   "start_s": 103.778,
+   "end_s": 108.492
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Greg",
+   "text": "Okay. Okay. Fair.",
+   "start_s": 108.909,
+   "end_s": 109.937
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Wren",
+   "text": "My team keeps texting me about the queue. Hang on.",
+   "start_s": 110.559,
+   "end_s": 114.195
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Ifeoma",
+   "text": "How many people approved the change?",
+   "start_s": 114.424,
+   "end_s": 116.747
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Paolo",
+   "text": "One. The usual one.",
+   "start_s": 117.169,
+   "end_s": 118.883
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Wren",
+   "text": "One person approves a change to the table that takes all our money?",
+   "start_s": 119.521,
+   "end_s": 124.248
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Greg",
+   "text": "Frankly, we have a change freeze for exactly this. It's a week before any sale.",
+   "start_s": 124.944,
+   "end_s": 130.087
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Ifeoma",
+   "text": "It's three days, Greg. It's been three days since we wrote it.",
+   "start_s": 130.52,
+   "end_s": 135.165
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Greg",
+   "text": "Three days. Fine. Then why didn't it apply?",
+   "start_s": 135.596,
+   "end_s": 138.339
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Paolo",
+   "text": "The sale was announced two days before. The freeze started after the change was already scheduled.",
+   "start_s": 138.758,
+   "end_s": 145.615
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Wren",
+   "text": "So the freeze didn't know about the sale.",
+   "start_s": 146.275,
+   "end_s": 149.184
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Ifeoma",
+   "text": "To be blunt, this isn't new. We had a migration incident in August.",
+   "start_s": 149.674,
+   "end_s": 154.706
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Greg",
+   "text": "August was different.",
+   "start_s": 154.927,
+   "end_s": 155.956
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Ifeoma",
+   "text": "It was the same table.",
+   "start_s": 156.994,
+   "end_s": 158.929
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Greg",
+   "text": "Was it? I don't remember that.",
+   "start_s": 159.685,
+   "end_s": 161.743
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Ifeoma",
+   "text": "It was. I wrote the postmortem. There was an action item to block migrations during sales. Nobody picked it up.",
+   "start_s": 162.585,
+   "end_s": 170.327
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Greg",
+   "text": "Then frankly, that's on leadership. That's on me.",
+   "start_s": 170.713,
+   "end_s": 173.456
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Paolo",
+   "text": "To be honest, I appreciate you saying that.",
+   "start_s": 174.649,
+   "end_s": 178.077
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Wren",
+   "text": "Did anyone check the lock time on the replica before running it?",
+   "start_s": 179.137,
+   "end_s": 183.501
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Paolo",
+   "text": "We usually do. Not this time, because of the rush. And, okay, I said ten minutes earlier. The log says the lock was forty-one.",
+   "start_s": 183.822,
+   "end_s": 194.108
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Greg",
+   "text": "Forty-one minutes.",
+   "start_s": 194.641,
+   "end_s": 195.326
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Ifeoma",
+   "text": "Okay. Migrations on the orders table need two approvals and a replica test, effective today.",
+   "start_s": 196.247,
+   "end_s": 202.054
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Greg",
+   "text": "Agreed.",
+   "start_s": 202.965,
+   "end_s": 203.308
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Ifeoma",
+   "text": "Cost. Greg, what's the number the CEO has?",
+   "start_s": 204.444,
+   "end_s": 207.541
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Greg",
+   "text": "Frankly, she thinks we lost a million dollars in sales. That's what she said to me.",
+   "start_s": 208.163,
+   "end_s": 213.649
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Ifeoma",
+   "text": "Let's stick to facts. Finance estimates five hundred and twelve thousand.",
+   "start_s": 214.679,
+   "end_s": 218.937
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Greg",
+   "text": "Five twelve. That's still awful, but it's not a million. I'll correct her.",
+   "start_s": 219.807,
+   "end_s": 224.264
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Paolo",
+   "text": "How many orders is that?",
+   "start_s": 224.767,
+   "end_s": 226.91
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Ifeoma",
+   "text": "About thirty-seven hundred lost orders. Some will come back, some won't.",
+   "start_s": 227.698,
+   "end_s": 231.956
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Wren",
+   "text": "From where I sit, we got about five thousand customer contacts. Email, chat, phone, all of it.",
+   "start_s": 233.038,
+   "end_s": 239.22
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Greg",
+   "text": "Five thousand. Wow.",
+   "start_s": 240.266,
+   "end_s": 241.295
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Wren",
+   "text": "And eight hundred and sixty angry posts. Honestly, some of them were funny.",
+   "start_s": 242.0,
+   "end_s": 246.728
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Paolo",
+   "text": "Funny how?",
+   "start_s": 247.517,
+   "end_s": 248.374
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Wren",
+   "text": "Someone made a meme of a shopping cart stuck in a revolving door.",
+   "start_s": 248.609,
+   "end_s": 253.336
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Greg",
+   "text": "That one's actually good.",
+   "start_s": 253.779,
+   "end_s": 255.15
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Paolo",
+   "text": "The one with the melting ice cream truck was better.",
+   "start_s": 256.147,
+   "end_s": 260.433
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Wren",
+   "text": "The ice cream one went to the CEO's sister. She sent it to the CEO.",
+   "start_s": 261.047,
+   "end_s": 266.502
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Greg",
+   "text": "Of course she did.",
+   "start_s": 266.875,
+   "end_s": 268.246
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Ifeoma",
+   "text": "Okay. Prevention. Let's land this.",
+   "start_s": 268.995,
+   "end_s": 270.93
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Greg",
+   "text": "Frankly, I want a full freeze. No changes at all during a sale.",
+   "start_s": 271.833,
+   "end_s": 276.29
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Paolo",
+   "text": "To be honest, that's how we end up with a backlog of risky changes the day after.",
+   "start_s": 277.164,
+   "end_s": 284.45
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Ifeoma",
+   "text": "What about a freeze on schema changes only, from the moment a sale is announced?",
+   "start_s": 285.025,
+   "end_s": 290.831
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Wren",
+   "text": "Honestly, that makes sense to me. The sale announcement is the trigger, not a calendar.",
+   "start_s": 291.47,
+   "end_s": 296.925
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Greg",
+   "text": "Fine. Schema changes only.",
+   "start_s": 297.633,
+   "end_s": 299.005
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Ifeoma",
+   "text": "Then schema changes are frozen from sale announcement to sale end. Decided.",
+   "start_s": 299.983,
+   "end_s": 304.629
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Paolo",
+   "text": "Works for me.",
+   "start_s": 305.35,
+   "end_s": 306.636
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Ifeoma",
+   "text": "I'll update the change policy and get it into the deploy tooling by next Friday.",
+   "start_s": 307.229,
+   "end_s": 313.036
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Greg",
+   "text": "And the August action item? The one nobody picked up?",
+   "start_s": 313.726,
+   "end_s": 317.154
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Ifeoma",
+   "text": "It's the same fix. This time it gets an owner. Me.",
+   "start_s": 317.384,
+   "end_s": 321.642
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Paolo",
+   "text": "I'll write the replica lock-test script so anyone can run it before a migration.",
+   "start_s": 321.885,
+   "end_s": 327.885
+  },
+  {
+   "turn_index": 74,
+   "speaker": "Wren",
+   "text": "And the customers. We need an apology that doesn't sound like a robot wrote it.",
+   "start_s": 328.788,
+   "end_s": 334.243
+  },
+  {
+   "turn_index": 75,
+   "speaker": "Greg",
+   "text": "Maybe a discount code? Ten percent?",
+   "start_s": 335.426,
+   "end_s": 337.483
+  },
+  {
+   "turn_index": 76,
+   "speaker": "Wren",
+   "text": "Twenty. They lost an hour of their sale, honestly.",
+   "start_s": 338.276,
+   "end_s": 341.549
+  },
+  {
+   "turn_index": 77,
+   "speaker": "Greg",
+   "text": "Let's think about it. I want finance's view first.",
+   "start_s": 342.143,
+   "end_s": 345.228
+  },
+  {
+   "turn_index": 78,
+   "speaker": "Paolo",
+   "text": "Someone ought to ask finance before Monday, then.",
+   "start_s": 345.598,
+   "end_s": 349.027
+  },
+  {
+   "turn_index": 79,
+   "speaker": "Wren",
+   "text": "I'll draft the apology email today and send it to Greg.",
+   "start_s": 349.729,
+   "end_s": 353.729
+  },
+  {
+   "turn_index": 80,
+   "speaker": "Paolo",
+   "text": "Should someone look at the returns team's other pending migrations too?",
+   "start_s": 354.911,
+   "end_s": 359.625
+  },
+  {
+   "turn_index": 81,
+   "speaker": "Ifeoma",
+   "text": "Yes. Any pending migration on that table waits for the new process.",
+   "start_s": 360.596,
+   "end_s": 365.241
+  },
+  {
+   "turn_index": 82,
+   "speaker": "Greg",
+   "text": "Who is telling the returns team their feature slips?",
+   "start_s": 365.981,
+   "end_s": 369.066
+  },
+  {
+   "turn_index": 83,
+   "speaker": "Ifeoma",
+   "text": "Okay. Thank you, everyone. This was hard and you all stuck to facts. Mostly.",
+   "start_s": 370.126,
+   "end_s": 375.546
+  },
+  {
+   "turn_index": 84,
+   "speaker": "Greg",
+   "text": "Mostly.",
+   "start_s": 375.978,
+   "end_s": 376.321
+  }
+ ]
+}

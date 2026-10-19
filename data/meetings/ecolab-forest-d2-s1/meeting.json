@@ -1,0 +1,1785 @@
+{
+ "meeting_id": "ecolab-forest-d2-s1",
+ "config": {
+  "theme": "Weekly meeting of a university ecology research lab",
+  "domain_pack": "research_lab",
+  "drama": 0.2,
+  "seed": 1,
+  "duration_min": 4.5,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   16,
+   18,
+   22,
+   30,
+   38,
+   42
+  ],
+  "reviewed_noclaim": [
+   38
+  ]
+ },
+ "cast": {
+  "theme": "Weekly meeting of a university ecology research lab",
+  "personas": [
+   {
+    "name": "Chidi",
+    "role": "Principal investigator",
+    "goals": "A careful census and students who finish on time",
+    "hidden_agenda": "Is quietly planning a sabbatical next year",
+    "verbosity": 3,
+    "wpm": 140,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Lars",
+    "role": "Postdoc, coordinates fieldwork",
+    "goals": "Get the LiDAR data this season",
+    "hidden_agenda": "The LiDAR data is central to his fellowship application",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Mariana",
+    "role": "Master's student",
+    "goals": "Defend in May",
+    "hidden_agenda": "Has drafted less than she lets on",
+    "verbosity": 2,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Pat",
+    "role": "Lab technician",
+    "goals": "Equipment that works and a realistic schedule",
+    "hidden_agenda": "Has been asked to run the outreach day alone again",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Forest ecology lab - weekly meeting",
+   "org": "Pine Ridge Forest Ecology Lab, Alder State University (fictional)",
+   "agenda": [
+    {
+     "id": "census",
+     "title": "Plot census",
+     "goal": "Plan the permanent plot re-census",
+     "timebox_min": 1.18
+    },
+    {
+     "id": "drones",
+     "title": "Drone survey",
+     "goal": "Decide on the LiDAR rental and the remaining flights",
+     "timebox_min": 1.12
+    },
+    {
+     "id": "students",
+     "title": "Student progress",
+     "goal": "Check thesis timelines",
+     "timebox_min": 1.22
+    },
+    {
+     "id": "outreach",
+     "title": "School outreach day",
+     "goal": "Plan the visit from the middle school",
+     "timebox_min": 0.96
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "permanent_plots",
+     "statement": "Permanent plots = 48",
+     "value": "48"
+    },
+    {
+     "id": "F2",
+     "key": "trees_tagged",
+     "statement": "Trees tagged across all plots = 6,300",
+     "value": "6,300"
+    },
+    {
+     "id": "F3",
+     "key": "census_interval",
+     "statement": "Re-census interval = 5 years",
+     "value": "5 years"
+    },
+    {
+     "id": "F4",
+     "key": "drone_flights_done",
+     "statement": "Drone flights completed = 21",
+     "value": "21"
+    },
+    {
+     "id": "F5",
+     "key": "drone_batteries",
+     "statement": "Working drone batteries = 6",
+     "value": "6"
+    },
+    {
+     "id": "F6",
+     "key": "lidar_rental",
+     "statement": "LiDAR sensor rental = $2,400 per week",
+     "value": "$2,400"
+    },
+    {
+     "id": "F7",
+     "key": "defense_date",
+     "statement": "Mariana's thesis defense = May 9",
+     "value": "May 9"
+    },
+    {
+     "id": "F8",
+     "key": "chapters_drafted",
+     "statement": "Thesis chapters drafted = 2 of 4",
+     "value": "2"
+    },
+    {
+     "id": "F9",
+     "key": "outreach_date",
+     "statement": "Outreach day = April 18",
+     "value": "April 18"
+    },
+    {
+     "id": "F10",
+     "key": "visiting_students",
+     "statement": "Middle school students visiting = 75",
+     "value": "75"
+    },
+    {
+     "id": "F11",
+     "key": "mileage_budget",
+     "statement": "Field vehicle mileage budget = 3,000 miles",
+     "value": "3,000"
+    },
+    {
+     "id": "F12",
+     "key": "seedling_mortality",
+     "statement": "Seedling mortality since last census = 31%",
+     "value": "31%"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "census",
+    "summary": "The re-census plan; Lars undercounts the plots",
+    "n_turns": 13,
+    "events": []
+   },
+   {
+    "agenda_item": "drones",
+    "summary": "The LiDAR rental decision; batteries; a short detour about the conference hotel",
+    "n_turns": 13,
+    "events": []
+   },
+   {
+    "agenda_item": "students",
+    "summary": "Mariana's thesis; the honest version comes out",
+    "n_turns": 16,
+    "events": []
+   },
+   {
+    "agenda_item": "outreach",
+    "summary": "The middle school visit; Pat's student count stands",
+    "n_turns": 12,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Chidi",
+   "text": "Good afternoon. Let's start with the census. Lars, where are we with the plan?",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Lars",
+   "text": "We'll re-census all the permanent plots this summer. That's about forty plots.",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Pat",
+   "text": "Forty-eight, I think. The eight we added along the creek count too.",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Lars",
+   "text": "Right, forty-eight with the creek plots. Thanks, Pat.",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Chidi",
+   "text": "And how many trees is that in total?",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Pat",
+   "text": "Sixty-three hundred tagged trees. Some tags will be gone, of course.",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Mariana",
+   "text": "When was the last full census?",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Chidi",
+   "text": "Five years ago. It's on a five-year cycle.",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Lars",
+   "text": "Seedling mortality has been high since then. Roughly half the seedlings died, from the plots I've checked.",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Chidi",
+   "text": "That would be a lot. Let's see what the full census says.",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Pat",
+   "text": "The truck is the other question. We've got a three thousand mile budget for the season.",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Lars",
+   "text": "Forty-eight plots over that many miles should be fine if we group them by area.",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Pat",
+   "text": "I'll plan the route so we visit the plots by area, two days per cluster.",
+   "agenda_item": "census",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Chidi",
+   "text": "The drone survey. Lars?",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Lars",
+   "text": "We've done twenty-one flights with the regular camera. For the canopy structure, we need the LiDAR sensor.",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Chidi",
+   "text": "What does the rental cost?",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Lars",
+   "text": "Twenty-four hundred a week. I'd like two weeks.",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Pat",
+   "text": "The batteries are the limit. We have six that hold a charge.",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Lars",
+   "text": "Six is enough for about two flights a day.",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Chidi",
+   "text": "Is one week enough if we plan the flights carefully?",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [
+    "E019",
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Lars",
+   "text": "One week is enough for the core plots. Two would cover the creek plots as well.",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Chidi",
+   "text": "Then let's rent it for one week, and we'll consider a second week if the weather is kind.",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Pat",
+   "text": "Who's actually certified to fly with the LiDAR payload?",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Lars",
+   "text": "That works. I'll book the sensor for the first week of June.",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Mariana",
+   "text": "Is the conference hotel booked for July, by the way? I saw prices going up.",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [
+    "E024",
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Pat",
+   "text": "I booked it last month. You're sharing with the student from Oregon.",
+   "agenda_item": "drones",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Chidi",
+   "text": "Good. Let's talk about student progress. Mariana, how's the thesis going?",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Mariana",
+   "text": "It's going. I have two of the four chapters drafted.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Chidi",
+   "text": "And the defense is on May ninth.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Mariana",
+   "text": "Yes. May ninth.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Lars",
+   "text": "Two chapters with about ten weeks to go. That's doable, but tight.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Chidi",
+   "text": "Which chapters are left?",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Mariana",
+   "text": "The seedling chapter and the discussion. The seedling data shows about fifty percent mortality, so it's a big story.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Pat",
+   "text": "Sorry, I just checked the summary sheet. It's thirty-one percent, not fifty.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Lars",
+   "text": "That was my number earlier. I only had the north plots in mind.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Mariana",
+   "text": "Thirty-one. Still a story, just a smaller one.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Chidi",
+   "text": "Could we meet weekly until the defense, just for half an hour?",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Mariana",
+   "text": "Yes, please. That would help me keep moving.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Chidi",
+   "text": "Then weekly meetings on Tuesdays until May.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Mariana",
+   "text": "I'll send you the seedling chapter outline before next Tuesday.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Lars",
+   "text": "It might help if someone read the methods chapter with fresh eyes.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Pat",
+   "text": "Excuse me, the delivery driver is here with the soil cores. One moment.",
+   "agenda_item": "students",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Chidi",
+   "text": "Outreach day. Pat, you've been organizing it.",
+   "agenda_item": "outreach",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Pat",
+   "text": "It's on April eighteenth. Ninety students are coming from Cedar Middle School.",
+   "agenda_item": "outreach",
+   "direction": null,
+   "event_ids": [
+    "E040",
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Lars",
+   "text": "Ninety is a lot of twelve-year-olds in one forest.",
+   "agenda_item": "outreach",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Pat",
+   "text": "It is. I'd like help. Last year I ran it on my own.",
+   "agenda_item": "outreach",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Chidi",
+   "text": "That's not fair on you. Who can help on the day?",
+   "agenda_item": "outreach",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Mariana",
+   "text": "I can come in the morning, before my writing day.",
+   "agenda_item": "outreach",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Lars",
+   "text": "I'll take the afternoon group and do the tree measuring station.",
+   "agenda_item": "outreach",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Pat",
+   "text": "Thank you both. That makes a real difference.",
+   "agenda_item": "outreach",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Mariana",
+   "text": "Do we have enough hand lenses for that many students?",
+   "agenda_item": "outreach",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Chidi",
+   "text": "What happens if it rains?",
+   "agenda_item": "outreach",
+   "direction": null,
+   "event_ids": [
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Pat",
+   "text": "We move into the teaching lab and do the leaf pressing station instead.",
+   "agenda_item": "outreach",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Chidi",
+   "text": "I think that's everything. Thank you, all. Good week, everyone.",
+   "agenda_item": "outreach",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Chidi",
+   "agenda_item": "census",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 1,
+   "speaker": "Lars",
+   "agenda_item": "census",
+   "fact_id": "F1",
+   "claimed_value": "40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Pat",
+   "agenda_item": "census",
+   "fact_id": "F1",
+   "claimed_value": "48",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Lars",
+   "agenda_item": "census",
+   "fact_id": "F1",
+   "claimed_value": "48",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Chidi",
+   "agenda_item": "census",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 5,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Pat",
+   "agenda_item": "census",
+   "fact_id": "F2",
+   "claimed_value": "6,300",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Mariana",
+   "agenda_item": "census",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 7,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Chidi",
+   "agenda_item": "census",
+   "fact_id": "F3",
+   "claimed_value": "5 years",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 8,
+   "speaker": "Lars",
+   "agenda_item": "census",
+   "fact_id": "F12",
+   "claimed_value": "50%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Pat",
+   "agenda_item": "census",
+   "fact_id": "F11",
+   "claimed_value": "3,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Lars",
+   "agenda_item": "census",
+   "fact_id": "F1",
+   "claimed_value": "48",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 12,
+   "speaker": "Pat",
+   "agenda_item": "census",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Chidi",
+   "agenda_item": "drones",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 14,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Lars",
+   "agenda_item": "drones",
+   "fact_id": "F4",
+   "claimed_value": "21",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Chidi",
+   "agenda_item": "drones",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 16,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Lars",
+   "agenda_item": "drones",
+   "fact_id": "F6",
+   "claimed_value": "$2,400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Pat",
+   "agenda_item": "drones",
+   "fact_id": "F5",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Lars",
+   "agenda_item": "drones",
+   "fact_id": "F5",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Chidi",
+   "agenda_item": "drones",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 20,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Chidi",
+   "agenda_item": "drones",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 21,
+   "speaker": "Chidi",
+   "agenda_item": "drones",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 22,
+   "speaker": "Pat",
+   "agenda_item": "drones",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 23,
+   "speaker": "Lars",
+   "agenda_item": "drones",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 24,
+   "speaker": "Mariana",
+   "agenda_item": "drones",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Mariana",
+   "agenda_item": "drones",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 25,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Chidi",
+   "agenda_item": "students",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 27,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Mariana",
+   "agenda_item": "students",
+   "fact_id": "F8",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Chidi",
+   "agenda_item": "students",
+   "fact_id": "F7",
+   "claimed_value": "May 9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Mariana",
+   "agenda_item": "students",
+   "fact_id": "F7",
+   "claimed_value": "May 9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Lars",
+   "agenda_item": "students",
+   "fact_id": "F8",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Chidi",
+   "agenda_item": "students",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 32,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 32,
+   "speaker": "Mariana",
+   "agenda_item": "students",
+   "fact_id": "F12",
+   "claimed_value": "50%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 33,
+   "speaker": "Pat",
+   "agenda_item": "students",
+   "fact_id": "F12",
+   "claimed_value": "31%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Mariana",
+   "agenda_item": "students",
+   "fact_id": "F12",
+   "claimed_value": "31%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Chidi",
+   "agenda_item": "students",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 37,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 38,
+   "speaker": "Chidi",
+   "agenda_item": "students",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 39,
+   "speaker": "Mariana",
+   "agenda_item": "students",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Lars",
+   "agenda_item": "students",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Pat",
+   "agenda_item": "students",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Pat",
+   "agenda_item": "outreach",
+   "fact_id": "F9",
+   "claimed_value": "April 18",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 43,
+   "speaker": "Pat",
+   "agenda_item": "outreach",
+   "fact_id": "F10",
+   "claimed_value": "90",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 44,
+   "speaker": "Lars",
+   "agenda_item": "outreach",
+   "fact_id": "F10",
+   "claimed_value": "90",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Chidi",
+   "agenda_item": "outreach",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 47,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 47,
+   "speaker": "Mariana",
+   "agenda_item": "outreach",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 48,
+   "speaker": "Lars",
+   "agenda_item": "outreach",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 50,
+   "speaker": "Mariana",
+   "agenda_item": "outreach",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 51,
+   "speaker": "Chidi",
+   "agenda_item": "outreach",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 52,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Chidi",
+   "text": "Good afternoon. Let's start with the census. Lars, where are we with the plan?",
+   "start_s": 0.5,
+   "end_s": 6.5
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Lars",
+   "text": "We'll re-census all the permanent plots this summer. That's about forty plots.",
+   "start_s": 6.834,
+   "end_s": 11.48
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Pat",
+   "text": "Forty-eight, I think. The eight we added along the creek count too.",
+   "start_s": 12.527,
+   "end_s": 17.327
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Lars",
+   "text": "Right, forty-eight with the creek plots. Thanks, Pat.",
+   "start_s": 18.291,
+   "end_s": 21.388
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Chidi",
+   "text": "And how many trees is that in total?",
+   "start_s": 21.843,
+   "end_s": 25.272
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Pat",
+   "text": "Sixty-three hundred tagged trees. Some tags will be gone, of course.",
+   "start_s": 25.967,
+   "end_s": 30.367
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Mariana",
+   "text": "When was the last full census?",
+   "start_s": 31.016,
+   "end_s": 33.266
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Chidi",
+   "text": "Five years ago. It's on a five-year cycle.",
+   "start_s": 34.118,
+   "end_s": 37.546
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Lars",
+   "text": "Seedling mortality has been high since then. Roughly half the seedlings died, from the plots I've checked.",
+   "start_s": 38.535,
+   "end_s": 45.115
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Chidi",
+   "text": "That would be a lot. Let's see what the full census says.",
+   "start_s": 45.409,
+   "end_s": 50.552
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Pat",
+   "text": "The truck is the other question. We've got a three thousand mile budget for the season.",
+   "start_s": 50.78,
+   "end_s": 57.18
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Lars",
+   "text": "Forty-eight plots over that many miles should be fine if we group them by area.",
+   "start_s": 58.216,
+   "end_s": 64.022
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Pat",
+   "text": "I'll plan the route so we visit the plots by area, two days per cluster.",
+   "start_s": 64.655,
+   "end_s": 70.655
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Chidi",
+   "text": "The drone survey. Lars?",
+   "start_s": 71.617,
+   "end_s": 73.332
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Lars",
+   "text": "We've done twenty-one flights with the regular camera. For the canopy structure, we need the LiDAR sensor.",
+   "start_s": 73.534,
+   "end_s": 80.115
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Chidi",
+   "text": "What does the rental cost?",
+   "start_s": 80.76,
+   "end_s": 82.903
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Lars",
+   "text": "Twenty-four hundred a week. I'd like two weeks.",
+   "start_s": 83.825,
+   "end_s": 86.921
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Pat",
+   "text": "The batteries are the limit. We have six that hold a charge.",
+   "start_s": 87.35,
+   "end_s": 92.15
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Lars",
+   "text": "Six is enough for about two flights a day.",
+   "start_s": 93.295,
+   "end_s": 96.779
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Chidi",
+   "text": "Is one week enough if we plan the flights carefully?",
+   "start_s": 97.88,
+   "end_s": 102.166
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Lars",
+   "text": "One week is enough for the core plots. Two would cover the creek plots as well.",
+   "start_s": 102.397,
+   "end_s": 108.59
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Chidi",
+   "text": "Then let's rent it for one week, and we'll consider a second week if the weather is kind.",
+   "start_s": 108.815,
+   "end_s": 116.53
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Pat",
+   "text": "Who's actually certified to fly with the LiDAR payload?",
+   "start_s": 117.271,
+   "end_s": 120.871
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Lars",
+   "text": "That works. I'll book the sensor for the first week of June.",
+   "start_s": 122.01,
+   "end_s": 126.655
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Mariana",
+   "text": "Is the conference hotel booked for July, by the way? I saw prices going up.",
+   "start_s": 127.236,
+   "end_s": 132.861
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Pat",
+   "text": "I booked it last month. You're sharing with the student from Oregon.",
+   "start_s": 133.278,
+   "end_s": 138.078
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Chidi",
+   "text": "Good. Let's talk about student progress. Mariana, how's the thesis going?",
+   "start_s": 138.7,
+   "end_s": 143.414
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Mariana",
+   "text": "It's going. I have two of the four chapters drafted.",
+   "start_s": 143.643,
+   "end_s": 147.393
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Chidi",
+   "text": "And the defense is on May ninth.",
+   "start_s": 147.815,
+   "end_s": 150.815
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Mariana",
+   "text": "Yes. May ninth.",
+   "start_s": 151.453,
+   "end_s": 152.578
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Lars",
+   "text": "Two chapters with about ten weeks to go. That's doable, but tight.",
+   "start_s": 153.274,
+   "end_s": 157.919
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Chidi",
+   "text": "Which chapters are left?",
+   "start_s": 158.352,
+   "end_s": 160.066
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Mariana",
+   "text": "The seedling chapter and the discussion. The seedling data shows about fifty percent mortality, so it's a big story.",
+   "start_s": 160.497,
+   "end_s": 167.622
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Pat",
+   "text": "Sorry, I just checked the summary sheet. It's thirty-one percent, not fifty.",
+   "start_s": 168.041,
+   "end_s": 172.841
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Lars",
+   "text": "That was my number earlier. I only had the north plots in mind.",
+   "start_s": 173.501,
+   "end_s": 178.533
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Mariana",
+   "text": "Thirty-one. Still a story, just a smaller one.",
+   "start_s": 179.023,
+   "end_s": 182.023
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Chidi",
+   "text": "Could we meet weekly until the defense, just for half an hour?",
+   "start_s": 182.244,
+   "end_s": 187.387
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Mariana",
+   "text": "Yes, please. That would help me keep moving.",
+   "start_s": 188.425,
+   "end_s": 191.425
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Chidi",
+   "text": "Then weekly meetings on Tuesdays until May.",
+   "start_s": 192.181,
+   "end_s": 195.181
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Mariana",
+   "text": "I'll send you the seedling chapter outline before next Tuesday.",
+   "start_s": 196.023,
+   "end_s": 199.773
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Lars",
+   "text": "It might help if someone read the methods chapter with fresh eyes.",
+   "start_s": 200.159,
+   "end_s": 204.804
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Pat",
+   "text": "Excuse me, the delivery driver is here with the soil cores. One moment.",
+   "start_s": 205.997,
+   "end_s": 211.197
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Chidi",
+   "text": "Outreach day. Pat, you've been organizing it.",
+   "start_s": 212.257,
+   "end_s": 215.257
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Pat",
+   "text": "It's on April eighteenth. Ninety students are coming from Cedar Middle School.",
+   "start_s": 215.578,
+   "end_s": 220.378
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Lars",
+   "text": "Ninety is a lot of twelve-year-olds in one forest.",
+   "start_s": 220.911,
+   "end_s": 224.395
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Pat",
+   "text": "It is. I'd like help. Last year I ran it on my own.",
+   "start_s": 225.316,
+   "end_s": 230.516
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Chidi",
+   "text": "That's not fair on you. Who can help on the day?",
+   "start_s": 231.427,
+   "end_s": 236.141
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Mariana",
+   "text": "I can come in the morning, before my writing day.",
+   "start_s": 237.277,
+   "end_s": 241.027
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Lars",
+   "text": "I'll take the afternoon group and do the tree measuring station.",
+   "start_s": 241.649,
+   "end_s": 245.907
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Pat",
+   "text": "Thank you both. That makes a real difference.",
+   "start_s": 246.937,
+   "end_s": 250.137
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Mariana",
+   "text": "Do we have enough hand lenses for that many students?",
+   "start_s": 251.007,
+   "end_s": 254.757
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Chidi",
+   "text": "What happens if it rains?",
+   "start_s": 255.26,
+   "end_s": 257.403
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Pat",
+   "text": "We move into the teaching lab and do the leaf pressing station instead.",
+   "start_s": 258.191,
+   "end_s": 263.391
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Chidi",
+   "text": "I think that's everything. Thank you, all. Good week, everyone.",
+   "start_s": 264.473,
+   "end_s": 268.759
+  }
+ ]
+}

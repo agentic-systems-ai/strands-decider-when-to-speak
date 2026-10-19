@@ -1,0 +1,1864 @@
+{
+ "meeting_id": "postmortem-onsale-d8-s2",
+ "config": {
+  "theme": "Incident postmortem: the checkout outage last Tuesday",
+  "domain_pack": "incident_review",
+  "drama": 0.8,
+  "seed": 2,
+  "duration_min": 4.6,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   8,
+   15,
+   36,
+   52
+  ],
+  "reviewed_noclaim": [
+   36
+  ]
+ },
+ "cast": {
+  "theme": "Incident postmortem: the checkout outage last Tuesday",
+  "personas": [
+   {
+    "name": "Tess",
+    "role": "Director of SRE, facilitates",
+    "goals": "Real fixes before the next big on-sale",
+    "hidden_agenda": "Her team pushed the CDN change",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Jonas",
+    "role": "Network engineer who made the CDN change",
+    "goals": "Explain the change honestly",
+    "hidden_agenda": "Was told the change was routine and low-risk",
+    "verbosity": 2,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Delphine",
+    "role": "Head of partnerships, owns the promoter relationship",
+    "goals": "Keep the promoter from walking",
+    "hidden_agenda": "The promoter's CEO called her personally, furious",
+    "verbosity": 4,
+    "wpm": 180,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Kwesi",
+    "role": "On-call engineer during the on-sale",
+    "goals": "Get the double-charge customers refunded",
+    "hidden_agenda": "Has barely slept since Tuesday",
+    "verbosity": 2,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Postmortem - Tuesday on-sale checkout outage",
+   "org": "Quayside Tickets (fictional event ticketing)",
+   "agenda": [
+    {
+     "id": "what",
+     "title": "What happened",
+     "goal": "Agree the sequence of events",
+     "timebox_min": 0.95
+    },
+    {
+     "id": "why",
+     "title": "Why",
+     "goal": "Understand the CDN change and the bot traffic",
+     "timebox_min": 1.55
+    },
+    {
+     "id": "fallout",
+     "title": "Fallout",
+     "goal": "Customers",
+     "timebox_min": 1.31
+    },
+    {
+     "id": "next_onsale",
+     "title": "Before the next on-sale",
+     "goal": "What must be true before March 21",
+     "timebox_min": 0.82
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "outage_duration",
+     "statement": "Checkout was down for 52 minutes",
+     "value": "52 minutes"
+    },
+    {
+     "id": "F2",
+     "key": "onsale_start",
+     "statement": "The on-sale opened at 10:00 am",
+     "value": "10:00 am"
+    },
+    {
+     "id": "F3",
+     "key": "bot_share",
+     "statement": "Bot traffic share during the on-sale = 70%",
+     "value": "70%"
+    },
+    {
+     "id": "F4",
+     "key": "cdn_change_time",
+     "statement": "The CDN rule change went live at 9:41 am",
+     "value": "9:41 am"
+    },
+    {
+     "id": "F5",
+     "key": "tickets_before_outage",
+     "statement": "Tickets sold before the outage = 3,100",
+     "value": "3,100"
+    },
+    {
+     "id": "F6",
+     "key": "venue_capacity",
+     "statement": "Venue capacity = 18,000",
+     "value": "18,000"
+    },
+    {
+     "id": "F7",
+     "key": "promoter_penalty",
+     "statement": "Promoter penalty clause = $50,000",
+     "value": "$50,000"
+    },
+    {
+     "id": "F8",
+     "key": "queue_capacity",
+     "statement": "Queue system capacity = 40,000 concurrent users",
+     "value": "40,000"
+    },
+    {
+     "id": "F9",
+     "key": "cs_emails",
+     "statement": "Customer service emails = 6,800",
+     "value": "6,800"
+    },
+    {
+     "id": "F10",
+     "key": "rule_reviewers",
+     "statement": "Reviewers on the CDN rule change = 0",
+     "value": "0"
+    },
+    {
+     "id": "F11",
+     "key": "duplicate_charges",
+     "statement": "Customers charged twice = 214",
+     "value": "214"
+    },
+    {
+     "id": "F12",
+     "key": "next_onsale",
+     "statement": "Next major on-sale = March 21",
+     "value": "March 21"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "what",
+    "summary": "The sequence; Tess undercounts the duration",
+    "n_turns": 13,
+    "events": []
+   },
+   {
+    "agenda_item": "why",
+    "summary": "The rule change and the bots; Jonas's bot share is low and is corrected",
+    "n_turns": 19,
+    "events": []
+   },
+   {
+    "agenda_item": "fallout",
+    "summary": "Customers, refunds and the promoter; Delphine's penalty figure is inflated; Kwesi's double-charge count goes uncorrected",
+    "n_turns": 17,
+    "events": []
+   },
+   {
+    "agenda_item": "next_onsale",
+    "summary": "Before March 21",
+    "n_turns": 11,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Tess",
+   "text": "Let's keep this blameless. Kwesi, you were on call. What did you see?",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Kwesi",
+   "text": "The on-sale opened at ten. Within a minute the checkout pages were timing out.",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Delphine",
+   "text": "Within a minute. On the biggest on-sale of the year.",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Tess",
+   "text": "And we were down for about half an hour before it recovered.",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Kwesi",
+   "text": "It was longer than that. The graphs say fifty-two minutes.",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Tess",
+   "text": "Fifty-two. You're right. I was thinking of when we found the cause.",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Delphine",
+   "text": "How many tickets did we sell before it fell over?",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Kwesi",
+   "text": "Thirty-one hundred. Out of eighteen thousand.",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [
+    "E007",
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Delphine",
+   "text": "Thirty-one hundred. The promoter has the same graph.",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Tess",
+   "text": "What fixed it in the end?",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Jonas",
+   "text": "Rolling back the CDN rule. Once the old rule was back, the queue started working.",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Delphine",
+   "text": "The CDN rule. That nobody reviewed.",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Jonas",
+   "text": "It wasn't reviewed, no.",
+   "agenda_item": "what",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Tess",
+   "text": "Why. Jonas, what was the change?",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Jonas",
+   "text": "A rule to cache the event pages more aggressively. It went live at nine forty-one.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Kwesi",
+   "text": "Nineteen minutes before the on-sale.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Jonas",
+   "text": "It was meant to help with load. It had the opposite effect on the queue tokens.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Tess",
+   "text": "Who reviewed it?",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Jonas",
+   "text": "Nobody. CDN rules don't go through review. They never have.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Delphine",
+   "text": "That's insane. Sorry, it is.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Tess",
+   "text": "It's a gap. Let's call it a gap.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Jonas",
+   "text": "The other thing is the bots. Maybe a third of the traffic was bots.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Kwesi",
+   "text": "The security dashboard has seventy percent. Seventy percent of requests were bots.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Jonas",
+   "text": "Seventy. Okay. That changes things.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Delphine",
+   "text": "So real fans were fighting robots for tickets, and then the site died.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Tess",
+   "text": "Did the queue system hit its limit?",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Jonas",
+   "text": "Not even close. It's built for forty thousand concurrent users. The CDN rule broke it before it got there.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Delphine",
+   "text": "My daughter tried to buy tickets for this concert. She got the error page eleven times.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Kwesi",
+   "text": "She wasn't the only one. My cousin did too.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Delphine",
+   "text": "She's fourteen. She thinks I work for the worst company on earth.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Tess",
+   "text": "Okay. From now on, CDN rule changes need a second reviewer and can't go out within two hours of an on-sale.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Jonas",
+   "text": "That's fair. I'll write the review rule into the deploy pipeline this week.",
+   "agenda_item": "why",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Tess",
+   "text": "The fallout. Delphine, the promoter.",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Delphine",
+   "text": "The promoter is threatening the penalty clause. That's a hundred thousand dollars.",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Tess",
+   "text": "I have the contract summary here. The penalty clause is fifty thousand.",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Delphine",
+   "text": "Fifty. Fine. It's still fifty thousand dollars and a relationship.",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Kwesi",
+   "text": "And some people got charged twice. Maybe fifty customers.",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Tess",
+   "text": "Have they been refunded?",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Kwesi",
+   "text": "Not yet. Finance needs a list.",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Delphine",
+   "text": "Customer service got sixty-eight hundred emails. People are angry.",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Tess",
+   "text": "Could someone get finance the double-charge list today?",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Kwesi",
+   "text": "I'll pull the list and send it to finance before lunch.",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Delphine",
+   "text": "Can we give the promoter something? A fee waiver, a statement, anything?",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Jonas",
+   "text": "A public statement that says it was our fault, not theirs, would help.",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Tess",
+   "text": "Then we waive our booking fee on this event, and we put out a statement taking responsibility.",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Delphine",
+   "text": "I'll draft the statement with comms and show it to the promoter first.",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Jonas",
+   "text": "Does legal need to see the statement before it goes out?",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Kwesi",
+   "text": "Who's going to answer the sixty-eight hundred emails?",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [
+    "E036",
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Delphine",
+   "text": "Support is doing a single reply to all of them, with the refund details.",
+   "agenda_item": "fallout",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Tess",
+   "text": "Last. The next big on-sale is March twenty-first. What has to be true by then?",
+   "agenda_item": "next_onsale",
+   "direction": null,
+   "event_ids": [
+    "E038",
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Jonas",
+   "text": "The review rule, and a freeze on CDN changes during on-sales.",
+   "agenda_item": "next_onsale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Kwesi",
+   "text": "And bot protection. Seventy percent bots means real fans can't get in.",
+   "agenda_item": "next_onsale",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Jonas",
+   "text": "Do we even know whose bots they were?",
+   "agenda_item": "next_onsale",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Delphine",
+   "text": "Maybe we try a verified-fan presale, like the bigger companies do.",
+   "agenda_item": "next_onsale",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Tess",
+   "text": "Let's look at what verified-fan would take before committing to it.",
+   "agenda_item": "next_onsale",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Jonas",
+   "text": "It'd be worth someone talking to the CDN vendor about their bot product.",
+   "agenda_item": "next_onsale",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Tess",
+   "text": "Jonas, could you set up that call with the vendor?",
+   "agenda_item": "next_onsale",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Jonas",
+   "text": "Yes. This week.",
+   "agenda_item": "next_onsale",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Tess",
+   "text": "Thank you, everyone. Get some sleep, Kwesi.",
+   "agenda_item": "next_onsale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Kwesi",
+   "text": "Working on it.",
+   "agenda_item": "next_onsale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Tess",
+   "agenda_item": "what",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Kwesi",
+   "agenda_item": "what",
+   "fact_id": "F2",
+   "claimed_value": "10:00 am",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 3,
+   "speaker": "Tess",
+   "agenda_item": "what",
+   "fact_id": "F1",
+   "claimed_value": "half an hour",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Kwesi",
+   "agenda_item": "what",
+   "fact_id": "F1",
+   "claimed_value": "52 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Tess",
+   "agenda_item": "what",
+   "fact_id": "F1",
+   "claimed_value": "52 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Delphine",
+   "agenda_item": "what",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 7,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Kwesi",
+   "agenda_item": "what",
+   "fact_id": "F5",
+   "claimed_value": "3,100",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Kwesi",
+   "agenda_item": "what",
+   "fact_id": "F6",
+   "claimed_value": "18,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Delphine",
+   "agenda_item": "what",
+   "fact_id": "F5",
+   "claimed_value": "3,100",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Tess",
+   "agenda_item": "what",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 10,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Jonas",
+   "agenda_item": "what",
+   "fact_id": "F10",
+   "claimed_value": "0",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Tess",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 14,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Jonas",
+   "agenda_item": "why",
+   "fact_id": "F4",
+   "claimed_value": "9:41 am",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Tess",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 18,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Jonas",
+   "agenda_item": "why",
+   "fact_id": "F10",
+   "claimed_value": "0",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 21,
+   "speaker": "Jonas",
+   "agenda_item": "why",
+   "fact_id": "F3",
+   "claimed_value": "a third",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Kwesi",
+   "agenda_item": "why",
+   "fact_id": "F3",
+   "claimed_value": "70%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Jonas",
+   "agenda_item": "why",
+   "fact_id": "F3",
+   "claimed_value": "70%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Tess",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 26,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Jonas",
+   "agenda_item": "why",
+   "fact_id": "F8",
+   "claimed_value": "40,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 27,
+   "speaker": "Delphine",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 30,
+   "speaker": "Tess",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 31,
+   "speaker": "Jonas",
+   "agenda_item": "why",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 33,
+   "speaker": "Delphine",
+   "agenda_item": "fallout",
+   "fact_id": "F7",
+   "claimed_value": "$100,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Tess",
+   "agenda_item": "fallout",
+   "fact_id": "F7",
+   "claimed_value": "$50,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Delphine",
+   "agenda_item": "fallout",
+   "fact_id": "F7",
+   "claimed_value": "$50,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 36,
+   "speaker": "Kwesi",
+   "agenda_item": "fallout",
+   "fact_id": "F11",
+   "claimed_value": "50",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Tess",
+   "agenda_item": "fallout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 38,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Delphine",
+   "agenda_item": "fallout",
+   "fact_id": "F9",
+   "claimed_value": "6,800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Tess",
+   "agenda_item": "fallout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 41,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 41,
+   "speaker": "Kwesi",
+   "agenda_item": "fallout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Delphine",
+   "agenda_item": "fallout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 44,
+   "speaker": "Tess",
+   "agenda_item": "fallout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 45,
+   "speaker": "Delphine",
+   "agenda_item": "fallout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 46,
+   "speaker": "Jonas",
+   "agenda_item": "fallout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Kwesi",
+   "agenda_item": "fallout",
+   "fact_id": "F9",
+   "claimed_value": "6,800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Kwesi",
+   "agenda_item": "fallout",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 48,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Tess",
+   "agenda_item": "next_onsale",
+   "fact_id": "F12",
+   "claimed_value": "March 21",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Tess",
+   "agenda_item": "next_onsale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 50,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 51,
+   "speaker": "Kwesi",
+   "agenda_item": "next_onsale",
+   "fact_id": "F3",
+   "claimed_value": "70%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 52,
+   "speaker": "Jonas",
+   "agenda_item": "next_onsale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 53,
+   "speaker": "Delphine",
+   "agenda_item": "next_onsale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Tess",
+   "agenda_item": "next_onsale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 55,
+   "speaker": "Jonas",
+   "agenda_item": "next_onsale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 56,
+   "speaker": "Tess",
+   "agenda_item": "next_onsale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 57,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 57,
+   "speaker": "Jonas",
+   "agenda_item": "next_onsale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Tess",
+   "text": "Let's keep this blameless. Kwesi, you were on call. What did you see?",
+   "start_s": 0.5,
+   "end_s": 5.375
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Kwesi",
+   "text": "The on-sale opened at ten. Within a minute the checkout pages were timing out.",
+   "start_s": 6.531,
+   "end_s": 12.131
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Delphine",
+   "text": "Within a minute. On the biggest on-sale of the year.",
+   "start_s": 13.279,
+   "end_s": 16.612
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Tess",
+   "text": "And we were down for about half an hour before it recovered.",
+   "start_s": 16.869,
+   "end_s": 21.369
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Kwesi",
+   "text": "It was longer than that. The graphs say fifty-two minutes.",
+   "start_s": 21.654,
+   "end_s": 25.654
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Tess",
+   "text": "Fifty-two. You're right. I was thinking of when we found the cause.",
+   "start_s": 26.689,
+   "end_s": 31.189
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Delphine",
+   "text": "How many tickets did we sell before it fell over?",
+   "start_s": 32.125,
+   "end_s": 35.458
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Kwesi",
+   "text": "Thirty-one hundred. Out of eighteen thousand.",
+   "start_s": 36.328,
+   "end_s": 38.728
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Delphine",
+   "text": "Thirty-one hundred. The promoter has the same graph.",
+   "start_s": 39.236,
+   "end_s": 41.903
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Tess",
+   "text": "What fixed it in the end?",
+   "start_s": 42.709,
+   "end_s": 44.959
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Jonas",
+   "text": "Rolling back the CDN rule. Once the old rule was back, the queue started working.",
+   "start_s": 45.766,
+   "end_s": 51.973
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Delphine",
+   "text": "The CDN rule. That nobody reviewed.",
+   "start_s": 52.754,
+   "end_s": 54.754
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Jonas",
+   "text": "It wasn't reviewed, no.",
+   "start_s": 55.112,
+   "end_s": 56.768
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Tess",
+   "text": "Why. Jonas, what was the change?",
+   "start_s": 57.399,
+   "end_s": 59.649
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Jonas",
+   "text": "A rule to cache the event pages more aggressively. It went live at nine forty-one.",
+   "start_s": 60.243,
+   "end_s": 66.449
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Kwesi",
+   "text": "Nineteen minutes before the on-sale.",
+   "start_s": 67.372,
+   "end_s": 69.372
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Jonas",
+   "text": "It was meant to help with load. It had the opposite effect on the queue tokens.",
+   "start_s": 70.567,
+   "end_s": 77.188
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Tess",
+   "text": "Who reviewed it?",
+   "start_s": 78.337,
+   "end_s": 79.462
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Jonas",
+   "text": "Nobody. CDN rules don't go through review. They never have.",
+   "start_s": 80.206,
+   "end_s": 84.344
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Delphine",
+   "text": "That's insane. Sorry, it is.",
+   "start_s": 84.989,
+   "end_s": 86.656
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Tess",
+   "text": "It's a gap. Let's call it a gap.",
+   "start_s": 87.124,
+   "end_s": 90.124
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Jonas",
+   "text": "The other thing is the bots. Maybe a third of the traffic was bots.",
+   "start_s": 90.36,
+   "end_s": 96.153
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Kwesi",
+   "text": "The security dashboard has seventy percent. Seventy percent of requests were bots.",
+   "start_s": 96.38,
+   "end_s": 101.18
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Jonas",
+   "text": "Seventy. Okay. That changes things.",
+   "start_s": 101.845,
+   "end_s": 103.914
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Delphine",
+   "text": "So real fans were fighting robots for tickets, and then the site died.",
+   "start_s": 104.432,
+   "end_s": 108.766
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Tess",
+   "text": "Did the queue system hit its limit?",
+   "start_s": 109.346,
+   "end_s": 111.971
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Jonas",
+   "text": "Not even close. It's built for forty thousand concurrent users. The CDN rule broke it before it got there.",
+   "start_s": 113.063,
+   "end_s": 120.925
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Delphine",
+   "text": "My daughter tried to buy tickets for this concert. She got the error page eleven times.",
+   "start_s": 121.651,
+   "end_s": 126.984
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Kwesi",
+   "text": "She wasn't the only one. My cousin did too.",
+   "start_s": 127.745,
+   "end_s": 131.345
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Delphine",
+   "text": "She's fourteen. She thinks I work for the worst company on earth.",
+   "start_s": 131.781,
+   "end_s": 135.781
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Tess",
+   "text": "Okay. From now on, CDN rule changes need a second reviewer and can't go out within two hours of an on-sale.",
+   "start_s": 136.005,
+   "end_s": 143.88
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Jonas",
+   "text": "That's fair. I'll write the review rule into the deploy pipeline this week.",
+   "start_s": 144.405,
+   "end_s": 149.784
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Tess",
+   "text": "The fallout. Delphine, the promoter.",
+   "start_s": 150.121,
+   "end_s": 151.996
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Delphine",
+   "text": "The promoter is threatening the penalty clause. That's a hundred thousand dollars.",
+   "start_s": 152.706,
+   "end_s": 156.706
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Tess",
+   "text": "I have the contract summary here. The penalty clause is fifty thousand.",
+   "start_s": 157.905,
+   "end_s": 162.405
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Delphine",
+   "text": "Fifty. Fine. It's still fifty thousand dollars and a relationship.",
+   "start_s": 163.279,
+   "end_s": 166.613
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Kwesi",
+   "text": "And some people got charged twice. Maybe fifty customers.",
+   "start_s": 166.995,
+   "end_s": 170.595
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Tess",
+   "text": "Have they been refunded?",
+   "start_s": 171.689,
+   "end_s": 173.189
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Kwesi",
+   "text": "Not yet. Finance needs a list.",
+   "start_s": 174.186,
+   "end_s": 176.586
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Delphine",
+   "text": "Customer service got sixty-eight hundred emails. People are angry.",
+   "start_s": 177.52,
+   "end_s": 180.52
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Tess",
+   "text": "Could someone get finance the double-charge list today?",
+   "start_s": 181.627,
+   "end_s": 184.627
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Kwesi",
+   "text": "I'll pull the list and send it to finance before lunch.",
+   "start_s": 185.59,
+   "end_s": 189.99
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Delphine",
+   "text": "Can we give the promoter something? A fee waiver, a statement, anything?",
+   "start_s": 190.98,
+   "end_s": 194.98
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Jonas",
+   "text": "A public statement that says it was our fault, not theirs, would help.",
+   "start_s": 195.534,
+   "end_s": 200.913
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Tess",
+   "text": "Then we waive our booking fee on this event, and we put out a statement taking responsibility.",
+   "start_s": 202.094,
+   "end_s": 208.469
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Delphine",
+   "text": "I'll draft the statement with comms and show it to the promoter first.",
+   "start_s": 209.631,
+   "end_s": 213.964
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Jonas",
+   "text": "Does legal need to see the statement before it goes out?",
+   "start_s": 214.325,
+   "end_s": 218.877
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Kwesi",
+   "text": "Who's going to answer the sixty-eight hundred emails?",
+   "start_s": 219.831,
+   "end_s": 223.031
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Delphine",
+   "text": "Support is doing a single reply to all of them, with the refund details.",
+   "start_s": 223.946,
+   "end_s": 228.613
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Tess",
+   "text": "Last. The next big on-sale is March twenty-first. What has to be true by then?",
+   "start_s": 229.274,
+   "end_s": 234.899
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Jonas",
+   "text": "The review rule, and a freeze on CDN changes during on-sales.",
+   "start_s": 235.629,
+   "end_s": 240.181
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Kwesi",
+   "text": "And bot protection. Seventy percent bots means real fans can't get in.",
+   "start_s": 240.871,
+   "end_s": 245.671
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Jonas",
+   "text": "Do we even know whose bots they were?",
+   "start_s": 246.796,
+   "end_s": 250.106
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Delphine",
+   "text": "Maybe we try a verified-fan presale, like the bigger companies do.",
+   "start_s": 250.807,
+   "end_s": 254.474
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Tess",
+   "text": "Let's look at what verified-fan would take before committing to it.",
+   "start_s": 255.506,
+   "end_s": 259.631
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Jonas",
+   "text": "It'd be worth someone talking to the CDN vendor about their bot product.",
+   "start_s": 260.185,
+   "end_s": 265.564
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Tess",
+   "text": "Jonas, could you set up that call with the vendor?",
+   "start_s": 266.647,
+   "end_s": 270.397
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Jonas",
+   "text": "Yes. This week.",
+   "start_s": 271.497,
+   "end_s": 272.738
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Tess",
+   "text": "Thank you, everyone. Get some sleep, Kwesi.",
+   "start_s": 273.399,
+   "end_s": 276.024
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Kwesi",
+   "text": "Working on it.",
+   "start_s": 276.792,
+   "end_s": 277.992
+  }
+ ]
+}

@@ -1,0 +1,3447 @@
+{
+ "meeting_id": "launch-aurora-d5-s1",
+ "config": {
+  "theme": "Go/no-go for the Aurora mobile app launch",
+  "domain_pack": "product_launch",
+  "drama": 0.5,
+  "seed": 1,
+  "duration_min": 10.6,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   8,
+   9,
+   24,
+   33,
+   64,
+   66,
+   73,
+   88,
+   90,
+   99,
+   107,
+   110,
+   123,
+   127,
+   132
+  ],
+  "reviewed_noclaim": [
+   8,
+   9
+  ]
+ },
+ "cast": {
+  "theme": "Go/no-go for the Aurora mobile app launch",
+  "personas": [
+   {
+    "name": "Maya",
+    "role": "Product manager, runs the meeting",
+    "goals": "Get a firm launch date today",
+    "hidden_agenda": "Already hinted June 3rd to the exec team",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [
+     "okay, so",
+     "let's land this"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Raj",
+    "role": "Engineering lead",
+    "goals": "Do not ship with known stability issues",
+    "hidden_agenda": "Wants one more week to land the sync refactor",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [
+     "to be fair",
+     "honestly"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Lena",
+    "role": "QA lead",
+    "goals": "Make sure the P1 bugs are tracked to closure",
+    "hidden_agenda": "Tired of being the last line of defence",
+    "verbosity": 2,
+    "wpm": 155,
+    "catchphrases": [
+     "for the record"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Tom",
+    "role": "Marketing lead",
+    "goals": "A big splashy launch",
+    "hidden_agenda": "Already booked a press slot and hasn't told anyone",
+    "verbosity": 5,
+    "wpm": 175,
+    "catchphrases": [
+     "love it",
+     "the thing is"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Aurora 2.0 go/no-go",
+   "org": "Brightfern Health (fictional)",
+   "agenda": [
+    {
+     "id": "crash_metrics",
+     "title": "Release readiness metrics",
+     "goal": "Check stability and performance against the launch bar",
+     "timebox_min": 3.21
+    },
+    {
+     "id": "store_assets",
+     "title": "Store listing and assets",
+     "goal": "Confirm screenshots",
+     "timebox_min": 2.06
+    },
+    {
+     "id": "launch_date",
+     "title": "Launch date",
+     "goal": "Make the go/no-go call and pick a date",
+     "timebox_min": 3.4
+    },
+    {
+     "id": "comms_plan",
+     "title": "Launch comms and support",
+     "goal": "Agree the announcement and support readiness",
+     "timebox_min": 1.9
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "crash_free_sessions_last_week",
+     "statement": "Crash-free sessions last week = 99.2%",
+     "value": "99.2%"
+    },
+    {
+     "id": "F2",
+     "key": "launch_bar_crash_free",
+     "statement": "Launch bar for crash-free sessions = 99.0%",
+     "value": "99.0%"
+    },
+    {
+     "id": "F3",
+     "key": "p95_cold_start",
+     "statement": "p95 cold start on the release candidate = 1.8 seconds",
+     "value": "1.8 s"
+    },
+    {
+     "id": "F4",
+     "key": "open_p1_bugs",
+     "statement": "Open P1 bugs = 3",
+     "value": "3"
+    },
+    {
+     "id": "F5",
+     "key": "beta_testers",
+     "statement": "Active beta testers = 4,200",
+     "value": "4,200"
+    },
+    {
+     "id": "F6",
+     "key": "beta_nps",
+     "statement": "Beta NPS = 41",
+     "value": "41"
+    },
+    {
+     "id": "F7",
+     "key": "store_review_days",
+     "statement": "Typical app store review time = 2 days",
+     "value": "2 days"
+    },
+    {
+     "id": "F8",
+     "key": "launch_marketing_budget",
+     "statement": "Launch marketing budget = $85,000",
+     "value": "$85,000"
+    },
+    {
+     "id": "F9",
+     "key": "support_agents_trained",
+     "statement": "Support agents trained on 2.0 = 14",
+     "value": "14"
+    },
+    {
+     "id": "F10",
+     "key": "android_share_of_beta",
+     "statement": "Android share of beta users = 62%",
+     "value": "62%"
+    },
+    {
+     "id": "F11",
+     "key": "last_release_date",
+     "statement": "Last major release shipped on April 22",
+     "value": "April 22"
+    },
+    {
+     "id": "F12",
+     "key": "legal_review_turnaround",
+     "statement": "Legal review turnaround = 5 business days",
+     "value": "5 business days"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "crash_metrics",
+    "summary": "Stability and performance against the bar; Tom misremembers the crash rate",
+    "n_turns": 37,
+    "events": []
+   },
+   {
+    "agenda_item": "store_assets",
+    "summary": "Screenshots and copy are behind; legal review timing is fuzzy",
+    "n_turns": 27,
+    "events": []
+   },
+   {
+    "agenda_item": "launch_date",
+    "summary": "The real fight: June 3rd vs one more week; a drift into Tom's marathon",
+    "n_turns": 44,
+    "events": []
+   },
+   {
+    "agenda_item": "comms_plan",
+    "summary": "Announcement, support readiness and budget; one question never gets answered",
+    "n_turns": 28,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Maya",
+   "text": "Okay, so, thanks everyone. Four things today and I really want to land a date by the end, so let's keep moving.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Tom",
+   "text": "Love it. I've got a hard stop at the top of the hour, just so you know.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Maya",
+   "text": "Noted. First up, readiness. Raj, Lena, where are we on stability?",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Raj",
+   "text": "Honestly, better than I expected two weeks ago. The sync fix helped a lot.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Tom",
+   "text": "Yeah, crash-free was like ninety-seven percent last week. That's basically perfect.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Lena",
+   "text": "Hm, that's not the number I have—",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": true
+  },
+  {
+   "index": 6,
+   "speaker": "Raj",
+   "text": "It was ninety-nine point two, Tom. Ninety-seven would actually be a disaster.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Tom",
+   "text": "Oh. Okay, even better then.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Maya",
+   "text": "And the bar we agreed for launch was ninety-nine flat, right?",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E004",
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Lena",
+   "text": "Right, ninety-nine. So we're over it, but not by a mile.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Raj",
+   "text": "To be fair, last week was a quiet week. Usage was down because of the holiday.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Maya",
+   "text": "So you think the number flatters us?",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Raj",
+   "text": "A little. I'd want to see it hold with normal traffic before I get excited.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Tom",
+   "text": "The thing is, it's never going to be a normal week, there's always something.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Lena",
+   "text": "For the record, the crash clusters we do have are almost all on older Android devices.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Maya",
+   "text": "How much of the beta is Android these days?",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Lena",
+   "text": "About sixty-two percent of active testers.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Tom",
+   "text": "Which makes sense, that's our market.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Raj",
+   "text": "Cold start is the other thing. p95 cold start on the release candidate is one point eight seconds.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Maya",
+   "text": "Is that good or bad? I genuinely don't remember what we were aiming for.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Raj",
+   "text": "It's fine. It's not great, but it's fine. Users won't notice on anything from the last three years.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Lena",
+   "text": "Older phones they will, though.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Tom",
+   "text": "Older phones are slow at everything. Nobody blames the app for that.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Lena",
+   "text": "People absolutely blame the app for that. Read the store reviews sometime.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Maya",
+   "text": "Okay. And the P1s? How many are still open?",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Lena",
+   "text": "Three. Two are on the sync screen and one is the login loop on tablets.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Raj",
+   "text": "The login loop is nasty. That one I don't want to ship with.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Maya",
+   "text": "Is anyone actually on it right now?",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Raj",
+   "text": "Dmitri was looking at it on Friday, but he got pulled onto the payments thing.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Lena",
+   "text": "Which is how it always goes.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Raj",
+   "text": "Fine. I'll pair with Dmitri on the tablet login loop tomorrow morning and get a fix into the next build.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Maya",
+   "text": "Great, thank you.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Lena",
+   "text": "And someone should probably keep an eye on the other two sync ones at some point.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Tom",
+   "text": "Do we have any data on how many people actually hit the login thing?",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Raj",
+   "text": "Anyway, the sync ones are lower risk, they only show up when you're offline for days.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Maya",
+   "text": "Okay. Overall, it sounds like the metrics are basically there, with the tablet bug as the open risk.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Raj",
+   "text": "That's fair. I'd say metrics are a soft yes, for now.",
+   "agenda_item": "crash_metrics",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Maya",
+   "text": "Let's move to the store listing. Tom, how are the assets looking?",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Tom",
+   "text": "Screenshots are mostly done. The copy is done, it's great, I'm really happy with it.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Lena",
+   "text": "Are the screenshots from the release candidate or the old build?",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Tom",
+   "text": "Mix. The onboarding ones are from the old build, which, yeah, I know.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Raj",
+   "text": "The onboarding flow changed quite a bit, so those will look wrong.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Tom",
+   "text": "It's three screens, it's not a big deal to redo them.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Maya",
+   "text": "Who's redoing them, though? Design is slammed this week.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Tom",
+   "text": "I'll grab the new onboarding screenshots from the RC myself and get them to design by Wednesday.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Maya",
+   "text": "Perfect.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Lena",
+   "text": "Has legal looked at the copy yet? There's the line about \"clinically proven\" that worried me.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Tom",
+   "text": "That line is staying, it tested really well.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Maya",
+   "text": "Tom, that's not really what she asked.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Tom",
+   "text": "Right, sorry. No, legal hasn't seen it yet. It's going over this week.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Raj",
+   "text": "Legal usually takes two weeks on anything health-related.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Maya",
+   "text": "I thought it was faster than that these days.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Lena",
+   "text": "It's five business days, that's what they told us after the last release.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Tom",
+   "text": "Five days is fine. That still works.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Maya",
+   "text": "Okay, but it has to actually go to them first.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Raj",
+   "text": "Maybe we drop the clinically proven line to be safe?",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E027",
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Tom",
+   "text": "Let's not decide that without seeing what legal says.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Maya",
+   "text": "Yeah, let's see what legal says first and come back to it.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Lena",
+   "text": "And store review on top of that is usually a couple of days.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Tom",
+   "text": "Two days, yeah, Apple's been quick lately.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Raj",
+   "text": "Side note, has anyone else noticed the coffee machine on four is broken again?",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [
+    "E032",
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Lena",
+   "text": "Since Monday. It's a tragedy.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Maya",
+   "text": "So legal plus store review is a fair bit of runway, minimum.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Raj",
+   "text": "Before anything else goes wrong, yes.",
+   "agenda_item": "store_assets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Maya",
+   "text": "Okay, which brings us to the date. I'd love to land on June 3rd.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Raj",
+   "text": "I figured you'd say that.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Tom",
+   "text": "June 3rd is great for us. It lines up with the newsletter.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Raj",
+   "text": "Honestly, I'd rather go on the tenth. One more week lets the sync refactor land properly.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Lena",
+   "text": "We should really get the refactor reviewed by someone outside the team, whatever the date.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Maya",
+   "text": "What does the refactor give us that users would actually notice?",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Raj",
+   "text": "Fewer of those offline sync crashes, mostly. It's the stuff that hits the long-tail devices.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Lena",
+   "text": "Which is where most of our crashes are.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Tom",
+   "text": "Can we ship the refactor in a point release after?",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Raj",
+   "text": "We could. It's just riskier to ship the big change after everyone's already on 2.0.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "Maya",
+   "text": "How many people are in the beta now?",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 75,
+   "speaker": "Tom",
+   "text": "Something like six thousand. It's been growing like crazy.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 76,
+   "speaker": "Lena",
+   "text": "It's forty-two hundred active. Six thousand is total sign-ups.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 77,
+   "speaker": "Tom",
+   "text": "Active, sign-ups, whatever, it's a lot of people.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 78,
+   "speaker": "Maya",
+   "text": "And they're happy? What did the beta NPS land at?",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 79,
+   "speaker": "Tom",
+   "text": "Fifty-one, which for health apps is honestly amazing.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 80,
+   "speaker": "Lena",
+   "text": "For the record, it was forty-one in the last survey.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 81,
+   "speaker": "Tom",
+   "text": "Huh. I could swear I saw a higher number somewhere.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 82,
+   "speaker": "Raj",
+   "text": "Maybe that was the iOS-only cut.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 83,
+   "speaker": "Maya",
+   "text": "Either way, it's decent. Okay. Tom, unrelated, but how was the marathon?",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E043",
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 84,
+   "speaker": "Tom",
+   "text": "Oh, brutal. Near the end I genuinely thought I was going to die.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 85,
+   "speaker": "Lena",
+   "text": "Did you finish under four hours in the end?",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 86,
+   "speaker": "Tom",
+   "text": "Just over. So close. My knees are still not speaking to me.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 87,
+   "speaker": "Raj",
+   "text": "Okay, back to the date. Where does that leave us?",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 88,
+   "speaker": "Maya",
+   "text": "Right. So the honest version is June 3rd with the refactor as a fast follow, or the tenth with it in.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 89,
+   "speaker": "Tom",
+   "text": "The thing is, I've sort of already got a press slot on the third.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 90,
+   "speaker": "Maya",
+   "text": "You've what?",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 91,
+   "speaker": "Tom",
+   "text": "It's soft! It's a soft hold. It can move, probably.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 92,
+   "speaker": "Lena",
+   "text": "That's the first I'm hearing of this.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 93,
+   "speaker": "Raj",
+   "text": "Same.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 94,
+   "speaker": "Maya",
+   "text": "Okay. Let's not make the press slot the reason we pick a date.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 95,
+   "speaker": "Raj",
+   "text": "Agreed.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 96,
+   "speaker": "Maya",
+   "text": "Here's where I am. Tablet login fix is a must, refactor is a nice-to-have.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 97,
+   "speaker": "Raj",
+   "text": "I can live with that, as long as the login loop is fixed and verified.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 98,
+   "speaker": "Lena",
+   "text": "Verified by QA, not just merged.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 99,
+   "speaker": "Maya",
+   "text": "Fine. Then we're going with June 3rd, conditional on the tablet login fix passing QA by the twenty-eighth. That's the call.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E049"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 100,
+   "speaker": "Tom",
+   "text": "Love it.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 101,
+   "speaker": "Raj",
+   "text": "Okay. Then the refactor is the one thing still hanging.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 102,
+   "speaker": "Lena",
+   "text": "Just to check, if the login fix slips, the date slips too?",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 103,
+   "speaker": "Maya",
+   "text": "Yes. If it slips, we move to the tenth. No debate.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E051"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 104,
+   "speaker": "Tom",
+   "text": "Can I tell the press contact it's the third, then?",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E052"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 105,
+   "speaker": "Maya",
+   "text": "You can tell them it's likely, not final.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 106,
+   "speaker": "Lena",
+   "text": "I'll write up the QA sign-off criteria for the login fix today so there's no argument later.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E053"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 107,
+   "speaker": "Raj",
+   "text": "Good. And the refactor ships in 2.0.1, not 2.0. That's decided.",
+   "agenda_item": "launch_date",
+   "direction": null,
+   "event_ids": [
+    "E054"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 108,
+   "speaker": "Maya",
+   "text": "Last item, comms and support. Tom, the announcement.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 109,
+   "speaker": "Tom",
+   "text": "Blog post, newsletter, and the in-app banner on launch day. Plus paid social for two weeks.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 110,
+   "speaker": "Raj",
+   "text": "What's the paid social spend?",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E055"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 111,
+   "speaker": "Tom",
+   "text": "We've got a hundred and twenty grand for the whole launch.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E056"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 112,
+   "speaker": "Maya",
+   "text": "I have eighty-five thousand in the plan, not a hundred and twenty.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E057"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 113,
+   "speaker": "Tom",
+   "text": "Eighty-five was before the press stuff.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E058"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 114,
+   "speaker": "Maya",
+   "text": "There is no \"before the press stuff\", the budget is the budget.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 115,
+   "speaker": "Lena",
+   "text": "Is support ready for a spike? Last launch they got hammered.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E059"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 116,
+   "speaker": "Maya",
+   "text": "They've trained fourteen agents on 2.0 so far.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E060"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 117,
+   "speaker": "Lena",
+   "text": "Fourteen is fewer than last time.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E061"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 118,
+   "speaker": "Raj",
+   "text": "Last time we shipped on April twenty-second and support was underwater for a week.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E062"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 119,
+   "speaker": "Maya",
+   "text": "Maybe we keep a couple of engineers on support rotation for launch week.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E063"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 120,
+   "speaker": "Raj",
+   "text": "Maybe. I'd want to think about who, honestly.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 121,
+   "speaker": "Tom",
+   "text": "We could also just put a really good FAQ up.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 122,
+   "speaker": "Lena",
+   "text": "An FAQ doesn't answer the phone.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 123,
+   "speaker": "Maya",
+   "text": "Who on the support side is actually signing off that they're ready?",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E064"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 124,
+   "speaker": "Tom",
+   "text": "Anyway, I'll draft the launch blog post and send it round by Friday.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E065"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 125,
+   "speaker": "Raj",
+   "text": "Send it to me as well, I want to check the technical claims.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 126,
+   "speaker": "Tom",
+   "text": "Sure, sure.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E066"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 127,
+   "speaker": "Lena",
+   "text": "Someone should probably update the release notes template too, it still says 1.9.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E067"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 128,
+   "speaker": "Maya",
+   "text": "Okay. Should we do a dry run of the launch day checklist?",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E068"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 129,
+   "speaker": "Raj",
+   "text": "Probably worth it, the last one caught two things.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 130,
+   "speaker": "Maya",
+   "text": "Let's maybe do the dry run next Thursday, if people are around.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [
+    "E069"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 131,
+   "speaker": "Tom",
+   "text": "I'm around Thursday.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 132,
+   "speaker": "Lena",
+   "text": "I might be at the vendor thing, I'll know Monday.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 133,
+   "speaker": "Maya",
+   "text": "Okay. I think that's everything. Recap is in the doc. Thanks all.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 134,
+   "speaker": "Raj",
+   "text": "Thanks.",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 135,
+   "speaker": "Tom",
+   "text": "Thanks, team. Big launch!",
+   "agenda_item": "comms_plan",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Maya",
+   "agenda_item": "crash_metrics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 4,
+   "speaker": "Tom",
+   "agenda_item": "crash_metrics",
+   "fact_id": "F1",
+   "claimed_value": "97%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Raj",
+   "agenda_item": "crash_metrics",
+   "fact_id": "F1",
+   "claimed_value": "99.2%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Maya",
+   "agenda_item": "crash_metrics",
+   "fact_id": "F2",
+   "claimed_value": "99.0%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Maya",
+   "agenda_item": "crash_metrics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 9,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Lena",
+   "agenda_item": "crash_metrics",
+   "fact_id": "F2",
+   "claimed_value": "99.0%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Maya",
+   "agenda_item": "crash_metrics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 12,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Maya",
+   "agenda_item": "crash_metrics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 16,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Lena",
+   "agenda_item": "crash_metrics",
+   "fact_id": "F10",
+   "claimed_value": "62%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Raj",
+   "agenda_item": "crash_metrics",
+   "fact_id": "F3",
+   "claimed_value": "1.8 s",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Maya",
+   "agenda_item": "crash_metrics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 20,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Maya",
+   "agenda_item": "crash_metrics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 25,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Lena",
+   "agenda_item": "crash_metrics",
+   "fact_id": "F4",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Maya",
+   "agenda_item": "crash_metrics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 28,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 30,
+   "speaker": "Raj",
+   "agenda_item": "crash_metrics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Lena",
+   "agenda_item": "crash_metrics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 33,
+   "speaker": "Tom",
+   "agenda_item": "crash_metrics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Raj",
+   "agenda_item": "crash_metrics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Maya",
+   "agenda_item": "store_assets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 38,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Lena",
+   "agenda_item": "store_assets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 40,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Maya",
+   "agenda_item": "store_assets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 44,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 44,
+   "speaker": "Tom",
+   "agenda_item": "store_assets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Lena",
+   "agenda_item": "store_assets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 49,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 50,
+   "speaker": "Raj",
+   "agenda_item": "store_assets",
+   "fact_id": "F12",
+   "claimed_value": "two weeks",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Lena",
+   "agenda_item": "store_assets",
+   "fact_id": "F12",
+   "claimed_value": "5 business days",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 53,
+   "speaker": "Tom",
+   "agenda_item": "store_assets",
+   "fact_id": "F12",
+   "claimed_value": "5 business days",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 55,
+   "speaker": "Raj",
+   "agenda_item": "store_assets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 55,
+   "speaker": "Raj",
+   "agenda_item": "store_assets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 56,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 57,
+   "speaker": "Maya",
+   "agenda_item": "store_assets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 58,
+   "speaker": "Lena",
+   "agenda_item": "store_assets",
+   "fact_id": "F7",
+   "claimed_value": "2 days",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 59,
+   "speaker": "Tom",
+   "agenda_item": "store_assets",
+   "fact_id": "F7",
+   "claimed_value": "2 days",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 60,
+   "speaker": "Raj",
+   "agenda_item": "store_assets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 60,
+   "speaker": "Raj",
+   "agenda_item": "store_assets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 61,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 68,
+   "speaker": "Lena",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 69,
+   "speaker": "Maya",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 70,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 72,
+   "speaker": "Tom",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 73,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 74,
+   "speaker": "Maya",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 75,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 75,
+   "speaker": "Tom",
+   "agenda_item": "launch_date",
+   "fact_id": "F5",
+   "claimed_value": "6,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 76,
+   "speaker": "Lena",
+   "agenda_item": "launch_date",
+   "fact_id": "F5",
+   "claimed_value": "4,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 78,
+   "speaker": "Maya",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 79,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 79,
+   "speaker": "Tom",
+   "agenda_item": "launch_date",
+   "fact_id": "F6",
+   "claimed_value": "51",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 80,
+   "speaker": "Lena",
+   "agenda_item": "launch_date",
+   "fact_id": "F6",
+   "claimed_value": "41",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 83,
+   "speaker": "Maya",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 4,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 83,
+   "speaker": "Maya",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 84,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 85,
+   "speaker": "Lena",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 86,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 87,
+   "speaker": "Raj",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 88,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 94,
+   "speaker": "Maya",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 96,
+   "speaker": "Maya",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 99,
+   "speaker": "Maya",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 102,
+   "speaker": "Lena",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 103,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 103,
+   "speaker": "Maya",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 104,
+   "speaker": "Tom",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 105,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E053",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 106,
+   "speaker": "Lena",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E054",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 107,
+   "speaker": "Raj",
+   "agenda_item": "launch_date",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E055",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 110,
+   "speaker": "Raj",
+   "agenda_item": "comms_plan",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E056",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 111,
+   "speaker": "Tom",
+   "agenda_item": "comms_plan",
+   "fact_id": "F8",
+   "claimed_value": "$120,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E057",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 112,
+   "speaker": "Maya",
+   "agenda_item": "comms_plan",
+   "fact_id": "F8",
+   "claimed_value": "$85,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E058",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 113,
+   "speaker": "Tom",
+   "agenda_item": "comms_plan",
+   "fact_id": "F8",
+   "claimed_value": "$85,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E059",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 115,
+   "speaker": "Lena",
+   "agenda_item": "comms_plan",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 116,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E060",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 116,
+   "speaker": "Maya",
+   "agenda_item": "comms_plan",
+   "fact_id": "F9",
+   "claimed_value": "14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E061",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 117,
+   "speaker": "Lena",
+   "agenda_item": "comms_plan",
+   "fact_id": "F9",
+   "claimed_value": "14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E062",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 118,
+   "speaker": "Raj",
+   "agenda_item": "comms_plan",
+   "fact_id": "F11",
+   "claimed_value": "April 22",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E063",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 119,
+   "speaker": "Maya",
+   "agenda_item": "comms_plan",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E064",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 123,
+   "speaker": "Maya",
+   "agenda_item": "comms_plan",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E065",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 124,
+   "speaker": "Tom",
+   "agenda_item": "comms_plan",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E066",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 126,
+   "speaker": "Tom",
+   "agenda_item": "comms_plan",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E067",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 127,
+   "speaker": "Lena",
+   "agenda_item": "comms_plan",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E068",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 128,
+   "speaker": "Maya",
+   "agenda_item": "comms_plan",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 129,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E069",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 130,
+   "speaker": "Maya",
+   "agenda_item": "comms_plan",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Maya",
+   "text": "Okay, so, thanks everyone. Four things today and I really want to land a date by the end, so let's keep moving.",
+   "start_s": 0.5,
+   "end_s": 8.5
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Tom",
+   "text": "Love it. I've got a hard stop at the top of the hour, just so you know.",
+   "start_s": 8.834,
+   "end_s": 14.663
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Maya",
+   "text": "Noted. First up, readiness. Raj, Lena, where are we on stability?",
+   "start_s": 15.71,
+   "end_s": 19.71
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Raj",
+   "text": "Honestly, better than I expected two weeks ago. The sync fix helped a lot.",
+   "start_s": 20.674,
+   "end_s": 26.274
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Tom",
+   "text": "Yeah, crash-free was like ninety-seven percent last week. That's basically perfect.",
+   "start_s": 26.729,
+   "end_s": 30.5
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Lena",
+   "text": "Hm, that's not the number I have—",
+   "start_s": 31.195,
+   "end_s": 33.905
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Raj",
+   "text": "It was ninety-nine point two, Tom. Ninety-seven would actually be a disaster.",
+   "start_s": 33.38,
+   "end_s": 38.18
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Tom",
+   "text": "Oh. Okay, even better then.",
+   "start_s": 39.032,
+   "end_s": 40.746
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Maya",
+   "text": "And the bar we agreed for launch was ninety-nine flat, right?",
+   "start_s": 41.735,
+   "end_s": 45.735
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Lena",
+   "text": "Right, ninety-nine. So we're over it, but not by a mile.",
+   "start_s": 46.029,
+   "end_s": 50.287
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Raj",
+   "text": "To be fair, last week was a quiet week. Usage was down because of the holiday.",
+   "start_s": 50.515,
+   "end_s": 56.915
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Maya",
+   "text": "So you think the number flatters us?",
+   "start_s": 57.951,
+   "end_s": 60.496
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Raj",
+   "text": "A little. I'd want to see it hold with normal traffic before I get excited.",
+   "start_s": 61.129,
+   "end_s": 67.129
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Tom",
+   "text": "The thing is, it's never going to be a normal week, there's always something.",
+   "start_s": 68.091,
+   "end_s": 72.891
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Lena",
+   "text": "For the record, the crash clusters we do have are almost all on older Android devices.",
+   "start_s": 73.093,
+   "end_s": 79.287
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Maya",
+   "text": "How much of the beta is Android these days?",
+   "start_s": 79.932,
+   "end_s": 83.205
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Lena",
+   "text": "About sixty-two percent of active testers.",
+   "start_s": 84.127,
+   "end_s": 86.449
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Tom",
+   "text": "Which makes sense, that's our market.",
+   "start_s": 86.878,
+   "end_s": 88.935
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Raj",
+   "text": "Cold start is the other thing. p95 cold start on the release candidate is one point eight seconds.",
+   "start_s": 90.08,
+   "end_s": 97.28
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Maya",
+   "text": "Is that good or bad? I genuinely don't remember what we were aiming for.",
+   "start_s": 98.381,
+   "end_s": 103.472
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Raj",
+   "text": "It's fine. It's not great, but it's fine. Users won't notice on anything from the last three years.",
+   "start_s": 103.703,
+   "end_s": 110.903
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Lena",
+   "text": "Older phones they will, though.",
+   "start_s": 111.128,
+   "end_s": 113.064
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Tom",
+   "text": "Older phones are slow at everything. Nobody blames the app for that.",
+   "start_s": 113.805,
+   "end_s": 117.92
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Lena",
+   "text": "People absolutely blame the app for that. Read the store reviews sometime.",
+   "start_s": 119.059,
+   "end_s": 123.704
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Maya",
+   "text": "Okay. And the P1s? How many are still open?",
+   "start_s": 124.285,
+   "end_s": 127.558
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Lena",
+   "text": "Three. Two are on the sync screen and one is the login loop on tablets.",
+   "start_s": 127.975,
+   "end_s": 133.781
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Raj",
+   "text": "The login loop is nasty. That one I don't want to ship with.",
+   "start_s": 134.403,
+   "end_s": 139.603
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Maya",
+   "text": "Is anyone actually on it right now?",
+   "start_s": 139.832,
+   "end_s": 142.377
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Raj",
+   "text": "Dmitri was looking at it on Friday, but he got pulled onto the payments thing.",
+   "start_s": 142.799,
+   "end_s": 148.799
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Lena",
+   "text": "Which is how it always goes.",
+   "start_s": 149.437,
+   "end_s": 151.759
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Raj",
+   "text": "Fine. I'll pair with Dmitri on the tablet login loop tomorrow morning and get a fix into the next build.",
+   "start_s": 152.455,
+   "end_s": 160.455
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Maya",
+   "text": "Great, thank you.",
+   "start_s": 160.888,
+   "end_s": 161.979
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Lena",
+   "text": "And someone should probably keep an eye on the other two sync ones at some point.",
+   "start_s": 162.41,
+   "end_s": 168.603
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Tom",
+   "text": "Do we have any data on how many people actually hit the login thing?",
+   "start_s": 169.022,
+   "end_s": 173.822
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Raj",
+   "text": "Anyway, the sync ones are lower risk, they only show up when you're offline for days.",
+   "start_s": 174.482,
+   "end_s": 180.882
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Maya",
+   "text": "Okay. Overall, it sounds like the metrics are basically there, with the tablet bug as the open risk.",
+   "start_s": 181.372,
+   "end_s": 187.917
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Raj",
+   "text": "That's fair. I'd say metrics are a soft yes, for now.",
+   "start_s": 188.138,
+   "end_s": 192.538
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Maya",
+   "text": "Let's move to the store listing. Tom, how are the assets looking?",
+   "start_s": 193.576,
+   "end_s": 197.939
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Tom",
+   "text": "Screenshots are mostly done. The copy is done, it's great, I'm really happy with it.",
+   "start_s": 198.695,
+   "end_s": 203.838
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Lena",
+   "text": "Are the screenshots from the release candidate or the old build?",
+   "start_s": 204.68,
+   "end_s": 208.938
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Tom",
+   "text": "Mix. The onboarding ones are from the old build, which, yeah, I know.",
+   "start_s": 209.324,
+   "end_s": 213.781
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Raj",
+   "text": "The onboarding flow changed quite a bit, so those will look wrong.",
+   "start_s": 214.974,
+   "end_s": 219.774
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Tom",
+   "text": "It's three screens, it's not a big deal to redo them.",
+   "start_s": 220.834,
+   "end_s": 224.605
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Maya",
+   "text": "Who's redoing them, though? Design is slammed this week.",
+   "start_s": 224.926,
+   "end_s": 228.199
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Tom",
+   "text": "I'll grab the new onboarding screenshots from the RC myself and get them to design by Wednesday.",
+   "start_s": 228.732,
+   "end_s": 234.56
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Maya",
+   "text": "Perfect.",
+   "start_s": 235.481,
+   "end_s": 235.845
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Lena",
+   "text": "Has legal looked at the copy yet? There's the line about \"clinically proven\" that worried me.",
+   "start_s": 236.756,
+   "end_s": 242.95
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Tom",
+   "text": "That line is staying, it tested really well.",
+   "start_s": 244.086,
+   "end_s": 246.829
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Maya",
+   "text": "Tom, that's not really what she asked.",
+   "start_s": 247.451,
+   "end_s": 249.997
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Tom",
+   "text": "Right, sorry. No, legal hasn't seen it yet. It's going over this week.",
+   "start_s": 251.027,
+   "end_s": 255.484
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Raj",
+   "text": "Legal usually takes two weeks on anything health-related.",
+   "start_s": 256.354,
+   "end_s": 259.554
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Maya",
+   "text": "I thought it was faster than that these days.",
+   "start_s": 260.057,
+   "end_s": 263.33
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Lena",
+   "text": "It's five business days, that's what they told us after the last release.",
+   "start_s": 264.118,
+   "end_s": 269.15
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Tom",
+   "text": "Five days is fine. That still works.",
+   "start_s": 270.232,
+   "end_s": 272.632
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Maya",
+   "text": "Okay, but it has to actually go to them first.",
+   "start_s": 273.678,
+   "end_s": 277.315
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Raj",
+   "text": "Maybe we drop the clinically proven line to be safe?",
+   "start_s": 278.02,
+   "end_s": 282.02
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Tom",
+   "text": "Let's not decide that without seeing what legal says.",
+   "start_s": 282.809,
+   "end_s": 285.895
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Maya",
+   "text": "Yeah, let's see what legal says first and come back to it.",
+   "start_s": 286.13,
+   "end_s": 290.493
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Lena",
+   "text": "And store review on top of that is usually a couple of days.",
+   "start_s": 290.936,
+   "end_s": 295.968
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Tom",
+   "text": "Two days, yeah, Apple's been quick lately.",
+   "start_s": 296.965,
+   "end_s": 299.365
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Raj",
+   "text": "Side note, has anyone else noticed the coffee machine on four is broken again?",
+   "start_s": 299.979,
+   "end_s": 305.579
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Lena",
+   "text": "Since Monday. It's a tragedy.",
+   "start_s": 305.952,
+   "end_s": 307.887
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Maya",
+   "text": "So legal plus store review is a fair bit of runway, minimum.",
+   "start_s": 308.636,
+   "end_s": 312.999
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Raj",
+   "text": "Before anything else goes wrong, yes.",
+   "start_s": 313.902,
+   "end_s": 316.302
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Maya",
+   "text": "Okay, which brings us to the date. I'd love to land on June 3rd.",
+   "start_s": 317.176,
+   "end_s": 322.267
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Raj",
+   "text": "I figured you'd say that.",
+   "start_s": 322.842,
+   "end_s": 324.842
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Tom",
+   "text": "June 3rd is great for us. It lines up with the newsletter.",
+   "start_s": 325.481,
+   "end_s": 329.595
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Raj",
+   "text": "Honestly, I'd rather go on the tenth. One more week lets the sync refactor land properly.",
+   "start_s": 330.303,
+   "end_s": 336.703
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Lena",
+   "text": "We should really get the refactor reviewed by someone outside the team, whatever the date.",
+   "start_s": 337.681,
+   "end_s": 343.488
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Maya",
+   "text": "What does the refactor give us that users would actually notice?",
+   "start_s": 344.209,
+   "end_s": 348.209
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Raj",
+   "text": "Fewer of those offline sync crashes, mostly. It's the stuff that hits the long-tail devices.",
+   "start_s": 348.802,
+   "end_s": 354.802
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Lena",
+   "text": "Which is where most of our crashes are.",
+   "start_s": 355.492,
+   "end_s": 358.588
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Tom",
+   "text": "Can we ship the refactor in a point release after?",
+   "start_s": 358.818,
+   "end_s": 362.246
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Raj",
+   "text": "We could. It's just riskier to ship the big change after everyone's already on 2.0.",
+   "start_s": 362.489,
+   "end_s": 368.489
+  },
+  {
+   "turn_index": 74,
+   "speaker": "Maya",
+   "text": "How many people are in the beta now?",
+   "start_s": 369.392,
+   "end_s": 372.301
+  },
+  {
+   "turn_index": 75,
+   "speaker": "Tom",
+   "text": "Something like six thousand. It's been growing like crazy.",
+   "start_s": 373.484,
+   "end_s": 376.57
+  },
+  {
+   "turn_index": 76,
+   "speaker": "Lena",
+   "text": "It's forty-two hundred active. Six thousand is total sign-ups.",
+   "start_s": 377.363,
+   "end_s": 380.847
+  },
+  {
+   "turn_index": 77,
+   "speaker": "Tom",
+   "text": "Active, sign-ups, whatever, it's a lot of people.",
+   "start_s": 381.441,
+   "end_s": 384.183
+  },
+  {
+   "turn_index": 78,
+   "speaker": "Maya",
+   "text": "And they're happy? What did the beta NPS land at?",
+   "start_s": 384.553,
+   "end_s": 388.19
+  },
+  {
+   "turn_index": 79,
+   "speaker": "Tom",
+   "text": "Fifty-one, which for health apps is honestly amazing.",
+   "start_s": 388.892,
+   "end_s": 391.635
+  },
+  {
+   "turn_index": 80,
+   "speaker": "Lena",
+   "text": "For the record, it was forty-one in the last survey.",
+   "start_s": 392.817,
+   "end_s": 396.688
+  },
+  {
+   "turn_index": 81,
+   "speaker": "Tom",
+   "text": "Huh. I could swear I saw a higher number somewhere.",
+   "start_s": 397.659,
+   "end_s": 401.087
+  },
+  {
+   "turn_index": 82,
+   "speaker": "Raj",
+   "text": "Maybe that was the iOS-only cut.",
+   "start_s": 401.827,
+   "end_s": 404.227
+  },
+  {
+   "turn_index": 83,
+   "speaker": "Maya",
+   "text": "Either way, it's decent. Okay. Tom, unrelated, but how was the marathon?",
+   "start_s": 405.287,
+   "end_s": 409.651
+  },
+  {
+   "turn_index": 84,
+   "speaker": "Tom",
+   "text": "Oh, brutal. Near the end I genuinely thought I was going to die.",
+   "start_s": 410.083,
+   "end_s": 414.54
+  },
+  {
+   "turn_index": 85,
+   "speaker": "Lena",
+   "text": "Did you finish under four hours in the end?",
+   "start_s": 415.254,
+   "end_s": 418.738
+  },
+  {
+   "turn_index": 86,
+   "speaker": "Tom",
+   "text": "Just over. So close. My knees are still not speaking to me.",
+   "start_s": 419.89,
+   "end_s": 424.005
+  },
+  {
+   "turn_index": 87,
+   "speaker": "Raj",
+   "text": "Okay, back to the date. Where does that leave us?",
+   "start_s": 424.783,
+   "end_s": 428.783
+  },
+  {
+   "turn_index": 88,
+   "speaker": "Maya",
+   "text": "Right. So the honest version is June 3rd with the refactor as a fast follow, or the tenth with it in.",
+   "start_s": 429.442,
+   "end_s": 437.078
+  },
+  {
+   "turn_index": 89,
+   "speaker": "Tom",
+   "text": "The thing is, I've sort of already got a press slot on the third.",
+   "start_s": 437.547,
+   "end_s": 442.347
+  },
+  {
+   "turn_index": 90,
+   "speaker": "Maya",
+   "text": "You've what?",
+   "start_s": 443.095,
+   "end_s": 443.822
+  },
+  {
+   "turn_index": 91,
+   "speaker": "Tom",
+   "text": "It's soft! It's a soft hold. It can move, probably.",
+   "start_s": 444.979,
+   "end_s": 448.408
+  },
+  {
+   "turn_index": 92,
+   "speaker": "Lena",
+   "text": "That's the first I'm hearing of this.",
+   "start_s": 448.614,
+   "end_s": 451.323
+  },
+  {
+   "turn_index": 93,
+   "speaker": "Raj",
+   "text": "Same.",
+   "start_s": 452.307,
+   "end_s": 452.707
+  },
+  {
+   "turn_index": 94,
+   "speaker": "Maya",
+   "text": "Okay. Let's not make the press slot the reason we pick a date.",
+   "start_s": 453.727,
+   "end_s": 458.455
+  },
+  {
+   "turn_index": 95,
+   "speaker": "Raj",
+   "text": "Agreed.",
+   "start_s": 459.541,
+   "end_s": 459.941
+  },
+  {
+   "turn_index": 96,
+   "speaker": "Maya",
+   "text": "Here's where I am. Tablet login fix is a must, refactor is a nice-to-have.",
+   "start_s": 460.882,
+   "end_s": 465.972
+  },
+  {
+   "turn_index": 97,
+   "speaker": "Raj",
+   "text": "I can live with that, as long as the login loop is fixed and verified.",
+   "start_s": 466.981,
+   "end_s": 472.981
+  },
+  {
+   "turn_index": 98,
+   "speaker": "Lena",
+   "text": "Verified by QA, not just merged.",
+   "start_s": 473.7,
+   "end_s": 476.022
+  },
+  {
+   "turn_index": 99,
+   "speaker": "Maya",
+   "text": "Fine. Then we're going with June 3rd, conditional on the tablet login fix passing QA by the twenty-eighth. That's the call.",
+   "start_s": 476.783,
+   "end_s": 484.42
+  },
+  {
+   "turn_index": 100,
+   "speaker": "Tom",
+   "text": "Love it.",
+   "start_s": 485.046,
+   "end_s": 485.732
+  },
+  {
+   "turn_index": 101,
+   "speaker": "Raj",
+   "text": "Okay. Then the refactor is the one thing still hanging.",
+   "start_s": 485.988,
+   "end_s": 489.988
+  },
+  {
+   "turn_index": 102,
+   "speaker": "Lena",
+   "text": "Just to check, if the login fix slips, the date slips too?",
+   "start_s": 491.058,
+   "end_s": 495.703
+  },
+  {
+   "turn_index": 103,
+   "speaker": "Maya",
+   "text": "Yes. If it slips, we move to the tenth. No debate.",
+   "start_s": 496.473,
+   "end_s": 500.473
+  },
+  {
+   "turn_index": 104,
+   "speaker": "Tom",
+   "text": "Can I tell the press contact it's the third, then?",
+   "start_s": 500.873,
+   "end_s": 504.301
+  },
+  {
+   "turn_index": 105,
+   "speaker": "Maya",
+   "text": "You can tell them it's likely, not final.",
+   "start_s": 505.006,
+   "end_s": 507.915
+  },
+  {
+   "turn_index": 106,
+   "speaker": "Lena",
+   "text": "I'll write up the QA sign-off criteria for the login fix today so there's no argument later.",
+   "start_s": 508.6,
+   "end_s": 515.181
+  },
+  {
+   "turn_index": 107,
+   "speaker": "Raj",
+   "text": "Good. And the refactor ships in 2.0.1, not 2.0. That's decided.",
+   "start_s": 515.738,
+   "end_s": 520.138
+  },
+  {
+   "turn_index": 108,
+   "speaker": "Maya",
+   "text": "Last item, comms and support. Tom, the announcement.",
+   "start_s": 520.684,
+   "end_s": 523.593
+  },
+  {
+   "turn_index": 109,
+   "speaker": "Tom",
+   "text": "Blog post, newsletter, and the in-app banner on launch day. Plus paid social for two weeks.",
+   "start_s": 524.331,
+   "end_s": 529.817
+  },
+  {
+   "turn_index": 110,
+   "speaker": "Raj",
+   "text": "What's the paid social spend?",
+   "start_s": 530.64,
+   "end_s": 532.64
+  },
+  {
+   "turn_index": 111,
+   "speaker": "Tom",
+   "text": "We've got a hundred and twenty grand for the whole launch.",
+   "start_s": 533.452,
+   "end_s": 537.224
+  },
+  {
+   "turn_index": 112,
+   "speaker": "Maya",
+   "text": "I have eighty-five thousand in the plan, not a hundred and twenty.",
+   "start_s": 537.882,
+   "end_s": 542.246
+  },
+  {
+   "turn_index": 113,
+   "speaker": "Tom",
+   "text": "Eighty-five was before the press stuff.",
+   "start_s": 542.474,
+   "end_s": 544.531
+  },
+  {
+   "turn_index": 114,
+   "speaker": "Maya",
+   "text": "There is no \"before the press stuff\", the budget is the budget.",
+   "start_s": 544.961,
+   "end_s": 549.324
+  },
+  {
+   "turn_index": 115,
+   "speaker": "Lena",
+   "text": "Is support ready for a spike? Last launch they got hammered.",
+   "start_s": 549.701,
+   "end_s": 553.959
+  },
+  {
+   "turn_index": 116,
+   "speaker": "Maya",
+   "text": "They've trained fourteen agents on 2.0 so far.",
+   "start_s": 554.743,
+   "end_s": 557.653
+  },
+  {
+   "turn_index": 117,
+   "speaker": "Lena",
+   "text": "Fourteen is fewer than last time.",
+   "start_s": 558.714,
+   "end_s": 561.037
+  },
+  {
+   "turn_index": 118,
+   "speaker": "Raj",
+   "text": "Last time we shipped on April twenty-second and support was underwater for a week.",
+   "start_s": 562.035,
+   "end_s": 567.635
+  },
+  {
+   "turn_index": 119,
+   "speaker": "Maya",
+   "text": "Maybe we keep a couple of engineers on support rotation for launch week.",
+   "start_s": 568.632,
+   "end_s": 573.359
+  },
+  {
+   "turn_index": 120,
+   "speaker": "Raj",
+   "text": "Maybe. I'd want to think about who, honestly.",
+   "start_s": 574.375,
+   "end_s": 577.575
+  },
+  {
+   "turn_index": 121,
+   "speaker": "Tom",
+   "text": "We could also just put a really good FAQ up.",
+   "start_s": 578.03,
+   "end_s": 581.459
+  },
+  {
+   "turn_index": 122,
+   "speaker": "Lena",
+   "text": "An FAQ doesn't answer the phone.",
+   "start_s": 582.501,
+   "end_s": 584.823
+  },
+  {
+   "turn_index": 123,
+   "speaker": "Maya",
+   "text": "Who on the support side is actually signing off that they're ready?",
+   "start_s": 585.696,
+   "end_s": 590.06
+  },
+  {
+   "turn_index": 124,
+   "speaker": "Tom",
+   "text": "Anyway, I'll draft the launch blog post and send it round by Friday.",
+   "start_s": 590.343,
+   "end_s": 594.8
+  },
+  {
+   "turn_index": 125,
+   "speaker": "Raj",
+   "text": "Send it to me as well, I want to check the technical claims.",
+   "start_s": 595.017,
+   "end_s": 600.217
+  },
+  {
+   "turn_index": 126,
+   "speaker": "Tom",
+   "text": "Sure, sure.",
+   "start_s": 600.432,
+   "end_s": 601.117
+  },
+  {
+   "turn_index": 127,
+   "speaker": "Lena",
+   "text": "Someone should probably update the release notes template too, it still says 1.9.",
+   "start_s": 602.073,
+   "end_s": 607.105
+  },
+  {
+   "turn_index": 128,
+   "speaker": "Maya",
+   "text": "Okay. Should we do a dry run of the launch day checklist?",
+   "start_s": 607.555,
+   "end_s": 611.918
+  },
+  {
+   "turn_index": 129,
+   "speaker": "Raj",
+   "text": "Probably worth it, the last one caught two things.",
+   "start_s": 612.227,
+   "end_s": 615.827
+  },
+  {
+   "turn_index": 130,
+   "speaker": "Maya",
+   "text": "Let's maybe do the dry run next Thursday, if people are around.",
+   "start_s": 616.652,
+   "end_s": 621.015
+  },
+  {
+   "turn_index": 131,
+   "speaker": "Tom",
+   "text": "I'm around Thursday.",
+   "start_s": 621.559,
+   "end_s": 622.588
+  },
+  {
+   "turn_index": 132,
+   "speaker": "Lena",
+   "text": "I might be at the vendor thing, I'll know Monday.",
+   "start_s": 622.858,
+   "end_s": 626.728
+  },
+  {
+   "turn_index": 133,
+   "speaker": "Maya",
+   "text": "Okay. I think that's everything. Recap is in the doc. Thanks all.",
+   "start_s": 627.088,
+   "end_s": 631.451
+  },
+  {
+   "turn_index": 134,
+   "speaker": "Raj",
+   "text": "Thanks.",
+   "start_s": 632.178,
+   "end_s": 632.578
+  },
+  {
+   "turn_index": 135,
+   "speaker": "Tom",
+   "text": "Thanks, team. Big launch!",
+   "start_s": 632.946,
+   "end_s": 634.318
+  }
+ ]
+}

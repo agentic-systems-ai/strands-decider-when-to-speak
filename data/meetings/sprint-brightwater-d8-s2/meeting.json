@@ -1,0 +1,1510 @@
+{
+ "meeting_id": "sprint-brightwater-d8-s2",
+ "config": {
+  "theme": "Sprint planning for a payments team at a fictional fintech",
+  "domain_pack": "software_team",
+  "drama": 0.8,
+  "seed": 2,
+  "duration_min": 3.9,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   7,
+   11,
+   14,
+   18,
+   19,
+   27,
+   32,
+   35,
+   43
+  ],
+  "reviewed_noclaim": [
+   19,
+   27,
+   35
+  ]
+ },
+ "cast": {
+  "theme": "Sprint planning for a payments team at a fictional fintech",
+  "personas": [
+   {
+    "name": "Gemma",
+    "role": "New engineering manager, joined after the reorg",
+    "goals": "Earn the team's trust and hit the deadline",
+    "hidden_agenda": "Was told the team is \"difficult\"",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Mateo",
+    "role": "Staff engineer, on the team for six years",
+    "goals": "Protect the team from another impossible plan",
+    "hidden_agenda": "His best friend was moved to another team in the reorg",
+    "verbosity": 4,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Aisha",
+    "role": "Product manager for payments",
+    "goals": "Meet the regulatory deadline at any cost",
+    "hidden_agenda": "The compliance director reports her progress weekly to the board",
+    "verbosity": 3,
+    "wpm": 170,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Lukas",
+    "role": "Site reliability engineer",
+    "goals": "Fewer pages",
+    "hidden_agenda": "Interviewing elsewhere",
+    "verbosity": 2,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Payments platform - sprint 9 planning (after the reorg)",
+   "org": "Brightwater Bank (fictional)",
+   "agenda": [
+    {
+     "id": "reorg",
+     "title": "The reorg",
+     "goal": "Acknowledge the team changes and who owns what now",
+     "timebox_min": 0.83
+    },
+    {
+     "id": "deadline",
+     "title": "Instant payments deadline",
+     "goal": "Plan the regulatory work against March 31",
+     "timebox_min": 1.31
+    },
+    {
+     "id": "tech_debt",
+     "title": "Tech debt",
+     "goal": "Decide what legacy work to keep in flight",
+     "timebox_min": 0.76
+    },
+    {
+     "id": "oncall",
+     "title": "On-call",
+     "goal": "Make on-call survivable with fewer people",
+     "timebox_min": 0.99
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "instant_payments_deadline",
+     "statement": "Instant payments regulatory deadline = March 31",
+     "value": "March 31"
+    },
+    {
+     "id": "F2",
+     "key": "team_size_after",
+     "statement": "Engineers after the reorg = 6",
+     "value": "6"
+    },
+    {
+     "id": "F3",
+     "key": "team_size_before",
+     "statement": "Engineers before the reorg = 9",
+     "value": "9"
+    },
+    {
+     "id": "F4",
+     "key": "velocity_last",
+     "statement": "Velocity last sprint = 22 points",
+     "value": "22"
+    },
+    {
+     "id": "F5",
+     "key": "fine_risk",
+     "statement": "Regulatory fine for missing the deadline = up to $250,000 per month",
+     "value": "$250,000"
+    },
+    {
+     "id": "F6",
+     "key": "open_sev2",
+     "statement": "Open severity-2 incidents = 3",
+     "value": "3"
+    },
+    {
+     "id": "F7",
+     "key": "legacy_batch_jobs",
+     "statement": "Legacy batch jobs still running = 47",
+     "value": "47"
+    },
+    {
+     "id": "F8",
+     "key": "pages_last_month",
+     "statement": "Pages last month = 31",
+     "value": "31"
+    },
+    {
+     "id": "F9",
+     "key": "test_coverage",
+     "statement": "Test coverage on the payments core = 58%",
+     "value": "58%"
+    },
+    {
+     "id": "F10",
+     "key": "deploys_per_week",
+     "statement": "Deploys per week = 2",
+     "value": "2"
+    },
+    {
+     "id": "F11",
+     "key": "p99_latency",
+     "statement": "Payments API p99 latency = 840 ms",
+     "value": "840 ms"
+    },
+    {
+     "id": "F12",
+     "key": "sprint_number",
+     "statement": "This is sprint 9",
+     "value": "9"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "reorg",
+    "summary": "The elephant in the room; Mateo misremembers the old team size",
+    "n_turns": 10,
+    "events": []
+   },
+   {
+    "agenda_item": "deadline",
+    "summary": "Instant payments; Aisha's fine figure is inflated and corrected",
+    "n_turns": 14,
+    "events": []
+   },
+   {
+    "agenda_item": "tech_debt",
+    "summary": "What to keep in flight; Gemma's coverage number goes unchallenged",
+    "n_turns": 10,
+    "events": []
+   },
+   {
+    "agenda_item": "oncall",
+    "summary": "Fewer people, same pages; Lukas undercounts the pages, then corrects himself",
+    "n_turns": 12,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Gemma",
+   "text": "Hi, everyone. Sprint nine, and my first planning with you. I know the reorg was hard.",
+   "agenda_item": "reorg",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Mateo",
+   "text": "Hard is one word for it. We were twelve engineers last month. Now we're six.",
+   "agenda_item": "reorg",
+   "direction": null,
+   "event_ids": [
+    "E002",
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Aisha",
+   "text": "The scope didn't shrink, though.",
+   "agenda_item": "reorg",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Gemma",
+   "text": "I want to be honest about what six people can do. I'm not going to pretend.",
+   "agenda_item": "reorg",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Lukas",
+   "text": "Who owns the batch jobs now? Nobody told us.",
+   "agenda_item": "reorg",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Gemma",
+   "text": "We do. All forty-seven of them, unfortunately.",
+   "agenda_item": "reorg",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Mateo",
+   "text": "Forty-seven batch jobs, written by people who aren't here anymore.",
+   "agenda_item": "reorg",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Aisha",
+   "text": "Can we not spend the whole meeting on the reorg? We have a deadline.",
+   "agenda_item": "reorg",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Mateo",
+   "text": "The reorg is why the deadline is a problem.",
+   "agenda_item": "reorg",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Gemma",
+   "text": "Both are true. Let's do the deadline, but I'm not ignoring the rest.",
+   "agenda_item": "reorg",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Aisha",
+   "text": "Instant payments has to be live by March thirty-first. If we miss it, the fine is a million a month.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [
+    "E008",
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Lukas",
+   "text": "A million? I thought it was much lower than that.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Gemma",
+   "text": "The compliance memo says up to two hundred and fifty thousand a month. Still very serious.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Aisha",
+   "text": "Two fifty. Okay. I'd heard a million in the board meeting.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Mateo",
+   "text": "Last sprint we did twenty-two points. Instant payments is at least a hundred.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Gemma",
+   "text": "Then it's five sprints, and we have five sprints. With nothing else.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Lukas",
+   "text": "With nothing else is never true. We have three sev-twos open right now.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Aisha",
+   "text": "What if we cut the reporting dashboard from instant payments? Regulators don't need it at launch.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [
+    "E015",
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Mateo",
+   "text": "That's maybe fifteen points. It helps.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Gemma",
+   "text": "Then the dashboard comes out of the launch scope. It goes in the first update after March.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Aisha",
+   "text": "I'll tell the compliance director today that the dashboard moves.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Mateo",
+   "text": "And the API latency. We're at eight forty milliseconds at p99. Instant payments needs better than that.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Lukas",
+   "text": "Somebody really ought to profile the payments API before we pile more on it.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Mateo",
+   "text": "I'll profile it this sprint. It's my code anyway, from before.",
+   "agenda_item": "deadline",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Gemma",
+   "text": "Tech debt. Our test coverage on the payments core is about seventy percent, so we're not in terrible shape.",
+   "agenda_item": "tech_debt",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Mateo",
+   "text": "Seventy is fine for most things.",
+   "agenda_item": "tech_debt",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Lukas",
+   "text": "The batch jobs have no tests at all. That's where it hurts.",
+   "agenda_item": "tech_debt",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Aisha",
+   "text": "Can the batch jobs wait until after March?",
+   "agenda_item": "tech_debt",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Mateo",
+   "text": "Most of them, yes. Three of them break every month-end. Those can't wait.",
+   "agenda_item": "tech_debt",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Gemma",
+   "text": "Then we fix the three month-end jobs and freeze the rest until April.",
+   "agenda_item": "tech_debt",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Lukas",
+   "text": "My brother just started a job at a bakery. Four a.m. starts. He says it's still better than on-call.",
+   "agenda_item": "tech_debt",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Mateo",
+   "text": "He's not wrong.",
+   "agenda_item": "tech_debt",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Aisha",
+   "text": "Four a.m. every day, though?",
+   "agenda_item": "tech_debt",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Gemma",
+   "text": "On-call. Let's talk about it properly.",
+   "agenda_item": "tech_debt",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Lukas",
+   "text": "Last month we had about fifteen pages. Which is a lot for six people.",
+   "agenda_item": "oncall",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Mateo",
+   "text": "Fifteen? It felt like double.",
+   "agenda_item": "oncall",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Lukas",
+   "text": "You're right, let me look. Thirty-one. Fifteen was the night ones only.",
+   "agenda_item": "oncall",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Gemma",
+   "text": "Thirty-one pages for six people is not survivable.",
+   "agenda_item": "oncall",
+   "direction": null,
+   "event_ids": [
+    "E029",
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Aisha",
+   "text": "Could the old team still help with the batch job pages during the transition?",
+   "agenda_item": "oncall",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Gemma",
+   "text": "I'll ask their manager this week. I'd rather ask than assume.",
+   "agenda_item": "oncall",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Mateo",
+   "text": "And we deploy twice a week. Every deploy is a page risk.",
+   "agenda_item": "oncall",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Lukas",
+   "text": "Maybe we freeze deploys the week before March thirty-first.",
+   "agenda_item": "oncall",
+   "direction": null,
+   "event_ids": [
+    "E034",
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Gemma",
+   "text": "Let's see how February goes before we freeze anything.",
+   "agenda_item": "oncall",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Mateo",
+   "text": "Who decided the reorg dates in the first place?",
+   "agenda_item": "oncall",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Gemma",
+   "text": "Mateo, I hear you. I'll carry that upward. That's all for today, everyone. Thank you for being honest with me.",
+   "agenda_item": "oncall",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Lukas",
+   "text": "Thanks, Gemma.",
+   "agenda_item": "oncall",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Gemma",
+   "agenda_item": "reorg",
+   "fact_id": "F12",
+   "claimed_value": "9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 1,
+   "speaker": "Mateo",
+   "agenda_item": "reorg",
+   "fact_id": "F3",
+   "claimed_value": "12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Mateo",
+   "agenda_item": "reorg",
+   "fact_id": "F2",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Gemma",
+   "agenda_item": "reorg",
+   "fact_id": "F2",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Lukas",
+   "agenda_item": "reorg",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 5,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Gemma",
+   "agenda_item": "reorg",
+   "fact_id": "F7",
+   "claimed_value": "47",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Mateo",
+   "agenda_item": "reorg",
+   "fact_id": "F7",
+   "claimed_value": "47",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Aisha",
+   "agenda_item": "deadline",
+   "fact_id": "F1",
+   "claimed_value": "March 31",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 10,
+   "speaker": "Aisha",
+   "agenda_item": "deadline",
+   "fact_id": "F5",
+   "claimed_value": "$1,000,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Lukas",
+   "agenda_item": "deadline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 12,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Gemma",
+   "agenda_item": "deadline",
+   "fact_id": "F5",
+   "claimed_value": "$250,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Aisha",
+   "agenda_item": "deadline",
+   "fact_id": "F5",
+   "claimed_value": "$250,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Mateo",
+   "agenda_item": "deadline",
+   "fact_id": "F4",
+   "claimed_value": "22",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Lukas",
+   "agenda_item": "deadline",
+   "fact_id": "F6",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Aisha",
+   "agenda_item": "deadline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 18,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Aisha",
+   "agenda_item": "deadline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 19,
+   "speaker": "Gemma",
+   "agenda_item": "deadline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 20,
+   "speaker": "Aisha",
+   "agenda_item": "deadline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Mateo",
+   "agenda_item": "deadline",
+   "fact_id": "F11",
+   "claimed_value": "840 ms",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Lukas",
+   "agenda_item": "deadline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 23,
+   "speaker": "Mateo",
+   "agenda_item": "deadline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 24,
+   "speaker": "Gemma",
+   "agenda_item": "tech_debt",
+   "fact_id": "F9",
+   "claimed_value": "70%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 25,
+   "speaker": "Mateo",
+   "agenda_item": "tech_debt",
+   "fact_id": "F9",
+   "claimed_value": "70%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Aisha",
+   "agenda_item": "tech_debt",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 28,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 29,
+   "speaker": "Gemma",
+   "agenda_item": "tech_debt",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 30,
+   "speaker": "Lukas",
+   "agenda_item": "tech_debt",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Lukas",
+   "agenda_item": "oncall",
+   "fact_id": "F8",
+   "claimed_value": "15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Lukas",
+   "agenda_item": "oncall",
+   "fact_id": "F8",
+   "claimed_value": "31",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Gemma",
+   "agenda_item": "oncall",
+   "fact_id": "F8",
+   "claimed_value": "31",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Gemma",
+   "agenda_item": "oncall",
+   "fact_id": "F2",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Aisha",
+   "agenda_item": "oncall",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 39,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 39,
+   "speaker": "Gemma",
+   "agenda_item": "oncall",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Mateo",
+   "agenda_item": "oncall",
+   "fact_id": "F10",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Lukas",
+   "agenda_item": "oncall",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Lukas",
+   "agenda_item": "oncall",
+   "fact_id": "F1",
+   "claimed_value": "March 31",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 43,
+   "speaker": "Mateo",
+   "agenda_item": "oncall",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 44,
+   "speaker": "Gemma",
+   "agenda_item": "oncall",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Gemma",
+   "text": "Hi, everyone. Sprint nine, and my first planning with you. I know the reorg was hard.",
+   "start_s": 0.5,
+   "end_s": 6.5
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Mateo",
+   "text": "Hard is one word for it. We were twelve engineers last month. Now we're six.",
+   "start_s": 7.656,
+   "end_s": 13.111
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Aisha",
+   "text": "The scope didn't shrink, though.",
+   "start_s": 14.259,
+   "end_s": 16.024
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Gemma",
+   "text": "I want to be honest about what six people can do. I'm not going to pretend.",
+   "start_s": 16.281,
+   "end_s": 22.281
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Lukas",
+   "text": "Who owns the batch jobs now? Nobody told us.",
+   "start_s": 22.566,
+   "end_s": 26.29
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Gemma",
+   "text": "We do. All forty-seven of them, unfortunately.",
+   "start_s": 27.325,
+   "end_s": 29.95
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Mateo",
+   "text": "Forty-seven batch jobs, written by people who aren't here anymore.",
+   "start_s": 30.886,
+   "end_s": 34.522
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Aisha",
+   "text": "Can we not spend the whole meeting on the reorg? We have a deadline.",
+   "start_s": 35.392,
+   "end_s": 40.333
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Mateo",
+   "text": "The reorg is why the deadline is a problem.",
+   "start_s": 40.841,
+   "end_s": 44.114
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Gemma",
+   "text": "Both are true. Let's do the deadline, but I'm not ignoring the rest.",
+   "start_s": 44.92,
+   "end_s": 49.795
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Aisha",
+   "text": "Instant payments has to be live by March thirty-first. If we miss it, the fine is a million a month.",
+   "start_s": 50.602,
+   "end_s": 57.661
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Lukas",
+   "text": "A million? I thought it was much lower than that.",
+   "start_s": 58.442,
+   "end_s": 62.58
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Gemma",
+   "text": "The compliance memo says up to two hundred and fifty thousand a month. Still very serious.",
+   "start_s": 62.938,
+   "end_s": 68.938
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Aisha",
+   "text": "Two fifty. Okay. I'd heard a million in the board meeting.",
+   "start_s": 69.569,
+   "end_s": 73.451
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Mateo",
+   "text": "Last sprint we did twenty-two points. Instant payments is at least a hundred.",
+   "start_s": 74.045,
+   "end_s": 78.772
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Gemma",
+   "text": "Then it's five sprints, and we have five sprints. With nothing else.",
+   "start_s": 79.695,
+   "end_s": 84.195
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Lukas",
+   "text": "With nothing else is never true. We have three sev-twos open right now.",
+   "start_s": 85.39,
+   "end_s": 90.769
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Aisha",
+   "text": "What if we cut the reporting dashboard from instant payments? Regulators don't need it at launch.",
+   "start_s": 91.918,
+   "end_s": 97.565
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Mateo",
+   "text": "That's maybe fifteen points. It helps.",
+   "start_s": 98.309,
+   "end_s": 100.491
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Gemma",
+   "text": "Then the dashboard comes out of the launch scope. It goes in the first update after March.",
+   "start_s": 101.136,
+   "end_s": 107.511
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Aisha",
+   "text": "I'll tell the compliance director today that the dashboard moves.",
+   "start_s": 107.979,
+   "end_s": 111.509
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Mateo",
+   "text": "And the API latency. We're at eight forty milliseconds at p99. Instant payments needs better than that.",
+   "start_s": 111.745,
+   "end_s": 117.927
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Lukas",
+   "text": "Somebody really ought to profile the payments API before we pile more on it.",
+   "start_s": 118.154,
+   "end_s": 123.948
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Mateo",
+   "text": "I'll profile it this sprint. It's my code anyway, from before.",
+   "start_s": 124.613,
+   "end_s": 128.613
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Gemma",
+   "text": "Tech debt. Our test coverage on the payments core is about seventy percent, so we're not in terrible shape.",
+   "start_s": 129.131,
+   "end_s": 136.256
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Mateo",
+   "text": "Seventy is fine for most things.",
+   "start_s": 136.836,
+   "end_s": 139.018
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Lukas",
+   "text": "The batch jobs have no tests at all. That's where it hurts.",
+   "start_s": 140.11,
+   "end_s": 145.075
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Aisha",
+   "text": "Can the batch jobs wait until after March?",
+   "start_s": 145.801,
+   "end_s": 148.624
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Mateo",
+   "text": "Most of them, yes. Three of them break every month-end. Those can't wait.",
+   "start_s": 149.385,
+   "end_s": 154.112
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Gemma",
+   "text": "Then we fix the three month-end jobs and freeze the rest until April.",
+   "start_s": 154.548,
+   "end_s": 159.423
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Lukas",
+   "text": "My brother just started a job at a bakery. Four a.m. starts. He says it's still better than on-call.",
+   "start_s": 159.647,
+   "end_s": 167.509
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Mateo",
+   "text": "He's not wrong.",
+   "start_s": 168.034,
+   "end_s": 169.125
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Aisha",
+   "text": "Four a.m. every day, though?",
+   "start_s": 169.462,
+   "end_s": 171.226
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Gemma",
+   "text": "On-call. Let's talk about it properly.",
+   "start_s": 171.936,
+   "end_s": 174.186
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Lukas",
+   "text": "Last month we had about fifteen pages. Which is a lot for six people.",
+   "start_s": 175.385,
+   "end_s": 181.178
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Mateo",
+   "text": "Fifteen? It felt like double.",
+   "start_s": 182.052,
+   "end_s": 183.871
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Lukas",
+   "text": "You're right, let me look. Thirty-one. Fifteen was the night ones only.",
+   "start_s": 184.253,
+   "end_s": 189.218
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Gemma",
+   "text": "Thirty-one pages for six people is not survivable.",
+   "start_s": 190.312,
+   "end_s": 193.312
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Aisha",
+   "text": "Could the old team still help with the batch job pages during the transition?",
+   "start_s": 194.309,
+   "end_s": 199.25
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Gemma",
+   "text": "I'll ask their manager this week. I'd rather ask than assume.",
+   "start_s": 200.184,
+   "end_s": 204.309
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Mateo",
+   "text": "And we deploy twice a week. Every deploy is a page risk.",
+   "start_s": 205.416,
+   "end_s": 209.779
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Lukas",
+   "text": "Maybe we freeze deploys the week before March thirty-first.",
+   "start_s": 210.742,
+   "end_s": 214.466
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Gemma",
+   "text": "Let's see how February goes before we freeze anything.",
+   "start_s": 215.456,
+   "end_s": 218.831
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Mateo",
+   "text": "Who decided the reorg dates in the first place?",
+   "start_s": 219.385,
+   "end_s": 222.658
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Gemma",
+   "text": "Mateo, I hear you. I'll carry that upward. That's all for today, everyone. Thank you for being honest with me.",
+   "start_s": 223.839,
+   "end_s": 231.339
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Lukas",
+   "text": "Thanks, Gemma.",
+   "start_s": 232.501,
+   "end_s": 233.328
+  }
+ ]
+}

@@ -1,0 +1,2680 @@
+{
+ "meeting_id": "gala-nonprofit-d2-s1",
+ "config": {
+  "theme": "Planning committee for a nonprofit's annual fundraising gala",
+  "domain_pack": "nonprofit_events",
+  "drama": 0.2,
+  "seed": 1,
+  "duration_min": 7.8,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   4,
+   13,
+   36,
+   42,
+   58,
+   59,
+   73,
+   79,
+   82,
+   83,
+   92
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "Planning committee for a nonprofit's annual fundraising gala",
+  "personas": [
+   {
+    "name": "Grace",
+    "role": "Board chair, runs the committee",
+    "goals": "Beat last year without burning out the volunteers",
+    "hidden_agenda": "Considering stepping down after this gala",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [
+     "wonderful",
+     "let's keep going"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Owen",
+    "role": "Development director (staff)",
+    "goals": "Land two more corporate sponsors",
+    "hidden_agenda": "His annual review depends on the gala number",
+    "verbosity": 4,
+    "wpm": 165,
+    "catchphrases": [
+     "in terms of",
+     "honestly"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Priya",
+    "role": "Volunteer coordinator",
+    "goals": "Enough hands on the night",
+    "hidden_agenda": "Half her volunteers are the same tired people every year",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [
+     "just to flag"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Walter",
+    "role": "Treasurer, retired accountant",
+    "goals": "Nobody spends money that isn't there",
+    "hidden_agenda": "Remembers every gala since the nineties and will tell you",
+    "verbosity": 3,
+    "wpm": 130,
+    "catchphrases": [
+     "if I may",
+     "for the minutes"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Spring gala committee - monthly meeting",
+   "org": "Riverbend Literacy Project (fictional)",
+   "agenda": [
+    {
+     "id": "tickets_venue",
+     "title": "Tickets and venue",
+     "goal": "Check ticket sales against the venue and catering numbers",
+     "timebox_min": 2.15
+    },
+    {
+     "id": "sponsorships",
+     "title": "Sponsorships",
+     "goal": "Review sponsorship commitments and who to chase",
+     "timebox_min": 1.79
+    },
+    {
+     "id": "auction",
+     "title": "Silent auction",
+     "goal": "Confirm auction items and how bidding will work",
+     "timebox_min": 1.69
+    },
+    {
+     "id": "volunteers",
+     "title": "Volunteers and run of show",
+     "goal": "Staff the evening and agree the program",
+     "timebox_min": 2.19
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "gala_date",
+     "statement": "Gala date = Saturday, March 14",
+     "value": "March 14"
+    },
+    {
+     "id": "F2",
+     "key": "venue_capacity",
+     "statement": "Venue capacity = 220 guests",
+     "value": "220"
+    },
+    {
+     "id": "F3",
+     "key": "tickets_sold",
+     "statement": "Tickets sold so far = 96",
+     "value": "96"
+    },
+    {
+     "id": "F4",
+     "key": "ticket_price",
+     "statement": "Individual ticket price = $150",
+     "value": "$150"
+    },
+    {
+     "id": "F5",
+     "key": "fundraising_goal",
+     "statement": "Gala fundraising goal = $120,000",
+     "value": "$120,000"
+    },
+    {
+     "id": "F6",
+     "key": "sponsorship_committed",
+     "statement": "Sponsorship committed so far = $38,500",
+     "value": "$38,500"
+    },
+    {
+     "id": "F7",
+     "key": "last_year_net",
+     "statement": "Last year's gala netted $91,000",
+     "value": "$91,000"
+    },
+    {
+     "id": "F8",
+     "key": "auction_items_secured",
+     "statement": "Silent auction items secured = 23",
+     "value": "23"
+    },
+    {
+     "id": "F9",
+     "key": "volunteers_signed_up",
+     "statement": "Volunteers signed up = 31",
+     "value": "31"
+    },
+    {
+     "id": "F10",
+     "key": "venue_balance_due",
+     "statement": "Venue balance due = January 10",
+     "value": "January 10"
+    },
+    {
+     "id": "F11",
+     "key": "catering_minimum",
+     "statement": "Catering minimum = 180 guests",
+     "value": "180"
+    },
+    {
+     "id": "F12",
+     "key": "table_sponsor_price",
+     "statement": "Table sponsorship price = $2,500",
+     "value": "$2,500"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "tickets_venue",
+    "summary": "Sales against the catering minimum; a quiet worry about the gap",
+    "n_turns": 24,
+    "events": []
+   },
+   {
+    "agenda_item": "sponsorships",
+    "summary": "Committed vs hoped-for; Owen rounds up, Walter rounds him back down",
+    "n_turns": 23,
+    "events": []
+   },
+   {
+    "agenda_item": "auction",
+    "summary": "Items and bidding; the online bidding decision",
+    "n_turns": 22,
+    "events": []
+   },
+   {
+    "agenda_item": "volunteers",
+    "summary": "Staffing the night; Priya's number is off and nobody notices; the dance floor comes back",
+    "n_turns": 27,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Grace",
+   "text": "Wonderful, I think we're all here. Let's start with tickets and the venue.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Owen",
+   "text": "In terms of tickets, we're at ninety-six sold as of this morning.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Walter",
+   "text": "If I may, the catering minimum is a hundred and eighty, so we're a fair way short.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Grace",
+   "text": "How worried should we be about that?",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Owen",
+   "text": "Honestly, not very yet. Most of the sales come in the last six weeks.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Walter",
+   "text": "That has been true most years. Not every year.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Priya",
+   "text": "Just to flag, the early-bird price ended last week, so there might be a slowdown now.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Grace",
+   "text": "What are tickets now, after early-bird?",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Owen",
+   "text": "A hundred and fifty each. Tables are separate.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Walter",
+   "text": "And the balance on the venue is due January tenth, for the minutes.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Grace",
+   "text": "Do we have that money set aside already?",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Walter",
+   "text": "We do. It is sitting in the event account, untouched, as it should be.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Grace",
+   "text": "Wonderful.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Priya",
+   "text": "Is the venue still okay with a big crowd on the dance floor at once? Last time it got tight.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Owen",
+   "text": "It's two twenty capacity overall, so the room itself is fine.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Priya",
+   "text": "It's the dance floor I'm worried about, not the room.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Grace",
+   "text": "That's a run-of-show question. Let's hold it for the end.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Owen",
+   "text": "It'd be worth someone walking the space again before we finalize the layout.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Walter",
+   "text": "The last time we did a walk-through, in ninety-eight, the caterer brought a tape measure and a flask.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Grace",
+   "text": "Walter, you've told us about the flask.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Walter",
+   "text": "The flask is an important part of the story. The tape measure was wrong, the flask was not.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Owen",
+   "text": "Okay, in terms of the sales push, I'd like to send a reminder email to last year's attendees.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Grace",
+   "text": "When would that go out?",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Owen",
+   "text": "I'll send the reminder email to last year's attendees on Monday.",
+   "agenda_item": "tickets_venue",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Grace",
+   "text": "Sponsorships. Owen, where are we?",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Owen",
+   "text": "Honestly, really well. We're at about forty-five thousand committed.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Walter",
+   "text": "If I may, I have thirty-eight five in signed letters.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Owen",
+   "text": "The rest is verbal. The hardware store and the credit union both said yes on the phone.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Walter",
+   "text": "For the minutes, verbal is not committed.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Owen",
+   "text": "Fair. Thirty-eight five signed, with two verbals.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Grace",
+   "text": "And the goal for the whole night is one twenty?",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E019",
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Walter",
+   "text": "One hundred and twenty thousand, yes. Which is ambitious.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Grace",
+   "text": "Last year we cleared a hundred thousand, so it's a stretch but not crazy.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Priya",
+   "text": "Are we still offering tables at the same price as last year?",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Owen",
+   "text": "Twenty-five hundred a table. We kept it flat.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Walter",
+   "text": "Flat is generous, with catering costs where they are.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Owen",
+   "text": "Maybe we nudge it to three thousand for next year.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Grace",
+   "text": "Next year is next year. For this year it stays where it is.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Priya",
+   "text": "Who are we still waiting on, sponsor-wise?",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Owen",
+   "text": "The bank, the dental group and the brewery. The brewery is the most likely.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Grace",
+   "text": "Could someone get a signed letter from the hardware store and the credit union this week?",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Owen",
+   "text": "I'll get both verbals turned into signed letters by Friday.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Walter",
+   "text": "Thank you. I'll sleep better.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Priya",
+   "text": "Has anyone asked the mayor's office about doing a proclamation, like the library did?",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Owen",
+   "text": "The brewery, by the way, wants their logo on the cocktail napkins. Is that fine?",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Grace",
+   "text": "That's fine. Logos on napkins are fine.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Walter",
+   "text": "As long as they pay for the napkins.",
+   "agenda_item": "sponsorships",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Grace",
+   "text": "The silent auction. Priya, you've been collecting items.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Priya",
+   "text": "We have twenty-three items secured. A few more are promised.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Walter",
+   "text": "Twenty-three is more than last year at this point, I believe.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Grace",
+   "text": "What's the best item so far?",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Priya",
+   "text": "The weekend at the lake cabin. People will fight over it.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Owen",
+   "text": "Sorry, my dog is losing it at the mail carrier, give me a second.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Grace",
+   "text": "Hello, Biscuit.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Owen",
+   "text": "There's a question about whether we do mobile bidding this year, on phones.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Walter",
+   "text": "Mobile bidding costs money. The platform takes a cut.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Priya",
+   "text": "But people bid more on phones, honestly. They get the notifications and they get competitive.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Grace",
+   "text": "Do we know what the cut is?",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Owen",
+   "text": "Five percent of the winning bids, plus a setup fee.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Walter",
+   "text": "Five percent of a good auction is real money.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Priya",
+   "text": "And paper bid sheets mean someone has to sit there all night watching the clipboards.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Grace",
+   "text": "Maybe we try mobile bidding for the big items only?",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E038",
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Owen",
+   "text": "That's actually what most groups do now.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Walter",
+   "text": "I could live with that.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Grace",
+   "text": "Then we'll do mobile bidding for the top ten items and paper for the rest. That's what we'll do.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Priya",
+   "text": "Lovely. I'll set up the top ten on the platform this weekend.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Walter",
+   "text": "Just the top ten, Priya.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Priya",
+   "text": "Just the top ten, promise.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Owen",
+   "text": "Someone should probably double-check the cabin's insurance covers a stranger staying there.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Grace",
+   "text": "Volunteers and the run of show. Priya?",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Priya",
+   "text": "We have about forty volunteers signed up, which is a good start.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Grace",
+   "text": "That's wonderful.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Owen",
+   "text": "How many do we actually need on the night?",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Priya",
+   "text": "Realistically, forty-five or fifty, with check-in, the auction tables and cleanup.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "Walter",
+   "text": "Are they the same people as last year?",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 75,
+   "speaker": "Priya",
+   "text": "Mostly. Just to flag, a lot of them told me this would be their last one.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 76,
+   "speaker": "Grace",
+   "text": "We should think about how to recruit younger volunteers next year.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 77,
+   "speaker": "Owen",
+   "text": "The high school needs service hours. That's usually a good pool.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 78,
+   "speaker": "Priya",
+   "text": "Owen, could you reach out to the high school counselor about service hours?",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E049",
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 79,
+   "speaker": "Owen",
+   "text": "Honestly, I'm stretched thin until the sponsorships are done.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 80,
+   "speaker": "Priya",
+   "text": "Okay, then I'll email the high school counselor myself tomorrow.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E051"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 81,
+   "speaker": "Grace",
+   "text": "Thank you, Priya. And the program for the evening?",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E052"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 82,
+   "speaker": "Walter",
+   "text": "Speeches should be short. For the minutes, last year's speeches ran forty minutes.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 83,
+   "speaker": "Grace",
+   "text": "That was my fault. I'll own that.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 84,
+   "speaker": "Owen",
+   "text": "What if we cap speeches at fifteen minutes total, and the rest is the video?",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E053"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 85,
+   "speaker": "Priya",
+   "text": "People love the video. The kids reading always gets them.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 86,
+   "speaker": "Grace",
+   "text": "Then we cap the speeches at fifteen minutes and lead with the video. Agreed.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E054"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 87,
+   "speaker": "Priya",
+   "text": "And the dance floor? You said we'd come back to it.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E055"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 88,
+   "speaker": "Grace",
+   "text": "We did. Is it the space or the number of people?",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E056"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 89,
+   "speaker": "Priya",
+   "text": "The space. If we put the auction tables along the wall instead of the middle, it frees up the floor.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 90,
+   "speaker": "Walter",
+   "text": "That seems sensible, and it costs nothing.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 91,
+   "speaker": "Grace",
+   "text": "Let's look at the floor plan before we decide.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E057"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 92,
+   "speaker": "Walter",
+   "text": "Who is handling the raffle license this year?",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E058"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 93,
+   "speaker": "Owen",
+   "text": "Is the date still Saturday the fourteenth? I keep getting asked.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E059",
+    "E060"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 94,
+   "speaker": "Grace",
+   "text": "March fourteenth, yes. Nothing has moved. And I think that's everything. Thank you all.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E061"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 95,
+   "speaker": "Walter",
+   "text": "For the minutes, meeting adjourned.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Owen",
+   "agenda_item": "tickets_venue",
+   "fact_id": "F3",
+   "claimed_value": "96",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Walter",
+   "agenda_item": "tickets_venue",
+   "fact_id": "F11",
+   "claimed_value": "180",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Grace",
+   "agenda_item": "tickets_venue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 4,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Grace",
+   "agenda_item": "tickets_venue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 8,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Owen",
+   "agenda_item": "tickets_venue",
+   "fact_id": "F4",
+   "claimed_value": "$150",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Walter",
+   "agenda_item": "tickets_venue",
+   "fact_id": "F10",
+   "claimed_value": "January 10",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Grace",
+   "agenda_item": "tickets_venue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 11,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 13,
+   "speaker": "Priya",
+   "agenda_item": "tickets_venue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Owen",
+   "agenda_item": "tickets_venue",
+   "fact_id": "F2",
+   "claimed_value": "220",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Owen",
+   "agenda_item": "tickets_venue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 18,
+   "speaker": "Walter",
+   "agenda_item": "tickets_venue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Owen",
+   "agenda_item": "tickets_venue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Grace",
+   "agenda_item": "tickets_venue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 23,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 23,
+   "speaker": "Owen",
+   "agenda_item": "tickets_venue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Grace",
+   "agenda_item": "sponsorships",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 25,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 25,
+   "speaker": "Owen",
+   "agenda_item": "sponsorships",
+   "fact_id": "F6",
+   "claimed_value": "$45,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Walter",
+   "agenda_item": "sponsorships",
+   "fact_id": "F6",
+   "claimed_value": "$38,500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Owen",
+   "agenda_item": "sponsorships",
+   "fact_id": "F6",
+   "claimed_value": "$38,500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Grace",
+   "agenda_item": "sponsorships",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 31,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Grace",
+   "agenda_item": "sponsorships",
+   "fact_id": "F5",
+   "claimed_value": "$120,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Walter",
+   "agenda_item": "sponsorships",
+   "fact_id": "F5",
+   "claimed_value": "$120,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 32,
+   "speaker": "Grace",
+   "agenda_item": "sponsorships",
+   "fact_id": "F7",
+   "claimed_value": "$100,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 33,
+   "speaker": "Priya",
+   "agenda_item": "sponsorships",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 34,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Owen",
+   "agenda_item": "sponsorships",
+   "fact_id": "F12",
+   "claimed_value": "$2,500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Owen",
+   "agenda_item": "sponsorships",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 37,
+   "speaker": "Grace",
+   "agenda_item": "sponsorships",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Priya",
+   "agenda_item": "sponsorships",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 39,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Grace",
+   "agenda_item": "sponsorships",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 41,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 41,
+   "speaker": "Owen",
+   "agenda_item": "sponsorships",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 43,
+   "speaker": "Priya",
+   "agenda_item": "sponsorships",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Owen",
+   "agenda_item": "sponsorships",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 45,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 45,
+   "speaker": "Grace",
+   "agenda_item": "sponsorships",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 48,
+   "speaker": "Priya",
+   "agenda_item": "auction",
+   "fact_id": "F8",
+   "claimed_value": "23",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Walter",
+   "agenda_item": "auction",
+   "fact_id": "F8",
+   "claimed_value": "23",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Grace",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 51,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Owen",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 57,
+   "speaker": "Grace",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 58,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 61,
+   "speaker": "Grace",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 61,
+   "speaker": "Grace",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 62,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 64,
+   "speaker": "Grace",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 65,
+   "speaker": "Priya",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 67,
+   "speaker": "Priya",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 68,
+   "speaker": "Owen",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 69,
+   "speaker": "Grace",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 70,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 70,
+   "speaker": "Priya",
+   "agenda_item": "volunteers",
+   "fact_id": "F9",
+   "claimed_value": "40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 72,
+   "speaker": "Owen",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 73,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 74,
+   "speaker": "Walter",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 75,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 76,
+   "speaker": "Grace",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 78,
+   "speaker": "Priya",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 78,
+   "speaker": "Priya",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 79,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 80,
+   "speaker": "Priya",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 81,
+   "speaker": "Grace",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 82,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E053",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 84,
+   "speaker": "Owen",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 86,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E054",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 86,
+   "speaker": "Grace",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E055",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 87,
+   "speaker": "Priya",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E056",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 88,
+   "speaker": "Grace",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 89,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E057",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 91,
+   "speaker": "Grace",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E058",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 92,
+   "speaker": "Walter",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E059",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 93,
+   "speaker": "Owen",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 94,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E060",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 93,
+   "speaker": "Owen",
+   "agenda_item": "volunteers",
+   "fact_id": "F1",
+   "claimed_value": "March 14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E061",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 94,
+   "speaker": "Grace",
+   "agenda_item": "volunteers",
+   "fact_id": "F1",
+   "claimed_value": "March 14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Grace",
+   "text": "Wonderful, I think we're all here. Let's start with tickets and the venue.",
+   "start_s": 0.5,
+   "end_s": 5.7
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Owen",
+   "text": "In terms of tickets, we're at ninety-six sold as of this morning.",
+   "start_s": 6.034,
+   "end_s": 10.398
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Walter",
+   "text": "If I may, the catering minimum is a hundred and eighty, so we're a fair way short.",
+   "start_s": 11.445,
+   "end_s": 19.292
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Grace",
+   "text": "How worried should we be about that?",
+   "start_s": 20.256,
+   "end_s": 23.056
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Owen",
+   "text": "Honestly, not very yet. Most of the sales come in the last six weeks.",
+   "start_s": 23.511,
+   "end_s": 28.602
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Walter",
+   "text": "That has been true most years. Not every year.",
+   "start_s": 29.297,
+   "end_s": 33.451
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Priya",
+   "text": "Just to flag, the early-bird price ended last week, so there might be a slowdown now.",
+   "start_s": 34.1,
+   "end_s": 40.1
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Grace",
+   "text": "What are tickets now, after early-bird?",
+   "start_s": 40.952,
+   "end_s": 43.352
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Owen",
+   "text": "A hundred and fifty each. Tables are separate.",
+   "start_s": 44.341,
+   "end_s": 47.25
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Walter",
+   "text": "And the balance on the venue is due January tenth, for the minutes.",
+   "start_s": 47.544,
+   "end_s": 53.544
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Grace",
+   "text": "Do we have that money set aside already?",
+   "start_s": 53.772,
+   "end_s": 56.972
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Walter",
+   "text": "We do. It is sitting in the event account, untouched, as it should be.",
+   "start_s": 58.008,
+   "end_s": 64.469
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Grace",
+   "text": "Wonderful.",
+   "start_s": 65.102,
+   "end_s": 65.502
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Priya",
+   "text": "Is the venue still okay with a big crowd on the dance floor at once? Last time it got tight.",
+   "start_s": 66.464,
+   "end_s": 73.964
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Owen",
+   "text": "It's two twenty capacity overall, so the room itself is fine.",
+   "start_s": 74.166,
+   "end_s": 78.166
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Priya",
+   "text": "It's the dance floor I'm worried about, not the room.",
+   "start_s": 78.811,
+   "end_s": 82.561
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Grace",
+   "text": "That's a run-of-show question. Let's hold it for the end.",
+   "start_s": 83.483,
+   "end_s": 87.483
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Owen",
+   "text": "It'd be worth someone walking the space again before we finalize the layout.",
+   "start_s": 87.912,
+   "end_s": 92.639
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Walter",
+   "text": "The last time we did a walk-through, in ninety-eight, the caterer brought a tape measure and a flask.",
+   "start_s": 93.784,
+   "end_s": 102.092
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Grace",
+   "text": "Walter, you've told us about the flask.",
+   "start_s": 103.193,
+   "end_s": 105.993
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Walter",
+   "text": "The flask is an important part of the story. The tape measure was wrong, the flask was not.",
+   "start_s": 106.224,
+   "end_s": 114.531
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Owen",
+   "text": "Okay, in terms of the sales push, I'd like to send a reminder email to last year's attendees.",
+   "start_s": 114.756,
+   "end_s": 121.302
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Grace",
+   "text": "When would that go out?",
+   "start_s": 122.043,
+   "end_s": 124.043
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Owen",
+   "text": "I'll send the reminder email to last year's attendees on Monday.",
+   "start_s": 125.182,
+   "end_s": 129.182
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Grace",
+   "text": "Sponsorships. Owen, where are we?",
+   "start_s": 129.763,
+   "end_s": 131.763
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Owen",
+   "text": "Honestly, really well. We're at about forty-five thousand committed.",
+   "start_s": 132.18,
+   "end_s": 135.452
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Walter",
+   "text": "If I may, I have thirty-eight five in signed letters.",
+   "start_s": 136.074,
+   "end_s": 140.69
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Owen",
+   "text": "The rest is verbal. The hardware store and the credit union both said yes on the phone.",
+   "start_s": 140.919,
+   "end_s": 147.101
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Walter",
+   "text": "For the minutes, verbal is not committed.",
+   "start_s": 147.523,
+   "end_s": 150.753
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Owen",
+   "text": "Fair. Thirty-eight five signed, with two verbals.",
+   "start_s": 151.391,
+   "end_s": 153.936
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Grace",
+   "text": "And the goal for the whole night is one twenty?",
+   "start_s": 154.632,
+   "end_s": 158.632
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Walter",
+   "text": "One hundred and twenty thousand, yes. Which is ambitious.",
+   "start_s": 159.065,
+   "end_s": 163.219
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Grace",
+   "text": "Last year we cleared a hundred thousand, so it's a stretch but not crazy.",
+   "start_s": 163.65,
+   "end_s": 169.25
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Priya",
+   "text": "Are we still offering tables at the same price as last year?",
+   "start_s": 169.669,
+   "end_s": 174.169
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Owen",
+   "text": "Twenty-five hundred a table. We kept it flat.",
+   "start_s": 174.829,
+   "end_s": 177.738
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Walter",
+   "text": "Flat is generous, with catering costs where they are.",
+   "start_s": 178.228,
+   "end_s": 182.382
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Owen",
+   "text": "Maybe we nudge it to three thousand for next year.",
+   "start_s": 182.603,
+   "end_s": 186.24
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Grace",
+   "text": "Next year is next year. For this year it stays where it is.",
+   "start_s": 187.278,
+   "end_s": 192.478
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Priya",
+   "text": "Who are we still waiting on, sponsor-wise?",
+   "start_s": 193.234,
+   "end_s": 195.859
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Owen",
+   "text": "The bank, the dental group and the brewery. The brewery is the most likely.",
+   "start_s": 196.701,
+   "end_s": 201.792
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Grace",
+   "text": "Could someone get a signed letter from the hardware store and the credit union this week?",
+   "start_s": 202.178,
+   "end_s": 208.578
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Owen",
+   "text": "I'll get both verbals turned into signed letters by Friday.",
+   "start_s": 209.771,
+   "end_s": 213.407
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Walter",
+   "text": "Thank you. I'll sleep better.",
+   "start_s": 214.467,
+   "end_s": 216.775
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Priya",
+   "text": "Has anyone asked the mayor's office about doing a proclamation, like the library did?",
+   "start_s": 217.096,
+   "end_s": 222.346
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Owen",
+   "text": "The brewery, by the way, wants their logo on the cocktail napkins. Is that fine?",
+   "start_s": 222.879,
+   "end_s": 228.333
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Grace",
+   "text": "That's fine. Logos on napkins are fine.",
+   "start_s": 229.254,
+   "end_s": 232.054
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Walter",
+   "text": "As long as they pay for the napkins.",
+   "start_s": 232.965,
+   "end_s": 236.657
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Grace",
+   "text": "The silent auction. Priya, you've been collecting items.",
+   "start_s": 237.793,
+   "end_s": 240.993
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Priya",
+   "text": "We have twenty-three items secured. A few more are promised.",
+   "start_s": 241.615,
+   "end_s": 245.365
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Walter",
+   "text": "Twenty-three is more than last year at this point, I believe.",
+   "start_s": 246.395,
+   "end_s": 251.472
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Grace",
+   "text": "What's the best item so far?",
+   "start_s": 252.342,
+   "end_s": 254.742
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Priya",
+   "text": "The weekend at the lake cabin. People will fight over it.",
+   "start_s": 255.245,
+   "end_s": 259.37
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Owen",
+   "text": "Sorry, my dog is losing it at the mail carrier, give me a second.",
+   "start_s": 260.158,
+   "end_s": 265.248
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Grace",
+   "text": "Hello, Biscuit.",
+   "start_s": 266.33,
+   "end_s": 267.13
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Owen",
+   "text": "There's a question about whether we do mobile bidding this year, on phones.",
+   "start_s": 268.176,
+   "end_s": 272.903
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Walter",
+   "text": "Mobile bidding costs money. The platform takes a cut.",
+   "start_s": 273.608,
+   "end_s": 277.762
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Priya",
+   "text": "But people bid more on phones, honestly. They get the notifications and they get competitive.",
+   "start_s": 278.551,
+   "end_s": 284.176
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Grace",
+   "text": "Do we know what the cut is?",
+   "start_s": 284.411,
+   "end_s": 287.211
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Owen",
+   "text": "Five percent of the winning bids, plus a setup fee.",
+   "start_s": 287.654,
+   "end_s": 291.29
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Walter",
+   "text": "Five percent of a good auction is real money.",
+   "start_s": 292.287,
+   "end_s": 296.441
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Priya",
+   "text": "And paper bid sheets mean someone has to sit there all night watching the clipboards.",
+   "start_s": 297.055,
+   "end_s": 302.68
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Grace",
+   "text": "Maybe we try mobile bidding for the big items only?",
+   "start_s": 303.053,
+   "end_s": 307.053
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Owen",
+   "text": "That's actually what most groups do now.",
+   "start_s": 307.802,
+   "end_s": 310.347
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Walter",
+   "text": "I could live with that.",
+   "start_s": 311.25,
+   "end_s": 313.558
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Grace",
+   "text": "Then we'll do mobile bidding for the top ten items and paper for the rest. That's what we'll do.",
+   "start_s": 314.432,
+   "end_s": 322.032
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Priya",
+   "text": "Lovely. I'll set up the top ten on the platform this weekend.",
+   "start_s": 322.607,
+   "end_s": 327.107
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Walter",
+   "text": "Just the top ten, Priya.",
+   "start_s": 327.746,
+   "end_s": 330.054
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Priya",
+   "text": "Just the top ten, promise.",
+   "start_s": 330.762,
+   "end_s": 332.637
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Owen",
+   "text": "Someone should probably double-check the cabin's insurance covers a stranger staying there.",
+   "start_s": 333.615,
+   "end_s": 337.979
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Grace",
+   "text": "Volunteers and the run of show. Priya?",
+   "start_s": 338.7,
+   "end_s": 341.5
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Priya",
+   "text": "We have about forty volunteers signed up, which is a good start.",
+   "start_s": 342.093,
+   "end_s": 346.593
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Grace",
+   "text": "That's wonderful.",
+   "start_s": 347.283,
+   "end_s": 348.083
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Owen",
+   "text": "How many do we actually need on the night?",
+   "start_s": 348.313,
+   "end_s": 351.585
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Priya",
+   "text": "Realistically, forty-five or fifty, with check-in, the auction tables and cleanup.",
+   "start_s": 351.828,
+   "end_s": 355.953
+  },
+  {
+   "turn_index": 74,
+   "speaker": "Walter",
+   "text": "Are they the same people as last year?",
+   "start_s": 356.856,
+   "end_s": 360.549
+  },
+  {
+   "turn_index": 75,
+   "speaker": "Priya",
+   "text": "Mostly. Just to flag, a lot of them told me this would be their last one.",
+   "start_s": 361.732,
+   "end_s": 367.732
+  },
+  {
+   "turn_index": 76,
+   "speaker": "Grace",
+   "text": "We should think about how to recruit younger volunteers next year.",
+   "start_s": 368.525,
+   "end_s": 372.925
+  },
+  {
+   "turn_index": 77,
+   "speaker": "Owen",
+   "text": "The high school needs service hours. That's usually a good pool.",
+   "start_s": 373.519,
+   "end_s": 377.519
+  },
+  {
+   "turn_index": 78,
+   "speaker": "Priya",
+   "text": "Owen, could you reach out to the high school counselor about service hours?",
+   "start_s": 377.889,
+   "end_s": 382.764
+  },
+  {
+   "turn_index": 79,
+   "speaker": "Owen",
+   "text": "Honestly, I'm stretched thin until the sponsorships are done.",
+   "start_s": 383.466,
+   "end_s": 386.739
+  },
+  {
+   "turn_index": 80,
+   "speaker": "Priya",
+   "text": "Okay, then I'll email the high school counselor myself tomorrow.",
+   "start_s": 387.921,
+   "end_s": 391.671
+  },
+  {
+   "turn_index": 81,
+   "speaker": "Grace",
+   "text": "Thank you, Priya. And the program for the evening?",
+   "start_s": 392.642,
+   "end_s": 396.242
+  },
+  {
+   "turn_index": 82,
+   "speaker": "Walter",
+   "text": "Speeches should be short. For the minutes, last year's speeches ran forty minutes.",
+   "start_s": 396.982,
+   "end_s": 402.982
+  },
+  {
+   "turn_index": 83,
+   "speaker": "Grace",
+   "text": "That was my fault. I'll own that.",
+   "start_s": 404.042,
+   "end_s": 406.842
+  },
+  {
+   "turn_index": 84,
+   "speaker": "Owen",
+   "text": "What if we cap speeches at fifteen minutes total, and the rest is the video?",
+   "start_s": 407.274,
+   "end_s": 412.729
+  },
+  {
+   "turn_index": 85,
+   "speaker": "Priya",
+   "text": "People love the video. The kids reading always gets them.",
+   "start_s": 413.443,
+   "end_s": 417.193
+  },
+  {
+   "turn_index": 86,
+   "speaker": "Grace",
+   "text": "Then we cap the speeches at fifteen minutes and lead with the video. Agreed.",
+   "start_s": 418.345,
+   "end_s": 423.945
+  },
+  {
+   "turn_index": 87,
+   "speaker": "Priya",
+   "text": "And the dance floor? You said we'd come back to it.",
+   "start_s": 424.723,
+   "end_s": 428.848
+  },
+  {
+   "turn_index": 88,
+   "speaker": "Grace",
+   "text": "We did. Is it the space or the number of people?",
+   "start_s": 429.507,
+   "end_s": 433.907
+  },
+  {
+   "turn_index": 89,
+   "speaker": "Priya",
+   "text": "The space. If we put the auction tables along the wall instead of the middle, it frees up the floor.",
+   "start_s": 434.376,
+   "end_s": 441.876
+  },
+  {
+   "turn_index": 90,
+   "speaker": "Walter",
+   "text": "That seems sensible, and it costs nothing.",
+   "start_s": 442.624,
+   "end_s": 445.855
+  },
+  {
+   "turn_index": 91,
+   "speaker": "Grace",
+   "text": "Let's look at the floor plan before we decide.",
+   "start_s": 447.012,
+   "end_s": 450.612
+  },
+  {
+   "turn_index": 92,
+   "speaker": "Walter",
+   "text": "Who is handling the raffle license this year?",
+   "start_s": 450.818,
+   "end_s": 454.51
+  },
+  {
+   "turn_index": 93,
+   "speaker": "Owen",
+   "text": "Is the date still Saturday the fourteenth? I keep getting asked.",
+   "start_s": 455.494,
+   "end_s": 459.494
+  },
+  {
+   "turn_index": 94,
+   "speaker": "Grace",
+   "text": "March fourteenth, yes. Nothing has moved. And I think that's everything. Thank you all.",
+   "start_s": 460.514,
+   "end_s": 466.114
+  },
+  {
+   "turn_index": 95,
+   "speaker": "Walter",
+   "text": "For the minutes, meeting adjourned.",
+   "start_s": 467.2,
+   "end_s": 469.508
+  }
+ ]
+}

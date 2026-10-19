@@ -1,0 +1,1435 @@
+{
+ "meeting_id": "pta-oakmont-d5-s2",
+ "config": {
+  "theme": "School PTA budget meeting for next year",
+  "domain_pack": "community_budget",
+  "drama": 0.5,
+  "seed": 2,
+  "duration_min": 3.9,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   0,
+   10,
+   20,
+   22,
+   23,
+   24,
+   25,
+   34,
+   35
+  ],
+  "reviewed_noclaim": [
+   10,
+   20,
+   22,
+   23,
+   35
+  ]
+ },
+ "cast": {
+  "theme": "School PTA budget meeting for next year",
+  "personas": [
+   {
+    "name": "Deborah",
+    "role": "PTA president",
+    "goals": "A balanced budget nobody storms out over",
+    "hidden_agenda": "Her daughter is in the art club",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Nnamdi",
+    "role": "Treasurer",
+    "goals": "Spend the grant money on what it was given for",
+    "hidden_agenda": "Already told the district the grant would go to devices",
+    "verbosity": 2,
+    "wpm": 140,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Carla",
+    "role": "Art teacher",
+    "goals": "Save the arts program",
+    "hidden_agenda": "Has been buying clay with her own money",
+    "verbosity": 4,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Trevor",
+    "role": "Parent, works in IT",
+    "goals": "Every kid with a working laptop",
+    "hidden_agenda": "His son's Chromebook broke and he waited six weeks for a loaner",
+    "verbosity": 4,
+    "wpm": 175,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "PTA budget meeting",
+   "org": "Oakmont Middle School PTA (fictional)",
+   "agenda": [
+    {
+     "id": "position",
+     "title": "Where we stand",
+     "goal": "Balance",
+     "timebox_min": 0.53
+    },
+    {
+     "id": "tech_vs_arts",
+     "title": "Chromebooks and the arts",
+     "goal": "Decide between the two big requests",
+     "timebox_min": 2.14
+    },
+    {
+     "id": "smaller_asks",
+     "title": "Smaller requests",
+     "goal": "Band uniforms and Science Olympiad",
+     "timebox_min": 0.77
+    },
+    {
+     "id": "vote",
+     "title": "The vote",
+     "goal": "Agree what goes to members",
+     "timebox_min": 0.47
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "balance",
+     "statement": "Current balance = $14,200",
+     "value": "$14,200"
+    },
+    {
+     "id": "F2",
+     "key": "income",
+     "statement": "Annual income = $27,600",
+     "value": "$27,600"
+    },
+    {
+     "id": "F3",
+     "key": "chromebook_request",
+     "statement": "Chromebook request = $9,000",
+     "value": "$9,000"
+    },
+    {
+     "id": "F4",
+     "key": "arts_request",
+     "statement": "Arts program request = $4,500",
+     "value": "$4,500"
+    },
+    {
+     "id": "F5",
+     "key": "students",
+     "statement": "Students = 610",
+     "value": "610"
+    },
+    {
+     "id": "F6",
+     "key": "chromebook_ratio",
+     "statement": "Students per Chromebook = 3",
+     "value": "3"
+    },
+    {
+     "id": "F7",
+     "key": "band_uniforms",
+     "statement": "Band uniforms = $3,800",
+     "value": "$3,800"
+    },
+    {
+     "id": "F8",
+     "key": "olympiad_fees",
+     "statement": "Science Olympiad fees = $1,250",
+     "value": "$1,250"
+    },
+    {
+     "id": "F9",
+     "key": "dues",
+     "statement": "Membership dues = $20",
+     "value": "$20"
+    },
+    {
+     "id": "F10",
+     "key": "members",
+     "statement": "Member families = 245",
+     "value": "245"
+    },
+    {
+     "id": "F11",
+     "key": "tech_grant",
+     "statement": "District tech grant received = $5,000",
+     "value": "$5,000"
+    },
+    {
+     "id": "F12",
+     "key": "vote_date",
+     "statement": "Membership vote = April 30",
+     "value": "April 30"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "position",
+    "summary": "Balance and membership; Deborah's member count stands",
+    "n_turns": 8,
+    "events": []
+   },
+   {
+    "agenda_item": "tech_vs_arts",
+    "summary": "Chromebooks vs the arts; two wrong figures, both corrected",
+    "n_turns": 23,
+    "events": []
+   },
+   {
+    "agenda_item": "smaller_asks",
+    "summary": "Uniforms and the Olympiad; a short tangent about a robotics video",
+    "n_turns": 9,
+    "events": []
+   },
+   {
+    "agenda_item": "vote",
+    "summary": "Getting it to members",
+    "n_turns": 6,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Deborah",
+   "text": "Okay, let's get going. Nnamdi, the big picture first.",
+   "agenda_item": "position",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Nnamdi",
+   "text": "The balance is fourteen thousand two hundred. Income this year was twenty-seven six.",
+   "agenda_item": "position",
+   "direction": null,
+   "event_ids": [
+    "E001",
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Deborah",
+   "text": "And we have about three hundred member families now, which is a record.",
+   "agenda_item": "position",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Trevor",
+   "text": "Dues are still twenty dollars?",
+   "agenda_item": "position",
+   "direction": null,
+   "event_ids": [
+    "E004",
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Nnamdi",
+   "text": "Twenty. We haven't raised them in years.",
+   "agenda_item": "position",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Carla",
+   "text": "Please don't raise them. Some families already struggle with the field trip fees.",
+   "agenda_item": "position",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Deborah",
+   "text": "Nobody's raising dues tonight.",
+   "agenda_item": "position",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Trevor",
+   "text": "Good.",
+   "agenda_item": "position",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Deborah",
+   "text": "The two big requests. Chromebooks, and the arts program.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Trevor",
+   "text": "The Chromebooks are nine thousand. Right now five kids share every machine. It's absurd.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [
+    "E008",
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Carla",
+   "text": "Is it five? The tech office told me one between three, I think. I might be wrong.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Trevor",
+   "text": "Three. Okay, three. Still absurd for a school with six hundred and ten kids.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [
+    "E011",
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Carla",
+   "text": "The arts request is forty-five hundred. Clay, paint, and the kiln repair.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Trevor",
+   "text": "The kiln's been broken since before my son started here.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Carla",
+   "text": "Two winters. The kids keep asking when they can fire their pots.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Nnamdi",
+   "text": "We also have the district tech grant. That has to go to devices.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Trevor",
+   "text": "The grant was ten thousand, so the Chromebooks are basically covered already.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Deborah",
+   "text": "If the grant covers the Chromebooks, then the arts request is easy.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Carla",
+   "text": "That would be wonderful. I've been buying clay out of my own pocket since October.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Nnamdi",
+   "text": "Sorry, I'm looking at the award letter. The grant is five thousand, not ten.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Trevor",
+   "text": "Five. Then there's a four thousand gap on the Chromebooks.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Deborah",
+   "text": "So it's both requests, with five thousand of help. Can we afford both?",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [
+    "E017",
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Nnamdi",
+   "text": "Both together is thirteen five. With the grant, eighty-five hundred from us. We'd be down to under six thousand.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Carla",
+   "text": "Under six thousand is still a reserve.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Trevor",
+   "text": "Who decides which matters more, a laptop or a kiln?",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Carla",
+   "text": "Have you seen what kids make in that art room? Some of them only come to school for it.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Deborah",
+   "text": "Both matter. Could we fund the arts fully and the Chromebooks over two years?",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [
+    "E020",
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Trevor",
+   "text": "Two years means another year of kids sharing.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Nnamdi",
+   "text": "With the grant plus half our part this year, we could replace the oldest machines first.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Deborah",
+   "text": "Then: arts funded in full, and the Chromebooks in two stages, oldest machines first. That's our proposal.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Trevor",
+   "text": "I can live with that. I'll help the tech office pick the oldest machines.",
+   "agenda_item": "tech_vs_arts",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Deborah",
+   "text": "Smaller asks. Band uniforms, and Science Olympiad.",
+   "agenda_item": "smaller_asks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Nnamdi",
+   "text": "Uniforms are thirty-eight hundred. Olympiad fees are twelve fifty.",
+   "agenda_item": "smaller_asks",
+   "direction": null,
+   "event_ids": [
+    "E024",
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Carla",
+   "text": "The band uniforms are from the nineties. The kids call them the pajamas.",
+   "agenda_item": "smaller_asks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Trevor",
+   "text": "Did anyone see the video of the high school's robot climbing the stairs? It went everywhere online.",
+   "agenda_item": "smaller_asks",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Carla",
+   "text": "The one that fell down at the end? My students watched it twenty times.",
+   "agenda_item": "smaller_asks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Deborah",
+   "text": "My husband sent it to me three times.",
+   "agenda_item": "smaller_asks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Nnamdi",
+   "text": "The Olympiad fees are small. I'd fund those without discussion.",
+   "agenda_item": "smaller_asks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Deborah",
+   "text": "Agreed. Olympiad funded. Uniforms next year, unless a sponsor turns up.",
+   "agenda_item": "smaller_asks",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Carla",
+   "text": "It would be good if somebody asked the music store downtown about sponsoring uniforms.",
+   "agenda_item": "smaller_asks",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Deborah",
+   "text": "The vote is April thirtieth.",
+   "agenda_item": "vote",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Nnamdi",
+   "text": "I'll send the draft to the board by the fifteenth.",
+   "agenda_item": "vote",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Carla",
+   "text": "Should teachers speak at the vote, to explain the requests?",
+   "agenda_item": "vote",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Deborah",
+   "text": "Yes, briefly. Two minutes each.",
+   "agenda_item": "vote",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Trevor",
+   "text": "Can I bring one of the broken Chromebooks? A visual helps.",
+   "agenda_item": "vote",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Deborah",
+   "text": "Bring it. People should see it. Thank you, everyone. That was a real discussion, and we got somewhere.",
+   "agenda_item": "vote",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Nnamdi",
+   "agenda_item": "position",
+   "fact_id": "F1",
+   "claimed_value": "$14,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Nnamdi",
+   "agenda_item": "position",
+   "fact_id": "F2",
+   "claimed_value": "$27,600",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 2,
+   "speaker": "Deborah",
+   "agenda_item": "position",
+   "fact_id": "F10",
+   "claimed_value": "300",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Trevor",
+   "agenda_item": "position",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 4,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Trevor",
+   "agenda_item": "position",
+   "fact_id": "F9",
+   "claimed_value": "$20",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Nnamdi",
+   "agenda_item": "position",
+   "fact_id": "F9",
+   "claimed_value": "$20",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Deborah",
+   "agenda_item": "position",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Trevor",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": "F3",
+   "claimed_value": "$9,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 9,
+   "speaker": "Trevor",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": "F6",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Carla",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": "F6",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Trevor",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": "F6",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Trevor",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": "F5",
+   "claimed_value": "610",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Carla",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": "F4",
+   "claimed_value": "$4,500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Trevor",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": "F11",
+   "claimed_value": "$10,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Nnamdi",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": "F11",
+   "claimed_value": "$5,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Trevor",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": "F11",
+   "claimed_value": "$5,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Deborah",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 22,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Deborah",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": "F11",
+   "claimed_value": "$5,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 24,
+   "speaker": "Trevor",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Deborah",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 27,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Deborah",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 29,
+   "speaker": "Deborah",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 30,
+   "speaker": "Trevor",
+   "agenda_item": "tech_vs_arts",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Nnamdi",
+   "agenda_item": "smaller_asks",
+   "fact_id": "F7",
+   "claimed_value": "$3,800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Nnamdi",
+   "agenda_item": "smaller_asks",
+   "fact_id": "F8",
+   "claimed_value": "$1,250",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Trevor",
+   "agenda_item": "smaller_asks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 38,
+   "speaker": "Deborah",
+   "agenda_item": "smaller_asks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Carla",
+   "agenda_item": "smaller_asks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Deborah",
+   "agenda_item": "vote",
+   "fact_id": "F12",
+   "claimed_value": "April 30",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 41,
+   "speaker": "Nnamdi",
+   "agenda_item": "vote",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Carla",
+   "agenda_item": "vote",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Trevor",
+   "agenda_item": "vote",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 45,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Deborah",
+   "text": "Okay, let's get going. Nnamdi, the big picture first.",
+   "start_s": 0.5,
+   "end_s": 3.984
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Nnamdi",
+   "text": "The balance is fourteen thousand two hundred. Income this year was twenty-seven six.",
+   "start_s": 5.14,
+   "end_s": 10.711
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Deborah",
+   "text": "And we have about three hundred member families now, which is a record.",
+   "start_s": 11.859,
+   "end_s": 16.891
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Trevor",
+   "text": "Dues are still twenty dollars?",
+   "start_s": 17.148,
+   "end_s": 18.862
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Nnamdi",
+   "text": "Twenty. We haven't raised them in years.",
+   "start_s": 19.147,
+   "end_s": 22.147
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Carla",
+   "text": "Please don't raise them. Some families already struggle with the field trip fees.",
+   "start_s": 23.182,
+   "end_s": 27.91
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Deborah",
+   "text": "Nobody's raising dues tonight.",
+   "start_s": 28.846,
+   "end_s": 30.394
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Trevor",
+   "text": "Good.",
+   "start_s": 31.264,
+   "end_s": 31.607
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Deborah",
+   "text": "The two big requests. Chromebooks, and the arts program.",
+   "start_s": 32.115,
+   "end_s": 35.599
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Trevor",
+   "text": "The Chromebooks are nine thousand. Right now five kids share every machine. It's absurd.",
+   "start_s": 36.405,
+   "end_s": 41.205
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Carla",
+   "text": "Is it five? The tech office told me one between three, I think. I might be wrong.",
+   "start_s": 42.012,
+   "end_s": 48.194
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Trevor",
+   "text": "Three. Okay, three. Still absurd for a school with six hundred and ten kids.",
+   "start_s": 48.975,
+   "end_s": 53.775
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Carla",
+   "text": "The arts request is forty-five hundred. Clay, paint, and the kiln repair.",
+   "start_s": 54.133,
+   "end_s": 58.497
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Trevor",
+   "text": "The kiln's been broken since before my son started here.",
+   "start_s": 59.128,
+   "end_s": 62.556
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Carla",
+   "text": "Two winters. The kids keep asking when they can fire their pots.",
+   "start_s": 63.15,
+   "end_s": 67.513
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Nnamdi",
+   "text": "We also have the district tech grant. That has to go to devices.",
+   "start_s": 68.436,
+   "end_s": 74.007
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Trevor",
+   "text": "The grant was ten thousand, so the Chromebooks are basically covered already.",
+   "start_s": 75.202,
+   "end_s": 79.316
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Deborah",
+   "text": "If the grant covers the Chromebooks, then the arts request is easy.",
+   "start_s": 80.465,
+   "end_s": 85.111
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Carla",
+   "text": "That would be wonderful. I've been buying clay out of my own pocket since October.",
+   "start_s": 85.855,
+   "end_s": 91.31
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Nnamdi",
+   "text": "Sorry, I'm looking at the award letter. The grant is five thousand, not ten.",
+   "start_s": 91.955,
+   "end_s": 97.955
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Trevor",
+   "text": "Five. Then there's a four thousand gap on the Chromebooks.",
+   "start_s": 98.423,
+   "end_s": 101.852
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Deborah",
+   "text": "So it's both requests, with five thousand of help. Can we afford both?",
+   "start_s": 102.088,
+   "end_s": 107.12
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Nnamdi",
+   "text": "Both together is thirteen five. With the grant, eighty-five hundred from us. We'd be down to under six thousand.",
+   "start_s": 107.347,
+   "end_s": 115.49
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Carla",
+   "text": "Under six thousand is still a reserve.",
+   "start_s": 116.155,
+   "end_s": 118.7
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Trevor",
+   "text": "Who decides which matters more, a laptop or a kiln?",
+   "start_s": 119.218,
+   "end_s": 122.647
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Carla",
+   "text": "Have you seen what kids make in that art room? Some of them only come to school for it.",
+   "start_s": 123.227,
+   "end_s": 130.136
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Deborah",
+   "text": "Both matter. Could we fund the arts fully and the Chromebooks over two years?",
+   "start_s": 131.228,
+   "end_s": 136.647
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Trevor",
+   "text": "Two years means another year of kids sharing.",
+   "start_s": 137.373,
+   "end_s": 140.116
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Nnamdi",
+   "text": "With the grant plus half our part this year, we could replace the oldest machines first.",
+   "start_s": 140.877,
+   "end_s": 147.734
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Deborah",
+   "text": "Then: arts funded in full, and the Chromebooks in two stages, oldest machines first. That's our proposal.",
+   "start_s": 148.17,
+   "end_s": 154.751
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Trevor",
+   "text": "I can live with that. I'll help the tech office pick the oldest machines.",
+   "start_s": 154.975,
+   "end_s": 159.775
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Deborah",
+   "text": "Smaller asks. Band uniforms, and Science Olympiad.",
+   "start_s": 160.3,
+   "end_s": 163.01
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Nnamdi",
+   "text": "Uniforms are thirty-eight hundred. Olympiad fees are twelve fifty.",
+   "start_s": 163.347,
+   "end_s": 167.204
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Carla",
+   "text": "The band uniforms are from the nineties. The kids call them the pajamas.",
+   "start_s": 167.914,
+   "end_s": 172.641
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Trevor",
+   "text": "Did anyone see the video of the high school's robot climbing the stairs? It went everywhere online.",
+   "start_s": 173.84,
+   "end_s": 179.668
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Carla",
+   "text": "The one that fell down at the end? My students watched it twenty times.",
+   "start_s": 180.542,
+   "end_s": 185.633
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Deborah",
+   "text": "My husband sent it to me three times.",
+   "start_s": 186.015,
+   "end_s": 189.112
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Nnamdi",
+   "text": "The Olympiad fees are small. I'd fund those without discussion.",
+   "start_s": 190.206,
+   "end_s": 194.491
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Deborah",
+   "text": "Agreed. Olympiad funded. Uniforms next year, unless a sponsor turns up.",
+   "start_s": 195.488,
+   "end_s": 199.746
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Carla",
+   "text": "It would be good if somebody asked the music store downtown about sponsoring uniforms.",
+   "start_s": 200.68,
+   "end_s": 205.771
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Deborah",
+   "text": "The vote is April thirtieth.",
+   "start_s": 206.878,
+   "end_s": 208.813
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Nnamdi",
+   "text": "I'll send the draft to the board by the fifteenth.",
+   "start_s": 209.776,
+   "end_s": 214.062
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Carla",
+   "text": "Should teachers speak at the vote, to explain the requests?",
+   "start_s": 215.052,
+   "end_s": 218.688
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Deborah",
+   "text": "Yes, briefly. Two minutes each.",
+   "start_s": 219.242,
+   "end_s": 221.177
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Trevor",
+   "text": "Can I bring one of the broken Chromebooks? A visual helps.",
+   "start_s": 222.358,
+   "end_s": 226.129
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Deborah",
+   "text": "Bring it. People should see it. Thank you, everyone. That was a real discussion, and we got somewhere.",
+   "start_s": 227.291,
+   "end_s": 234.259
+  }
+ ]
+}

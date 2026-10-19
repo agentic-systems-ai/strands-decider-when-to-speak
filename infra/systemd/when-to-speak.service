@@ -1,0 +1,18 @@
+[Unit]
+Description=Knows When to Speak demo app (FastAPI + WebSocket)
+After=decider.service
+Wants=decider.service
+
+[Service]
+User=whentospeak
+WorkingDirectory=/opt/when-to-speak
+EnvironmentFile=/etc/when-to-speak.env
+Environment=PYTHONIOENCODING=utf-8
+# Talks to Decider over localhost HTTP and to Amazon Bedrock with the instance role.
+ExecStart=/opt/when-to-speak/.venv/bin/python -m when_to_speak.app --decider http --host 0.0.0.0 --port ${APP_PORT}
+# Decider takes a minute to load on first boot; the app warms it up on the first replay.
+Restart=always
+RestartSec=15
+
+[Install]
+WantedBy=multi-user.target

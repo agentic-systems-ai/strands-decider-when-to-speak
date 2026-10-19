@@ -1,0 +1,1967 @@
+{
+ "meeting_id": "gala-orchestra-d8-s1",
+ "config": {
+  "theme": "Planning committee for a nonprofit's annual fundraising gala",
+  "domain_pack": "nonprofit_events",
+  "drama": 0.8,
+  "seed": 1,
+  "duration_min": 5.2,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   6,
+   7,
+   10,
+   17,
+   31,
+   38,
+   43,
+   52
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "Planning committee for a nonprofit's annual fundraising gala",
+  "personas": [
+   {
+    "name": "Celeste",
+    "role": "Board chair",
+    "goals": "A gala worthy of the orchestra's reputation",
+    "hidden_agenda": "The withdrawn sponsor is her brother-in-law's firm",
+    "verbosity": 4,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Rafael",
+    "role": "Executive director",
+    "goals": "Protect the scholarship money",
+    "hidden_agenda": "Already drafted a smaller backup plan",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [
+     "to be candid"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Nkechi",
+    "role": "Volunteer gala chair",
+    "goals": "Keep the night joyful for the kids",
+    "hidden_agenda": "Commuting by train and half-distracted",
+    "verbosity": 3,
+    "wpm": 170,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Howard",
+    "role": "Treasurer",
+    "goals": "Nobody spends money we don't have",
+    "hidden_agenda": "Warned the board about relying on one big sponsor",
+    "verbosity": 2,
+    "wpm": 135,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Spring gala committee - emergency meeting",
+   "org": "Westbrook Youth Orchestra (fictional)",
+   "agenda": [
+    {
+     "id": "sponsor_loss",
+     "title": "The lost sponsor",
+     "goal": "Understand what the withdrawal means",
+     "timebox_min": 1.38
+    },
+    {
+     "id": "budget",
+     "title": "Budget adjustments",
+     "goal": "Decide what to cut or change",
+     "timebox_min": 1.67
+    },
+    {
+     "id": "program",
+     "title": "Performance program",
+     "goal": "Settle the student program for the night",
+     "timebox_min": 0.94
+    },
+    {
+     "id": "tickets",
+     "title": "Ticket push",
+     "goal": "Agree how to sell the remaining seats",
+     "timebox_min": 1.23
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "gala_date",
+     "statement": "Gala date = Saturday, April 12",
+     "value": "April 12"
+    },
+    {
+     "id": "F2",
+     "key": "lost_sponsorship",
+     "statement": "Withdrawn sponsorship = $25,000",
+     "value": "$25,000"
+    },
+    {
+     "id": "F3",
+     "key": "sponsors_remaining",
+     "statement": "Sponsors remaining = 4",
+     "value": "4"
+    },
+    {
+     "id": "F4",
+     "key": "gala_budget",
+     "statement": "Gala budget = $46,000",
+     "value": "$46,000"
+    },
+    {
+     "id": "F5",
+     "key": "revenue_goal",
+     "statement": "Revenue goal = $150,000",
+     "value": "$150,000"
+    },
+    {
+     "id": "F6",
+     "key": "tickets_sold",
+     "statement": "Tickets sold = 188",
+     "value": "188"
+    },
+    {
+     "id": "F7",
+     "key": "venue_capacity",
+     "statement": "Venue capacity = 300",
+     "value": "300"
+    },
+    {
+     "id": "F8",
+     "key": "ticket_price",
+     "statement": "Ticket price = $175",
+     "value": "$175"
+    },
+    {
+     "id": "F9",
+     "key": "student_performers",
+     "statement": "Student performers = 60",
+     "value": "60"
+    },
+    {
+     "id": "F10",
+     "key": "catering_per_head",
+     "statement": "Catering = $85 per head",
+     "value": "$85"
+    },
+    {
+     "id": "F11",
+     "key": "last_year_net",
+     "statement": "Last year's gala netted $112,000",
+     "value": "$112,000"
+    },
+    {
+     "id": "F12",
+     "key": "scholarships",
+     "statement": "Scholarships funded by last year's gala = 22",
+     "value": "22"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "sponsor_loss",
+    "summary": "How bad it is; Celeste inflates the loss and gets corrected",
+    "n_turns": 16,
+    "events": []
+   },
+   {
+    "agenda_item": "budget",
+    "summary": "Cuts; the catering figure; Rafael's backup plan; a long detour about Vienna",
+    "n_turns": 24,
+    "events": []
+   },
+   {
+    "agenda_item": "program",
+    "summary": "The student program; who plays and how long",
+    "n_turns": 12,
+    "events": []
+   },
+   {
+    "agenda_item": "tickets",
+    "summary": "Selling the rest; Nkechi's count is high and is corrected later",
+    "n_turns": 16,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Celeste",
+   "text": "Thank you for joining at short notice. Hartwell Partners has pulled out. We've lost forty thousand dollars, just like that.",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Howard",
+   "text": "Twenty-five. Their pledge was twenty-five thousand. I have the letter in front of me.",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Celeste",
+   "text": "Twenty-five, forty, it's a catastrophe either way.",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Rafael",
+   "text": "To be candid, it's serious, but it isn't a catastrophe. We still have four sponsors.",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Nkechi",
+   "text": "Did they say why they pulled out?",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Celeste",
+   "text": "Something about a restructuring. I don't know the details.",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Nkechi",
+   "text": "Does the press know yet?",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Howard",
+   "text": "I said at the board retreat that one sponsor was a third of our income. Nobody wanted to hear it.",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Celeste",
+   "text": "Howard, this isn't the moment for I-told-you-so.",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Howard",
+   "text": "It's exactly the moment. Otherwise we do it again next year.",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Rafael",
+   "text": "Can we focus on what we can control?",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Nkechi",
+   "text": "My train's going into a tunnel, I might cut out for a minute.",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Rafael",
+   "text": "What's the revenue goal still, with this hole in it?",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Howard",
+   "text": "One hundred and fifty thousand, on paper. Realistically, less.",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Celeste",
+   "text": "Last year we netted a hundred and fifty, so the goal is not crazy.",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Rafael",
+   "text": "The goal stays as it is for now. We'll see where the budget lands.",
+   "agenda_item": "sponsor_loss",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Celeste",
+   "text": "The budget. Howard?",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Howard",
+   "text": "Forty-six thousand budgeted. We've committed about thirty so far.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Rafael",
+   "text": "The biggest line is catering. It's ninety-five a head.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Howard",
+   "text": "Eighty-five. It's eighty-five a head, with the wine.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Rafael",
+   "text": "Eighty-five. Right, ninety-five was the first quote.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Celeste",
+   "text": "We are not serving people sandwiches at a gala.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Nkechi",
+   "text": "Nobody's saying sandwiches. A plated dinner without the third course, maybe?",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E017",
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Celeste",
+   "text": "The third course is the dessert. The dessert is the part people remember.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Rafael",
+   "text": "Fair enough.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Celeste",
+   "text": "When I was in Vienna last spring, the opera ball had seven courses. Seven.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Howard",
+   "text": "I'm sure it did.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Celeste",
+   "text": "And a waltz between every one. The children there learn to waltz at ten.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Nkechi",
+   "text": "Our children learn the Bach double concerto at ten. That's better than a waltz.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Rafael",
+   "text": "To be candid, I drafted a smaller version of the gala last night, just in case.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Celeste",
+   "text": "Of course you did.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Rafael",
+   "text": "Same venue, no printed program, digital auction catalog, and the string quartet instead of hiring a band. It saves about nine thousand.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Howard",
+   "text": "That's real money.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Celeste",
+   "text": "The band was the best part last year.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Nkechi",
+   "text": "The kids are the best part. The quartet is the kids.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Celeste",
+   "text": "Fine. The quartet, then. And the digital catalog. But we keep the dessert.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Howard",
+   "text": "I can live with that.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Rafael",
+   "text": "I'll send the revised budget to the board tonight.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Howard",
+   "text": "Send it to me first, please.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Rafael",
+   "text": "Of course. You first, then the board.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Nkechi",
+   "text": "Sorry, my signal was patchy through all of that. Where did we land?",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Celeste",
+   "text": "We cut the band. The quartet will play.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Nkechi",
+   "text": "Good. Then the program. Sixty students are performing in total.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Rafael",
+   "text": "Sixty is wonderful, but the program can't run longer than forty minutes. People start leaving.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Celeste",
+   "text": "Is there a way to let every section play something?",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Nkechi",
+   "text": "The full orchestra opens, then three short ensembles, then the soloist. Everyone plays at least once.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Howard",
+   "text": "Who's the soloist this year?",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Nkechi",
+   "text": "Mei-Lin, the cellist. She won the regional competition.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Celeste",
+   "text": "Then Mei-Lin closes the program. It's settled.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Rafael",
+   "text": "Somebody needs to talk to the venue about the stage size for the full orchestra.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Nkechi",
+   "text": "I've measured it twice. It fits if the timpani go stage left.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Howard",
+   "text": "Excuse me. Frog in my throat.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Rafael",
+   "text": "Tickets. How many have we sold?",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Nkechi",
+   "text": "About two hundred and fifty. It's going really well.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Celeste",
+   "text": "Excellent. Then we're nearly full.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Howard",
+   "text": "Out of three hundred seats.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Rafael",
+   "text": "At a hundred seventy-five a ticket, every remaining seat matters.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Celeste",
+   "text": "Could the parents of the performers sell tickets to their own families?",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Nkechi",
+   "text": "They already get two free tickets each. That's part of the problem.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Rafael",
+   "text": "Then we ask each family to bring one paying guest. That's the ask.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Howard",
+   "text": "I have the box office report open. It's a hundred and eighty-eight sold, not two fifty.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Nkechi",
+   "text": "Oh. I counted the free family tickets. Sorry.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Celeste",
+   "text": "A hundred and eighty-eight. Then we need that ask more than ever.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Nkechi",
+   "text": "I'll write to all the performer families tomorrow morning about the paying guest.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Celeste",
+   "text": "And mention the scholarships. Twenty-two students last year.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Howard",
+   "text": "Who's going to ask Hartwell if they'd still buy a table?",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Rafael",
+   "text": "The date hasn't moved, has it? Still the twelfth?",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E042",
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Celeste",
+   "text": "April twelfth. It never moves. Thank you all. We'll get through this.",
+   "agenda_item": "tickets",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 0,
+   "speaker": "Celeste",
+   "agenda_item": "sponsor_loss",
+   "fact_id": "F2",
+   "claimed_value": "$40,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Howard",
+   "agenda_item": "sponsor_loss",
+   "fact_id": "F2",
+   "claimed_value": "$25,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Celeste",
+   "agenda_item": "sponsor_loss",
+   "fact_id": "F2",
+   "claimed_value": "$25,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Rafael",
+   "agenda_item": "sponsor_loss",
+   "fact_id": "F3",
+   "claimed_value": "4",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Nkechi",
+   "agenda_item": "sponsor_loss",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 5,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 6,
+   "speaker": "Nkechi",
+   "agenda_item": "sponsor_loss",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Nkechi",
+   "agenda_item": "sponsor_loss",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Rafael",
+   "agenda_item": "sponsor_loss",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 13,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Howard",
+   "agenda_item": "sponsor_loss",
+   "fact_id": "F5",
+   "claimed_value": "$150,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 14,
+   "speaker": "Celeste",
+   "agenda_item": "sponsor_loss",
+   "fact_id": "F11",
+   "claimed_value": "$150,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Rafael",
+   "agenda_item": "sponsor_loss",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Celeste",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 17,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Howard",
+   "agenda_item": "budget",
+   "fact_id": "F4",
+   "claimed_value": "$46,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 18,
+   "speaker": "Rafael",
+   "agenda_item": "budget",
+   "fact_id": "F10",
+   "claimed_value": "$95",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Howard",
+   "agenda_item": "budget",
+   "fact_id": "F10",
+   "claimed_value": "$85",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Rafael",
+   "agenda_item": "budget",
+   "fact_id": "F10",
+   "claimed_value": "$85",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Nkechi",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 23,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Nkechi",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 25,
+   "speaker": "Celeste",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 4,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 35,
+   "speaker": "Celeste",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 37,
+   "speaker": "Rafael",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 39,
+   "speaker": "Rafael",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Nkechi",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 41,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Nkechi",
+   "agenda_item": "program",
+   "fact_id": "F9",
+   "claimed_value": "60",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Rafael",
+   "agenda_item": "program",
+   "fact_id": "F9",
+   "claimed_value": "60",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Celeste",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 45,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Howard",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 47,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 48,
+   "speaker": "Celeste",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Rafael",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 51,
+   "speaker": "Howard",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Rafael",
+   "agenda_item": "tickets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 53,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 53,
+   "speaker": "Nkechi",
+   "agenda_item": "tickets",
+   "fact_id": "F6",
+   "claimed_value": "250",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 55,
+   "speaker": "Howard",
+   "agenda_item": "tickets",
+   "fact_id": "F7",
+   "claimed_value": "300",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 56,
+   "speaker": "Rafael",
+   "agenda_item": "tickets",
+   "fact_id": "F8",
+   "claimed_value": "$175",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 57,
+   "speaker": "Celeste",
+   "agenda_item": "tickets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 59,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 59,
+   "speaker": "Rafael",
+   "agenda_item": "tickets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 60,
+   "speaker": "Howard",
+   "agenda_item": "tickets",
+   "fact_id": "F6",
+   "claimed_value": "188",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 62,
+   "speaker": "Celeste",
+   "agenda_item": "tickets",
+   "fact_id": "F6",
+   "claimed_value": "188",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 63,
+   "speaker": "Nkechi",
+   "agenda_item": "tickets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 64,
+   "speaker": "Celeste",
+   "agenda_item": "tickets",
+   "fact_id": "F12",
+   "claimed_value": "22",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 65,
+   "speaker": "Howard",
+   "agenda_item": "tickets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 66,
+   "speaker": "Rafael",
+   "agenda_item": "tickets",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 67,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 66,
+   "speaker": "Rafael",
+   "agenda_item": "tickets",
+   "fact_id": "F1",
+   "claimed_value": "April 12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 67,
+   "speaker": "Celeste",
+   "agenda_item": "tickets",
+   "fact_id": "F1",
+   "claimed_value": "April 12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Celeste",
+   "text": "Thank you for joining at short notice. Hartwell Partners has pulled out. We've lost forty thousand dollars, just like that.",
+   "start_s": 0.5,
+   "end_s": 7.773
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Howard",
+   "text": "Twenty-five. Their pledge was twenty-five thousand. I have the letter in front of me.",
+   "start_s": 8.107,
+   "end_s": 14.33
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Celeste",
+   "text": "Twenty-five, forty, it's a catastrophe either way.",
+   "start_s": 15.377,
+   "end_s": 17.923
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Rafael",
+   "text": "To be candid, it's serious, but it isn't a catastrophe. We still have four sponsors.",
+   "start_s": 18.887,
+   "end_s": 24.887
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Nkechi",
+   "text": "Did they say why they pulled out?",
+   "start_s": 25.342,
+   "end_s": 27.813
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Celeste",
+   "text": "Something about a restructuring. I don't know the details.",
+   "start_s": 28.508,
+   "end_s": 31.781
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Nkechi",
+   "text": "Does the press know yet?",
+   "start_s": 32.43,
+   "end_s": 34.195
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Howard",
+   "text": "I said at the board retreat that one sponsor was a third of our income. Nobody wanted to hear it.",
+   "start_s": 35.047,
+   "end_s": 43.935
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Celeste",
+   "text": "Howard, this isn't the moment for I-told-you-so.",
+   "start_s": 44.924,
+   "end_s": 47.469
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Howard",
+   "text": "It's exactly the moment. Otherwise we do it again next year.",
+   "start_s": 47.763,
+   "end_s": 52.652
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Rafael",
+   "text": "Can we focus on what we can control?",
+   "start_s": 52.88,
+   "end_s": 56.08
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Nkechi",
+   "text": "My train's going into a tunnel, I might cut out for a minute.",
+   "start_s": 57.116,
+   "end_s": 61.704
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Rafael",
+   "text": "What's the revenue goal still, with this hole in it?",
+   "start_s": 62.337,
+   "end_s": 66.337
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Howard",
+   "text": "One hundred and fifty thousand, on paper. Realistically, less.",
+   "start_s": 67.299,
+   "end_s": 71.299
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Celeste",
+   "text": "Last year we netted a hundred and fifty, so the goal is not crazy.",
+   "start_s": 71.501,
+   "end_s": 76.592
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Rafael",
+   "text": "The goal stays as it is for now. We'll see where the budget lands.",
+   "start_s": 77.237,
+   "end_s": 82.837
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Celeste",
+   "text": "The budget. Howard?",
+   "start_s": 83.759,
+   "end_s": 84.849
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Howard",
+   "text": "Forty-six thousand budgeted. We've committed about thirty so far.",
+   "start_s": 85.278,
+   "end_s": 89.278
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Rafael",
+   "text": "The biggest line is catering. It's ninety-five a head.",
+   "start_s": 90.423,
+   "end_s": 94.023
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Howard",
+   "text": "Eighty-five. It's eighty-five a head, with the wine.",
+   "start_s": 95.124,
+   "end_s": 98.68
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Rafael",
+   "text": "Eighty-five. Right, ninety-five was the first quote.",
+   "start_s": 98.911,
+   "end_s": 101.711
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Celeste",
+   "text": "We are not serving people sandwiches at a gala.",
+   "start_s": 101.936,
+   "end_s": 105.209
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Nkechi",
+   "text": "Nobody's saying sandwiches. A plated dinner without the third course, maybe?",
+   "start_s": 105.95,
+   "end_s": 109.833
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Celeste",
+   "text": "The third course is the dessert. The dessert is the part people remember.",
+   "start_s": 110.972,
+   "end_s": 115.699
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Rafael",
+   "text": "Fair enough.",
+   "start_s": 116.28,
+   "end_s": 117.08
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Celeste",
+   "text": "When I was in Vienna last spring, the opera ball had seven courses. Seven.",
+   "start_s": 117.497,
+   "end_s": 122.588
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Howard",
+   "text": "I'm sure it did.",
+   "start_s": 123.21,
+   "end_s": 124.988
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Celeste",
+   "text": "And a waltz between every one. The children there learn to waltz at ten.",
+   "start_s": 125.217,
+   "end_s": 130.308
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Nkechi",
+   "text": "Our children learn the Bach double concerto at ten. That's better than a waltz.",
+   "start_s": 130.73,
+   "end_s": 135.671
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Rafael",
+   "text": "To be candid, I drafted a smaller version of the gala last night, just in case.",
+   "start_s": 136.309,
+   "end_s": 142.709
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Celeste",
+   "text": "Of course you did.",
+   "start_s": 143.405,
+   "end_s": 144.859
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Rafael",
+   "text": "Same venue, no printed program, digital auction catalog, and the string quartet instead of hiring a band. It saves about nine thousand.",
+   "start_s": 145.292,
+   "end_s": 154.092
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Howard",
+   "text": "That's real money.",
+   "start_s": 154.523,
+   "end_s": 155.856
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Celeste",
+   "text": "The band was the best part last year.",
+   "start_s": 156.275,
+   "end_s": 159.184
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Nkechi",
+   "text": "The kids are the best part. The quartet is the kids.",
+   "start_s": 159.844,
+   "end_s": 163.726
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Celeste",
+   "text": "Fine. The quartet, then. And the digital catalog. But we keep the dessert.",
+   "start_s": 164.216,
+   "end_s": 168.943
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Howard",
+   "text": "I can live with that.",
+   "start_s": 169.164,
+   "end_s": 171.387
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Rafael",
+   "text": "I'll send the revised budget to the board tonight.",
+   "start_s": 172.425,
+   "end_s": 176.025
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Howard",
+   "text": "Send it to me first, please.",
+   "start_s": 176.781,
+   "end_s": 179.448
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Rafael",
+   "text": "Of course. You first, then the board.",
+   "start_s": 180.29,
+   "end_s": 183.09
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Nkechi",
+   "text": "Sorry, my signal was patchy through all of that. Where did we land?",
+   "start_s": 183.476,
+   "end_s": 188.064
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Celeste",
+   "text": "We cut the band. The quartet will play.",
+   "start_s": 189.257,
+   "end_s": 192.166
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Nkechi",
+   "text": "Good. Then the program. Sixty students are performing in total.",
+   "start_s": 193.226,
+   "end_s": 196.755
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Rafael",
+   "text": "Sixty is wonderful, but the program can't run longer than forty minutes. People start leaving.",
+   "start_s": 197.076,
+   "end_s": 203.076
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Celeste",
+   "text": "Is there a way to let every section play something?",
+   "start_s": 203.609,
+   "end_s": 207.245
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Nkechi",
+   "text": "The full orchestra opens, then three short ensembles, then the soloist. Everyone plays at least once.",
+   "start_s": 208.166,
+   "end_s": 213.814
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Howard",
+   "text": "Who's the soloist this year?",
+   "start_s": 214.725,
+   "end_s": 216.947
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Nkechi",
+   "text": "Mei-Lin, the cellist. She won the regional competition.",
+   "start_s": 218.083,
+   "end_s": 220.907
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Celeste",
+   "text": "Then Mei-Lin closes the program. It's settled.",
+   "start_s": 221.529,
+   "end_s": 224.075
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Rafael",
+   "text": "Somebody needs to talk to the venue about the stage size for the full orchestra.",
+   "start_s": 225.105,
+   "end_s": 231.105
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Nkechi",
+   "text": "I've measured it twice. It fits if the timpani go stage left.",
+   "start_s": 231.975,
+   "end_s": 236.211
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Howard",
+   "text": "Excuse me. Frog in my throat.",
+   "start_s": 236.714,
+   "end_s": 239.381
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Rafael",
+   "text": "Tickets. How many have we sold?",
+   "start_s": 240.169,
+   "end_s": 242.569
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Nkechi",
+   "text": "About two hundred and fifty. It's going really well.",
+   "start_s": 243.651,
+   "end_s": 246.828
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Celeste",
+   "text": "Excellent. Then we're nearly full.",
+   "start_s": 247.874,
+   "end_s": 249.692
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Howard",
+   "text": "Out of three hundred seats.",
+   "start_s": 250.397,
+   "end_s": 252.62
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Rafael",
+   "text": "At a hundred seventy-five a ticket, every remaining seat matters.",
+   "start_s": 253.409,
+   "end_s": 257.409
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Celeste",
+   "text": "Could the parents of the performers sell tickets to their own families?",
+   "start_s": 257.644,
+   "end_s": 262.007
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Nkechi",
+   "text": "They already get two free tickets each. That's part of the problem.",
+   "start_s": 262.45,
+   "end_s": 266.685
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Rafael",
+   "text": "Then we ask each family to bring one paying guest. That's the ask.",
+   "start_s": 267.682,
+   "end_s": 272.882
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Howard",
+   "text": "I have the box office report open. It's a hundred and eighty-eight sold, not two fifty.",
+   "start_s": 273.496,
+   "end_s": 280.607
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Nkechi",
+   "text": "Oh. I counted the free family tickets. Sorry.",
+   "start_s": 280.98,
+   "end_s": 283.804
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Celeste",
+   "text": "A hundred and eighty-eight. Then we need that ask more than ever.",
+   "start_s": 284.553,
+   "end_s": 288.916
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Nkechi",
+   "text": "I'll write to all the performer families tomorrow morning about the paying guest.",
+   "start_s": 289.819,
+   "end_s": 294.407
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Celeste",
+   "text": "And mention the scholarships. Twenty-two students last year.",
+   "start_s": 295.281,
+   "end_s": 298.191
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Howard",
+   "text": "Who's going to ask Hartwell if they'd still buy a table?",
+   "start_s": 298.766,
+   "end_s": 303.655
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Rafael",
+   "text": "The date hasn't moved, has it? Still the twelfth?",
+   "start_s": 304.294,
+   "end_s": 307.894
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Celeste",
+   "text": "April twelfth. It never moves. Thank you all. We'll get through this.",
+   "start_s": 308.602,
+   "end_s": 312.966
+  }
+ ]
+}

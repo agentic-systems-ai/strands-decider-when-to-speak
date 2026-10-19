@@ -1,0 +1,1822 @@
+{
+ "meeting_id": "garden-allotment-d8-s1",
+ "config": {
+  "theme": "Community garden committee: plots, water and the spring fair",
+  "domain_pack": "community_group",
+  "drama": 0.8,
+  "seed": 1,
+  "duration_min": 4.4,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   0,
+   14,
+   26,
+   50,
+   59
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "Community garden committee: plots, water and the spring fair",
+  "personas": [
+   {
+    "name": "Doreen",
+    "role": "Chair",
+    "goals": "Get through the meeting without anyone storming out",
+    "hidden_agenda": "Not standing for re-election and hasn't said so",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Marco",
+    "role": "Plot holder on plot 22, the subject of the complaint",
+    "goals": "Clear his name",
+    "hidden_agenda": "Did use a slug pellet product, not knowing it wasn't organic",
+    "verbosity": 4,
+    "wpm": 175,
+    "catchphrases": [
+     "with respect"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Fatima",
+    "role": "Secretary",
+    "goals": "Keep the record straight",
+    "hidden_agenda": "Standing for chair",
+    "verbosity": 2,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Gus",
+    "role": "Founding member, forty years on the allotments",
+    "goals": "Keep things the way they were",
+    "hidden_agenda": "Has his own leaky hose he doesn't mention",
+    "verbosity": 4,
+    "wpm": 130,
+    "catchphrases": [
+     "back in my day"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Allotment society - committee meeting",
+   "org": "Fairview Allotment Society (fictional)",
+   "agenda": [
+    {
+     "id": "complaint",
+     "title": "The pesticide complaint",
+     "goal": "Hear the complaint about plot 22 and decide what happens next",
+     "timebox_min": 1.5
+    },
+    {
+     "id": "water",
+     "title": "Water use",
+     "goal": "Understand why the water bill jumped and what to do",
+     "timebox_min": 1.29
+    },
+    {
+     "id": "fair",
+     "title": "Spring fair",
+     "goal": "Confirm the date and who runs what",
+     "timebox_min": 0.76
+    },
+    {
+     "id": "elections",
+     "title": "Committee elections",
+     "goal": "Agree how the election will run",
+     "timebox_min": 0.86
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "plot_holders",
+     "statement": "Plot holders = 48",
+     "value": "48"
+    },
+    {
+     "id": "F2",
+     "key": "water_use_increase",
+     "statement": "Water use is up 35% on last year",
+     "value": "35%"
+    },
+    {
+     "id": "F3",
+     "key": "water_bill",
+     "statement": "Last quarter's water bill = $2,240",
+     "value": "$2,240"
+    },
+    {
+     "id": "F4",
+     "key": "warnings_issued",
+     "statement": "Rule-violation warnings issued this year = 3",
+     "value": "3"
+    },
+    {
+     "id": "F5",
+     "key": "organic_rule_year",
+     "statement": "The organic-only rule was adopted in 2019",
+     "value": "2019"
+    },
+    {
+     "id": "F6",
+     "key": "fair_date",
+     "statement": "Spring fair = Saturday, May 17",
+     "value": "May 17"
+    },
+    {
+     "id": "F7",
+     "key": "fair_profit",
+     "statement": "Spring fair profit last year = $1,380",
+     "value": "$1,380"
+    },
+    {
+     "id": "F8",
+     "key": "committee_seats",
+     "statement": "Committee seats up for election = 5",
+     "value": "5"
+    },
+    {
+     "id": "F9",
+     "key": "candidates",
+     "statement": "Candidates standing = 7",
+     "value": "7"
+    },
+    {
+     "id": "F10",
+     "key": "annual_dues",
+     "statement": "Annual dues = $60",
+     "value": "$60"
+    },
+    {
+     "id": "F11",
+     "key": "hose_taps",
+     "statement": "Shared hose taps = 12",
+     "value": "12"
+    },
+    {
+     "id": "F12",
+     "key": "insurance_renewal",
+     "statement": "Insurance renewal = $410",
+     "value": "$410"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "complaint",
+    "summary": "Plot 22; tempers; Gus misdates the organic rule and nobody corrects him",
+    "n_turns": 21,
+    "events": []
+   },
+   {
+    "agenda_item": "water",
+    "summary": "The bill; Marco plays down the rise; Gus overcounts the plot holders and is corrected much later",
+    "n_turns": 18,
+    "events": []
+   },
+   {
+    "agenda_item": "fair",
+    "summary": "Date and jobs, quickly",
+    "n_turns": 9,
+    "events": []
+   },
+   {
+    "agenda_item": "elections",
+    "summary": "Five seats, seven candidates; Doreen's news slips out",
+    "n_turns": 14,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Doreen",
+   "text": "Right. The complaint. Three plot holders say plot twenty-two used chemical slug pellets. Marco, you're here, so you can respond.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Marco",
+   "text": "With respect, this is a witch hunt. I grow vegetables. That's it.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Gus",
+   "text": "The organic rule's been in since twenty fifteen. Everyone knows it.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Marco",
+   "text": "I know the rule.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Fatima",
+   "text": "The complaint says there were blue pellets around the brassicas. Blue pellets are metaldehyde.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Marco",
+   "text": "They were from the garden center! The bag said \"pet friendly\".",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Doreen",
+   "text": "Do you still have the bag?",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Marco",
+   "text": "In the shed. Yes.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Fatima",
+   "text": "Pet friendly doesn't mean organic. That's the problem with those bags.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Marco",
+   "text": "Then the garden center lied to me, not the other way around.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Gus",
+   "text": "Back in my day you'd get one warning and then you'd be out.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Doreen",
+   "text": "How many warnings have we given this year?",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Fatima",
+   "text": "Three. None of them to Marco.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Gus",
+   "text": "Three this year. That's three too many.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Marco",
+   "text": "So I'm being judged on everyone else's warnings now?",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Doreen",
+   "text": "Nobody's judging. Let's get the facts.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Fatima",
+   "text": "Could you bring the bag to the shed on Saturday so we can read the label?",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Marco",
+   "text": "Fine. Saturday morning.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Doreen",
+   "text": "Then it's a formal warning only if the label shows metaldehyde. Otherwise nothing.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Marco",
+   "text": "That's all I wanted. A fair hearing.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Gus",
+   "text": "Hmph.",
+   "agenda_item": "complaint",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Doreen",
+   "text": "The water. Fatima?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Fatima",
+   "text": "Last quarter's bill was two thousand two hundred and forty. Usage is up thirty-five percent on last year.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E010",
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Marco",
+   "text": "With respect, it's barely up. Ten percent, maybe, with the heat.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Fatima",
+   "text": "It's thirty-five. I read the meter myself.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Gus",
+   "text": "With sixty plot holders, it's no surprise. More people, more water.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Doreen",
+   "text": "Does anyone know of a leak? A tap left running?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Gus",
+   "text": "Back in my day we used watering cans. No hoses at all.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Marco",
+   "text": "There are twelve taps, Gus. It's not the eighteen hundreds.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Fatima",
+   "text": "If it goes on like this, dues won't cover it. Dues are sixty a year.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Doreen",
+   "text": "Are we raising dues, then?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Gus",
+   "text": "Over my dead body.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Marco",
+   "text": "Maybe a water surcharge for the big plots?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E019",
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Fatima",
+   "text": "That's complicated to measure.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Doreen",
+   "text": "We'll put timers on the hoses first and see what the next bill says.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Fatima",
+   "text": "I'll order the hose timers this week, twelve of them.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E022",
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Doreen",
+   "text": "My phone keeps buzzing, it's my daughter. Ignore it.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Fatima",
+   "text": "Gus, for the record, the register has forty-eight plot holders. Not sixty.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Gus",
+   "text": "Forty-eight. Well. It feels like sixty.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Doreen",
+   "text": "The fair. It's Saturday the seventeenth of May.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Fatima",
+   "text": "And last year we made about two thousand.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Gus",
+   "text": "Was it that much? It felt quieter.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Fatima",
+   "text": "Sorry, I'm looking at the accounts. Thirteen eighty. I had the gross, not the profit.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Marco",
+   "text": "I can run the plant stall again. It sold out last year.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Doreen",
+   "text": "Thank you, Marco. That would help.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Gus",
+   "text": "It'd be nice if somebody sorted the tea urn this time. It was cold by eleven.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Fatima",
+   "text": "The urn's mine. I'll get the new one from the church hall.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Gus",
+   "text": "Good. The plant stall and the tea are covered, then.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Doreen",
+   "text": "The elections. Fatima, remind us.",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Fatima",
+   "text": "Five seats, seven candidates. Ballots at the fair, counted that evening.",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [
+    "E034",
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Gus",
+   "text": "Seven? Who are the seven?",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [
+    "E036",
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Fatima",
+   "text": "The list goes up on the shed door on Monday.",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Marco",
+   "text": "Is Doreen standing again?",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Doreen",
+   "text": "Well.",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Fatima",
+   "text": "She's not. She told me last week.",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Gus",
+   "text": "You're not? After all this time?",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Doreen",
+   "text": "No. It's someone else's turn. I'm tired, Gus.",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Marco",
+   "text": "With respect, you've been a good chair. Even tonight.",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Doreen",
+   "text": "Thank you, Marco. Ballots at the fair, counted that evening, as Fatima said. That's how we'll do it.",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Gus",
+   "text": "Who's counting the ballots? It shouldn't be a candidate.",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Doreen",
+   "text": "Right. I think that's everything. Thank you all for coming.",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Fatima",
+   "text": "Goodnight.",
+   "agenda_item": "elections",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 2,
+   "speaker": "Gus",
+   "agenda_item": "complaint",
+   "fact_id": "F5",
+   "claimed_value": "2015",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Doreen",
+   "agenda_item": "complaint",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 7,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Doreen",
+   "agenda_item": "complaint",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 12,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Fatima",
+   "agenda_item": "complaint",
+   "fact_id": "F4",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Gus",
+   "agenda_item": "complaint",
+   "fact_id": "F4",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Fatima",
+   "agenda_item": "complaint",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 17,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 17,
+   "speaker": "Marco",
+   "agenda_item": "complaint",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 18,
+   "speaker": "Doreen",
+   "agenda_item": "complaint",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Doreen",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 22,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Fatima",
+   "agenda_item": "water",
+   "fact_id": "F3",
+   "claimed_value": "$2,240",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Fatima",
+   "agenda_item": "water",
+   "fact_id": "F2",
+   "claimed_value": "35%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 23,
+   "speaker": "Marco",
+   "agenda_item": "water",
+   "fact_id": "F2",
+   "claimed_value": "10%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Fatima",
+   "agenda_item": "water",
+   "fact_id": "F2",
+   "claimed_value": "35%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 25,
+   "speaker": "Gus",
+   "agenda_item": "water",
+   "fact_id": "F1",
+   "claimed_value": "60",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 26,
+   "speaker": "Doreen",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Marco",
+   "agenda_item": "water",
+   "fact_id": "F11",
+   "claimed_value": "12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Fatima",
+   "agenda_item": "water",
+   "fact_id": "F10",
+   "claimed_value": "$60",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Doreen",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 34,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Marco",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Marco",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 33,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Doreen",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 35,
+   "speaker": "Fatima",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Fatima",
+   "agenda_item": "water",
+   "fact_id": "F11",
+   "claimed_value": "12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Doreen",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Fatima",
+   "agenda_item": "water",
+   "fact_id": "F1",
+   "claimed_value": "48",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Gus",
+   "agenda_item": "water",
+   "fact_id": "F1",
+   "claimed_value": "48",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Doreen",
+   "agenda_item": "fair",
+   "fact_id": "F6",
+   "claimed_value": "May 17",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 40,
+   "speaker": "Fatima",
+   "agenda_item": "fair",
+   "fact_id": "F7",
+   "claimed_value": "$2,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Gus",
+   "agenda_item": "fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 42,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Fatima",
+   "agenda_item": "fair",
+   "fact_id": "F7",
+   "claimed_value": "$1,380",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 43,
+   "speaker": "Marco",
+   "agenda_item": "fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Gus",
+   "agenda_item": "fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 46,
+   "speaker": "Fatima",
+   "agenda_item": "fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Fatima",
+   "agenda_item": "elections",
+   "fact_id": "F8",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Fatima",
+   "agenda_item": "elections",
+   "fact_id": "F9",
+   "claimed_value": "7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 50,
+   "speaker": "Gus",
+   "agenda_item": "elections",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Gus",
+   "agenda_item": "elections",
+   "fact_id": "F9",
+   "claimed_value": "7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Marco",
+   "agenda_item": "elections",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 54,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 55,
+   "speaker": "Gus",
+   "agenda_item": "elections",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 56,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 58,
+   "speaker": "Doreen",
+   "agenda_item": "elections",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 59,
+   "speaker": "Gus",
+   "agenda_item": "elections",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Doreen",
+   "text": "Right. The complaint. Three plot holders say plot twenty-two used chemical slug pellets. Marco, you're here, so you can respond.",
+   "start_s": 0.5,
+   "end_s": 8.5
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Marco",
+   "text": "With respect, this is a witch hunt. I grow vegetables. That's it.",
+   "start_s": 8.834,
+   "end_s": 12.949
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Gus",
+   "text": "The organic rule's been in since twenty fifteen. Everyone knows it.",
+   "start_s": 13.996,
+   "end_s": 19.073
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Marco",
+   "text": "I know the rule.",
+   "start_s": 20.037,
+   "end_s": 21.408
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Fatima",
+   "text": "The complaint says there were blue pellets around the brassicas. Blue pellets are metaldehyde.",
+   "start_s": 21.863,
+   "end_s": 27.282
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Marco",
+   "text": "They were from the garden center! The bag said \"pet friendly\".",
+   "start_s": 27.977,
+   "end_s": 31.749
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Doreen",
+   "text": "Do you still have the bag?",
+   "start_s": 32.398,
+   "end_s": 34.798
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Marco",
+   "text": "In the shed. Yes.",
+   "start_s": 35.65,
+   "end_s": 37.021
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Fatima",
+   "text": "Pet friendly doesn't mean organic. That's the problem with those bags.",
+   "start_s": 38.01,
+   "end_s": 42.268
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Marco",
+   "text": "Then the garden center lied to me, not the other way around.",
+   "start_s": 42.562,
+   "end_s": 46.676
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Gus",
+   "text": "Back in my day you'd get one warning and then you'd be out.",
+   "start_s": 46.904,
+   "end_s": 52.904
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Doreen",
+   "text": "How many warnings have we given this year?",
+   "start_s": 53.94,
+   "end_s": 57.14
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Fatima",
+   "text": "Three. None of them to Marco.",
+   "start_s": 57.773,
+   "end_s": 60.095
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Gus",
+   "text": "Three this year. That's three too many.",
+   "start_s": 61.057,
+   "end_s": 64.288
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Marco",
+   "text": "So I'm being judged on everyone else's warnings now?",
+   "start_s": 64.49,
+   "end_s": 67.576
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Doreen",
+   "text": "Nobody's judging. Let's get the facts.",
+   "start_s": 68.221,
+   "end_s": 70.621
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Fatima",
+   "text": "Could you bring the bag to the shed on Saturday so we can read the label?",
+   "start_s": 71.543,
+   "end_s": 77.736
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Marco",
+   "text": "Fine. Saturday morning.",
+   "start_s": 78.165,
+   "end_s": 79.193
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Doreen",
+   "text": "Then it's a formal warning only if the label shows metaldehyde. Otherwise nothing.",
+   "start_s": 80.338,
+   "end_s": 85.538
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Marco",
+   "text": "That's all I wanted. A fair hearing.",
+   "start_s": 86.639,
+   "end_s": 89.039
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Gus",
+   "text": "Hmph.",
+   "start_s": 89.27,
+   "end_s": 89.731
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Doreen",
+   "text": "The water. Fatima?",
+   "start_s": 89.956,
+   "end_s": 91.156
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Fatima",
+   "text": "Last quarter's bill was two thousand two hundred and forty. Usage is up thirty-five percent on last year.",
+   "start_s": 91.897,
+   "end_s": 98.865
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Marco",
+   "text": "With respect, it's barely up. Ten percent, maybe, with the heat.",
+   "start_s": 100.004,
+   "end_s": 103.776
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Fatima",
+   "text": "It's thirty-five. I read the meter myself.",
+   "start_s": 104.357,
+   "end_s": 107.067
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Gus",
+   "text": "With sixty plot holders, it's no surprise. More people, more water.",
+   "start_s": 107.484,
+   "end_s": 112.561
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Doreen",
+   "text": "Does anyone know of a leak? A tap left running?",
+   "start_s": 113.183,
+   "end_s": 117.183
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Gus",
+   "text": "Back in my day we used watering cans. No hoses at all.",
+   "start_s": 117.412,
+   "end_s": 122.951
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Marco",
+   "text": "There are twelve taps, Gus. It's not the eighteen hundreds.",
+   "start_s": 123.373,
+   "end_s": 126.801
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Fatima",
+   "text": "If it goes on like this, dues won't cover it. Dues are sixty a year.",
+   "start_s": 127.439,
+   "end_s": 133.245
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Doreen",
+   "text": "Are we raising dues, then?",
+   "start_s": 133.941,
+   "end_s": 135.941
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Gus",
+   "text": "Over my dead body.",
+   "start_s": 136.374,
+   "end_s": 138.22
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Marco",
+   "text": "Maybe a water surcharge for the big plots?",
+   "start_s": 138.651,
+   "end_s": 141.394
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Fatima",
+   "text": "That's complicated to measure.",
+   "start_s": 141.813,
+   "end_s": 143.361
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Doreen",
+   "text": "We'll put timers on the hoses first and see what the next bill says.",
+   "start_s": 144.021,
+   "end_s": 149.621
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Fatima",
+   "text": "I'll order the hose timers this week, twelve of them.",
+   "start_s": 150.111,
+   "end_s": 153.982
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Doreen",
+   "text": "My phone keeps buzzing, it's my daughter. Ignore it.",
+   "start_s": 154.203,
+   "end_s": 157.803
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Fatima",
+   "text": "Gus, for the record, the register has forty-eight plot holders. Not sixty.",
+   "start_s": 158.841,
+   "end_s": 163.486
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Gus",
+   "text": "Forty-eight. Well. It feels like sixty.",
+   "start_s": 164.242,
+   "end_s": 167.012
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Doreen",
+   "text": "The fair. It's Saturday the seventeenth of May.",
+   "start_s": 167.854,
+   "end_s": 171.054
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Fatima",
+   "text": "And last year we made about two thousand.",
+   "start_s": 171.44,
+   "end_s": 174.537
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Gus",
+   "text": "Was it that much? It felt quieter.",
+   "start_s": 175.73,
+   "end_s": 178.96
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Fatima",
+   "text": "Sorry, I'm looking at the accounts. Thirteen eighty. I had the gross, not the profit.",
+   "start_s": 180.02,
+   "end_s": 185.826
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Marco",
+   "text": "I can run the plant stall again. It sold out last year.",
+   "start_s": 186.147,
+   "end_s": 190.261
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Doreen",
+   "text": "Thank you, Marco. That would help.",
+   "start_s": 190.794,
+   "end_s": 193.194
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Gus",
+   "text": "It'd be nice if somebody sorted the tea urn this time. It was cold by eleven.",
+   "start_s": 194.115,
+   "end_s": 201.5
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Fatima",
+   "text": "The urn's mine. I'll get the new one from the church hall.",
+   "start_s": 202.411,
+   "end_s": 207.056
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Gus",
+   "text": "Good. The plant stall and the tea are covered, then.",
+   "start_s": 208.192,
+   "end_s": 212.808
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Doreen",
+   "text": "The elections. Fatima, remind us.",
+   "start_s": 213.43,
+   "end_s": 215.43
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Fatima",
+   "text": "Five seats, seven candidates. Ballots at the fair, counted that evening.",
+   "start_s": 216.46,
+   "end_s": 220.718
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Gus",
+   "text": "Seven? Who are the seven?",
+   "start_s": 221.588,
+   "end_s": 223.896
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Fatima",
+   "text": "The list goes up on the shed door on Monday.",
+   "start_s": 224.399,
+   "end_s": 228.27
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Marco",
+   "text": "Is Doreen standing again?",
+   "start_s": 229.058,
+   "end_s": 230.429
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Doreen",
+   "text": "Well.",
+   "start_s": 231.511,
+   "end_s": 231.911
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Fatima",
+   "text": "She's not. She told me last week.",
+   "start_s": 232.957,
+   "end_s": 235.667
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Gus",
+   "text": "You're not? After all this time?",
+   "start_s": 236.372,
+   "end_s": 239.142
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Doreen",
+   "text": "No. It's someone else's turn. I'm tired, Gus.",
+   "start_s": 239.931,
+   "end_s": 243.131
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Marco",
+   "text": "With respect, you've been a good chair. Even tonight.",
+   "start_s": 243.366,
+   "end_s": 246.451
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Doreen",
+   "text": "Thank you, Marco. Ballots at the fair, counted that evening, as Fatima said. That's how we'll do it.",
+   "start_s": 246.894,
+   "end_s": 254.094
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Gus",
+   "text": "Who's counting the ballots? It shouldn't be a candidate.",
+   "start_s": 255.091,
+   "end_s": 259.245
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Doreen",
+   "text": "Right. I think that's everything. Thank you all for coming.",
+   "start_s": 259.859,
+   "end_s": 263.859
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Fatima",
+   "text": "Goodnight.",
+   "start_s": 264.232,
+   "end_s": 264.619
+  }
+ ]
+}

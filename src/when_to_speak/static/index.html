@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knows When to Speak</title>
+<style>
+  :root {
+    --bg: #0f1216; --panel: #161b22; --panel-2: #1c222b; --line: #2a313c;
+    --text: #e6e9ee; --muted: #8b95a3; --faint: #5b6573;
+    --speak: #4f9cff; --note: #e3b341; --silent: #3a4350; --good: #3fb950; --bad: #f85149;
+    --agent: #a371f7;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--text);
+    font: 14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  button, select { font: inherit; color: var(--text); background: var(--panel-2); border: 1px solid var(--line);
+    border-radius: 6px; padding: 5px 10px; cursor: pointer; }
+  button:hover, select:hover { border-color: var(--muted); }
+  button.primary { background: var(--speak); border-color: var(--speak); color: #fff; font-weight: 600; }
+  button:disabled { opacity: .45; cursor: default; }
+  .app { display: grid; grid-template-rows: auto auto 1fr; height: 100vh; }
+
+  header { display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-bottom: 1px solid var(--line);
+    flex-wrap: wrap; }
+  .brand { font-weight: 700; font-size: 16px; margin-right: 8px; white-space: nowrap; }
+  .brand span { color: var(--speak); }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .seg button { border: 0; border-radius: 0; background: transparent; }
+  .seg button.on { background: var(--panel-2); color: var(--text); box-shadow: inset 0 -2px 0 var(--speak); }
+  .seg button:not(.on) { color: var(--muted); }
+  label.tog { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); cursor: pointer; white-space: nowrap; }
+  .spacer { flex: 1; }
+  #meeting { max-width: 380px; text-overflow: ellipsis; }
+
+  .stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: var(--line);
+    border-bottom: 1px solid var(--line); }
+  .stat { background: var(--panel); padding: 8px 14px; }
+  .stat .k { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
+  .stat .v { font-size: 20px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .stat .s { color: var(--faint); font-size: 12px; }
+
+  main { display: grid; grid-template-columns: minmax(220px, 1fr) minmax(360px, 2.1fr) minmax(300px, 1.4fr);
+    min-height: 0; }
+  main > section { min-height: 0; overflow: auto; padding: 12px 14px; border-right: 1px solid var(--line); }
+  main > section:last-child { border-right: 0; }
+  h2 { font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 6px 0 8px; }
+  h2 + * { margin-top: 0; }
+
+  .meeting-title { font-size: 15px; font-weight: 650; margin: 2px 0 2px; }
+  .meeting-org { color: var(--muted); margin-bottom: 12px; }
+  ol.agenda { list-style: none; padding: 0; margin: 0 0 14px; }
+  ol.agenda li { padding: 6px 8px; border-radius: 6px; margin-bottom: 4px; border: 1px solid transparent; color: var(--muted); }
+  ol.agenda li b { color: var(--text); font-weight: 600; }
+  ol.agenda li.now { border-color: var(--speak); background: rgba(79,156,255,.08); color: var(--text); }
+  ol.agenda li .tb { float: right; color: var(--faint); font-size: 12px; }
+  .facts { font-size: 13px; }
+  .fact { padding: 5px 0; border-bottom: 1px dashed var(--line); }
+  .fact code { color: var(--faint); font-size: 11px; margin-right: 6px; }
+  .people { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .person { display: flex; align-items: center; gap: 6px; font-size: 13px; }
+  .av { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 700;
+    font-size: 12px; color: #fff; flex: none; }
+
+  #transcript { scroll-behavior: smooth; }
+  .ln { display: grid; grid-template-columns: 30px 1fr; gap: 8px; padding: 6px 4px; border-radius: 8px; }
+  .ln.latest { background: var(--panel); }
+  .ln .who { font-weight: 600; font-size: 13px; }
+  .ln .who .t { color: var(--faint); font-weight: 400; font-size: 11px; margin-left: 6px; }
+  .ln .txt { margin: 1px 0 4px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; align-items: center; min-height: 20px; }
+  .chip { font-size: 11px; padding: 1px 7px; border-radius: 10px; border: 1px solid var(--line); color: var(--muted);
+    white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .chip.silent { color: var(--faint); }
+  .chip.note { color: var(--note); border-color: rgba(227,179,65,.5); }
+  .chip.speak { color: #fff; background: var(--speak); border-color: var(--speak); }
+  .chip.llm { color: var(--agent); border-color: rgba(163,113,247,.5); }
+  .chip.gold { color: var(--good); border-color: rgba(63,185,80,.45); }
+  .chip.trap { color: var(--bad); border-color: rgba(248,81,73,.45); }
+  .chip.wait { color: var(--muted); border-style: dashed; }
+  .hide-gold .chip.gold, .hide-gold .chip.trap { display: none; }
+  .ln.agent { grid-template-columns: 30px 1fr; background: rgba(163,113,247,.12); border: 1px solid rgba(163,113,247,.45);
+    margin: 4px 0; animation: pop .35s ease-out; }
+  .ln.agent .who { color: var(--agent); }
+  .ln.agent .txt { font-size: 15px; font-weight: 550; }
+  @keyframes pop { from { transform: scale(.97); opacity: 0; } to { transform: none; opacity: 1; } }
+  .empty { color: var(--faint); padding: 30px 8px; text-align: center; }
+
+  .gate-head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 6px; }
+  .verdict { font-weight: 700; font-size: 18px; }
+  .verdict.speak { color: var(--speak); } .verdict.note { color: var(--note); } .verdict.silent { color: var(--muted); }
+  .gate-meta { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .gate-line { color: var(--muted); font-size: 12px; margin-bottom: 10px; min-height: 18px;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bar { display: grid; grid-template-columns: 120px 1fr 40px; gap: 8px; align-items: center; margin: 5px 0; font-size: 13px; }
+  .bar .name { color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bar.hot .name { color: var(--text); font-weight: 600; }
+  .track { position: relative; height: 10px; background: var(--panel-2); border-radius: 5px; }
+  .fill { position: absolute; inset: 0 auto 0 0; border-radius: 5px; background: var(--silent); transition: width .25s, background .25s; }
+  .fill.note { background: var(--note); } .fill.speak { background: var(--speak); }
+  .mark { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--faint); }
+  .mark.sp { background: var(--text); opacity: .55; }
+  .bar .val { text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); }
+  .legend { color: var(--faint); font-size: 11px; margin: 6px 0 14px; }
+  .legend i { display: inline-block; width: 2px; height: 10px; background: var(--faint); vertical-align: middle; margin: 0 3px 0 8px; }
+  .legend i.sp { background: var(--text); opacity: .55; }
+
+  .card { border: 1px solid var(--line); border-left: 3px solid var(--line); border-radius: 6px; padding: 6px 9px;
+    margin-bottom: 6px; background: var(--panel); animation: pop .3s ease-out; font-size: 13px; }
+  .card .ck { font-size: 11px; color: var(--muted); display: flex; justify-content: space-between; }
+  .card.action_item { border-left-color: var(--good); } .card.decision_made { border-left-color: var(--speak); }
+  .card.factual_claim { border-left-color: var(--note); } .card.open_question { border-left-color: var(--muted); }
+  .card.note { border-left-color: var(--faint); opacity: .8; }
+  .card.spoken { border-left-color: var(--agent); }
+  .card.bad .ck b { color: var(--bad); }
+
+  .toast { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); background: var(--panel-2);
+    border: 1px solid var(--line); border-radius: 8px; padding: 10px 16px; display: none; max-width: 90vw; }
+  .toast.show { display: block; }
+  .toast.err { border-color: var(--bad); }
+
+  @media (max-width: 900px) {
+    main { grid-template-columns: 1fr; }
+    main > section { border-right: 0; border-bottom: 1px solid var(--line); max-height: 60vh; }
+    .stats { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <header>
+    <div class="brand">Knows When <span>to Speak</span></div>
+    <select id="meeting" title="Meeting"></select>
+    <div class="seg" id="mode" title="Who decides when the LLM is called">
+      <button data-mode="gated" class="on">Decider gate</button>
+      <button data-mode="ungated">LLM on every line</button>
+    </div>
+    <select id="speed" title="Replay speed">
+      <option value="1">1×</option><option value="2" selected>2×</option>
+      <option value="4">4×</option><option value="8">8×</option><option value="16">16×</option>
+    </select>
+    <button class="primary" id="start">Start</button>
+    <button id="pause" disabled>Pause</button>
+    <div class="spacer"></div>
+    <label class="tog"><input type="checkbox" id="voice"> Voice</label>
+    <label class="tog"><input type="checkbox" id="gold"> Answer key</label>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><div class="k">Lines heard</div><div class="v" id="s-lines">0</div><div class="s" id="s-lines-sub">of 0</div></div>
+    <div class="stat"><div class="k">Decider latency</div><div class="v" id="s-lat">–</div><div class="s">p50 per line, local GPU</div></div>
+    <div class="stat"><div class="k">LLM calls skipped</div><div class="v" id="s-skip">–</div><div class="s" id="s-wakes">0 lines woke the LLM</div></div>
+    <div class="stat"><div class="k">LLM tokens</div><div class="v" id="s-tok">0</div><div class="s" id="s-tok-sub">in / out</div></div>
+    <div class="stat"><div class="k">Spoke</div><div class="v" id="s-spoke">0</div><div class="s" id="s-notes">0 silent notes</div></div>
+    <div class="stat"><div class="k">Same tokens, frontier model</div><div class="v" id="s-cost">$0.000</div><div class="s" id="s-cost-sub">gpt-oss-20b: $0.000</div></div>
+  </div>
+
+  <main id="main" class="hide-gold">
+    <section>
+      <div class="meeting-title" id="m-title">Pick a meeting and press Start</div>
+      <div class="meeting-org" id="m-org"></div>
+      <h2>People (simulated)</h2>
+      <div class="people" id="people"></div>
+      <h2>Agenda</h2>
+      <ol class="agenda" id="agenda"></ol>
+      <h2>Fact sheet (pre-read)</h2>
+      <div class="facts" id="facts"></div>
+    </section>
+
+    <section id="transcript">
+      <h2>Transcript</h2>
+      <div id="lines"><div class="empty">The transcript appears here, one line at a time.</div></div>
+    </section>
+
+    <section>
+      <h2>Strands Decider on the latest line</h2>
+      <div class="gate-head"><div class="verdict silent" id="verdict">–</div><div class="gate-meta" id="gate-meta"></div></div>
+      <div class="gate-line" id="gate-line"></div>
+      <div id="bars"></div>
+      <div class="legend">bar = Decider confidence <i></i>silent note <i class="sp"></i>wake the LLM</div>
+      <h2>Agent notes</h2>
+      <div id="cards"><div class="empty">Action items, decisions and fact checks collect here.</div></div>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const LABELS = {
+  action_item: "Action item", decision_made: "Decision", factual_claim: "Figure to check",
+  open_question: "Question asked", off_agenda: "Off topic", unanswered_nudge: "Left unanswered",
+  answered_prior: "Pending answered", already_flagged: "Already flagged", note: "Silent note",
+};
+const BAR_KEYS = ["action_item", "decision_made", "factual_claim", "open_question", "unanswered_nudge", "off_agenda"];
+const $ = (id) => document.getElementById(id);
+let ws, meeting = null, thresholds = {}, mode = "gated", paused = false, running = false;
+let personas = {}, currentLine = null, totalLines = 0;
+
+function esc(s) { return String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function fmtT(t) { const m = Math.floor(t / 60), s = Math.floor(t % 60); return `${m}:${String(s).padStart(2, "0")}`; }
+function toast(msg, err) { const el = $("toast"); el.textContent = msg; el.className = "toast show" + (err ? " err" : "");
+  clearTimeout(toast._t); toast._t = setTimeout(() => el.className = "toast", err ? 9000 : 6000); }
+function avatar(name) { const c = personas[name] || "#666"; return `<div class="av" style="background:${esc(c)}">${esc(name[0] || "?")}</div>`; }
+
+async function loadMeetings() {
+  const rows = await (await fetch("/api/meetings")).json();
+  const sel = $("meeting");
+  sel.innerHTML = rows.map(r => `<option value="${esc(r.id)}">${esc(r.title)} · ${esc(r.org)} (${r.minutes} min, ${r.split})</option>`).join("");
+  const pick = new URLSearchParams(location.search).get("meeting") || "launch-aurora-d5-s1";
+  if (rows.some(r => r.id === pick)) sel.value = pick;
+}
+
+function connect() {
+  ws = new WebSocket(`${location.protocol === "https:" ? "wss" : "ws"}://${location.host}/ws`);
+  ws.onmessage = (e) => handle(JSON.parse(e.data));
+  ws.onclose = () => { if (running) toast("Connection closed", true); running = false; setButtons(); };
+}
+
+function setButtons() {
+  $("start").textContent = running ? "Restart" : "Start";
+  $("pause").disabled = !running;
+  $("pause").textContent = paused ? "Resume" : "Pause";
+}
+
+function send(o) { if (ws && ws.readyState === 1) ws.send(JSON.stringify(o)); }
+
+function start() {
+  if (!ws || ws.readyState > 1) connect();
+  const go = () => send({cmd: "start", meeting: $("meeting").value, speed: +$("speed").value, mode});
+  ws.readyState === 1 ? go() : ws.addEventListener("open", go, {once: true});
+  running = true; paused = false; setButtons();
+  $("lines").innerHTML = '<div class="empty">Loading the meeting' + (mode === "gated" ? " and warming up Decider…" : "…") + '</div>';
+  $("cards").innerHTML = '<div class="empty">Action items, decisions and fact checks collect here.</div>';
+  onStats({lines: 0, decider_p50: 0, skipped_pct: 0, wakes: 0, input_tokens: 0, output_tokens: 0, spoken: 0, notes: 0,
+           cost: {"frontier": 0, "gpt-oss-20b": 0}});
+  $("bars").innerHTML = ""; $("verdict").textContent = "–"; $("gate-meta").textContent = ""; $("gate-line").textContent = "";
+}
+
+function handle(m) {
+  switch (m.type) {
+    case "meeting": return onMeeting(m);
+    case "line": return onLine(m);
+    case "gate": return onGate(m);
+    case "card": return onCard(m);
+    case "speak": return onSpeak(m);
+    case "tick": return onTick(m);
+    case "stats": return onStats(m);
+    case "done": running = false; setButtons();
+      return toast(`Meeting over: spoke ${m.spoken} times, ${m.unjustified} of them not justified by a planted event.`);
+    case "error": running = false; setButtons(); return toast(m.message, true);
+  }
+}
+
+function onMeeting(m) {
+  meeting = m; thresholds = m.thresholds; totalLines = m.lines;
+  personas = Object.fromEntries(m.personas.map(p => [p.name, p.color]));
+  $("m-title").textContent = m.title; $("m-org").textContent = m.org;
+  $("people").innerHTML = m.personas.map(p => `<div class="person" title="${esc(p.role)}">${avatar(p.name)}${esc(p.name)}</div>`).join("");
+  $("agenda").innerHTML = m.agenda.map((a, i) =>
+    `<li data-i="${i}"><span class="tb">${a.timebox_min} min</span><b>${esc(a.title)}</b><br>${esc(a.goal)}</li>`).join("");
+  $("facts").innerHTML = m.facts.map(f => `<div class="fact"><code>${esc(f.id)}</code>${esc(f.statement)}</div>`).join("");
+  $("lines").innerHTML = ""; $("s-lines-sub").textContent = `of ${m.lines}`;
+  renderBars({});
+}
+
+function onLine(m) {
+  document.querySelectorAll(".ln.latest").forEach(e => e.classList.remove("latest"));
+  const el = document.createElement("div");
+  el.className = "ln latest";
+  const gold = (meeting.gold[m.turn_index] || []).map(g =>
+    `<span class="chip ${g.polarity === "pos" ? "gold" : "trap"}">${g.polarity === "pos" ? "planted" : "trap"}: ${esc(LABELS[g.category] || g.category.replace(/_/g, " "))}</span>`).join("");
+  el.innerHTML = `${avatar(m.speaker)}<div><div class="who">${esc(m.speaker)}<span class="t">${fmtT(m.t)}</span></div>
+    <div class="txt">${esc(m.text)}</div><div class="chips"><span class="chip wait">${mode === "gated" ? "Decider…" : "LLM…"}</span>${gold}</div></div>`;
+  $("lines").appendChild(el); currentLine = el;
+  $("transcript").scrollTop = $("transcript").scrollHeight;
+  document.querySelectorAll("#agenda li").forEach(li => li.classList.toggle("now", +li.dataset.i === m.agenda_index));
+  $("gate-line").textContent = `${m.speaker}: ${m.text}`;
+}
+
+function chipFor(m) {
+  if (!meeting.gated) return `<span class="chip llm">LLM reads it</span>`;
+  const cat = m.category ? `${LABELS[m.category] || m.category} ${m.confidence.toFixed(2)}` : "";
+  if (m.action === "speak") return `<span class="chip speak">wake LLM · ${esc(cat)}</span>`;
+  if (m.action === "note") return `<span class="chip note">note · ${esc(cat)}</span>`;
+  return `<span class="chip silent">silent</span>`;
+}
+
+function onGate(m) {
+  if (!currentLine) return;
+  const chips = currentLine.querySelector(".chips");
+  chips.querySelector(".wait")?.remove();
+  const lat = meeting.gated ? `<span class="chip silent">${Math.round(m.decider_ms)} ms</span>` : "";
+  chips.insertAdjacentHTML("afterbegin", chipFor(m) + lat + (m.wake ? `<span class="chip llm thinking">LLM thinking…</span>` : ""));
+  if (meeting.gated) {
+    const v = $("verdict");
+    v.className = "verdict " + m.action;
+    v.textContent = m.action === "speak" ? "Wake the LLM" : m.action === "note" ? "Silent note" : "Stay silent";
+    $("gate-meta").textContent = `${m.category ? (LABELS[m.category] || m.category) + " " + m.confidence.toFixed(2) + " · " : ""}${Math.round(m.decider_ms)} ms`;
+    renderBars(m.signals);
+  } else {
+    $("verdict").className = "verdict speak"; $("verdict").textContent = "No gate: LLM reads every line";
+    $("gate-meta").textContent = "";
+  }
+}
+
+function renderBars(sig) {
+  $("bars").innerHTML = BAR_KEYS.map(k => {
+    const p = sig[k] ?? 0, th = thresholds[k] || {speak: 1, note: 1};
+    const tier = p >= th.speak ? "speak" : p >= th.note ? "note" : "";
+    const marks = (th.note <= 1 ? `<div class="mark" style="left:${th.note * 100}%"></div>` : "") +
+                  (th.speak <= 1 ? `<div class="mark sp" style="left:${th.speak * 100}%"></div>` : "");
+    return `<div class="bar ${tier ? "hot" : ""}"><div class="name">${LABELS[k]}</div>
+      <div class="track"><div class="fill ${tier}" style="width:${(p * 100).toFixed(1)}%"></div>${marks}</div>
+      <div class="val">${p.toFixed(2)}</div></div>`;
+  }).join("");
+}
+
+function onCard(c) {
+  const box = $("cards");
+  box.querySelector(".empty")?.remove();
+  if (currentLine) currentLine.dataset.cards = +(currentLine.dataset.cards || 0) + 1;
+  if (c.spoken) return;  // spoken lines show in the transcript
+  let head = LABELS[c.kind] || c.kind, body = esc(c.text), cls = c.kind;
+  if (c.kind === "factual_claim") {
+    const v = c.data.verdict;
+    head = `Fact check: <b>${esc(v.replace(/_/g, " "))}</b>`;
+    if (v === "contradicted") cls += " bad";
+  }
+  if (c.kind === "note" && c.data.reason) {
+    const why = {"cooldown": "spoke recently", "already corrected": "already corrected", "not a speaking category": "records only"}[c.data.reason] || c.data.reason;
+    head = `Held back (${esc(why)})`;
+  } else if (c.kind === "note") {
+    // The Decider keeps flagging an event while it is still in the window: fold repeats into one card.
+    const prev = box.firstElementChild;
+    if (prev && prev.dataset.noteCat === c.category && c.t - +prev.dataset.t < 30) {
+      prev.dataset.n = +prev.dataset.n + 1; prev.dataset.t = c.t;
+      prev.querySelector(".rep").textContent = ` · ${prev.dataset.n} lines`;
+      return;
+    }
+    head = `Silent note · ${esc(LABELS[c.category] || c.category)}<span class="rep"></span>`;
+  }
+  if (c.kind === "open_question") { head = "Waiting for an answer"; box.querySelectorAll(".card.open_question").forEach(e => e.remove()); }
+  const el = document.createElement("div");
+  el.className = `card ${cls}`;
+  if (c.kind === "note" && !c.data.reason) { el.dataset.noteCat = c.category; el.dataset.n = 1; el.dataset.t = c.t; }
+  el.innerHTML = `<div class="ck"><span>${head}</span><span>${fmtT(c.t)}</span></div>${body}`;
+  box.prepend(el);
+}
+
+function onSpeak(m) {
+  const el = document.createElement("div");
+  el.className = "ln agent";
+  el.innerHTML = `<div class="av" style="background:var(--agent)">AI</div><div><div class="who">Agent<span class="t">${fmtT(m.t)}</span></div><div class="txt">${esc(m.text)}</div></div>`;
+  $("lines").appendChild(el);
+  $("transcript").scrollTop = $("transcript").scrollHeight;
+  if ($("voice").checked && "speechSynthesis" in window) {
+    const u = new SpeechSynthesisUtterance(m.text); u.rate = 1.05; speechSynthesis.speak(u);
+  }
+}
+
+function onTick(m) {
+  if (!currentLine) return;
+  const th = currentLine.querySelector(".thinking");
+  if (th) {
+    if (m.woke_llm) { th.classList.remove("thinking"); th.textContent = `LLM ${(m.llm_ms / 1000).toFixed(1)} s` + (m.spoken ? " · spoke" : +(currentLine.dataset.cards || 0) ? " · noted" : " · stayed quiet"); }
+    else th.remove();
+  }
+}
+
+function onStats(s) {
+  $("s-lines").textContent = s.lines;
+  $("s-lat").textContent = s.decider_p50 ? `${Math.round(s.decider_p50)} ms` : "–";
+  $("s-skip").textContent = s.lines ? `${Math.round(s.skipped_pct)}%` : "–";
+  $("s-wakes").textContent = `${s.wakes} of ${s.lines} lines woke the LLM`;
+  const k = (n) => n >= 1000 ? (n / 1000).toFixed(1) + "k" : String(n);
+  $("s-tok").textContent = k(s.input_tokens + s.output_tokens);
+  $("s-tok-sub").textContent = `${k(s.input_tokens)} in / ${k(s.output_tokens)} out`;
+  $("s-spoke").textContent = s.spoken; $("s-notes").textContent = `${s.notes} silent notes`;
+  $("s-cost").textContent = `$${s.cost["frontier"].toFixed(3)}`;
+  $("s-cost-sub").textContent = `at $2 / $10 per M tokens · we pay $${s.cost["gpt-oss-20b"].toFixed(4)}`;
+}
+
+$("start").onclick = start;
+$("pause").onclick = () => { paused = !paused; send({cmd: paused ? "pause" : "resume"}); setButtons(); };
+$("speed").onchange = () => send({cmd: "speed", value: +$("speed").value});
+$("gold").onchange = () => $("main").classList.toggle("hide-gold", !$("gold").checked);
+document.querySelectorAll("#mode button").forEach(b => b.onclick = () => {
+  mode = b.dataset.mode;
+  document.querySelectorAll("#mode button").forEach(x => x.classList.toggle("on", x === b));
+});
+loadMeetings();
+connect();
+</script>
+</body>
+</html>

@@ -1,0 +1,1833 @@
+{
+ "meeting_id": "postmortem-fraudapi-d2-s2",
+ "config": {
+  "theme": "Incident postmortem: the checkout outage last Tuesday",
+  "domain_pack": "incident_review",
+  "drama": 0.2,
+  "seed": 2,
+  "duration_min": 5.1,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   1,
+   5,
+   32,
+   33,
+   36,
+   57
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "Incident postmortem: the checkout outage last Tuesday",
+  "personas": [
+   {
+    "name": "Noor",
+    "role": "Incident manager, facilitates",
+    "goals": "A clear record and practical fixes",
+    "hidden_agenda": "Wants to make fallback paths a standard for every vendor",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Samuel",
+    "role": "On-call engineer",
+    "goals": "Explain the response honestly",
+    "hidden_agenda": "Wasn't sure he was allowed to switch the fraud check off",
+    "verbosity": 2,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Lin",
+    "role": "Payments engineer, owns the fraud-check integration",
+    "goals": "Fix the integration properly",
+    "hidden_agenda": "Wrote the original integration three years ago",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Abby",
+    "role": "Customer support lead",
+    "goals": "Clear answers for customers",
+    "hidden_agenda": "Her team found out from customers before engineering told them",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Danielle",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Postmortem - Tuesday checkout outage (fraud-check vendor)",
+   "org": "Alder & Finch Books (fictional online bookstore)",
+   "agenda": [
+    {
+     "id": "timeline",
+     "title": "Timeline",
+     "goal": "Establish when it started",
+     "timebox_min": 1.3
+    },
+    {
+     "id": "cause",
+     "title": "Cause",
+     "goal": "Understand why a slow vendor took checkout down",
+     "timebox_min": 1.74
+    },
+    {
+     "id": "impact",
+     "title": "Impact",
+     "goal": "Size the effect on customers and revenue",
+     "timebox_min": 1.07
+    },
+    {
+     "id": "actions",
+     "title": "Actions",
+     "goal": "Agree owners for the fixes",
+     "timebox_min": 0.98
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "outage_duration",
+     "statement": "Checkout outage lasted 38 minutes",
+     "value": "38 minutes"
+    },
+    {
+     "id": "F2",
+     "key": "outage_start",
+     "statement": "Outage started at 3:15 pm",
+     "value": "3:15 pm"
+    },
+    {
+     "id": "F3",
+     "key": "fraud_timeout",
+     "statement": "Fraud-check call timeout = 30 seconds",
+     "value": "30 seconds"
+    },
+    {
+     "id": "F4",
+     "key": "fraud_p99",
+     "statement": "Fraud API p99 latency during the incident = 12 seconds",
+     "value": "12 seconds"
+    },
+    {
+     "id": "F5",
+     "key": "failed_orders",
+     "statement": "Failed orders = 1,240",
+     "value": "1,240"
+    },
+    {
+     "id": "F6",
+     "key": "revenue_impact",
+     "statement": "Estimated revenue impact = $41,000",
+     "value": "$41,000"
+    },
+    {
+     "id": "F7",
+     "key": "detection_time",
+     "statement": "Time to detection = 4 minutes",
+     "value": "4 minutes"
+    },
+    {
+     "id": "F8",
+     "key": "support_tickets",
+     "statement": "Support tickets = 310",
+     "value": "310"
+    },
+    {
+     "id": "F9",
+     "key": "vendor_sla",
+     "statement": "Vendor SLA uptime = 99.9%",
+     "value": "99.9%"
+    },
+    {
+     "id": "F10",
+     "key": "vendor_incidents_year",
+     "statement": "Vendor incidents affecting us this year = 2",
+     "value": "2"
+    },
+    {
+     "id": "F11",
+     "key": "orders_retried",
+     "statement": "Orders automatically retried and recovered = 870",
+     "value": "870"
+    },
+    {
+     "id": "F12",
+     "key": "vendor_credit",
+     "statement": "Service credit from the vendor = $5,000",
+     "value": "$5,000"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "timeline",
+    "summary": "Start, detection and end; Samuel overstates the duration",
+    "n_turns": 16,
+    "events": []
+   },
+   {
+    "agenda_item": "cause",
+    "summary": "Why a slow vendor stopped checkout; Lin's timeout figure stays wrong",
+    "n_turns": 19,
+    "events": []
+   },
+   {
+    "agenda_item": "impact",
+    "summary": "Orders, money and tickets; Abby's ticket count corrected later",
+    "n_turns": 13,
+    "events": []
+   },
+   {
+    "agenda_item": "actions",
+    "summary": "Owners and dates; one item without an owner",
+    "n_turns": 10,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Noor",
+   "text": "Thanks, everyone. This is a blameless review. Samuel, could you take us through Tuesday afternoon?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Samuel",
+   "text": "Sure. Checkout errors started at about a quarter past three.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Noor",
+   "text": "How quickly did we notice?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Samuel",
+   "text": "The alert fired four minutes in. That part worked well.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Abby",
+   "text": "Our chat queue lit up at about the same time, for what it's worth.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Lin",
+   "text": "Did anyone tell support at that point?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Noor",
+   "text": "And how long were we down altogether?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Samuel",
+   "text": "About an hour, I'd say. It felt like a long afternoon.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Noor",
+   "text": "The incident record has thirty-eight minutes, from first error to recovery.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Samuel",
+   "text": "Thirty-eight. That's right. The hour includes the time we spent watching it afterwards.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Noor",
+   "text": "What ended it?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Samuel",
+   "text": "The vendor's latency came back down on its own. We didn't actually fix anything.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Lin",
+   "text": "Which is the uncomfortable part. We were waiting on them.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Noor",
+   "text": "Did anyone consider switching the fraud check off?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Samuel",
+   "text": "I thought about it. I wasn't sure I was allowed to. There's no runbook entry for it.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Lin",
+   "text": "That's a gap in the runbook, not on you, Samuel.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Noor",
+   "text": "The cause. Lin, you know the integration best.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Lin",
+   "text": "The fraud-check vendor got slow. Their p99 latency went up to twelve seconds.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Abby",
+   "text": "Twelve seconds per check?",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E013",
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Lin",
+   "text": "Per check. And our timeout is ten seconds, so most calls timed out and the order failed.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Noor",
+   "text": "Why does a timeout fail the order, rather than letting it through?",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Lin",
+   "text": "When I built it, the rule was \"if in doubt, block\". We never revisited it.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Samuel",
+   "text": "So a slow vendor looks the same as a fraudulent order.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Noor",
+   "text": "Exactly that. What does the vendor promise us?",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Lin",
+   "text": "Ninety-nine point nine percent uptime. They'd argue they were up, just slow.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Abby",
+   "text": "Has this happened before with them?",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Lin",
+   "text": "Twice this year now. The first one was short enough that nobody noticed.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Samuel",
+   "text": "The weather station in my village says it's going to snow on Friday, by the way. In April.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Abby",
+   "text": "My tulips are going to be furious.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Noor",
+   "text": "Let's come back to the cause. Lin, what would a safer default look like?",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Lin",
+   "text": "Let small orders through when the check times out, and hold large orders for manual review.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Noor",
+   "text": "Is there a threshold that makes sense?",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Lin",
+   "text": "Most fraud we see is over a hundred and fifty dollars. Under that, letting it through is low risk.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Noor",
+   "text": "Then let's adopt that: on a timeout, orders under a hundred and fifty go through, and larger ones are held for review.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Lin",
+   "text": "I'll build the fallback and have it in review by next Thursday.",
+   "agenda_item": "cause",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Noor",
+   "text": "Impact. How many orders failed?",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Lin",
+   "text": "Twelve hundred and forty failed. But eight hundred and seventy were retried automatically and went through later.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E028",
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Noor",
+   "text": "So the real loss is smaller than the first number.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Samuel",
+   "text": "And the revenue impact?",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Noor",
+   "text": "Finance estimates forty-one thousand, before the retries are counted.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Abby",
+   "text": "We had about five hundred support tickets. People were very worried their cards had been charged.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Noor",
+   "text": "Were they charged?",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Lin",
+   "text": "No. A failed fraud check means no charge was made.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Abby",
+   "text": "That's good to know. Our macros didn't say that clearly.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Samuel",
+   "text": "Could support get a short statement for this kind of failure, so they're not guessing?",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Abby",
+   "text": "Yes, please. I'll write a draft macro and send it to Lin to check.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Lin",
+   "text": "Happy to check it.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Abby",
+   "text": "Sorry, correcting myself, the ticket report says three hundred and ten, not five hundred. Five hundred was all contacts, including chat.",
+   "agenda_item": "impact",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Noor",
+   "text": "Actions. We have the fallback from Lin and the macro from Abby.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Samuel",
+   "text": "And a runbook entry for switching the fraud check off. So the next person knows they can.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Noor",
+   "text": "Samuel, would you write that entry, since you were there?",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Samuel",
+   "text": "Yes. I'll write the runbook entry this week.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Noor",
+   "text": "Should we ask the vendor for a service credit? Their SLA is about uptime, but it's worth asking.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Lin",
+   "text": "They've already offered five thousand. It came in this morning.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Noor",
+   "text": "Then we accept the credit and ask for a latency commitment in the renewal.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Abby",
+   "text": "Who's talking to the vendor about the renewal?",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Samuel",
+   "text": "Should every vendor integration have a fallback like this one?",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Noor",
+   "text": "I think so. I'll raise it with the architecture group next week. Thank you, everyone. A good, honest review.",
+   "agenda_item": "actions",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Noor",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Samuel",
+   "agenda_item": "timeline",
+   "fact_id": "F2",
+   "claimed_value": "3:15 pm",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Noor",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Samuel",
+   "agenda_item": "timeline",
+   "fact_id": "F7",
+   "claimed_value": "4 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 5,
+   "speaker": "Lin",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Noor",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 7,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 7,
+   "speaker": "Samuel",
+   "agenda_item": "timeline",
+   "fact_id": "F1",
+   "claimed_value": "an hour",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Noor",
+   "agenda_item": "timeline",
+   "fact_id": "F1",
+   "claimed_value": "38 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Samuel",
+   "agenda_item": "timeline",
+   "fact_id": "F1",
+   "claimed_value": "38 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Noor",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 11,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Noor",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 14,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Lin",
+   "agenda_item": "cause",
+   "fact_id": "F4",
+   "claimed_value": "12 seconds",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Abby",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 19,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Abby",
+   "agenda_item": "cause",
+   "fact_id": "F4",
+   "claimed_value": "12 seconds",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 19,
+   "speaker": "Lin",
+   "agenda_item": "cause",
+   "fact_id": "F3",
+   "claimed_value": "10 seconds",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Noor",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 21,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Noor",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 24,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Lin",
+   "agenda_item": "cause",
+   "fact_id": "F9",
+   "claimed_value": "99.9%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Abby",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 26,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Lin",
+   "agenda_item": "cause",
+   "fact_id": "F10",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 27,
+   "speaker": "Samuel",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Noor",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 30,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Lin",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Noor",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 32,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 33,
+   "speaker": "Noor",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Lin",
+   "agenda_item": "cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Noor",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 36,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Lin",
+   "agenda_item": "impact",
+   "fact_id": "F5",
+   "claimed_value": "1,240",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Lin",
+   "agenda_item": "impact",
+   "fact_id": "F11",
+   "claimed_value": "870",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Samuel",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 39,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Noor",
+   "agenda_item": "impact",
+   "fact_id": "F6",
+   "claimed_value": "$41,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 40,
+   "speaker": "Abby",
+   "agenda_item": "impact",
+   "fact_id": "F8",
+   "claimed_value": "500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Noor",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 42,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Samuel",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 45,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 45,
+   "speaker": "Abby",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 46,
+   "speaker": "Lin",
+   "agenda_item": "impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Abby",
+   "agenda_item": "impact",
+   "fact_id": "F8",
+   "claimed_value": "310",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Samuel",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Noor",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 51,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 51,
+   "speaker": "Samuel",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Noor",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 53,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 53,
+   "speaker": "Lin",
+   "agenda_item": "actions",
+   "fact_id": "F12",
+   "claimed_value": "$5,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 54,
+   "speaker": "Noor",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 55,
+   "speaker": "Abby",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 56,
+   "speaker": "Samuel",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 57,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 57,
+   "speaker": "Noor",
+   "agenda_item": "actions",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Noor",
+   "text": "Thanks, everyone. This is a blameless review. Samuel, could you take us through Tuesday afternoon?",
+   "start_s": 0.5,
+   "end_s": 6.5
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Samuel",
+   "text": "Sure. Checkout errors started at about a quarter past three.",
+   "start_s": 7.656,
+   "end_s": 11.794
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Noor",
+   "text": "How quickly did we notice?",
+   "start_s": 12.942,
+   "end_s": 14.942
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Samuel",
+   "text": "The alert fired four minutes in. That part worked well.",
+   "start_s": 15.199,
+   "end_s": 19.336
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Abby",
+   "text": "Our chat queue lit up at about the same time, for what it's worth.",
+   "start_s": 19.621,
+   "end_s": 24.712
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Lin",
+   "text": "Did anyone tell support at that point?",
+   "start_s": 25.747,
+   "end_s": 28.457
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Noor",
+   "text": "And how long were we down altogether?",
+   "start_s": 29.393,
+   "end_s": 32.193
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Samuel",
+   "text": "About an hour, I'd say. It felt like a long afternoon.",
+   "start_s": 33.063,
+   "end_s": 37.614
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Noor",
+   "text": "The incident record has thirty-eight minutes, from first error to recovery.",
+   "start_s": 38.122,
+   "end_s": 42.522
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Samuel",
+   "text": "Thirty-eight. That's right. The hour includes the time we spent watching it afterwards.",
+   "start_s": 43.328,
+   "end_s": 48.707
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Noor",
+   "text": "What ended it?",
+   "start_s": 49.514,
+   "end_s": 50.714
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Samuel",
+   "text": "The vendor's latency came back down on its own. We didn't actually fix anything.",
+   "start_s": 51.495,
+   "end_s": 57.288
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Lin",
+   "text": "Which is the uncomfortable part. We were waiting on them.",
+   "start_s": 57.646,
+   "end_s": 61.517
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Noor",
+   "text": "Did anyone consider switching the fraud check off?",
+   "start_s": 62.148,
+   "end_s": 65.348
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Samuel",
+   "text": "I thought about it. I wasn't sure I was allowed to. There's no runbook entry for it.",
+   "start_s": 65.942,
+   "end_s": 72.976
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Lin",
+   "text": "That's a gap in the runbook, not on you, Samuel.",
+   "start_s": 73.899,
+   "end_s": 77.77
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Noor",
+   "text": "The cause. Lin, you know the integration best.",
+   "start_s": 78.965,
+   "end_s": 82.165
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Lin",
+   "text": "The fraud-check vendor got slow. Their p99 latency went up to twelve seconds.",
+   "start_s": 83.314,
+   "end_s": 88.347
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Abby",
+   "text": "Twelve seconds per check?",
+   "start_s": 89.091,
+   "end_s": 90.546
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Lin",
+   "text": "Per check. And our timeout is ten seconds, so most calls timed out and the order failed.",
+   "start_s": 91.191,
+   "end_s": 97.771
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Noor",
+   "text": "Why does a timeout fail the order, rather than letting it through?",
+   "start_s": 98.239,
+   "end_s": 103.039
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Lin",
+   "text": "When I built it, the rule was \"if in doubt, block\". We never revisited it.",
+   "start_s": 103.275,
+   "end_s": 109.081
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Samuel",
+   "text": "So a slow vendor looks the same as a fraudulent order.",
+   "start_s": 109.308,
+   "end_s": 113.86
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Noor",
+   "text": "Exactly that. What does the vendor promise us?",
+   "start_s": 114.525,
+   "end_s": 117.725
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Lin",
+   "text": "Ninety-nine point nine percent uptime. They'd argue they were up, just slow.",
+   "start_s": 118.243,
+   "end_s": 122.889
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Abby",
+   "text": "Has this happened before with them?",
+   "start_s": 123.469,
+   "end_s": 125.651
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Lin",
+   "text": "Twice this year now. The first one was short enough that nobody noticed.",
+   "start_s": 126.743,
+   "end_s": 131.775
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Samuel",
+   "text": "The weather station in my village says it's going to snow on Friday, by the way. In April.",
+   "start_s": 132.501,
+   "end_s": 139.949
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Abby",
+   "text": "My tulips are going to be furious.",
+   "start_s": 140.71,
+   "end_s": 143.255
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Noor",
+   "text": "Let's come back to the cause. Lin, what would a safer default look like?",
+   "start_s": 143.691,
+   "end_s": 149.291
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Lin",
+   "text": "Let small orders through when the check times out, and hold large orders for manual review.",
+   "start_s": 149.515,
+   "end_s": 155.708
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Noor",
+   "text": "Is there a threshold that makes sense?",
+   "start_s": 156.233,
+   "end_s": 159.033
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Lin",
+   "text": "Most fraud we see is over a hundred and fifty dollars. Under that, letting it through is low risk.",
+   "start_s": 159.37,
+   "end_s": 166.725
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Noor",
+   "text": "Then let's adopt that: on a timeout, orders under a hundred and fifty go through, and larger ones are held for review.",
+   "start_s": 167.435,
+   "end_s": 176.235
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Lin",
+   "text": "I'll build the fallback and have it in review by next Thursday.",
+   "start_s": 177.434,
+   "end_s": 182.079
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Noor",
+   "text": "Impact. How many orders failed?",
+   "start_s": 182.953,
+   "end_s": 184.953
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Lin",
+   "text": "Twelve hundred and forty failed. But eight hundred and seventy were retried automatically and went through later.",
+   "start_s": 185.335,
+   "end_s": 191.915
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Noor",
+   "text": "So the real loss is smaller than the first number.",
+   "start_s": 193.009,
+   "end_s": 197.009
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Samuel",
+   "text": "And the revenue impact?",
+   "start_s": 198.006,
+   "end_s": 199.661
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Noor",
+   "text": "Finance estimates forty-one thousand, before the retries are counted.",
+   "start_s": 200.595,
+   "end_s": 204.195
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Abby",
+   "text": "We had about five hundred support tickets. People were very worried their cards had been charged.",
+   "start_s": 205.302,
+   "end_s": 211.12
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Noor",
+   "text": "Were they charged?",
+   "start_s": 212.083,
+   "end_s": 213.283
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Lin",
+   "text": "No. A failed fraud check means no charge was made.",
+   "start_s": 214.273,
+   "end_s": 218.144
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Abby",
+   "text": "That's good to know. Our macros didn't say that clearly.",
+   "start_s": 218.698,
+   "end_s": 222.334
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Samuel",
+   "text": "Could support get a short statement for this kind of failure, so they're not guessing?",
+   "start_s": 223.515,
+   "end_s": 229.722
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Abby",
+   "text": "Yes, please. I'll write a draft macro and send it to Lin to check.",
+   "start_s": 230.884,
+   "end_s": 235.975
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Lin",
+   "text": "Happy to check it.",
+   "start_s": 236.336,
+   "end_s": 237.885
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Abby",
+   "text": "Sorry, correcting myself, the ticket report says three hundred and ten, not five hundred. Five hundred was all contacts, including chat.",
+   "start_s": 238.839,
+   "end_s": 246.475
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Noor",
+   "text": "Actions. We have the fallback from Lin and the macro from Abby.",
+   "start_s": 247.39,
+   "end_s": 252.19
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Samuel",
+   "text": "And a runbook entry for switching the fraud check off. So the next person knows they can.",
+   "start_s": 252.851,
+   "end_s": 259.886
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Noor",
+   "text": "Samuel, would you write that entry, since you were there?",
+   "start_s": 260.616,
+   "end_s": 264.616
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Samuel",
+   "text": "Yes. I'll write the runbook entry this week.",
+   "start_s": 265.306,
+   "end_s": 268.616
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Noor",
+   "text": "Should we ask the vendor for a service credit? Their SLA is about uptime, but it's worth asking.",
+   "start_s": 269.741,
+   "end_s": 276.941
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Lin",
+   "text": "They've already offered five thousand. It came in this morning.",
+   "start_s": 277.642,
+   "end_s": 281.513
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Noor",
+   "text": "Then we accept the credit and ask for a latency commitment in the renewal.",
+   "start_s": 282.545,
+   "end_s": 288.145
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Abby",
+   "text": "Who's talking to the vendor about the renewal?",
+   "start_s": 288.699,
+   "end_s": 291.608
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Samuel",
+   "text": "Should every vendor integration have a fallback like this one?",
+   "start_s": 292.691,
+   "end_s": 296.829
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Noor",
+   "text": "I think so. I'll raise it with the architecture group next week. Thank you, everyone. A good, honest review.",
+   "start_s": 297.929,
+   "end_s": 305.529
+  }
+ ]
+}

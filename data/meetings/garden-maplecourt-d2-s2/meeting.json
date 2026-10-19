@@ -1,0 +1,1425 @@
+{
+ "meeting_id": "garden-maplecourt-d2-s2",
+ "config": {
+  "theme": "Community garden committee: plots, water and the spring fair",
+  "domain_pack": "community_group",
+  "drama": 0.2,
+  "seed": 2,
+  "duration_min": 3.4,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   14,
+   20,
+   28,
+   33
+  ],
+  "reviewed_noclaim": [
+   28
+  ]
+ },
+ "cast": {
+  "theme": "Community garden committee: plots, water and the spring fair",
+  "personas": [
+   {
+    "name": "Lorraine",
+    "role": "Committee chair",
+    "goals": "A smooth start to the season",
+    "hidden_agenda": "Hoping someone else will take over the seedling sale next year",
+    "verbosity": 3,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Ahmed",
+    "role": "Looks after water",
+    "goals": "Cut the water bill",
+    "hidden_agenda": "Has a line on cheap barrels from a juice factory",
+    "verbosity": 2,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Sunny",
+    "role": "Volunteer, runs the seedling sale",
+    "goals": "A bigger sale than last year",
+    "hidden_agenda": "Grew extra seedlings in her apartment and lost count",
+    "verbosity": 3,
+    "wpm": 170,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Gordon",
+    "role": "Treasurer",
+    "goals": "Keep a little in reserve",
+    "hidden_agenda": "Repaired the shed door himself twice already",
+    "verbosity": 2,
+    "wpm": 135,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Garden committee - spring planning",
+   "org": "Maple Court Community Garden (fictional)",
+   "agenda": [
+    {
+     "id": "season",
+     "title": "The new season",
+     "goal": "Assign plots for returning and new gardeners",
+     "timebox_min": 0.7
+    },
+    {
+     "id": "water",
+     "title": "Water and rain barrels",
+     "goal": "Decide whether to add more rain barrels",
+     "timebox_min": 1.22
+    },
+    {
+     "id": "seedling_sale",
+     "title": "Seedling sale",
+     "goal": "Plan the spring seedling sale",
+     "timebox_min": 0.76
+    },
+    {
+     "id": "shed",
+     "title": "Tool shed",
+     "goal": "Decide on the shed repair",
+     "timebox_min": 0.74
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "plots",
+     "statement": "Plots = 36",
+     "value": "36"
+    },
+    {
+     "id": "F2",
+     "key": "returning_gardeners",
+     "statement": "Returning gardeners = 29",
+     "value": "29"
+    },
+    {
+     "id": "F3",
+     "key": "new_gardeners",
+     "statement": "New gardeners = 7",
+     "value": "7"
+    },
+    {
+     "id": "F4",
+     "key": "plot_fee",
+     "statement": "Plot fee = $40",
+     "value": "$40"
+    },
+    {
+     "id": "F5",
+     "key": "rain_barrels",
+     "statement": "Rain barrels installed = 10",
+     "value": "10"
+    },
+    {
+     "id": "F6",
+     "key": "barrel_cost",
+     "statement": "Rain barrel = $85 each",
+     "value": "$85"
+    },
+    {
+     "id": "F7",
+     "key": "water_bill",
+     "statement": "Water bill last year = $960",
+     "value": "$960"
+    },
+    {
+     "id": "F8",
+     "key": "sale_date",
+     "statement": "Seedling sale = Saturday, April 12",
+     "value": "April 12"
+    },
+    {
+     "id": "F9",
+     "key": "seedlings_grown",
+     "statement": "Seedlings grown for the sale = 600",
+     "value": "600"
+    },
+    {
+     "id": "F10",
+     "key": "shed_quote",
+     "statement": "Shed repair quote = $1,100",
+     "value": "$1,100"
+    },
+    {
+     "id": "F11",
+     "key": "bank_balance",
+     "statement": "Bank balance = $2,850",
+     "value": "$2,850"
+    },
+    {
+     "id": "F12",
+     "key": "seedling_price",
+     "statement": "Seedling price = $3 each",
+     "value": "$3"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "season",
+    "summary": "Assigning plots",
+    "n_turns": 9,
+    "events": []
+   },
+   {
+    "agenda_item": "water",
+    "summary": "Rain barrels; Ahmed's count is corrected",
+    "n_turns": 15,
+    "events": []
+   },
+   {
+    "agenda_item": "seedling_sale",
+    "summary": "The sale; Sunny's seedling count stands",
+    "n_turns": 11,
+    "events": []
+   },
+   {
+    "agenda_item": "shed",
+    "summary": "The repair; one deferral",
+    "n_turns": 8,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Lorraine",
+   "text": "Hello, everyone. Let's start with plots. We have thirty-six this year.",
+   "agenda_item": "season",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Gordon",
+   "text": "Twenty-nine returning gardeners, and seven new ones. That fills every plot.",
+   "agenda_item": "season",
+   "direction": null,
+   "event_ids": [
+    "E002",
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Sunny",
+   "text": "Do the new gardeners get the plots by the gate? Those are the hardest to keep watered.",
+   "agenda_item": "season",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Lorraine",
+   "text": "They do, but we'll pair each one with a returning gardener for the first month.",
+   "agenda_item": "season",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Gordon",
+   "text": "That worked well last year.",
+   "agenda_item": "season",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Ahmed",
+   "text": "And the fee is still forty?",
+   "agenda_item": "season",
+   "direction": null,
+   "event_ids": [
+    "E006",
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Gordon",
+   "text": "Forty for the season. No change.",
+   "agenda_item": "season",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Lorraine",
+   "text": "I'll send the plot assignments and the pairing list by email this weekend.",
+   "agenda_item": "season",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Sunny",
+   "text": "Thanks, Lorraine.",
+   "agenda_item": "season",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Lorraine",
+   "text": "Water. Ahmed?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Ahmed",
+   "text": "We have twelve rain barrels now, and they made a real difference to the bill.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Gordon",
+   "text": "I count ten on the inventory. Two were promised but never arrived.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Ahmed",
+   "text": "Ten, right. The other two are still at the factory.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Sunny",
+   "text": "What was the water bill last year?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Gordon",
+   "text": "Nine hundred and sixty. Down from about twelve hundred the year before.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Ahmed",
+   "text": "Barrels are eighty-five each new. But a juice factory nearby gives away used ones.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Lorraine",
+   "text": "Used ones would be lovely, if they're clean.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Ahmed",
+   "text": "They need a good scrub. That's all.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Gordon",
+   "text": "The barrels really want labels on them, too, so nobody drinks from them.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Lorraine",
+   "text": "Then we'll take the used barrels from the factory instead of buying new.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Ahmed",
+   "text": "I'll pick up six from the factory next Saturday.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Sunny",
+   "text": "The road by the factory is closed for the new bridge. You have to go all the way around.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Gordon",
+   "text": "That bridge has been \"nearly finished\" for two years.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Lorraine",
+   "text": "Sunny, the seedling sale.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Sunny",
+   "text": "The sale is on April twelfth. I've grown about eight hundred seedlings.",
+   "agenda_item": "seedling_sale",
+   "direction": null,
+   "event_ids": [
+    "E021",
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Gordon",
+   "text": "That's a lot of tomatoes.",
+   "agenda_item": "seedling_sale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Sunny",
+   "text": "Tomatoes, peppers, kale and some herbs.",
+   "agenda_item": "seedling_sale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Lorraine",
+   "text": "Are we keeping the price at three dollars?",
+   "agenda_item": "seedling_sale",
+   "direction": null,
+   "event_ids": [
+    "E023",
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Sunny",
+   "text": "Three dollars, or four for the bigger pots.",
+   "agenda_item": "seedling_sale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Ahmed",
+   "text": "Who's helping on the day? Last year you were alone at the table for hours.",
+   "agenda_item": "seedling_sale",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Sunny",
+   "text": "Nobody yet.",
+   "agenda_item": "seedling_sale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Gordon",
+   "text": "I can do the morning.",
+   "agenda_item": "seedling_sale",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Ahmed",
+   "text": "And I'll do the afternoon, after the barrels.",
+   "agenda_item": "seedling_sale",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Lorraine",
+   "text": "Maybe we could put up a sign at the library too? People there love plants.",
+   "agenda_item": "seedling_sale",
+   "direction": null,
+   "event_ids": [
+    "E028",
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Sunny",
+   "text": "The table needs to be in the shade this year. The basil wilted last time.",
+   "agenda_item": "seedling_sale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Lorraine",
+   "text": "Last thing. The shed. Gordon?",
+   "agenda_item": "shed",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Gordon",
+   "text": "The roof leaks and the door's off its hinges again. The quote to fix both is eleven hundred.",
+   "agenda_item": "shed",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Ahmed",
+   "text": "Can we afford it?",
+   "agenda_item": "shed",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Gordon",
+   "text": "The balance is twenty-eight fifty. So yes, but it's a big chunk.",
+   "agenda_item": "shed",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Sunny",
+   "text": "The sale should bring in a good amount. That would help.",
+   "agenda_item": "shed",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Lorraine",
+   "text": "Let's wait until after the seedling sale, and then decide on the shed.",
+   "agenda_item": "shed",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Gordon",
+   "text": "The door I can fix again in the meantime. I'm getting good at it.",
+   "agenda_item": "shed",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Lorraine",
+   "text": "Thank you, Gordon. That's everything. See you all in the garden.",
+   "agenda_item": "shed",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Lorraine",
+   "agenda_item": "season",
+   "fact_id": "F1",
+   "claimed_value": "36",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Gordon",
+   "agenda_item": "season",
+   "fact_id": "F2",
+   "claimed_value": "29",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Gordon",
+   "agenda_item": "season",
+   "fact_id": "F3",
+   "claimed_value": "7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Sunny",
+   "agenda_item": "season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 3,
+   "speaker": "Lorraine",
+   "agenda_item": "season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Ahmed",
+   "agenda_item": "season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 6,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Ahmed",
+   "agenda_item": "season",
+   "fact_id": "F4",
+   "claimed_value": "$40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Gordon",
+   "agenda_item": "season",
+   "fact_id": "F4",
+   "claimed_value": "$40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 7,
+   "speaker": "Lorraine",
+   "agenda_item": "season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Lorraine",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 10,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 10,
+   "speaker": "Ahmed",
+   "agenda_item": "water",
+   "fact_id": "F5",
+   "claimed_value": "12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Gordon",
+   "agenda_item": "water",
+   "fact_id": "F5",
+   "claimed_value": "10",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Ahmed",
+   "agenda_item": "water",
+   "fact_id": "F5",
+   "claimed_value": "10",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Sunny",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 14,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Gordon",
+   "agenda_item": "water",
+   "fact_id": "F7",
+   "claimed_value": "$960",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Ahmed",
+   "agenda_item": "water",
+   "fact_id": "F6",
+   "claimed_value": "$85",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Gordon",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 19,
+   "speaker": "Lorraine",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 20,
+   "speaker": "Ahmed",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 21,
+   "speaker": "Sunny",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Sunny",
+   "agenda_item": "seedling_sale",
+   "fact_id": "F8",
+   "claimed_value": "April 12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 24,
+   "speaker": "Sunny",
+   "agenda_item": "seedling_sale",
+   "fact_id": "F9",
+   "claimed_value": "800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Lorraine",
+   "agenda_item": "seedling_sale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 28,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Lorraine",
+   "agenda_item": "seedling_sale",
+   "fact_id": "F12",
+   "claimed_value": "$3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Ahmed",
+   "agenda_item": "seedling_sale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 30,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 31,
+   "speaker": "Gordon",
+   "agenda_item": "seedling_sale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 32,
+   "speaker": "Ahmed",
+   "agenda_item": "seedling_sale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 33,
+   "speaker": "Lorraine",
+   "agenda_item": "seedling_sale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 33,
+   "speaker": "Lorraine",
+   "agenda_item": "seedling_sale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Lorraine",
+   "agenda_item": "shed",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 36,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Gordon",
+   "agenda_item": "shed",
+   "fact_id": "F10",
+   "claimed_value": "$1,100",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Ahmed",
+   "agenda_item": "shed",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 38,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Gordon",
+   "agenda_item": "shed",
+   "fact_id": "F11",
+   "claimed_value": "$2,850",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Lorraine",
+   "agenda_item": "shed",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 41,
+   "speaker": "Gordon",
+   "agenda_item": "shed",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Lorraine",
+   "text": "Hello, everyone. Let's start with plots. We have thirty-six this year.",
+   "start_s": 0.5,
+   "end_s": 5.052
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Gordon",
+   "text": "Twenty-nine returning gardeners, and seven new ones. That fills every plot.",
+   "start_s": 6.208,
+   "end_s": 11.097
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Sunny",
+   "text": "Do the new gardeners get the plots by the gate? Those are the hardest to keep watered.",
+   "start_s": 12.245,
+   "end_s": 18.245
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Lorraine",
+   "text": "They do, but we'll pair each one with a returning gardener for the first month.",
+   "start_s": 18.502,
+   "end_s": 24.708
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Gordon",
+   "text": "That worked well last year.",
+   "start_s": 24.993,
+   "end_s": 27.215
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Ahmed",
+   "text": "And the fee is still forty?",
+   "start_s": 28.25,
+   "end_s": 30.65
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Gordon",
+   "text": "Forty for the season. No change.",
+   "start_s": 31.586,
+   "end_s": 34.253
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Lorraine",
+   "text": "I'll send the plot assignments and the pairing list by email this weekend.",
+   "start_s": 35.123,
+   "end_s": 40.502
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Sunny",
+   "text": "Thanks, Lorraine.",
+   "start_s": 41.01,
+   "end_s": 41.716
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Lorraine",
+   "text": "Water. Ahmed?",
+   "start_s": 42.522,
+   "end_s": 43.35
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Ahmed",
+   "text": "We have twelve rain barrels now, and they made a real difference to the bill.",
+   "start_s": 44.157,
+   "end_s": 50.157
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Gordon",
+   "text": "I count ten on the inventory. Two were promised but never arrived.",
+   "start_s": 50.938,
+   "end_s": 56.272
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Ahmed",
+   "text": "Ten, right. The other two are still at the factory.",
+   "start_s": 56.63,
+   "end_s": 60.63
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Sunny",
+   "text": "What was the water bill last year?",
+   "start_s": 61.261,
+   "end_s": 63.731
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Gordon",
+   "text": "Nine hundred and sixty. Down from about twelve hundred the year before.",
+   "start_s": 64.325,
+   "end_s": 69.658
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Ahmed",
+   "text": "Barrels are eighty-five each new. But a juice factory nearby gives away used ones.",
+   "start_s": 70.581,
+   "end_s": 76.181
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Lorraine",
+   "text": "Used ones would be lovely, if they're clean.",
+   "start_s": 77.376,
+   "end_s": 80.686
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Ahmed",
+   "text": "They need a good scrub. That's all.",
+   "start_s": 81.835,
+   "end_s": 84.635
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Gordon",
+   "text": "The barrels really want labels on them, too, so nobody drinks from them.",
+   "start_s": 85.379,
+   "end_s": 91.157
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Lorraine",
+   "text": "Then we'll take the used barrels from the factory instead of buying new.",
+   "start_s": 91.802,
+   "end_s": 97.181
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Ahmed",
+   "text": "I'll pick up six from the factory next Saturday.",
+   "start_s": 97.649,
+   "end_s": 101.249
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Sunny",
+   "text": "The road by the factory is closed for the new bridge. You have to go all the way around.",
+   "start_s": 101.485,
+   "end_s": 108.191
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Gordon",
+   "text": "That bridge has been \"nearly finished\" for two years.",
+   "start_s": 108.418,
+   "end_s": 112.418
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Lorraine",
+   "text": "Sunny, the seedling sale.",
+   "start_s": 113.083,
+   "end_s": 114.738
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Sunny",
+   "text": "The sale is on April twelfth. I've grown about eight hundred seedlings.",
+   "start_s": 115.256,
+   "end_s": 119.492
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Gordon",
+   "text": "That's a lot of tomatoes.",
+   "start_s": 120.072,
+   "end_s": 122.294
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Sunny",
+   "text": "Tomatoes, peppers, kale and some herbs.",
+   "start_s": 123.386,
+   "end_s": 125.503
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Lorraine",
+   "text": "Are we keeping the price at three dollars?",
+   "start_s": 126.229,
+   "end_s": 129.539
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Sunny",
+   "text": "Three dollars, or four for the bigger pots.",
+   "start_s": 130.3,
+   "end_s": 133.123
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Ahmed",
+   "text": "Who's helping on the day? Last year you were alone at the table for hours.",
+   "start_s": 133.559,
+   "end_s": 139.559
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Sunny",
+   "text": "Nobody yet.",
+   "start_s": 139.783,
+   "end_s": 140.489
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Gordon",
+   "text": "I can do the morning.",
+   "start_s": 141.014,
+   "end_s": 143.236
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Ahmed",
+   "text": "And I'll do the afternoon, after the barrels.",
+   "start_s": 143.573,
+   "end_s": 146.773
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Lorraine",
+   "text": "Maybe we could put up a sign at the library too? People there love plants.",
+   "start_s": 147.483,
+   "end_s": 153.69
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Sunny",
+   "text": "The table needs to be in the shade this year. The basil wilted last time.",
+   "start_s": 154.889,
+   "end_s": 160.183
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Lorraine",
+   "text": "Last thing. The shed. Gordon?",
+   "start_s": 161.057,
+   "end_s": 163.126
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Gordon",
+   "text": "The roof leaks and the door's off its hinges again. The quote to fix both is eleven hundred.",
+   "start_s": 163.508,
+   "end_s": 171.508
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Ahmed",
+   "text": "Can we afford it?",
+   "start_s": 172.602,
+   "end_s": 174.202
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Gordon",
+   "text": "The balance is twenty-eight fifty. So yes, but it's a big chunk.",
+   "start_s": 175.199,
+   "end_s": 180.532
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Sunny",
+   "text": "The sale should bring in a good amount. That would help.",
+   "start_s": 181.466,
+   "end_s": 185.349
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Lorraine",
+   "text": "Let's wait until after the seedling sale, and then decide on the shed.",
+   "start_s": 186.456,
+   "end_s": 191.835
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Gordon",
+   "text": "The door I can fix again in the meantime. I'm getting good at it.",
+   "start_s": 192.798,
+   "end_s": 199.02
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Lorraine",
+   "text": "Thank you, Gordon. That's everything. See you all in the garden.",
+   "start_s": 200.01,
+   "end_s": 204.561
+  }
+ ]
+}

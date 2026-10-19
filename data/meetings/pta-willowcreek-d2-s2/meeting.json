@@ -1,0 +1,1593 @@
+{
+ "meeting_id": "pta-willowcreek-d2-s2",
+ "config": {
+  "theme": "School PTA budget meeting for next year",
+  "domain_pack": "community_budget",
+  "drama": 0.2,
+  "seed": 2,
+  "duration_min": 4.5,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   1,
+   25,
+   29,
+   34,
+   38,
+   41,
+   52
+  ],
+  "reviewed_noclaim": [
+   29,
+   34,
+   38,
+   41
+  ]
+ },
+ "cast": {
+  "theme": "School PTA budget meeting for next year",
+  "personas": [
+   {
+    "name": "Rebecca",
+    "role": "PTO president",
+    "goals": "A calm, simple budget",
+    "hidden_agenda": "Wants the playground painted before her youngest moves on",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Hiro",
+    "role": "Treasurer",
+    "goals": "Accurate numbers, no surprises",
+    "hidden_agenda": "Has a spreadsheet for everything",
+    "verbosity": 2,
+    "wpm": 140,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Gloria",
+    "role": "Teacher representative, third grade",
+    "goals": "Supplies and field trips for the kids",
+    "hidden_agenda": "Her class missed the zoo trip last year",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Samir",
+    "role": "Parent volunteer, runs the walkathon",
+    "goals": "A bigger walkathon",
+    "hidden_agenda": "Remembers the pledges, not what was collected",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "PTO budget planning",
+   "org": "Willow Creek Elementary PTO (fictional)",
+   "agenda": [
+    {
+     "id": "recap",
+     "title": "This year's numbers",
+     "goal": "Agree income",
+     "timebox_min": 1.11
+    },
+    {
+     "id": "fundraisers",
+     "title": "Fundraisers",
+     "goal": "Keep",
+     "timebox_min": 1.13
+    },
+    {
+     "id": "spending",
+     "title": "Spending plan",
+     "goal": "Classroom grants",
+     "timebox_min": 1.75
+    },
+    {
+     "id": "next_steps",
+     "title": "Next steps",
+     "goal": "Get the draft ready for the vote",
+     "timebox_min": 0.54
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "income",
+     "statement": "Income this year = $19,300",
+     "value": "$19,300"
+    },
+    {
+     "id": "F2",
+     "key": "expenses",
+     "statement": "Expenses this year = $18,050",
+     "value": "$18,050"
+    },
+    {
+     "id": "F3",
+     "key": "reserve",
+     "statement": "Reserve = $4,800",
+     "value": "$4,800"
+    },
+    {
+     "id": "F4",
+     "key": "walkathon_net",
+     "statement": "Walkathon net = $8,900",
+     "value": "$8,900"
+    },
+    {
+     "id": "F5",
+     "key": "students",
+     "statement": "Students = 340",
+     "value": "340"
+    },
+    {
+     "id": "F6",
+     "key": "classroom_grant",
+     "statement": "Classroom grant = $125 per teacher",
+     "value": "$125"
+    },
+    {
+     "id": "F7",
+     "key": "teachers",
+     "statement": "Classroom teachers = 17",
+     "value": "17"
+    },
+    {
+     "id": "F8",
+     "key": "bus_cost",
+     "statement": "Field trip bus = $520 each",
+     "value": "$520"
+    },
+    {
+     "id": "F9",
+     "key": "paint_quote",
+     "statement": "Playground paint quote = $2,200",
+     "value": "$2,200"
+    },
+    {
+     "id": "F10",
+     "key": "yearbook_cost",
+     "statement": "Yearbook cost = $14 per book",
+     "value": "$14"
+    },
+    {
+     "id": "F11",
+     "key": "yearbook_orders",
+     "statement": "Yearbook orders = 210",
+     "value": "210"
+    },
+    {
+     "id": "F12",
+     "key": "vote_date",
+     "statement": "Membership vote = May 20",
+     "value": "May 20"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "recap",
+    "summary": "This year's numbers; Samir's walkathon memory is generous",
+    "n_turns": 14,
+    "events": []
+   },
+   {
+    "agenda_item": "fundraisers",
+    "summary": "What to keep",
+    "n_turns": 13,
+    "events": []
+   },
+   {
+    "agenda_item": "spending",
+    "summary": "Grants, buses, the playground and the yearbook; Rebecca's teacher count goes unchecked",
+    "n_turns": 21,
+    "events": []
+   },
+   {
+    "agenda_item": "next_steps",
+    "summary": "The vote",
+    "n_turns": 6,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Rebecca",
+   "text": "Hi, everyone. Thanks for staying after pickup. Hiro, could you start us off?",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Hiro",
+   "text": "Sure. Income was nineteen thousand three hundred, and expenses were eighteen thousand and fifty.",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [
+    "E002",
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Rebecca",
+   "text": "So we ended up a little ahead.",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Hiro",
+   "text": "A little. The reserve is forty-eight hundred now.",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Gloria",
+   "text": "That's more than I expected, honestly.",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Samir",
+   "text": "The walkathon did most of it. I think it brought in about twelve thousand.",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Hiro",
+   "text": "The pledges were about twelve. What we actually collected was eighty-nine hundred.",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Samir",
+   "text": "Oh, right. Some families never paid their pledges. That happens every year.",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Gloria",
+   "text": "Still, eighty-nine hundred from kids walking in circles. That's amazing.",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Rebecca",
+   "text": "It really is. The kids love it, too.",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Samir",
+   "text": "My son asked if he could do it twice this year.",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Hiro",
+   "text": "The other fundraisers were small. The book fair and the spring concert bake sale.",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Rebecca",
+   "text": "Anything that lost money?",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Hiro",
+   "text": "The movie night broke even. Nothing lost money.",
+   "agenda_item": "recap",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Rebecca",
+   "text": "Fundraisers for next year. I'd keep the walkathon, obviously.",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Samir",
+   "text": "Could we send pledge reminders this time? It might close the gap between pledged and collected.",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Hiro",
+   "text": "Yes, please. The online form can send a reminder after a week.",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Samir",
+   "text": "I'll set up the reminders on the form before the walkathon.",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Gloria",
+   "text": "The bake sale is a lot of work for what it makes. The teachers end up baking half of it.",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Rebecca",
+   "text": "Should we drop it?",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Gloria",
+   "text": "Maybe just make it smaller. Cookies only.",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Hiro",
+   "text": "The concert families like it, though. It's part of the evening.",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Rebecca",
+   "text": "Then the bake sale stays, but it's cookies only and parents bring them.",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Gloria",
+   "text": "Thank you. The teachers will be grateful.",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Samir",
+   "text": "The new bakery on Elm makes the best cookies I've ever had, by the way. The ginger ones.",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Hiro",
+   "text": "Is that the one with the blue door? I've walked past it every day.",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Gloria",
+   "text": "Go in. Trust me. The lemon bars too.",
+   "agenda_item": "fundraisers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Rebecca",
+   "text": "Okay, I'm hungry now. Spending. Classroom grants are a hundred and twenty-five per teacher, and we have twenty teachers, so that's twenty-five hundred.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E014",
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Gloria",
+   "text": "A hundred and twenty-five doesn't go far, but every bit helps.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Hiro",
+   "text": "We could raise it to a hundred and fifty with the surplus.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Rebecca",
+   "text": "Let's keep it at a hundred and twenty-five this year, and see how the walkathon does.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E018",
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Gloria",
+   "text": "The buses are the thing I really want. Five hundred and twenty a bus, and we lost the zoo trip last year.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Hiro",
+   "text": "How many buses would the zoo need?",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Gloria",
+   "text": "Three. One per class in the grade.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Hiro",
+   "text": "That's fifteen sixty. We can do that.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Rebecca",
+   "text": "Then the third-grade zoo trip is funded this year.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Gloria",
+   "text": "I'll book the zoo date with the office tomorrow.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Rebecca",
+   "text": "And the playground. The paint quote was twenty-two hundred.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Hiro",
+   "text": "That's half the reserve.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Rebecca",
+   "text": "The lines are so faded the kids can't see the hopscotch.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Samir",
+   "text": "Could parents paint it on a Saturday instead? We'd just need the paint.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Hiro",
+   "text": "Paint is maybe four hundred. Much cheaper.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Rebecca",
+   "text": "A parent paint day. I love that.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Gloria",
+   "text": "Somebody would need to check the school allows it. Insurance and so on.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Rebecca",
+   "text": "I'll ask the principal this week.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Hiro",
+   "text": "Yearbooks are fourteen dollars each, and we have two hundred and ten orders so far.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E028",
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Samir",
+   "text": "Do the yearbooks pay for themselves?",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Hiro",
+   "text": "They do, with a little left over.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Rebecca",
+   "text": "Next steps. The vote is on May twentieth.",
+   "agenda_item": "next_steps",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Hiro",
+   "text": "I'll put the draft budget together and send it to the board a week before.",
+   "agenda_item": "next_steps",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Gloria",
+   "text": "Can the draft go home in backpacks too? Not every family reads email.",
+   "agenda_item": "next_steps",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Rebecca",
+   "text": "Yes. Paper copies in the Friday folders.",
+   "agenda_item": "next_steps",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Samir",
+   "text": "Will there be childcare at the vote meeting? Turnout is always low without it.",
+   "agenda_item": "next_steps",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Rebecca",
+   "text": "Thank you, everyone. That was easy. I wish every meeting was like this.",
+   "agenda_item": "next_steps",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Rebecca",
+   "agenda_item": "recap",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Hiro",
+   "agenda_item": "recap",
+   "fact_id": "F1",
+   "claimed_value": "$19,300",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Hiro",
+   "agenda_item": "recap",
+   "fact_id": "F2",
+   "claimed_value": "$18,050",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Hiro",
+   "agenda_item": "recap",
+   "fact_id": "F3",
+   "claimed_value": "$4,800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 5,
+   "speaker": "Samir",
+   "agenda_item": "recap",
+   "fact_id": "F4",
+   "claimed_value": "$12,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Hiro",
+   "agenda_item": "recap",
+   "fact_id": "F4",
+   "claimed_value": "$8,900",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Gloria",
+   "agenda_item": "recap",
+   "fact_id": "F4",
+   "claimed_value": "$8,900",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Rebecca",
+   "agenda_item": "recap",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 13,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Samir",
+   "agenda_item": "fundraisers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 16,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 17,
+   "speaker": "Samir",
+   "agenda_item": "fundraisers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Rebecca",
+   "agenda_item": "fundraisers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 21,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 22,
+   "speaker": "Rebecca",
+   "agenda_item": "fundraisers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 24,
+   "speaker": "Samir",
+   "agenda_item": "fundraisers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Rebecca",
+   "agenda_item": "spending",
+   "fact_id": "F6",
+   "claimed_value": "$125",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 27,
+   "speaker": "Rebecca",
+   "agenda_item": "spending",
+   "fact_id": "F7",
+   "claimed_value": "20",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Gloria",
+   "agenda_item": "spending",
+   "fact_id": "F6",
+   "claimed_value": "$125",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Hiro",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 30,
+   "speaker": "Rebecca",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Rebecca",
+   "agenda_item": "spending",
+   "fact_id": "F6",
+   "claimed_value": "$125",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Gloria",
+   "agenda_item": "spending",
+   "fact_id": "F8",
+   "claimed_value": "$520",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Hiro",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 33,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 35,
+   "speaker": "Rebecca",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 36,
+   "speaker": "Gloria",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Rebecca",
+   "agenda_item": "spending",
+   "fact_id": "F9",
+   "claimed_value": "$2,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Samir",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 41,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Gloria",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 44,
+   "speaker": "Rebecca",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Hiro",
+   "agenda_item": "spending",
+   "fact_id": "F10",
+   "claimed_value": "$14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Hiro",
+   "agenda_item": "spending",
+   "fact_id": "F11",
+   "claimed_value": "210",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Samir",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 47,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 48,
+   "speaker": "Rebecca",
+   "agenda_item": "next_steps",
+   "fact_id": "F12",
+   "claimed_value": "May 20",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 49,
+   "speaker": "Hiro",
+   "agenda_item": "next_steps",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Gloria",
+   "agenda_item": "next_steps",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 51,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 52,
+   "speaker": "Samir",
+   "agenda_item": "next_steps",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Rebecca",
+   "text": "Hi, everyone. Thanks for staying after pickup. Hiro, could you start us off?",
+   "start_s": 0.5,
+   "end_s": 5.7
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Hiro",
+   "text": "Sure. Income was nineteen thousand three hundred, and expenses were eighteen thousand and fifty.",
+   "start_s": 6.856,
+   "end_s": 12.856
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Rebecca",
+   "text": "So we ended up a little ahead.",
+   "start_s": 14.004,
+   "end_s": 16.804
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Hiro",
+   "text": "A little. The reserve is forty-eight hundred now.",
+   "start_s": 17.061,
+   "end_s": 20.489
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Gloria",
+   "text": "That's more than I expected, honestly.",
+   "start_s": 20.774,
+   "end_s": 23.096
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Samir",
+   "text": "The walkathon did most of it. I think it brought in about twelve thousand.",
+   "start_s": 24.131,
+   "end_s": 29.222
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Hiro",
+   "text": "The pledges were about twelve. What we actually collected was eighty-nine hundred.",
+   "start_s": 30.158,
+   "end_s": 35.301
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Samir",
+   "text": "Oh, right. Some families never paid their pledges. That happens every year.",
+   "start_s": 36.171,
+   "end_s": 40.534
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Gloria",
+   "text": "Still, eighty-nine hundred from kids walking in circles. That's amazing.",
+   "start_s": 41.042,
+   "end_s": 44.913
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Rebecca",
+   "text": "It really is. The kids love it, too.",
+   "start_s": 45.719,
+   "end_s": 48.919
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Samir",
+   "text": "My son asked if he could do it twice this year.",
+   "start_s": 49.726,
+   "end_s": 53.726
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Hiro",
+   "text": "The other fundraisers were small. The book fair and the spring concert bake sale.",
+   "start_s": 54.507,
+   "end_s": 60.507
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Rebecca",
+   "text": "Anything that lost money?",
+   "start_s": 60.865,
+   "end_s": 62.465
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Hiro",
+   "text": "The movie night broke even. Nothing lost money.",
+   "start_s": 63.096,
+   "end_s": 66.524
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Rebecca",
+   "text": "Fundraisers for next year. I'd keep the walkathon, obviously.",
+   "start_s": 67.118,
+   "end_s": 70.718
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Samir",
+   "text": "Could we send pledge reminders this time? It might close the gap between pledged and collected.",
+   "start_s": 71.641,
+   "end_s": 77.459
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Hiro",
+   "text": "Yes, please. The online form can send a reminder after a week.",
+   "start_s": 78.654,
+   "end_s": 83.797
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Samir",
+   "text": "I'll set up the reminders on the form before the walkathon.",
+   "start_s": 84.946,
+   "end_s": 88.946
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Gloria",
+   "text": "The bake sale is a lot of work for what it makes. The teachers end up baking half of it.",
+   "start_s": 89.69,
+   "end_s": 97.432
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Rebecca",
+   "text": "Should we drop it?",
+   "start_s": 98.077,
+   "end_s": 99.677
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Gloria",
+   "text": "Maybe just make it smaller. Cookies only.",
+   "start_s": 100.145,
+   "end_s": 102.855
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Hiro",
+   "text": "The concert families like it, though. It's part of the evening.",
+   "start_s": 103.091,
+   "end_s": 107.805
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Rebecca",
+   "text": "Then the bake sale stays, but it's cookies only and parents bring them.",
+   "start_s": 108.032,
+   "end_s": 113.232
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Gloria",
+   "text": "Thank you. The teachers will be grateful.",
+   "start_s": 113.897,
+   "end_s": 116.607
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Samir",
+   "text": "The new bakery on Elm makes the best cookies I've ever had, by the way. The ginger ones.",
+   "start_s": 117.125,
+   "end_s": 123.671
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Hiro",
+   "text": "Is that the one with the blue door? I've walked past it every day.",
+   "start_s": 124.251,
+   "end_s": 130.251
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Gloria",
+   "text": "Go in. Trust me. The lemon bars too.",
+   "start_s": 131.343,
+   "end_s": 134.44
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Rebecca",
+   "text": "Okay, I'm hungry now. Spending. Classroom grants are a hundred and twenty-five per teacher, and we have twenty teachers, so that's twenty-five hundred.",
+   "start_s": 135.166,
+   "end_s": 144.366
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Gloria",
+   "text": "A hundred and twenty-five doesn't go far, but every bit helps.",
+   "start_s": 145.127,
+   "end_s": 149.385
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Hiro",
+   "text": "We could raise it to a hundred and fifty with the surplus.",
+   "start_s": 149.821,
+   "end_s": 154.964
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Rebecca",
+   "text": "Let's keep it at a hundred and twenty-five this year, and see how the walkathon does.",
+   "start_s": 155.188,
+   "end_s": 161.588
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Gloria",
+   "text": "The buses are the thing I really want. Five hundred and twenty a bus, and we lost the zoo trip last year.",
+   "start_s": 162.113,
+   "end_s": 170.629
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Hiro",
+   "text": "How many buses would the zoo need?",
+   "start_s": 170.966,
+   "end_s": 173.966
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Gloria",
+   "text": "Three. One per class in the grade.",
+   "start_s": 174.676,
+   "end_s": 177.386
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Hiro",
+   "text": "That's fifteen sixty. We can do that.",
+   "start_s": 178.585,
+   "end_s": 181.585
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Rebecca",
+   "text": "Then the third-grade zoo trip is funded this year.",
+   "start_s": 182.459,
+   "end_s": 186.059
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Gloria",
+   "text": "I'll book the zoo date with the office tomorrow.",
+   "start_s": 186.441,
+   "end_s": 189.925
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Rebecca",
+   "text": "And the playground. The paint quote was twenty-two hundred.",
+   "start_s": 191.019,
+   "end_s": 194.619
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Hiro",
+   "text": "That's half the reserve.",
+   "start_s": 195.616,
+   "end_s": 197.33
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Rebecca",
+   "text": "The lines are so faded the kids can't see the hopscotch.",
+   "start_s": 198.264,
+   "end_s": 202.664
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Samir",
+   "text": "Could parents paint it on a Saturday instead? We'd just need the paint.",
+   "start_s": 203.771,
+   "end_s": 208.498
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Hiro",
+   "text": "Paint is maybe four hundred. Much cheaper.",
+   "start_s": 209.461,
+   "end_s": 212.461
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Rebecca",
+   "text": "A parent paint day. I love that.",
+   "start_s": 213.451,
+   "end_s": 216.251
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Gloria",
+   "text": "Somebody would need to check the school allows it. Insurance and so on.",
+   "start_s": 216.805,
+   "end_s": 221.837
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Rebecca",
+   "text": "I'll ask the principal this week.",
+   "start_s": 223.018,
+   "end_s": 225.418
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Hiro",
+   "text": "Yearbooks are fourteen dollars each, and we have two hundred and ten orders so far.",
+   "start_s": 226.58,
+   "end_s": 233.008
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Samir",
+   "text": "Do the yearbooks pay for themselves?",
+   "start_s": 233.369,
+   "end_s": 235.551
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Hiro",
+   "text": "They do, with a little left over.",
+   "start_s": 236.505,
+   "end_s": 239.505
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Rebecca",
+   "text": "Next steps. The vote is on May twentieth.",
+   "start_s": 240.42,
+   "end_s": 243.62
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Hiro",
+   "text": "I'll put the draft budget together and send it to the board a week before.",
+   "start_s": 244.281,
+   "end_s": 250.71
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Gloria",
+   "text": "Can the draft go home in backpacks too? Not every family reads email.",
+   "start_s": 251.44,
+   "end_s": 256.473
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Rebecca",
+   "text": "Yes. Paper copies in the Friday folders.",
+   "start_s": 257.163,
+   "end_s": 259.963
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Samir",
+   "text": "Will there be childcare at the vote meeting? Turnout is always low without it.",
+   "start_s": 261.088,
+   "end_s": 266.179
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Rebecca",
+   "text": "Thank you, everyone. That was easy. I wish every meeting was like this.",
+   "start_s": 266.88,
+   "end_s": 272.08
+  }
+ ]
+}

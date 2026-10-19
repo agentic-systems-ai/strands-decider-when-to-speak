@@ -1,0 +1,1779 @@
+{
+ "meeting_id": "launch-marlowe-d5-s2",
+ "config": {
+  "theme": "Go/no-go for the Aurora mobile app launch",
+  "domain_pack": "product_launch",
+  "drama": 0.5,
+  "seed": 2,
+  "duration_min": 4.8,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   3,
+   13,
+   17,
+   18,
+   27,
+   32,
+   34,
+   51,
+   52,
+   55
+  ],
+  "reviewed_noclaim": [
+   13,
+   17,
+   18,
+   51,
+   55
+  ]
+ },
+ "cast": {
+  "theme": "Go/no-go for the Aurora mobile app launch",
+  "personas": [
+   {
+    "name": "Isabel",
+    "role": "VP of guest experience, chairs the meeting",
+    "goals": "Launch for the summer season",
+    "hidden_agenda": "The CEO mentioned the app in an investor call",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Femi",
+    "role": "Mobile engineering lead",
+    "goals": "Launch without the key problems coming back",
+    "hidden_agenda": "The lock vendor's SDK is still a black box to his team",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Gwen",
+    "role": "Director of hotel operations",
+    "goals": "Front desks that aren't overwhelmed",
+    "hidden_agenda": "Two general managers told her they don't want the app",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Rahul",
+    "role": "Data analyst for the pilot",
+    "goals": "Make sure the numbers are read correctly",
+    "hidden_agenda": "Found that the success rate drops at night",
+    "verbosity": 2,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Aurora guest app - launch decision",
+   "org": "Marlowe Hotels (fictional)",
+   "agenda": [
+    {
+     "id": "pilot",
+     "title": "Pilot results",
+     "goal": "Review the mobile check-in and digital key pilot",
+     "timebox_min": 1.76
+    },
+    {
+     "id": "hotel_ops",
+     "title": "Hotel readiness",
+     "goal": "Confirm the front desks are ready",
+     "timebox_min": 1.33
+    },
+    {
+     "id": "security",
+     "title": "Security review",
+     "goal": "Close out the penetration test",
+     "timebox_min": 0.85
+    },
+    {
+     "id": "launch_call",
+     "title": "Launch call",
+     "goal": "Decide on June 10 and the rollout order",
+     "timebox_min": 0.9
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "pilot_hotels",
+     "statement": "Pilot hotels = 7",
+     "value": "7"
+    },
+    {
+     "id": "F2",
+     "key": "pilot_checkins",
+     "statement": "Mobile check-ins in the pilot = 4,350",
+     "value": "4,350"
+    },
+    {
+     "id": "F3",
+     "key": "checkin_success",
+     "statement": "Mobile check-in success rate = 92%",
+     "value": "92%"
+    },
+    {
+     "id": "F4",
+     "key": "time_saved",
+     "statement": "Average time saved per check-in = 6 minutes",
+     "value": "6 minutes"
+    },
+    {
+     "id": "F5",
+     "key": "key_failures",
+     "statement": "Digital key failure rate = 3.5%",
+     "value": "3.5%"
+    },
+    {
+     "id": "F6",
+     "key": "staff_trained",
+     "statement": "Front desk staff trained = 160",
+     "value": "160"
+    },
+    {
+     "id": "F7",
+     "key": "total_hotels",
+     "statement": "Hotels in the chain = 38",
+     "value": "38"
+    },
+    {
+     "id": "F8",
+     "key": "pentest_open",
+     "statement": "Open penetration-test findings = 2 (medium)",
+     "value": "2"
+    },
+    {
+     "id": "F9",
+     "key": "launch_date",
+     "statement": "Planned launch = June 10",
+     "value": "June 10"
+    },
+    {
+     "id": "F10",
+     "key": "pilot_rating",
+     "statement": "Guest rating in the pilot = 4.6",
+     "value": "4.6"
+    },
+    {
+     "id": "F11",
+     "key": "support_calls_rate",
+     "statement": "Support calls per 100 check-ins = 1.8",
+     "value": "1.8"
+    },
+    {
+     "id": "F12",
+     "key": "loyalty_members",
+     "statement": "Loyalty members with email = 210,000",
+     "value": "210,000"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "pilot",
+    "summary": "Results; Isabel rounds up the success rate; Femi lowballs key failures and is corrected later",
+    "n_turns": 21,
+    "events": []
+   },
+   {
+    "agenda_item": "hotel_ops",
+    "summary": "Front desk readiness; Gwen's training number stands",
+    "n_turns": 16,
+    "events": []
+   },
+   {
+    "agenda_item": "security",
+    "summary": "The pen test; one owner, one wobble",
+    "n_turns": 10,
+    "events": []
+   },
+   {
+    "agenda_item": "launch_call",
+    "summary": "June 10, conditionally; the rollout order",
+    "n_turns": 10,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Isabel",
+   "text": "Thanks for joining. Let's start with the pilot. The headline is a ninety-eight percent check-in success rate, which is fantastic.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Rahul",
+   "text": "The dashboard says ninety-two. Ninety-eight was the success rate at the iOS hotels only.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Isabel",
+   "text": "Ninety-two, then. Still good.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Rahul",
+   "text": "It is. It drops at night, though. After eleven it's closer to eighty-five.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Gwen",
+   "text": "That's when the night auditor is alone at the desk. Exactly when you don't want failures.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Femi",
+   "text": "The night drop is the lock vendor's server doing maintenance. We've asked them to move it.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Isabel",
+   "text": "How many check-ins was the pilot in total?",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Rahul",
+   "text": "Forty-three fifty, across seven hotels.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E005",
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Isabel",
+   "text": "And the time saved?",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Rahul",
+   "text": "Six minutes per check-in on average.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Gwen",
+   "text": "Six minutes for the guest. Not for the desk when it goes wrong.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Isabel",
+   "text": "What about the digital keys?",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Femi",
+   "text": "Key failures are under one percent now. Much better than in March.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Isabel",
+   "text": "Good. Guests rated the pilot four point six, which is the highest we've had for anything.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Gwen",
+   "text": "Guests who got in. The ones who didn't call the front desk.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Rahul",
+   "text": "Support calls were one point eight per hundred check-ins.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Femi",
+   "text": "That's lower than the old kiosk.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Gwen",
+   "text": "Hang on. I have the incident log from the Seaport hotel open. Key failures there were three and a half percent last month, not under one.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Femi",
+   "text": "Three point five across the chain, yes. Under one was the target after the firmware update, which isn't out yet.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Isabel",
+   "text": "Then the firmware update matters for the launch.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Femi",
+   "text": "It does.",
+   "agenda_item": "pilot",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Isabel",
+   "text": "Hotel readiness. Gwen?",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Gwen",
+   "text": "We've trained about a hundred front desk staff so far.",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Isabel",
+   "text": "Out of how many hotels?",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Gwen",
+   "text": "Thirty-eight in the chain, but we'd start with the bigger ones.",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Femi",
+   "text": "What do the desk staff do when a digital key fails?",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Gwen",
+   "text": "They cut a plastic key, like always. That part's easy. It's the queue that's the problem.",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Rahul",
+   "text": "Did anyone watch the finale last night? I'm still upset.",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Femi",
+   "text": "Don't. I haven't seen it yet. I'm watching tonight.",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Gwen",
+   "text": "I stopped after the season with the twins. It got silly.",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Isabel",
+   "text": "Okay. Could we have a manager on duty at the desk for the first week at each hotel?",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Gwen",
+   "text": "For the big ones, yes. For the small ones, it's one person at night anyway.",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Isabel",
+   "text": "Then the first week has a manager on the desk at every hotel with more than two hundred rooms.",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Gwen",
+   "text": "I'll send the general managers a staffing note on Monday.",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Femi",
+   "text": "Has anyone asked the night auditors what they think of it?",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Rahul",
+   "text": "Two general managers have said they don't want the app at all. Is that a problem?",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Gwen",
+   "text": "It's a conversation. Not a problem yet.",
+   "agenda_item": "hotel_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Isabel",
+   "text": "Security. Femi, the pen test.",
+   "agenda_item": "security",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Femi",
+   "text": "Two medium findings are still open. Both are in the key-sharing feature.",
+   "agenda_item": "security",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Isabel",
+   "text": "Can we launch with them open?",
+   "agenda_item": "security",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Femi",
+   "text": "I'd rather not. If we turn key sharing off at launch, both findings go away.",
+   "agenda_item": "security",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Gwen",
+   "text": "Guests won't miss key sharing. Most don't know it exists.",
+   "agenda_item": "security",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Isabel",
+   "text": "Then key sharing is off at launch, and we turn it on when the two findings are closed.",
+   "agenda_item": "security",
+   "direction": null,
+   "event_ids": [
+    "E029",
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Femi",
+   "text": "I'll get the flag set and ask the testers to confirm the findings are out of scope.",
+   "agenda_item": "security",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Rahul",
+   "text": "It'd be worth someone checking how many pilot guests actually used key sharing.",
+   "agenda_item": "security",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Isabel",
+   "text": "Rahul, you'd know better than anyone. Could you pull that number?",
+   "agenda_item": "security",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Rahul",
+   "text": "Sure. By tomorrow.",
+   "agenda_item": "security",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Isabel",
+   "text": "The call. Are we launching on June tenth?",
+   "agenda_item": "launch_call",
+   "direction": null,
+   "event_ids": [
+    "E035",
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Femi",
+   "text": "Only if the firmware update is out. The key failures need to come down first.",
+   "agenda_item": "launch_call",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Gwen",
+   "text": "And not at the two hotels whose managers said no. Not yet.",
+   "agenda_item": "launch_call",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Isabel",
+   "text": "Then June tenth, conditional on the firmware, starting with the twelve biggest hotels. The rest follow in July.",
+   "agenda_item": "launch_call",
+   "direction": null,
+   "event_ids": [
+    "E037",
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Rahul",
+   "text": "Should we email the loyalty members? That's two hundred and ten thousand people.",
+   "agenda_item": "launch_call",
+   "direction": null,
+   "event_ids": [
+    "E039",
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Isabel",
+   "text": "Not on day one. Let's see the first two weeks before we tell everyone.",
+   "agenda_item": "launch_call",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Gwen",
+   "text": "Who tells the CEO it's conditional?",
+   "agenda_item": "launch_call",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Femi",
+   "text": "When does the lock vendor ship the firmware? Do we have a date?",
+   "agenda_item": "launch_call",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Rahul",
+   "text": "They said the first week of June. They also said April.",
+   "agenda_item": "launch_call",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Isabel",
+   "text": "Thank you, everyone. We'll check in on the firmware next Friday.",
+   "agenda_item": "launch_call",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 0,
+   "speaker": "Isabel",
+   "agenda_item": "pilot",
+   "fact_id": "F3",
+   "claimed_value": "98%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Rahul",
+   "agenda_item": "pilot",
+   "fact_id": "F3",
+   "claimed_value": "92%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Isabel",
+   "agenda_item": "pilot",
+   "fact_id": "F3",
+   "claimed_value": "92%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Isabel",
+   "agenda_item": "pilot",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 7,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Rahul",
+   "agenda_item": "pilot",
+   "fact_id": "F2",
+   "claimed_value": "4,350",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Rahul",
+   "agenda_item": "pilot",
+   "fact_id": "F1",
+   "claimed_value": "7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Isabel",
+   "agenda_item": "pilot",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 9,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Rahul",
+   "agenda_item": "pilot",
+   "fact_id": "F4",
+   "claimed_value": "6 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Gwen",
+   "agenda_item": "pilot",
+   "fact_id": "F4",
+   "claimed_value": "6 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Isabel",
+   "agenda_item": "pilot",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 12,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 12,
+   "speaker": "Femi",
+   "agenda_item": "pilot",
+   "fact_id": "F5",
+   "claimed_value": "under 1%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Isabel",
+   "agenda_item": "pilot",
+   "fact_id": "F10",
+   "claimed_value": "4.6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Rahul",
+   "agenda_item": "pilot",
+   "fact_id": "F11",
+   "claimed_value": "1.8",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Gwen",
+   "agenda_item": "pilot",
+   "fact_id": "F5",
+   "claimed_value": "3.5%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Femi",
+   "agenda_item": "pilot",
+   "fact_id": "F5",
+   "claimed_value": "3.5%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Isabel",
+   "agenda_item": "hotel_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 22,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 22,
+   "speaker": "Gwen",
+   "agenda_item": "hotel_ops",
+   "fact_id": "F6",
+   "claimed_value": "100",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Isabel",
+   "agenda_item": "hotel_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 24,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Gwen",
+   "agenda_item": "hotel_ops",
+   "fact_id": "F7",
+   "claimed_value": "38",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Femi",
+   "agenda_item": "hotel_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 26,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 27,
+   "speaker": "Rahul",
+   "agenda_item": "hotel_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Isabel",
+   "agenda_item": "hotel_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 31,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 32,
+   "speaker": "Isabel",
+   "agenda_item": "hotel_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 33,
+   "speaker": "Gwen",
+   "agenda_item": "hotel_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Femi",
+   "agenda_item": "hotel_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Rahul",
+   "agenda_item": "hotel_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 36,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Femi",
+   "agenda_item": "security",
+   "fact_id": "F8",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Isabel",
+   "agenda_item": "security",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 40,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 42,
+   "speaker": "Isabel",
+   "agenda_item": "security",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Isabel",
+   "agenda_item": "security",
+   "fact_id": "F8",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 43,
+   "speaker": "Femi",
+   "agenda_item": "security",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Rahul",
+   "agenda_item": "security",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Isabel",
+   "agenda_item": "security",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 46,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 46,
+   "speaker": "Rahul",
+   "agenda_item": "security",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Isabel",
+   "agenda_item": "launch_call",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 50,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Isabel",
+   "agenda_item": "launch_call",
+   "fact_id": "F9",
+   "claimed_value": "June 10",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 50,
+   "speaker": "Isabel",
+   "agenda_item": "launch_call",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Isabel",
+   "agenda_item": "launch_call",
+   "fact_id": "F9",
+   "claimed_value": "June 10",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 51,
+   "speaker": "Rahul",
+   "agenda_item": "launch_call",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 52,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 51,
+   "speaker": "Rahul",
+   "agenda_item": "launch_call",
+   "fact_id": "F12",
+   "claimed_value": "210,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Isabel",
+   "agenda_item": "launch_call",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 53,
+   "speaker": "Gwen",
+   "agenda_item": "launch_call",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Femi",
+   "agenda_item": "launch_call",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 55,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Isabel",
+   "text": "Thanks for joining. Let's start with the pilot. The headline is a ninety-eight percent check-in success rate, which is fantastic.",
+   "start_s": 0.5,
+   "end_s": 7.773
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Rahul",
+   "text": "The dashboard says ninety-two. Ninety-eight was the success rate at the iOS hotels only.",
+   "start_s": 8.929,
+   "end_s": 14.179
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Isabel",
+   "text": "Ninety-two, then. Still good.",
+   "start_s": 15.327,
+   "end_s": 16.781
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Rahul",
+   "text": "It is. It drops at night, though. After eleven it's closer to eighty-five.",
+   "start_s": 17.038,
+   "end_s": 21.913
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Gwen",
+   "text": "That's when the night auditor is alone at the desk. Exactly when you don't want failures.",
+   "start_s": 22.198,
+   "end_s": 28.598
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Femi",
+   "text": "The night drop is the lock vendor's server doing maintenance. We've asked them to move it.",
+   "start_s": 29.633,
+   "end_s": 35.827
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Isabel",
+   "text": "How many check-ins was the pilot in total?",
+   "start_s": 36.763,
+   "end_s": 39.672
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Rahul",
+   "text": "Forty-three fifty, across seven hotels.",
+   "start_s": 40.542,
+   "end_s": 42.417
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Isabel",
+   "text": "And the time saved?",
+   "start_s": 42.925,
+   "end_s": 44.38
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Rahul",
+   "text": "Six minutes per check-in on average.",
+   "start_s": 45.186,
+   "end_s": 47.436
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Gwen",
+   "text": "Six minutes for the guest. Not for the desk when it goes wrong.",
+   "start_s": 48.243,
+   "end_s": 53.443
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Isabel",
+   "text": "What about the digital keys?",
+   "start_s": 54.224,
+   "end_s": 56.042
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Femi",
+   "text": "Key failures are under one percent now. Much better than in March.",
+   "start_s": 56.4,
+   "end_s": 61.046
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Isabel",
+   "text": "Good. Guests rated the pilot four point six, which is the highest we've had for anything.",
+   "start_s": 61.677,
+   "end_s": 67.495
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Gwen",
+   "text": "Guests who got in. The ones who didn't call the front desk.",
+   "start_s": 68.089,
+   "end_s": 72.889
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Rahul",
+   "text": "Support calls were one point eight per hundred check-ins.",
+   "start_s": 73.812,
+   "end_s": 77.187
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Femi",
+   "text": "That's lower than the old kiosk.",
+   "start_s": 78.382,
+   "end_s": 80.704
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Gwen",
+   "text": "Hang on. I have the incident log from the Seaport hotel open. Key failures there were three and a half percent last month, not under one.",
+   "start_s": 81.853,
+   "end_s": 92.253
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Femi",
+   "text": "Three point five across the chain, yes. Under one was the target after the firmware update, which isn't out yet.",
+   "start_s": 92.997,
+   "end_s": 100.739
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Isabel",
+   "text": "Then the firmware update matters for the launch.",
+   "start_s": 101.384,
+   "end_s": 104.293
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Femi",
+   "text": "It does.",
+   "start_s": 104.761,
+   "end_s": 105.535
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Isabel",
+   "text": "Hotel readiness. Gwen?",
+   "start_s": 105.771,
+   "end_s": 106.862
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Gwen",
+   "text": "We've trained about a hundred front desk staff so far.",
+   "start_s": 107.089,
+   "end_s": 111.089
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Isabel",
+   "text": "Out of how many hotels?",
+   "start_s": 111.754,
+   "end_s": 113.572
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Gwen",
+   "text": "Thirty-eight in the chain, but we'd start with the bigger ones.",
+   "start_s": 114.09,
+   "end_s": 118.49
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Femi",
+   "text": "What do the desk staff do when a digital key fails?",
+   "start_s": 119.07,
+   "end_s": 123.328
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Gwen",
+   "text": "They cut a plastic key, like always. That part's easy. It's the queue that's the problem.",
+   "start_s": 124.42,
+   "end_s": 130.82
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Rahul",
+   "text": "Did anyone watch the finale last night? I'm still upset.",
+   "start_s": 131.546,
+   "end_s": 135.296
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Femi",
+   "text": "Don't. I haven't seen it yet. I'm watching tonight.",
+   "start_s": 136.057,
+   "end_s": 139.54
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Gwen",
+   "text": "I stopped after the season with the twins. It got silly.",
+   "start_s": 139.976,
+   "end_s": 144.376
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Isabel",
+   "text": "Okay. Could we have a manager on duty at the desk for the first week at each hotel?",
+   "start_s": 144.6,
+   "end_s": 151.145
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Gwen",
+   "text": "For the big ones, yes. For the small ones, it's one person at night anyway.",
+   "start_s": 151.67,
+   "end_s": 157.67
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Isabel",
+   "text": "Then the first week has a manager on the desk at every hotel with more than two hundred rooms.",
+   "start_s": 158.007,
+   "end_s": 164.916
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Gwen",
+   "text": "I'll send the general managers a staffing note on Monday.",
+   "start_s": 165.626,
+   "end_s": 169.626
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Femi",
+   "text": "Has anyone asked the night auditors what they think of it?",
+   "start_s": 170.825,
+   "end_s": 175.083
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Rahul",
+   "text": "Two general managers have said they don't want the app at all. Is that a problem?",
+   "start_s": 175.957,
+   "end_s": 181.957
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Gwen",
+   "text": "It's a conversation. Not a problem yet.",
+   "start_s": 182.339,
+   "end_s": 185.139
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Isabel",
+   "text": "Security. Femi, the pen test.",
+   "start_s": 186.233,
+   "end_s": 188.051
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Femi",
+   "text": "Two medium findings are still open. Both are in the key-sharing feature.",
+   "start_s": 189.048,
+   "end_s": 193.693
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Isabel",
+   "text": "Can we launch with them open?",
+   "start_s": 194.627,
+   "end_s": 196.809
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Femi",
+   "text": "I'd rather not. If we turn key sharing off at launch, both findings go away.",
+   "start_s": 197.916,
+   "end_s": 203.722
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Gwen",
+   "text": "Guests won't miss key sharing. Most don't know it exists.",
+   "start_s": 204.685,
+   "end_s": 208.685
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Isabel",
+   "text": "Then key sharing is off at launch, and we turn it on when the two findings are closed.",
+   "start_s": 209.675,
+   "end_s": 216.22
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Femi",
+   "text": "I'll get the flag set and ask the testers to confirm the findings are out of scope.",
+   "start_s": 216.774,
+   "end_s": 223.354
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Rahul",
+   "text": "It'd be worth someone checking how many pilot guests actually used key sharing.",
+   "start_s": 224.535,
+   "end_s": 229.41
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Isabel",
+   "text": "Rahul, you'd know better than anyone. Could you pull that number?",
+   "start_s": 230.572,
+   "end_s": 234.572
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Rahul",
+   "text": "Sure. By tomorrow.",
+   "start_s": 234.933,
+   "end_s": 236.058
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Isabel",
+   "text": "The call. Are we launching on June tenth?",
+   "start_s": 237.012,
+   "end_s": 239.921
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Femi",
+   "text": "Only if the firmware update is out. The key failures need to come down first.",
+   "start_s": 240.836,
+   "end_s": 246.643
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Gwen",
+   "text": "And not at the two hotels whose managers said no. Not yet.",
+   "start_s": 247.304,
+   "end_s": 252.104
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Isabel",
+   "text": "Then June tenth, conditional on the firmware, starting with the twelve biggest hotels. The rest follow in July.",
+   "start_s": 252.834,
+   "end_s": 259.38
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Rahul",
+   "text": "Should we email the loyalty members? That's two hundred and ten thousand people.",
+   "start_s": 260.07,
+   "end_s": 264.945
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Isabel",
+   "text": "Not on day one. Let's see the first two weeks before we tell everyone.",
+   "start_s": 266.07,
+   "end_s": 271.161
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Gwen",
+   "text": "Who tells the CEO it's conditional?",
+   "start_s": 271.862,
+   "end_s": 274.262
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Femi",
+   "text": "When does the lock vendor ship the firmware? Do we have a date?",
+   "start_s": 275.294,
+   "end_s": 280.326
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Rahul",
+   "text": "They said the first week of June. They also said April.",
+   "start_s": 280.88,
+   "end_s": 285.005
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Isabel",
+   "text": "Thank you, everyone. We'll check in on the firmware next Friday.",
+   "start_s": 286.088,
+   "end_s": 290.088
+  }
+ ]
+}

@@ -1,0 +1,1618 @@
+{
+ "meeting_id": "ecolab-wetlands-d5-s2",
+ "config": {
+  "theme": "Weekly meeting of a university ecology research lab",
+  "domain_pack": "research_lab",
+  "drama": 0.5,
+  "seed": 2,
+  "duration_min": 4.2,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   7,
+   10,
+   16,
+   17,
+   22,
+   41,
+   48
+  ],
+  "reviewed_noclaim": [
+   7
+  ]
+ },
+ "cast": {
+  "theme": "Weekly meeting of a university ecology research lab",
+  "personas": [
+   {
+    "name": "Adaeze",
+    "role": "Principal investigator",
+    "goals": "A safe, productive field season",
+    "hidden_agenda": "The April incident scared her more than she shows",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Tomasz",
+    "role": "Postdoc, runs the data pipeline",
+    "goals": "Clear the backlog and present at the conference",
+    "hidden_agenda": "Wants to bring his partner to the conference city",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Riya",
+    "role": "PhD student",
+    "goals": "Get her first conference abstract accepted",
+    "hidden_agenda": "Nervous about presenting",
+    "verbosity": 2,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Wes",
+    "role": "Field technician",
+    "goals": "Working sensors and a working airboat",
+    "hidden_agenda": "Was the one who slipped in April",
+    "verbosity": 3,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Wetlands lab meeting",
+   "org": "Marsh and Wetlands Lab, Bayou State University (fictional)",
+   "agenda": [
+    {
+     "id": "sensors",
+     "title": "Sensor network",
+     "goal": "Decide how to deal with the failed water-level sensors",
+     "timebox_min": 1.06
+    },
+    {
+     "id": "data",
+     "title": "Data backlog",
+     "goal": "Get the processing backlog under control",
+     "timebox_min": 1.0
+    },
+    {
+     "id": "conference",
+     "title": "Conference abstracts",
+     "goal": "Agree who submits what",
+     "timebox_min": 0.88
+    },
+    {
+     "id": "safety",
+     "title": "Field safety",
+     "goal": "Act on the April incident",
+     "timebox_min": 1.25
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "sensors_deployed",
+     "statement": "Water-level sensors deployed = 32",
+     "value": "32"
+    },
+    {
+     "id": "F2",
+     "key": "sensors_failed",
+     "statement": "Sensors failed since winter = 7",
+     "value": "7"
+    },
+    {
+     "id": "F3",
+     "key": "sensor_cost",
+     "statement": "Replacement sensor = $420 each",
+     "value": "$420"
+    },
+    {
+     "id": "F4",
+     "key": "backlog_months",
+     "statement": "Unprocessed sensor data = 5 months",
+     "value": "5 months"
+    },
+    {
+     "id": "F5",
+     "key": "storage_used",
+     "statement": "Lab storage used = 78% of quota",
+     "value": "78%"
+    },
+    {
+     "id": "F6",
+     "key": "abstract_deadline",
+     "statement": "Abstract deadline = June 6",
+     "value": "June 6"
+    },
+    {
+     "id": "F7",
+     "key": "abstracts_planned",
+     "statement": "Abstracts planned = 3",
+     "value": "3"
+    },
+    {
+     "id": "F8",
+     "key": "incident_date",
+     "statement": "Field incident = April 22",
+     "value": "April 22"
+    },
+    {
+     "id": "F9",
+     "key": "first_aid_certified",
+     "statement": "Field staff with first-aid certification = 4",
+     "value": "4"
+    },
+    {
+     "id": "F10",
+     "key": "travel_budget",
+     "statement": "Travel budget remaining = $6,500",
+     "value": "$6,500"
+    },
+    {
+     "id": "F11",
+     "key": "airboat_hours",
+     "statement": "Airboat hours remaining this season = 40",
+     "value": "40"
+    },
+    {
+     "id": "F12",
+     "key": "lab_members",
+     "statement": "Lab members = 7",
+     "value": "7"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "sensors",
+    "summary": "How many are down; Wes undercounts, then the cost",
+    "n_turns": 13,
+    "events": []
+   },
+   {
+    "agenda_item": "data",
+    "summary": "The backlog and storage; Riya's storage number stands",
+    "n_turns": 11,
+    "events": []
+   },
+   {
+    "agenda_item": "conference",
+    "summary": "Abstracts; Tomasz's travel budget figure is high and is corrected later",
+    "n_turns": 12,
+    "events": []
+   },
+   {
+    "agenda_item": "safety",
+    "summary": "The April incident; first aid; airboat hours",
+    "n_turns": 15,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Adaeze",
+   "text": "Let's start with the sensors. Wes, how many are down?",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Wes",
+   "text": "Three, as of last week. The ones out by the channel.",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Tomasz",
+   "text": "The pipeline shows seven with no data since winter. Three are the ones you've visited.",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Wes",
+   "text": "Seven. I haven't been out to the far ones since the water came up.",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Adaeze",
+   "text": "Out of thirty-two, that's a lot.",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Riya",
+   "text": "How much is a replacement?",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Wes",
+   "text": "Four hundred and twenty each.",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Tomasz",
+   "text": "So almost three thousand to replace all seven.",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Adaeze",
+   "text": "Can any of them be repaired instead?",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Wes",
+   "text": "Maybe two. The others have water in the housing. That's the end of them.",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Adaeze",
+   "text": "Then we replace five and try to repair two.",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Wes",
+   "text": "I'll order the five sensors this week and take the two broken ones to the electronics shop.",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Tomasz",
+   "text": "We should really think about moving the sensors to higher ground at some point.",
+   "agenda_item": "sensors",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Adaeze",
+   "text": "Data. Tomasz, where's the backlog?",
+   "agenda_item": "data",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Tomasz",
+   "text": "Five months of sensor data is unprocessed. The pipeline broke when the university changed servers.",
+   "agenda_item": "data",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Riya",
+   "text": "And we're at about ninety percent of our storage.",
+   "agenda_item": "data",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Adaeze",
+   "text": "Ninety? Then we can't even store new data for long.",
+   "agenda_item": "data",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Tomasz",
+   "text": "Fixing the pipeline is a week of work. Then the backlog runs by itself over a weekend.",
+   "agenda_item": "data",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Adaeze",
+   "text": "Then the pipeline is your priority this week, ahead of the abstract.",
+   "agenda_item": "data",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Tomasz",
+   "text": "Ahead of the abstract. Fine, but the deadline's tight.",
+   "agenda_item": "data",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Riya",
+   "text": "Could the raw data go to the archive service, to free up space?",
+   "agenda_item": "data",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Tomasz",
+   "text": "Yes, the older files can. I'll do that when the pipeline's back.",
+   "agenda_item": "data",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Wes",
+   "text": "Did anyone see the cooking show where they made jambalaya with crawfish from a bayou? I swear it was our bayou.",
+   "agenda_item": "data",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Riya",
+   "text": "My roommate watches it every night. The host keeps saying \"y'all\" wrong.",
+   "agenda_item": "data",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Adaeze",
+   "text": "Okay. Conference. The abstract deadline is June sixth. We planned three.",
+   "agenda_item": "conference",
+   "direction": null,
+   "event_ids": [
+    "E020",
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Tomasz",
+   "text": "Mine, Riya's, and the sensor network one with Wes.",
+   "agenda_item": "conference",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Riya",
+   "text": "Do I really have to submit one? I've never presented.",
+   "agenda_item": "conference",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Adaeze",
+   "text": "You do. You're ready, and a poster is a gentle start.",
+   "agenda_item": "conference",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Riya",
+   "text": "A poster. Okay. I can do a poster.",
+   "agenda_item": "conference",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Tomasz",
+   "text": "And the travel budget is ten thousand, so all three of us can go.",
+   "agenda_item": "conference",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Wes",
+   "text": "I'd rather not go. Somebody has to keep the sensors alive.",
+   "agenda_item": "conference",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Riya",
+   "text": "Maybe Wes could present remotely?",
+   "agenda_item": "conference",
+   "direction": null,
+   "event_ids": [
+    "E025",
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Adaeze",
+   "text": "I checked the grant account this morning. Travel has sixty-five hundred left, not ten.",
+   "agenda_item": "conference",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Tomasz",
+   "text": "Sixty-five hundred. That's two people, not three.",
+   "agenda_item": "conference",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Adaeze",
+   "text": "Then Riya and Tomasz go, and the sensor abstract is presented by Tomasz.",
+   "agenda_item": "conference",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Tomasz",
+   "text": "Fair enough.",
+   "agenda_item": "conference",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Adaeze",
+   "text": "Safety. I want to talk about April twenty-second.",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Wes",
+   "text": "I slipped off the boardwalk into the channel. I'm fine. It was my fault.",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Adaeze",
+   "text": "It wasn't a fault. It was a wet boardwalk and no second person. That's on the process.",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Riya",
+   "text": "How many of us have first-aid certification?",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Wes",
+   "text": "Four. Me, Tomasz, and the two undergrads from last summer, who've left.",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Adaeze",
+   "text": "So really two, out of seven of us.",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Tomasz",
+   "text": "Could the department pay for a first-aid course for everyone?",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Adaeze",
+   "text": "They should. I'll ask the chair this week.",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Wes",
+   "text": "And nobody goes out alone. That should be a rule.",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Adaeze",
+   "text": "From today, nobody goes to the field alone, and the boardwalk sites need two people.",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Riya",
+   "text": "What about the airboat? We have forty hours left. Does that need two people too?",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [
+    "E037",
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Wes",
+   "text": "The airboat always has two. You can't drive and anchor at the same time.",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Tomasz",
+   "text": "Is the department going to fix the boardwalk itself?",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Adaeze",
+   "text": "Okay. Thank you, all. Wes, please be careful out there.",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Wes",
+   "text": "Always.",
+   "agenda_item": "safety",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Adaeze",
+   "agenda_item": "sensors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 1,
+   "speaker": "Wes",
+   "agenda_item": "sensors",
+   "fact_id": "F2",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Tomasz",
+   "agenda_item": "sensors",
+   "fact_id": "F2",
+   "claimed_value": "7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Wes",
+   "agenda_item": "sensors",
+   "fact_id": "F2",
+   "claimed_value": "7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Adaeze",
+   "agenda_item": "sensors",
+   "fact_id": "F1",
+   "claimed_value": "32",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Riya",
+   "agenda_item": "sensors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 6,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Wes",
+   "agenda_item": "sensors",
+   "fact_id": "F3",
+   "claimed_value": "$420",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Adaeze",
+   "agenda_item": "sensors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 9,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 10,
+   "speaker": "Adaeze",
+   "agenda_item": "sensors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 11,
+   "speaker": "Wes",
+   "agenda_item": "sensors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Tomasz",
+   "agenda_item": "sensors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Adaeze",
+   "agenda_item": "data",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 14,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Tomasz",
+   "agenda_item": "data",
+   "fact_id": "F4",
+   "claimed_value": "5 months",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 15,
+   "speaker": "Riya",
+   "agenda_item": "data",
+   "fact_id": "F5",
+   "claimed_value": "90%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Adaeze",
+   "agenda_item": "data",
+   "fact_id": "F5",
+   "claimed_value": "90%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 18,
+   "speaker": "Adaeze",
+   "agenda_item": "data",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Riya",
+   "agenda_item": "data",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 21,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 21,
+   "speaker": "Tomasz",
+   "agenda_item": "data",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 22,
+   "speaker": "Wes",
+   "agenda_item": "data",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Adaeze",
+   "agenda_item": "conference",
+   "fact_id": "F6",
+   "claimed_value": "June 6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Adaeze",
+   "agenda_item": "conference",
+   "fact_id": "F7",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Riya",
+   "agenda_item": "conference",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 27,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 28,
+   "speaker": "Riya",
+   "agenda_item": "conference",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 29,
+   "speaker": "Tomasz",
+   "agenda_item": "conference",
+   "fact_id": "F10",
+   "claimed_value": "$10,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Riya",
+   "agenda_item": "conference",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Riya",
+   "agenda_item": "conference",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 34,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Adaeze",
+   "agenda_item": "conference",
+   "fact_id": "F10",
+   "claimed_value": "$6,500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 33,
+   "speaker": "Tomasz",
+   "agenda_item": "conference",
+   "fact_id": "F10",
+   "claimed_value": "$6,500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Adaeze",
+   "agenda_item": "conference",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Adaeze",
+   "agenda_item": "safety",
+   "fact_id": "F8",
+   "claimed_value": "April 22",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Riya",
+   "agenda_item": "safety",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 40,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Wes",
+   "agenda_item": "safety",
+   "fact_id": "F9",
+   "claimed_value": "4",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Adaeze",
+   "agenda_item": "safety",
+   "fact_id": "F12",
+   "claimed_value": "7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Tomasz",
+   "agenda_item": "safety",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 43,
+   "speaker": "Adaeze",
+   "agenda_item": "safety",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 45,
+   "speaker": "Adaeze",
+   "agenda_item": "safety",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Riya",
+   "agenda_item": "safety",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 47,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Riya",
+   "agenda_item": "safety",
+   "fact_id": "F11",
+   "claimed_value": "40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 48,
+   "speaker": "Tomasz",
+   "agenda_item": "safety",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Adaeze",
+   "text": "Let's start with the sensors. Wes, how many are down?",
+   "start_s": 0.5,
+   "end_s": 4.371
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Wes",
+   "text": "Three, as of last week. The ones out by the channel.",
+   "start_s": 5.527,
+   "end_s": 10.079
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Tomasz",
+   "text": "The pipeline shows seven with no data since winter. Three are the ones you've visited.",
+   "start_s": 11.227,
+   "end_s": 17.227
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Wes",
+   "text": "Seven. I haven't been out to the far ones since the water came up.",
+   "start_s": 17.484,
+   "end_s": 23.277
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Adaeze",
+   "text": "Out of thirty-two, that's a lot.",
+   "start_s": 23.562,
+   "end_s": 25.884
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Riya",
+   "text": "How much is a replacement?",
+   "start_s": 26.919,
+   "end_s": 28.738
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Wes",
+   "text": "Four hundred and twenty each.",
+   "start_s": 29.674,
+   "end_s": 31.743
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Tomasz",
+   "text": "So almost three thousand to replace all seven.",
+   "start_s": 32.613,
+   "end_s": 35.813
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Adaeze",
+   "text": "Can any of them be repaired instead?",
+   "start_s": 36.321,
+   "end_s": 39.031
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Wes",
+   "text": "Maybe two. The others have water in the housing. That's the end of them.",
+   "start_s": 39.837,
+   "end_s": 45.63
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Adaeze",
+   "text": "Then we replace five and try to repair two.",
+   "start_s": 46.437,
+   "end_s": 49.921
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Wes",
+   "text": "I'll order the five sensors this week and take the two broken ones to the electronics shop.",
+   "start_s": 50.702,
+   "end_s": 57.737
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Tomasz",
+   "text": "We should really think about moving the sensors to higher ground at some point.",
+   "start_s": 58.095,
+   "end_s": 63.695
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Adaeze",
+   "text": "Data. Tomasz, where's the backlog?",
+   "start_s": 64.326,
+   "end_s": 66.261
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Tomasz",
+   "text": "Five months of sensor data is unprocessed. The pipeline broke when the university changed servers.",
+   "start_s": 66.855,
+   "end_s": 72.855
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Riya",
+   "text": "And we're at about ninety percent of our storage.",
+   "start_s": 73.778,
+   "end_s": 77.051
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Adaeze",
+   "text": "Ninety? Then we can't even store new data for long.",
+   "start_s": 78.246,
+   "end_s": 82.117
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Tomasz",
+   "text": "Fixing the pipeline is a week of work. Then the backlog runs by itself over a weekend.",
+   "start_s": 83.266,
+   "end_s": 90.066
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Adaeze",
+   "text": "Then the pipeline is your priority this week, ahead of the abstract.",
+   "start_s": 90.81,
+   "end_s": 95.455
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Tomasz",
+   "text": "Ahead of the abstract. Fine, but the deadline's tight.",
+   "start_s": 96.1,
+   "end_s": 99.7
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Riya",
+   "text": "Could the raw data go to the archive service, to free up space?",
+   "start_s": 100.168,
+   "end_s": 104.896
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Tomasz",
+   "text": "Yes, the older files can. I'll do that when the pipeline's back.",
+   "start_s": 105.132,
+   "end_s": 109.932
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Wes",
+   "text": "Did anyone see the cooking show where they made jambalaya with crawfish from a bayou? I swear it was our bayou.",
+   "start_s": 110.159,
+   "end_s": 118.849
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Riya",
+   "text": "My roommate watches it every night. The host keeps saying \"y'all\" wrong.",
+   "start_s": 119.514,
+   "end_s": 123.878
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Adaeze",
+   "text": "Okay. Conference. The abstract deadline is June sixth. We planned three.",
+   "start_s": 124.396,
+   "end_s": 128.655
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Tomasz",
+   "text": "Mine, Riya's, and the sensor network one with Wes.",
+   "start_s": 129.235,
+   "end_s": 132.835
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Riya",
+   "text": "Do I really have to submit one? I've never presented.",
+   "start_s": 133.927,
+   "end_s": 137.563
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Adaeze",
+   "text": "You do. You're ready, and a poster is a gentle start.",
+   "start_s": 138.289,
+   "end_s": 142.547
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Riya",
+   "text": "A poster. Okay. I can do a poster.",
+   "start_s": 143.308,
+   "end_s": 146.217
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Tomasz",
+   "text": "And the travel budget is ten thousand, so all three of us can go.",
+   "start_s": 146.653,
+   "end_s": 152.253
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Wes",
+   "text": "I'd rather not go. Somebody has to keep the sensors alive.",
+   "start_s": 152.477,
+   "end_s": 157.029
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Riya",
+   "text": "Maybe Wes could present remotely?",
+   "start_s": 157.554,
+   "end_s": 159.372
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Adaeze",
+   "text": "I checked the grant account this morning. Travel has sixty-five hundred left, not ten.",
+   "start_s": 159.709,
+   "end_s": 165.128
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Tomasz",
+   "text": "Sixty-five hundred. That's two people, not three.",
+   "start_s": 165.838,
+   "end_s": 168.638
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Adaeze",
+   "text": "Then Riya and Tomasz go, and the sensor abstract is presented by Tomasz.",
+   "start_s": 169.837,
+   "end_s": 174.869
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Tomasz",
+   "text": "Fair enough.",
+   "start_s": 175.743,
+   "end_s": 176.543
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Adaeze",
+   "text": "Safety. I want to talk about April twenty-second.",
+   "start_s": 176.925,
+   "end_s": 180.022
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Wes",
+   "text": "I slipped off the boardwalk into the channel. I'm fine. It was my fault.",
+   "start_s": 181.116,
+   "end_s": 186.909
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Adaeze",
+   "text": "It wasn't a fault. It was a wet boardwalk and no second person. That's on the process.",
+   "start_s": 187.906,
+   "end_s": 194.486
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Riya",
+   "text": "How many of us have first-aid certification?",
+   "start_s": 195.42,
+   "end_s": 197.966
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Wes",
+   "text": "Four. Me, Tomasz, and the two undergrads from last summer, who've left.",
+   "start_s": 199.073,
+   "end_s": 204.038
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Adaeze",
+   "text": "So really two, out of seven of us.",
+   "start_s": 205.001,
+   "end_s": 208.098
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Tomasz",
+   "text": "Could the department pay for a first-aid course for everyone?",
+   "start_s": 209.088,
+   "end_s": 213.088
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Adaeze",
+   "text": "They should. I'll ask the chair this week.",
+   "start_s": 213.642,
+   "end_s": 216.739
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Wes",
+   "text": "And nobody goes out alone. That should be a rule.",
+   "start_s": 217.92,
+   "end_s": 222.058
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Adaeze",
+   "text": "From today, nobody goes to the field alone, and the boardwalk sites need two people.",
+   "start_s": 223.22,
+   "end_s": 229.026
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Riya",
+   "text": "What about the airboat? We have forty hours left. Does that need two people too?",
+   "start_s": 229.387,
+   "end_s": 234.842
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Wes",
+   "text": "The airboat always has two. You can't drive and anchor at the same time.",
+   "start_s": 235.796,
+   "end_s": 241.589
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Tomasz",
+   "text": "Is the department going to fix the boardwalk itself?",
+   "start_s": 242.504,
+   "end_s": 246.104
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Adaeze",
+   "text": "Okay. Thank you, all. Wes, please be careful out there.",
+   "start_s": 246.765,
+   "end_s": 250.636
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Wes",
+   "text": "Always.",
+   "start_s": 251.366,
+   "end_s": 251.78
+  }
+ ]
+}

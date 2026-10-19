@@ -1,0 +1,1937 @@
+{
+ "meeting_id": "pta-cedarhill-d5-s1",
+ "config": {
+  "theme": "School PTA budget meeting for next year",
+  "domain_pack": "community_budget",
+  "drama": 0.5,
+  "seed": 1,
+  "duration_min": 4.7,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   9,
+   15,
+   26,
+   27,
+   32,
+   35,
+   42,
+   60
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "School PTA budget meeting for next year",
+  "personas": [
+   {
+    "name": "Monica",
+    "role": "PTSA president",
+    "goals": "A budget that funds something for every grade",
+    "hidden_agenda": "Promised the band director she'd fight for instruments",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [
+     "alrighty",
+     "so here's my thinking"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Kwame",
+    "role": "Treasurer",
+    "goals": "Never spend the carryover to zero",
+    "hidden_agenda": "Got burned two years ago when a fundraiser flopped",
+    "verbosity": 2,
+    "wpm": 140,
+    "catchphrases": [
+     "per the books",
+     "carefully"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Lisa",
+    "role": "Teacher representative, music teacher",
+    "goals": "New instruments for the band",
+    "hidden_agenda": "Half the trumpets are held together with tape",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [
+     "I'll be honest",
+     "the kids"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Arjun",
+    "role": "Parent, works in data analytics",
+    "goals": "Spend where it helps the most kids",
+    "hidden_agenda": "Thinks the trip subsidy is regressive",
+    "verbosity": 3,
+    "wpm": 170,
+    "catchphrases": [
+     "if you look at the numbers",
+     "quick thought"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "PTSA budget planning - next school year",
+   "org": "Cedar Hill Middle School PTSA (fictional)",
+   "agenda": [
+    {
+     "id": "actuals",
+     "title": "This year's actuals",
+     "goal": "Agree what we earned",
+     "timebox_min": 1.19
+    },
+    {
+     "id": "revenue",
+     "title": "Revenue plan",
+     "goal": "Decide on dues and fundraisers for next year",
+     "timebox_min": 1.37
+    },
+    {
+     "id": "requests",
+     "title": "Funding requests",
+     "goal": "Weigh instruments",
+     "timebox_min": 1.48
+    },
+    {
+     "id": "process",
+     "title": "Budget process",
+     "goal": "Agree the timeline to the membership vote",
+     "timebox_min": 0.64
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "income_this_year",
+     "statement": "Income this year = $31,400",
+     "value": "$31,400"
+    },
+    {
+     "id": "F2",
+     "key": "expenses_this_year",
+     "statement": "Expenses this year = $29,800",
+     "value": "$29,800"
+    },
+    {
+     "id": "F3",
+     "key": "carryover",
+     "statement": "Carryover into next year = $9,100",
+     "value": "$9,100"
+    },
+    {
+     "id": "F4",
+     "key": "membership_dues",
+     "statement": "Membership dues = $15 per family",
+     "value": "$15"
+    },
+    {
+     "id": "F5",
+     "key": "member_families",
+     "statement": "Member families = 312",
+     "value": "312"
+    },
+    {
+     "id": "F6",
+     "key": "instrument_request",
+     "statement": "Music instrument request = $7,500",
+     "value": "$7,500"
+    },
+    {
+     "id": "F7",
+     "key": "science_fair_cost",
+     "statement": "Science fair cost = $1,900",
+     "value": "$1,900"
+    },
+    {
+     "id": "F8",
+     "key": "trip_subsidy",
+     "statement": "Eighth-grade trip subsidy = $40 per student",
+     "value": "$40"
+    },
+    {
+     "id": "F9",
+     "key": "eighth_graders",
+     "statement": "Eighth graders next year = 228",
+     "value": "228"
+    },
+    {
+     "id": "F10",
+     "key": "spirit_wear_profit",
+     "statement": "Spirit wear profit = $3,200",
+     "value": "$3,200"
+    },
+    {
+     "id": "F11",
+     "key": "district_grant",
+     "statement": "District matching grant = $2,000",
+     "value": "$2,000"
+    },
+    {
+     "id": "F12",
+     "key": "budget_vote_date",
+     "statement": "Membership budget vote = May 14",
+     "value": "May 14"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "actuals",
+    "summary": "What came in and went out; Arjun's carryover number is too rosy",
+    "n_turns": 16,
+    "events": []
+   },
+   {
+    "agenda_item": "revenue",
+    "summary": "Dues, fundraisers and Monica's membership guess",
+    "n_turns": 18,
+    "events": []
+   },
+   {
+    "agenda_item": "requests",
+    "summary": "Instruments vs the science fair vs the trip; the eighth-grade count gets fixed",
+    "n_turns": 18,
+    "events": []
+   },
+   {
+    "agenda_item": "process",
+    "summary": "Timeline to the vote; a date mix-up corrected",
+    "n_turns": 11,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Monica",
+   "text": "Alrighty, let's start with where we ended up this year. Kwame, the headline?",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Kwame",
+   "text": "Per the books, income was thirty-one four, expenses twenty-nine eight.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [
+    "E002",
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Arjun",
+   "text": "So, if you look at the numbers, we're carrying over something like fifteen thousand.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Kwame",
+   "text": "Carefully. It's nine thousand one hundred. The rest was already committed to the library fund.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Arjun",
+   "text": "Ah. Right, the library fund. I forgot that moved.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Lisa",
+   "text": "Nine thousand. Okay. That's less than I hoped.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Monica",
+   "text": "What did spirit wear bring in? It felt like a good year.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Kwame",
+   "text": "Thirty-two hundred profit. Best year yet.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Lisa",
+   "text": "The hoodies. Every kid has the hoodie.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Arjun",
+   "text": "Quick thought, should spirit wear just become a bigger part of the plan?",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Monica",
+   "text": "Maybe. Let's hold that for revenue.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Kwame",
+   "text": "And the district matched two thousand, which we should not count on again.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Arjun",
+   "text": "Why not?",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Kwame",
+   "text": "Per the district, it was a one-time pilot.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Monica",
+   "text": "Alrighty. So we start next year with nine one and no guarantee of the match.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Lisa",
+   "text": "I'll be honest, that's a sobering start.",
+   "agenda_item": "actuals",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Monica",
+   "text": "So here's my thinking. Dues are fifteen dollars, and we have about four hundred families.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [
+    "E013",
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Arjun",
+   "text": "Should we raise dues? Twenty dollars wouldn't kill anyone.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Lisa",
+   "text": "It would kill some families. Some of our kids are on free lunch.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Kwame",
+   "text": "Carefully. Raising dues usually drops membership. We saw that at the elementary school.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Monica",
+   "text": "Then dues stay at fifteen. I don't want to price anyone out.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [
+    "E016",
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Arjun",
+   "text": "Then spirit wear is the lever. If you look at the numbers, it's our best margin.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Lisa",
+   "text": "A second spirit wear sale in the spring? The kids would love it.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [
+    "E018",
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Kwame",
+   "text": "The vendor has a minimum order. We'd need to check.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Arjun",
+   "text": "I can look into the vendor minimums, if nobody else wants it.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Monica",
+   "text": "Would you? That'd be great.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Arjun",
+   "text": "Sure. I'll get the vendor's minimums and pricing by next week.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Lisa",
+   "text": "Quick question, what happened to the restaurant nights? They used to be fun.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Monica",
+   "text": "Did everyone see the new crosswalk on Birch? It finally has a light.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [
+    "E024",
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Kwame",
+   "text": "About time. I've been honking at that intersection for years.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Lisa",
+   "text": "The crossing guard brought cookies to celebrate.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Arjun",
+   "text": "So, the fun run. Are we doing it again?",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Monica",
+   "text": "Yes, the fun run stays. It's half our income.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Kwame",
+   "text": "Agreed.",
+   "agenda_item": "revenue",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Monica",
+   "text": "Requests. Lisa, you go first. I know you're dying to.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Lisa",
+   "text": "I'll be honest, the band needs instruments. The request is seventy-five hundred.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Arjun",
+   "text": "That's most of our carryover.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Lisa",
+   "text": "It's ten years of trumpets that are held together with tape.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Kwame",
+   "text": "And the science fair is nineteen hundred, same as always.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Monica",
+   "text": "And the eighth-grade trip subsidy. Forty dollars a kid.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Arjun",
+   "text": "If you look at the numbers, two hundred eighth graders at forty is eight thousand.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [
+    "E031",
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Lisa",
+   "text": "It's two twenty-eight next year. It's a big class.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Arjun",
+   "text": "Two twenty-eight. So, over nine thousand.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Kwame",
+   "text": "Carefully. We cannot fund all three in full.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Monica",
+   "text": "So here's my thinking. Science fair in full, instruments in full, trip subsidy cut in half.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Arjun",
+   "text": "Quick thought, what if the trip subsidy only goes to families who need it?",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Lisa",
+   "text": "The kids would know who got it. Kids always know.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Arjun",
+   "text": "Not if it's done quietly through the counselor.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Kwame",
+   "text": "That could work. It also costs a lot less.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Monica",
+   "text": "Alrighty. Science fair in full, instruments in full, and the trip subsidy goes need-based through the counselor. That's what we're proposing.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Lisa",
+   "text": "The trumpets thank you. I'll get three quotes for the instruments before the vote.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Kwame",
+   "text": "Somebody should probably talk to the counselor before we put that in writing.",
+   "agenda_item": "requests",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Monica",
+   "text": "Last thing. The vote is May fourth, right?",
+   "agenda_item": "process",
+   "direction": null,
+   "event_ids": [
+    "E040",
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Kwame",
+   "text": "Per the books, it's the fourteenth. May fourteenth.",
+   "agenda_item": "process",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Monica",
+   "text": "Fourteenth. Thank you.",
+   "agenda_item": "process",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Arjun",
+   "text": "When does the draft go out to members?",
+   "agenda_item": "process",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Kwame",
+   "text": "Two weeks before. Carefully, so people have time to read it.",
+   "agenda_item": "process",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Monica",
+   "text": "I'll write the cover letter explaining the need-based subsidy, so nobody's surprised.",
+   "agenda_item": "process",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Lisa",
+   "text": "Should I bring a trumpet to the vote? For drama?",
+   "agenda_item": "process",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Monica",
+   "text": "Absolutely bring the trumpet.",
+   "agenda_item": "process",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Arjun",
+   "text": "Who's presenting the numbers at the vote?",
+   "agenda_item": "process",
+   "direction": null,
+   "event_ids": [
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Monica",
+   "text": "Alrighty, I think we're done. Thank you, everyone.",
+   "agenda_item": "process",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Kwame",
+   "text": "Goodnight.",
+   "agenda_item": "process",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Monica",
+   "agenda_item": "actuals",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Kwame",
+   "agenda_item": "actuals",
+   "fact_id": "F1",
+   "claimed_value": "$31,400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Kwame",
+   "agenda_item": "actuals",
+   "fact_id": "F2",
+   "claimed_value": "$29,800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 2,
+   "speaker": "Arjun",
+   "agenda_item": "actuals",
+   "fact_id": "F3",
+   "claimed_value": "$15,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Kwame",
+   "agenda_item": "actuals",
+   "fact_id": "F3",
+   "claimed_value": "$9,100",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Lisa",
+   "agenda_item": "actuals",
+   "fact_id": "F3",
+   "claimed_value": "$9,100",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Monica",
+   "agenda_item": "actuals",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 7,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Kwame",
+   "agenda_item": "actuals",
+   "fact_id": "F10",
+   "claimed_value": "$3,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 9,
+   "speaker": "Arjun",
+   "agenda_item": "actuals",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Kwame",
+   "agenda_item": "actuals",
+   "fact_id": "F11",
+   "claimed_value": "$2,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Arjun",
+   "agenda_item": "actuals",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 13,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Monica",
+   "agenda_item": "actuals",
+   "fact_id": "F3",
+   "claimed_value": "$9,100",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Monica",
+   "agenda_item": "revenue",
+   "fact_id": "F4",
+   "claimed_value": "$15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Monica",
+   "agenda_item": "revenue",
+   "fact_id": "F5",
+   "claimed_value": "400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Arjun",
+   "agenda_item": "revenue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 18,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 20,
+   "speaker": "Monica",
+   "agenda_item": "revenue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Monica",
+   "agenda_item": "revenue",
+   "fact_id": "F4",
+   "claimed_value": "$15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Lisa",
+   "agenda_item": "revenue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 23,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Lisa",
+   "agenda_item": "revenue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Arjun",
+   "agenda_item": "revenue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Monica",
+   "agenda_item": "revenue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 26,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 26,
+   "speaker": "Arjun",
+   "agenda_item": "revenue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 27,
+   "speaker": "Lisa",
+   "agenda_item": "revenue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 28,
+   "speaker": "Monica",
+   "agenda_item": "revenue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Monica",
+   "agenda_item": "revenue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 29,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Arjun",
+   "agenda_item": "revenue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 32,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 32,
+   "speaker": "Monica",
+   "agenda_item": "revenue",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Lisa",
+   "agenda_item": "requests",
+   "fact_id": "F6",
+   "claimed_value": "$7,500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Kwame",
+   "agenda_item": "requests",
+   "fact_id": "F7",
+   "claimed_value": "$1,900",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Monica",
+   "agenda_item": "requests",
+   "fact_id": "F8",
+   "claimed_value": "$40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 40,
+   "speaker": "Arjun",
+   "agenda_item": "requests",
+   "fact_id": "F9",
+   "claimed_value": "200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Arjun",
+   "agenda_item": "requests",
+   "fact_id": "F8",
+   "claimed_value": "$40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Lisa",
+   "agenda_item": "requests",
+   "fact_id": "F9",
+   "claimed_value": "228",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Arjun",
+   "agenda_item": "requests",
+   "fact_id": "F9",
+   "claimed_value": "228",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Monica",
+   "agenda_item": "requests",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Arjun",
+   "agenda_item": "requests",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 46,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 49,
+   "speaker": "Monica",
+   "agenda_item": "requests",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 50,
+   "speaker": "Lisa",
+   "agenda_item": "requests",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 51,
+   "speaker": "Kwame",
+   "agenda_item": "requests",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 52,
+   "speaker": "Monica",
+   "agenda_item": "process",
+   "fact_id": "F12",
+   "claimed_value": "May 4",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Monica",
+   "agenda_item": "process",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 53,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 53,
+   "speaker": "Kwame",
+   "agenda_item": "process",
+   "fact_id": "F12",
+   "claimed_value": "May 14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Monica",
+   "agenda_item": "process",
+   "fact_id": "F12",
+   "claimed_value": "May 14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 55,
+   "speaker": "Arjun",
+   "agenda_item": "process",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 56,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 57,
+   "speaker": "Monica",
+   "agenda_item": "process",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 58,
+   "speaker": "Lisa",
+   "agenda_item": "process",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 59,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 60,
+   "speaker": "Arjun",
+   "agenda_item": "process",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Monica",
+   "text": "Alrighty, let's start with where we ended up this year. Kwame, the headline?",
+   "start_s": 0.5,
+   "end_s": 5.375
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Kwame",
+   "text": "Per the books, income was thirty-one four, expenses twenty-nine eight.",
+   "start_s": 5.709,
+   "end_s": 9.995
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Arjun",
+   "text": "So, if you look at the numbers, we're carrying over something like fifteen thousand.",
+   "start_s": 11.042,
+   "end_s": 15.984
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Kwame",
+   "text": "Carefully. It's nine thousand one hundred. The rest was already committed to the library fund.",
+   "start_s": 16.948,
+   "end_s": 23.376
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Arjun",
+   "text": "Ah. Right, the library fund. I forgot that moved.",
+   "start_s": 23.831,
+   "end_s": 27.008
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Lisa",
+   "text": "Nine thousand. Okay. That's less than I hoped.",
+   "start_s": 27.703,
+   "end_s": 30.613
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Monica",
+   "text": "What did spirit wear bring in? It felt like a good year.",
+   "start_s": 31.262,
+   "end_s": 35.762
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Kwame",
+   "text": "Thirty-two hundred profit. Best year yet.",
+   "start_s": 36.614,
+   "end_s": 39.185
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Lisa",
+   "text": "The hoodies. Every kid has the hoodie.",
+   "start_s": 40.174,
+   "end_s": 42.719
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Arjun",
+   "text": "Quick thought, should spirit wear just become a bigger part of the plan?",
+   "start_s": 43.013,
+   "end_s": 47.601
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Monica",
+   "text": "Maybe. Let's hold that for revenue.",
+   "start_s": 47.829,
+   "end_s": 50.079
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Kwame",
+   "text": "And the district matched two thousand, which we should not count on again.",
+   "start_s": 51.115,
+   "end_s": 56.686
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Arjun",
+   "text": "Why not?",
+   "start_s": 57.319,
+   "end_s": 58.025
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Kwame",
+   "text": "Per the district, it was a one-time pilot.",
+   "start_s": 58.987,
+   "end_s": 62.416
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Monica",
+   "text": "Alrighty. So we start next year with nine one and no guarantee of the match.",
+   "start_s": 62.618,
+   "end_s": 68.243
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Lisa",
+   "text": "I'll be honest, that's a sobering start.",
+   "start_s": 68.888,
+   "end_s": 71.434
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Monica",
+   "text": "So here's my thinking. Dues are fifteen dollars, and we have about four hundred families.",
+   "start_s": 72.356,
+   "end_s": 77.981
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Arjun",
+   "text": "Should we raise dues? Twenty dollars wouldn't kill anyone.",
+   "start_s": 78.41,
+   "end_s": 81.586
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Lisa",
+   "text": "It would kill some families. Some of our kids are on free lunch.",
+   "start_s": 82.731,
+   "end_s": 87.459
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Kwame",
+   "text": "Carefully. Raising dues usually drops membership. We saw that at the elementary school.",
+   "start_s": 88.56,
+   "end_s": 94.132
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Monica",
+   "text": "Then dues stay at fifteen. I don't want to price anyone out.",
+   "start_s": 94.363,
+   "end_s": 98.863
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Arjun",
+   "text": "Then spirit wear is the lever. If you look at the numbers, it's our best margin.",
+   "start_s": 99.088,
+   "end_s": 104.736
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Lisa",
+   "text": "A second spirit wear sale in the spring? The kids would love it.",
+   "start_s": 105.477,
+   "end_s": 110.205
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Kwame",
+   "text": "The vendor has a minimum order. We'd need to check.",
+   "start_s": 111.344,
+   "end_s": 115.63
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Arjun",
+   "text": "I can look into the vendor minimums, if nobody else wants it.",
+   "start_s": 116.211,
+   "end_s": 120.446
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Monica",
+   "text": "Would you? That'd be great.",
+   "start_s": 120.863,
+   "end_s": 122.738
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Arjun",
+   "text": "Sure. I'll get the vendor's minimums and pricing by next week.",
+   "start_s": 123.36,
+   "end_s": 127.242
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Lisa",
+   "text": "Quick question, what happened to the restaurant nights? They used to be fun.",
+   "start_s": 127.471,
+   "end_s": 132.198
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Monica",
+   "text": "Did everyone see the new crosswalk on Birch? It finally has a light.",
+   "start_s": 132.62,
+   "end_s": 137.495
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Kwame",
+   "text": "About time. I've been honking at that intersection for years.",
+   "start_s": 138.133,
+   "end_s": 142.419
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Lisa",
+   "text": "The crossing guard brought cookies to celebrate.",
+   "start_s": 143.115,
+   "end_s": 145.66
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Arjun",
+   "text": "So, the fun run. Are we doing it again?",
+   "start_s": 146.093,
+   "end_s": 149.27
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Monica",
+   "text": "Yes, the fun run stays. It's half our income.",
+   "start_s": 149.701,
+   "end_s": 153.076
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Kwame",
+   "text": "Agreed.",
+   "start_s": 153.495,
+   "end_s": 153.923
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Monica",
+   "text": "Requests. Lisa, you go first. I know you're dying to.",
+   "start_s": 154.583,
+   "end_s": 158.333
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Lisa",
+   "text": "I'll be honest, the band needs instruments. The request is seventy-five hundred.",
+   "start_s": 158.823,
+   "end_s": 163.186
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Arjun",
+   "text": "That's most of our carryover.",
+   "start_s": 163.407,
+   "end_s": 165.172
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Lisa",
+   "text": "It's ten years of trumpets that are held together with tape.",
+   "start_s": 166.21,
+   "end_s": 170.21
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Kwame",
+   "text": "And the science fair is nineteen hundred, same as always.",
+   "start_s": 170.966,
+   "end_s": 175.252
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Monica",
+   "text": "And the eighth-grade trip subsidy. Forty dollars a kid.",
+   "start_s": 176.094,
+   "end_s": 179.469
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Arjun",
+   "text": "If you look at the numbers, two hundred eighth graders at forty is eight thousand.",
+   "start_s": 179.855,
+   "end_s": 185.149
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Lisa",
+   "text": "It's two twenty-eight next year. It's a big class.",
+   "start_s": 186.342,
+   "end_s": 189.614
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Arjun",
+   "text": "Two twenty-eight. So, over nine thousand.",
+   "start_s": 190.674,
+   "end_s": 192.792
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Kwame",
+   "text": "Carefully. We cannot fund all three in full.",
+   "start_s": 193.113,
+   "end_s": 196.541
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Monica",
+   "text": "So here's my thinking. Science fair in full, instruments in full, trip subsidy cut in half.",
+   "start_s": 197.074,
+   "end_s": 203.074
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Arjun",
+   "text": "Quick thought, what if the trip subsidy only goes to families who need it?",
+   "start_s": 203.995,
+   "end_s": 208.937
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Lisa",
+   "text": "The kids would know who got it. Kids always know.",
+   "start_s": 209.848,
+   "end_s": 213.485
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Arjun",
+   "text": "Not if it's done quietly through the counselor.",
+   "start_s": 214.621,
+   "end_s": 217.445
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Kwame",
+   "text": "That could work. It also costs a lot less.",
+   "start_s": 218.067,
+   "end_s": 221.924
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Monica",
+   "text": "Alrighty. Science fair in full, instruments in full, and the trip subsidy goes need-based through the counselor. That's what we're proposing.",
+   "start_s": 222.954,
+   "end_s": 230.829
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Lisa",
+   "text": "The trumpets thank you. I'll get three quotes for the instruments before the vote.",
+   "start_s": 231.699,
+   "end_s": 236.79
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Kwame",
+   "text": "Somebody should probably talk to the counselor before we put that in writing.",
+   "start_s": 237.293,
+   "end_s": 242.865
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Monica",
+   "text": "Last thing. The vote is May fourth, right?",
+   "start_s": 243.653,
+   "end_s": 246.653
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Kwame",
+   "text": "Per the books, it's the fourteenth. May fourteenth.",
+   "start_s": 247.735,
+   "end_s": 251.164
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Monica",
+   "text": "Fourteenth. Thank you.",
+   "start_s": 252.21,
+   "end_s": 253.335
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Arjun",
+   "text": "When does the draft go out to members?",
+   "start_s": 254.04,
+   "end_s": 256.864
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Kwame",
+   "text": "Two weeks before. Carefully, so people have time to read it.",
+   "start_s": 257.653,
+   "end_s": 262.367
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Monica",
+   "text": "I'll write the cover letter explaining the need-based subsidy, so nobody's surprised.",
+   "start_s": 262.602,
+   "end_s": 267.102
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Lisa",
+   "text": "Should I bring a trumpet to the vote? For drama?",
+   "start_s": 267.545,
+   "end_s": 271.181
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Monica",
+   "text": "Absolutely bring the trumpet.",
+   "start_s": 272.178,
+   "end_s": 273.678
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Arjun",
+   "text": "Who's presenting the numbers at the vote?",
+   "start_s": 274.292,
+   "end_s": 276.763
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Monica",
+   "text": "Alrighty, I think we're done. Thank you, everyone.",
+   "start_s": 277.136,
+   "end_s": 280.136
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Kwame",
+   "text": "Goodnight.",
+   "start_s": 280.885,
+   "end_s": 281.313
+  }
+ ]
+}

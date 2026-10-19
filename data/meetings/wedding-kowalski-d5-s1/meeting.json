@@ -1,0 +1,2129 @@
+{
+ "meeting_id": "wedding-kowalski-d5-s1",
+ "config": {
+  "theme": "Family video call planning a cousin's wedding",
+  "domain_pack": "family_planning",
+  "drama": 0.5,
+  "seed": 1,
+  "duration_min": 5.0,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   33,
+   45,
+   54,
+   61
+  ],
+  "reviewed_noclaim": [
+   45
+  ]
+ },
+ "cast": {
+  "theme": "Family video call planning a cousin's wedding",
+  "personas": [
+   {
+    "name": "Agnieszka",
+    "role": "Bride's aunt, the family organizer",
+    "goals": "A schedule that runs to the minute",
+    "hidden_agenda": "Feels her sister leaves everything to her",
+    "verbosity": 4,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Patrick",
+    "role": "Bride's father",
+    "goals": "Pay his share and not a cent more",
+    "hidden_agenda": "Quietly worried about money after a rough year",
+    "verbosity": 2,
+    "wpm": 140,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Zofia",
+    "role": "The bride",
+    "goals": "Get through planning without a family fight",
+    "hidden_agenda": "Marcus's mother keeps adding guests",
+    "verbosity": 3,
+    "wpm": 170,
+    "catchphrases": [
+     "okay so"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Danny",
+    "role": "Cousin and groomsman",
+    "goals": "Help, and be funny while doing it",
+    "hidden_agenda": "Lost the groomsmen's suit fitting receipt",
+    "verbosity": 4,
+    "wpm": 180,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Zofia and Marcus's wedding - family call",
+   "org": "The Kowalski-Brennan family (fictional)",
+   "agenda": [
+    {
+     "id": "guests",
+     "title": "Guests and seating",
+     "goal": "Lock the headcount and start the seating plan",
+     "timebox_min": 1.28
+    },
+    {
+     "id": "money",
+     "title": "Money",
+     "goal": "Be clear about who is paying for what",
+     "timebox_min": 1.18
+    },
+    {
+     "id": "schedule",
+     "title": "Rehearsal and the morning",
+     "goal": "Agree the rehearsal and the wedding-morning schedule",
+     "timebox_min": 1.45
+    },
+    {
+     "id": "gifts",
+     "title": "Registry and gifts",
+     "goal": "Check the registry and the honeymoon fund",
+     "timebox_min": 1.13
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "wedding_date",
+     "statement": "Wedding date = Saturday, September 6",
+     "value": "September 6"
+    },
+    {
+     "id": "F2",
+     "key": "guest_count",
+     "statement": "Confirmed guests = 136",
+     "value": "136"
+    },
+    {
+     "id": "F3",
+     "key": "venue_deposit",
+     "statement": "Venue deposit paid = $3,000",
+     "value": "$3,000"
+    },
+    {
+     "id": "F4",
+     "key": "total_budget",
+     "statement": "Total wedding budget = $24,000",
+     "value": "$24,000"
+    },
+    {
+     "id": "F5",
+     "key": "parents_contribution",
+     "statement": "Bride's parents' contribution = $10,000",
+     "value": "$10,000"
+    },
+    {
+     "id": "F6",
+     "key": "bar_per_head",
+     "statement": "Bar package = $32 per head",
+     "value": "$32"
+    },
+    {
+     "id": "F7",
+     "key": "tables",
+     "statement": "Reception tables = 14",
+     "value": "14"
+    },
+    {
+     "id": "F8",
+     "key": "rehearsal_time",
+     "statement": "Rehearsal starts at 5:00 pm on Friday",
+     "value": "5:00 pm"
+    },
+    {
+     "id": "F9",
+     "key": "hair_makeup_start",
+     "statement": "Hair and makeup start at 8:30 am",
+     "value": "8:30 am"
+    },
+    {
+     "id": "F10",
+     "key": "registry_items_left",
+     "statement": "Registry items still unclaimed = 23",
+     "value": "23"
+    },
+    {
+     "id": "F11",
+     "key": "honeymoon_fund",
+     "statement": "Honeymoon fund raised = $1,850",
+     "value": "$1,850"
+    },
+    {
+     "id": "F12",
+     "key": "photographer_arrival",
+     "statement": "Photographer arrives at 1:00 pm",
+     "value": "1:00 pm"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "guests",
+    "summary": "The headcount; Danny inflates it and nobody checks; seating starts; a fantasy football tangent",
+    "n_turns": 19,
+    "events": []
+   },
+   {
+    "agenda_item": "money",
+    "summary": "Who pays what; Patrick overstates his contribution and the room goes quiet",
+    "n_turns": 17,
+    "events": []
+   },
+   {
+    "agenda_item": "schedule",
+    "summary": "The rehearsal and the morning; Agnieszka gets the rehearsal time wrong and fixes it later",
+    "n_turns": 19,
+    "events": []
+   },
+   {
+    "agenda_item": "gifts",
+    "summary": "The registry and the honeymoon fund",
+    "n_turns": 16,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Agnieszka",
+   "text": "Okay, everyone is here. Zofia, the guest list first, because the venue wants numbers.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Zofia",
+   "text": "Okay so, we're at a hundred and thirty-six confirmed.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Patrick",
+   "text": "That's more than we said.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Zofia",
+   "text": "Marcus's mom keeps adding people. Every week there's a new second cousin.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Agnieszka",
+   "text": "Maybe we cap it somewhere and tell her, politely.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Danny",
+   "text": "A hundred and fifty, give or take. It's going to be a party.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Agnieszka",
+   "text": "And how many tables does that mean?",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Zofia",
+   "text": "Fourteen tables, ten at each, and a few spare seats.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Patrick",
+   "text": "Fourteen tables. When I got married there were six.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Danny",
+   "text": "When you got married, Uncle Pat, there were also no phones.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Agnieszka",
+   "text": "The seating plan. Where do the Brennan grandparents go?",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Zofia",
+   "text": "Near the front, but not near the speakers. Grandpa's hearing aid squeals.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Danny",
+   "text": "Also, my fantasy league is a disaster. I'm last.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Patrick",
+   "text": "I don't know what that is.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Danny",
+   "text": "It's like gambling, but with spreadsheets and no money.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Agnieszka",
+   "text": "Danny. Seating.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Zofia",
+   "text": "I'll do a first draft of the seating chart this weekend and share it.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Agnieszka",
+   "text": "Put Marcus's mother where she can see everything. It'll keep her calm.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Zofia",
+   "text": "That's actually smart.",
+   "agenda_item": "guests",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Agnieszka",
+   "text": "Money. I know nobody wants to, but we have to.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Patrick",
+   "text": "Your mother and I put in fifteen thousand. That's our part.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Zofia",
+   "text": "Dad. It was ten. We talked about it at Easter.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Patrick",
+   "text": "Ten. Yes. Ten. I'm sorry, I was thinking of what we'd hoped.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Danny",
+   "text": "Awkward.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Agnieszka",
+   "text": "The total budget is twenty-four thousand. So the rest is Zofia and Marcus, and his parents.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Zofia",
+   "text": "And we already paid the three thousand deposit for the venue.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Patrick",
+   "text": "What's the bar going to cost?",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Zofia",
+   "text": "Thirty-two a head for the package.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Patrick",
+   "text": "Thirty-two times a hundred and thirty-six. That's a lot of beer.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E017",
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Danny",
+   "text": "It's not just beer, it's also wine.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Agnieszka",
+   "text": "Could we do a cash bar after ten o'clock? Lots of weddings do.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Patrick",
+   "text": "I'd rather that than a bill nobody can pay.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Zofia",
+   "text": "Okay so, open bar until ten, then cash bar. That's fine.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Danny",
+   "text": "Who's paying for the rehearsal dinner, by the way?",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Agnieszka",
+   "text": "Patrick, are you okay? You've gone quiet.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Patrick",
+   "text": "I'm fine. It's been a long year, that's all.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Agnieszka",
+   "text": "The schedule. The rehearsal on Friday is at six.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Danny",
+   "text": "Six works for me. I finish work at five.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Zofia",
+   "text": "And the morning? What time do we start?",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Agnieszka",
+   "text": "Hair and makeup at eight thirty, at the hotel.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Zofia",
+   "text": "Eight thirty is so early. Maybe we push it to nine?",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E027",
+    "E028",
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Agnieszka",
+   "text": "Eight thirty is late. The photographer comes at one, and you need to be dressed by then.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E030",
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Danny",
+   "text": "Is the photographer the guy with the drone?",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Zofia",
+   "text": "No drone. I said no drone.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Danny",
+   "text": "What do the groomsmen do in the morning? Anything?",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Agnieszka",
+   "text": "You collect the suits by nine and you're at the church by one thirty. Sober.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Danny",
+   "text": "About the suits. I may have lost the fitting receipt.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Zofia",
+   "text": "Danny!",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Danny",
+   "text": "I know the shop! They know me! It's fine. I'll go in Thursday and sort it out with them.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Patrick",
+   "text": "My cat has a vet appointment that Thursday, actually. Surgery on her paw.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Zofia",
+   "text": "Oh no, poor Pierogi. Is she okay?",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Patrick",
+   "text": "She'll be fine. She's tougher than me.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Agnieszka",
+   "text": "I'm looking at the booking email. The rehearsal is at five, not six. Sorry, I had the dinner time in my head.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Danny",
+   "text": "Five. Then I'll leave work early.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E038",
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Agnieszka",
+   "text": "Rehearsal at five, dinner at six thirty, and nobody is late.",
+   "agenda_item": "schedule",
+   "direction": null,
+   "event_ids": [
+    "E040",
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Zofia",
+   "text": "The registry. There are like forty things still left on it.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Agnieszka",
+   "text": "I checked last night, it's twenty-three. People bought a lot this week.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Zofia",
+   "text": "Oh, nice. Twenty-three.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Patrick",
+   "text": "Has anyone heard whether Aunt Halina is actually coming?",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Danny",
+   "text": "And the honeymoon fund? How's that going?",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Zofia",
+   "text": "Eighteen fifty so far. Enough for the flights, almost.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Patrick",
+   "text": "Is my picture frozen? I see myself upside down.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Danny",
+   "text": "You're fine, Uncle Pat. You're just upside down.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Agnieszka",
+   "text": "Someone should remind the Polish side about the registry. They don't use the internet much.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [
+    "E049"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Patrick",
+   "text": "I'll call my brother on Sunday and tell him. He'll tell everyone else.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Zofia",
+   "text": "Thank you, Dad.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Danny",
+   "text": "Does anyone know if the date is on the invitations right? I keep getting asked if it's the sixth or the seventh.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [
+    "E051"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Zofia",
+   "text": "It's the sixth. September sixth. It's on the invitations.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [
+    "E052"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Agnieszka",
+   "text": "Then we're done. Next call in two weeks. Same time.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Danny",
+   "text": "Same bat time, same bat channel.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Patrick",
+   "text": "I don't know what that means either.",
+   "agenda_item": "gifts",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Zofia",
+   "agenda_item": "guests",
+   "fact_id": "F2",
+   "claimed_value": "136",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Agnieszka",
+   "agenda_item": "guests",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 5,
+   "speaker": "Danny",
+   "agenda_item": "guests",
+   "fact_id": "F2",
+   "claimed_value": "150",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Agnieszka",
+   "agenda_item": "guests",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 7,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Zofia",
+   "agenda_item": "guests",
+   "fact_id": "F7",
+   "claimed_value": "14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Patrick",
+   "agenda_item": "guests",
+   "fact_id": "F7",
+   "claimed_value": "14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Agnieszka",
+   "agenda_item": "guests",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 11,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 12,
+   "speaker": "Danny",
+   "agenda_item": "guests",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Zofia",
+   "agenda_item": "guests",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 20,
+   "speaker": "Patrick",
+   "agenda_item": "money",
+   "fact_id": "F5",
+   "claimed_value": "$15,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Zofia",
+   "agenda_item": "money",
+   "fact_id": "F5",
+   "claimed_value": "$10,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Patrick",
+   "agenda_item": "money",
+   "fact_id": "F5",
+   "claimed_value": "$10,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Agnieszka",
+   "agenda_item": "money",
+   "fact_id": "F4",
+   "claimed_value": "$24,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Zofia",
+   "agenda_item": "money",
+   "fact_id": "F3",
+   "claimed_value": "$3,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Patrick",
+   "agenda_item": "money",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 27,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Zofia",
+   "agenda_item": "money",
+   "fact_id": "F6",
+   "claimed_value": "$32",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Patrick",
+   "agenda_item": "money",
+   "fact_id": "F6",
+   "claimed_value": "$32",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Patrick",
+   "agenda_item": "money",
+   "fact_id": "F2",
+   "claimed_value": "136",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Agnieszka",
+   "agenda_item": "money",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 32,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 32,
+   "speaker": "Zofia",
+   "agenda_item": "money",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 33,
+   "speaker": "Danny",
+   "agenda_item": "money",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Agnieszka",
+   "agenda_item": "money",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 35,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 36,
+   "speaker": "Agnieszka",
+   "agenda_item": "schedule",
+   "fact_id": "F8",
+   "claimed_value": "6:00 pm",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 37,
+   "speaker": "Danny",
+   "agenda_item": "schedule",
+   "fact_id": "F8",
+   "claimed_value": "6:00 pm",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Zofia",
+   "agenda_item": "schedule",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 39,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Agnieszka",
+   "agenda_item": "schedule",
+   "fact_id": "F9",
+   "claimed_value": "8:30 am",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Zofia",
+   "agenda_item": "schedule",
+   "fact_id": "F9",
+   "claimed_value": "8:30 am",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Zofia",
+   "agenda_item": "schedule",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Zofia",
+   "agenda_item": "schedule",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 41,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Agnieszka",
+   "agenda_item": "schedule",
+   "fact_id": "F9",
+   "claimed_value": "8:30 am",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Agnieszka",
+   "agenda_item": "schedule",
+   "fact_id": "F12",
+   "claimed_value": "1:00 pm",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Danny",
+   "agenda_item": "schedule",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Danny",
+   "agenda_item": "schedule",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 45,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 48,
+   "speaker": "Danny",
+   "agenda_item": "schedule",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 49,
+   "speaker": "Patrick",
+   "agenda_item": "schedule",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Zofia",
+   "agenda_item": "schedule",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 51,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Agnieszka",
+   "agenda_item": "schedule",
+   "fact_id": "F8",
+   "claimed_value": "5:00 pm",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 53,
+   "speaker": "Danny",
+   "agenda_item": "schedule",
+   "fact_id": "F8",
+   "claimed_value": "5:00 pm",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 53,
+   "speaker": "Danny",
+   "agenda_item": "schedule",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 54,
+   "speaker": "Agnieszka",
+   "agenda_item": "schedule",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Agnieszka",
+   "agenda_item": "schedule",
+   "fact_id": "F8",
+   "claimed_value": "5:00 pm",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 55,
+   "speaker": "Zofia",
+   "agenda_item": "gifts",
+   "fact_id": "F10",
+   "claimed_value": "40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 56,
+   "speaker": "Agnieszka",
+   "agenda_item": "gifts",
+   "fact_id": "F10",
+   "claimed_value": "23",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 57,
+   "speaker": "Zofia",
+   "agenda_item": "gifts",
+   "fact_id": "F10",
+   "claimed_value": "23",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 58,
+   "speaker": "Patrick",
+   "agenda_item": "gifts",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 59,
+   "speaker": "Danny",
+   "agenda_item": "gifts",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 60,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 60,
+   "speaker": "Zofia",
+   "agenda_item": "gifts",
+   "fact_id": "F11",
+   "claimed_value": "$1,850",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 61,
+   "speaker": "Patrick",
+   "agenda_item": "gifts",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 63,
+   "speaker": "Agnieszka",
+   "agenda_item": "gifts",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 64,
+   "speaker": "Patrick",
+   "agenda_item": "gifts",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 66,
+   "speaker": "Danny",
+   "agenda_item": "gifts",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 67,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 67,
+   "speaker": "Zofia",
+   "agenda_item": "gifts",
+   "fact_id": "F1",
+   "claimed_value": "September 6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Agnieszka",
+   "text": "Okay, everyone is here. Zofia, the guest list first, because the venue wants numbers.",
+   "start_s": 0.5,
+   "end_s": 5.75
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Zofia",
+   "text": "Okay so, we're at a hundred and thirty-six confirmed.",
+   "start_s": 6.084,
+   "end_s": 9.261
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Patrick",
+   "text": "That's more than we said.",
+   "start_s": 10.308,
+   "end_s": 12.451
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Zofia",
+   "text": "Marcus's mom keeps adding people. Every week there's a new second cousin.",
+   "start_s": 13.415,
+   "end_s": 17.65
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Agnieszka",
+   "text": "Maybe we cap it somewhere and tell her, politely.",
+   "start_s": 18.105,
+   "end_s": 21.48
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Danny",
+   "text": "A hundred and fifty, give or take. It's going to be a party.",
+   "start_s": 22.175,
+   "end_s": 26.509
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Agnieszka",
+   "text": "And how many tables does that mean?",
+   "start_s": 27.158,
+   "end_s": 29.783
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Zofia",
+   "text": "Fourteen tables, ten at each, and a few spare seats.",
+   "start_s": 30.635,
+   "end_s": 34.164
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Patrick",
+   "text": "Fourteen tables. When I got married there were six.",
+   "start_s": 35.153,
+   "end_s": 39.01
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Danny",
+   "text": "When you got married, Uncle Pat, there were also no phones.",
+   "start_s": 39.304,
+   "end_s": 42.971
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Agnieszka",
+   "text": "The seating plan. Where do the Brennan grandparents go?",
+   "start_s": 43.199,
+   "end_s": 46.574
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Zofia",
+   "text": "Near the front, but not near the speakers. Grandpa's hearing aid squeals.",
+   "start_s": 47.61,
+   "end_s": 51.845
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Danny",
+   "text": "Also, my fantasy league is a disaster. I'm last.",
+   "start_s": 52.478,
+   "end_s": 55.478
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Patrick",
+   "text": "I don't know what that is.",
+   "start_s": 56.44,
+   "end_s": 59.012
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Danny",
+   "text": "It's like gambling, but with spreadsheets and no money.",
+   "start_s": 59.214,
+   "end_s": 62.214
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Agnieszka",
+   "text": "Danny. Seating.",
+   "start_s": 62.859,
+   "end_s": 63.609
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Zofia",
+   "text": "I'll do a first draft of the seating chart this weekend and share it.",
+   "start_s": 64.531,
+   "end_s": 69.472
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Agnieszka",
+   "text": "Put Marcus's mother where she can see everything. It'll keep her calm.",
+   "start_s": 69.901,
+   "end_s": 74.401
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Zofia",
+   "text": "That's actually smart.",
+   "start_s": 75.546,
+   "end_s": 76.605
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Agnieszka",
+   "text": "Money. I know nobody wants to, but we have to.",
+   "start_s": 77.706,
+   "end_s": 81.456
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Patrick",
+   "text": "Your mother and I put in fifteen thousand. That's our part.",
+   "start_s": 81.687,
+   "end_s": 86.401
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Zofia",
+   "text": "Dad. It was ten. We talked about it at Easter.",
+   "start_s": 86.626,
+   "end_s": 90.156
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Patrick",
+   "text": "Ten. Yes. Ten. I'm sorry, I was thinking of what we'd hoped.",
+   "start_s": 90.897,
+   "end_s": 96.04
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Danny",
+   "text": "Awkward.",
+   "start_s": 97.179,
+   "end_s": 97.512
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Agnieszka",
+   "text": "The total budget is twenty-four thousand. So the rest is Zofia and Marcus, and his parents.",
+   "start_s": 98.093,
+   "end_s": 104.093
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Zofia",
+   "text": "And we already paid the three thousand deposit for the venue.",
+   "start_s": 104.51,
+   "end_s": 108.392
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Patrick",
+   "text": "What's the bar going to cost?",
+   "start_s": 109.014,
+   "end_s": 111.586
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Zofia",
+   "text": "Thirty-two a head for the package.",
+   "start_s": 111.815,
+   "end_s": 113.933
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Patrick",
+   "text": "Thirty-two times a hundred and thirty-six. That's a lot of beer.",
+   "start_s": 114.355,
+   "end_s": 119.069
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Danny",
+   "text": "It's not just beer, it's also wine.",
+   "start_s": 119.707,
+   "end_s": 122.04
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Agnieszka",
+   "text": "Could we do a cash bar after ten o'clock? Lots of weddings do.",
+   "start_s": 122.736,
+   "end_s": 127.611
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Patrick",
+   "text": "I'd rather that than a bill nobody can pay.",
+   "start_s": 128.044,
+   "end_s": 131.901
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Zofia",
+   "text": "Okay so, open bar until ten, then cash bar. That's fine.",
+   "start_s": 132.332,
+   "end_s": 136.214
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Danny",
+   "text": "Who's paying for the rehearsal dinner, by the way?",
+   "start_s": 136.633,
+   "end_s": 139.633
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Agnieszka",
+   "text": "Patrick, are you okay? You've gone quiet.",
+   "start_s": 140.293,
+   "end_s": 142.918
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Patrick",
+   "text": "I'm fine. It's been a long year, that's all.",
+   "start_s": 143.408,
+   "end_s": 147.265
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Agnieszka",
+   "text": "The schedule. The rehearsal on Friday is at six.",
+   "start_s": 147.486,
+   "end_s": 150.861
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Danny",
+   "text": "Six works for me. I finish work at five.",
+   "start_s": 151.899,
+   "end_s": 154.899
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Zofia",
+   "text": "And the morning? What time do we start?",
+   "start_s": 155.655,
+   "end_s": 158.479
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Agnieszka",
+   "text": "Hair and makeup at eight thirty, at the hotel.",
+   "start_s": 159.321,
+   "end_s": 162.696
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Zofia",
+   "text": "Eight thirty is so early. Maybe we push it to nine?",
+   "start_s": 163.082,
+   "end_s": 166.964
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Agnieszka",
+   "text": "Eight thirty is late. The photographer comes at one, and you need to be dressed by then.",
+   "start_s": 168.157,
+   "end_s": 174.532
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Danny",
+   "text": "Is the photographer the guy with the drone?",
+   "start_s": 175.592,
+   "end_s": 178.259
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Zofia",
+   "text": "No drone. I said no drone.",
+   "start_s": 178.58,
+   "end_s": 180.698
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Danny",
+   "text": "What do the groomsmen do in the morning? Anything?",
+   "start_s": 181.231,
+   "end_s": 184.231
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Agnieszka",
+   "text": "You collect the suits by nine and you're at the church by one thirty. Sober.",
+   "start_s": 185.152,
+   "end_s": 190.777
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Danny",
+   "text": "About the suits. I may have lost the fitting receipt.",
+   "start_s": 191.688,
+   "end_s": 195.022
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Zofia",
+   "text": "Danny!",
+   "start_s": 196.158,
+   "end_s": 196.511
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Danny",
+   "text": "I know the shop! They know me! It's fine. I'll go in Thursday and sort it out with them.",
+   "start_s": 197.133,
+   "end_s": 203.466
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Patrick",
+   "text": "My cat has a vet appointment that Thursday, actually. Surgery on her paw.",
+   "start_s": 204.496,
+   "end_s": 210.067
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Zofia",
+   "text": "Oh no, poor Pierogi. Is she okay?",
+   "start_s": 210.937,
+   "end_s": 213.408
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Patrick",
+   "text": "She'll be fine. She's tougher than me.",
+   "start_s": 213.911,
+   "end_s": 216.911
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Agnieszka",
+   "text": "I'm looking at the booking email. The rehearsal is at five, not six. Sorry, I had the dinner time in my head.",
+   "start_s": 217.699,
+   "end_s": 225.949
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Danny",
+   "text": "Five. Then I'll leave work early.",
+   "start_s": 227.031,
+   "end_s": 229.031
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Agnieszka",
+   "text": "Rehearsal at five, dinner at six thirty, and nobody is late.",
+   "start_s": 230.077,
+   "end_s": 234.202
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Zofia",
+   "text": "The registry. There are like forty things still left on it.",
+   "start_s": 234.907,
+   "end_s": 238.79
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Agnieszka",
+   "text": "I checked last night, it's twenty-three. People bought a lot this week.",
+   "start_s": 239.579,
+   "end_s": 244.079
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Zofia",
+   "text": "Oh, nice. Twenty-three.",
+   "start_s": 244.314,
+   "end_s": 245.372
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Patrick",
+   "text": "Has anyone heard whether Aunt Halina is actually coming?",
+   "start_s": 245.815,
+   "end_s": 249.672
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Danny",
+   "text": "And the honeymoon fund? How's that going?",
+   "start_s": 250.669,
+   "end_s": 253.003
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Zofia",
+   "text": "Eighteen fifty so far. Enough for the flights, almost.",
+   "start_s": 253.617,
+   "end_s": 256.794
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Patrick",
+   "text": "Is my picture frozen? I see myself upside down.",
+   "start_s": 257.167,
+   "end_s": 261.024
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Danny",
+   "text": "You're fine, Uncle Pat. You're just upside down.",
+   "start_s": 261.773,
+   "end_s": 264.439
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Agnieszka",
+   "text": "Someone should remind the Polish side about the registry. They don't use the internet much.",
+   "start_s": 265.342,
+   "end_s": 270.967
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Patrick",
+   "text": "I'll call my brother on Sunday and tell him. He'll tell everyone else.",
+   "start_s": 271.841,
+   "end_s": 277.413
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Zofia",
+   "text": "Thank you, Dad.",
+   "start_s": 277.988,
+   "end_s": 279.047
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Danny",
+   "text": "Does anyone know if the date is on the invitations right? I keep getting asked if it's the sixth or the seventh.",
+   "start_s": 279.686,
+   "end_s": 287.019
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Zofia",
+   "text": "It's the sixth. September sixth. It's on the invitations.",
+   "start_s": 287.727,
+   "end_s": 290.904
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Agnieszka",
+   "text": "Then we're done. Next call in two weeks. Same time.",
+   "start_s": 291.882,
+   "end_s": 295.632
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Danny",
+   "text": "Same bat time, same bat channel.",
+   "start_s": 296.353,
+   "end_s": 298.353
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Patrick",
+   "text": "I don't know what that means either.",
+   "start_s": 298.946,
+   "end_s": 301.946
+  }
+ ]
+}

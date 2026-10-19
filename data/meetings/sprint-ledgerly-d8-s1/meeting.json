@@ -1,0 +1,2217 @@
+{
+ "meeting_id": "sprint-ledgerly-d8-s1",
+ "config": {
+  "theme": "Sprint planning for a payments team at a fictional fintech",
+  "domain_pack": "software_team",
+  "drama": 0.8,
+  "seed": 1,
+  "duration_min": 5.5,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   1,
+   3,
+   14,
+   47,
+   59,
+   61,
+   73,
+   77
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "Sprint planning for a payments team at a fictional fintech",
+  "personas": [
+   {
+    "name": "Rachel",
+    "role": "Engineering manager",
+    "goals": "Stop over-committing",
+    "hidden_agenda": "Her skip-level asked why the team keeps missing",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [
+     "okay, real talk",
+     "hang on"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Dev",
+    "role": "Staff engineer",
+    "goals": "Do the PCI fixes before the auditors come back",
+    "hidden_agenda": "Thinks product doesn't understand the audit risk",
+    "verbosity": 4,
+    "wpm": 160,
+    "catchphrases": [
+     "the reality is",
+     "I mean"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Carmen",
+    "role": "Product manager for merchant tools",
+    "goals": "Ship the chargeback flow this sprint",
+    "hidden_agenda": "Promised two big merchants a date",
+    "verbosity": 4,
+    "wpm": 175,
+    "catchphrases": [
+     "merchants are screaming",
+     "okay but"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Oskar",
+    "role": "Engineer, carries most of the on-call",
+    "goals": "Fewer pages, more sleep",
+    "hidden_agenda": "Has a job offer elsewhere",
+    "verbosity": 2,
+    "wpm": 145,
+    "catchphrases": [
+     "sure",
+     "whatever works"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Card platform team - sprint 41 planning",
+   "org": "Ledgerly (fictional payments startup)",
+   "agenda": [
+    {
+     "id": "review",
+     "title": "Last sprint review",
+     "goal": "Be honest about what shipped and what didn't",
+     "timebox_min": 1.25
+    },
+    {
+     "id": "scope",
+     "title": "Sprint scope",
+     "goal": "Choose between the chargeback flow and the PCI audit fixes",
+     "timebox_min": 1.95
+    },
+    {
+     "id": "estimates",
+     "title": "Estimates",
+     "goal": "Size the chosen work and check it fits",
+     "timebox_min": 1.14
+    },
+    {
+     "id": "team",
+     "title": "Team health and on-call",
+     "goal": "Sort out the on-call load and the hiring gap",
+     "timebox_min": 1.18
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "committed_points",
+     "statement": "Points committed last sprint = 45",
+     "value": "45"
+    },
+    {
+     "id": "F2",
+     "key": "delivered_points",
+     "statement": "Points delivered last sprint = 29",
+     "value": "29"
+    },
+    {
+     "id": "F3",
+     "key": "pci_findings_open",
+     "statement": "Open PCI audit findings = 6",
+     "value": "6"
+    },
+    {
+     "id": "F4",
+     "key": "pci_deadline",
+     "statement": "PCI remediation deadline = December 15",
+     "value": "December 15"
+    },
+    {
+     "id": "F5",
+     "key": "chargeback_rate",
+     "statement": "Chargeback rate last month = 0.9%",
+     "value": "0.9%"
+    },
+    {
+     "id": "F6",
+     "key": "chargeback_fees_monthly",
+     "statement": "Chargeback fees last month = $14,200",
+     "value": "$14,200"
+    },
+    {
+     "id": "F7",
+     "key": "engineers_on_team",
+     "statement": "Engineers on the team = 5",
+     "value": "5"
+    },
+    {
+     "id": "F8",
+     "key": "open_headcount",
+     "statement": "Open engineering roles = 2",
+     "value": "2"
+    },
+    {
+     "id": "F9",
+     "key": "oncall_pages",
+     "statement": "Pages last sprint = 23",
+     "value": "23"
+    },
+    {
+     "id": "F10",
+     "key": "p1_incidents",
+     "statement": "P1 incidents last sprint = 2",
+     "value": "2"
+    },
+    {
+     "id": "F11",
+     "key": "merchant_escalations",
+     "statement": "Merchant escalations about chargebacks = 17",
+     "value": "17"
+    },
+    {
+     "id": "F12",
+     "key": "sprint_end_date",
+     "statement": "This sprint ends November 21",
+     "value": "November 21"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "review",
+    "summary": "The miss; Carmen remembers the delivery as better than it was",
+    "n_turns": 18,
+    "events": []
+   },
+   {
+    "agenda_item": "scope",
+    "summary": "Chargebacks vs PCI; a shouting match; Dev overstates the PCI findings and Rachel catches it much later",
+    "n_turns": 28,
+    "events": []
+   },
+   {
+    "agenda_item": "estimates",
+    "summary": "Sizing; a running joke about Oskar's sourdough takes over for a bit",
+    "n_turns": 17,
+    "events": []
+   },
+   {
+    "agenda_item": "team",
+    "summary": "On-call load, hiring and Oskar's job offer",
+    "n_turns": 21,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Rachel",
+   "text": "Okay, real talk. Last sprint we committed forty-five points and we did not get close.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Carmen",
+   "text": "We got most of it, though. Like thirty-eight?",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Dev",
+   "text": "The board says twenty-nine.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Carmen",
+   "text": "Twenty-nine? Hang on, that can't include the dispute API work.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Rachel",
+   "text": "It includes it. It was split across two tickets and one didn't close.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Oskar",
+   "text": "The two P1s didn't help. Each one ate a day of somebody.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Dev",
+   "text": "The reality is we plan like nobody gets paged and then everybody gets paged.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Carmen",
+   "text": "Okay but that's every team.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Dev",
+   "text": "It's not every team. Most teams don't own card authorization.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Carmen",
+   "text": "Ugh, Slack is on fire over here. Ignore my face.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Rachel",
+   "text": "Hang on, let's not do this again. The question is what we change.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Oskar",
+   "text": "Plan for the pages. That's what we change.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Rachel",
+   "text": "How many pages were there, Oskar?",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Oskar",
+   "text": "Twenty-three. Most of them at night.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Carmen",
+   "text": "Twenty-three? That's insane.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Oskar",
+   "text": "Sure. It was.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Rachel",
+   "text": "Okay. Then this sprint we plan to what we actually delivered, not what we wish we'd delivered.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Dev",
+   "text": "I mean, that's the first sensible thing anyone's said about planning all year.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Rachel",
+   "text": "Scope. Carmen, you want the chargeback flow.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Carmen",
+   "text": "Merchants are screaming. We had seventeen escalations about chargebacks last month.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Dev",
+   "text": "And we have ten open PCI findings. Auditors don't scream, they just fail you.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Carmen",
+   "text": "Okay but the chargeback rate is like two percent. We're paying for every one of them.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Rachel",
+   "text": "What did chargebacks actually cost us last month?",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Carmen",
+   "text": "Fourteen thousand two hundred in fees. Every month this doesn't ship.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Dev",
+   "text": "PCI remediation is due December fifteenth. That's a hard date with real consequences.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Carmen",
+   "text": "The merchants' date is a hard date too! I told Pivot Coffee and Brightline—",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": true
+  },
+  {
+   "index": 26,
+   "speaker": "Rachel",
+   "text": "You told them a date?",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Carmen",
+   "text": "I told them \"this quarter\". Roughly.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Dev",
+   "text": "The reality is, \"roughly\" is how we got here.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Carmen",
+   "text": "Don't make this about me, Dev.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Dev",
+   "text": "I'm making it about the audit.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Oskar",
+   "text": "Can we do half and half?",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Rachel",
+   "text": "Half of each usually means none of either.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Oskar",
+   "text": "Sure. Whatever works.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Rachel",
+   "text": "Okay, real talk. Which of the PCI findings actually block the audit?",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Dev",
+   "text": "The ones about key rotation and the log retention. Those are the scary ones.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Carmen",
+   "text": "So not all of them are scary.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Dev",
+   "text": "I mean, they're all findings. Some are scarier.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Rachel",
+   "text": "Hang on. Then we do the scary PCI ones first, and the chargeback flow gets whatever's left.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Carmen",
+   "text": "Whatever's left is nothing. You know it's nothing.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Rachel",
+   "text": "Hang on, I just pulled up the audit tracker. It's six open findings, not ten.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Dev",
+   "text": "Six. Okay, six. Still.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Rachel",
+   "text": "Six, of which two are scary. Okay. Key rotation and log retention, then the chargeback flow, in that order. That's the scope. Decided.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E023",
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Carmen",
+   "text": "Fine. But I'm writing down that it's on you if Brightline churns.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Rachel",
+   "text": "Write it down. I'll talk to Brightline myself if it comes to that.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Oskar",
+   "text": "Sure.",
+   "agenda_item": "scope",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Rachel",
+   "text": "Estimates. Dev, key rotation.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Dev",
+   "text": "Eight points. Maybe thirteen if the HSM vendor is slow again.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Oskar",
+   "text": "The vendor is always slow.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Carmen",
+   "text": "How big is the chargeback flow, honestly?",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Dev",
+   "text": "The reality is, it's two sprints of work if we do it right.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Carmen",
+   "text": "Then we do a first version. Merchants just need the evidence upload.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Rachel",
+   "text": "Could the evidence upload alone fit this sprint?",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Oskar",
+   "text": "Probably.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Dev",
+   "text": "If nobody gets paged. So, no.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Oskar",
+   "text": "Unrelated, but my sourdough starter died this weekend.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Carmen",
+   "text": "Oskar. You named that thing.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Oskar",
+   "text": "Gerald. His name was Gerald.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Dev",
+   "text": "I mean, I'm sorry for your loss.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Rachel",
+   "text": "Okay, can we bury Gerald after planning?",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Carmen",
+   "text": "So the evidence upload, is it in or out?",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Rachel",
+   "text": "Hang on. Five engineers, two open roles, a week of on-call each. It's in, as a stretch goal, behind the PCI work. Okay, that's the call.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [
+    "E030",
+    "E031",
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Carmen",
+   "text": "A stretch goal. Fine. I'll write the evidence upload ticket today so it's ready if there's room.",
+   "agenda_item": "estimates",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Rachel",
+   "text": "Last thing. Team. Oskar, you took most of the pages again.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Oskar",
+   "text": "Sure. It's fine.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Dev",
+   "text": "It's not fine. You look terrible. No offense.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Oskar",
+   "text": "Some taken.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Rachel",
+   "text": "Real talk, should we change the rotation so nobody does back-to-back weeks?",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Dev",
+   "text": "Yes. Obviously yes.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Rachel",
+   "text": "Then no back-to-back on-call weeks, starting this sprint.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Dev",
+   "text": "I'll redo the on-call schedule tonight so Oskar's off next week.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Oskar",
+   "text": "Thanks, Dev.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Carmen",
+   "text": "Where are we on the two open roles?",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Rachel",
+   "text": "One final round next week. The other one, we haven't even posted.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "Carmen",
+   "text": "Why not?",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 75,
+   "speaker": "Rachel",
+   "text": "Budget approval. It's been stuck with finance for a month.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 76,
+   "speaker": "Dev",
+   "text": "It'd be great if someone leaned on finance about that.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 77,
+   "speaker": "Oskar",
+   "text": "Is anyone else here thinking about leaving? Asking for a friend.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 78,
+   "speaker": "Rachel",
+   "text": "Hang on— Oskar.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 79,
+   "speaker": "Carmen",
+   "text": "Okay, that's a conversation for a one-on-one.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 80,
+   "speaker": "Rachel",
+   "text": "I'll set up a one-on-one with Oskar for tomorrow morning.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 81,
+   "speaker": "Oskar",
+   "text": "Sure. Okay.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 82,
+   "speaker": "Rachel",
+   "text": "Okay. Sprint ends November twenty-first. Let's actually finish it this time.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 83,
+   "speaker": "Dev",
+   "text": "Famous last words.",
+   "agenda_item": "team",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Rachel",
+   "agenda_item": "review",
+   "fact_id": "F1",
+   "claimed_value": "45",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 1,
+   "speaker": "Carmen",
+   "agenda_item": "review",
+   "fact_id": "F2",
+   "claimed_value": "38",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Dev",
+   "agenda_item": "review",
+   "fact_id": "F2",
+   "claimed_value": "29",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Carmen",
+   "agenda_item": "review",
+   "fact_id": "F2",
+   "claimed_value": "29",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Oskar",
+   "agenda_item": "review",
+   "fact_id": "F10",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Carmen",
+   "agenda_item": "review",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Rachel",
+   "agenda_item": "review",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 13,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Oskar",
+   "agenda_item": "review",
+   "fact_id": "F9",
+   "claimed_value": "23",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Carmen",
+   "agenda_item": "review",
+   "fact_id": "F9",
+   "claimed_value": "23",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Rachel",
+   "agenda_item": "review",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Carmen",
+   "agenda_item": "scope",
+   "fact_id": "F11",
+   "claimed_value": "17",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 20,
+   "speaker": "Dev",
+   "agenda_item": "scope",
+   "fact_id": "F3",
+   "claimed_value": "10",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 21,
+   "speaker": "Carmen",
+   "agenda_item": "scope",
+   "fact_id": "F5",
+   "claimed_value": "2%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Rachel",
+   "agenda_item": "scope",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 23,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Carmen",
+   "agenda_item": "scope",
+   "fact_id": "F6",
+   "claimed_value": "$14,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Dev",
+   "agenda_item": "scope",
+   "fact_id": "F4",
+   "claimed_value": "December 15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Rachel",
+   "agenda_item": "scope",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 27,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Oskar",
+   "agenda_item": "scope",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 32,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Rachel",
+   "agenda_item": "scope",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 35,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Rachel",
+   "agenda_item": "scope",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Rachel",
+   "agenda_item": "scope",
+   "fact_id": "F3",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Dev",
+   "agenda_item": "scope",
+   "fact_id": "F3",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 42,
+   "speaker": "Rachel",
+   "agenda_item": "scope",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Rachel",
+   "agenda_item": "scope",
+   "fact_id": "F3",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Rachel",
+   "agenda_item": "scope",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Carmen",
+   "agenda_item": "estimates",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 50,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Rachel",
+   "agenda_item": "estimates",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 54,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 55,
+   "speaker": "Oskar",
+   "agenda_item": "estimates",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 4,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 60,
+   "speaker": "Carmen",
+   "agenda_item": "estimates",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 61,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 61,
+   "speaker": "Rachel",
+   "agenda_item": "estimates",
+   "fact_id": "F7",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 61,
+   "speaker": "Rachel",
+   "agenda_item": "estimates",
+   "fact_id": "F8",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 61,
+   "speaker": "Rachel",
+   "agenda_item": "estimates",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 62,
+   "speaker": "Carmen",
+   "agenda_item": "estimates",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 67,
+   "speaker": "Rachel",
+   "agenda_item": "team",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 68,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 69,
+   "speaker": "Rachel",
+   "agenda_item": "team",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 70,
+   "speaker": "Dev",
+   "agenda_item": "team",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 72,
+   "speaker": "Carmen",
+   "agenda_item": "team",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 73,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 73,
+   "speaker": "Rachel",
+   "agenda_item": "team",
+   "fact_id": "F8",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 74,
+   "speaker": "Carmen",
+   "agenda_item": "team",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 75,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 76,
+   "speaker": "Dev",
+   "agenda_item": "team",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 77,
+   "speaker": "Oskar",
+   "agenda_item": "team",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 80,
+   "speaker": "Rachel",
+   "agenda_item": "team",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 82,
+   "speaker": "Rachel",
+   "agenda_item": "team",
+   "fact_id": "F12",
+   "claimed_value": "November 21",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Rachel",
+   "text": "Okay, real talk. Last sprint we committed forty-five points and we did not get close.",
+   "start_s": 0.5,
+   "end_s": 5.955
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Carmen",
+   "text": "We got most of it, though. Like thirty-eight?",
+   "start_s": 6.289,
+   "end_s": 9.032
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Dev",
+   "text": "The board says twenty-nine.",
+   "start_s": 10.079,
+   "end_s": 11.579
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Carmen",
+   "text": "Twenty-nine? Hang on, that can't include the dispute API work.",
+   "start_s": 12.543,
+   "end_s": 15.971
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Rachel",
+   "text": "It includes it. It was split across two tickets and one didn't close.",
+   "start_s": 16.426,
+   "end_s": 21.153
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Oskar",
+   "text": "The two P1s didn't help. Each one ate a day of somebody.",
+   "start_s": 21.848,
+   "end_s": 26.814
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Dev",
+   "text": "The reality is we plan like nobody gets paged and then everybody gets paged.",
+   "start_s": 27.463,
+   "end_s": 32.713
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Carmen",
+   "text": "Okay but that's every team.",
+   "start_s": 33.565,
+   "end_s": 35.279
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Dev",
+   "text": "It's not every team. Most teams don't own card authorization.",
+   "start_s": 36.268,
+   "end_s": 40.018
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Carmen",
+   "text": "Ugh, Slack is on fire over here. Ignore my face.",
+   "start_s": 40.312,
+   "end_s": 43.74
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Rachel",
+   "text": "Hang on, let's not do this again. The question is what we change.",
+   "start_s": 43.968,
+   "end_s": 48.696
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Oskar",
+   "text": "Plan for the pages. That's what we change.",
+   "start_s": 49.732,
+   "end_s": 53.042
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Rachel",
+   "text": "How many pages were there, Oskar?",
+   "start_s": 53.675,
+   "end_s": 55.857
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Oskar",
+   "text": "Twenty-three. Most of them at night.",
+   "start_s": 56.819,
+   "end_s": 59.302
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Carmen",
+   "text": "Twenty-three? That's insane.",
+   "start_s": 59.504,
+   "end_s": 60.533
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Oskar",
+   "text": "Sure. It was.",
+   "start_s": 61.178,
+   "end_s": 62.42
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Rachel",
+   "text": "Okay. Then this sprint we plan to what we actually delivered, not what we wish we'd delivered.",
+   "start_s": 63.342,
+   "end_s": 69.523
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Dev",
+   "text": "I mean, that's the first sensible thing anyone's said about planning all year.",
+   "start_s": 69.952,
+   "end_s": 74.827
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Rachel",
+   "text": "Scope. Carmen, you want the chargeback flow.",
+   "start_s": 75.972,
+   "end_s": 78.518
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Carmen",
+   "text": "Merchants are screaming. We had seventeen escalations about chargebacks last month.",
+   "start_s": 79.619,
+   "end_s": 83.391
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Dev",
+   "text": "And we have ten open PCI findings. Auditors don't scream, they just fail you.",
+   "start_s": 83.622,
+   "end_s": 88.872
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Carmen",
+   "text": "Okay but the chargeback rate is like two percent. We're paying for every one of them.",
+   "start_s": 89.097,
+   "end_s": 94.583
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Rachel",
+   "text": "What did chargebacks actually cost us last month?",
+   "start_s": 95.324,
+   "end_s": 98.234
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Carmen",
+   "text": "Fourteen thousand two hundred in fees. Every month this doesn't ship.",
+   "start_s": 99.373,
+   "end_s": 103.145
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Dev",
+   "text": "PCI remediation is due December fifteenth. That's a hard date with real consequences.",
+   "start_s": 103.726,
+   "end_s": 108.601
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Carmen",
+   "text": "The merchants' date is a hard date too! I told Pivot Coffee and Brightline—",
+   "start_s": 109.018,
+   "end_s": 113.818
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Rachel",
+   "text": "You told them a date?",
+   "start_s": 113.307,
+   "end_s": 115.125
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Carmen",
+   "text": "I told them \"this quarter\". Roughly.",
+   "start_s": 115.354,
+   "end_s": 117.411
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Dev",
+   "text": "The reality is, \"roughly\" is how we got here.",
+   "start_s": 117.833,
+   "end_s": 121.208
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Carmen",
+   "text": "Don't make this about me, Dev.",
+   "start_s": 121.846,
+   "end_s": 123.903
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Dev",
+   "text": "I'm making it about the audit.",
+   "start_s": 124.599,
+   "end_s": 126.849
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Oskar",
+   "text": "Can we do half and half?",
+   "start_s": 127.282,
+   "end_s": 129.765
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Rachel",
+   "text": "Half of each usually means none of either.",
+   "start_s": 130.196,
+   "end_s": 133.105
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Oskar",
+   "text": "Sure. Whatever works.",
+   "start_s": 133.524,
+   "end_s": 134.765
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Rachel",
+   "text": "Okay, real talk. Which of the PCI findings actually block the audit?",
+   "start_s": 135.425,
+   "end_s": 139.788
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Dev",
+   "text": "The ones about key rotation and the log retention. Those are the scary ones.",
+   "start_s": 140.278,
+   "end_s": 145.528
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Carmen",
+   "text": "So not all of them are scary.",
+   "start_s": 145.749,
+   "end_s": 148.149
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Dev",
+   "text": "I mean, they're all findings. Some are scarier.",
+   "start_s": 149.187,
+   "end_s": 152.187
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Rachel",
+   "text": "Hang on. Then we do the scary PCI ones first, and the chargeback flow gets whatever's left.",
+   "start_s": 152.943,
+   "end_s": 159.125
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Carmen",
+   "text": "Whatever's left is nothing. You know it's nothing.",
+   "start_s": 159.967,
+   "end_s": 162.71
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Rachel",
+   "text": "Hang on, I just pulled up the audit tracker. It's six open findings, not ten.",
+   "start_s": 163.096,
+   "end_s": 168.55
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Dev",
+   "text": "Six. Okay, six. Still.",
+   "start_s": 169.743,
+   "end_s": 171.243
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Rachel",
+   "text": "Six, of which two are scary. Okay. Key rotation and log retention, then the chargeback flow, in that order. That's the scope. Decided.",
+   "start_s": 172.303,
+   "end_s": 180.667
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Carmen",
+   "text": "Fine. But I'm writing down that it's on you if Brightline churns.",
+   "start_s": 180.988,
+   "end_s": 185.102
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Rachel",
+   "text": "Write it down. I'll talk to Brightline myself if it comes to that.",
+   "start_s": 185.635,
+   "end_s": 190.362
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Oskar",
+   "text": "Sure.",
+   "start_s": 191.283,
+   "end_s": 191.697
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Rachel",
+   "text": "Estimates. Dev, key rotation.",
+   "start_s": 192.608,
+   "end_s": 194.063
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Dev",
+   "text": "Eight points. Maybe thirteen if the HSM vendor is slow again.",
+   "start_s": 195.199,
+   "end_s": 199.324
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Oskar",
+   "text": "The vendor is always slow.",
+   "start_s": 199.946,
+   "end_s": 202.015
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Carmen",
+   "text": "How big is the chargeback flow, honestly?",
+   "start_s": 203.045,
+   "end_s": 205.445
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Dev",
+   "text": "The reality is, it's two sprints of work if we do it right.",
+   "start_s": 206.315,
+   "end_s": 211.19
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Carmen",
+   "text": "Then we do a first version. Merchants just need the evidence upload.",
+   "start_s": 211.693,
+   "end_s": 215.808
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Rachel",
+   "text": "Could the evidence upload alone fit this sprint?",
+   "start_s": 216.596,
+   "end_s": 219.505
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Oskar",
+   "text": "Probably.",
+   "start_s": 220.587,
+   "end_s": 221.001
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Dev",
+   "text": "If nobody gets paged. So, no.",
+   "start_s": 222.047,
+   "end_s": 224.297
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Oskar",
+   "text": "Unrelated, but my sourdough starter died this weekend.",
+   "start_s": 225.002,
+   "end_s": 228.313
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Carmen",
+   "text": "Oskar. You named that thing.",
+   "start_s": 229.102,
+   "end_s": 230.816
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Oskar",
+   "text": "Gerald. His name was Gerald.",
+   "start_s": 231.051,
+   "end_s": 233.119
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Dev",
+   "text": "I mean, I'm sorry for your loss.",
+   "start_s": 233.562,
+   "end_s": 236.187
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Rachel",
+   "text": "Okay, can we bury Gerald after planning?",
+   "start_s": 237.184,
+   "end_s": 239.73
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Carmen",
+   "text": "So the evidence upload, is it in or out?",
+   "start_s": 240.344,
+   "end_s": 243.43
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Rachel",
+   "text": "Hang on. Five engineers, two open roles, a week of on-call each. It's in, as a stretch goal, behind the PCI work. Okay, that's the call.",
+   "start_s": 243.803,
+   "end_s": 253.258
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Carmen",
+   "text": "A stretch goal. Fine. I'll write the evidence upload ticket today so it's ready if there's room.",
+   "start_s": 254.007,
+   "end_s": 259.835
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Rachel",
+   "text": "Last thing. Team. Oskar, you took most of the pages again.",
+   "start_s": 260.738,
+   "end_s": 264.738
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Oskar",
+   "text": "Sure. It's fine.",
+   "start_s": 265.612,
+   "end_s": 266.854
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Dev",
+   "text": "It's not fine. You look terrible. No offense.",
+   "start_s": 267.429,
+   "end_s": 270.429
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Oskar",
+   "text": "Some taken.",
+   "start_s": 271.068,
+   "end_s": 271.896
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Rachel",
+   "text": "Real talk, should we change the rotation so nobody does back-to-back weeks?",
+   "start_s": 272.604,
+   "end_s": 276.968
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Dev",
+   "text": "Yes. Obviously yes.",
+   "start_s": 277.946,
+   "end_s": 279.071
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Rachel",
+   "text": "Then no back-to-back on-call weeks, starting this sprint.",
+   "start_s": 279.792,
+   "end_s": 282.701
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Dev",
+   "text": "I'll redo the on-call schedule tonight so Oskar's off next week.",
+   "start_s": 283.294,
+   "end_s": 287.419
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Oskar",
+   "text": "Thanks, Dev.",
+   "start_s": 288.109,
+   "end_s": 288.936
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Carmen",
+   "text": "Where are we on the two open roles?",
+   "start_s": 289.166,
+   "end_s": 291.908
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Rachel",
+   "text": "One final round next week. The other one, we haven't even posted.",
+   "start_s": 292.151,
+   "end_s": 296.515
+  },
+  {
+   "turn_index": 74,
+   "speaker": "Carmen",
+   "text": "Why not?",
+   "start_s": 297.418,
+   "end_s": 298.104
+  },
+  {
+   "turn_index": 75,
+   "speaker": "Rachel",
+   "text": "Budget approval. It's been stuck with finance for a month.",
+   "start_s": 299.287,
+   "end_s": 302.924
+  },
+  {
+   "turn_index": 76,
+   "speaker": "Dev",
+   "text": "It'd be great if someone leaned on finance about that.",
+   "start_s": 303.717,
+   "end_s": 307.467
+  },
+  {
+   "turn_index": 77,
+   "speaker": "Oskar",
+   "text": "Is anyone else here thinking about leaving? Asking for a friend.",
+   "start_s": 308.061,
+   "end_s": 312.612
+  },
+  {
+   "turn_index": 78,
+   "speaker": "Rachel",
+   "text": "Hang on— Oskar.",
+   "start_s": 312.982,
+   "end_s": 314.073
+  },
+  {
+   "turn_index": 79,
+   "speaker": "Carmen",
+   "text": "Okay, that's a conversation for a one-on-one.",
+   "start_s": 314.775,
+   "end_s": 317.175
+  },
+  {
+   "turn_index": 80,
+   "speaker": "Rachel",
+   "text": "I'll set up a one-on-one with Oskar for tomorrow morning.",
+   "start_s": 318.357,
+   "end_s": 321.993
+  },
+  {
+   "turn_index": 81,
+   "speaker": "Oskar",
+   "text": "Sure. Okay.",
+   "start_s": 322.964,
+   "end_s": 323.791
+  },
+  {
+   "turn_index": 82,
+   "speaker": "Rachel",
+   "text": "Okay. Sprint ends November twenty-first. Let's actually finish it this time.",
+   "start_s": 324.531,
+   "end_s": 328.531
+  },
+  {
+   "turn_index": 83,
+   "speaker": "Dev",
+   "text": "Famous last words.",
+   "start_s": 329.591,
+   "end_s": 330.716
+  }
+ ]
+}

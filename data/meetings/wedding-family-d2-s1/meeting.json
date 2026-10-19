@@ -1,0 +1,2230 @@
+{
+ "meeting_id": "wedding-family-d2-s1",
+ "config": {
+  "theme": "Family video call planning a cousin's wedding",
+  "domain_pack": "family_planning",
+  "drama": 0.2,
+  "seed": 1,
+  "duration_min": 5.9,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   0,
+   1,
+   46,
+   70
+  ],
+  "reviewed_noclaim": [
+   46
+  ]
+ },
+ "cast": {
+  "theme": "Family video call planning a cousin's wedding",
+  "personas": [
+   {
+    "name": "Joyce",
+    "role": "Mother of the bride, keeps the family organized",
+    "goals": "Every guest looked after",
+    "hidden_agenda": "Worried the Lagos relatives will feel second-class",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [
+     "my dear",
+     "let me see"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Amara",
+    "role": "The bride",
+    "goals": "A relaxed wedding where her family and Theo's mix well",
+    "hidden_agenda": "Already decided on her readings and is waiting to be asked",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [
+     "Mum",
+     "honestly"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Tobi",
+    "role": "Cousin, handling travel for the out-of-town guests",
+    "goals": "Get everyone from the airport to the hotel",
+    "hidden_agenda": "Hasn't booked the airport van yet",
+    "verbosity": 3,
+    "wpm": 170,
+    "catchphrases": [
+     "no wahala",
+     "basically"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Ingrid",
+    "role": "Theo's grandmother, joining to help with the reception",
+    "goals": "Make the Swedish side feel part of it",
+    "hidden_agenda": "Wants to bake a traditional cake",
+    "verbosity": 2,
+    "wpm": 125,
+    "catchphrases": [
+     "oh, lovely",
+     "in my day"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Amara and Theo's wedding - Sunday family call",
+   "org": "The Adeyemi family (fictional)",
+   "agenda": [
+    {
+     "id": "ceremony",
+     "title": "The ceremony",
+     "goal": "Settle the time",
+     "timebox_min": 1.69
+    },
+    {
+     "id": "reception",
+     "title": "Reception and food",
+     "goal": "Confirm the venue",
+     "timebox_min": 1.84
+    },
+    {
+     "id": "travel",
+     "title": "Travel and lodging",
+     "goal": "Get the out-of-town guests sorted",
+     "timebox_min": 1.29
+    },
+    {
+     "id": "tasks",
+     "title": "Who's doing what",
+     "goal": "Give every open job a name",
+     "timebox_min": 1.05
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "wedding_date",
+     "statement": "Wedding date = Saturday, June 21",
+     "value": "June 21"
+    },
+    {
+     "id": "F2",
+     "key": "ceremony_time",
+     "statement": "Ceremony starts at 2:30 pm",
+     "value": "2:30 pm"
+    },
+    {
+     "id": "F3",
+     "key": "church_capacity",
+     "statement": "Church capacity = 120",
+     "value": "120"
+    },
+    {
+     "id": "F4",
+     "key": "guests_confirmed",
+     "statement": "Guests confirmed = 94",
+     "value": "94"
+    },
+    {
+     "id": "F5",
+     "key": "reception_venue_cost",
+     "statement": "Reception hall cost = $6,800",
+     "value": "$6,800"
+    },
+    {
+     "id": "F6",
+     "key": "cake_tiers",
+     "statement": "Cake = 3 tiers",
+     "value": "3"
+    },
+    {
+     "id": "F7",
+     "key": "caterer_deposit",
+     "statement": "Caterer deposit paid = $1,200",
+     "value": "$1,200"
+    },
+    {
+     "id": "F8",
+     "key": "hotel_rooms_held",
+     "statement": "Hotel rooms held = 18",
+     "value": "18"
+    },
+    {
+     "id": "F9",
+     "key": "hotel_rate",
+     "statement": "Hotel group rate = $139 per night",
+     "value": "$139"
+    },
+    {
+     "id": "F10",
+     "key": "guests_flying_from_lagos",
+     "statement": "Guests flying in from Lagos = 9",
+     "value": "9"
+    },
+    {
+     "id": "F11",
+     "key": "rehearsal_dinner_date",
+     "statement": "Rehearsal dinner = Friday, June 20",
+     "value": "June 20"
+    },
+    {
+     "id": "F12",
+     "key": "photographer_hours",
+     "statement": "Photographer booked for 6 hours",
+     "value": "6 hours"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "ceremony",
+    "summary": "Time and readings; Ingrid misremembers the date, gently corrected",
+    "n_turns": 21,
+    "events": []
+   },
+   {
+    "agenda_item": "reception",
+    "summary": "Venue, caterer and cake; Joyce misremembers the deposit; the cake question",
+    "n_turns": 22,
+    "events": []
+   },
+   {
+    "agenda_item": "travel",
+    "summary": "The Lagos guests, hotel rooms and the airport; Tobi's hotel rate is off and stays off",
+    "n_turns": 19,
+    "events": []
+   },
+   {
+    "agenda_item": "tasks",
+    "summary": "Who's doing what; one job gets an owner, one doesn't",
+    "n_turns": 13,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Joyce",
+   "text": "Hello, my dear, can you hear us all right, Ingrid?",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Ingrid",
+   "text": "Oh, lovely, yes, I can hear you. Theo set it up for me.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Joyce",
+   "text": "Wonderful. So, the ceremony first. Amara, the time is still half past two?",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E001",
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Amara",
+   "text": "Half two, yes. The church needed the morning for a christening.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Ingrid",
+   "text": "And that's on the twenty-eighth, isn't it? I have it on my calendar.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E004",
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Amara",
+   "text": "It's the twenty-first, Ingrid. June twenty-first.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Ingrid",
+   "text": "The twenty-first. Oh dear, my calendar is wrong, then. In my day we just remembered.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Tobi",
+   "text": "Basically, the twenty-first is when the Lagos flights land the day before, so it's good.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Joyce",
+   "text": "How many can the church hold, again?",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Amara",
+   "text": "A hundred and twenty. We're well under that.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Joyce",
+   "text": "And the readings, my dear? Have you chosen?",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Amara",
+   "text": "Honestly, I was hoping someone would ask. I'd like Auntie Bisi to read one, and Ingrid to read the other.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Ingrid",
+   "text": "Oh, lovely. In Swedish, or English?",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Amara",
+   "text": "Whichever you prefer. Theo said Swedish would make his dad cry.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Ingrid",
+   "text": "Then Swedish. I'd be honoured.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Joyce",
+   "text": "Who walks you in, then? Your father, of course.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Amara",
+   "text": "Dad and you, Mum. Both of you. If that's okay.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Joyce",
+   "text": "Oh, my dear. Of course it's okay.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Tobi",
+   "text": "Basically, there won't be a dry eye in the place.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Joyce",
+   "text": "So, Bisi and Ingrid for the readings, and both parents walk Amara in. That's settled, then.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Amara",
+   "text": "Settled. Thank you.",
+   "agenda_item": "ceremony",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Joyce",
+   "text": "Let me see, the reception. The hall is booked, and the caterer has the deposit. We paid them two thousand, I think.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Amara",
+   "text": "It was twelve hundred, Mum. The rest is due a month before.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Joyce",
+   "text": "Twelve hundred. Yes. I was thinking of the hall.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Tobi",
+   "text": "The hall was sixty-eight hundred, right?",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [
+    "E019",
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Amara",
+   "text": "Sixty-eight hundred. Theo's parents are covering half of that.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Ingrid",
+   "text": "About the cake. I wondered whether I might bake a prinsesstårta, for the Swedish side.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Amara",
+   "text": "Oh, Ingrid, that would be amazing.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Joyce",
+   "text": "But we have the three-tier cake ordered already.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Ingrid",
+   "text": "Mine would be small. Just a little one, next to it.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Tobi",
+   "text": "Two cakes is basically the dream.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Joyce",
+   "text": "Maybe we could have both. Let me think about where it would go.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Amara",
+   "text": "Honestly, Mum, there's room. The dessert table is huge.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Joyce",
+   "text": "Then yes. The three-tier cake, and Ingrid's cake next to it. Both.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Ingrid",
+   "text": "Oh, lovely. I'll bake it the morning before and bring it in a tin.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Tobi",
+   "text": "Is the caterer okay with outside food, though? Some of them are funny about it.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Joyce",
+   "text": "Let me see, the menu. Jollof and the Swedish meatballs both, yes?",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Amara",
+   "text": "Both. Theo's brother says it's the best idea anyone's had.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Ingrid",
+   "text": "In my day, the meatballs were the whole menu.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Tobi",
+   "text": "Did Theo ever finish building that canoe, by the way?",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [
+    "E028",
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Ingrid",
+   "text": "Oh, the canoe. It's in my garage. It has been in my garage for three years.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Amara",
+   "text": "It leaks. He won't admit it, but it leaks.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Tobi",
+   "text": "Okay, okay. Back to the wedding.",
+   "agenda_item": "reception",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Joyce",
+   "text": "Travel. Tobi, you're our travel person.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Tobi",
+   "text": "No wahala. So, nine guests are flying in from Lagos.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Joyce",
+   "text": "Nine. And the hotel?",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [
+    "E031",
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Tobi",
+   "text": "We're holding eighteen rooms, at a hundred and nine a night. Not bad.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [
+    "E033",
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Amara",
+   "text": "That's good. Is breakfast included?",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Tobi",
+   "text": "Basically, yes. Breakfast and parking.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Joyce",
+   "text": "Are eighteen rooms enough for everyone coming from away?",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [
+    "E036",
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Tobi",
+   "text": "For Lagos, easily. For the cousins from Birmingham, I'm not sure.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Amara",
+   "text": "The Birmingham cousins usually stay with Auntie Grace. They told me last week.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Joyce",
+   "text": "Then eighteen is fine. And who's collecting the Lagos guests from the airport? They land on the Friday.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [
+    "E038",
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Tobi",
+   "text": "Basically, I was going to sort a van. I just haven't yet.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Amara",
+   "text": "Tobi.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Tobi",
+   "text": "I know, I know. I'll book the airport van tomorrow and send everyone the pickup time.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Joyce",
+   "text": "Thank you, my dear. And the rehearsal dinner is the Friday too, isn't it?",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Amara",
+   "text": "Friday the twentieth. Same evening they land.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Ingrid",
+   "text": "Will they be too tired, after such a long flight?",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Joyce",
+   "text": "Lagos people are never too tired for a party.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Amara",
+   "text": "Mum!",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Tobi",
+   "text": "She's not wrong.",
+   "agenda_item": "travel",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Joyce",
+   "text": "Let me see, the jobs that don't have a name yet. The order of service. The photographer timings. The flowers.",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Amara",
+   "text": "The photographer's booked for six hours. Someone needs to make a shot list.",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [
+    "E045",
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Tobi",
+   "text": "Six hours is a lot of photos.",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Amara",
+   "text": "Honestly, I'll do the shot list myself. I know who I want in which photo.",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Joyce",
+   "text": "And the order of service?",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [
+    "E049"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Ingrid",
+   "text": "I used to do the parish newsletter. I could do it, maybe, if someone sends me the words.",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Amara",
+   "text": "Oh, Ingrid, you don't have to.",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Ingrid",
+   "text": "I'd like to. It keeps my hands busy.",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [
+    "E051"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Joyce",
+   "text": "The flowers, then. Does anyone know a florist near the church?",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [
+    "E052"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Tobi",
+   "text": "Sorry, my brother is shouting about the football. One second.",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [
+    "E053"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Joyce",
+   "text": "I think that's us for today, my dears. Same time next Sunday?",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [
+    "E054"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Amara",
+   "text": "Same time. Love you, Mum. Thank you, everyone.",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "Ingrid",
+   "text": "Goodbye, my dears.",
+   "agenda_item": "tasks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Joyce",
+   "agenda_item": "ceremony",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Joyce",
+   "agenda_item": "ceremony",
+   "fact_id": "F2",
+   "claimed_value": "2:30 pm",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Amara",
+   "agenda_item": "ceremony",
+   "fact_id": "F2",
+   "claimed_value": "2:30 pm",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 4,
+   "speaker": "Ingrid",
+   "agenda_item": "ceremony",
+   "fact_id": "F1",
+   "claimed_value": "June 28",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Ingrid",
+   "agenda_item": "ceremony",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 5,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Amara",
+   "agenda_item": "ceremony",
+   "fact_id": "F1",
+   "claimed_value": "June 21",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Ingrid",
+   "agenda_item": "ceremony",
+   "fact_id": "F1",
+   "claimed_value": "June 21",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Tobi",
+   "agenda_item": "ceremony",
+   "fact_id": "F1",
+   "claimed_value": "June 21",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Joyce",
+   "agenda_item": "ceremony",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 9,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Amara",
+   "agenda_item": "ceremony",
+   "fact_id": "F3",
+   "claimed_value": "120",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Joyce",
+   "agenda_item": "ceremony",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 11,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Ingrid",
+   "agenda_item": "ceremony",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 13,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 14,
+   "speaker": "Ingrid",
+   "agenda_item": "ceremony",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Joyce",
+   "agenda_item": "ceremony",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 16,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 19,
+   "speaker": "Joyce",
+   "agenda_item": "ceremony",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 21,
+   "speaker": "Joyce",
+   "agenda_item": "reception",
+   "fact_id": "F7",
+   "claimed_value": "$2,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Amara",
+   "agenda_item": "reception",
+   "fact_id": "F7",
+   "claimed_value": "$1,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Joyce",
+   "agenda_item": "reception",
+   "fact_id": "F7",
+   "claimed_value": "$1,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Tobi",
+   "agenda_item": "reception",
+   "fact_id": "F5",
+   "claimed_value": "$6,800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Tobi",
+   "agenda_item": "reception",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 25,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Amara",
+   "agenda_item": "reception",
+   "fact_id": "F5",
+   "claimed_value": "$6,800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Joyce",
+   "agenda_item": "reception",
+   "fact_id": "F6",
+   "claimed_value": "3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Joyce",
+   "agenda_item": "reception",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 33,
+   "speaker": "Joyce",
+   "agenda_item": "reception",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Ingrid",
+   "agenda_item": "reception",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 35,
+   "speaker": "Tobi",
+   "agenda_item": "reception",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Joyce",
+   "agenda_item": "reception",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 37,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 39,
+   "speaker": "Tobi",
+   "agenda_item": "reception",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Tobi",
+   "agenda_item": "reception",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 40,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Tobi",
+   "agenda_item": "travel",
+   "fact_id": "F10",
+   "claimed_value": "9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Joyce",
+   "agenda_item": "travel",
+   "fact_id": "F10",
+   "claimed_value": "9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Joyce",
+   "agenda_item": "travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 46,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Tobi",
+   "agenda_item": "travel",
+   "fact_id": "F8",
+   "claimed_value": "18",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 46,
+   "speaker": "Tobi",
+   "agenda_item": "travel",
+   "fact_id": "F9",
+   "claimed_value": "$109",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Amara",
+   "agenda_item": "travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 48,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Joyce",
+   "agenda_item": "travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 51,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Joyce",
+   "agenda_item": "travel",
+   "fact_id": "F8",
+   "claimed_value": "18",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Joyce",
+   "agenda_item": "travel",
+   "fact_id": "F8",
+   "claimed_value": "18",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Joyce",
+   "agenda_item": "travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 53,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 53,
+   "speaker": "Tobi",
+   "agenda_item": "travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 55,
+   "speaker": "Tobi",
+   "agenda_item": "travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 56,
+   "speaker": "Joyce",
+   "agenda_item": "travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 57,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 57,
+   "speaker": "Amara",
+   "agenda_item": "travel",
+   "fact_id": "F11",
+   "claimed_value": "June 20",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 58,
+   "speaker": "Ingrid",
+   "agenda_item": "travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 59,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 63,
+   "speaker": "Amara",
+   "agenda_item": "tasks",
+   "fact_id": "F12",
+   "claimed_value": "6 hours",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 63,
+   "speaker": "Amara",
+   "agenda_item": "tasks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 64,
+   "speaker": "Tobi",
+   "agenda_item": "tasks",
+   "fact_id": "F12",
+   "claimed_value": "6 hours",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 65,
+   "speaker": "Amara",
+   "agenda_item": "tasks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 66,
+   "speaker": "Joyce",
+   "agenda_item": "tasks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 67,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 67,
+   "speaker": "Ingrid",
+   "agenda_item": "tasks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 69,
+   "speaker": "Ingrid",
+   "agenda_item": "tasks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 70,
+   "speaker": "Joyce",
+   "agenda_item": "tasks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E053",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 71,
+   "speaker": "Tobi",
+   "agenda_item": "tasks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E054",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 72,
+   "speaker": "Joyce",
+   "agenda_item": "tasks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 73,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Joyce",
+   "text": "Hello, my dear, can you hear us all right, Ingrid?",
+   "start_s": 0.5,
+   "end_s": 4.5
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Ingrid",
+   "text": "Oh, lovely, yes, I can hear you. Theo set it up for me.",
+   "start_s": 4.834,
+   "end_s": 11.074
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Joyce",
+   "text": "Wonderful. So, the ceremony first. Amara, the time is still half past two?",
+   "start_s": 12.121,
+   "end_s": 17.321
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Amara",
+   "text": "Half two, yes. The church needed the morning for a christening.",
+   "start_s": 18.285,
+   "end_s": 22.285
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Ingrid",
+   "text": "And that's on the twenty-eighth, isn't it? I have it on my calendar.",
+   "start_s": 22.74,
+   "end_s": 28.98
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Amara",
+   "text": "It's the twenty-first, Ingrid. June twenty-first.",
+   "start_s": 29.675,
+   "end_s": 31.857
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Ingrid",
+   "text": "The twenty-first. Oh dear, my calendar is wrong, then. In my day we just remembered.",
+   "start_s": 32.506,
+   "end_s": 39.706
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Tobi",
+   "text": "Basically, the twenty-first is when the Lagos flights land the day before, so it's good.",
+   "start_s": 40.558,
+   "end_s": 45.852
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Joyce",
+   "text": "How many can the church hold, again?",
+   "start_s": 46.841,
+   "end_s": 49.641
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Amara",
+   "text": "A hundred and twenty. We're well under that.",
+   "start_s": 49.935,
+   "end_s": 52.844
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Joyce",
+   "text": "And the readings, my dear? Have you chosen?",
+   "start_s": 53.072,
+   "end_s": 56.272
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Amara",
+   "text": "Honestly, I was hoping someone would ask. I'd like Auntie Bisi to read one, and Ingrid to read the other.",
+   "start_s": 57.308,
+   "end_s": 64.58
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Ingrid",
+   "text": "Oh, lovely. In Swedish, or English?",
+   "start_s": 65.213,
+   "end_s": 68.093
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Amara",
+   "text": "Whichever you prefer. Theo said Swedish would make his dad cry.",
+   "start_s": 69.055,
+   "end_s": 73.055
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Ingrid",
+   "text": "Then Swedish. I'd be honoured.",
+   "start_s": 73.257,
+   "end_s": 75.657
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Joyce",
+   "text": "Who walks you in, then? Your father, of course.",
+   "start_s": 76.302,
+   "end_s": 79.902
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Amara",
+   "text": "Dad and you, Mum. Both of you. If that's okay.",
+   "start_s": 80.824,
+   "end_s": 84.46
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Joyce",
+   "text": "Oh, my dear. Of course it's okay.",
+   "start_s": 84.889,
+   "end_s": 87.689
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Tobi",
+   "text": "Basically, there won't be a dry eye in the place.",
+   "start_s": 88.834,
+   "end_s": 92.364
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Joyce",
+   "text": "So, Bisi and Ingrid for the readings, and both parents walk Amara in. That's settled, then.",
+   "start_s": 93.465,
+   "end_s": 99.865
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Amara",
+   "text": "Settled. Thank you.",
+   "start_s": 100.096,
+   "end_s": 101.186
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Joyce",
+   "text": "Let me see, the reception. The hall is booked, and the caterer has the deposit. We paid them two thousand, I think.",
+   "start_s": 101.411,
+   "end_s": 110.211
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Amara",
+   "text": "It was twelve hundred, Mum. The rest is due a month before.",
+   "start_s": 110.952,
+   "end_s": 115.316
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Joyce",
+   "text": "Twelve hundred. Yes. I was thinking of the hall.",
+   "start_s": 116.455,
+   "end_s": 120.055
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Tobi",
+   "text": "The hall was sixty-eight hundred, right?",
+   "start_s": 120.636,
+   "end_s": 122.754
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Amara",
+   "text": "Sixty-eight hundred. Theo's parents are covering half of that.",
+   "start_s": 123.171,
+   "end_s": 126.443
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Ingrid",
+   "text": "About the cake. I wondered whether I might bake a prinsesstårta, for the Swedish side.",
+   "start_s": 127.065,
+   "end_s": 134.265
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Amara",
+   "text": "Oh, Ingrid, that would be amazing.",
+   "start_s": 134.494,
+   "end_s": 136.676
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Joyce",
+   "text": "But we have the three-tier cake ordered already.",
+   "start_s": 137.098,
+   "end_s": 140.298
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Ingrid",
+   "text": "Mine would be small. Just a little one, next to it.",
+   "start_s": 140.936,
+   "end_s": 146.216
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Tobi",
+   "text": "Two cakes is basically the dream.",
+   "start_s": 146.912,
+   "end_s": 149.029
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Joyce",
+   "text": "Maybe we could have both. Let me think about where it would go.",
+   "start_s": 149.462,
+   "end_s": 154.662
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Amara",
+   "text": "Honestly, Mum, there's room. The dessert table is huge.",
+   "start_s": 155.093,
+   "end_s": 158.366
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Joyce",
+   "text": "Then yes. The three-tier cake, and Ingrid's cake next to it. Both.",
+   "start_s": 158.785,
+   "end_s": 163.585
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Ingrid",
+   "text": "Oh, lovely. I'll bake it the morning before and bring it in a tin.",
+   "start_s": 164.245,
+   "end_s": 170.965
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Tobi",
+   "text": "Is the caterer okay with outside food, though? Some of them are funny about it.",
+   "start_s": 171.455,
+   "end_s": 176.749
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Joyce",
+   "text": "Let me see, the menu. Jollof and the Swedish meatballs both, yes?",
+   "start_s": 176.97,
+   "end_s": 181.77
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Amara",
+   "text": "Both. Theo's brother says it's the best idea anyone's had.",
+   "start_s": 182.808,
+   "end_s": 186.444
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Ingrid",
+   "text": "In my day, the meatballs were the whole menu.",
+   "start_s": 187.2,
+   "end_s": 191.52
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Tobi",
+   "text": "Did Theo ever finish building that canoe, by the way?",
+   "start_s": 192.362,
+   "end_s": 195.892
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Ingrid",
+   "text": "Oh, the canoe. It's in my garage. It has been in my garage for three years.",
+   "start_s": 196.278,
+   "end_s": 203.958
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Amara",
+   "text": "It leaks. He won't admit it, but it leaks.",
+   "start_s": 205.151,
+   "end_s": 208.423
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Tobi",
+   "text": "Okay, okay. Back to the wedding.",
+   "start_s": 209.483,
+   "end_s": 211.601
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Joyce",
+   "text": "Travel. Tobi, you're our travel person.",
+   "start_s": 211.922,
+   "end_s": 214.322
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Tobi",
+   "text": "No wahala. So, nine guests are flying in from Lagos.",
+   "start_s": 214.855,
+   "end_s": 218.384
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Joyce",
+   "text": "Nine. And the hotel?",
+   "start_s": 219.305,
+   "end_s": 220.905
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Tobi",
+   "text": "We're holding eighteen rooms, at a hundred and nine a night. Not bad.",
+   "start_s": 221.816,
+   "end_s": 226.404
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Amara",
+   "text": "That's good. Is breakfast included?",
+   "start_s": 227.54,
+   "end_s": 229.359
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Tobi",
+   "text": "Basically, yes. Breakfast and parking.",
+   "start_s": 229.981,
+   "end_s": 231.746
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Joyce",
+   "text": "Are eighteen rooms enough for everyone coming from away?",
+   "start_s": 232.776,
+   "end_s": 236.376
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Tobi",
+   "text": "For Lagos, easily. For the cousins from Birmingham, I'm not sure.",
+   "start_s": 237.246,
+   "end_s": 241.129
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Amara",
+   "text": "The Birmingham cousins usually stay with Auntie Grace. They told me last week.",
+   "start_s": 241.632,
+   "end_s": 246.36
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Joyce",
+   "text": "Then eighteen is fine. And who's collecting the Lagos guests from the airport? They land on the Friday.",
+   "start_s": 247.148,
+   "end_s": 254.348
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Tobi",
+   "text": "Basically, I was going to sort a van. I just haven't yet.",
+   "start_s": 255.43,
+   "end_s": 259.666
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Amara",
+   "text": "Tobi.",
+   "start_s": 260.712,
+   "end_s": 261.076
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Tobi",
+   "text": "I know, I know. I'll book the airport van tomorrow and send everyone the pickup time.",
+   "start_s": 261.781,
+   "end_s": 267.428
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Joyce",
+   "text": "Thank you, my dear. And the rehearsal dinner is the Friday too, isn't it?",
+   "start_s": 268.217,
+   "end_s": 273.817
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Amara",
+   "text": "Friday the twentieth. Same evening they land.",
+   "start_s": 274.052,
+   "end_s": 276.597
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Ingrid",
+   "text": "Will they be too tired, after such a long flight?",
+   "start_s": 277.04,
+   "end_s": 281.84
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Joyce",
+   "text": "Lagos people are never too tired for a party.",
+   "start_s": 282.837,
+   "end_s": 286.437
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Amara",
+   "text": "Mum!",
+   "start_s": 287.051,
+   "end_s": 287.415
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Tobi",
+   "text": "She's not wrong.",
+   "start_s": 287.788,
+   "end_s": 288.847
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Joyce",
+   "text": "Let me see, the jobs that don't have a name yet. The order of service. The photographer timings. The flowers.",
+   "start_s": 289.596,
+   "end_s": 297.596
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Amara",
+   "text": "The photographer's booked for six hours. Someone needs to make a shot list.",
+   "start_s": 298.499,
+   "end_s": 303.226
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Tobi",
+   "text": "Six hours is a lot of photos.",
+   "start_s": 304.1,
+   "end_s": 306.571
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Amara",
+   "text": "Honestly, I'll do the shot list myself. I know who I want in which photo.",
+   "start_s": 307.146,
+   "end_s": 312.6
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Joyce",
+   "text": "And the order of service?",
+   "start_s": 313.239,
+   "end_s": 315.239
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Ingrid",
+   "text": "I used to do the parish newsletter. I could do it, maybe, if someone sends me the words.",
+   "start_s": 315.947,
+   "end_s": 324.587
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Amara",
+   "text": "Oh, Ingrid, you don't have to.",
+   "start_s": 325.565,
+   "end_s": 327.747
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Ingrid",
+   "text": "I'd like to. It keeps my hands busy.",
+   "start_s": 328.468,
+   "end_s": 332.308
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Joyce",
+   "text": "The flowers, then. Does anyone know a florist near the church?",
+   "start_s": 332.901,
+   "end_s": 337.301
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Tobi",
+   "text": "Sorry, my brother is shouting about the football. One second.",
+   "start_s": 337.991,
+   "end_s": 341.52
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Joyce",
+   "text": "I think that's us for today, my dears. Same time next Sunday?",
+   "start_s": 341.75,
+   "end_s": 346.55
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Amara",
+   "text": "Same time. Love you, Mum. Thank you, everyone.",
+   "start_s": 346.793,
+   "end_s": 349.703
+  },
+  {
+   "turn_index": 74,
+   "speaker": "Ingrid",
+   "text": "Goodbye, my dears.",
+   "start_s": 350.606,
+   "end_s": 352.046
+  }
+ ]
+}

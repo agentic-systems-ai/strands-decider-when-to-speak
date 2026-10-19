@@ -1,0 +1,2701 @@
+{
+ "meeting_id": "sprint-payments-d5-s1",
+ "config": {
+  "theme": "Sprint planning for a payments team at a fictional fintech",
+  "domain_pack": "software_team",
+  "drama": 0.5,
+  "seed": 1,
+  "duration_min": 7.7,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   0,
+   12,
+   39,
+   41,
+   56,
+   57,
+   58,
+   60,
+   61,
+   63
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "Sprint planning for a payments team at a fictional fintech",
+  "personas": [
+   {
+    "name": "Sofia",
+    "role": "Engineering manager, runs planning",
+    "goals": "A realistic sprint the team can actually finish",
+    "hidden_agenda": "Her director already promised the refund API to the partner",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [
+     "okay, team",
+     "let's be honest"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Marcus",
+    "role": "Senior backend engineer",
+    "goals": "Get the ledger refactor into the sprint",
+    "hidden_agenda": "Burned out from on-call",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [
+     "look",
+     "realistically"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Aiko",
+    "role": "Product owner",
+    "goals": "Refund API first, everything else second",
+    "hidden_agenda": "Overpromised the partner on scope",
+    "verbosity": 4,
+    "wpm": 170,
+    "catchphrases": [
+     "from a product point of view",
+     "the partner"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Diego",
+    "role": "Junior engineer, newest on the team",
+    "goals": "Be useful, not be the reason anything slips",
+    "hidden_agenda": "Doesn't fully understand the bank certification",
+    "verbosity": 2,
+    "wpm": 155,
+    "catchphrases": [
+     "sorry, quick one"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Payments squad - sprint 23 planning",
+   "org": "Quillpay (fictional fintech)",
+   "agenda": [
+    {
+     "id": "carryover",
+     "title": "Carryover from last sprint",
+     "goal": "Decide what rolls over and why it slipped",
+     "timebox_min": 2.0
+    },
+    {
+     "id": "priorities",
+     "title": "Sprint priorities",
+     "goal": "Rank the refund API",
+     "timebox_min": 1.85
+    },
+    {
+     "id": "capacity",
+     "title": "Capacity and estimates",
+     "goal": "Match the plan to the people actually available",
+     "timebox_min": 2.14
+    },
+    {
+     "id": "risks",
+     "title": "Risks and dependencies",
+     "goal": "Name the risks and who is watching each one",
+     "timebox_min": 1.68
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "velocity_last_sprint",
+     "statement": "Velocity last sprint = 34 points",
+     "value": "34"
+    },
+    {
+     "id": "F2",
+     "key": "avg_velocity_3_sprints",
+     "statement": "Average velocity over the last 3 sprints = 38 points",
+     "value": "38"
+    },
+    {
+     "id": "F3",
+     "key": "carryover_tickets",
+     "statement": "Tickets carried over from last sprint = 5",
+     "value": "5"
+    },
+    {
+     "id": "F4",
+     "key": "sprint_length",
+     "statement": "Sprint length = 10 working days",
+     "value": "10 working days"
+    },
+    {
+     "id": "F5",
+     "key": "team_size",
+     "statement": "Engineers on the squad = 6",
+     "value": "6"
+    },
+    {
+     "id": "F6",
+     "key": "pto_days_next_sprint",
+     "statement": "Planned PTO next sprint = 7 person-days",
+     "value": "7"
+    },
+    {
+     "id": "F7",
+     "key": "refund_api_deadline",
+     "statement": "Refund API committed date to the partner = November 4",
+     "value": "November 4"
+    },
+    {
+     "id": "F8",
+     "key": "open_security_findings",
+     "statement": "Open security findings on payments = 2",
+     "value": "2"
+    },
+    {
+     "id": "F9",
+     "key": "payment_success_rate",
+     "statement": "Payment success rate last 30 days = 97.8%",
+     "value": "97.8%"
+    },
+    {
+     "id": "F10",
+     "key": "oncall_pages_last_sprint",
+     "statement": "On-call pages last sprint = 11",
+     "value": "11"
+    },
+    {
+     "id": "F11",
+     "key": "bank_cert_window",
+     "statement": "Bank partner certification window = 3 weeks",
+     "value": "3 weeks"
+    },
+    {
+     "id": "F12",
+     "key": "payments_test_coverage",
+     "statement": "Test coverage on the payments service = 72%",
+     "value": "72%"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "carryover",
+    "summary": "What slipped and why; Marcus inflates last sprint's velocity",
+    "n_turns": 25,
+    "events": []
+   },
+   {
+    "agenda_item": "priorities",
+    "summary": "Refund API vs bank certification vs the ledger refactor; Aiko misstates the deadline, nobody catches it",
+    "n_turns": 26,
+    "events": []
+   },
+   {
+    "agenda_item": "capacity",
+    "summary": "Who is actually around; PTO and on-call; an aside about the office plant becomes a whole thing",
+    "n_turns": 29,
+    "events": []
+   },
+   {
+    "agenda_item": "risks",
+    "summary": "Security findings, the bank, the date; one owner, one non-owner, a dodged question",
+    "n_turns": 22,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Sofia",
+   "text": "Okay, team, sprint twenty-three. Let's start with what we didn't finish.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Marcus",
+   "text": "Realistically, most of it was the reconciliation job. It ate the second week.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Sofia",
+   "text": "How many tickets are rolling over?",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Diego",
+   "text": "Five. Three of them are the reconciliation ones.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Aiko",
+   "text": "And the other two are mine, the refund status page and the email template.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Marcus",
+   "text": "Look, we still did forty points, which is pretty good given the incident.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Sofia",
+   "text": "Forty sounds high to me. I'd want to check the board before we celebrate.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [
+    "E004",
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Aiko",
+   "text": "From a product point of view I don't care about points, I care about the refund API.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Marcus",
+   "text": "Points are how we know if the refund API is even possible.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Diego",
+   "text": "Sorry, quick one, does carryover count against this sprint's points or last sprint's?",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Sofia",
+   "text": "It's re-estimated and counted in this sprint, that's how we've always done it.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Diego",
+   "text": "Okay, cool. Thanks.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Marcus",
+   "text": "The reconciliation job slipped because the bank sandbox was down for two days. That's not on us.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Aiko",
+   "text": "It's not on anyone, it's just the reality of working with banks.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Sofia",
+   "text": "Let's be honest, though, we also started it late.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Marcus",
+   "text": "Fair.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Sofia",
+   "text": "Do the reconciliation tickets need re-estimating, or are the old numbers still good?",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Marcus",
+   "text": "They're still good. Most of the hard part is done, it's testing now.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Diego",
+   "text": "I can help with the testing, if that's useful.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Sofia",
+   "text": "Let's figure out who's on what in capacity. Hold that.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Aiko",
+   "text": "The template ticket can probably drop, honestly. Marketing hasn't even sent copy.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Sofia",
+   "text": "Is that a drop, or a not-yet?",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Aiko",
+   "text": "A not-yet. Let's keep it in the backlog.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Sofia",
+   "text": "Okay. Then the reconciliation tickets and the status page roll over, and the template goes back to the backlog. That's settled.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Marcus",
+   "text": "Works for me.",
+   "agenda_item": "carryover",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Sofia",
+   "text": "Priorities. Aiko, you want to frame it?",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Aiko",
+   "text": "Refund API, then the bank certification, then whatever's left. The partner is expecting refunds on November fourteenth.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Marcus",
+   "text": "And the ledger refactor?",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Aiko",
+   "text": "The ledger refactor is invisible to customers.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Marcus",
+   "text": "It's invisible until the ledger breaks. Then it's very visible.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Sofia",
+   "text": "How long is the certification window with the bank?",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Diego",
+   "text": "Three weeks, I think. That's what the email said.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Marcus",
+   "text": "Three weeks, but the first week is usually them not answering emails.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Aiko",
+   "text": "Which is why we start it now.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Marcus",
+   "text": "Sorry, my headphones just died, one sec.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Diego",
+   "text": "Classic Monday.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Sofia",
+   "text": "Can we run certification and refunds in parallel? Or is that the same people?",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Marcus",
+   "text": "Look, it's mostly me on both.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Aiko",
+   "text": "Then we need someone else on certification.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Diego",
+   "text": "I could do certification? I'd need someone to walk me through it first.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Marcus",
+   "text": "The first time takes ages. There's a lot of tribal knowledge.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Sofia",
+   "text": "Does anyone else here actually know the cert process end to end? Because if it's just—",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": true
+  },
+  {
+   "index": 42,
+   "speaker": "Marcus",
+   "text": "My bigger worry is test coverage. We're at eighty percent on payments, and that's not enough for a new API.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Aiko",
+   "text": "Eighty sounds fine to me.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Sofia",
+   "text": "Coverage aside, I hear refunds first. Does anyone object?",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Marcus",
+   "text": "I object a little. I want the ledger refactor in this sprint, even half of it.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Aiko",
+   "text": "Half a refactor is how you get two ledgers.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Marcus",
+   "text": "That's, okay, that's actually a fair point.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Sofia",
+   "text": "So the ranking is refunds, then certification, then the ledger work if there's room.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Aiko",
+   "text": "If there's room. Which there won't be.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Marcus",
+   "text": "There's never room. That's my point.",
+   "agenda_item": "priorities",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Sofia",
+   "text": "Okay, capacity. We're six engineers, but two of you aren't here today.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Marcus",
+   "text": "And Hannah's out the second week, right?",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Sofia",
+   "text": "Right. PTO next sprint is seven person-days total.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Aiko",
+   "text": "Seven days is a lot. That's almost a whole person.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Marcus",
+   "text": "And on-call ate half a person last sprint. Eleven pages.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Diego",
+   "text": "Eleven? It felt like more.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Marcus",
+   "text": "It felt like a hundred. I got paged during my kid's recital.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Sofia",
+   "text": "Okay. What velocity do we plan to?",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Marcus",
+   "text": "Our three-sprint average is thirty-eight.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Sofia",
+   "text": "Then with the PTO, I'd plan to thirty, maybe thirty-two.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Aiko",
+   "text": "Thirty doesn't fit refunds and certification.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Sofia",
+   "text": "Then something doesn't fit. Let's be honest about it now, not in two weeks.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Aiko",
+   "text": "Has anyone actually told the partner we might be short-staffed?",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Sofia",
+   "text": "Good question. Let's come back to that one.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Diego",
+   "text": "Sorry, quick one, is anyone watering the plant by the window? It's looking really sad.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E035",
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Marcus",
+   "text": "That plant has been dying since March. It's a lifestyle at this point.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Aiko",
+   "text": "I watered it last week! I think it's the radiator, it's right next to it.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Diego",
+   "text": "I read that they like being talked to. Maybe it's lonely.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Sofia",
+   "text": "Okay, nobody's adopting the plant in sprint planning. Capacity.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Marcus",
+   "text": "Realistically, I can't be on refunds, certification and on-call at the same time.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Sofia",
+   "text": "Then you're off the on-call rotation this sprint. Diego shadows Priyanka on-call instead. Done.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Marcus",
+   "text": "Thank you. Seriously.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Diego",
+   "text": "Shadow on-call. Okay. That's, okay.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "Sofia",
+   "text": "Diego, could you pair with Marcus on certification for the first week, so the knowledge isn't just in one head?",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 75,
+   "speaker": "Diego",
+   "text": "Yeah, I'll take the cert onboarding with Marcus, starting Monday.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 76,
+   "speaker": "Marcus",
+   "text": "I'll write up the cert steps as we go, so it's not tribal anymore.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 77,
+   "speaker": "Aiko",
+   "text": "And the status page ticket?",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 78,
+   "speaker": "Sofia",
+   "text": "Status page is probably the first thing to drop if refunds slip.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 79,
+   "speaker": "Aiko",
+   "text": "That's fair.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 80,
+   "speaker": "Sofia",
+   "text": "Last one, risks. What keeps you up at night?",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 81,
+   "speaker": "Marcus",
+   "text": "The two open security findings on payments. They're not critical, but they're old.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 82,
+   "speaker": "Aiko",
+   "text": "Are they blocking the partner launch?",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 83,
+   "speaker": "Marcus",
+   "text": "Not technically. But if the partner's security team asks, it looks bad.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 84,
+   "speaker": "Sofia",
+   "text": "Can someone own getting those two closed this sprint?",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E047",
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 85,
+   "speaker": "Marcus",
+   "text": "I'd love to, but you just saw my sprint.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 86,
+   "speaker": "Aiko",
+   "text": "It would be good if someone from platform took a look at them.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E049"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 87,
+   "speaker": "Sofia",
+   "text": "I'll raise the security findings with the platform lead on Thursday and ask for an owner.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 88,
+   "speaker": "Diego",
+   "text": "What happens if the bank certification fails the first time? Do we just get another window?",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E051"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 89,
+   "speaker": "Marcus",
+   "text": "Good question.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 90,
+   "speaker": "Aiko",
+   "text": "You get another window, but it's another three weeks of waiting.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E052"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 91,
+   "speaker": "Sofia",
+   "text": "That's the real risk then. If cert slips, the partner date slips.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 92,
+   "speaker": "Aiko",
+   "text": "The refund date is fixed, though. The partner announced it.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 93,
+   "speaker": "Marcus",
+   "text": "And our success rate is only ninety-seven point eight right now, so I'd rather not rush anything that touches money.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E053"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 94,
+   "speaker": "Sofia",
+   "text": "Agreed. I want a weekly check on cert progress, every Wednesday, for the whole sprint. That's decided.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E054"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 95,
+   "speaker": "Aiko",
+   "text": "Fine by me.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 96,
+   "speaker": "Diego",
+   "text": "Should I put that on the calendar?",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E055"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 97,
+   "speaker": "Sofia",
+   "text": "Please. Thank you, Diego.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 98,
+   "speaker": "Diego",
+   "text": "Okay, I'll send the invite for the Wednesday cert check today.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E056"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 99,
+   "speaker": "Sofia",
+   "text": "Okay, team. That's the plan. Let's be honest in standup if it starts slipping. Thanks all.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 100,
+   "speaker": "Marcus",
+   "text": "Thanks.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 101,
+   "speaker": "Aiko",
+   "text": "Thanks, everyone.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Sofia",
+   "agenda_item": "carryover",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Diego",
+   "agenda_item": "carryover",
+   "fact_id": "F3",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 5,
+   "speaker": "Marcus",
+   "agenda_item": "carryover",
+   "fact_id": "F1",
+   "claimed_value": "40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Sofia",
+   "agenda_item": "carryover",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 6,
+   "speaker": "Sofia",
+   "agenda_item": "carryover",
+   "fact_id": "F1",
+   "claimed_value": "40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Diego",
+   "agenda_item": "carryover",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 10,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Sofia",
+   "agenda_item": "carryover",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 17,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Diego",
+   "agenda_item": "carryover",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Aiko",
+   "agenda_item": "carryover",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Sofia",
+   "agenda_item": "carryover",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 22,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 23,
+   "speaker": "Sofia",
+   "agenda_item": "carryover",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Sofia",
+   "agenda_item": "priorities",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 26,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 26,
+   "speaker": "Aiko",
+   "agenda_item": "priorities",
+   "fact_id": "F7",
+   "claimed_value": "November 14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Marcus",
+   "agenda_item": "priorities",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 28,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Sofia",
+   "agenda_item": "priorities",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 31,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Diego",
+   "agenda_item": "priorities",
+   "fact_id": "F11",
+   "claimed_value": "3 weeks",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Marcus",
+   "agenda_item": "priorities",
+   "fact_id": "F11",
+   "claimed_value": "3 weeks",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Marcus",
+   "agenda_item": "priorities",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Sofia",
+   "agenda_item": "priorities",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 37,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Diego",
+   "agenda_item": "priorities",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 41,
+   "speaker": "Sofia",
+   "agenda_item": "priorities",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 42,
+   "speaker": "Marcus",
+   "agenda_item": "priorities",
+   "fact_id": "F12",
+   "claimed_value": "80%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 43,
+   "speaker": "Aiko",
+   "agenda_item": "priorities",
+   "fact_id": "F12",
+   "claimed_value": "80%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Sofia",
+   "agenda_item": "priorities",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 45,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 48,
+   "speaker": "Sofia",
+   "agenda_item": "priorities",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 51,
+   "speaker": "Sofia",
+   "agenda_item": "capacity",
+   "fact_id": "F5",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Marcus",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 53,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 53,
+   "speaker": "Sofia",
+   "agenda_item": "capacity",
+   "fact_id": "F6",
+   "claimed_value": "7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Aiko",
+   "agenda_item": "capacity",
+   "fact_id": "F6",
+   "claimed_value": "7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 55,
+   "speaker": "Marcus",
+   "agenda_item": "capacity",
+   "fact_id": "F10",
+   "claimed_value": "11",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 56,
+   "speaker": "Diego",
+   "agenda_item": "capacity",
+   "fact_id": "F10",
+   "claimed_value": "11",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 58,
+   "speaker": "Sofia",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 59,
+   "speaker": "Marcus",
+   "agenda_item": "capacity",
+   "fact_id": "F2",
+   "claimed_value": "38",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 63,
+   "speaker": "Aiko",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 65,
+   "speaker": "Diego",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 4,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 65,
+   "speaker": "Diego",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 67,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 71,
+   "speaker": "Sofia",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 73,
+   "speaker": "Diego",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 74,
+   "speaker": "Sofia",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 75,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 75,
+   "speaker": "Diego",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 76,
+   "speaker": "Marcus",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 77,
+   "speaker": "Aiko",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 78,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 78,
+   "speaker": "Sofia",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 80,
+   "speaker": "Sofia",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 81,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 81,
+   "speaker": "Marcus",
+   "agenda_item": "risks",
+   "fact_id": "F8",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 82,
+   "speaker": "Aiko",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 83,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 84,
+   "speaker": "Sofia",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 87,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 84,
+   "speaker": "Sofia",
+   "agenda_item": "risks",
+   "fact_id": "F8",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 86,
+   "speaker": "Aiko",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 87,
+   "speaker": "Sofia",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 88,
+   "speaker": "Diego",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 90,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 90,
+   "speaker": "Aiko",
+   "agenda_item": "risks",
+   "fact_id": "F11",
+   "claimed_value": "3 weeks",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E053",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 93,
+   "speaker": "Marcus",
+   "agenda_item": "risks",
+   "fact_id": "F9",
+   "claimed_value": "97.8%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E054",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 94,
+   "speaker": "Sofia",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E055",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 96,
+   "speaker": "Diego",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 97,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E056",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 98,
+   "speaker": "Diego",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Sofia",
+   "text": "Okay, team, sprint twenty-three. Let's start with what we didn't finish.",
+   "start_s": 0.5,
+   "end_s": 4.625
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Marcus",
+   "text": "Realistically, most of it was the reconciliation job. It ate the second week.",
+   "start_s": 4.959,
+   "end_s": 10.159
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Sofia",
+   "text": "How many tickets are rolling over?",
+   "start_s": 11.206,
+   "end_s": 13.456
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Diego",
+   "text": "Five. Three of them are the reconciliation ones.",
+   "start_s": 14.42,
+   "end_s": 17.517
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Aiko",
+   "text": "And the other two are mine, the refund status page and the email template.",
+   "start_s": 17.972,
+   "end_s": 22.913
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Marcus",
+   "text": "Look, we still did forty points, which is pretty good given the incident.",
+   "start_s": 23.608,
+   "end_s": 28.808
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Sofia",
+   "text": "Forty sounds high to me. I'd want to check the board before we celebrate.",
+   "start_s": 29.457,
+   "end_s": 34.707
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Aiko",
+   "text": "From a product point of view I don't care about points, I care about the refund API.",
+   "start_s": 35.559,
+   "end_s": 41.559
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Marcus",
+   "text": "Points are how we know if the refund API is even possible.",
+   "start_s": 42.548,
+   "end_s": 47.348
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Diego",
+   "text": "Sorry, quick one, does carryover count against this sprint's points or last sprint's?",
+   "start_s": 47.642,
+   "end_s": 52.674
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Sofia",
+   "text": "It's re-estimated and counted in this sprint, that's how we've always done it.",
+   "start_s": 52.902,
+   "end_s": 57.777
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Diego",
+   "text": "Okay, cool. Thanks.",
+   "start_s": 58.813,
+   "end_s": 59.974
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Marcus",
+   "text": "The reconciliation job slipped because the bank sandbox was down for two days. That's not on us.",
+   "start_s": 60.607,
+   "end_s": 67.407
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Aiko",
+   "text": "It's not on anyone, it's just the reality of working with banks.",
+   "start_s": 68.369,
+   "end_s": 72.605
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Sofia",
+   "text": "Let's be honest, though, we also started it late.",
+   "start_s": 72.807,
+   "end_s": 76.182
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Marcus",
+   "text": "Fair.",
+   "start_s": 76.827,
+   "end_s": 77.227
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Sofia",
+   "text": "Do the reconciliation tickets need re-estimating, or are the old numbers still good?",
+   "start_s": 78.149,
+   "end_s": 83.024
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Marcus",
+   "text": "They're still good. Most of the hard part is done, it's testing now.",
+   "start_s": 83.453,
+   "end_s": 88.653
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Diego",
+   "text": "I can help with the testing, if that's useful.",
+   "start_s": 89.798,
+   "end_s": 93.282
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Sofia",
+   "text": "Let's figure out who's on what in capacity. Hold that.",
+   "start_s": 94.383,
+   "end_s": 98.133
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Aiko",
+   "text": "The template ticket can probably drop, honestly. Marketing hasn't even sent copy.",
+   "start_s": 98.364,
+   "end_s": 102.599
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Sofia",
+   "text": "Is that a drop, or a not-yet?",
+   "start_s": 102.824,
+   "end_s": 105.449
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Aiko",
+   "text": "A not-yet. Let's keep it in the backlog.",
+   "start_s": 106.19,
+   "end_s": 109.014
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Sofia",
+   "text": "Okay. Then the reconciliation tickets and the status page roll over, and the template goes back to the backlog. That's settled.",
+   "start_s": 110.153,
+   "end_s": 118.028
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Marcus",
+   "text": "Works for me.",
+   "start_s": 118.609,
+   "end_s": 119.809
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Sofia",
+   "text": "Priorities. Aiko, you want to frame it?",
+   "start_s": 120.226,
+   "end_s": 122.851
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Aiko",
+   "text": "Refund API, then the bank certification, then whatever's left. The partner is expecting refunds on November fourteenth.",
+   "start_s": 123.473,
+   "end_s": 129.473
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Marcus",
+   "text": "And the ledger refactor?",
+   "start_s": 129.702,
+   "end_s": 131.302
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Aiko",
+   "text": "The ledger refactor is invisible to customers.",
+   "start_s": 131.724,
+   "end_s": 134.194
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Marcus",
+   "text": "It's invisible until the ledger breaks. Then it's very visible.",
+   "start_s": 134.832,
+   "end_s": 138.832
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Sofia",
+   "text": "How long is the certification window with the bank?",
+   "start_s": 139.528,
+   "end_s": 142.903
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Diego",
+   "text": "Three weeks, I think. That's what the email said.",
+   "start_s": 143.336,
+   "end_s": 146.82
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Marcus",
+   "text": "Three weeks, but the first week is usually them not answering emails.",
+   "start_s": 147.251,
+   "end_s": 152.051
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Aiko",
+   "text": "Which is why we start it now.",
+   "start_s": 152.47,
+   "end_s": 154.94
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Marcus",
+   "text": "Sorry, my headphones just died, one sec.",
+   "start_s": 155.6,
+   "end_s": 158.4
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Diego",
+   "text": "Classic Monday.",
+   "start_s": 158.89,
+   "end_s": 159.664
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Sofia",
+   "text": "Can we run certification and refunds in parallel? Or is that the same people?",
+   "start_s": 159.885,
+   "end_s": 165.135
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Marcus",
+   "text": "Look, it's mostly me on both.",
+   "start_s": 166.173,
+   "end_s": 168.573
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Aiko",
+   "text": "Then we need someone else on certification.",
+   "start_s": 169.329,
+   "end_s": 171.8
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Diego",
+   "text": "I could do certification? I'd need someone to walk me through it first.",
+   "start_s": 172.642,
+   "end_s": 177.675
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Marcus",
+   "text": "The first time takes ages. There's a lot of tribal knowledge.",
+   "start_s": 178.061,
+   "end_s": 182.461
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Sofia",
+   "text": "Does anyone else here actually know the cert process end to end? Because if it's just—",
+   "start_s": 183.654,
+   "end_s": 189.654
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Marcus",
+   "text": "My bigger worry is test coverage. We're at eighty percent on payments, and that's not enough for a new API.",
+   "start_s": 188.924,
+   "end_s": 196.924
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Aiko",
+   "text": "Eighty sounds fine to me.",
+   "start_s": 197.245,
+   "end_s": 199.01
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Sofia",
+   "text": "Coverage aside, I hear refunds first. Does anyone object?",
+   "start_s": 199.543,
+   "end_s": 202.918
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Marcus",
+   "text": "I object a little. I want the ledger refactor in this sprint, even half of it.",
+   "start_s": 203.839,
+   "end_s": 210.239
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Aiko",
+   "text": "Half a refactor is how you get two ledgers.",
+   "start_s": 211.15,
+   "end_s": 214.327
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Marcus",
+   "text": "That's, okay, that's actually a fair point.",
+   "start_s": 215.463,
+   "end_s": 218.263
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Sofia",
+   "text": "So the ranking is refunds, then certification, then the ledger work if there's room.",
+   "start_s": 218.885,
+   "end_s": 224.135
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Aiko",
+   "text": "If there's room. Which there won't be.",
+   "start_s": 225.165,
+   "end_s": 227.636
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Marcus",
+   "text": "There's never room. That's my point.",
+   "start_s": 228.506,
+   "end_s": 230.906
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Sofia",
+   "text": "Okay, capacity. We're six engineers, but two of you aren't here today.",
+   "start_s": 231.409,
+   "end_s": 235.909
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Marcus",
+   "text": "And Hannah's out the second week, right?",
+   "start_s": 236.697,
+   "end_s": 239.497
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Sofia",
+   "text": "Right. PTO next sprint is seven person-days total.",
+   "start_s": 240.579,
+   "end_s": 243.579
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Aiko",
+   "text": "Seven days is a lot. That's almost a whole person.",
+   "start_s": 244.625,
+   "end_s": 248.155
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Marcus",
+   "text": "And on-call ate half a person last sprint. Eleven pages.",
+   "start_s": 248.86,
+   "end_s": 252.86
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Diego",
+   "text": "Eleven? It felt like more.",
+   "start_s": 253.649,
+   "end_s": 255.584
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Marcus",
+   "text": "It felt like a hundred. I got paged during my kid's recital.",
+   "start_s": 255.819,
+   "end_s": 260.619
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Sofia",
+   "text": "Okay. What velocity do we plan to?",
+   "start_s": 261.062,
+   "end_s": 263.687
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Marcus",
+   "text": "Our three-sprint average is thirty-eight.",
+   "start_s": 264.684,
+   "end_s": 266.684
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Sofia",
+   "text": "Then with the PTO, I'd plan to thirty, maybe thirty-two.",
+   "start_s": 267.298,
+   "end_s": 271.048
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Aiko",
+   "text": "Thirty doesn't fit refunds and certification.",
+   "start_s": 271.421,
+   "end_s": 273.539
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Sofia",
+   "text": "Then something doesn't fit. Let's be honest about it now, not in two weeks.",
+   "start_s": 274.288,
+   "end_s": 279.538
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Aiko",
+   "text": "Has anyone actually told the partner we might be short-staffed?",
+   "start_s": 280.441,
+   "end_s": 283.97
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Sofia",
+   "text": "Good question. Let's come back to that one.",
+   "start_s": 284.844,
+   "end_s": 287.844
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Diego",
+   "text": "Sorry, quick one, is anyone watering the plant by the window? It's looking really sad.",
+   "start_s": 288.419,
+   "end_s": 294.225
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Marcus",
+   "text": "That plant has been dying since March. It's a lifestyle at this point.",
+   "start_s": 294.864,
+   "end_s": 300.064
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Aiko",
+   "text": "I watered it last week! I think it's the radiator, it's right next to it.",
+   "start_s": 300.772,
+   "end_s": 306.067
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Diego",
+   "text": "I read that they like being talked to. Maybe it's lonely.",
+   "start_s": 307.045,
+   "end_s": 311.304
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Sofia",
+   "text": "Okay, nobody's adopting the plant in sprint planning. Capacity.",
+   "start_s": 312.025,
+   "end_s": 315.4
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Marcus",
+   "text": "Realistically, I can't be on refunds, certification and on-call at the same time.",
+   "start_s": 315.993,
+   "end_s": 321.193
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Sofia",
+   "text": "Then you're off the on-call rotation this sprint. Diego shadows Priyanka on-call instead. Done.",
+   "start_s": 321.883,
+   "end_s": 327.133
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Marcus",
+   "text": "Thank you. Seriously.",
+   "start_s": 327.363,
+   "end_s": 328.563
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Diego",
+   "text": "Shadow on-call. Okay. That's, okay.",
+   "start_s": 328.806,
+   "end_s": 330.742
+  },
+  {
+   "turn_index": 74,
+   "speaker": "Sofia",
+   "text": "Diego, could you pair with Marcus on certification for the first week, so the knowledge isn't just in one head?",
+   "start_s": 331.645,
+   "end_s": 339.145
+  },
+  {
+   "turn_index": 75,
+   "speaker": "Diego",
+   "text": "Yeah, I'll take the cert onboarding with Marcus, starting Monday.",
+   "start_s": 340.328,
+   "end_s": 344.199
+  },
+  {
+   "turn_index": 76,
+   "speaker": "Marcus",
+   "text": "I'll write up the cert steps as we go, so it's not tribal anymore.",
+   "start_s": 344.992,
+   "end_s": 350.592
+  },
+  {
+   "turn_index": 77,
+   "speaker": "Aiko",
+   "text": "And the status page ticket?",
+   "start_s": 351.186,
+   "end_s": 352.95
+  },
+  {
+   "turn_index": 78,
+   "speaker": "Sofia",
+   "text": "Status page is probably the first thing to drop if refunds slip.",
+   "start_s": 353.32,
+   "end_s": 357.82
+  },
+  {
+   "turn_index": 79,
+   "speaker": "Aiko",
+   "text": "That's fair.",
+   "start_s": 358.522,
+   "end_s": 359.228
+  },
+  {
+   "turn_index": 80,
+   "speaker": "Sofia",
+   "text": "Last one, risks. What keeps you up at night?",
+   "start_s": 360.41,
+   "end_s": 363.785
+  },
+  {
+   "turn_index": 81,
+   "speaker": "Marcus",
+   "text": "The two open security findings on payments. They're not critical, but they're old.",
+   "start_s": 364.756,
+   "end_s": 369.956
+  },
+  {
+   "turn_index": 82,
+   "speaker": "Aiko",
+   "text": "Are they blocking the partner launch?",
+   "start_s": 370.696,
+   "end_s": 372.813
+  },
+  {
+   "turn_index": 83,
+   "speaker": "Marcus",
+   "text": "Not technically. But if the partner's security team asks, it looks bad.",
+   "start_s": 373.873,
+   "end_s": 378.673
+  },
+  {
+   "turn_index": 84,
+   "speaker": "Sofia",
+   "text": "Can someone own getting those two closed this sprint?",
+   "start_s": 379.105,
+   "end_s": 382.48
+  },
+  {
+   "turn_index": 85,
+   "speaker": "Marcus",
+   "text": "I'd love to, but you just saw my sprint.",
+   "start_s": 383.194,
+   "end_s": 386.794
+  },
+  {
+   "turn_index": 86,
+   "speaker": "Aiko",
+   "text": "It would be good if someone from platform took a look at them.",
+   "start_s": 387.946,
+   "end_s": 392.535
+  },
+  {
+   "turn_index": 87,
+   "speaker": "Sofia",
+   "text": "I'll raise the security findings with the platform lead on Thursday and ask for an owner.",
+   "start_s": 393.313,
+   "end_s": 399.313
+  },
+  {
+   "turn_index": 88,
+   "speaker": "Diego",
+   "text": "What happens if the bank certification fails the first time? Do we just get another window?",
+   "start_s": 399.972,
+   "end_s": 406.166
+  },
+  {
+   "turn_index": 89,
+   "speaker": "Marcus",
+   "text": "Good question.",
+   "start_s": 406.635,
+   "end_s": 407.435
+  },
+  {
+   "turn_index": 90,
+   "speaker": "Aiko",
+   "text": "You get another window, but it's another three weeks of waiting.",
+   "start_s": 408.183,
+   "end_s": 412.065
+  },
+  {
+   "turn_index": 91,
+   "speaker": "Sofia",
+   "text": "That's the real risk then. If cert slips, the partner date slips.",
+   "start_s": 413.222,
+   "end_s": 417.722
+  },
+  {
+   "turn_index": 92,
+   "speaker": "Aiko",
+   "text": "The refund date is fixed, though. The partner announced it.",
+   "start_s": 417.928,
+   "end_s": 421.457
+  },
+  {
+   "turn_index": 93,
+   "speaker": "Marcus",
+   "text": "And our success rate is only ninety-seven point eight right now, so I'd rather not rush anything that touches money.",
+   "start_s": 422.441,
+   "end_s": 430.441
+  },
+  {
+   "turn_index": 94,
+   "speaker": "Sofia",
+   "text": "Agreed. I want a weekly check on cert progress, every Wednesday, for the whole sprint. That's decided.",
+   "start_s": 431.461,
+   "end_s": 437.836
+  },
+  {
+   "turn_index": 95,
+   "speaker": "Aiko",
+   "text": "Fine by me.",
+   "start_s": 438.922,
+   "end_s": 439.981
+  },
+  {
+   "turn_index": 96,
+   "speaker": "Diego",
+   "text": "Should I put that on the calendar?",
+   "start_s": 440.922,
+   "end_s": 443.631
+  },
+  {
+   "turn_index": 97,
+   "speaker": "Sofia",
+   "text": "Please. Thank you, Diego.",
+   "start_s": 444.64,
+   "end_s": 446.14
+  },
+  {
+   "turn_index": 98,
+   "speaker": "Diego",
+   "text": "Okay, I'll send the invite for the Wednesday cert check today.",
+   "start_s": 446.859,
+   "end_s": 451.117
+  },
+  {
+   "turn_index": 99,
+   "speaker": "Sofia",
+   "text": "Okay, team. That's the plan. Let's be honest in standup if it starts slipping. Thanks all.",
+   "start_s": 451.878,
+   "end_s": 457.878
+  },
+  {
+   "turn_index": 100,
+   "speaker": "Marcus",
+   "text": "Thanks.",
+   "start_s": 458.504,
+   "end_s": 458.904
+  },
+  {
+   "turn_index": 101,
+   "speaker": "Aiko",
+   "text": "Thanks, everyone.",
+   "start_s": 459.16,
+   "end_s": 459.866
+  }
+ ]
+}

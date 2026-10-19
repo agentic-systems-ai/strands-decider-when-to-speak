@@ -1,0 +1,1663 @@
+{
+ "meeting_id": "wedding-osei-d5-s2",
+ "config": {
+  "theme": "Family video call planning a cousin's wedding",
+  "domain_pack": "family_planning",
+  "drama": 0.5,
+  "seed": 2,
+  "duration_min": 3.8,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   0,
+   7,
+   17,
+   18,
+   22,
+   38,
+   42,
+   50
+  ],
+  "reviewed_noclaim": [
+   18
+  ]
+ },
+ "cast": {
+  "theme": "Family video call planning a cousin's wedding",
+  "personas": [
+   {
+    "name": "Abena",
+    "role": "Mother of the bride",
+    "goals": "Both ceremonies done properly",
+    "hidden_agenda": "Invited more of her church than she has admitted",
+    "verbosity": 4,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Yaw",
+    "role": "Bride's uncle, handling the Ghana side",
+    "goals": "Get every relative a visa in time",
+    "hidden_agenda": "Lending money to two cousins for their flights",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Efua",
+    "role": "The bride",
+    "goals": "Keep both families happy and the budget sane",
+    "hidden_agenda": "Would elope if she could",
+    "verbosity": 3,
+    "wpm": 170,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Declan",
+    "role": "The groom's brother",
+    "goals": "Make the Irish side feel welcome",
+    "hidden_agenda": "Has never been to a Ghanaian engagement and is nervous",
+    "verbosity": 3,
+    "wpm": 175,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Efua and Liam's wedding - family call",
+   "org": "The Osei-Murphy family (fictional)",
+   "agenda": [
+    {
+     "id": "ceremonies",
+     "title": "The two ceremonies",
+     "goal": "Settle the engagement ceremony and the church wedding plans",
+     "timebox_min": 0.99
+    },
+    {
+     "id": "guests_travel",
+     "title": "Guests and travel",
+     "goal": "Track the visas and the flights from Accra",
+     "timebox_min": 0.95
+    },
+    {
+     "id": "food",
+     "title": "Food",
+     "goal": "Agree the menu across both families",
+     "timebox_min": 0.77
+    },
+    {
+     "id": "budget",
+     "title": "Budget",
+     "goal": "Check the big costs against the budget",
+     "timebox_min": 1.06
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "engagement_date",
+     "statement": "Traditional engagement ceremony = July 12",
+     "value": "July 12"
+    },
+    {
+     "id": "F2",
+     "key": "church_date",
+     "statement": "Church wedding = July 19",
+     "value": "July 19"
+    },
+    {
+     "id": "F3",
+     "key": "guests_expected",
+     "statement": "Guests expected = 180",
+     "value": "180"
+    },
+    {
+     "id": "F4",
+     "key": "visa_applications",
+     "statement": "Visa applications from Ghana = 11",
+     "value": "11"
+    },
+    {
+     "id": "F5",
+     "key": "visas_approved",
+     "statement": "Visas approved so far = 6",
+     "value": "6"
+    },
+    {
+     "id": "F6",
+     "key": "caterer_quote",
+     "statement": "Caterer quote = $9,400",
+     "value": "$9,400"
+    },
+    {
+     "id": "F7",
+     "key": "kente_yards",
+     "statement": "Kente cloth ordered = 14 yards",
+     "value": "14"
+    },
+    {
+     "id": "F8",
+     "key": "budget",
+     "statement": "Total budget = $35,000",
+     "value": "$35,000"
+    },
+    {
+     "id": "F9",
+     "key": "hall_capacity",
+     "statement": "Hall capacity = 200",
+     "value": "200"
+    },
+    {
+     "id": "F10",
+     "key": "flight_cost",
+     "statement": "Flight from Accra = about $1,350 return",
+     "value": "$1,350"
+    },
+    {
+     "id": "F11",
+     "key": "photographer_deposit",
+     "statement": "Photographer deposit = $800",
+     "value": "$800"
+    },
+    {
+     "id": "F12",
+     "key": "rsvp_deadline",
+     "statement": "RSVP deadline = May 31",
+     "value": "May 31"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "ceremonies",
+    "summary": "The engagement and the church; Declan's questions",
+    "n_turns": 12,
+    "events": []
+   },
+   {
+    "agenda_item": "guests_travel",
+    "summary": "Visas and flights; Yaw's visa count is high; Declan's flight number stands",
+    "n_turns": 16,
+    "events": []
+   },
+   {
+    "agenda_item": "food",
+    "summary": "Two families, one menu; a little detour about a hurling match",
+    "n_turns": 11,
+    "events": []
+   },
+   {
+    "agenda_item": "budget",
+    "summary": "The big costs; Abena's guest number contradicts the plan, corrected later",
+    "n_turns": 14,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Efua",
+   "text": "Hi, everyone. Can we start with the two ceremonies? Declan has questions.",
+   "agenda_item": "ceremonies",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Declan",
+   "text": "I do. The engagement is the twelfth, the church is the nineteenth?",
+   "agenda_item": "ceremonies",
+   "direction": null,
+   "event_ids": [
+    "E001",
+    "E002",
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Abena",
+   "text": "Yes. July twelfth for the engagement at the house, July nineteenth for the church.",
+   "agenda_item": "ceremonies",
+   "direction": null,
+   "event_ids": [
+    "E004",
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Declan",
+   "text": "And what do I wear to the engagement? I don't want to get it wrong.",
+   "agenda_item": "ceremonies",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Abena",
+   "text": "Kente, if you can. We ordered fourteen yards, so there is cloth for Liam's side too.",
+   "agenda_item": "ceremonies",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Declan",
+   "text": "Oh, that's very kind. Mam will cry.",
+   "agenda_item": "ceremonies",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Yaw",
+   "text": "The engagement has a lot of steps. Someone from Liam's side has to speak for the family.",
+   "agenda_item": "ceremonies",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Declan",
+   "text": "Speak? Me?",
+   "agenda_item": "ceremonies",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Yaw",
+   "text": "Or your father. Someone who can say yes, the family agrees.",
+   "agenda_item": "ceremonies",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Declan",
+   "text": "Dad will do it. He loves a speech. I'll tell him tonight.",
+   "agenda_item": "ceremonies",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Efua",
+   "text": "Thank you. The engagement is at the house, the wedding is at the church, and nobody changes that now.",
+   "agenda_item": "ceremonies",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Declan",
+   "text": "Got it.",
+   "agenda_item": "ceremonies",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Efua",
+   "text": "Guests and travel. Uncle Yaw?",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Yaw",
+   "text": "We had eleven visa applications from Ghana, and nine are approved.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [
+    "E011",
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Abena",
+   "text": "Nine! That's wonderful.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Efua",
+   "text": "The tracker says six approved, Uncle. Three are still waiting for interviews.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Yaw",
+   "text": "Six. Yes, the other three have their interviews next week.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Declan",
+   "text": "How much are the flights from Accra?",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Yaw",
+   "text": "They're expensive in July.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Declan",
+   "text": "I looked it up for curiosity. About nine hundred return, I think.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Abena",
+   "text": "And the RSVPs? The deadline is the end of May.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [
+    "E018",
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Efua",
+   "text": "Most people have replied. We're expecting about a hundred and eighty.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Abena",
+   "text": "My church alone is a hundred.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Efua",
+   "text": "Mum. The hall holds two hundred.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Abena",
+   "text": "I'm only saying.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Yaw",
+   "text": "Could someone help the three cousins with their interview paperwork?",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Efua",
+   "text": "I'll call each of them on Sunday and go through the forms.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Yaw",
+   "text": "Thank you, Efua.",
+   "agenda_item": "guests_travel",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Efua",
+   "text": "Food. The caterer can do both jollof and a roast.",
+   "agenda_item": "food",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Declan",
+   "text": "Jollof and a roast. That's the best of both worlds.",
+   "agenda_item": "food",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Abena",
+   "text": "And waakye at the engagement. That's not negotiable.",
+   "agenda_item": "food",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Efua",
+   "text": "Fine, Mum. Waakye at the engagement.",
+   "agenda_item": "food",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Declan",
+   "text": "Dad's going to be gutted, Kilkenny lost the hurling final on Sunday. He'll need cheering up.",
+   "agenda_item": "food",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Yaw",
+   "text": "Hurling is the one with the sticks?",
+   "agenda_item": "food",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Declan",
+   "text": "The fastest game on grass. It's like hockey crossed with a war.",
+   "agenda_item": "food",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Efua",
+   "text": "The menu, people.",
+   "agenda_item": "food",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Abena",
+   "text": "Will there be enough vegetarian food? Liam's mother doesn't eat meat.",
+   "agenda_item": "food",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Efua",
+   "text": "The caterer has a vegetable stew and a mushroom roast.",
+   "agenda_item": "food",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Abena",
+   "text": "Then that's the menu. Jollof, the roast, waakye at the engagement, and the vegetarian dishes.",
+   "agenda_item": "food",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Efua",
+   "text": "Budget. The total is thirty-five thousand.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Yaw",
+   "text": "The caterer quote is ninety-four hundred. That's the biggest single line.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Abena",
+   "text": "For two hundred and fifty people, that's a good price.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Declan",
+   "text": "Is it two fifty? I thought Efua said a hundred and eighty.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E032",
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Efua",
+   "text": "A hundred and eighty, Mum. The caterer quoted for a hundred and eighty.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Abena",
+   "text": "A hundred and eighty. Then my church will have to share chairs.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Yaw",
+   "text": "The photographer wants the eight hundred deposit by Friday.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Efua",
+   "text": "I'll pay the photographer deposit tomorrow.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Declan",
+   "text": "It might be worth asking the caterer whether the price holds if numbers change.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Abena",
+   "text": "Maybe we just add ten more chairs for the church people and say nothing.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Efua",
+   "text": "Mum. No.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Yaw",
+   "text": "Has anyone told Liam's grandmother about the engagement customs? She might be surprised.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Efua",
+   "text": "Okay. I think we've covered it. Thank you, all. Love you.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Declan",
+   "text": "Love you too. Even the jollof.",
+   "agenda_item": "budget",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Declan",
+   "agenda_item": "ceremonies",
+   "fact_id": "F1",
+   "claimed_value": "July 12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Declan",
+   "agenda_item": "ceremonies",
+   "fact_id": "F2",
+   "claimed_value": "July 19",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Declan",
+   "agenda_item": "ceremonies",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 2,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Abena",
+   "agenda_item": "ceremonies",
+   "fact_id": "F1",
+   "claimed_value": "July 12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Abena",
+   "agenda_item": "ceremonies",
+   "fact_id": "F2",
+   "claimed_value": "July 19",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Declan",
+   "agenda_item": "ceremonies",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 4,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Abena",
+   "agenda_item": "ceremonies",
+   "fact_id": "F7",
+   "claimed_value": "14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 9,
+   "speaker": "Declan",
+   "agenda_item": "ceremonies",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 10,
+   "speaker": "Efua",
+   "agenda_item": "ceremonies",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Efua",
+   "agenda_item": "guests_travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 13,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Yaw",
+   "agenda_item": "guests_travel",
+   "fact_id": "F4",
+   "claimed_value": "11",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 13,
+   "speaker": "Yaw",
+   "agenda_item": "guests_travel",
+   "fact_id": "F5",
+   "claimed_value": "9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 14,
+   "speaker": "Abena",
+   "agenda_item": "guests_travel",
+   "fact_id": "F5",
+   "claimed_value": "9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Efua",
+   "agenda_item": "guests_travel",
+   "fact_id": "F5",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Yaw",
+   "agenda_item": "guests_travel",
+   "fact_id": "F5",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 17,
+   "speaker": "Declan",
+   "agenda_item": "guests_travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 19,
+   "speaker": "Declan",
+   "agenda_item": "guests_travel",
+   "fact_id": "F10",
+   "claimed_value": "$900",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Abena",
+   "agenda_item": "guests_travel",
+   "fact_id": "F12",
+   "claimed_value": "May 31",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Abena",
+   "agenda_item": "guests_travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 21,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Efua",
+   "agenda_item": "guests_travel",
+   "fact_id": "F3",
+   "claimed_value": "180",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Efua",
+   "agenda_item": "guests_travel",
+   "fact_id": "F9",
+   "claimed_value": "200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Yaw",
+   "agenda_item": "guests_travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 26,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 26,
+   "speaker": "Efua",
+   "agenda_item": "guests_travel",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 31,
+   "speaker": "Efua",
+   "agenda_item": "food",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 32,
+   "speaker": "Declan",
+   "agenda_item": "food",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 33,
+   "speaker": "Yaw",
+   "agenda_item": "food",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 34,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Abena",
+   "agenda_item": "food",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 37,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 38,
+   "speaker": "Abena",
+   "agenda_item": "food",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Efua",
+   "agenda_item": "budget",
+   "fact_id": "F8",
+   "claimed_value": "$35,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Yaw",
+   "agenda_item": "budget",
+   "fact_id": "F6",
+   "claimed_value": "$9,400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 41,
+   "speaker": "Abena",
+   "agenda_item": "budget",
+   "fact_id": "F3",
+   "claimed_value": "250",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Declan",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Declan",
+   "agenda_item": "budget",
+   "fact_id": "F3",
+   "claimed_value": "180",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Efua",
+   "agenda_item": "budget",
+   "fact_id": "F3",
+   "claimed_value": "180",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Abena",
+   "agenda_item": "budget",
+   "fact_id": "F3",
+   "claimed_value": "180",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Yaw",
+   "agenda_item": "budget",
+   "fact_id": "F11",
+   "claimed_value": "$800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 46,
+   "speaker": "Efua",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Declan",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 48,
+   "speaker": "Abena",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 50,
+   "speaker": "Yaw",
+   "agenda_item": "budget",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Efua",
+   "text": "Hi, everyone. Can we start with the two ceremonies? Declan has questions.",
+   "start_s": 0.5,
+   "end_s": 4.735
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Declan",
+   "text": "I do. The engagement is the twelfth, the church is the nineteenth?",
+   "start_s": 5.891,
+   "end_s": 10.005
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Abena",
+   "text": "Yes. July twelfth for the engagement at the house, July nineteenth for the church.",
+   "start_s": 11.153,
+   "end_s": 16.403
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Declan",
+   "text": "And what do I wear to the engagement? I don't want to get it wrong.",
+   "start_s": 16.66,
+   "end_s": 21.802
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Abena",
+   "text": "Kente, if you can. We ordered fourteen yards, so there is cloth for Liam's side too.",
+   "start_s": 22.087,
+   "end_s": 28.087
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Declan",
+   "text": "Oh, that's very kind. Mam will cry.",
+   "start_s": 29.122,
+   "end_s": 31.522
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Yaw",
+   "text": "The engagement has a lot of steps. Someone from Liam's side has to speak for the family.",
+   "start_s": 32.458,
+   "end_s": 39.258
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Declan",
+   "text": "Speak? Me?",
+   "start_s": 40.128,
+   "end_s": 40.813
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Yaw",
+   "text": "Or your father. Someone who can say yes, the family agrees.",
+   "start_s": 41.321,
+   "end_s": 45.721
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Declan",
+   "text": "Dad will do it. He loves a speech. I'll tell him tonight.",
+   "start_s": 46.527,
+   "end_s": 50.641
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Efua",
+   "text": "Thank you. The engagement is at the house, the wedding is at the church, and nobody changes that now.",
+   "start_s": 51.448,
+   "end_s": 58.154
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Declan",
+   "text": "Got it.",
+   "start_s": 58.935,
+   "end_s": 59.621
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Efua",
+   "text": "Guests and travel. Uncle Yaw?",
+   "start_s": 59.979,
+   "end_s": 61.744
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Yaw",
+   "text": "We had eleven visa applications from Ghana, and nine are approved.",
+   "start_s": 62.375,
+   "end_s": 66.775
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Abena",
+   "text": "Nine! That's wonderful.",
+   "start_s": 67.369,
+   "end_s": 68.494
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Efua",
+   "text": "The tracker says six approved, Uncle. Three are still waiting for interviews.",
+   "start_s": 69.417,
+   "end_s": 73.652
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Yaw",
+   "text": "Six. Yes, the other three have their interviews next week.",
+   "start_s": 74.847,
+   "end_s": 78.847
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Declan",
+   "text": "How much are the flights from Accra?",
+   "start_s": 79.996,
+   "end_s": 82.396
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Yaw",
+   "text": "They're expensive in July.",
+   "start_s": 83.14,
+   "end_s": 84.74
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Declan",
+   "text": "I looked it up for curiosity. About nine hundred return, I think.",
+   "start_s": 85.385,
+   "end_s": 89.499
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Abena",
+   "text": "And the RSVPs? The deadline is the end of May.",
+   "start_s": 89.967,
+   "end_s": 93.717
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Efua",
+   "text": "Most people have replied. We're expecting about a hundred and eighty.",
+   "start_s": 93.953,
+   "end_s": 97.835
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Abena",
+   "text": "My church alone is a hundred.",
+   "start_s": 98.062,
+   "end_s": 100.312
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Efua",
+   "text": "Mum. The hall holds two hundred.",
+   "start_s": 100.977,
+   "end_s": 103.095
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Abena",
+   "text": "I'm only saying.",
+   "start_s": 103.613,
+   "end_s": 104.738
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Yaw",
+   "text": "Could someone help the three cousins with their interview paperwork?",
+   "start_s": 105.318,
+   "end_s": 109.318
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Efua",
+   "text": "I'll call each of them on Sunday and go through the forms.",
+   "start_s": 110.41,
+   "end_s": 114.645
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Yaw",
+   "text": "Thank you, Efua.",
+   "start_s": 115.371,
+   "end_s": 116.571
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Efua",
+   "text": "Food. The caterer can do both jollof and a roast.",
+   "start_s": 117.332,
+   "end_s": 120.861
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Declan",
+   "text": "Jollof and a roast. That's the best of both worlds.",
+   "start_s": 121.297,
+   "end_s": 124.726
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Abena",
+   "text": "And waakye at the engagement. That's not negotiable.",
+   "start_s": 124.95,
+   "end_s": 127.95
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Efua",
+   "text": "Fine, Mum. Waakye at the engagement.",
+   "start_s": 128.475,
+   "end_s": 130.593
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Declan",
+   "text": "Dad's going to be gutted, Kilkenny lost the hurling final on Sunday. He'll need cheering up.",
+   "start_s": 130.93,
+   "end_s": 136.415
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Yaw",
+   "text": "Hurling is the one with the sticks?",
+   "start_s": 137.125,
+   "end_s": 139.925
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Declan",
+   "text": "The fastest game on grass. It's like hockey crossed with a war.",
+   "start_s": 141.124,
+   "end_s": 145.238
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Efua",
+   "text": "The menu, people.",
+   "start_s": 146.112,
+   "end_s": 147.171
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Abena",
+   "text": "Will there be enough vegetarian food? Liam's mother doesn't eat meat.",
+   "start_s": 147.553,
+   "end_s": 151.678
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Efua",
+   "text": "The caterer has a vegetable stew and a mushroom roast.",
+   "start_s": 152.772,
+   "end_s": 156.301
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Abena",
+   "text": "Then that's the menu. Jollof, the roast, waakye at the engagement, and the vegetarian dishes.",
+   "start_s": 157.298,
+   "end_s": 162.923
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Efua",
+   "text": "Budget. The total is thirty-five thousand.",
+   "start_s": 163.857,
+   "end_s": 165.975
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Yaw",
+   "text": "The caterer quote is ninety-four hundred. That's the biggest single line.",
+   "start_s": 167.082,
+   "end_s": 171.482
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Abena",
+   "text": "For two hundred and fifty people, that's a good price.",
+   "start_s": 172.445,
+   "end_s": 176.195
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Declan",
+   "text": "Is it two fifty? I thought Efua said a hundred and eighty.",
+   "start_s": 177.185,
+   "end_s": 181.299
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Efua",
+   "text": "A hundred and eighty, Mum. The caterer quoted for a hundred and eighty.",
+   "start_s": 181.853,
+   "end_s": 186.441
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Abena",
+   "text": "A hundred and eighty. Then my church will have to share chairs.",
+   "start_s": 187.622,
+   "end_s": 192.122
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Yaw",
+   "text": "The photographer wants the eight hundred deposit by Friday.",
+   "start_s": 193.284,
+   "end_s": 196.884
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Efua",
+   "text": "I'll pay the photographer deposit tomorrow.",
+   "start_s": 197.245,
+   "end_s": 199.363
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Declan",
+   "text": "It might be worth asking the caterer whether the price holds if numbers change.",
+   "start_s": 200.317,
+   "end_s": 205.117
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Abena",
+   "text": "Maybe we just add ten more chairs for the church people and say nothing.",
+   "start_s": 206.032,
+   "end_s": 211.282
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Efua",
+   "text": "Mum. No.",
+   "start_s": 211.943,
+   "end_s": 212.649
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Yaw",
+   "text": "Has anyone told Liam's grandmother about the engagement customs? She might be surprised.",
+   "start_s": 213.379,
+   "end_s": 218.579
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Efua",
+   "text": "Okay. I think we've covered it. Thank you, all. Love you.",
+   "start_s": 219.269,
+   "end_s": 223.151
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Declan",
+   "text": "Love you too. Even the jollof.",
+   "start_s": 224.276,
+   "end_s": 226.333
+  }
+ ]
+}

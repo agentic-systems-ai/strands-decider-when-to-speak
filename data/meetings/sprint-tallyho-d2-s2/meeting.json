@@ -1,0 +1,1449 @@
+{
+ "meeting_id": "sprint-tallyho-d2-s2",
+ "config": {
+  "theme": "Sprint planning for a payments team at a fictional fintech",
+  "domain_pack": "software_team",
+  "drama": 0.2,
+  "seed": 2,
+  "duration_min": 4.5,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   10,
+   16,
+   18,
+   24,
+   27,
+   48
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "Sprint planning for a payments team at a fictional fintech",
+  "personas": [
+   {
+    "name": "Priscilla",
+    "role": "Engineering manager",
+    "goals": "A predictable sprint",
+    "hidden_agenda": "Wants the bank migration done well before the deadline",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Kenta",
+    "role": "Senior engineer",
+    "goals": "Get the bank API migration started",
+    "hidden_agenda": "Has been reading the new API docs at night",
+    "verbosity": 2,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Mira",
+    "role": "Product owner",
+    "goals": "Ship payment reminders",
+    "hidden_agenda": "Promised a big customer reminders \"soon\"",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Dan",
+    "role": "QA engineer",
+    "goals": "Faster builds",
+    "hidden_agenda": "Wants to fix the build himself",
+    "verbosity": 2,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Invoicing and payments team - sprint planning",
+   "org": "Tallyho Accounting (fictional)",
+   "agenda": [
+    {
+     "id": "demo",
+     "title": "Demo feedback",
+     "goal": "Review what customers said at the sprint demo",
+     "timebox_min": 0.99
+    },
+    {
+     "id": "goal",
+     "title": "Sprint goal",
+     "goal": "Choose between payment reminders and the bank API migration",
+     "timebox_min": 1.39
+    },
+    {
+     "id": "capacity",
+     "title": "Capacity",
+     "goal": "Fit the plan to who is around",
+     "timebox_min": 1.0
+    },
+    {
+     "id": "risks",
+     "title": "Risks",
+     "goal": "Name the risks and owners",
+     "timebox_min": 1.12
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "invoices_per_day",
+     "statement": "Invoices sent per day = 52,000",
+     "value": "52,000"
+    },
+    {
+     "id": "F2",
+     "key": "reminder_requests",
+     "statement": "Customer requests for payment reminders = 87",
+     "value": "87"
+    },
+    {
+     "id": "F3",
+     "key": "avg_velocity",
+     "statement": "Average velocity = 34 points",
+     "value": "34"
+    },
+    {
+     "id": "F4",
+     "key": "engineers",
+     "statement": "Engineers = 5",
+     "value": "5"
+    },
+    {
+     "id": "F5",
+     "key": "pto_days",
+     "statement": "PTO days this sprint = 4",
+     "value": "4"
+    },
+    {
+     "id": "F6",
+     "key": "bank_api_deprecation",
+     "statement": "Old bank API switched off on June 30",
+     "value": "June 30"
+    },
+    {
+     "id": "F7",
+     "key": "open_bugs",
+     "statement": "Open bugs = 12",
+     "value": "12"
+    },
+    {
+     "id": "F8",
+     "key": "nps",
+     "statement": "NPS last quarter = 38",
+     "value": "38"
+    },
+    {
+     "id": "F9",
+     "key": "build_time",
+     "statement": "CI build time = 14 minutes",
+     "value": "14 minutes"
+    },
+    {
+     "id": "F10",
+     "key": "a11y_issues",
+     "statement": "Open accessibility issues = 6",
+     "value": "6"
+    },
+    {
+     "id": "F11",
+     "key": "ach_return_rate",
+     "statement": "ACH return rate = 0.8%",
+     "value": "0.8%"
+    },
+    {
+     "id": "F12",
+     "key": "demo_attendees",
+     "statement": "Customers at the sprint demo = 23",
+     "value": "23"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "demo",
+    "summary": "What customers said",
+    "n_turns": 11,
+    "events": []
+   },
+   {
+    "agenda_item": "goal",
+    "summary": "Reminders or the bank migration",
+    "n_turns": 15,
+    "events": []
+   },
+   {
+    "agenda_item": "capacity",
+    "summary": "Who's around; Dan's build time stands",
+    "n_turns": 11,
+    "events": []
+   },
+   {
+    "agenda_item": "risks",
+    "summary": "Open bugs, accessibility and the bank",
+    "n_turns": 13,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Priscilla",
+   "text": "Good morning. Let's start with the demo. Twenty-three customers came, which is the most we've had.",
+   "agenda_item": "demo",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Mira",
+   "text": "They loved the new invoice templates. The question everyone asked was about reminders.",
+   "agenda_item": "demo",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Kenta",
+   "text": "Reminders for late payments?",
+   "agenda_item": "demo",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Mira",
+   "text": "Automatic reminders, yes. Over a hundred customers have asked for them.",
+   "agenda_item": "demo",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Dan",
+   "text": "Is that the number in the feedback tool? I thought it was lower.",
+   "agenda_item": "demo",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Mira",
+   "text": "Let me check. Eighty-seven. I was counting the demo questions on top.",
+   "agenda_item": "demo",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Priscilla",
+   "text": "Eighty-seven is still a lot.",
+   "agenda_item": "demo",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Kenta",
+   "text": "The templates took longer than we thought, so it's nice to hear they landed.",
+   "agenda_item": "demo",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Dan",
+   "text": "The dark one got a round of applause. I've never seen that at a demo.",
+   "agenda_item": "demo",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Mira",
+   "text": "One customer said it was the first time invoicing felt like it was designed for humans.",
+   "agenda_item": "demo",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Kenta",
+   "text": "I'll take that as a compliment for the whole team, not just the designer.",
+   "agenda_item": "demo",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Priscilla",
+   "text": "The sprint goal. Reminders, or the bank API migration.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Kenta",
+   "text": "The old bank API is switched off on June thirtieth. Nothing gets paid after that if we haven't moved.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Mira",
+   "text": "June is three months away. Reminders are something customers want now.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Kenta",
+   "text": "Fifty-two thousand invoices a day go through that API.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Dan",
+   "text": "How long is the migration?",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Kenta",
+   "text": "Three sprints, if nothing surprises us. Banks usually surprise us.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Priscilla",
+   "text": "Could we start the migration now and do a small version of reminders alongside?",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [
+    "E011",
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Mira",
+   "text": "A small version would be one reminder, sent seven days after the due date. That covers most of what people asked for.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Kenta",
+   "text": "That's a few days of work. It doesn't threaten the migration.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Dan",
+   "text": "The email itself has to be friendly, though. Nobody wants a scary reminder from their accountant.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Mira",
+   "text": "Friendly, with a link to pay. That's the whole thing.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Kenta",
+   "text": "And it should stop the moment the invoice is paid. The old system kept nagging people.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Mira",
+   "text": "The old system did a lot of things it shouldn't have.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Priscilla",
+   "text": "Then the sprint goal is starting the bank migration, with the simple seven-day reminder alongside it.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Mira",
+   "text": "I'll write the reminder story today, with the email text.",
+   "agenda_item": "goal",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Priscilla",
+   "text": "Capacity. Five engineers, four days of PTO between us.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E015",
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Kenta",
+   "text": "Our average is thirty-four. So about thirty this sprint.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Dan",
+   "text": "The build is the hidden cost. It takes about twenty minutes every time.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Priscilla",
+   "text": "Is there an easy fix for the build?",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Dan",
+   "text": "The tests run in one long line. If we split them, it would be much faster. I'd like to try.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Kenta",
+   "text": "Splitting them might expose the tests that depend on each other. There are a few of those.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Dan",
+   "text": "Then it'll find them for us. That's a good thing in the end.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Priscilla",
+   "text": "Then try it, but keep it to two days.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Kenta",
+   "text": "My neighbor started keeping bees last month. The whole street is waiting to see if they swarm.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Mira",
+   "text": "Ours did that once. It looked like a cloud landing on the car.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Priscilla",
+   "text": "Back to the plan. Risks.",
+   "agenda_item": "capacity",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Dan",
+   "text": "Twelve open bugs. None are severe, but two are in the payment screen.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Mira",
+   "text": "And six accessibility issues on the invoice view. A customer flagged them at the demo.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Priscilla",
+   "text": "Should the accessibility issues be in this sprint?",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Mira",
+   "text": "The two worst ones, yes. The rest can wait a sprint.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Kenta",
+   "text": "The other risk is the bank's sandbox. Last time it was down for a week.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Priscilla",
+   "text": "That was painful. We couldn't test anything for days.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Mira",
+   "text": "Their support line was useless too. It just played music.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Dan",
+   "text": "It might be worth asking the bank for a sandbox status page.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Kenta",
+   "text": "I'll email our contact at the bank and ask.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Mira",
+   "text": "The return rate on ACH is under one percent, right? Point eight?",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E027",
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Kenta",
+   "text": "Point eight. The new API reports returns faster, which should help.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Dan",
+   "text": "Does anyone know who owns the reminder emails if a customer complains?",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Priscilla",
+   "text": "I think that's everything. Thanks, everyone.",
+   "agenda_item": "risks",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Priscilla",
+   "agenda_item": "demo",
+   "fact_id": "F12",
+   "claimed_value": "23",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Kenta",
+   "agenda_item": "demo",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 3,
+   "speaker": "Mira",
+   "agenda_item": "demo",
+   "fact_id": "F2",
+   "claimed_value": "over 100",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Dan",
+   "agenda_item": "demo",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 5,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Mira",
+   "agenda_item": "demo",
+   "fact_id": "F2",
+   "claimed_value": "87",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Priscilla",
+   "agenda_item": "demo",
+   "fact_id": "F2",
+   "claimed_value": "87",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Kenta",
+   "agenda_item": "goal",
+   "fact_id": "F6",
+   "claimed_value": "June 30",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Mira",
+   "agenda_item": "goal",
+   "fact_id": "F6",
+   "claimed_value": "June 30",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Kenta",
+   "agenda_item": "goal",
+   "fact_id": "F1",
+   "claimed_value": "52,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Dan",
+   "agenda_item": "goal",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 16,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Priscilla",
+   "agenda_item": "goal",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 18,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Priscilla",
+   "agenda_item": "goal",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 24,
+   "speaker": "Priscilla",
+   "agenda_item": "goal",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 25,
+   "speaker": "Mira",
+   "agenda_item": "goal",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Priscilla",
+   "agenda_item": "capacity",
+   "fact_id": "F4",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Priscilla",
+   "agenda_item": "capacity",
+   "fact_id": "F5",
+   "claimed_value": "4",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Kenta",
+   "agenda_item": "capacity",
+   "fact_id": "F3",
+   "claimed_value": "34",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 28,
+   "speaker": "Dan",
+   "agenda_item": "capacity",
+   "fact_id": "F9",
+   "claimed_value": "20 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Priscilla",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 30,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 33,
+   "speaker": "Priscilla",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Kenta",
+   "agenda_item": "capacity",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Dan",
+   "agenda_item": "risks",
+   "fact_id": "F7",
+   "claimed_value": "12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Mira",
+   "agenda_item": "risks",
+   "fact_id": "F10",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Priscilla",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 40,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Dan",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 45,
+   "speaker": "Kenta",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Mira",
+   "agenda_item": "risks",
+   "fact_id": "F11",
+   "claimed_value": "0.8%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Mira",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 47,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 48,
+   "speaker": "Dan",
+   "agenda_item": "risks",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Priscilla",
+   "text": "Good morning. Let's start with the demo. Twenty-three customers came, which is the most we've had.",
+   "start_s": 0.5,
+   "end_s": 6.9
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Mira",
+   "text": "They loved the new invoice templates. The question everyone asked was about reminders.",
+   "start_s": 8.056,
+   "end_s": 12.783
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Kenta",
+   "text": "Reminders for late payments?",
+   "start_s": 13.931,
+   "end_s": 15.586
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Mira",
+   "text": "Automatic reminders, yes. Over a hundred customers have asked for them.",
+   "start_s": 15.843,
+   "end_s": 19.843
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Dan",
+   "text": "Is that the number in the feedback tool? I thought it was lower.",
+   "start_s": 20.128,
+   "end_s": 25.16
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Mira",
+   "text": "Let me check. Eighty-seven. I was counting the demo questions on top.",
+   "start_s": 26.195,
+   "end_s": 30.559
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Priscilla",
+   "text": "Eighty-seven is still a lot.",
+   "start_s": 31.495,
+   "end_s": 33.495
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Kenta",
+   "text": "The templates took longer than we thought, so it's nice to hear they landed.",
+   "start_s": 34.365,
+   "end_s": 40.158
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Dan",
+   "text": "The dark one got a round of applause. I've never seen that at a demo.",
+   "start_s": 40.666,
+   "end_s": 46.473
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Mira",
+   "text": "One customer said it was the first time invoicing felt like it was designed for humans.",
+   "start_s": 47.279,
+   "end_s": 53.097
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Kenta",
+   "text": "I'll take that as a compliment for the whole team, not just the designer.",
+   "start_s": 53.904,
+   "end_s": 59.697
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Priscilla",
+   "text": "The sprint goal. Reminders, or the bank API migration.",
+   "start_s": 60.478,
+   "end_s": 64.078
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Kenta",
+   "text": "The old bank API is switched off on June thirtieth. Nothing gets paid after that if we haven't moved.",
+   "start_s": 64.436,
+   "end_s": 72.298
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Mira",
+   "text": "June is three months away. Reminders are something customers want now.",
+   "start_s": 72.929,
+   "end_s": 76.929
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Kenta",
+   "text": "Fifty-two thousand invoices a day go through that API.",
+   "start_s": 77.523,
+   "end_s": 81.247
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Dan",
+   "text": "How long is the migration?",
+   "start_s": 82.17,
+   "end_s": 84.105
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Kenta",
+   "text": "Three sprints, if nothing surprises us. Banks usually surprise us.",
+   "start_s": 85.3,
+   "end_s": 89.438
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Priscilla",
+   "text": "Could we start the migration now and do a small version of reminders alongside?",
+   "start_s": 90.587,
+   "end_s": 96.187
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Mira",
+   "text": "A small version would be one reminder, sent seven days after the due date. That covers most of what people asked for.",
+   "start_s": 96.931,
+   "end_s": 104.931
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Kenta",
+   "text": "That's a few days of work. It doesn't threaten the migration.",
+   "start_s": 105.576,
+   "end_s": 110.128
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Dan",
+   "text": "The email itself has to be friendly, though. Nobody wants a scary reminder from their accountant.",
+   "start_s": 110.596,
+   "end_s": 116.79
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Mira",
+   "text": "Friendly, with a link to pay. That's the whole thing.",
+   "start_s": 117.026,
+   "end_s": 120.662
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Kenta",
+   "text": "And it should stop the moment the invoice is paid. The old system kept nagging people.",
+   "start_s": 120.889,
+   "end_s": 127.51
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Mira",
+   "text": "The old system did a lot of things it shouldn't have.",
+   "start_s": 128.175,
+   "end_s": 132.175
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Priscilla",
+   "text": "Then the sprint goal is starting the bank migration, with the simple seven-day reminder alongside it.",
+   "start_s": 132.693,
+   "end_s": 139.093
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Mira",
+   "text": "I'll write the reminder story today, with the email text.",
+   "start_s": 139.673,
+   "end_s": 143.309
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Priscilla",
+   "text": "Capacity. Five engineers, four days of PTO between us.",
+   "start_s": 144.401,
+   "end_s": 148.001
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Kenta",
+   "text": "Our average is thirty-four. So about thirty this sprint.",
+   "start_s": 148.727,
+   "end_s": 152.451
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Dan",
+   "text": "The build is the hidden cost. It takes about twenty minutes every time.",
+   "start_s": 153.212,
+   "end_s": 158.244
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Priscilla",
+   "text": "Is there an easy fix for the build?",
+   "start_s": 158.68,
+   "end_s": 161.88
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Dan",
+   "text": "The tests run in one long line. If we split them, it would be much faster. I'd like to try.",
+   "start_s": 162.104,
+   "end_s": 169.846
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Kenta",
+   "text": "Splitting them might expose the tests that depend on each other. There are a few of those.",
+   "start_s": 170.371,
+   "end_s": 177.406
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Dan",
+   "text": "Then it'll find them for us. That's a good thing in the end.",
+   "start_s": 177.743,
+   "end_s": 182.775
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Priscilla",
+   "text": "Then try it, but keep it to two days.",
+   "start_s": 183.485,
+   "end_s": 187.085
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Kenta",
+   "text": "My neighbor started keeping bees last month. The whole street is waiting to see if they swarm.",
+   "start_s": 188.284,
+   "end_s": 195.318
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Mira",
+   "text": "Ours did that once. It looked like a cloud landing on the car.",
+   "start_s": 196.192,
+   "end_s": 200.92
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Priscilla",
+   "text": "Back to the plan. Risks.",
+   "start_s": 201.302,
+   "end_s": 203.302
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Dan",
+   "text": "Twelve open bugs. None are severe, but two are in the payment screen.",
+   "start_s": 204.396,
+   "end_s": 209.428
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Mira",
+   "text": "And six accessibility issues on the invoice view. A customer flagged them at the demo.",
+   "start_s": 210.425,
+   "end_s": 215.879
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Priscilla",
+   "text": "Should the accessibility issues be in this sprint?",
+   "start_s": 216.813,
+   "end_s": 220.013
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Mira",
+   "text": "The two worst ones, yes. The rest can wait a sprint.",
+   "start_s": 221.12,
+   "end_s": 225.12
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Kenta",
+   "text": "The other risk is the bank's sandbox. Last time it was down for a week.",
+   "start_s": 226.083,
+   "end_s": 232.29
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Priscilla",
+   "text": "That was painful. We couldn't test anything for days.",
+   "start_s": 233.28,
+   "end_s": 236.88
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Mira",
+   "text": "Their support line was useless too. It just played music.",
+   "start_s": 237.434,
+   "end_s": 241.07
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Dan",
+   "text": "It might be worth asking the bank for a sandbox status page.",
+   "start_s": 242.251,
+   "end_s": 246.896
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Kenta",
+   "text": "I'll email our contact at the bank and ask.",
+   "start_s": 248.058,
+   "end_s": 251.782
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Mira",
+   "text": "The return rate on ACH is under one percent, right? Point eight?",
+   "start_s": 252.143,
+   "end_s": 256.507
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Kenta",
+   "text": "Point eight. The new API reports returns faster, which should help.",
+   "start_s": 257.461,
+   "end_s": 262.013
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Dan",
+   "text": "Does anyone know who owns the reminder emails if a customer complains?",
+   "start_s": 262.928,
+   "end_s": 267.573
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Priscilla",
+   "text": "I think that's everything. Thanks, everyone.",
+   "start_s": 268.234,
+   "end_s": 270.634
+  }
+ ]
+}

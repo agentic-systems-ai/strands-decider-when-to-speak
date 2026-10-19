@@ -1,0 +1,1557 @@
+{
+ "meeting_id": "garden-eastgate-d8-s2",
+ "config": {
+  "theme": "Community garden committee: plots, water and the spring fair",
+  "domain_pack": "community_group",
+  "drama": 0.8,
+  "seed": 2,
+  "duration_min": 4.2,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   11,
+   15,
+   19,
+   29,
+   31
+  ],
+  "reviewed_noclaim": [
+   15,
+   19
+  ]
+ },
+ "cast": {
+  "theme": "Community garden committee: plots, water and the spring fair",
+  "personas": [
+   {
+    "name": "Bernadette",
+    "role": "Chair",
+    "goals": "Keep the allotments",
+    "hidden_agenda": "Knows a councillor personally but doesn't want to look like she's using it",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Cyril",
+    "role": "Founding member",
+    "goals": "Fight the city with everything",
+    "hidden_agenda": "His late wife's roses are on plot 3",
+    "verbosity": 4,
+    "wpm": 140,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Amara",
+    "role": "Young organizer, runs the petition",
+    "goals": "A loud public campaign",
+    "hidden_agenda": "Has already talked to a local reporter",
+    "verbosity": 4,
+    "wpm": 180,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Felipe",
+    "role": "Treasurer",
+    "goals": "A plan that doesn't bankrupt the association",
+    "hidden_agenda": "Thinks the rent increase is actually survivable",
+    "verbosity": 2,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Allotment association - emergency meeting",
+   "org": "Eastgate Allotments Association (fictional)",
+   "agenda": [
+    {
+     "id": "lease",
+     "title": "The lease",
+     "goal": "Respond to the city's lease proposal",
+     "timebox_min": 1.56
+    },
+    {
+     "id": "campaign",
+     "title": "The campaign",
+     "goal": "Plan the petition and the council meeting",
+     "timebox_min": 1.12
+    },
+    {
+     "id": "money",
+     "title": "Money",
+     "goal": "What we can afford",
+     "timebox_min": 0.82
+    },
+    {
+     "id": "fair",
+     "title": "Spring fair",
+     "goal": "Decide whether the fair goes ahead",
+     "timebox_min": 0.67
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "lease_end",
+     "statement": "Current lease ends June 30",
+     "value": "June 30"
+    },
+    {
+     "id": "F2",
+     "key": "rent_increase",
+     "statement": "City's proposed rent increase = 60%",
+     "value": "60%"
+    },
+    {
+     "id": "F3",
+     "key": "current_rent",
+     "statement": "Current rent = $2,400 a year",
+     "value": "$2,400"
+    },
+    {
+     "id": "F4",
+     "key": "plots",
+     "statement": "Plots = 58",
+     "value": "58"
+    },
+    {
+     "id": "F5",
+     "key": "waitlist",
+     "statement": "Waitlist = 41",
+     "value": "41"
+    },
+    {
+     "id": "F6",
+     "key": "petition_signatures",
+     "statement": "Petition signatures so far = 830",
+     "value": "830"
+    },
+    {
+     "id": "F7",
+     "key": "council_meeting",
+     "statement": "City council meeting = April 9",
+     "value": "April 9"
+    },
+    {
+     "id": "F8",
+     "key": "legal_consult",
+     "statement": "Legal consultation = $600",
+     "value": "$600"
+    },
+    {
+     "id": "F9",
+     "key": "balance",
+     "statement": "Association balance = $6,200",
+     "value": "$6,200"
+    },
+    {
+     "id": "F10",
+     "key": "water_bill",
+     "statement": "Last year's water bill = $1,900",
+     "value": "$1,900"
+    },
+    {
+     "id": "F11",
+     "key": "fair_date",
+     "statement": "Spring fair = Saturday, May 24",
+     "value": "May 24"
+    },
+    {
+     "id": "F12",
+     "key": "years_on_site",
+     "statement": "Years on the current site = 34",
+     "value": "34"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "lease",
+    "summary": "The city's proposal; tempers; Felipe overstates the increase and is corrected later",
+    "n_turns": 18,
+    "events": []
+   },
+   {
+    "agenda_item": "campaign",
+    "summary": "Petition and council; Amara's count is high",
+    "n_turns": 16,
+    "events": []
+   },
+   {
+    "agenda_item": "money",
+    "summary": "What we can afford",
+    "n_turns": 9,
+    "events": []
+   },
+   {
+    "agenda_item": "fair",
+    "summary": "Does it go ahead",
+    "n_turns": 8,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Bernadette",
+   "text": "Thank you for coming at short notice. The city wants a new lease from July, and the rent goes up.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Felipe",
+   "text": "The rent's doubling. That's what the letter says.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Cyril",
+   "text": "Doubling! After all these years. We've been on this site fifty years.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Amara",
+   "text": "This is exactly what they do. Squeeze community spaces until they give up.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Bernadette",
+   "text": "The current lease ends June thirtieth. We have until then to respond.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Cyril",
+   "text": "We respond by fighting them. Every one of us.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Felipe",
+   "text": "Fighting costs money. A lawyer just to read the lease is six hundred.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Amara",
+   "text": "Six hundred is nothing compared to losing the allotments.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Cyril",
+   "text": "My wife planted those roses on plot three. I'm not handing them to a car park.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Bernadette",
+   "text": "Nobody's handing anything to anybody, Cyril.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Amara",
+   "text": "I've already talked to a reporter at the Gazette. She's interested.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Bernadette",
+   "text": "Before we'd even met as a committee?",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Amara",
+   "text": "Someone had to do something.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Felipe",
+   "text": "I've got the letter here, sorry. It's not doubling. It's a sixty percent increase. I misread the table.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Cyril",
+   "text": "Sixty percent. That's still robbery.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Felipe",
+   "text": "The current rent is twenty-four hundred a year. Sixty percent more is about thirty-eight hundred.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Bernadette",
+   "text": "Then we spend six hundred on the lawyer, and we make our case before we sign anything.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [
+    "E009",
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Felipe",
+   "text": "I'll book the lawyer for next week.",
+   "agenda_item": "lease",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Amara",
+   "text": "The petition is at about two thousand signatures already. People really care.",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Bernadette",
+   "text": "Two thousand online, or on paper?",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Amara",
+   "text": "Well, about eight hundred and thirty verified. The rest are shares and likes.",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Felipe",
+   "text": "Eight hundred and thirty real signatures is still impressive.",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Cyril",
+   "text": "When is the council meeting?",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Bernadette",
+   "text": "April ninth. Public comments are allowed.",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Amara",
+   "text": "Then we fill the room. Fifty-eight plot holders, forty-one on the waitlist, their families.",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [
+    "E018",
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Cyril",
+   "text": "I'll speak. I've earned it.",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Bernadette",
+   "text": "Cyril, you'll speak from the heart, which is good. But someone needs to speak to the numbers too.",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Felipe",
+   "text": "I can do the numbers. Calmly.",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Amara",
+   "text": "And I'll organize who sits where, so it looks like a crowd and not a rabble.",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Bernadette",
+   "text": "Should I mention that I know Councillor Pryce?",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Cyril",
+   "text": "The council parking lot is always full on meeting nights. Last time I parked three streets away and got a ticket.",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Felipe",
+   "text": "Did you appeal it?",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Cyril",
+   "text": "Of course I appealed. I lost.",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Amara",
+   "text": "The campaign, everyone, please.",
+   "agenda_item": "campaign",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Felipe",
+   "text": "Money. We have sixty-two hundred in the account.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Cyril",
+   "text": "Then we can afford to fight.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Felipe",
+   "text": "We can afford a lawyer and the new rent for a year. Not a long legal battle.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Amara",
+   "text": "Could we ask for donations alongside the petition?",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Felipe",
+   "text": "We can, but we have to account for every penny.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Bernadette",
+   "text": "Then a donation link goes on the petition, and Felipe keeps a separate record.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Felipe",
+   "text": "The water bill was nineteen hundred last year. That doesn't go away either.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Amara",
+   "text": "Maybe we propose a lower increase and offer to maintain the park strip next to us in return.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Bernadette",
+   "text": "Let's see what the lawyer says before we offer anything.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Amara",
+   "text": "The fair. May twenty-fourth. Do we still hold it?",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E031",
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Cyril",
+   "text": "Of course we hold it. Especially now.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Bernadette",
+   "text": "It would show the city what the allotments are for.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Felipe",
+   "text": "And bring in money. We'll need it.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Bernadette",
+   "text": "The fair goes ahead, and we make it part of the campaign.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Amara",
+   "text": "I'll ask the reporter to come to the fair. That's a much better story than an angry meeting.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Cyril",
+   "text": "It would be good if someone made a display of the history. Old photos.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Bernadette",
+   "text": "Thank you, all of you. We're not giving up these plots.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 1,
+   "speaker": "Felipe",
+   "agenda_item": "lease",
+   "fact_id": "F2",
+   "claimed_value": "doubling",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 2,
+   "speaker": "Cyril",
+   "agenda_item": "lease",
+   "fact_id": "F12",
+   "claimed_value": "50",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Bernadette",
+   "agenda_item": "lease",
+   "fact_id": "F1",
+   "claimed_value": "June 30",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Felipe",
+   "agenda_item": "lease",
+   "fact_id": "F8",
+   "claimed_value": "$600",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Amara",
+   "agenda_item": "lease",
+   "fact_id": "F8",
+   "claimed_value": "$600",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Felipe",
+   "agenda_item": "lease",
+   "fact_id": "F2",
+   "claimed_value": "60%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Cyril",
+   "agenda_item": "lease",
+   "fact_id": "F2",
+   "claimed_value": "60%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Felipe",
+   "agenda_item": "lease",
+   "fact_id": "F3",
+   "claimed_value": "$2,400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Bernadette",
+   "agenda_item": "lease",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Bernadette",
+   "agenda_item": "lease",
+   "fact_id": "F8",
+   "claimed_value": "$600",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 17,
+   "speaker": "Felipe",
+   "agenda_item": "lease",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 18,
+   "speaker": "Amara",
+   "agenda_item": "campaign",
+   "fact_id": "F6",
+   "claimed_value": "2,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Bernadette",
+   "agenda_item": "campaign",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 20,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Amara",
+   "agenda_item": "campaign",
+   "fact_id": "F6",
+   "claimed_value": "830",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Felipe",
+   "agenda_item": "campaign",
+   "fact_id": "F6",
+   "claimed_value": "830",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Cyril",
+   "agenda_item": "campaign",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 23,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Bernadette",
+   "agenda_item": "campaign",
+   "fact_id": "F7",
+   "claimed_value": "April 9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Amara",
+   "agenda_item": "campaign",
+   "fact_id": "F4",
+   "claimed_value": "58",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Amara",
+   "agenda_item": "campaign",
+   "fact_id": "F5",
+   "claimed_value": "41",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 25,
+   "speaker": "Cyril",
+   "agenda_item": "campaign",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 27,
+   "speaker": "Felipe",
+   "agenda_item": "campaign",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 28,
+   "speaker": "Amara",
+   "agenda_item": "campaign",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 29,
+   "speaker": "Bernadette",
+   "agenda_item": "campaign",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 30,
+   "speaker": "Cyril",
+   "agenda_item": "campaign",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Felipe",
+   "agenda_item": "money",
+   "fact_id": "F9",
+   "claimed_value": "$6,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Amara",
+   "agenda_item": "money",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 38,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 39,
+   "speaker": "Bernadette",
+   "agenda_item": "money",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Felipe",
+   "agenda_item": "money",
+   "fact_id": "F10",
+   "claimed_value": "$1,900",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Amara",
+   "agenda_item": "money",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Bernadette",
+   "agenda_item": "money",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Amara",
+   "agenda_item": "fair",
+   "fact_id": "F11",
+   "claimed_value": "May 24",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Amara",
+   "agenda_item": "fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 44,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 47,
+   "speaker": "Bernadette",
+   "agenda_item": "fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 48,
+   "speaker": "Amara",
+   "agenda_item": "fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Cyril",
+   "agenda_item": "fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Bernadette",
+   "text": "Thank you for coming at short notice. The city wants a new lease from July, and the rent goes up.",
+   "start_s": 0.5,
+   "end_s": 8.242
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Felipe",
+   "text": "The rent's doubling. That's what the letter says.",
+   "start_s": 9.398,
+   "end_s": 12.708
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Cyril",
+   "text": "Doubling! After all these years. We've been on this site fifty years.",
+   "start_s": 13.856,
+   "end_s": 18.999
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Amara",
+   "text": "This is exactly what they do. Squeeze community spaces until they give up.",
+   "start_s": 19.256,
+   "end_s": 23.589
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Bernadette",
+   "text": "The current lease ends June thirtieth. We have until then to respond.",
+   "start_s": 23.874,
+   "end_s": 28.519
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Cyril",
+   "text": "We respond by fighting them. Every one of us.",
+   "start_s": 29.554,
+   "end_s": 33.412
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Felipe",
+   "text": "Fighting costs money. A lawyer just to read the lease is six hundred.",
+   "start_s": 34.348,
+   "end_s": 39.727
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Amara",
+   "text": "Six hundred is nothing compared to losing the allotments.",
+   "start_s": 40.597,
+   "end_s": 43.597
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Cyril",
+   "text": "My wife planted those roses on plot three. I'm not handing them to a car park.",
+   "start_s": 44.105,
+   "end_s": 50.962
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Bernadette",
+   "text": "Nobody's handing anything to anybody, Cyril.",
+   "start_s": 51.768,
+   "end_s": 54.091
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Amara",
+   "text": "I've already talked to a reporter at the Gazette. She's interested.",
+   "start_s": 54.898,
+   "end_s": 58.564
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Bernadette",
+   "text": "Before we'd even met as a committee?",
+   "start_s": 59.345,
+   "end_s": 62.055
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Amara",
+   "text": "Someone had to do something.",
+   "start_s": 62.413,
+   "end_s": 64.08
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Felipe",
+   "text": "I've got the letter here, sorry. It's not doubling. It's a sixty percent increase. I misread the table.",
+   "start_s": 64.711,
+   "end_s": 72.159
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Cyril",
+   "text": "Sixty percent. That's still robbery.",
+   "start_s": 72.753,
+   "end_s": 74.895
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Felipe",
+   "text": "The current rent is twenty-four hundred a year. Sixty percent more is about thirty-eight hundred.",
+   "start_s": 75.818,
+   "end_s": 82.025
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Bernadette",
+   "text": "Then we spend six hundred on the lawyer, and we make our case before we sign anything.",
+   "start_s": 83.22,
+   "end_s": 89.8
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Felipe",
+   "text": "I'll book the lawyer for next week.",
+   "start_s": 90.949,
+   "end_s": 93.846
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Amara",
+   "text": "The petition is at about two thousand signatures already. People really care.",
+   "start_s": 94.59,
+   "end_s": 98.59
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Bernadette",
+   "text": "Two thousand online, or on paper?",
+   "start_s": 99.235,
+   "end_s": 101.557
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Amara",
+   "text": "Well, about eight hundred and thirty verified. The rest are shares and likes.",
+   "start_s": 102.025,
+   "end_s": 106.359
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Felipe",
+   "text": "Eight hundred and thirty real signatures is still impressive.",
+   "start_s": 106.595,
+   "end_s": 110.319
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Cyril",
+   "text": "When is the council meeting?",
+   "start_s": 110.546,
+   "end_s": 112.689
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Bernadette",
+   "text": "April ninth. Public comments are allowed.",
+   "start_s": 113.354,
+   "end_s": 115.676
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Amara",
+   "text": "Then we fill the room. Fifty-eight plot holders, forty-one on the waitlist, their families.",
+   "start_s": 116.194,
+   "end_s": 120.861
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Cyril",
+   "text": "I'll speak. I've earned it.",
+   "start_s": 121.441,
+   "end_s": 123.584
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Bernadette",
+   "text": "Cyril, you'll speak from the heart, which is good. But someone needs to speak to the numbers too.",
+   "start_s": 124.676,
+   "end_s": 131.644
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Felipe",
+   "text": "I can do the numbers. Calmly.",
+   "start_s": 132.37,
+   "end_s": 134.853
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Amara",
+   "text": "And I'll organize who sits where, so it looks like a crowd and not a rabble.",
+   "start_s": 135.614,
+   "end_s": 140.947
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Bernadette",
+   "text": "Should I mention that I know Councillor Pryce?",
+   "start_s": 141.383,
+   "end_s": 144.48
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Cyril",
+   "text": "The council parking lot is always full on meeting nights. Last time I parked three streets away and got a ticket.",
+   "start_s": 144.704,
+   "end_s": 153.704
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Felipe",
+   "text": "Did you appeal it?",
+   "start_s": 154.229,
+   "end_s": 155.884
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Cyril",
+   "text": "Of course I appealed. I lost.",
+   "start_s": 156.221,
+   "end_s": 158.792
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Amara",
+   "text": "The campaign, everyone, please.",
+   "start_s": 159.502,
+   "end_s": 160.836
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Felipe",
+   "text": "Money. We have sixty-two hundred in the account.",
+   "start_s": 162.035,
+   "end_s": 165.345
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Cyril",
+   "text": "Then we can afford to fight.",
+   "start_s": 166.219,
+   "end_s": 168.791
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Felipe",
+   "text": "We can afford a lawyer and the new rent for a year. Not a long legal battle.",
+   "start_s": 169.173,
+   "end_s": 176.207
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Amara",
+   "text": "Could we ask for donations alongside the petition?",
+   "start_s": 177.301,
+   "end_s": 179.967
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Felipe",
+   "text": "We can, but we have to account for every penny.",
+   "start_s": 180.964,
+   "end_s": 185.102
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Bernadette",
+   "text": "Then a donation link goes on the petition, and Felipe keeps a separate record.",
+   "start_s": 186.036,
+   "end_s": 191.456
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Felipe",
+   "text": "The water bill was nineteen hundred last year. That doesn't go away either.",
+   "start_s": 192.563,
+   "end_s": 197.942
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Amara",
+   "text": "Maybe we propose a lower increase and offer to maintain the park strip next to us in return.",
+   "start_s": 198.905,
+   "end_s": 204.905
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Bernadette",
+   "text": "Let's see what the lawyer says before we offer anything.",
+   "start_s": 205.895,
+   "end_s": 209.766
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Amara",
+   "text": "The fair. May twenty-fourth. Do we still hold it?",
+   "start_s": 210.32,
+   "end_s": 213.32
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Cyril",
+   "text": "Of course we hold it. Especially now.",
+   "start_s": 214.501,
+   "end_s": 217.501
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Bernadette",
+   "text": "It would show the city what the allotments are for.",
+   "start_s": 218.663,
+   "end_s": 222.534
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Felipe",
+   "text": "And bring in money. We'll need it.",
+   "start_s": 222.895,
+   "end_s": 225.792
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Bernadette",
+   "text": "The fair goes ahead, and we make it part of the campaign.",
+   "start_s": 226.746,
+   "end_s": 231.391
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Amara",
+   "text": "I'll ask the reporter to come to the fair. That's a much better story than an angry meeting.",
+   "start_s": 232.306,
+   "end_s": 238.306
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Cyril",
+   "text": "It would be good if someone made a display of the history. Old photos.",
+   "start_s": 238.967,
+   "end_s": 244.967
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Bernadette",
+   "text": "Thank you, all of you. We're not giving up these plots.",
+   "start_s": 245.697,
+   "end_s": 249.955
+  }
+ ]
+}

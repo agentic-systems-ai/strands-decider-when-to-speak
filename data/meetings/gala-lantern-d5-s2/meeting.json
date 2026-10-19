@@ -1,0 +1,1657 @@
+{
+ "meeting_id": "gala-lantern-d5-s2",
+ "config": {
+  "theme": "Planning committee for a nonprofit's annual fundraising gala",
+  "domain_pack": "nonprofit_events",
+  "drama": 0.5,
+  "seed": 2,
+  "duration_min": 4.9,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   29,
+   31,
+   34,
+   35,
+   49
+  ],
+  "reviewed_noclaim": [
+   29,
+   31
+  ]
+ },
+ "cast": {
+  "theme": "Planning committee for a nonprofit's annual fundraising gala",
+  "personas": [
+   {
+    "name": "Yvonne",
+    "role": "Executive director",
+    "goals": "Fund four more beds this year",
+    "hidden_agenda": "The shelter turned away eleven women last month",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Graham",
+    "role": "Board treasurer",
+    "goals": "A gala that costs a lot less than it raises",
+    "hidden_agenda": "Thinks the keynote is overpriced",
+    "verbosity": 2,
+    "wpm": 140,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Pilar",
+    "role": "Volunteer gala chair",
+    "goals": "An evening that moves people to give",
+    "hidden_agenda": "Booked the keynote speaker before checking the fee with the board",
+    "verbosity": 4,
+    "wpm": 170,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Jerome",
+    "role": "Corporate relations",
+    "goals": "Sell every table",
+    "hidden_agenda": "Two companies said maybe and he counted them",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Lantern Gala committee",
+   "org": "Lantern House Women's Shelter (fictional)",
+   "agenda": [
+    {
+     "id": "money",
+     "title": "Budget and goal",
+     "goal": "Check the budget against the fundraising goal",
+     "timebox_min": 1.32
+    },
+    {
+     "id": "program",
+     "title": "Speakers and program",
+     "goal": "Settle the keynote and the survivor speaker",
+     "timebox_min": 1.32
+    },
+    {
+     "id": "tables",
+     "title": "Tables and sponsors",
+     "goal": "Sell the remaining tables",
+     "timebox_min": 1.35
+    },
+    {
+     "id": "logistics",
+     "title": "Logistics",
+     "goal": "Volunteers and the evening's details",
+     "timebox_min": 0.92
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "gala_date",
+     "statement": "Gala = Saturday, November 15",
+     "value": "November 15"
+    },
+    {
+     "id": "F2",
+     "key": "budget",
+     "statement": "Gala budget = $38,000",
+     "value": "$38,000"
+    },
+    {
+     "id": "F3",
+     "key": "goal",
+     "statement": "Fundraising goal = $200,000",
+     "value": "$200,000"
+    },
+    {
+     "id": "F4",
+     "key": "last_year_raised",
+     "statement": "Last year's gala raised $164,000",
+     "value": "$164,000"
+    },
+    {
+     "id": "F5",
+     "key": "tickets_sold",
+     "statement": "Individual tickets sold = 210",
+     "value": "210"
+    },
+    {
+     "id": "F6",
+     "key": "capacity",
+     "statement": "Ballroom capacity = 320",
+     "value": "320"
+    },
+    {
+     "id": "F7",
+     "key": "table_price",
+     "statement": "Corporate table = $3,000",
+     "value": "$3,000"
+    },
+    {
+     "id": "F8",
+     "key": "tables_sold",
+     "statement": "Corporate tables sold = 9",
+     "value": "9"
+    },
+    {
+     "id": "F9",
+     "key": "keynote_fee",
+     "statement": "Keynote speaker fee = $7,500",
+     "value": "$7,500"
+    },
+    {
+     "id": "F10",
+     "key": "matching_pledge",
+     "statement": "Matching gift pledge = $25,000",
+     "value": "$25,000"
+    },
+    {
+     "id": "F11",
+     "key": "bed_cost",
+     "statement": "Each $10,000 funds one shelter bed for a year",
+     "value": "$10,000"
+    },
+    {
+     "id": "F12",
+     "key": "volunteers",
+     "statement": "Volunteers signed up = 35",
+     "value": "35"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "money",
+    "summary": "Budget, goal and last year; Yvonne's memory of last year is high, corrected later",
+    "n_turns": 12,
+    "events": []
+   },
+   {
+    "agenda_item": "program",
+    "summary": "The keynote and the survivor speaker; Pilar's fee figure stands",
+    "n_turns": 15,
+    "events": []
+   },
+   {
+    "agenda_item": "tables",
+    "summary": "Corporate tables; Jerome's count is high; an off-topic stretch about a new restaurant",
+    "n_turns": 14,
+    "events": []
+   },
+   {
+    "agenda_item": "logistics",
+    "summary": "Volunteers and the night",
+    "n_turns": 11,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Yvonne",
+   "text": "Thank you for coming. This gala matters more than usual this year. We turned women away last month.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Graham",
+   "text": "The budget for the evening is thirty-eight thousand. The goal is two hundred thousand.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E001",
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Yvonne",
+   "text": "Last year we raised a hundred and eighty, so two hundred is a stretch but not a fantasy.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E003",
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Pilar",
+   "text": "And this year we have the matching pledge. Twenty-five thousand, if we raise it first.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Jerome",
+   "text": "The matching pledge is a great story for the paddle raise. Every dollar doubled.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Yvonne",
+   "text": "What does a bed cost us, for the paddle raise? People like to know what their money does.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Graham",
+   "text": "Ten thousand funds one bed for a year.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Pilar",
+   "text": "So the paddle raise could literally be \"fund a bed\". That's powerful.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Yvonne",
+   "text": "That's exactly what I want. Four beds is the dream.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Graham",
+   "text": "Sorry, a small thing. Last year's total, was it a hundred and eighty? My notes have a hundred and sixty-four.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E008",
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Yvonne",
+   "text": "Oh. You're probably right. A hundred and eighty was the pledges, before a few fell through.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Graham",
+   "text": "A hundred and sixty-four, then. So two hundred is a bigger jump than it sounded.",
+   "agenda_item": "money",
+   "direction": null,
+   "event_ids": [
+    "E011",
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Pilar",
+   "text": "The program. I've booked Dana Whitlock as the keynote. She's wonderful, and the fee is five thousand.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Graham",
+   "text": "That's a lot for a speech, in my opinion.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Pilar",
+   "text": "She brings people. Last time she spoke at a gala, they raised a fortune.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Yvonne",
+   "text": "The survivor speaker matters more to me than the keynote. Who is it this year?",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Pilar",
+   "text": "Rosa, from our transitional housing. She asked to do it. She's been practicing.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Yvonne",
+   "text": "Rosa. That's brave of her. We need to make sure she's supported that night.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Jerome",
+   "text": "Could she speak before dinner instead of after? People are more focused before the wine.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E015",
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Pilar",
+   "text": "She wanted to speak right before the paddle raise. That's when it matters most.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Yvonne",
+   "text": "Then Rosa speaks right before the paddle raise, and the keynote opens the evening.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Pilar",
+   "text": "I'll tell Rosa tomorrow and schedule a rehearsal with her at the hotel.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Graham",
+   "text": "Has Dana's contract been signed by the board?",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Pilar",
+   "text": "Not yet. I signed the letter of intent myself.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Graham",
+   "text": "That's not how it works, Pilar.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Pilar",
+   "text": "I know. It was going to go to someone else. I'm sorry.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Yvonne",
+   "text": "Let's get the contract to the board this week and do it properly.",
+   "agenda_item": "program",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Jerome",
+   "text": "Tables. We've sold twelve corporate tables, at three thousand each.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [
+    "E021",
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Graham",
+   "text": "Twelve? I only have nine invoices, I think. Maybe I'm missing some?",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [
+    "E023",
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Jerome",
+   "text": "No, you're right. Nine paid. Three said yes on the phone but haven't signed.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Yvonne",
+   "text": "Then nine, until they sign.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Jerome",
+   "text": "I'll chase the three this week. One of them is the bank, and they always come through.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Pilar",
+   "text": "Individual tickets are at two hundred and ten. The ballroom holds three twenty.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [
+    "E028",
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Graham",
+   "text": "So plenty of room for the last tables.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Jerome",
+   "text": "Has anyone been to that new Lebanese place on Fifth? I took the bank people there and they loved it.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Pilar",
+   "text": "The one with the garden? I want to go. I hear the bread is incredible.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Graham",
+   "text": "My wife's been twice already. She says the lamb is the best in the city.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Yvonne",
+   "text": "We should eat there to celebrate when this is over. Back to tables, though.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Jerome",
+   "text": "Could the board members each bring a table of friends? That's how other galas fill up.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Graham",
+   "text": "Some can. Some of us are the friends.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Yvonne",
+   "text": "Let's ask every board member to host a table or buy two tickets. Not a requirement. An ask.",
+   "agenda_item": "tables",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Pilar",
+   "text": "Logistics. We have thirty-five volunteers so far.",
+   "agenda_item": "logistics",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Yvonne",
+   "text": "Is that enough? Last year felt thin at check-in.",
+   "agenda_item": "logistics",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Pilar",
+   "text": "For check-in, yes. For the auction tables, we need about five more.",
+   "agenda_item": "logistics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Graham",
+   "text": "The high school's service club helped another charity last month. They were very good.",
+   "agenda_item": "logistics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Jerome",
+   "text": "Someone ought to read the hotel's cancellation terms too, just in case.",
+   "agenda_item": "logistics",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Pilar",
+   "text": "I'll call their advisor on Monday.",
+   "agenda_item": "logistics",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Jerome",
+   "text": "The date's November fifteenth for everything, including the hotel contract?",
+   "agenda_item": "logistics",
+   "direction": null,
+   "event_ids": [
+    "E037",
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Pilar",
+   "text": "The fifteenth. The hotel, the caterer and Dana are all booked for that night.",
+   "agenda_item": "logistics",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Yvonne",
+   "text": "Who's taking care of Rosa on the night, so she isn't alone before she speaks?",
+   "agenda_item": "logistics",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Graham",
+   "text": "I'll have a budget update for the next meeting, with the keynote fee in it.",
+   "agenda_item": "logistics",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Yvonne",
+   "text": "Thank you. We'll fund those beds.",
+   "agenda_item": "logistics",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Graham",
+   "agenda_item": "money",
+   "fact_id": "F2",
+   "claimed_value": "$38,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Graham",
+   "agenda_item": "money",
+   "fact_id": "F3",
+   "claimed_value": "$200,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 2,
+   "speaker": "Yvonne",
+   "agenda_item": "money",
+   "fact_id": "F4",
+   "claimed_value": "$180,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Yvonne",
+   "agenda_item": "money",
+   "fact_id": "F3",
+   "claimed_value": "$200,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Pilar",
+   "agenda_item": "money",
+   "fact_id": "F10",
+   "claimed_value": "$25,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Yvonne",
+   "agenda_item": "money",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 6,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Graham",
+   "agenda_item": "money",
+   "fact_id": "F11",
+   "claimed_value": "$10,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Graham",
+   "agenda_item": "money",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 10,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Graham",
+   "agenda_item": "money",
+   "fact_id": "F4",
+   "claimed_value": "$164,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Yvonne",
+   "agenda_item": "money",
+   "fact_id": "F4",
+   "claimed_value": "$164,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Graham",
+   "agenda_item": "money",
+   "fact_id": "F4",
+   "claimed_value": "$164,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Graham",
+   "agenda_item": "money",
+   "fact_id": "F3",
+   "claimed_value": "$200,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 12,
+   "speaker": "Pilar",
+   "agenda_item": "program",
+   "fact_id": "F9",
+   "claimed_value": "$5,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Yvonne",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 16,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Jerome",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 19,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Jerome",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 20,
+   "speaker": "Yvonne",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 21,
+   "speaker": "Pilar",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Graham",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 23,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Yvonne",
+   "agenda_item": "program",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 27,
+   "speaker": "Jerome",
+   "agenda_item": "tables",
+   "fact_id": "F8",
+   "claimed_value": "12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Jerome",
+   "agenda_item": "tables",
+   "fact_id": "F7",
+   "claimed_value": "$3,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Graham",
+   "agenda_item": "tables",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 29,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Graham",
+   "agenda_item": "tables",
+   "fact_id": "F8",
+   "claimed_value": "9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Jerome",
+   "agenda_item": "tables",
+   "fact_id": "F8",
+   "claimed_value": "9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Yvonne",
+   "agenda_item": "tables",
+   "fact_id": "F8",
+   "claimed_value": "9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 31,
+   "speaker": "Jerome",
+   "agenda_item": "tables",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Pilar",
+   "agenda_item": "tables",
+   "fact_id": "F5",
+   "claimed_value": "210",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Pilar",
+   "agenda_item": "tables",
+   "fact_id": "F6",
+   "claimed_value": "320",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Jerome",
+   "agenda_item": "tables",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Jerome",
+   "agenda_item": "tables",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 39,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 40,
+   "speaker": "Yvonne",
+   "agenda_item": "tables",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Pilar",
+   "agenda_item": "logistics",
+   "fact_id": "F12",
+   "claimed_value": "35",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Yvonne",
+   "agenda_item": "logistics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Jerome",
+   "agenda_item": "logistics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 46,
+   "speaker": "Pilar",
+   "agenda_item": "logistics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Jerome",
+   "agenda_item": "logistics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 48,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Jerome",
+   "agenda_item": "logistics",
+   "fact_id": "F1",
+   "claimed_value": "November 15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 48,
+   "speaker": "Pilar",
+   "agenda_item": "logistics",
+   "fact_id": "F1",
+   "claimed_value": "November 15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 49,
+   "speaker": "Yvonne",
+   "agenda_item": "logistics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 50,
+   "speaker": "Graham",
+   "agenda_item": "logistics",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Yvonne",
+   "text": "Thank you for coming. This gala matters more than usual this year. We turned women away last month.",
+   "start_s": 0.5,
+   "end_s": 7.468
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Graham",
+   "text": "The budget for the evening is thirty-eight thousand. The goal is two hundred thousand.",
+   "start_s": 8.624,
+   "end_s": 14.624
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Yvonne",
+   "text": "Last year we raised a hundred and eighty, so two hundred is a stretch but not a fantasy.",
+   "start_s": 15.772,
+   "end_s": 22.74
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Pilar",
+   "text": "And this year we have the matching pledge. Twenty-five thousand, if we raise it first.",
+   "start_s": 22.997,
+   "end_s": 28.291
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Jerome",
+   "text": "The matching pledge is a great story for the paddle raise. Every dollar doubled.",
+   "start_s": 28.576,
+   "end_s": 33.667
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Yvonne",
+   "text": "What does a bed cost us, for the paddle raise? People like to know what their money does.",
+   "start_s": 34.702,
+   "end_s": 41.67
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Graham",
+   "text": "Ten thousand funds one bed for a year.",
+   "start_s": 42.606,
+   "end_s": 46.035
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Pilar",
+   "text": "So the paddle raise could literally be \"fund a bed\". That's powerful.",
+   "start_s": 46.905,
+   "end_s": 51.14
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Yvonne",
+   "text": "That's exactly what I want. Four beds is the dream.",
+   "start_s": 51.648,
+   "end_s": 55.519
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Graham",
+   "text": "Sorry, a small thing. Last year's total, was it a hundred and eighty? My notes have a hundred and sixty-four.",
+   "start_s": 56.325,
+   "end_s": 64.896
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Yvonne",
+   "text": "Oh. You're probably right. A hundred and eighty was the pledges, before a few fell through.",
+   "start_s": 65.703,
+   "end_s": 71.896
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Graham",
+   "text": "A hundred and sixty-four, then. So two hundred is a bigger jump than it sounded.",
+   "start_s": 72.677,
+   "end_s": 79.106
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Pilar",
+   "text": "The program. I've booked Dana Whitlock as the keynote. She's wonderful, and the fee is five thousand.",
+   "start_s": 79.464,
+   "end_s": 85.464
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Graham",
+   "text": "That's a lot for a speech, in my opinion.",
+   "start_s": 86.095,
+   "end_s": 89.952
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Pilar",
+   "text": "She brings people. Last time she spoke at a gala, they raised a fortune.",
+   "start_s": 90.546,
+   "end_s": 95.487
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Yvonne",
+   "text": "The survivor speaker matters more to me than the keynote. Who is it this year?",
+   "start_s": 96.41,
+   "end_s": 102.216
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Pilar",
+   "text": "Rosa, from our transitional housing. She asked to do it. She's been practicing.",
+   "start_s": 103.411,
+   "end_s": 107.999
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Yvonne",
+   "text": "Rosa. That's brave of her. We need to make sure she's supported that night.",
+   "start_s": 109.148,
+   "end_s": 114.568
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Jerome",
+   "text": "Could she speak before dinner instead of after? People are more focused before the wine.",
+   "start_s": 115.312,
+   "end_s": 120.767
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Pilar",
+   "text": "She wanted to speak right before the paddle raise. That's when it matters most.",
+   "start_s": 121.412,
+   "end_s": 126.353
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Yvonne",
+   "text": "Then Rosa speaks right before the paddle raise, and the keynote opens the evening.",
+   "start_s": 126.821,
+   "end_s": 132.241
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Pilar",
+   "text": "I'll tell Rosa tomorrow and schedule a rehearsal with her at the hotel.",
+   "start_s": 132.477,
+   "end_s": 137.065
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Graham",
+   "text": "Has Dana's contract been signed by the board?",
+   "start_s": 137.292,
+   "end_s": 140.721
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Pilar",
+   "text": "Not yet. I signed the letter of intent myself.",
+   "start_s": 141.386,
+   "end_s": 144.562
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Graham",
+   "text": "That's not how it works, Pilar.",
+   "start_s": 145.08,
+   "end_s": 147.652
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Pilar",
+   "text": "I know. It was going to go to someone else. I'm sorry.",
+   "start_s": 148.232,
+   "end_s": 152.467
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Yvonne",
+   "text": "Let's get the contract to the board this week and do it properly.",
+   "start_s": 153.559,
+   "end_s": 158.591
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Jerome",
+   "text": "Tables. We've sold twelve corporate tables, at three thousand each.",
+   "start_s": 159.317,
+   "end_s": 162.953
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Graham",
+   "text": "Twelve? I only have nine invoices, I think. Maybe I'm missing some?",
+   "start_s": 163.714,
+   "end_s": 168.856
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Jerome",
+   "text": "No, you're right. Nine paid. Three said yes on the phone but haven't signed.",
+   "start_s": 169.292,
+   "end_s": 174.383
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Yvonne",
+   "text": "Then nine, until they sign.",
+   "start_s": 174.607,
+   "end_s": 176.542
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Jerome",
+   "text": "I'll chase the three this week. One of them is the bank, and they always come through.",
+   "start_s": 177.067,
+   "end_s": 183.249
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Pilar",
+   "text": "Individual tickets are at two hundred and ten. The ballroom holds three twenty.",
+   "start_s": 183.586,
+   "end_s": 188.174
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Graham",
+   "text": "So plenty of room for the last tables.",
+   "start_s": 188.884,
+   "end_s": 192.313
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Jerome",
+   "text": "Has anyone been to that new Lebanese place on Fifth? I took the bank people there and they loved it.",
+   "start_s": 193.512,
+   "end_s": 200.784
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Pilar",
+   "text": "The one with the garden? I want to go. I hear the bread is incredible.",
+   "start_s": 201.658,
+   "end_s": 206.953
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Graham",
+   "text": "My wife's been twice already. She says the lamb is the best in the city.",
+   "start_s": 207.335,
+   "end_s": 213.763
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Yvonne",
+   "text": "We should eat there to celebrate when this is over. Back to tables, though.",
+   "start_s": 214.857,
+   "end_s": 220.276
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Jerome",
+   "text": "Could the board members each bring a table of friends? That's how other galas fill up.",
+   "start_s": 221.273,
+   "end_s": 227.091
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Graham",
+   "text": "Some can. Some of us are the friends.",
+   "start_s": 228.025,
+   "end_s": 231.454
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Yvonne",
+   "text": "Let's ask every board member to host a table or buy two tickets. Not a requirement. An ask.",
+   "start_s": 232.561,
+   "end_s": 239.528
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Pilar",
+   "text": "Logistics. We have thirty-five volunteers so far.",
+   "start_s": 240.491,
+   "end_s": 242.961
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Yvonne",
+   "text": "Is that enough? Last year felt thin at check-in.",
+   "start_s": 243.951,
+   "end_s": 247.435
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Pilar",
+   "text": "For check-in, yes. For the auction tables, we need about five more.",
+   "start_s": 247.989,
+   "end_s": 252.224
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Graham",
+   "text": "The high school's service club helped another charity last month. They were very good.",
+   "start_s": 253.405,
+   "end_s": 259.405
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Jerome",
+   "text": "Someone ought to read the hotel's cancellation terms too, just in case.",
+   "start_s": 260.567,
+   "end_s": 264.931
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Pilar",
+   "text": "I'll call their advisor on Monday.",
+   "start_s": 265.292,
+   "end_s": 267.41
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Jerome",
+   "text": "The date's November fifteenth for everything, including the hotel contract?",
+   "start_s": 268.364,
+   "end_s": 272.0
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Pilar",
+   "text": "The fifteenth. The hotel, the caterer and Dana are all booked for that night.",
+   "start_s": 272.915,
+   "end_s": 277.856
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Yvonne",
+   "text": "Who's taking care of Rosa on the night, so she isn't alone before she speaks?",
+   "start_s": 278.517,
+   "end_s": 284.324
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Graham",
+   "text": "I'll have a budget update for the next meeting, with the keynote fee in it.",
+   "start_s": 285.054,
+   "end_s": 291.483
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Yvonne",
+   "text": "Thank you. We'll fund those beds.",
+   "start_s": 292.173,
+   "end_s": 294.496
+  }
+ ]
+}

@@ -1,0 +1,16 @@
+[Unit]
+Description=Strands Decider server (localhost only)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=whentospeak
+WorkingDirectory=/opt/when-to-speak
+EnvironmentFile=/etc/when-to-speak.env
+# Binds 127.0.0.1: only the app on this host can reach it.
+ExecStart=/opt/when-to-speak/.venv/bin/strands-decider serve ${DECIDER_MODEL} --host 127.0.0.1 --port 8099 --device ${DECIDER_DEVICE}
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

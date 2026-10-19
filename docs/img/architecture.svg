@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" width="1200" height="780" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Knows When to Speak: architecture</title>
+  <desc id="d">Each transcript line updates a rolling meeting state. A Strands intervention asks the local Strands Decider up to seven yes/no questions in one call. A tiered policy turns the confidences into silent, note or speak. Only on speak does the Strands agent call an LLM on Amazon Bedrock, which uses tools to record items, check figures and compose a short spoken line. Decider and the app run on one GPU EC2 instance; Decider is reachable only from localhost.</desc>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#57606a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#2f6fdb"/>
+    </marker>
+    <marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#8250df"/>
+    </marker>
+    <style>
+      .t { fill: #1f2328; font-size: 15px; font-weight: 650; }
+      .s { fill: #57606a; font-size: 12.5px; }
+      .xs { fill: #57606a; font-size: 11.5px; }
+      .mono { font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace; font-size: 12px; fill: #1f2328; }
+      .frame { fill: none; stroke: #8c959f; stroke-width: 1.5; stroke-dasharray: 6 4; }
+      .svc { fill: #f6f8fa; stroke: #d0d7de; stroke-width: 1.2; }
+      .box { fill: #ffffff; stroke: #8c959f; stroke-width: 1.4; }
+      .dec { fill: #eaf2ff; stroke: #2f6fdb; stroke-width: 2; }
+      .llm { fill: #f5efff; stroke: #8250df; stroke-width: 2; }
+      .lbl { fill: #57606a; font-size: 12px; font-weight: 600; letter-spacing: .04em; }
+      .edge { stroke: #57606a; stroke-width: 1.6; fill: none; }
+      .eb { stroke: #2f6fdb; stroke-width: 1.8; fill: none; }
+      .ep { stroke: #8250df; stroke-width: 1.8; fill: none; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="780" fill="#ffffff"/>
+
+  <!-- EC2 frame -->
+  <rect class="frame" x="200" y="20" width="770" height="740" rx="14"/>
+  <text class="lbl" x="218" y="44">EC2 g6.xlarge · NVIDIA L4 · us-east-2 · no SSH (SSM only)</text>
+
+  <!-- Decider service (top) -->
+  <rect class="svc" x="218" y="58" width="734" height="152" rx="10"/>
+  <text class="lbl" x="234" y="82">decider.service · 127.0.0.1:8099 only</text>
+  <text class="xs" x="236" y="118">A quiet line costs one local</text>
+  <text class="xs" x="236" y="134">forward pass and no LLM tokens.</text>
+  <text class="xs" x="236" y="160">Model files are prefetched</text>
+  <text class="xs" x="236" y="176">at first boot.</text>
+
+  <rect class="dec" x="520" y="90" width="300" height="108" rx="10"/>
+  <text class="t" x="536" y="114">Strands Decider 2B (GPU)</text>
+  <text class="xs" x="536" y="135">action item? decision? figure to check?</text>
+  <text class="xs" x="536" y="151">question asked? answered? off topic?</text>
+  <text class="xs" x="536" y="167">already flagged? · up to 7 in one call</text>
+  <text class="s" x="536" y="188" font-weight="650" fill="#2f6fdb">163 ms p50 · 184 ms p95</text>
+
+  <!-- App service -->
+  <rect class="svc" x="218" y="232" width="734" height="510" rx="10"/>
+  <text class="lbl" x="234" y="256">when-to-speak.service · FastAPI + Strands Agents · port 8080</text>
+
+  <!-- Gate <-> Decider -->
+  <path class="eb" d="M630 310V202" marker-end="url(#ab)"/>
+  <path class="eb" d="M710 202V306" marker-end="url(#ab)"/>
+  <text class="xs" x="520" y="280">state + questions</text>
+  <text class="xs" x="718" y="280">confidence per answer</text>
+
+  <!-- Row: line -> state -> gate -> policy -->
+  <rect class="box" x="236" y="310" width="128" height="86" rx="8"/>
+  <text class="t" x="250" y="337">Transcript</text>
+  <text class="t" x="250" y="356">line</text>
+  <text class="xs" x="250" y="380">every utterance</text>
+
+  <rect class="box" x="390" y="310" width="170" height="86" rx="8"/>
+  <text class="t" x="404" y="337">Meeting state</text>
+  <text class="xs" x="404" y="358">≤700-token window, LATEST</text>
+  <text class="xs" x="404" y="374">marker, agenda item, fact</text>
+  <text class="xs" x="404" y="390">keys, already flagged</text>
+
+  <rect class="dec" x="586" y="310" width="168" height="86" rx="8"/>
+  <text class="t" x="600" y="337">Interjection gate</text>
+  <text class="xs" x="600" y="358">Strands intervention,</text>
+  <text class="xs" x="600" y="374">before every model call;</text>
+  <text class="xs" x="600" y="390">denies quiet lines</text>
+
+  <rect class="box" x="780" y="310" width="154" height="86" rx="8"/>
+  <text class="t" x="794" y="337">Tiered policy</text>
+  <text class="xs" x="794" y="358">per-category thresholds,</text>
+  <text class="xs" x="794" y="374">cooldown, dedupe,</text>
+  <text class="xs" x="794" y="390">streaks</text>
+
+  <path class="edge" d="M364 353H386" marker-end="url(#a)"/>
+  <path class="edge" d="M560 353H582" marker-end="url(#a)"/>
+  <path class="edge" d="M754 353H776" marker-end="url(#a)"/>
+
+  <!-- Outcomes -->
+  <path class="edge" d="M857 396V422" marker-end="url(#a)"/>
+  <rect x="790" y="426" width="134" height="40" rx="20" fill="#f6f8fa" stroke="#8c959f" stroke-width="1.3"/>
+  <text class="t" x="806" y="444" font-size="13.5">SILENT</text>
+  <text class="xs" x="806" y="459">nothing · 0 tokens</text>
+
+  <rect x="790" y="478" width="134" height="40" rx="20" fill="#fff6dd" stroke="#bf8700" stroke-width="1.3"/>
+  <text class="t" x="806" y="496" font-size="13.5">NOTE</text>
+  <text class="xs" x="806" y="511">silent card · 0 tokens</text>
+
+  <rect x="790" y="530" width="134" height="40" rx="20" fill="#eaf2ff" stroke="#2f6fdb" stroke-width="1.6"/>
+  <text class="t" x="806" y="548" font-size="13.5">SPEAK</text>
+  <text class="xs" x="806" y="563">wake the LLM</text>
+
+  <text class="xs" x="606" y="456">About 80% of lines</text>
+  <text class="xs" x="606" y="472">end at SILENT or NOTE,</text>
+  <text class="xs" x="606" y="488">with no LLM call.</text>
+
+  <!-- Strands agent -->
+  <rect class="llm" x="236" y="490" width="330" height="152" rx="10"/>
+  <text class="t" x="252" y="516">Strands Agent (only on SPEAK)</text>
+  <text class="xs" x="252" y="536">told which category fired and how confident</text>
+  <text class="mono" x="252" y="560">extract_action_item</text>
+  <text class="mono" x="252" y="578">record_decision</text>
+  <text class="mono" x="252" y="596">check_fact  (vs the fact sheet)</text>
+  <text class="mono" x="252" y="614">compose_interjection  (≤20 words)</text>
+  <text class="xs" x="252" y="632">≤4 model calls per wake · 60 s speech cooldown</text>
+  <path class="eb" d="M790 550H570" marker-end="url(#ab)"/>
+
+  <!-- Output -->
+  <rect class="box" x="236" y="664" width="330" height="60" rx="8"/>
+  <text class="t" x="252" y="688">Spoken line + cards</text>
+  <text class="xs" x="252" y="708">action items, decisions, fact checks, notes, recap</text>
+  <path class="ep" d="M400 642V660" marker-end="url(#ap)"/>
+
+  <!-- Browser -->
+  <rect class="box" x="20" y="440" width="150" height="120" rx="10"/>
+  <text class="t" x="36" y="468">Browser</text>
+  <text class="s" x="36" y="490">meeting replay UI,</text>
+  <text class="s" x="36" y="508">decision panel,</text>
+  <text class="s" x="36" y="526">cards, spoken lines</text>
+  <text class="xs" x="36" y="548">one allowed IP</text>
+
+  <path class="edge" d="M150 440C150 370 190 353 232 353" marker-end="url(#a)"/>
+  <text class="xs" x="72" y="392">start · speed</text>
+  <path class="edge" d="M236 694C150 694 110 640 110 564" marker-end="url(#a)"/>
+  <text class="xs" x="40" y="620">WebSocket</text>
+  <text class="xs" x="40" y="636">events</text>
+
+  <!-- Bedrock -->
+  <rect class="llm" x="1000" y="556" width="180" height="128" rx="10"/>
+  <text class="t" x="1016" y="582">Amazon Bedrock</text>
+  <text class="s" x="1016" y="604">gpt-oss-20b</text>
+  <text class="xs" x="1016" y="624">Converse API</text>
+  <text class="xs" x="1016" y="644">instance role scoped</text>
+  <text class="xs" x="1016" y="660">to this one model</text>
+  <path class="ep" d="M566 610H996" marker-end="url(#ap)"/>
+  <text class="xs" x="790" y="602">tool-using model calls</text>
+</svg>

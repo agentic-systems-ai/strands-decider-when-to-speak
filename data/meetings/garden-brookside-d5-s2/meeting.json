@@ -1,0 +1,1553 @@
+{
+ "meeting_id": "garden-brookside-d5-s2",
+ "config": {
+  "theme": "Community garden committee: plots, water and the spring fair",
+  "domain_pack": "community_group",
+  "drama": 0.5,
+  "seed": 2,
+  "duration_min": 4.0,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   2,
+   17,
+   43,
+   45
+  ],
+  "reviewed_noclaim": [
+   2,
+   43
+  ]
+ },
+ "cast": {
+  "theme": "Community garden committee: plots, water and the spring fair",
+  "personas": [
+   {
+    "name": "Odette",
+    "role": "Committee chair",
+    "goals": "Keep the garden open and friendly",
+    "hidden_agenda": "Doesn't want a garden that feels like a fortress",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Ike",
+    "role": "Plot holder, upset about the thefts",
+    "goals": "Stop the thefts",
+    "hidden_agenda": "Lost his entire tomato crop and is furious",
+    "verbosity": 4,
+    "wpm": 175,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Raul",
+    "role": "Looks after water",
+    "goals": "Lower the water bill",
+    "hidden_agenda": "Installed the timers himself on a weekend",
+    "verbosity": 2,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Petra",
+    "role": "Spring fair organizer",
+    "goals": "A fair that funds the garden",
+    "hidden_agenda": "Wants to sell plant starts from her own greenhouse",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Garden committee - monthly meeting",
+   "org": "Brookside Community Garden (fictional)",
+   "agenda": [
+    {
+     "id": "theft",
+     "title": "Produce theft",
+     "goal": "Decide what to do about the thefts",
+     "timebox_min": 1.6
+    },
+    {
+     "id": "water",
+     "title": "Water",
+     "goal": "Timers and the bill",
+     "timebox_min": 0.64
+    },
+    {
+     "id": "fair",
+     "title": "Spring fair",
+     "goal": "Plan the fair",
+     "timebox_min": 1.01
+    },
+    {
+     "id": "fees",
+     "title": "Fees and hours",
+     "goal": "Confirm next year's fee and volunteer hours",
+     "timebox_min": 0.77
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "plots",
+     "statement": "Plots = 44",
+     "value": "44"
+    },
+    {
+     "id": "F2",
+     "key": "theft_reports",
+     "statement": "Theft reports this season = 9",
+     "value": "9"
+    },
+    {
+     "id": "F3",
+     "key": "fence_quote",
+     "statement": "Taller fence quote = $4,200",
+     "value": "$4,200"
+    },
+    {
+     "id": "F4",
+     "key": "camera_cost",
+     "statement": "Trail camera = $350",
+     "value": "$350"
+    },
+    {
+     "id": "F5",
+     "key": "water_timers",
+     "statement": "Water timers installed = 8",
+     "value": "8"
+    },
+    {
+     "id": "F6",
+     "key": "water_bill",
+     "statement": "Last season's water bill = $1,640",
+     "value": "$1,640"
+    },
+    {
+     "id": "F7",
+     "key": "fair_date",
+     "statement": "Spring fair = Saturday, May 10",
+     "value": "May 10"
+    },
+    {
+     "id": "F8",
+     "key": "fair_profit",
+     "statement": "Fair profit last year = $1,920",
+     "value": "$1,920"
+    },
+    {
+     "id": "F9",
+     "key": "balance",
+     "statement": "Bank balance = $3,700",
+     "value": "$3,700"
+    },
+    {
+     "id": "F10",
+     "key": "plot_fee",
+     "statement": "Plot fee = $50",
+     "value": "$50"
+    },
+    {
+     "id": "F11",
+     "key": "volunteer_hours",
+     "statement": "Volunteer hours per plot = 6",
+     "value": "6"
+    },
+    {
+     "id": "F12",
+     "key": "gate_code_changes",
+     "statement": "Gate code changes this year = 2",
+     "value": "2"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "theft",
+    "summary": "How bad it is; Ike exaggerates, then the options",
+    "n_turns": 19,
+    "events": []
+   },
+   {
+    "agenda_item": "water",
+    "summary": "Timers and the bill; Raul's figure stands",
+    "n_turns": 9,
+    "events": []
+   },
+   {
+    "agenda_item": "fair",
+    "summary": "The spring fair; Petra's profit memory is high, corrected later; a detour about a neighbor's chickens",
+    "n_turns": 13,
+    "events": []
+   },
+   {
+    "agenda_item": "fees",
+    "summary": "Next year's fee",
+    "n_turns": 9,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Odette",
+   "text": "Let's start with the thefts. I know people are upset.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Ike",
+   "text": "Upset is an understatement. There have been over twenty thefts this season. My tomatoes are gone. All of them.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Odette",
+   "text": "I'm so sorry, Ike. The log has nine reports, though. Maybe some weren't reported?",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Ike",
+   "text": "Nine reported. Probably more that people didn't bother to write down.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Petra",
+   "text": "Mine weren't touched, for what it's worth. It seems to be the plots by the back gate.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Raul",
+   "text": "The back gate is the one with the broken latch. Anyone can push it open.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Ike",
+   "text": "Then why hasn't it been fixed?",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Raul",
+   "text": "I've fixed it twice. It keeps getting forced.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Ike",
+   "text": "We need a taller fence. Now.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Odette",
+   "text": "The fence quote was forty-two hundred. That's more than we have.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Raul",
+   "text": "The balance is thirty-seven hundred. So, no fence this year.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Petra",
+   "text": "What about a trail camera? They're about three hundred and fifty.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [
+    "E007",
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Odette",
+   "text": "I don't love cameras in a community garden. It feels unfriendly.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Ike",
+   "text": "It feels unfriendly to have your tomatoes stolen.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Odette",
+   "text": "Fair. Okay, a camera on the back gate only, and a sign saying it's there.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Raul",
+   "text": "I'll buy the camera and put it up this weekend, and fix the latch properly with a padlock.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Petra",
+   "text": "Do we change the gate code again? That's twice already this year.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [
+    "E011",
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Odette",
+   "text": "Not yet. Let's see if the camera helps first.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Ike",
+   "text": "Fine.",
+   "agenda_item": "theft",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Odette",
+   "text": "Water. Raul?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Raul",
+   "text": "We have eight timers on the main beds now. The bill last season was twenty-two hundred, so they should help a lot.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E015",
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Petra",
+   "text": "That's a lot of water for forty-four plots.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Raul",
+   "text": "The timers alone should cut it by a quarter.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Odette",
+   "text": "Do we need more timers?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Raul",
+   "text": "Two more would cover the herb beds. They're cheap.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Odette",
+   "text": "Then let's get two more.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Ike",
+   "text": "My plot's tap leaks, by the way. It'd be nice if it got looked at before summer.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Raul",
+   "text": "Send me a photo and I'll fix it.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Petra",
+   "text": "The fair. It's on May tenth. Last year we made about three thousand.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E022",
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Odette",
+   "text": "That would be lovely again.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Ike",
+   "text": "Could we sell the excess produce at the fair? Well, what's left of it.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Petra",
+   "text": "Absolutely. A produce table would be great.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Raul",
+   "text": "The neighbor's chickens got into the garden again on Tuesday. They ate half my lettuce.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Ike",
+   "text": "Maybe the chickens are the thieves.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Petra",
+   "text": "The chickens don't take whole tomatoes, Ike.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Odette",
+   "text": "The fair. Petra, tell us what you need.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Petra",
+   "text": "Sorry, I just found last year's report. We made nineteen twenty, not three thousand. Three thousand was before the tent rental.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Odette",
+   "text": "Nineteen twenty. Still very useful.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Petra",
+   "text": "I'd like to sell plant starts from my greenhouse at the fair, with the money going to the garden.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Odette",
+   "text": "That's generous. Yes, please.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Petra",
+   "text": "I'll make the posters and put them up at the library and the cafe.",
+   "agenda_item": "fair",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Odette",
+   "text": "Fees. The plot fee is fifty, and six volunteer hours per plot.",
+   "agenda_item": "fees",
+   "direction": null,
+   "event_ids": [
+    "E030",
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Ike",
+   "text": "If we need a fence, maybe the fee should go up.",
+   "agenda_item": "fees",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Raul",
+   "text": "Sixty dollars would raise four hundred and forty more. Not a fence, but a start.",
+   "agenda_item": "fees",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Odette",
+   "text": "Let's put the fee question to the members at the fair, so everyone has a say.",
+   "agenda_item": "fees",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Petra",
+   "text": "Who counts the votes at the fair?",
+   "agenda_item": "fees",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Ike",
+   "text": "Do we know if the city has any grants for garden fencing?",
+   "agenda_item": "fees",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Odette",
+   "text": "I don't know. I'll look into it this week. Thank you, everyone.",
+   "agenda_item": "fees",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Petra",
+   "text": "Ike, I really am sorry about your tomatoes.",
+   "agenda_item": "fees",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Ike",
+   "text": "Thanks. Next year they'll be behind a camera.",
+   "agenda_item": "fees",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 1,
+   "speaker": "Ike",
+   "agenda_item": "theft",
+   "fact_id": "F2",
+   "claimed_value": "over 20",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Odette",
+   "agenda_item": "theft",
+   "fact_id": "F2",
+   "claimed_value": "9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Ike",
+   "agenda_item": "theft",
+   "fact_id": "F2",
+   "claimed_value": "9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Ike",
+   "agenda_item": "theft",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 7,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Odette",
+   "agenda_item": "theft",
+   "fact_id": "F3",
+   "claimed_value": "$4,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Raul",
+   "agenda_item": "theft",
+   "fact_id": "F9",
+   "claimed_value": "$3,700",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Petra",
+   "agenda_item": "theft",
+   "fact_id": "F4",
+   "claimed_value": "$350",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Petra",
+   "agenda_item": "theft",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 12,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 14,
+   "speaker": "Odette",
+   "agenda_item": "theft",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 15,
+   "speaker": "Raul",
+   "agenda_item": "theft",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Petra",
+   "agenda_item": "theft",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 17,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Petra",
+   "agenda_item": "theft",
+   "fact_id": "F12",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Odette",
+   "agenda_item": "theft",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Odette",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 20,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Raul",
+   "agenda_item": "water",
+   "fact_id": "F5",
+   "claimed_value": "8",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 20,
+   "speaker": "Raul",
+   "agenda_item": "water",
+   "fact_id": "F6",
+   "claimed_value": "$2,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Petra",
+   "agenda_item": "water",
+   "fact_id": "F1",
+   "claimed_value": "44",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Odette",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 24,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 25,
+   "speaker": "Odette",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Ike",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 27,
+   "speaker": "Raul",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Petra",
+   "agenda_item": "fair",
+   "fact_id": "F7",
+   "claimed_value": "May 10",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 28,
+   "speaker": "Petra",
+   "agenda_item": "fair",
+   "fact_id": "F8",
+   "claimed_value": "$3,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Ike",
+   "agenda_item": "fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 31,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 32,
+   "speaker": "Raul",
+   "agenda_item": "fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Petra",
+   "agenda_item": "fair",
+   "fact_id": "F8",
+   "claimed_value": "$1,920",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Odette",
+   "agenda_item": "fair",
+   "fact_id": "F8",
+   "claimed_value": "$1,920",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 39,
+   "speaker": "Odette",
+   "agenda_item": "fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 40,
+   "speaker": "Petra",
+   "agenda_item": "fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Odette",
+   "agenda_item": "fees",
+   "fact_id": "F10",
+   "claimed_value": "$50",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Odette",
+   "agenda_item": "fees",
+   "fact_id": "F11",
+   "claimed_value": "6",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Ike",
+   "agenda_item": "fees",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Odette",
+   "agenda_item": "fees",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 45,
+   "speaker": "Petra",
+   "agenda_item": "fees",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Ike",
+   "agenda_item": "fees",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 47,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 47,
+   "speaker": "Odette",
+   "agenda_item": "fees",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Odette",
+   "text": "Let's start with the thefts. I know people are upset.",
+   "start_s": 0.5,
+   "end_s": 4.5
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Ike",
+   "text": "Upset is an understatement. There have been over twenty thefts this season. My tomatoes are gone. All of them.",
+   "start_s": 5.656,
+   "end_s": 12.17
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Odette",
+   "text": "I'm so sorry, Ike. The log has nine reports, though. Maybe some weren't reported?",
+   "start_s": 13.318,
+   "end_s": 18.918
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Ike",
+   "text": "Nine reported. Probably more that people didn't bother to write down.",
+   "start_s": 19.175,
+   "end_s": 22.946
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Petra",
+   "text": "Mine weren't touched, for what it's worth. It seems to be the plots by the back gate.",
+   "start_s": 23.231,
+   "end_s": 29.413
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Raul",
+   "text": "The back gate is the one with the broken latch. Anyone can push it open.",
+   "start_s": 30.448,
+   "end_s": 36.655
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Ike",
+   "text": "Then why hasn't it been fixed?",
+   "start_s": 37.591,
+   "end_s": 39.648
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Raul",
+   "text": "I've fixed it twice. It keeps getting forced.",
+   "start_s": 40.518,
+   "end_s": 43.828
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Ike",
+   "text": "We need a taller fence. Now.",
+   "start_s": 44.336,
+   "end_s": 46.393
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Odette",
+   "text": "The fence quote was forty-two hundred. That's more than we have.",
+   "start_s": 47.199,
+   "end_s": 51.599
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Raul",
+   "text": "The balance is thirty-seven hundred. So, no fence this year.",
+   "start_s": 52.406,
+   "end_s": 56.544
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Petra",
+   "text": "What about a trail camera? They're about three hundred and fifty.",
+   "start_s": 57.325,
+   "end_s": 61.325
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Odette",
+   "text": "I don't love cameras in a community garden. It feels unfriendly.",
+   "start_s": 61.683,
+   "end_s": 66.083
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Ike",
+   "text": "It feels unfriendly to have your tomatoes stolen.",
+   "start_s": 66.714,
+   "end_s": 69.457
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Odette",
+   "text": "Fair. Okay, a camera on the back gate only, and a sign saying it's there.",
+   "start_s": 70.051,
+   "end_s": 76.051
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Raul",
+   "text": "I'll buy the camera and put it up this weekend, and fix the latch properly with a padlock.",
+   "start_s": 76.974,
+   "end_s": 84.422
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Petra",
+   "text": "Do we change the gate code again? That's twice already this year.",
+   "start_s": 85.617,
+   "end_s": 89.98
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Odette",
+   "text": "Not yet. Let's see if the camera helps first.",
+   "start_s": 91.129,
+   "end_s": 94.729
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Ike",
+   "text": "Fine.",
+   "start_s": 95.473,
+   "end_s": 95.816
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Odette",
+   "text": "Water. Raul?",
+   "start_s": 96.461,
+   "end_s": 97.261
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Raul",
+   "text": "We have eight timers on the main beds now. The bill last season was twenty-two hundred, so they should help a lot.",
+   "start_s": 97.729,
+   "end_s": 106.833
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Petra",
+   "text": "That's a lot of water for forty-four plots.",
+   "start_s": 107.069,
+   "end_s": 109.978
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Raul",
+   "text": "The timers alone should cut it by a quarter.",
+   "start_s": 110.205,
+   "end_s": 113.93
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Odette",
+   "text": "Do we need more timers?",
+   "start_s": 114.595,
+   "end_s": 116.595
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Raul",
+   "text": "Two more would cover the herb beds. They're cheap.",
+   "start_s": 117.113,
+   "end_s": 120.838
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Odette",
+   "text": "Then let's get two more.",
+   "start_s": 121.418,
+   "end_s": 123.418
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Ike",
+   "text": "My plot's tap leaks, by the way. It'd be nice if it got looked at before summer.",
+   "start_s": 124.51,
+   "end_s": 130.338
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Raul",
+   "text": "Send me a photo and I'll fix it.",
+   "start_s": 131.064,
+   "end_s": 134.374
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Petra",
+   "text": "The fair. It's on May tenth. Last year we made about three thousand.",
+   "start_s": 135.135,
+   "end_s": 139.862
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Odette",
+   "text": "That would be lovely again.",
+   "start_s": 140.298,
+   "end_s": 142.298
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Ike",
+   "text": "Could we sell the excess produce at the fair? Well, what's left of it.",
+   "start_s": 142.522,
+   "end_s": 147.322
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Petra",
+   "text": "Absolutely. A produce table would be great.",
+   "start_s": 147.847,
+   "end_s": 150.393
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Raul",
+   "text": "The neighbor's chickens got into the garden again on Tuesday. They ate half my lettuce.",
+   "start_s": 150.73,
+   "end_s": 156.937
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Ike",
+   "text": "Maybe the chickens are the thieves.",
+   "start_s": 157.647,
+   "end_s": 159.704
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Petra",
+   "text": "The chickens don't take whole tomatoes, Ike.",
+   "start_s": 160.903,
+   "end_s": 163.448
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Odette",
+   "text": "The fair. Petra, tell us what you need.",
+   "start_s": 164.322,
+   "end_s": 167.522
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Petra",
+   "text": "Sorry, I just found last year's report. We made nineteen twenty, not three thousand. Three thousand was before the tent rental.",
+   "start_s": 167.904,
+   "end_s": 175.54
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Odette",
+   "text": "Nineteen twenty. Still very useful.",
+   "start_s": 176.634,
+   "end_s": 178.634
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Petra",
+   "text": "I'd like to sell plant starts from my greenhouse at the fair, with the money going to the garden.",
+   "start_s": 179.631,
+   "end_s": 186.54
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Odette",
+   "text": "That's generous. Yes, please.",
+   "start_s": 187.474,
+   "end_s": 189.074
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Petra",
+   "text": "I'll make the posters and put them up at the library and the cafe.",
+   "start_s": 190.181,
+   "end_s": 195.272
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Odette",
+   "text": "Fees. The plot fee is fifty, and six volunteer hours per plot.",
+   "start_s": 196.235,
+   "end_s": 201.035
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Ike",
+   "text": "If we need a fence, maybe the fee should go up.",
+   "start_s": 202.025,
+   "end_s": 205.796
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Raul",
+   "text": "Sixty dollars would raise four hundred and forty more. Not a fence, but a start.",
+   "start_s": 206.35,
+   "end_s": 212.557
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Odette",
+   "text": "Let's put the fee question to the members at the fair, so everyone has a say.",
+   "start_s": 213.738,
+   "end_s": 220.138
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Petra",
+   "text": "Who counts the votes at the fair?",
+   "start_s": 221.3,
+   "end_s": 223.845
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Ike",
+   "text": "Do we know if the city has any grants for garden fencing?",
+   "start_s": 224.206,
+   "end_s": 228.32
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Odette",
+   "text": "I don't know. I'll look into it this week. Thank you, everyone.",
+   "start_s": 229.274,
+   "end_s": 234.074
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Petra",
+   "text": "Ike, I really am sorry about your tomatoes.",
+   "start_s": 234.989,
+   "end_s": 237.898
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Ike",
+   "text": "Thanks. Next year they'll be behind a camera.",
+   "start_s": 238.559,
+   "end_s": 241.302
+  }
+ ]
+}

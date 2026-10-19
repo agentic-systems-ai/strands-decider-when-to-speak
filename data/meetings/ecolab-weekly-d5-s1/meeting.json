@@ -1,0 +1,2384 @@
+{
+ "meeting_id": "ecolab-weekly-d5-s1",
+ "config": {
+  "theme": "Weekly meeting of a university ecology research lab",
+  "domain_pack": "research_lab",
+  "drama": 0.5,
+  "seed": 1,
+  "duration_min": 6.2,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   17,
+   19,
+   28,
+   37,
+   46,
+   53,
+   57,
+   58,
+   78,
+   81
+  ],
+  "reviewed_noclaim": [
+   19,
+   53,
+   57
+  ]
+ },
+ "cast": {
+  "theme": "Weekly meeting of a university ecology research lab",
+  "personas": [
+   {
+    "name": "Elena",
+    "role": "Principal investigator",
+    "goals": "A productive season and June graduating on time",
+    "hidden_agenda": "The grant renewal depends on this season's data",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [
+     "right",
+     "let's be strategic"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Tariq",
+    "role": "Postdoc, leads the field season",
+    "goals": "Get into the field early",
+    "hidden_agenda": "Interviewing for faculty jobs, distracted",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [
+     "basically",
+     "in the field"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "June",
+    "role": "Fourth-year PhD student",
+    "goals": "Finish the thesis chapter",
+    "hidden_agenda": "Behind on processing and embarrassed about it",
+    "verbosity": 2,
+    "wpm": 150,
+    "catchphrases": [
+     "I think",
+     "sorry"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Felix",
+    "role": "Lab manager",
+    "goals": "Keep the equipment alive and the budget sane",
+    "hidden_agenda": "Has been fixing camera traps on weekends",
+    "verbosity": 2,
+    "wpm": 140,
+    "catchphrases": [
+     "for what it's worth"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Hollis Lab weekly meeting",
+   "org": "Hollis Lab, Department of Ecology, Northfield University (fictional)",
+   "agenda": [
+    {
+     "id": "field_season",
+     "title": "Field season logistics",
+     "goal": "Lock the start date",
+     "timebox_min": 1.92
+    },
+    {
+     "id": "data_status",
+     "title": "Data and sample backlog",
+     "goal": "Get an honest status on processing and what to sequence",
+     "timebox_min": 1.77
+    },
+    {
+     "id": "deadlines",
+     "title": "Papers and deadlines",
+     "goal": "Agree priorities between the thesis chapter and the side paper",
+     "timebox_min": 1.26
+    },
+    {
+     "id": "lab_ops",
+     "title": "Lab operations and budget",
+     "goal": "Check the grant balance and the lab's practical needs",
+     "timebox_min": 1.26
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "field_sites",
+     "statement": "Field sites this season = 14",
+     "value": "14"
+    },
+    {
+     "id": "F2",
+     "key": "field_start_date",
+     "statement": "Planned field season start = May 18",
+     "value": "May 18"
+    },
+    {
+     "id": "F3",
+     "key": "camera_traps_working",
+     "statement": "Camera traps working = 36 of 40",
+     "value": "36"
+    },
+    {
+     "id": "F4",
+     "key": "samples_processed",
+     "statement": "Samples processed so far = 1,240",
+     "value": "1,240"
+    },
+    {
+     "id": "F5",
+     "key": "sample_backlog",
+     "statement": "Samples still unprocessed = 380",
+     "value": "380"
+    },
+    {
+     "id": "F6",
+     "key": "grant_remaining",
+     "statement": "Remaining grant balance = $27,400",
+     "value": "$27,400"
+    },
+    {
+     "id": "F7",
+     "key": "abstract_deadline",
+     "statement": "Conference abstract deadline = February 2",
+     "value": "February 2"
+    },
+    {
+     "id": "F8",
+     "key": "truck_rental_weekly",
+     "statement": "Field truck rental = $540 per week",
+     "value": "$540"
+    },
+    {
+     "id": "F9",
+     "key": "permit_expiry",
+     "statement": "Research permit expires April 30",
+     "value": "April 30"
+    },
+    {
+     "id": "F10",
+     "key": "undergrad_assistants",
+     "statement": "Undergraduate field assistants = 5",
+     "value": "5"
+    },
+    {
+     "id": "F11",
+     "key": "sequencing_cost",
+     "statement": "Sequencing cost = $18 per sample",
+     "value": "$18"
+    },
+    {
+     "id": "F12",
+     "key": "revision_due",
+     "statement": "Manuscript revision due March 9",
+     "value": "March 9"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "field_season",
+    "summary": "Dates, sites and traps; Tariq gets the permit date wrong and nobody notices",
+    "n_turns": 25,
+    "events": []
+   },
+   {
+    "agenda_item": "data_status",
+    "summary": "The backlog is bigger than June says; deciding what to sequence",
+    "n_turns": 23,
+    "events": []
+   },
+   {
+    "agenda_item": "deadlines",
+    "summary": "Thesis chapter vs the side paper; Elena misremembers the abstract deadline, June corrects her",
+    "n_turns": 17,
+    "events": []
+   },
+   {
+    "agenda_item": "lab_ops",
+    "summary": "The grant balance and a quiet fight about the freezer",
+    "n_turns": 19,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Elena",
+   "text": "Right, let's start. Field season first, since it's coming up fast. Tariq?",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Tariq",
+   "text": "Basically, we're on track for May eighteenth, all fourteen sites.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E002",
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Elena",
+   "text": "All fourteen, including the ridge sites?",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E004",
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Tariq",
+   "text": "Including the ridge. The access road was cleared last week.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Felix",
+   "text": "For what it's worth, the camera traps are the bottleneck. Thirty-six of the forty work.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Elena",
+   "text": "What's wrong with the other four?",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Felix",
+   "text": "Two have dead boards, two have cracked housings. The housings I can fix. The boards, not really.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "June",
+   "text": "Do we need all forty out at once?",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Tariq",
+   "text": "In the field we lose a few to bears every season, so yes, basically.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Felix",
+   "text": "I'll order two replacement boards this week, out of the equipment line.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Elena",
+   "text": "Thank you, Felix.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Tariq",
+   "text": "And the permit is good through the end of May, so no rush there.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Elena",
+   "text": "Good. One less thing.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "June",
+   "text": "Are the undergrads confirmed?",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Tariq",
+   "text": "Five confirmed. One more maybe, if her summer class gets cancelled.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Elena",
+   "text": "Five is enough. A sixth would be nice.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Tariq",
+   "text": "Somebody needs to do the safety training with them before we go.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Elena",
+   "text": "Has anyone heard back from the parks office about site nine?",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Felix",
+   "text": "Sorry, the truck. We should talk about the truck.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Tariq",
+   "text": "Right, the truck rental is five forty a week. For the whole season that adds up.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Felix",
+   "text": "We could share with the Okafor lab, they're out at the same time.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Elena",
+   "text": "Maybe we split the truck with Okafor. Let me think about it.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Tariq",
+   "text": "In the field, sharing a truck means somebody's always waiting.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Elena",
+   "text": "Okay, the season starts May eighteenth, all fourteen sites. That's locked.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [
+    "E018",
+    "E019",
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Tariq",
+   "text": "Locked. Finally.",
+   "agenda_item": "field_season",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Elena",
+   "text": "Data. June, where are we with processing?",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "June",
+   "text": "I think, um, we've processed about twelve hundred.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Elena",
+   "text": "And what's left?",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "June",
+   "text": "About two hundred? Maybe a bit more.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Felix",
+   "text": "For what it's worth, the freezer log says three hundred and eighty still unprocessed.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "June",
+   "text": "Sorry. Yes. I was counting the ones I'd already sorted. It's three eighty.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Elena",
+   "text": "That's okay. It's better to know now. How long would three eighty take you?",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E027",
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "June",
+   "text": "Honestly, at my current pace, most of the summer.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Tariq",
+   "text": "Which is exactly when you need to be writing.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Elena",
+   "text": "Right. Let's be strategic. Do we need to sequence all of them?",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Tariq",
+   "text": "Basically, no. Half of them are the replicate sites. The core sites matter more.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Felix",
+   "text": "Sequencing is eighteen dollars a sample, so three eighty is real money anyway.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "June",
+   "text": "If we only did the core sites, I think it's about half of them.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Elena",
+   "text": "Then we sequence the core-site samples first and leave the replicates for the fall. That's the plan.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "June",
+   "text": "Okay. That's, okay, that's a relief, actually.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Tariq",
+   "text": "I can help with sorting if I'm not in the field.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Elena",
+   "text": "Tariq, you're going to be in the field.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Tariq",
+   "text": "Right, true.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Felix",
+   "text": "I'll set up a shared sheet so we can see what's left, site by site.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "June",
+   "text": "Thank you.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Tariq",
+   "text": "Did anyone else see the bear video from the ridge camera?",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [
+    "E034",
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Felix",
+   "text": "The one where it licks the lens? I've watched it about ten times.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "June",
+   "text": "My mom made it her phone background.",
+   "agenda_item": "data_status",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Elena",
+   "text": "Okay, that's very good, and we're moving on. Deadlines. The conference abstract is due February twelfth, if I remember right.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "June",
+   "text": "Sorry, I think it's the second. February second.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Elena",
+   "text": "The second. That's, okay, that's sooner.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Tariq",
+   "text": "And the revision for the moth paper is due March ninth.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "June",
+   "text": "Do I have to be on the moth paper revision?",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Elena",
+   "text": "You're second author. But the chapter matters more.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Tariq",
+   "text": "The reviewers mostly want the stats redone. Basically, that's me anyway.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Elena",
+   "text": "Then let's be strategic. June, the chapter comes first, the moth revision is Tariq's. Settled.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "June",
+   "text": "Thank you. Really.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Tariq",
+   "text": "I'll redo the stats for the moth revision by the end of February.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Elena",
+   "text": "And the abstract? Who's writing it?",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Tariq",
+   "text": "It should probably come from the chapter data.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "June",
+   "text": "Maybe. If the chapter goes okay. I don't know.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Elena",
+   "text": "Let's see where the chapter is next week before we commit to the abstract.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "June",
+   "text": "Is it okay if I skip the reading group until the chapter's done?",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Elena",
+   "text": "For a few weeks, yes.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "June",
+   "text": "Okay. Great.",
+   "agenda_item": "deadlines",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Elena",
+   "text": "Last thing, lab ops. Felix, the money.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Felix",
+   "text": "Remaining on the grant is twenty-seven four.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Tariq",
+   "text": "That's less than I thought.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Felix",
+   "text": "The sequencing and the truck are the big ones this summer.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Tariq",
+   "text": "Sorry, someone's knocking, it's the department admin with a package.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "June",
+   "text": "No worries.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Elena",
+   "text": "Is the minus-eighty freezer still making that noise?",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [
+    "E049"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Felix",
+   "text": "It is. For what it's worth, I think the compressor's going.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Tariq",
+   "text": "If that freezer dies, we lose everything June hasn't processed.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "June",
+   "text": "Please don't say that.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 75,
+   "speaker": "Elena",
+   "text": "Should we move the samples to the department freezer as a backup?",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 76,
+   "speaker": "Felix",
+   "text": "The department freezer is full. I asked last month.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 77,
+   "speaker": "Elena",
+   "text": "Could we get the compressor serviced before the season?",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [
+    "E051"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 78,
+   "speaker": "Felix",
+   "text": "Probably. It's a few hundred dollars, not thousands.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 79,
+   "speaker": "Elena",
+   "text": "Then let's get it serviced. Out of this year's money. Done.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [
+    "E052"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 80,
+   "speaker": "Felix",
+   "text": "I'll call the service company tomorrow and book it.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [
+    "E053"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 81,
+   "speaker": "Tariq",
+   "text": "What happens to the samples while it's being serviced?",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [
+    "E054"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 82,
+   "speaker": "Elena",
+   "text": "Right, I think that's everything. Good meeting. June, chapter.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 83,
+   "speaker": "June",
+   "text": "Chapter. Got it.",
+   "agenda_item": "lab_ops",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Elena",
+   "agenda_item": "field_season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Tariq",
+   "agenda_item": "field_season",
+   "fact_id": "F2",
+   "claimed_value": "May 18",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Tariq",
+   "agenda_item": "field_season",
+   "fact_id": "F1",
+   "claimed_value": "14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Elena",
+   "agenda_item": "field_season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Elena",
+   "agenda_item": "field_season",
+   "fact_id": "F1",
+   "claimed_value": "14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Felix",
+   "agenda_item": "field_season",
+   "fact_id": "F3",
+   "claimed_value": "36",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Elena",
+   "agenda_item": "field_season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 6,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "June",
+   "agenda_item": "field_season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 8,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 9,
+   "speaker": "Felix",
+   "agenda_item": "field_season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 11,
+   "speaker": "Tariq",
+   "agenda_item": "field_season",
+   "fact_id": "F9",
+   "claimed_value": "end of May",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "June",
+   "agenda_item": "field_season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 14,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Tariq",
+   "agenda_item": "field_season",
+   "fact_id": "F10",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Elena",
+   "agenda_item": "field_season",
+   "fact_id": "F10",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Tariq",
+   "agenda_item": "field_season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 17,
+   "speaker": "Elena",
+   "agenda_item": "field_season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Tariq",
+   "agenda_item": "field_season",
+   "fact_id": "F8",
+   "claimed_value": "$540",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Elena",
+   "agenda_item": "field_season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 23,
+   "speaker": "Elena",
+   "agenda_item": "field_season",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Elena",
+   "agenda_item": "field_season",
+   "fact_id": "F2",
+   "claimed_value": "May 18",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Elena",
+   "agenda_item": "field_season",
+   "fact_id": "F1",
+   "claimed_value": "14",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Elena",
+   "agenda_item": "data_status",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 26,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "June",
+   "agenda_item": "data_status",
+   "fact_id": "F4",
+   "claimed_value": "1,240",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Elena",
+   "agenda_item": "data_status",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 28,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 28,
+   "speaker": "June",
+   "agenda_item": "data_status",
+   "fact_id": "F5",
+   "claimed_value": "200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Felix",
+   "agenda_item": "data_status",
+   "fact_id": "F5",
+   "claimed_value": "380",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "June",
+   "agenda_item": "data_status",
+   "fact_id": "F5",
+   "claimed_value": "380",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Elena",
+   "agenda_item": "data_status",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 32,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Elena",
+   "agenda_item": "data_status",
+   "fact_id": "F5",
+   "claimed_value": "380",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Elena",
+   "agenda_item": "data_status",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 35,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Felix",
+   "agenda_item": "data_status",
+   "fact_id": "F11",
+   "claimed_value": "$18",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 38,
+   "speaker": "Elena",
+   "agenda_item": "data_status",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Tariq",
+   "agenda_item": "data_status",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 43,
+   "speaker": "Felix",
+   "agenda_item": "data_status",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 45,
+   "speaker": "Tariq",
+   "agenda_item": "data_status",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Tariq",
+   "agenda_item": "data_status",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 46,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 48,
+   "speaker": "Elena",
+   "agenda_item": "deadlines",
+   "fact_id": "F7",
+   "claimed_value": "February 12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "June",
+   "agenda_item": "deadlines",
+   "fact_id": "F7",
+   "claimed_value": "February 2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Elena",
+   "agenda_item": "deadlines",
+   "fact_id": "F7",
+   "claimed_value": "February 2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 51,
+   "speaker": "Tariq",
+   "agenda_item": "deadlines",
+   "fact_id": "F12",
+   "claimed_value": "March 9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "June",
+   "agenda_item": "deadlines",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 53,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 55,
+   "speaker": "Elena",
+   "agenda_item": "deadlines",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 57,
+   "speaker": "Tariq",
+   "agenda_item": "deadlines",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 58,
+   "speaker": "Elena",
+   "agenda_item": "deadlines",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 60,
+   "speaker": "June",
+   "agenda_item": "deadlines",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 61,
+   "speaker": "Elena",
+   "agenda_item": "deadlines",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 62,
+   "speaker": "June",
+   "agenda_item": "deadlines",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 63,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 66,
+   "speaker": "Felix",
+   "agenda_item": "lab_ops",
+   "fact_id": "F6",
+   "claimed_value": "$27,400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 69,
+   "speaker": "Tariq",
+   "agenda_item": "lab_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 71,
+   "speaker": "Elena",
+   "agenda_item": "lab_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 72,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 75,
+   "speaker": "Elena",
+   "agenda_item": "lab_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 76,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 77,
+   "speaker": "Elena",
+   "agenda_item": "lab_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 78,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 79,
+   "speaker": "Elena",
+   "agenda_item": "lab_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E053",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 80,
+   "speaker": "Felix",
+   "agenda_item": "lab_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E054",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 81,
+   "speaker": "Tariq",
+   "agenda_item": "lab_ops",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Elena",
+   "text": "Right, let's start. Field season first, since it's coming up fast. Tariq?",
+   "start_s": 0.5,
+   "end_s": 5.145
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Tariq",
+   "text": "Basically, we're on track for May eighteenth, all fourteen sites.",
+   "start_s": 5.479,
+   "end_s": 9.229
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Elena",
+   "text": "All fourteen, including the ridge sites?",
+   "start_s": 10.276,
+   "end_s": 12.599
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Tariq",
+   "text": "Including the ridge. The access road was cleared last week.",
+   "start_s": 13.563,
+   "end_s": 17.313
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Felix",
+   "text": "For what it's worth, the camera traps are the bottleneck. Thirty-six of the forty work.",
+   "start_s": 17.768,
+   "end_s": 24.197
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Elena",
+   "text": "What's wrong with the other four?",
+   "start_s": 24.892,
+   "end_s": 27.215
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Felix",
+   "text": "Two have dead boards, two have cracked housings. The housings I can fix. The boards, not really.",
+   "start_s": 27.864,
+   "end_s": 35.15
+  },
+  {
+   "turn_index": 7,
+   "speaker": "June",
+   "text": "Do we need all forty out at once?",
+   "start_s": 36.002,
+   "end_s": 39.202
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Tariq",
+   "text": "In the field we lose a few to bears every season, so yes, basically.",
+   "start_s": 40.191,
+   "end_s": 45.441
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Felix",
+   "text": "I'll order two replacement boards this week, out of the equipment line.",
+   "start_s": 45.735,
+   "end_s": 50.878
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Elena",
+   "text": "Thank you, Felix.",
+   "start_s": 51.106,
+   "end_s": 52.268
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Tariq",
+   "text": "And the permit is good through the end of May, so no rush there.",
+   "start_s": 53.304,
+   "end_s": 58.554
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Elena",
+   "text": "Good. One less thing.",
+   "start_s": 59.187,
+   "end_s": 60.735
+  },
+  {
+   "turn_index": 13,
+   "speaker": "June",
+   "text": "Are the undergrads confirmed?",
+   "start_s": 61.697,
+   "end_s": 63.297
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Tariq",
+   "text": "Five confirmed. One more maybe, if her summer class gets cancelled.",
+   "start_s": 63.499,
+   "end_s": 67.624
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Elena",
+   "text": "Five is enough. A sixth would be nice.",
+   "start_s": 68.269,
+   "end_s": 71.366
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Tariq",
+   "text": "Somebody needs to do the safety training with them before we go.",
+   "start_s": 72.288,
+   "end_s": 76.788
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Elena",
+   "text": "Has anyone heard back from the parks office about site nine?",
+   "start_s": 77.217,
+   "end_s": 81.475
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Felix",
+   "text": "Sorry, the truck. We should talk about the truck.",
+   "start_s": 82.62,
+   "end_s": 86.477
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Tariq",
+   "text": "Right, the truck rental is five forty a week. For the whole season that adds up.",
+   "start_s": 87.578,
+   "end_s": 93.578
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Felix",
+   "text": "We could share with the Okafor lab, they're out at the same time.",
+   "start_s": 93.809,
+   "end_s": 99.38
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Elena",
+   "text": "Maybe we split the truck with Okafor. Let me think about it.",
+   "start_s": 99.605,
+   "end_s": 104.251
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Tariq",
+   "text": "In the field, sharing a truck means somebody's always waiting.",
+   "start_s": 104.992,
+   "end_s": 108.742
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Elena",
+   "text": "Okay, the season starts May eighteenth, all fourteen sites. That's locked.",
+   "start_s": 109.881,
+   "end_s": 114.139
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Tariq",
+   "text": "Locked. Finally.",
+   "start_s": 114.72,
+   "end_s": 115.47
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Elena",
+   "text": "Data. June, where are we with processing?",
+   "start_s": 115.887,
+   "end_s": 118.596
+  },
+  {
+   "turn_index": 26,
+   "speaker": "June",
+   "text": "I think, um, we've processed about twelve hundred.",
+   "start_s": 119.218,
+   "end_s": 122.418
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Elena",
+   "text": "And what's left?",
+   "start_s": 122.647,
+   "end_s": 123.808
+  },
+  {
+   "turn_index": 28,
+   "speaker": "June",
+   "text": "About two hundred? Maybe a bit more.",
+   "start_s": 124.23,
+   "end_s": 127.03
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Felix",
+   "text": "For what it's worth, the freezer log says three hundred and eighty still unprocessed.",
+   "start_s": 127.668,
+   "end_s": 133.668
+  },
+  {
+   "turn_index": 30,
+   "speaker": "June",
+   "text": "Sorry. Yes. I was counting the ones I'd already sorted. It's three eighty.",
+   "start_s": 134.364,
+   "end_s": 139.564
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Elena",
+   "text": "That's okay. It's better to know now. How long would three eighty take you?",
+   "start_s": 139.997,
+   "end_s": 145.416
+  },
+  {
+   "turn_index": 32,
+   "speaker": "June",
+   "text": "Honestly, at my current pace, most of the summer.",
+   "start_s": 145.847,
+   "end_s": 149.447
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Tariq",
+   "text": "Which is exactly when you need to be writing.",
+   "start_s": 149.866,
+   "end_s": 153.241
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Elena",
+   "text": "Right. Let's be strategic. Do we need to sequence all of them?",
+   "start_s": 153.901,
+   "end_s": 158.546
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Tariq",
+   "text": "Basically, no. Half of them are the replicate sites. The core sites matter more.",
+   "start_s": 159.036,
+   "end_s": 164.286
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Felix",
+   "text": "Sequencing is eighteen dollars a sample, so three eighty is real money anyway.",
+   "start_s": 164.507,
+   "end_s": 170.079
+  },
+  {
+   "turn_index": 37,
+   "speaker": "June",
+   "text": "If we only did the core sites, I think it's about half of them.",
+   "start_s": 171.117,
+   "end_s": 176.717
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Elena",
+   "text": "Then we sequence the core-site samples first and leave the replicates for the fall. That's the plan.",
+   "start_s": 177.473,
+   "end_s": 184.054
+  },
+  {
+   "turn_index": 39,
+   "speaker": "June",
+   "text": "Okay. That's, okay, that's a relief, actually.",
+   "start_s": 184.896,
+   "end_s": 187.696
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Tariq",
+   "text": "I can help with sorting if I'm not in the field.",
+   "start_s": 188.082,
+   "end_s": 192.207
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Elena",
+   "text": "Tariq, you're going to be in the field.",
+   "start_s": 193.4,
+   "end_s": 196.496
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Tariq",
+   "text": "Right, true.",
+   "start_s": 197.556,
+   "end_s": 198.306
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Felix",
+   "text": "I'll set up a shared sheet so we can see what's left, site by site.",
+   "start_s": 198.627,
+   "end_s": 205.055
+  },
+  {
+   "turn_index": 44,
+   "speaker": "June",
+   "text": "Thank you.",
+   "start_s": 205.588,
+   "end_s": 206.388
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Tariq",
+   "text": "Did anyone else see the bear video from the ridge camera?",
+   "start_s": 207.309,
+   "end_s": 211.434
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Felix",
+   "text": "The one where it licks the lens? I've watched it about ten times.",
+   "start_s": 212.345,
+   "end_s": 217.917
+  },
+  {
+   "turn_index": 47,
+   "speaker": "June",
+   "text": "My mom made it her phone background.",
+   "start_s": 219.053,
+   "end_s": 221.853
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Elena",
+   "text": "Okay, that's very good, and we're moving on. Deadlines. The conference abstract is due February twelfth, if I remember right.",
+   "start_s": 222.475,
+   "end_s": 230.217
+  },
+  {
+   "turn_index": 49,
+   "speaker": "June",
+   "text": "Sorry, I think it's the second. February second.",
+   "start_s": 231.247,
+   "end_s": 234.447
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Elena",
+   "text": "The second. That's, okay, that's sooner.",
+   "start_s": 235.317,
+   "end_s": 237.64
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Tariq",
+   "text": "And the revision for the moth paper is due March ninth.",
+   "start_s": 238.143,
+   "end_s": 242.268
+  },
+  {
+   "turn_index": 52,
+   "speaker": "June",
+   "text": "Do I have to be on the moth paper revision?",
+   "start_s": 243.056,
+   "end_s": 247.056
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Elena",
+   "text": "You're second author. But the chapter matters more.",
+   "start_s": 248.138,
+   "end_s": 251.235
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Tariq",
+   "text": "The reviewers mostly want the stats redone. Basically, that's me anyway.",
+   "start_s": 252.281,
+   "end_s": 256.406
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Elena",
+   "text": "Then let's be strategic. June, the chapter comes first, the moth revision is Tariq's. Settled.",
+   "start_s": 257.111,
+   "end_s": 262.918
+  },
+  {
+   "turn_index": 56,
+   "speaker": "June",
+   "text": "Thank you. Really.",
+   "start_s": 263.707,
+   "end_s": 264.907
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Tariq",
+   "text": "I'll redo the stats for the moth revision by the end of February.",
+   "start_s": 265.142,
+   "end_s": 270.017
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Elena",
+   "text": "And the abstract? Who's writing it?",
+   "start_s": 270.46,
+   "end_s": 272.782
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Tariq",
+   "text": "It should probably come from the chapter data.",
+   "start_s": 273.779,
+   "end_s": 276.779
+  },
+  {
+   "turn_index": 60,
+   "speaker": "June",
+   "text": "Maybe. If the chapter goes okay. I don't know.",
+   "start_s": 277.393,
+   "end_s": 280.993
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Elena",
+   "text": "Let's see where the chapter is next week before we commit to the abstract.",
+   "start_s": 281.366,
+   "end_s": 286.785
+  },
+  {
+   "turn_index": 62,
+   "speaker": "June",
+   "text": "Is it okay if I skip the reading group until the chapter's done?",
+   "start_s": 287.534,
+   "end_s": 292.734
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Elena",
+   "text": "For a few weeks, yes.",
+   "start_s": 293.637,
+   "end_s": 295.573
+  },
+  {
+   "turn_index": 64,
+   "speaker": "June",
+   "text": "Okay. Great.",
+   "start_s": 296.447,
+   "end_s": 297.247
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Elena",
+   "text": "Last thing, lab ops. Felix, the money.",
+   "start_s": 297.822,
+   "end_s": 300.531
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Felix",
+   "text": "Remaining on the grant is twenty-seven four.",
+   "start_s": 301.17,
+   "end_s": 304.17
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Tariq",
+   "text": "That's less than I thought.",
+   "start_s": 304.878,
+   "end_s": 306.753
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Felix",
+   "text": "The sequencing and the truck are the big ones this summer.",
+   "start_s": 307.731,
+   "end_s": 312.446
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Tariq",
+   "text": "Sorry, someone's knocking, it's the department admin with a package.",
+   "start_s": 313.167,
+   "end_s": 316.917
+  },
+  {
+   "turn_index": 70,
+   "speaker": "June",
+   "text": "No worries.",
+   "start_s": 317.51,
+   "end_s": 318.31
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Elena",
+   "text": "Is the minus-eighty freezer still making that noise?",
+   "start_s": 319.0,
+   "end_s": 322.096
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Felix",
+   "text": "It is. For what it's worth, I think the compressor's going.",
+   "start_s": 322.326,
+   "end_s": 327.04
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Tariq",
+   "text": "If that freezer dies, we lose everything June hasn't processed.",
+   "start_s": 327.283,
+   "end_s": 331.033
+  },
+  {
+   "turn_index": 74,
+   "speaker": "June",
+   "text": "Please don't say that.",
+   "start_s": 331.936,
+   "end_s": 333.536
+  },
+  {
+   "turn_index": 75,
+   "speaker": "Elena",
+   "text": "Should we move the samples to the department freezer as a backup?",
+   "start_s": 334.719,
+   "end_s": 339.364
+  },
+  {
+   "turn_index": 76,
+   "speaker": "Felix",
+   "text": "The department freezer is full. I asked last month.",
+   "start_s": 340.157,
+   "end_s": 344.014
+  },
+  {
+   "turn_index": 77,
+   "speaker": "Elena",
+   "text": "Could we get the compressor serviced before the season?",
+   "start_s": 344.608,
+   "end_s": 348.091
+  },
+  {
+   "turn_index": 78,
+   "speaker": "Felix",
+   "text": "Probably. It's a few hundred dollars, not thousands.",
+   "start_s": 348.461,
+   "end_s": 351.89
+  },
+  {
+   "turn_index": 79,
+   "speaker": "Elena",
+   "text": "Then let's get it serviced. Out of this year's money. Done.",
+   "start_s": 352.592,
+   "end_s": 356.85
+  },
+  {
+   "turn_index": 80,
+   "speaker": "Felix",
+   "text": "I'll call the service company tomorrow and book it.",
+   "start_s": 358.032,
+   "end_s": 361.889
+  },
+  {
+   "turn_index": 81,
+   "speaker": "Tariq",
+   "text": "What happens to the samples while it's being serviced?",
+   "start_s": 362.86,
+   "end_s": 366.235
+  },
+  {
+   "turn_index": 82,
+   "speaker": "Elena",
+   "text": "Right, I think that's everything. Good meeting. June, chapter.",
+   "start_s": 366.975,
+   "end_s": 370.458
+  },
+  {
+   "turn_index": 83,
+   "speaker": "June",
+   "text": "Chapter. Got it.",
+   "start_s": 371.518,
+   "end_s": 372.718
+  }
+ ]
+}

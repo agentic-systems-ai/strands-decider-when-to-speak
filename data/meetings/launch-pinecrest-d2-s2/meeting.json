@@ -1,0 +1,1868 @@
+{
+ "meeting_id": "launch-pinecrest-d2-s2",
+ "config": {
+  "theme": "Go/no-go for the Aurora mobile app launch",
+  "domain_pack": "product_launch",
+  "drama": 0.2,
+  "seed": 2,
+  "duration_min": 6.0,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   21,
+   28,
+   45,
+   51,
+   60,
+   61
+  ],
+  "reviewed_noclaim": [
+   21,
+   28
+  ]
+ },
+ "cast": {
+  "theme": "Go/no-go for the Aurora mobile app launch",
+  "personas": [
+   {
+    "name": "Margot",
+    "role": "Director of digital services, chairs",
+    "goals": "A launch that works for every patron, including the oldest",
+    "hidden_agenda": "The library board wants the app live before the budget hearing",
+    "verbosity": 3,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Elliot",
+    "role": "Development lead (contractor)",
+    "goals": "Launch on schedule",
+    "hidden_agenda": "His contract renewal depends on a smooth launch",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Fatou",
+    "role": "Accessibility and outreach librarian",
+    "goals": "The app works with screen readers and for people new to smartphones",
+    "hidden_agenda": "Runs a weekly phone-skills class for seniors and knows what confuses them",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Stan",
+    "role": "IT operations",
+    "goals": "No surprises for the help desk",
+    "hidden_agenda": "The login system is old and he worries about it",
+    "verbosity": 2,
+    "wpm": 140,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Aurora library app - launch review",
+   "org": "Pinecrest Library System (fictional)",
+   "agenda": [
+    {
+     "id": "beta",
+     "title": "Beta results",
+     "goal": "Review how patrons used the beta",
+     "timebox_min": 1.68
+    },
+    {
+     "id": "quality",
+     "title": "Quality and access",
+     "goal": "Stability",
+     "timebox_min": 1.86
+    },
+    {
+     "id": "branches",
+     "title": "Branch readiness",
+     "goal": "Make sure every branch can support the app",
+     "timebox_min": 1.47
+    },
+    {
+     "id": "decision",
+     "title": "Decision",
+     "goal": "Go or no-go for September 9",
+     "timebox_min": 0.94
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "beta_patrons",
+     "statement": "Beta patrons = 1,900",
+     "value": "1,900"
+    },
+    {
+     "id": "F2",
+     "key": "crash_free",
+     "statement": "Crash-free sessions = 99.7%",
+     "value": "99.7%"
+    },
+    {
+     "id": "F3",
+     "key": "crash_target",
+     "statement": "Crash-free target = 99.5%",
+     "value": "99.5%"
+    },
+    {
+     "id": "F4",
+     "key": "holds_placed",
+     "statement": "Holds placed in the beta = 6,400",
+     "value": "6,400"
+    },
+    {
+     "id": "F5",
+     "key": "ebook_checkouts",
+     "statement": "E-book checkouts in the beta = 3,150",
+     "value": "3,150"
+    },
+    {
+     "id": "F6",
+     "key": "branches",
+     "statement": "Library branches = 12",
+     "value": "12"
+    },
+    {
+     "id": "F7",
+     "key": "open_bugs",
+     "statement": "Open bugs = 8",
+     "value": "8"
+    },
+    {
+     "id": "F8",
+     "key": "staff_trained",
+     "statement": "Staff trained on the app = 64",
+     "value": "64"
+    },
+    {
+     "id": "F9",
+     "key": "launch_date",
+     "statement": "Planned launch = September 9",
+     "value": "September 9"
+    },
+    {
+     "id": "F10",
+     "key": "screen_reader_issues",
+     "statement": "Open screen-reader issues = 2",
+     "value": "2"
+    },
+    {
+     "id": "F11",
+     "key": "login_failures",
+     "statement": "Login failure rate = 1.4%",
+     "value": "1.4%"
+    },
+    {
+     "id": "F12",
+     "key": "card_holders",
+     "statement": "Active library card holders = 48,000",
+     "value": "48,000"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "beta",
+    "summary": "How patrons used it",
+    "n_turns": 17,
+    "events": []
+   },
+   {
+    "agenda_item": "quality",
+    "summary": "Stability, login and screen readers; Elliot's login figure is challenged and corrected",
+    "n_turns": 22,
+    "events": []
+   },
+   {
+    "agenda_item": "branches",
+    "summary": "Readiness across the system; Margot's branch count is off and stays off",
+    "n_turns": 15,
+    "events": []
+   },
+   {
+    "agenda_item": "decision",
+    "summary": "Go or no-go",
+    "n_turns": 10,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Margot",
+   "text": "Good afternoon, everyone. Let's start with the beta. Elliot, what did patrons actually do with it?",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Elliot",
+   "text": "About nineteen hundred patrons used the beta over six weeks. The most popular thing by far was holds. They placed sixty-four hundred holds through the app.",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [
+    "E002",
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Fatou",
+   "text": "That matches what I hear at the desk. People love not having to call.",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Stan",
+   "text": "The phone line has been quieter, actually. I noticed that before I knew why.",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Margot",
+   "text": "And e-books?",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Elliot",
+   "text": "Thirty-one fifty checkouts. Fewer than holds, but growing every week.",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Fatou",
+   "text": "Some of the older patrons didn't know e-books were free. The app is the first time they've seen them.",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Margot",
+   "text": "That's lovely to hear. That's the whole point of the thing.",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Stan",
+   "text": "Did people use the barcode on the phone instead of the plastic card?",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Elliot",
+   "text": "More than we expected. At the main branch the self-checkout machines read it fine.",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Fatou",
+   "text": "At the smaller branches the scanners are older. A few struggled with phone screens.",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Margot",
+   "text": "Which branches?",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Fatou",
+   "text": "Riverside and the bookmobile, mostly. Bright screens confuse the old scanners.",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Stan",
+   "text": "Those scanners are on the replacement list. Next year, I think.",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Fatou",
+   "text": "Should we hold the launch at those two until the scanners are replaced?",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [
+    "E008",
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Margot",
+   "text": "Then for now we tell patrons at those two to bring the plastic card as well.",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Fatou",
+   "text": "I'll put a note in the app's help section about the older scanners.",
+   "agenda_item": "beta",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Margot",
+   "text": "Quality. How stable is it?",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Elliot",
+   "text": "Crash-free sessions were ninety-nine point seven percent. Our target is ninety-nine five.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E013",
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Stan",
+   "text": "So we're above the bar. Good.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Elliot",
+   "text": "And login failures are down to about half a percent.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Stan",
+   "text": "Hmm. I'm not sure about that. The help desk log felt worse than half a percent. More like one in a hundred.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Elliot",
+   "text": "You might be right. Let me look properly. Yes, it's one point four. Half a percent was iOS on its own.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Margot",
+   "text": "One point four percent of people can't log in. That's a lot of frustrated patrons.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Stan",
+   "text": "Most of it is people who've forgotten their PIN. The old system makes resetting it painful.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Fatou",
+   "text": "In my class, half the questions are about PINs. People write them on the back of the card.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Margot",
+   "text": "Can the app make resetting a PIN easier?",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Elliot",
+   "text": "It can link straight to the reset page. That's a small change.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Stan",
+   "text": "The reset page itself is the problem. It's from two thousand eleven.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Margot",
+   "text": "Let's do the link now, and look at replacing the reset page after launch.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Elliot",
+   "text": "I'll add the reset link this week.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Fatou",
+   "text": "Screen readers. There are still two issues open.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Margot",
+   "text": "Are they serious?",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Fatou",
+   "text": "One is. The hold confirmation isn't announced, so a blind patron doesn't know if the hold worked.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Elliot",
+   "text": "That one we can fix before launch. The other is a label on the settings page.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Fatou",
+   "text": "Both, ideally. It's not much.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Elliot",
+   "text": "Both, then. They're small.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Margot",
+   "text": "And general bugs?",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Elliot",
+   "text": "Eight open. None of them stop anyone doing anything.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Margot",
+   "text": "Branches. We have fifteen branches, and every one needs to be able to help a patron with the app.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Stan",
+   "text": "Sixty-four staff have done the training so far.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Fatou",
+   "text": "Mostly from the bigger branches. The small ones have one or two people on shift.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Margot",
+   "text": "How do we cover the small ones?",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Fatou",
+   "text": "A one-page guide at every desk, with screenshots. People can follow it even if they haven't done the training.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Stan",
+   "text": "And the help desk number on the bottom, for anything harder.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Margot",
+   "text": "I like that. A one-page guide at every desk, then.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Fatou",
+   "text": "I'll design it and get it printed before launch.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Stan",
+   "text": "My daughter just started at the community college, by the way. She says their library app is terrible.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Elliot",
+   "text": "Most university library apps are terrible. They're built by committees.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Fatou",
+   "text": "Ours is built by a committee too, if we're honest.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Margot",
+   "text": "Well, a careful committee. Let's get back to it.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Stan",
+   "text": "The help desk needs to know the launch date before anything goes public.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Elliot",
+   "text": "It'd be good if someone wrote up the five questions the help desk will get most.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Stan",
+   "text": "I can do that. I already know what they'll be.",
+   "agenda_item": "branches",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Margot",
+   "text": "So. Are we ready for September ninth?",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E034",
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Elliot",
+   "text": "From the development side, yes, with the reset link and the two screen-reader fixes.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Fatou",
+   "text": "Yes, if the hold confirmation is announced. That's the one I care about.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Stan",
+   "text": "Yes. The help desk will be ready.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Margot",
+   "text": "Then it's a go for September ninth, with those fixes in.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E036",
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Fatou",
+   "text": "Will we tell all forty-eight thousand card holders at once, or start smaller?",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E038",
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Margot",
+   "text": "An email to everyone, but we start the promotion at the branches the week before.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Stan",
+   "text": "Has anyone asked the board whether they want a launch event?",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Elliot",
+   "text": "I'll send the final build to the app stores on the second, so there's time for review.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Margot",
+   "text": "Thank you, all. This has been a careful piece of work.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Margot",
+   "agenda_item": "beta",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Elliot",
+   "agenda_item": "beta",
+   "fact_id": "F1",
+   "claimed_value": "1,900",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Elliot",
+   "agenda_item": "beta",
+   "fact_id": "F4",
+   "claimed_value": "6,400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Margot",
+   "agenda_item": "beta",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 5,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Elliot",
+   "agenda_item": "beta",
+   "fact_id": "F5",
+   "claimed_value": "3,150",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Stan",
+   "agenda_item": "beta",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 9,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Margot",
+   "agenda_item": "beta",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 12,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Fatou",
+   "agenda_item": "beta",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Fatou",
+   "agenda_item": "beta",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 15,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 15,
+   "speaker": "Margot",
+   "agenda_item": "beta",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Fatou",
+   "agenda_item": "beta",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Margot",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 18,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Elliot",
+   "agenda_item": "quality",
+   "fact_id": "F2",
+   "claimed_value": "99.7%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Elliot",
+   "agenda_item": "quality",
+   "fact_id": "F3",
+   "claimed_value": "99.5%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 20,
+   "speaker": "Elliot",
+   "agenda_item": "quality",
+   "fact_id": "F11",
+   "claimed_value": "0.5%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Elliot",
+   "agenda_item": "quality",
+   "fact_id": "F11",
+   "claimed_value": "1.4%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Margot",
+   "agenda_item": "quality",
+   "fact_id": "F11",
+   "claimed_value": "1.4%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Margot",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 27,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 29,
+   "speaker": "Margot",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 30,
+   "speaker": "Elliot",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Fatou",
+   "agenda_item": "quality",
+   "fact_id": "F10",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Margot",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 33,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 36,
+   "speaker": "Elliot",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Margot",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 38,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Elliot",
+   "agenda_item": "quality",
+   "fact_id": "F7",
+   "claimed_value": "8",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 39,
+   "speaker": "Margot",
+   "agenda_item": "branches",
+   "fact_id": "F6",
+   "claimed_value": "15",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Stan",
+   "agenda_item": "branches",
+   "fact_id": "F8",
+   "claimed_value": "64",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Margot",
+   "agenda_item": "branches",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 45,
+   "speaker": "Margot",
+   "agenda_item": "branches",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 46,
+   "speaker": "Fatou",
+   "agenda_item": "branches",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 47,
+   "speaker": "Stan",
+   "agenda_item": "branches",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Elliot",
+   "agenda_item": "branches",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 53,
+   "speaker": "Stan",
+   "agenda_item": "branches",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Margot",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 55,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Margot",
+   "agenda_item": "decision",
+   "fact_id": "F9",
+   "claimed_value": "September 9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 58,
+   "speaker": "Margot",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 58,
+   "speaker": "Margot",
+   "agenda_item": "decision",
+   "fact_id": "F9",
+   "claimed_value": "September 9",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 59,
+   "speaker": "Fatou",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 60,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 59,
+   "speaker": "Fatou",
+   "agenda_item": "decision",
+   "fact_id": "F12",
+   "claimed_value": "48,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 60,
+   "speaker": "Margot",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 61,
+   "speaker": "Stan",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 62,
+   "speaker": "Elliot",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Margot",
+   "text": "Good afternoon, everyone. Let's start with the beta. Elliot, what did patrons actually do with it?",
+   "start_s": 0.5,
+   "end_s": 7.121
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Elliot",
+   "text": "About nineteen hundred patrons used the beta over six weeks. The most popular thing by far was holds. They placed sixty-four hundred holds through the app.",
+   "start_s": 8.277,
+   "end_s": 18.027
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Fatou",
+   "text": "That matches what I hear at the desk. People love not having to call.",
+   "start_s": 19.175,
+   "end_s": 24.775
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Stan",
+   "text": "The phone line has been quieter, actually. I noticed that before I knew why.",
+   "start_s": 25.032,
+   "end_s": 31.032
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Margot",
+   "text": "And e-books?",
+   "start_s": 31.317,
+   "end_s": 32.144
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Elliot",
+   "text": "Thirty-one fifty checkouts. Fewer than holds, but growing every week.",
+   "start_s": 33.179,
+   "end_s": 36.929
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Fatou",
+   "text": "Some of the older patrons didn't know e-books were free. The app is the first time they've seen them.",
+   "start_s": 37.865,
+   "end_s": 45.465
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Margot",
+   "text": "That's lovely to hear. That's the whole point of the thing.",
+   "start_s": 46.335,
+   "end_s": 50.886
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Stan",
+   "text": "Did people use the barcode on the phone instead of the plastic card?",
+   "start_s": 51.394,
+   "end_s": 56.966
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Elliot",
+   "text": "More than we expected. At the main branch the self-checkout machines read it fine.",
+   "start_s": 57.772,
+   "end_s": 63.022
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Fatou",
+   "text": "At the smaller branches the scanners are older. A few struggled with phone screens.",
+   "start_s": 63.829,
+   "end_s": 69.429
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Margot",
+   "text": "Which branches?",
+   "start_s": 70.21,
+   "end_s": 71.038
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Fatou",
+   "text": "Riverside and the bookmobile, mostly. Bright screens confuse the old scanners.",
+   "start_s": 71.396,
+   "end_s": 75.796
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Stan",
+   "text": "Those scanners are on the replacement list. Next year, I think.",
+   "start_s": 76.427,
+   "end_s": 81.141
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Fatou",
+   "text": "Should we hold the launch at those two until the scanners are replaced?",
+   "start_s": 81.735,
+   "end_s": 86.935
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Margot",
+   "text": "Then for now we tell patrons at those two to bring the plastic card as well.",
+   "start_s": 87.858,
+   "end_s": 94.479
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Fatou",
+   "text": "I'll put a note in the app's help section about the older scanners.",
+   "start_s": 95.674,
+   "end_s": 100.874
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Margot",
+   "text": "Quality. How stable is it?",
+   "start_s": 102.023,
+   "end_s": 104.092
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Elliot",
+   "text": "Crash-free sessions were ninety-nine point seven percent. Our target is ninety-nine five.",
+   "start_s": 104.836,
+   "end_s": 109.336
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Stan",
+   "text": "So we're above the bar. Good.",
+   "start_s": 109.981,
+   "end_s": 112.552
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Elliot",
+   "text": "And login failures are down to about half a percent.",
+   "start_s": 113.02,
+   "end_s": 116.77
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Stan",
+   "text": "Hmm. I'm not sure about that. The help desk log felt worse than half a percent. More like one in a hundred.",
+   "start_s": 117.006,
+   "end_s": 126.434
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Elliot",
+   "text": "You might be right. Let me look properly. Yes, it's one point four. Half a percent was iOS on its own.",
+   "start_s": 126.661,
+   "end_s": 134.536
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Margot",
+   "text": "One point four percent of people can't log in. That's a lot of frustrated patrons.",
+   "start_s": 135.201,
+   "end_s": 141.408
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Stan",
+   "text": "Most of it is people who've forgotten their PIN. The old system makes resetting it painful.",
+   "start_s": 141.926,
+   "end_s": 148.784
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Fatou",
+   "text": "In my class, half the questions are about PINs. People write them on the back of the card.",
+   "start_s": 149.364,
+   "end_s": 156.564
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Margot",
+   "text": "Can the app make resetting a PIN easier?",
+   "start_s": 157.656,
+   "end_s": 160.966
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Elliot",
+   "text": "It can link straight to the reset page. That's a small change.",
+   "start_s": 161.692,
+   "end_s": 166.192
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Stan",
+   "text": "The reset page itself is the problem. It's from two thousand eleven.",
+   "start_s": 166.953,
+   "end_s": 172.095
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Margot",
+   "text": "Let's do the link now, and look at replacing the reset page after launch.",
+   "start_s": 172.531,
+   "end_s": 178.324
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Elliot",
+   "text": "I'll add the reset link this week.",
+   "start_s": 178.548,
+   "end_s": 181.173
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Fatou",
+   "text": "Screen readers. There are still two issues open.",
+   "start_s": 181.698,
+   "end_s": 184.898
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Margot",
+   "text": "Are they serious?",
+   "start_s": 185.235,
+   "end_s": 186.476
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Fatou",
+   "text": "One is. The hold confirmation isn't announced, so a blind patron doesn't know if the hold worked.",
+   "start_s": 187.186,
+   "end_s": 193.986
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Elliot",
+   "text": "That one we can fix before launch. The other is a label on the settings page.",
+   "start_s": 195.185,
+   "end_s": 201.185
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Fatou",
+   "text": "Both, ideally. It's not much.",
+   "start_s": 202.059,
+   "end_s": 204.059
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Elliot",
+   "text": "Both, then. They're small.",
+   "start_s": 204.441,
+   "end_s": 205.941
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Margot",
+   "text": "And general bugs?",
+   "start_s": 207.035,
+   "end_s": 208.276
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Elliot",
+   "text": "Eight open. None of them stop anyone doing anything.",
+   "start_s": 209.273,
+   "end_s": 212.648
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Margot",
+   "text": "Branches. We have fifteen branches, and every one needs to be able to help a patron with the app.",
+   "start_s": 213.582,
+   "end_s": 221.444
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Stan",
+   "text": "Sixty-four staff have done the training so far.",
+   "start_s": 222.551,
+   "end_s": 225.979
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Fatou",
+   "text": "Mostly from the bigger branches. The small ones have one or two people on shift.",
+   "start_s": 226.942,
+   "end_s": 232.942
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Margot",
+   "text": "How do we cover the small ones?",
+   "start_s": 233.932,
+   "end_s": 236.828
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Fatou",
+   "text": "A one-page guide at every desk, with screenshots. People can follow it even if they haven't done the training.",
+   "start_s": 237.382,
+   "end_s": 244.982
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Stan",
+   "text": "And the help desk number on the bottom, for anything harder.",
+   "start_s": 246.163,
+   "end_s": 250.877
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Margot",
+   "text": "I like that. A one-page guide at every desk, then.",
+   "start_s": 252.039,
+   "end_s": 256.177
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Fatou",
+   "text": "I'll design it and get it printed before launch.",
+   "start_s": 256.538,
+   "end_s": 260.138
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Stan",
+   "text": "My daughter just started at the community college, by the way. She says their library app is terrible.",
+   "start_s": 261.092,
+   "end_s": 268.806
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Elliot",
+   "text": "Most university library apps are terrible. They're built by committees.",
+   "start_s": 269.721,
+   "end_s": 273.471
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Fatou",
+   "text": "Ours is built by a committee too, if we're honest.",
+   "start_s": 274.132,
+   "end_s": 278.132
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Margot",
+   "text": "Well, a careful committee. Let's get back to it.",
+   "start_s": 278.862,
+   "end_s": 282.586
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Stan",
+   "text": "The help desk needs to know the launch date before anything goes public.",
+   "start_s": 283.276,
+   "end_s": 288.847
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Elliot",
+   "text": "It'd be good if someone wrote up the five questions the help desk will get most.",
+   "start_s": 289.972,
+   "end_s": 295.972
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Stan",
+   "text": "I can do that. I already know what they'll be.",
+   "start_s": 296.673,
+   "end_s": 300.959
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Margot",
+   "text": "So. Are we ready for September ninth?",
+   "start_s": 301.991,
+   "end_s": 304.887
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Elliot",
+   "text": "From the development side, yes, with the reset link and the two screen-reader fixes.",
+   "start_s": 305.441,
+   "end_s": 310.691
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Fatou",
+   "text": "Yes, if the hold confirmation is announced. That's the one I care about.",
+   "start_s": 311.774,
+   "end_s": 316.974
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Stan",
+   "text": "Yes. The help desk will be ready.",
+   "start_s": 318.074,
+   "end_s": 321.074
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Margot",
+   "text": "Then it's a go for September ninth, with those fixes in.",
+   "start_s": 321.735,
+   "end_s": 326.287
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Fatou",
+   "text": "Will we tell all forty-eight thousand card holders at once, or start smaller?",
+   "start_s": 327.055,
+   "end_s": 332.255
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Margot",
+   "text": "An email to everyone, but we start the promotion at the branches the week before.",
+   "start_s": 333.375,
+   "end_s": 339.582
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Stan",
+   "text": "Has anyone asked the board whether they want a launch event?",
+   "start_s": 340.506,
+   "end_s": 345.22
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Elliot",
+   "text": "I'll send the final build to the app stores on the second, so there's time for review.",
+   "start_s": 345.907,
+   "end_s": 352.282
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Margot",
+   "text": "Thank you, all. This has been a careful piece of work.",
+   "start_s": 352.704,
+   "end_s": 357.256
+  }
+ ]
+}

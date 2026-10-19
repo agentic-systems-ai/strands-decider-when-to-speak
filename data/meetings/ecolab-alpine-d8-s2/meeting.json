@@ -1,0 +1,1559 @@
+{
+ "meeting_id": "ecolab-alpine-d8-s2",
+ "config": {
+  "theme": "Weekly meeting of a university ecology research lab",
+  "domain_pack": "research_lab",
+  "drama": 0.8,
+  "seed": 2,
+  "duration_min": 4.2,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   0,
+   3,
+   7,
+   12,
+   21,
+   33,
+   42,
+   49
+  ],
+  "reviewed_noclaim": [
+   3,
+   7
+  ]
+ },
+ "cast": {
+  "theme": "Weekly meeting of a university ecology research lab",
+  "personas": [
+   {
+    "name": "Gunnar",
+    "role": "Principal investigator",
+    "goals": "Protect the lab's reputation",
+    "hidden_agenda": "Wrote the script that introduced the error, years ago",
+    "verbosity": 4,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Leila",
+    "role": "Postdoc who found the errors",
+    "goals": "Fix the published record properly",
+    "hidden_agenda": "Afraid this will cost her the recommendation letter she needs",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Kai",
+    "role": "PhD student",
+    "goals": "Keep the field season on track",
+    "hidden_agenda": "Has been talking to another lab about switching",
+    "verbosity": 2,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Hester",
+    "role": "Lab manager",
+    "goals": "Logistics that work and a lab that isn't miserable",
+    "hidden_agenda": "Knows Kai is thinking of leaving",
+    "verbosity": 3,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Alpine ecology lab meeting",
+   "org": "Ridgeway Alpine Ecology Lab, Northcrest University (fictional)",
+   "agenda": [
+    {
+     "id": "errors",
+     "title": "The dataset errors",
+     "goal": "Understand the errors Leila found in the published dataset",
+     "timebox_min": 1.27
+    },
+    {
+     "id": "correction",
+     "title": "The correction",
+     "goal": "Decide how to correct the record",
+     "timebox_min": 0.91
+    },
+    {
+     "id": "fieldwork",
+     "title": "Fieldwork",
+     "goal": "Huts",
+     "timebox_min": 1.2
+    },
+    {
+     "id": "morale",
+     "title": "The lab",
+     "goal": "Talk about how people are doing",
+     "timebox_min": 0.83
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "affected_records",
+     "statement": "Records affected by the unit error = 312",
+     "value": "312"
+    },
+    {
+     "id": "F2",
+     "key": "total_records",
+     "statement": "Records in the published dataset = 9,800",
+     "value": "9,800"
+    },
+    {
+     "id": "F3",
+     "key": "citations",
+     "statement": "Citations of the paper = 41",
+     "value": "41"
+    },
+    {
+     "id": "F4",
+     "key": "hut_nights",
+     "statement": "Hut nights booked = 18",
+     "value": "18"
+    },
+    {
+     "id": "F5",
+     "key": "helicopter_cost",
+     "statement": "Helicopter lift = $3,200 each",
+     "value": "$3,200"
+    },
+    {
+     "id": "F6",
+     "key": "lifts_booked",
+     "statement": "Helicopter lifts booked = 2",
+     "value": "2"
+    },
+    {
+     "id": "F7",
+     "key": "correction_window",
+     "statement": "Journal asks for corrections within 30 days of notice",
+     "value": "30 days"
+    },
+    {
+     "id": "F8",
+     "key": "field_start",
+     "statement": "Field season starts July 7",
+     "value": "July 7"
+    },
+    {
+     "id": "F9",
+     "key": "lab_members",
+     "statement": "Lab members = 8",
+     "value": "8"
+    },
+    {
+     "id": "F10",
+     "key": "loggers_deployed",
+     "statement": "Temperature loggers deployed = 60",
+     "value": "60"
+    },
+    {
+     "id": "F11",
+     "key": "loggers_recovered",
+     "statement": "Loggers recovered last season = 52",
+     "value": "52"
+    },
+    {
+     "id": "F12",
+     "key": "grant_balance",
+     "statement": "Grant balance = $41,000",
+     "value": "$41,000"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "errors",
+    "summary": "What Leila found; Gunnar minimizes it",
+    "n_turns": 16,
+    "events": []
+   },
+   {
+    "agenda_item": "correction",
+    "summary": "How to fix the record; the citation count corrected",
+    "n_turns": 11,
+    "events": []
+   },
+   {
+    "agenda_item": "fieldwork",
+    "summary": "Huts, helicopters and loggers; Kai's helicopter figure is low and is corrected; Hester's logger count stands",
+    "n_turns": 14,
+    "events": []
+   },
+   {
+    "agenda_item": "morale",
+    "summary": "How people are doing",
+    "n_turns": 10,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Gunnar",
+   "text": "Leila, you sent an email about the dataset. Let's hear it, briefly.",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Leila",
+   "text": "Some of the soil temperature records were converted twice. Fahrenheit to Celsius, and then again. They're wrong in the published data.",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Gunnar",
+   "text": "How many records are we talking about? A handful?",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Kai",
+   "text": "Is it the old logger script? The one from twenty sixteen?",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Leila",
+   "text": "Yes. It's three hundred and twelve records, out of ninety-eight hundred.",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [
+    "E003",
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Gunnar",
+   "text": "So about fifty that matter, realistically. The rest are in winter, when nothing grows.",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Leila",
+   "text": "All three hundred and twelve are wrong, Gunnar. They're in the published file.",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Gunnar",
+   "text": "Three percent of the data. It doesn't change the conclusions.",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Leila",
+   "text": "It changes figure four. The warming trend is smaller once you fix them.",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Hester",
+   "text": "How much smaller?",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Leila",
+   "text": "The trend drops by about a third. It's still there, but it's weaker.",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Gunnar",
+   "text": "The paper has over a hundred citations. People rely on it.",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Kai",
+   "text": "That's exactly why it matters, isn't it?",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Gunnar",
+   "text": "Nobody asked you, Kai.",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Hester",
+   "text": "Gunnar. That's not okay.",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Gunnar",
+   "text": "I'm sorry. Kai, I'm sorry. This is my paper, and it's hard to hear.",
+   "agenda_item": "errors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Leila",
+   "text": "The journal wants corrections within thirty days of notice. I think we notify them now.",
+   "agenda_item": "correction",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Gunnar",
+   "text": "Or we fix it quietly in the next paper.",
+   "agenda_item": "correction",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Leila",
+   "text": "Quietly isn't an option. The data are public.",
+   "agenda_item": "correction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Hester",
+   "text": "I checked the journal page while you were talking, Gunnar. It's forty-one citations, not over a hundred.",
+   "agenda_item": "correction",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Gunnar",
+   "text": "Forty-one. It felt like more.",
+   "agenda_item": "correction",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Kai",
+   "text": "Forty-one people who used the wrong numbers.",
+   "agenda_item": "correction",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Gunnar",
+   "text": "All right. All right. We notify the journal this week and publish a correction with the fixed data.",
+   "agenda_item": "correction",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Leila",
+   "text": "Thank you. I'll draft the correction notice and the corrected figure.",
+   "agenda_item": "correction",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Gunnar",
+   "text": "I'll write to the editor myself. It should come from me, as the senior author.",
+   "agenda_item": "correction",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Kai",
+   "text": "Should we tell the people who cited it?",
+   "agenda_item": "correction",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Leila",
+   "text": "The journal notifies them automatically when a correction is published.",
+   "agenda_item": "correction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Hester",
+   "text": "Fieldwork. We start on July seventh. Eighteen hut nights are booked.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [
+    "E018",
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Kai",
+   "text": "And two helicopter lifts, at about two thousand each.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [
+    "E020",
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Hester",
+   "text": "The loggers did well last winter. We recovered all sixty.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Gunnar",
+   "text": "Good. The loggers are the whole study.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Kai",
+   "text": "Can we afford a third lift, for the high plots?",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Gunnar",
+   "text": "The grant balance is forty-one thousand. A lift is cheap compared to losing a season.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Leila",
+   "text": "Did anyone else see the avalanche video from the pass last week? The whole slope just went.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Hester",
+   "text": "The guides posted it. It's terrifying.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Kai",
+   "text": "That's the slope right above the second hut.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Hester",
+   "text": "Sorry, I'm looking at the invoice from last year. The helicopter was thirty-two hundred a lift, not two thousand.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Kai",
+   "text": "Thirty-two hundred. That changes the math a bit.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Gunnar",
+   "text": "We still book the third lift. I'd rather pay than risk the high plots.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Hester",
+   "text": "I'll call the helicopter company tomorrow and add the third lift.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Leila",
+   "text": "It might be worth someone checking the second hut is safe after that avalanche.",
+   "agenda_item": "fieldwork",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Hester",
+   "text": "Last thing. I want to ask how everyone's doing. It's been a hard few weeks.",
+   "agenda_item": "morale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Kai",
+   "text": "Honestly? Not great. I've been thinking about whether this lab is right for me.",
+   "agenda_item": "morale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Gunnar",
+   "text": "Because of today?",
+   "agenda_item": "morale",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Kai",
+   "text": "Partly. Partly before today.",
+   "agenda_item": "morale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Leila",
+   "text": "I was scared to raise the error at all. I thought it might cost me my reference letter.",
+   "agenda_item": "morale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Gunnar",
+   "text": "It won't. Finding it was the right thing. I should have said that first.",
+   "agenda_item": "morale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Hester",
+   "text": "Can we have a lab lunch next week, no agenda, just to talk?",
+   "agenda_item": "morale",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Gunnar",
+   "text": "Yes. Please. I'll pay for it.",
+   "agenda_item": "morale",
+   "direction": null,
+   "event_ids": [
+    "E033",
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Kai",
+   "text": "Will the correction affect my thesis chapter that uses the same data?",
+   "agenda_item": "morale",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Gunnar",
+   "text": "Thank you, all of you. Especially you, Leila.",
+   "agenda_item": "morale",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Gunnar",
+   "agenda_item": "errors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 4,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Kai",
+   "agenda_item": "errors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 4,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Leila",
+   "agenda_item": "errors",
+   "fact_id": "F1",
+   "claimed_value": "312",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Leila",
+   "agenda_item": "errors",
+   "fact_id": "F2",
+   "claimed_value": "9,800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 5,
+   "speaker": "Gunnar",
+   "agenda_item": "errors",
+   "fact_id": "F1",
+   "claimed_value": "50",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Leila",
+   "agenda_item": "errors",
+   "fact_id": "F1",
+   "claimed_value": "312",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Hester",
+   "agenda_item": "errors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 10,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 11,
+   "speaker": "Gunnar",
+   "agenda_item": "errors",
+   "fact_id": "F3",
+   "claimed_value": "over 100",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Leila",
+   "agenda_item": "correction",
+   "fact_id": "F7",
+   "claimed_value": "30 days",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Gunnar",
+   "agenda_item": "correction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Hester",
+   "agenda_item": "correction",
+   "fact_id": "F3",
+   "claimed_value": "41",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Gunnar",
+   "agenda_item": "correction",
+   "fact_id": "F3",
+   "claimed_value": "41",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Kai",
+   "agenda_item": "correction",
+   "fact_id": "F3",
+   "claimed_value": "41",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 22,
+   "speaker": "Gunnar",
+   "agenda_item": "correction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 23,
+   "speaker": "Leila",
+   "agenda_item": "correction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 24,
+   "speaker": "Gunnar",
+   "agenda_item": "correction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Kai",
+   "agenda_item": "correction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 26,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Hester",
+   "agenda_item": "fieldwork",
+   "fact_id": "F8",
+   "claimed_value": "July 7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Hester",
+   "agenda_item": "fieldwork",
+   "fact_id": "F4",
+   "claimed_value": "18",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Kai",
+   "agenda_item": "fieldwork",
+   "fact_id": "F6",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 28,
+   "speaker": "Kai",
+   "agenda_item": "fieldwork",
+   "fact_id": "F5",
+   "claimed_value": "$2,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 29,
+   "speaker": "Hester",
+   "agenda_item": "fieldwork",
+   "fact_id": "F11",
+   "claimed_value": "60",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Kai",
+   "agenda_item": "fieldwork",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 32,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Gunnar",
+   "agenda_item": "fieldwork",
+   "fact_id": "F12",
+   "claimed_value": "$41,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 33,
+   "speaker": "Leila",
+   "agenda_item": "fieldwork",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Hester",
+   "agenda_item": "fieldwork",
+   "fact_id": "F5",
+   "claimed_value": "$3,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Kai",
+   "agenda_item": "fieldwork",
+   "fact_id": "F5",
+   "claimed_value": "$3,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 38,
+   "speaker": "Gunnar",
+   "agenda_item": "fieldwork",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 39,
+   "speaker": "Hester",
+   "agenda_item": "fieldwork",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Leila",
+   "agenda_item": "fieldwork",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Gunnar",
+   "agenda_item": "morale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 44,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Hester",
+   "agenda_item": "morale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 48,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 48,
+   "speaker": "Gunnar",
+   "agenda_item": "morale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 48,
+   "speaker": "Gunnar",
+   "agenda_item": "morale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 49,
+   "speaker": "Kai",
+   "agenda_item": "morale",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Gunnar",
+   "text": "Leila, you sent an email about the dataset. Let's hear it, briefly.",
+   "start_s": 0.5,
+   "end_s": 5.145
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Leila",
+   "text": "Some of the soil temperature records were converted twice. Fahrenheit to Celsius, and then again. They're wrong in the published data.",
+   "start_s": 6.301,
+   "end_s": 14.176
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Gunnar",
+   "text": "How many records are we talking about? A handful?",
+   "start_s": 15.324,
+   "end_s": 18.808
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Kai",
+   "text": "Is it the old logger script? The one from twenty sixteen?",
+   "start_s": 19.065,
+   "end_s": 23.065
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Leila",
+   "text": "Yes. It's three hundred and twelve records, out of ninety-eight hundred.",
+   "start_s": 23.35,
+   "end_s": 27.475
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Gunnar",
+   "text": "So about fifty that matter, realistically. The rest are in winter, when nothing grows.",
+   "start_s": 28.51,
+   "end_s": 33.93
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Leila",
+   "text": "All three hundred and twelve are wrong, Gunnar. They're in the published file.",
+   "start_s": 34.866,
+   "end_s": 39.741
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Gunnar",
+   "text": "Three percent of the data. It doesn't change the conclusions.",
+   "start_s": 40.611,
+   "end_s": 44.482
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Leila",
+   "text": "It changes figure four. The warming trend is smaller once you fix them.",
+   "start_s": 44.99,
+   "end_s": 49.865
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Hester",
+   "text": "How much smaller?",
+   "start_s": 50.671,
+   "end_s": 51.912
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Leila",
+   "text": "The trend drops by about a third. It's still there, but it's weaker.",
+   "start_s": 52.719,
+   "end_s": 57.594
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Gunnar",
+   "text": "The paper has over a hundred citations. People rely on it.",
+   "start_s": 58.375,
+   "end_s": 62.633
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Kai",
+   "text": "That's exactly why it matters, isn't it?",
+   "start_s": 62.991,
+   "end_s": 65.537
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Gunnar",
+   "text": "Nobody asked you, Kai.",
+   "start_s": 66.168,
+   "end_s": 67.716
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Hester",
+   "text": "Gunnar. That's not okay.",
+   "start_s": 68.31,
+   "end_s": 69.965
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Gunnar",
+   "text": "I'm sorry. Kai, I'm sorry. This is my paper, and it's hard to hear.",
+   "start_s": 70.888,
+   "end_s": 76.307
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Leila",
+   "text": "The journal wants corrections within thirty days of notice. I think we notify them now.",
+   "start_s": 77.502,
+   "end_s": 83.127
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Gunnar",
+   "text": "Or we fix it quietly in the next paper.",
+   "start_s": 84.276,
+   "end_s": 87.76
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Leila",
+   "text": "Quietly isn't an option. The data are public.",
+   "start_s": 88.504,
+   "end_s": 91.504
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Hester",
+   "text": "I checked the journal page while you were talking, Gunnar. It's forty-one citations, not over a hundred.",
+   "start_s": 92.149,
+   "end_s": 99.183
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Gunnar",
+   "text": "Forty-one. It felt like more.",
+   "start_s": 99.651,
+   "end_s": 101.587
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Kai",
+   "text": "Forty-one people who used the wrong numbers.",
+   "start_s": 101.823,
+   "end_s": 104.368
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Gunnar",
+   "text": "All right. All right. We notify the journal this week and publish a correction with the fixed data.",
+   "start_s": 104.595,
+   "end_s": 111.563
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Leila",
+   "text": "Thank you. I'll draft the correction notice and the corrected figure.",
+   "start_s": 112.228,
+   "end_s": 116.353
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Gunnar",
+   "text": "I'll write to the editor myself. It should come from me, as the senior author.",
+   "start_s": 116.871,
+   "end_s": 122.678
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Kai",
+   "text": "Should we tell the people who cited it?",
+   "start_s": 123.258,
+   "end_s": 126.167
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Leila",
+   "text": "The journal notifies them automatically when a correction is published.",
+   "start_s": 127.259,
+   "end_s": 131.009
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Hester",
+   "text": "Fieldwork. We start on July seventh. Eighteen hut nights are booked.",
+   "start_s": 131.735,
+   "end_s": 136.286
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Kai",
+   "text": "And two helicopter lifts, at about two thousand each.",
+   "start_s": 137.047,
+   "end_s": 140.319
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Hester",
+   "text": "The loggers did well last winter. We recovered all sixty.",
+   "start_s": 140.755,
+   "end_s": 144.893
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Gunnar",
+   "text": "Good. The loggers are the whole study.",
+   "start_s": 145.117,
+   "end_s": 147.827
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Kai",
+   "text": "Can we afford a third lift, for the high plots?",
+   "start_s": 148.352,
+   "end_s": 151.989
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Gunnar",
+   "text": "The grant balance is forty-one thousand. A lift is cheap compared to losing a season.",
+   "start_s": 152.326,
+   "end_s": 158.132
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Leila",
+   "text": "Did anyone else see the avalanche video from the pass last week? The whole slope just went.",
+   "start_s": 158.842,
+   "end_s": 165.217
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Hester",
+   "text": "The guides posted it. It's terrifying.",
+   "start_s": 166.416,
+   "end_s": 168.898
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Kai",
+   "text": "That's the slope right above the second hut.",
+   "start_s": 169.772,
+   "end_s": 172.682
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Hester",
+   "text": "Sorry, I'm looking at the invoice from last year. The helicopter was thirty-two hundred a lift, not two thousand.",
+   "start_s": 173.064,
+   "end_s": 180.926
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Kai",
+   "text": "Thirty-two hundred. That changes the math a bit.",
+   "start_s": 182.02,
+   "end_s": 184.929
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Gunnar",
+   "text": "We still book the third lift. I'd rather pay than risk the high plots.",
+   "start_s": 185.926,
+   "end_s": 191.345
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Hester",
+   "text": "I'll call the helicopter company tomorrow and add the third lift.",
+   "start_s": 192.279,
+   "end_s": 196.831
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Leila",
+   "text": "It might be worth someone checking the second hut is safe after that avalanche.",
+   "start_s": 197.938,
+   "end_s": 203.188
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Hester",
+   "text": "Last thing. I want to ask how everyone's doing. It's been a hard few weeks.",
+   "start_s": 204.151,
+   "end_s": 210.358
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Kai",
+   "text": "Honestly? Not great. I've been thinking about whether this lab is right for me.",
+   "start_s": 211.348,
+   "end_s": 216.439
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Gunnar",
+   "text": "Because of today?",
+   "start_s": 216.993,
+   "end_s": 218.154
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Kai",
+   "text": "Partly. Partly before today.",
+   "start_s": 219.335,
+   "end_s": 220.79
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Leila",
+   "text": "I was scared to raise the error at all. I thought it might cost me my reference letter.",
+   "start_s": 221.952,
+   "end_s": 228.702
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Gunnar",
+   "text": "It won't. Finding it was the right thing. I should have said that first.",
+   "start_s": 229.063,
+   "end_s": 234.483
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Hester",
+   "text": "Can we have a lab lunch next week, no agenda, just to talk?",
+   "start_s": 235.437,
+   "end_s": 240.816
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Gunnar",
+   "text": "Yes. Please. I'll pay for it.",
+   "start_s": 241.731,
+   "end_s": 244.054
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Kai",
+   "text": "Will the correction affect my thesis chapter that uses the same data?",
+   "start_s": 244.715,
+   "end_s": 249.079
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Gunnar",
+   "text": "Thank you, all of you. Especially you, Leila.",
+   "start_s": 249.809,
+   "end_s": 252.906
+  }
+ ]
+}

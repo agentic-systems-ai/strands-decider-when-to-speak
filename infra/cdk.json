@@ -1,0 +1,16 @@
+{
+  "app": "python app.py",
+  "context": {
+    "region": "us-east-2",
+    "instance_type": "g6.xlarge",
+    "ami_ssm_parameter": "/aws/service/deeplearning/ami/x86_64/oss-nvidia-driver-gpu-pytorch-2.11-ubuntu-24.04/latest/ami-id",
+    "volume_gb": 100,
+    "app_port": 8080,
+    "bedrock_model": "openai.gpt-oss-20b-1:0",
+    "bedrock_effort": "low",
+    "decider_model": "StrandsAgents/strands-decider-2B-qwen3.5-v1-2610",
+    "decider_device": "cuda",
+    "idle_stop_minutes": 60,
+    "idle_cpu_percent": 5
+  }
+}

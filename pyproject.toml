@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "strands-decider-when-to-speak"
+version = "0.1.0"
+description = "A meeting agent that interjects only when it matters, gated by Strands Decider."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = [
+    "strands-agents[ollama]>=1.60",
+    "pyyaml>=6",
+    "requests>=2.31",
+    "boto3>=1.35",
+    "botocore[crt]",  # credentials from `aws login`
+    "pydantic>=2.6",
+]
+
+[project.optional-dependencies]
+decider = ["strands-decider>=0.1.0"]
+app = ["fastapi>=0.110", "uvicorn>=0.29", "websockets>=12", "pydub>=0.25", "pyyaml>=6"]
+eval = ["matplotlib>=3.8", "numpy>=1.26"]
+fast = ["flash-linear-attention>=0.5"]  # Linux + CUDA only: faster Decider kernels
+dev = ["pytest>=8"]
+
+[tool.setuptools]
+py-modules = ["decider_client"]
+packages = ["interjection_policy", "when_to_speak"]
+
+[tool.setuptools.package-data]
+when_to_speak = ["static/*"]
+
+[tool.setuptools.package-dir]
+interjection_policy = "patterns/interjection_policy"
+when_to_speak = "src/when_to_speak"
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "patterns"]
+markers = ["live: needs a running Decider server or AWS credentials"]

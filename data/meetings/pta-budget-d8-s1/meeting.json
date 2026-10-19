@@ -1,0 +1,2575 @@
+{
+ "meeting_id": "pta-budget-d8-s1",
+ "config": {
+  "theme": "School PTA budget meeting for next year",
+  "domain_pack": "community_budget",
+  "drama": 0.8,
+  "seed": 1,
+  "duration_min": 7.3,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   0,
+   9,
+   18,
+   32,
+   52,
+   61,
+   65,
+   67,
+   82,
+   89
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "School PTA budget meeting for next year",
+  "personas": [
+   {
+    "name": "Denise",
+    "role": "PTA president, runs the meeting",
+    "goals": "Get a budget everyone can live with before the vote",
+    "hidden_agenda": "Exhausted; wants someone else to chair next year",
+    "verbosity": 4,
+    "wpm": 170,
+    "catchphrases": [
+     "okay, folks",
+     "bear with me"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Carl",
+    "role": "Treasurer",
+    "goals": "Defend the books",
+    "hidden_agenda": "Feels accused every time someone asks about money",
+    "verbosity": 3,
+    "wpm": 145,
+    "catchphrases": [
+     "it's all in the report",
+     "with respect"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Yolanda",
+    "role": "Teacher representative",
+    "goals": "More money for classroom grants",
+    "hidden_agenda": "Her own classroom grant was denied last year",
+    "verbosity": 4,
+    "wpm": 165,
+    "catchphrases": [
+     "for the kids",
+     "I'm sorry, but"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Brett",
+    "role": "Parent, new to the PTA, outspoken",
+    "goals": "Fix the playground now",
+    "hidden_agenda": "Suspects the PTA is hoarding money",
+    "verbosity": 5,
+    "wpm": 180,
+    "catchphrases": [
+     "here's the thing",
+     "no offense"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "PTA budget meeting - next school year",
+   "org": "Maplewood Elementary PTA (fictional)",
+   "agenda": [
+    {
+     "id": "last_year",
+     "title": "Last year's actuals",
+     "goal": "Agree what came in and what went out last year",
+     "timebox_min": 1.71
+    },
+    {
+     "id": "fundraising",
+     "title": "Fundraising plan",
+     "goal": "Pick next year's fundraisers and realistic targets",
+     "timebox_min": 1.84
+    },
+    {
+     "id": "spending",
+     "title": "Spending requests",
+     "goal": "Weigh the playground",
+     "timebox_min": 2.32
+    },
+    {
+     "id": "approval",
+     "title": "Approval and next steps",
+     "goal": "Agree how the budget gets voted on",
+     "timebox_min": 1.4
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "last_year_revenue",
+     "statement": "Last year's total revenue = $48,200",
+     "value": "$48,200"
+    },
+    {
+     "id": "F2",
+     "key": "last_year_spend",
+     "statement": "Last year's total spending = $44,900",
+     "value": "$44,900"
+    },
+    {
+     "id": "F3",
+     "key": "reserve_balance",
+     "statement": "Reserve balance = $12,600",
+     "value": "$12,600"
+    },
+    {
+     "id": "F4",
+     "key": "fun_run_net",
+     "statement": "Fun run net last year = $17,300",
+     "value": "$17,300"
+    },
+    {
+     "id": "F5",
+     "key": "enrollment",
+     "statement": "Student enrollment = 412",
+     "value": "412"
+    },
+    {
+     "id": "F6",
+     "key": "teacher_grant_requests",
+     "statement": "Teacher grant requests total = $9,800",
+     "value": "$9,800"
+    },
+    {
+     "id": "F7",
+     "key": "bus_cost",
+     "statement": "Field trip bus cost = $650 per bus",
+     "value": "$650"
+    },
+    {
+     "id": "F8",
+     "key": "playground_quote",
+     "statement": "Playground resurfacing quote = $22,000",
+     "value": "$22,000"
+    },
+    {
+     "id": "F9",
+     "key": "member_families",
+     "statement": "PTA member families = 186",
+     "value": "186"
+    },
+    {
+     "id": "F10",
+     "key": "auction_net_last_year",
+     "statement": "Spring auction net last year = $8,400",
+     "value": "$8,400"
+    },
+    {
+     "id": "F11",
+     "key": "budget_vote_date",
+     "statement": "General membership budget vote = September 25",
+     "value": "September 25"
+    },
+    {
+     "id": "F12",
+     "key": "classroom_grant",
+     "statement": "Classroom grant per teacher = $200",
+     "value": "$200"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "last_year",
+    "summary": "Actuals; Brett inflates the revenue and suspects a hoard",
+    "n_turns": 22,
+    "events": []
+   },
+   {
+    "agenda_item": "fundraising",
+    "summary": "What to keep; Denise misstates the fun run and nobody catches it; a drop-off-line rant",
+    "n_turns": 23,
+    "events": []
+   },
+   {
+    "agenda_item": "spending",
+    "summary": "Playground vs teacher grants vs buses; Yolanda's number is off and gets corrected later",
+    "n_turns": 31,
+    "events": []
+   },
+   {
+    "agenda_item": "approval",
+    "summary": "How the vote works; a date gets corrected; a parked question",
+    "n_turns": 21,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Denise",
+   "text": "Okay, folks, bear with me, my screen share is being difficult. Can everybody see the budget sheet?",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Carl",
+   "text": "I can see it. It's all in the report, too, if anyone wants the numbers in front of them.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Denise",
+   "text": "Great. So, last year first. Carl, the headline?",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Carl",
+   "text": "Total revenue was forty-eight thousand two hundred, and we spent forty-four nine.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [
+    "E002",
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Brett",
+   "text": "Here's the thing, I heard we raised sixty grand last year. Where did the rest go?",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [
+    "E004",
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Carl",
+   "text": "With respect, I don't know where you heard—",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": true
+  },
+  {
+   "index": 6,
+   "speaker": "Denise",
+   "text": "Brett, the number's on the sheet. It's forty-eight two.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Brett",
+   "text": "Okay, no offense, but people talk. My neighbor was on the board two years ago.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Carl",
+   "text": "Two years ago is a different year.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Yolanda",
+   "text": "I'm sorry, but can we not start with an accusation? We have a lot to get through.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Brett",
+   "text": "I'm not accusing. I'm asking.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Denise",
+   "text": "You're both right. Let's look at what's actually left over. Carl?",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Carl",
+   "text": "The reserve is twelve thousand six hundred. That's after the spring auction cleared.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Brett",
+   "text": "Twelve six just sitting in an account while the playground is falling apart.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Carl",
+   "text": "A reserve is a reserve. If a fundraiser flops, it covers us.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Yolanda",
+   "text": "And the teachers didn't see much of it, for the record.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Denise",
+   "text": "How much did the auction actually clear last year?",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Carl",
+   "text": "Eight four. Lower than the year before.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Brett",
+   "text": "Eight four for all that work? Honestly, that's depressing.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Denise",
+   "text": "It's a lot of work for that, yes.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Yolanda",
+   "text": "Maybe we drop the auction this year.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Carl",
+   "text": "Let's not drop anything before we've talked fundraising.",
+   "agenda_item": "last_year",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Denise",
+   "text": "Okay, folks, fundraising. The fun run is our big one. It brought in about twenty-five thousand last year.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Carl",
+   "text": "The fun run is the one I'd never touch.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Yolanda",
+   "text": "The kids love it, too. It's the one fundraiser that doesn't feel like begging.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Brett",
+   "text": "What about a corporate match thing? My company matches donations.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Denise",
+   "text": "Some do. We've never really pushed it.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Carl",
+   "text": "It'd be good if somebody made a list of local employers who match.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Brett",
+   "text": "I can— actually, never mind, I'm traveling all of October.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Denise",
+   "text": "And membership? How many families paid dues this year?",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Carl",
+   "text": "A hundred and eighty-six. Out of four hundred and twelve kids, so not even half.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [
+    "E020",
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Yolanda",
+   "text": "Half the families don't know what the PTA does. That's the problem.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Brett",
+   "text": "Speaking of things nobody knows, has anyone actually timed the drop-off line? It's twenty-five minutes some mornings.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Denise",
+   "text": "Oh, don't get me started on the drop-off line.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Yolanda",
+   "text": "The crossing guard is doing her best, I'm sorry, but it's the parents who won't pull forward.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Brett",
+   "text": "Here's the thing, it's the minivans. They stop right in the middle to unload backpacks.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Carl",
+   "text": "I drive a minivan.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Denise",
+   "text": "Okay, folks, the drop-off line is a whole other meeting. Fundraising.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Yolanda",
+   "text": "So do we keep the auction or not?",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Carl",
+   "text": "With respect, the auction is the only fundraiser that grandparents give to.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Brett",
+   "text": "Then make it smaller. Fewer baskets, better ones.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Denise",
+   "text": "Okay, we keep the fun run, we keep the auction but smaller, and we try the corporate match. That's the plan.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Yolanda",
+   "text": "Fine by me.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Denise",
+   "text": "I'll call the three biggest local employers about matching before the next meeting.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Brett",
+   "text": "If you need a script, I'm happy to write one.",
+   "agenda_item": "fundraising",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Denise",
+   "text": "Okay, the hard part. Spending. Three big asks. Playground, teacher grants, field trips.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Brett",
+   "text": "The playground. The resurfacing quote was twenty-two thousand.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Carl",
+   "text": "Which is more than our entire reserve.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Brett",
+   "text": "Then we raise it. That's literally what a PTA is for.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Yolanda",
+   "text": "I'm sorry, but teacher grant requests total twelve thousand, and those are for the kids too.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Denise",
+   "text": "Twelve thousand in requests, okay.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Brett",
+   "text": "Teachers have a district budget. The playground doesn't.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Yolanda",
+   "text": "Do you know what the district budget for my classroom is?",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Brett",
+   "text": "No, I—",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": true
+  },
+  {
+   "index": 54,
+   "speaker": "Yolanda",
+   "text": "Zero. It's zero. I buy the glue sticks.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Denise",
+   "text": "Okay, folks, nobody's saying grants don't matter.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Carl",
+   "text": "The classroom grant is two hundred per teacher. That part we always fund.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Yolanda",
+   "text": "Two hundred is the floor, not the request.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Carl",
+   "text": "Bear with me, I'm looking at the request sheet. The grant requests add up to nine thousand eight hundred, not twelve.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Yolanda",
+   "text": "Oh. I had the old list with the smartboard request on it.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Denise",
+   "text": "Okay, nine eight. And field trips?",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E033",
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Yolanda",
+   "text": "Buses are six fifty each, and we need about twenty trips.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Brett",
+   "text": "Can the field trips just be cheaper? Like, closer places?",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Yolanda",
+   "text": "Closer places are the places they went last year. And the year before.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Denise",
+   "text": "What if we fund the grants fully and put the playground in a two-year plan?",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Brett",
+   "text": "Two years? My kid will be in middle school.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Carl",
+   "text": "With respect, that is fiscally the only thing that works.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Brett",
+   "text": "Here's the thing, there's a grant for playgrounds. The county does one. Has anyone applied for it?",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Yolanda",
+   "text": "I'm sorry, but the field trips, we haven't settled the field trips.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Denise",
+   "text": "Okay. The teacher grants are funded at nine eight. That part's decided.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E039",
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Yolanda",
+   "text": "Thank you. Honestly, thank you.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Brett",
+   "text": "And the playground just waits.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Denise",
+   "text": "The playground goes into a two-year plan. Maybe we start with half the resurfacing this year.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Carl",
+   "text": "I'll build a two-year version of the budget with the playground split in half, before the vote.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "Brett",
+   "text": "Fine. But I want it on record that I think it's too slow.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 75,
+   "speaker": "Yolanda",
+   "text": "Noted, Brett.",
+   "agenda_item": "spending",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 76,
+   "speaker": "Denise",
+   "text": "Last thing. How this gets approved. Carl, remind everyone?",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 77,
+   "speaker": "Carl",
+   "text": "The board recommends a budget, and then the general membership votes. It's all in the bylaws.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 78,
+   "speaker": "Brett",
+   "text": "When's the vote?",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 79,
+   "speaker": "Denise",
+   "text": "September twentieth.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 80,
+   "speaker": "Carl",
+   "text": "Bear with me, it's the twenty-fifth. The twentieth was the original date before the gym conflict.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 81,
+   "speaker": "Denise",
+   "text": "The twenty-fifth. Sorry, folks, it's been a week.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 82,
+   "speaker": "Brett",
+   "text": "Who decided the reserve has to be that big, anyway?",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 83,
+   "speaker": "Yolanda",
+   "text": "Can members vote by email, or do they have to be there in person?",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 84,
+   "speaker": "Carl",
+   "text": "In person or by proxy. It's in the—",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": true
+  },
+  {
+   "index": 85,
+   "speaker": "Brett",
+   "text": "In the bylaws. We know.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 86,
+   "speaker": "Carl",
+   "text": "Well, it is.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 87,
+   "speaker": "Denise",
+   "text": "Okay. Could someone send the proposed budget to the membership a week before the vote?",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [
+    "E049"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 88,
+   "speaker": "Carl",
+   "text": "I'll email the proposed budget to every member family by the eighteenth.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 89,
+   "speaker": "Brett",
+   "text": "Should we do a playground info table at the vote, so people understand the plan?",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [
+    "E051"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 90,
+   "speaker": "Denise",
+   "text": "Maybe. Let's see how the two-year version looks first.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [
+    "E052"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 91,
+   "speaker": "Yolanda",
+   "text": "Sorry, Denise, my son needs help with his math, one second.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [
+    "E053"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 92,
+   "speaker": "Denise",
+   "text": "Go, go, it's fine.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 93,
+   "speaker": "Yolanda",
+   "text": "Okay, I'm back. Sorry.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 94,
+   "speaker": "Denise",
+   "text": "Okay, folks. I think that's it. Thank you all for coming, even the heated parts.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 95,
+   "speaker": "Brett",
+   "text": "Especially the heated parts.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 96,
+   "speaker": "Carl",
+   "text": "Goodnight, everyone.",
+   "agenda_item": "approval",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Denise",
+   "agenda_item": "last_year",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Carl",
+   "agenda_item": "last_year",
+   "fact_id": "F1",
+   "claimed_value": "$48,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Carl",
+   "agenda_item": "last_year",
+   "fact_id": "F2",
+   "claimed_value": "$44,900",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 4,
+   "speaker": "Brett",
+   "agenda_item": "last_year",
+   "fact_id": "F1",
+   "claimed_value": "$60,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Brett",
+   "agenda_item": "last_year",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 6,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Denise",
+   "agenda_item": "last_year",
+   "fact_id": "F1",
+   "claimed_value": "$48,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Denise",
+   "agenda_item": "last_year",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 12,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Carl",
+   "agenda_item": "last_year",
+   "fact_id": "F3",
+   "claimed_value": "$12,600",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Brett",
+   "agenda_item": "last_year",
+   "fact_id": "F3",
+   "claimed_value": "$12,600",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Denise",
+   "agenda_item": "last_year",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 17,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Carl",
+   "agenda_item": "last_year",
+   "fact_id": "F10",
+   "claimed_value": "$8,400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Brett",
+   "agenda_item": "last_year",
+   "fact_id": "F10",
+   "claimed_value": "$8,400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Yolanda",
+   "agenda_item": "last_year",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Carl",
+   "agenda_item": "last_year",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 22,
+   "speaker": "Denise",
+   "agenda_item": "fundraising",
+   "fact_id": "F4",
+   "claimed_value": "$25,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Brett",
+   "agenda_item": "fundraising",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 26,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Carl",
+   "agenda_item": "fundraising",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Brett",
+   "agenda_item": "fundraising",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Denise",
+   "agenda_item": "fundraising",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 30,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Carl",
+   "agenda_item": "fundraising",
+   "fact_id": "F9",
+   "claimed_value": "186",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Carl",
+   "agenda_item": "fundraising",
+   "fact_id": "F5",
+   "claimed_value": "412",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 32,
+   "speaker": "Brett",
+   "agenda_item": "fundraising",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 5,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Yolanda",
+   "agenda_item": "fundraising",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 41,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 41,
+   "speaker": "Denise",
+   "agenda_item": "fundraising",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 43,
+   "speaker": "Denise",
+   "agenda_item": "fundraising",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Brett",
+   "agenda_item": "fundraising",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Brett",
+   "agenda_item": "spending",
+   "fact_id": "F8",
+   "claimed_value": "$22,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 49,
+   "speaker": "Yolanda",
+   "agenda_item": "spending",
+   "fact_id": "F6",
+   "claimed_value": "$12,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 50,
+   "speaker": "Denise",
+   "agenda_item": "spending",
+   "fact_id": "F6",
+   "claimed_value": "$12,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 56,
+   "speaker": "Carl",
+   "agenda_item": "spending",
+   "fact_id": "F12",
+   "claimed_value": "$200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 57,
+   "speaker": "Yolanda",
+   "agenda_item": "spending",
+   "fact_id": "F12",
+   "claimed_value": "$200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 58,
+   "speaker": "Carl",
+   "agenda_item": "spending",
+   "fact_id": "F6",
+   "claimed_value": "$9,800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 60,
+   "speaker": "Denise",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 61,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 60,
+   "speaker": "Denise",
+   "agenda_item": "spending",
+   "fact_id": "F6",
+   "claimed_value": "$9,800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 61,
+   "speaker": "Yolanda",
+   "agenda_item": "spending",
+   "fact_id": "F7",
+   "claimed_value": "$650",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 62,
+   "speaker": "Brett",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 63,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 64,
+   "speaker": "Denise",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 66,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 67,
+   "speaker": "Brett",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 69,
+   "speaker": "Denise",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 69,
+   "speaker": "Denise",
+   "agenda_item": "spending",
+   "fact_id": "F6",
+   "claimed_value": "$9,800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 72,
+   "speaker": "Denise",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 73,
+   "speaker": "Carl",
+   "agenda_item": "spending",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 76,
+   "speaker": "Denise",
+   "agenda_item": "approval",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 77,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 78,
+   "speaker": "Brett",
+   "agenda_item": "approval",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 79,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 79,
+   "speaker": "Denise",
+   "agenda_item": "approval",
+   "fact_id": "F11",
+   "claimed_value": "September 20",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 80,
+   "speaker": "Carl",
+   "agenda_item": "approval",
+   "fact_id": "F11",
+   "claimed_value": "September 25",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 81,
+   "speaker": "Denise",
+   "agenda_item": "approval",
+   "fact_id": "F11",
+   "claimed_value": "September 25",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 83,
+   "speaker": "Yolanda",
+   "agenda_item": "approval",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 84,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 87,
+   "speaker": "Denise",
+   "agenda_item": "approval",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 88,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 88,
+   "speaker": "Carl",
+   "agenda_item": "approval",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 89,
+   "speaker": "Brett",
+   "agenda_item": "approval",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 90,
+   "speaker": "Denise",
+   "agenda_item": "approval",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E053",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 91,
+   "speaker": "Yolanda",
+   "agenda_item": "approval",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Denise",
+   "text": "Okay, folks, bear with me, my screen share is being difficult. Can everybody see the budget sheet?",
+   "start_s": 0.5,
+   "end_s": 6.5
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Carl",
+   "text": "I can see it. It's all in the report, too, if anyone wants the numbers in front of them.",
+   "start_s": 6.834,
+   "end_s": 14.696
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Denise",
+   "text": "Great. So, last year first. Carl, the headline?",
+   "start_s": 15.743,
+   "end_s": 18.567
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Carl",
+   "text": "Total revenue was forty-eight thousand two hundred, and we spent forty-four nine.",
+   "start_s": 19.531,
+   "end_s": 24.496
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Brett",
+   "text": "Here's the thing, I heard we raised sixty grand last year. Where did the rest go?",
+   "start_s": 24.951,
+   "end_s": 30.284
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Carl",
+   "text": "With respect, I don't know where you heard—",
+   "start_s": 30.979,
+   "end_s": 34.29
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Denise",
+   "text": "Brett, the number's on the sheet. It's forty-eight two.",
+   "start_s": 33.765,
+   "end_s": 36.942
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Brett",
+   "text": "Okay, no offense, but people talk. My neighbor was on the board two years ago.",
+   "start_s": 37.794,
+   "end_s": 42.794
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Carl",
+   "text": "Two years ago is a different year.",
+   "start_s": 43.783,
+   "end_s": 46.679
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Yolanda",
+   "text": "I'm sorry, but can we not start with an accusation? We have a lot to get through.",
+   "start_s": 46.973,
+   "end_s": 53.155
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Brett",
+   "text": "I'm not accusing. I'm asking.",
+   "start_s": 53.383,
+   "end_s": 55.05
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Denise",
+   "text": "You're both right. Let's look at what's actually left over. Carl?",
+   "start_s": 56.086,
+   "end_s": 59.968
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Carl",
+   "text": "The reserve is twelve thousand six hundred. That's after the spring auction cleared.",
+   "start_s": 60.601,
+   "end_s": 65.98
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Brett",
+   "text": "Twelve six just sitting in an account while the playground is falling apart.",
+   "start_s": 66.942,
+   "end_s": 71.276
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Carl",
+   "text": "A reserve is a reserve. If a fundraiser flops, it covers us.",
+   "start_s": 71.478,
+   "end_s": 76.444
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Yolanda",
+   "text": "And the teachers didn't see much of it, for the record.",
+   "start_s": 77.089,
+   "end_s": 81.089
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Denise",
+   "text": "How much did the auction actually clear last year?",
+   "start_s": 82.011,
+   "end_s": 85.187
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Carl",
+   "text": "Eight four. Lower than the year before.",
+   "start_s": 85.616,
+   "end_s": 88.512
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Brett",
+   "text": "Eight four for all that work? Honestly, that's depressing.",
+   "start_s": 89.657,
+   "end_s": 92.657
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Denise",
+   "text": "It's a lot of work for that, yes.",
+   "start_s": 93.758,
+   "end_s": 96.582
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Yolanda",
+   "text": "Maybe we drop the auction this year.",
+   "start_s": 96.813,
+   "end_s": 99.358
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Carl",
+   "text": "Let's not drop anything before we've talked fundraising.",
+   "start_s": 99.583,
+   "end_s": 102.894
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Denise",
+   "text": "Okay, folks, fundraising. The fun run is our big one. It brought in about twenty-five thousand last year.",
+   "start_s": 103.635,
+   "end_s": 109.988
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Carl",
+   "text": "The fun run is the one I'd never touch.",
+   "start_s": 111.127,
+   "end_s": 114.851
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Yolanda",
+   "text": "The kids love it, too. It's the one fundraiser that doesn't feel like begging.",
+   "start_s": 115.432,
+   "end_s": 120.523
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Brett",
+   "text": "What about a corporate match thing? My company matches donations.",
+   "start_s": 120.94,
+   "end_s": 124.273
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Denise",
+   "text": "Some do. We've never really pushed it.",
+   "start_s": 124.895,
+   "end_s": 127.366
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Carl",
+   "text": "It'd be good if somebody made a list of local employers who match.",
+   "start_s": 127.595,
+   "end_s": 132.974
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Brett",
+   "text": "I can— actually, never mind, I'm traveling all of October.",
+   "start_s": 133.396,
+   "end_s": 136.729
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Denise",
+   "text": "And membership? How many families paid dues this year?",
+   "start_s": 137.367,
+   "end_s": 140.543
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Carl",
+   "text": "A hundred and eighty-six. Out of four hundred and twelve kids, so not even half.",
+   "start_s": 141.239,
+   "end_s": 147.446
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Yolanda",
+   "text": "Half the families don't know what the PTA does. That's the problem.",
+   "start_s": 147.879,
+   "end_s": 152.243
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Brett",
+   "text": "Speaking of things nobody knows, has anyone actually timed the drop-off line? It's twenty-five minutes some mornings.",
+   "start_s": 152.674,
+   "end_s": 158.341
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Denise",
+   "text": "Oh, don't get me started on the drop-off line.",
+   "start_s": 158.76,
+   "end_s": 161.936
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Yolanda",
+   "text": "The crossing guard is doing her best, I'm sorry, but it's the parents who won't pull forward.",
+   "start_s": 162.596,
+   "end_s": 168.777
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Brett",
+   "text": "Here's the thing, it's the minivans. They stop right in the middle to unload backpacks.",
+   "start_s": 169.267,
+   "end_s": 174.267
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Carl",
+   "text": "I drive a minivan.",
+   "start_s": 174.488,
+   "end_s": 176.144
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Denise",
+   "text": "Okay, folks, the drop-off line is a whole other meeting. Fundraising.",
+   "start_s": 177.182,
+   "end_s": 181.064
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Yolanda",
+   "text": "So do we keep the auction or not?",
+   "start_s": 181.82,
+   "end_s": 184.73
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Carl",
+   "text": "With respect, the auction is the only fundraiser that grandparents give to.",
+   "start_s": 185.572,
+   "end_s": 190.538
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Brett",
+   "text": "Then make it smaller. Fewer baskets, better ones.",
+   "start_s": 190.924,
+   "end_s": 193.591
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Denise",
+   "text": "Okay, we keep the fun run, we keep the auction but smaller, and we try the corporate match. That's the plan.",
+   "start_s": 194.784,
+   "end_s": 202.195
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Yolanda",
+   "text": "Fine by me.",
+   "start_s": 203.255,
+   "end_s": 204.346
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Denise",
+   "text": "I'll call the three biggest local employers about matching before the next meeting.",
+   "start_s": 204.667,
+   "end_s": 209.255
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Brett",
+   "text": "If you need a script, I'm happy to write one.",
+   "start_s": 209.788,
+   "end_s": 213.121
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Denise",
+   "text": "Okay, the hard part. Spending. Three big asks. Playground, teacher grants, field trips.",
+   "start_s": 214.042,
+   "end_s": 218.631
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Brett",
+   "text": "The playground. The resurfacing quote was twenty-two thousand.",
+   "start_s": 219.542,
+   "end_s": 222.209
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Carl",
+   "text": "Which is more than our entire reserve.",
+   "start_s": 223.345,
+   "end_s": 226.242
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Brett",
+   "text": "Then we raise it. That's literally what a PTA is for.",
+   "start_s": 226.864,
+   "end_s": 230.531
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Yolanda",
+   "text": "I'm sorry, but teacher grant requests total twelve thousand, and those are for the kids too.",
+   "start_s": 231.561,
+   "end_s": 237.379
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Denise",
+   "text": "Twelve thousand in requests, okay.",
+   "start_s": 238.249,
+   "end_s": 240.014
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Brett",
+   "text": "Teachers have a district budget. The playground doesn't.",
+   "start_s": 240.517,
+   "end_s": 243.184
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Yolanda",
+   "text": "Do you know what the district budget for my classroom is?",
+   "start_s": 243.972,
+   "end_s": 247.972
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Brett",
+   "text": "No, I—",
+   "start_s": 249.054,
+   "end_s": 249.721
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Yolanda",
+   "text": "Zero. It's zero. I buy the glue sticks.",
+   "start_s": 249.354,
+   "end_s": 252.263
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Denise",
+   "text": "Okay, folks, nobody's saying grants don't matter.",
+   "start_s": 252.968,
+   "end_s": 255.439
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Carl",
+   "text": "The classroom grant is two hundred per teacher. That part we always fund.",
+   "start_s": 256.228,
+   "end_s": 261.607
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Yolanda",
+   "text": "Two hundred is the floor, not the request.",
+   "start_s": 261.842,
+   "end_s": 264.751
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Carl",
+   "text": "Bear with me, I'm looking at the request sheet. The grant requests add up to nine thousand eight hundred, not twelve.",
+   "start_s": 265.194,
+   "end_s": 273.883
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Yolanda",
+   "text": "Oh. I had the old list with the smartboard request on it.",
+   "start_s": 274.88,
+   "end_s": 279.244
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Denise",
+   "text": "Okay, nine eight. And field trips?",
+   "start_s": 279.858,
+   "end_s": 281.976
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Yolanda",
+   "text": "Buses are six fifty each, and we need about twenty trips.",
+   "start_s": 282.349,
+   "end_s": 286.349
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Brett",
+   "text": "Can the field trips just be cheaper? Like, closer places?",
+   "start_s": 287.098,
+   "end_s": 290.431
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Yolanda",
+   "text": "Closer places are the places they went last year. And the year before.",
+   "start_s": 291.334,
+   "end_s": 296.061
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Denise",
+   "text": "What if we fund the grants fully and put the playground in a two-year plan?",
+   "start_s": 296.935,
+   "end_s": 302.23
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Brett",
+   "text": "Two years? My kid will be in middle school.",
+   "start_s": 302.805,
+   "end_s": 305.805
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Carl",
+   "text": "With respect, that is fiscally the only thing that works.",
+   "start_s": 306.444,
+   "end_s": 310.582
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Brett",
+   "text": "Here's the thing, there's a grant for playgrounds. The county does one. Has anyone applied for it?",
+   "start_s": 311.29,
+   "end_s": 316.957
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Yolanda",
+   "text": "I'm sorry, but the field trips, we haven't settled the field trips.",
+   "start_s": 317.935,
+   "end_s": 322.299
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Denise",
+   "text": "Okay. The teacher grants are funded at nine eight. That part's decided.",
+   "start_s": 323.02,
+   "end_s": 327.255
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Yolanda",
+   "text": "Thank you. Honestly, thank you.",
+   "start_s": 327.848,
+   "end_s": 329.666
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Brett",
+   "text": "And the playground just waits.",
+   "start_s": 330.356,
+   "end_s": 332.022
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Denise",
+   "text": "The playground goes into a two-year plan. Maybe we start with half the resurfacing this year.",
+   "start_s": 332.252,
+   "end_s": 337.899
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Carl",
+   "text": "I'll build a two-year version of the budget with the playground split in half, before the vote.",
+   "start_s": 338.142,
+   "end_s": 345.177
+  },
+  {
+   "turn_index": 74,
+   "speaker": "Brett",
+   "text": "Fine. But I want it on record that I think it's too slow.",
+   "start_s": 346.08,
+   "end_s": 350.414
+  },
+  {
+   "turn_index": 75,
+   "speaker": "Yolanda",
+   "text": "Noted, Brett.",
+   "start_s": 351.597,
+   "end_s": 352.324
+  },
+  {
+   "turn_index": 76,
+   "speaker": "Denise",
+   "text": "Last thing. How this gets approved. Carl, remind everyone?",
+   "start_s": 353.117,
+   "end_s": 356.294
+  },
+  {
+   "turn_index": 77,
+   "speaker": "Carl",
+   "text": "The board recommends a budget, and then the general membership votes. It's all in the bylaws.",
+   "start_s": 356.888,
+   "end_s": 363.508
+  },
+  {
+   "turn_index": 78,
+   "speaker": "Brett",
+   "text": "When's the vote?",
+   "start_s": 363.878,
+   "end_s": 364.878
+  },
+  {
+   "turn_index": 79,
+   "speaker": "Denise",
+   "text": "September twentieth.",
+   "start_s": 365.58,
+   "end_s": 366.286
+  },
+  {
+   "turn_index": 80,
+   "speaker": "Carl",
+   "text": "Bear with me, it's the twenty-fifth. The twentieth was the original date before the gym conflict.",
+   "start_s": 367.468,
+   "end_s": 374.089
+  },
+  {
+   "turn_index": 81,
+   "speaker": "Denise",
+   "text": "The twenty-fifth. Sorry, folks, it's been a week.",
+   "start_s": 375.06,
+   "end_s": 377.883
+  },
+  {
+   "turn_index": 82,
+   "speaker": "Brett",
+   "text": "Who decided the reserve has to be that big, anyway?",
+   "start_s": 378.623,
+   "end_s": 381.956
+  },
+  {
+   "turn_index": 83,
+   "speaker": "Yolanda",
+   "text": "Can members vote by email, or do they have to be there in person?",
+   "start_s": 383.016,
+   "end_s": 388.107
+  },
+  {
+   "turn_index": 84,
+   "speaker": "Carl",
+   "text": "In person or by proxy. It's in the—",
+   "start_s": 388.539,
+   "end_s": 391.85
+  },
+  {
+   "turn_index": 85,
+   "speaker": "Brett",
+   "text": "In the bylaws. We know.",
+   "start_s": 391.293,
+   "end_s": 392.96
+  },
+  {
+   "turn_index": 86,
+   "speaker": "Carl",
+   "text": "Well, it is.",
+   "start_s": 394.112,
+   "end_s": 395.354
+  },
+  {
+   "turn_index": 87,
+   "speaker": "Denise",
+   "text": "Okay. Could someone send the proposed budget to the membership a week before the vote?",
+   "start_s": 396.132,
+   "end_s": 401.426
+  },
+  {
+   "turn_index": 88,
+   "speaker": "Carl",
+   "text": "I'll email the proposed budget to every member family by the eighteenth.",
+   "start_s": 402.085,
+   "end_s": 407.051
+  },
+  {
+   "turn_index": 89,
+   "speaker": "Brett",
+   "text": "Should we do a playground info table at the vote, so people understand the plan?",
+   "start_s": 407.52,
+   "end_s": 412.52
+  },
+  {
+   "turn_index": 90,
+   "speaker": "Denise",
+   "text": "Maybe. Let's see how the two-year version looks first.",
+   "start_s": 413.268,
+   "end_s": 416.444
+  },
+  {
+   "turn_index": 91,
+   "speaker": "Yolanda",
+   "text": "Sorry, Denise, my son needs help with his math, one second.",
+   "start_s": 417.601,
+   "end_s": 421.601
+  },
+  {
+   "turn_index": 92,
+   "speaker": "Denise",
+   "text": "Go, go, it's fine.",
+   "start_s": 421.807,
+   "end_s": 423.218
+  },
+  {
+   "turn_index": 93,
+   "speaker": "Yolanda",
+   "text": "Okay, I'm back. Sorry.",
+   "start_s": 424.202,
+   "end_s": 425.656
+  },
+  {
+   "turn_index": 94,
+   "speaker": "Denise",
+   "text": "Okay, folks. I think that's it. Thank you all for coming, even the heated parts.",
+   "start_s": 426.676,
+   "end_s": 431.971
+  },
+  {
+   "turn_index": 95,
+   "speaker": "Brett",
+   "text": "Especially the heated parts.",
+   "start_s": 433.057,
+   "end_s": 434.391
+  },
+  {
+   "turn_index": 96,
+   "speaker": "Carl",
+   "text": "Goodnight, everyone.",
+   "start_s": 435.332,
+   "end_s": 436.159
+  }
+ ]
+}

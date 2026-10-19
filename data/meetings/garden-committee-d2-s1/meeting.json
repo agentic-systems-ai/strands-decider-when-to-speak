@@ -1,0 +1,2289 @@
+{
+ "meeting_id": "garden-committee-d2-s1",
+ "config": {
+  "theme": "Community garden committee: plots, water and the spring fair",
+  "domain_pack": "community_group",
+  "drama": 0.2,
+  "seed": 1,
+  "duration_min": 6.3,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   11,
+   27,
+   38,
+   39,
+   43,
+   46,
+   59,
+   63,
+   65,
+   76
+  ],
+  "reviewed_noclaim": [
+   11
+  ]
+ },
+ "cast": {
+  "theme": "Community garden committee: plots, water and the spring fair",
+  "personas": [
+   {
+    "name": "Ruth",
+    "role": "Committee chair, retired teacher",
+    "goals": "A calm season and a full garden",
+    "hidden_agenda": "Worried the city won't renew the lease",
+    "verbosity": 3,
+    "wpm": 140,
+    "catchphrases": [
+     "now then",
+     "lovely"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Hector",
+    "role": "Volunteer who looks after the water system",
+    "goals": "Fix the leaking main line before summer",
+    "hidden_agenda": "Has been paying for small parts himself",
+    "verbosity": 2,
+    "wpm": 145,
+    "catchphrases": [
+     "the thing with water is"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Mina",
+    "role": "Plot and waitlist coordinator",
+    "goals": "Get waitlisted families into plots",
+    "hidden_agenda": "Her friend is next on the waitlist",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [
+     "so basically",
+     "honestly"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Sam",
+    "role": "Organizes the spring fair",
+    "goals": "A fair that pays for the water bill",
+    "hidden_agenda": "Wants to add a food truck the others may not like",
+    "verbosity": 3,
+    "wpm": 170,
+    "catchphrases": [
+     "super quick",
+     "totally"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Garden committee - March meeting",
+   "org": "Elm Street Community Garden (fictional)",
+   "agenda": [
+    {
+     "id": "plots",
+     "title": "Plots and the waitlist",
+     "goal": "Reassign abandoned plots and work through the waitlist",
+     "timebox_min": 1.54
+    },
+    {
+     "id": "water",
+     "title": "Water system and the bill",
+     "goal": "Understand the water bill and decide on the spring repairs",
+     "timebox_min": 1.73
+    },
+    {
+     "id": "spring_fair",
+     "title": "Spring fair",
+     "goal": "Confirm vendors",
+     "timebox_min": 1.6
+    },
+    {
+     "id": "rules",
+     "title": "Garden rules",
+     "goal": "Agree what to do about unattended plots and shared tools",
+     "timebox_min": 1.46
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "total_plots",
+     "statement": "Total plots = 64",
+     "value": "64"
+    },
+    {
+     "id": "F2",
+     "key": "waitlist_count",
+     "statement": "People on the waitlist = 29",
+     "value": "29"
+    },
+    {
+     "id": "F3",
+     "key": "annual_plot_fee",
+     "statement": "Annual plot fee = $45",
+     "value": "$45"
+    },
+    {
+     "id": "F4",
+     "key": "water_bill_last_year",
+     "statement": "Water bill last year = $1,870",
+     "value": "$1,870"
+    },
+    {
+     "id": "F5",
+     "key": "water_rate_increase",
+     "statement": "City water rate increase this year = 12%",
+     "value": "12%"
+    },
+    {
+     "id": "F6",
+     "key": "abandoned_plots",
+     "statement": "Plots abandoned last season = 7",
+     "value": "7"
+    },
+    {
+     "id": "F7",
+     "key": "spring_fair_date",
+     "statement": "Spring fair = Saturday, April 26",
+     "value": "April 26"
+    },
+    {
+     "id": "F8",
+     "key": "fair_vendor_slots",
+     "statement": "Vendor slots at the fair = 18",
+     "value": "18"
+    },
+    {
+     "id": "F9",
+     "key": "shed_insurance",
+     "statement": "Tool shed insurance = $320 a year",
+     "value": "$320"
+    },
+    {
+     "id": "F10",
+     "key": "compost_deliveries",
+     "statement": "Compost deliveries per season = 3",
+     "value": "3"
+    },
+    {
+     "id": "F11",
+     "key": "bank_balance",
+     "statement": "Garden bank balance = $4,150",
+     "value": "$4,150"
+    },
+    {
+     "id": "F12",
+     "key": "lease_renewal",
+     "statement": "City lease renewal due June 30",
+     "value": "June 30"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "plots",
+    "summary": "Abandoned plots and the waitlist; Ruth overstates the waitlist and Mina corrects it gently",
+    "n_turns": 19,
+    "events": []
+   },
+   {
+    "agenda_item": "water",
+    "summary": "The bill is going up; Hector's percentage is off and nobody notices; the main line repair",
+    "n_turns": 22,
+    "events": []
+   },
+   {
+    "agenda_item": "spring_fair",
+    "summary": "Vendors, the date, a food truck idea; a detour into the high school's football season",
+    "n_turns": 20,
+    "events": []
+   },
+   {
+    "agenda_item": "rules",
+    "summary": "Unattended plots and the shared tools; the lease question hangs in the air",
+    "n_turns": 19,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Ruth",
+   "text": "Now then, let's get started. Plots first. Mina, how does it look?",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Mina",
+   "text": "So basically, seven plots were abandoned last season. Nobody touched them after July.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Ruth",
+   "text": "Seven. That's more than usual. And the waitlist must be, what, forty people by now?",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E003",
+    "E004",
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Mina",
+   "text": "Honestly, it's twenty-nine. It feels like more because people email twice.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Ruth",
+   "text": "Twenty-nine. Still a lot of people waiting.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Sam",
+   "text": "Do the abandoned plots go straight to the waitlist?",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Mina",
+   "text": "That's the rule. First come, first served.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Hector",
+   "text": "The thing with those plots is, some of them are a real mess. Bindweed everywhere.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Ruth",
+   "text": "Should we clear them before handing them over?",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Mina",
+   "text": "It would be kinder. Nobody wants to start with a jungle.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Sam",
+   "text": "Totally. Could we do a work day for it?",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Ruth",
+   "text": "A work day sounds lovely. Maybe the first Saturday in April?",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E011",
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Hector",
+   "text": "I'd come, but my back might not.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Mina",
+   "text": "I'll email the next seven people on the waitlist this week and offer them the plots.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Ruth",
+   "text": "Lovely. Will they pay the full fee, joining this late?",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Mina",
+   "text": "The fee's forty-five for the year. We've always charged it in full.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Sam",
+   "text": "Forty-five is pretty cheap honestly, for a whole season.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Ruth",
+   "text": "Then the seven abandoned plots go to the next seven on the waitlist, full fee. That's settled.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [
+    "E017",
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Mina",
+   "text": "Great.",
+   "agenda_item": "plots",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Ruth",
+   "text": "Now then, water. Hector?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Hector",
+   "text": "The thing with water is, it's our biggest cost. Last year the bill was eighteen seventy.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Sam",
+   "text": "And it's going up this year?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Hector",
+   "text": "The city put the rate up about twenty percent.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Ruth",
+   "text": "Twenty percent. Goodness.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Mina",
+   "text": "So basically, the plot fees don't even cover the water anymore.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Hector",
+   "text": "And the main line is leaking near the shed. Every drip is money.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Sam",
+   "text": "How much would it cost to fix the leak properly?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Hector",
+   "text": "A plumber quoted me a few hundred. I could do it myself for less, with a helper.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Ruth",
+   "text": "Do we have the money for that?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Sam",
+   "text": "Super quick, the bank balance is forty-one fifty. So yes, we can cover a repair.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Ruth",
+   "text": "Then let's not wait. It would be good if somebody found Hector a helper.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Mina",
+   "text": "My neighbor is a retired plumber, actually. He's very bored.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Hector",
+   "text": "A bored plumber is the best kind of plumber.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Ruth",
+   "text": "Mina, could you ask your neighbor if he'd help Hector on the main line?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Mina",
+   "text": "Of course. I'll ask him tonight and put him in touch with Hector.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Ruth",
+   "text": "Lovely. Then we fix the main line before the season starts, and the garden pays for parts. Agreed.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Hector",
+   "text": "Thank you. I've been buying the washers myself, honestly.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Ruth",
+   "text": "Hector! You should have said.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Hector",
+   "text": "It's only a few dollars here and there.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Sam",
+   "text": "Has anyone looked at whether rain barrels would help with the bill?",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Ruth",
+   "text": "Now then, the fair.",
+   "agenda_item": "water",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Sam",
+   "text": "Super quick, so, the fair. It's Saturday, April twenty-sixth.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Ruth",
+   "text": "Lovely. And the vendors?",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Sam",
+   "text": "We have eighteen vendor slots, and fourteen are already taken.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Mina",
+   "text": "That's great for this early.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Sam",
+   "text": "I also had an idea. What if we had a food truck this year? The taco place on Fifth said they'd come.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Hector",
+   "text": "A food truck in a garden?",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Ruth",
+   "text": "Hm. I'd want to think about that. The bake sale has always been the food.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Mina",
+   "text": "Honestly, people would love tacos. The bake sale sells out by noon anyway.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Sam",
+   "text": "They'd pay a vendor fee, too, like everyone else.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Ruth",
+   "text": "Maybe we try it this year and see.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Hector",
+   "text": "My grandson's team made the playoffs, by the way. The game's that same weekend.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Mina",
+   "text": "Oh, congratulations! Is he still playing quarterback?",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Hector",
+   "text": "Linebacker now. He likes hitting people more than throwing, apparently.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Ruth",
+   "text": "Now then, we were on the fair.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Sam",
+   "text": "So, food truck or no food truck?",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Ruth",
+   "text": "Food truck, this year, as a trial. If the bake sale people are upset, we revisit. Decided.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Sam",
+   "text": "Totally. I'll confirm with the taco place and send them the vendor form this week.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Mina",
+   "text": "Do we need more volunteers for the day?",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Sam",
+   "text": "Probably four or five more, for setup and the plant sale table.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Mina",
+   "text": "We could really use a sign-up sheet on the shed door.",
+   "agenda_item": "spring_fair",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Ruth",
+   "text": "Last item. The rules. The unattended plots, and the tools.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Mina",
+   "text": "So basically, we should say what counts as abandoned. Last year it was a judgment call.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Hector",
+   "text": "Six weeks with no watering. That's what most gardens use.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Ruth",
+   "text": "Six weeks feels fair. Should we put it in the rules?",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Sam",
+   "text": "Totally. And send a warning email at four weeks, so it's not a surprise.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Mina",
+   "text": "Could we vote on it at the spring members' meeting rather than deciding here?",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [
+    "E046",
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Ruth",
+   "text": "That's probably right. It affects everyone.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Sam",
+   "text": "Sorry, my phone's buzzing, it's my sister. Ignore me.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Hector",
+   "text": "The tools. Somebody keeps leaving the good shovel out in the rain.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Sam",
+   "text": "It's not me, for the record.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Mina",
+   "text": "It's absolutely not me.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Hector",
+   "text": "I'm not accusing anybody. I'd just like a hook by the door with a sign.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Ruth",
+   "text": "Hector, would you put up a hook and a sign?",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [
+    "E049"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "Hector",
+   "text": "Happy to. I'll put up the hook and a sign by the shed door this weekend.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 75,
+   "speaker": "Ruth",
+   "text": "Lovely. And the lease. The city renewal is due June thirtieth.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [
+    "E051"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 76,
+   "speaker": "Mina",
+   "text": "Have we heard anything from the city about it?",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [
+    "E052"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 77,
+   "speaker": "Ruth",
+   "text": "Now then, I think that's everything for tonight. Thank you, everyone.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 78,
+   "speaker": "Sam",
+   "text": "Thanks, Ruth.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 79,
+   "speaker": "Hector",
+   "text": "Goodnight.",
+   "agenda_item": "rules",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Ruth",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Mina",
+   "agenda_item": "plots",
+   "fact_id": "F6",
+   "claimed_value": "7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 2,
+   "speaker": "Ruth",
+   "agenda_item": "plots",
+   "fact_id": "F2",
+   "claimed_value": "40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Ruth",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Ruth",
+   "agenda_item": "plots",
+   "fact_id": "F6",
+   "claimed_value": "7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Mina",
+   "agenda_item": "plots",
+   "fact_id": "F2",
+   "claimed_value": "29",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Ruth",
+   "agenda_item": "plots",
+   "fact_id": "F2",
+   "claimed_value": "29",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Sam",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 6,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Ruth",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 9,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Sam",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 11,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Ruth",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 11,
+   "speaker": "Ruth",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 13,
+   "speaker": "Mina",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Ruth",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 15,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Mina",
+   "agenda_item": "plots",
+   "fact_id": "F3",
+   "claimed_value": "$45",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Sam",
+   "agenda_item": "plots",
+   "fact_id": "F3",
+   "claimed_value": "$45",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 17,
+   "speaker": "Ruth",
+   "agenda_item": "plots",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Ruth",
+   "agenda_item": "plots",
+   "fact_id": "F6",
+   "claimed_value": "7",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Ruth",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 20,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Hector",
+   "agenda_item": "water",
+   "fact_id": "F4",
+   "claimed_value": "$1,870",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Sam",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 22,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 22,
+   "speaker": "Hector",
+   "agenda_item": "water",
+   "fact_id": "F5",
+   "claimed_value": "20%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 23,
+   "speaker": "Ruth",
+   "agenda_item": "water",
+   "fact_id": "F5",
+   "claimed_value": "20%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Sam",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 27,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Ruth",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 29,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Sam",
+   "agenda_item": "water",
+   "fact_id": "F11",
+   "claimed_value": "$4,150",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 30,
+   "speaker": "Ruth",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 33,
+   "speaker": "Ruth",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 34,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Mina",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 35,
+   "speaker": "Ruth",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 39,
+   "speaker": "Sam",
+   "agenda_item": "water",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Sam",
+   "agenda_item": "spring_fair",
+   "fact_id": "F7",
+   "claimed_value": "April 26",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Ruth",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Sam",
+   "agenda_item": "spring_fair",
+   "fact_id": "F8",
+   "claimed_value": "18",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Sam",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 56,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Ruth",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Ruth",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 51,
+   "speaker": "Hector",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Mina",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 53,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 55,
+   "speaker": "Sam",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 56,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 56,
+   "speaker": "Ruth",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 57,
+   "speaker": "Sam",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 58,
+   "speaker": "Mina",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 59,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 60,
+   "speaker": "Mina",
+   "agenda_item": "spring_fair",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 64,
+   "speaker": "Ruth",
+   "agenda_item": "rules",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 65,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 66,
+   "speaker": "Mina",
+   "agenda_item": "rules",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 66,
+   "speaker": "Mina",
+   "agenda_item": "rules",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 67,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 68,
+   "speaker": "Sam",
+   "agenda_item": "rules",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 73,
+   "speaker": "Ruth",
+   "agenda_item": "rules",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 74,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 74,
+   "speaker": "Hector",
+   "agenda_item": "rules",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 75,
+   "speaker": "Ruth",
+   "agenda_item": "rules",
+   "fact_id": "F12",
+   "claimed_value": "June 30",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 76,
+   "speaker": "Mina",
+   "agenda_item": "rules",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Ruth",
+   "text": "Now then, let's get started. Plots first. Mina, how does it look?",
+   "start_s": 0.5,
+   "end_s": 5.643
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Mina",
+   "text": "So basically, seven plots were abandoned last season. Nobody touched them after July.",
+   "start_s": 5.977,
+   "end_s": 10.852
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Ruth",
+   "text": "Seven. That's more than usual. And the waitlist must be, what, forty people by now?",
+   "start_s": 11.899,
+   "end_s": 18.328
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Mina",
+   "text": "Honestly, it's twenty-nine. It feels like more because people email twice.",
+   "start_s": 19.292,
+   "end_s": 23.417
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Ruth",
+   "text": "Twenty-nine. Still a lot of people waiting.",
+   "start_s": 23.872,
+   "end_s": 26.872
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Sam",
+   "text": "Do the abandoned plots go straight to the waitlist?",
+   "start_s": 27.567,
+   "end_s": 30.744
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Mina",
+   "text": "That's the rule. First come, first served.",
+   "start_s": 31.393,
+   "end_s": 34.018
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Hector",
+   "text": "The thing with those plots is, some of them are a real mess. Bindweed everywhere.",
+   "start_s": 34.87,
+   "end_s": 41.076
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Ruth",
+   "text": "Should we clear them before handing them over?",
+   "start_s": 42.065,
+   "end_s": 45.493
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Mina",
+   "text": "It would be kinder. Nobody wants to start with a jungle.",
+   "start_s": 45.787,
+   "end_s": 49.912
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Sam",
+   "text": "Totally. Could we do a work day for it?",
+   "start_s": 50.14,
+   "end_s": 53.317
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Ruth",
+   "text": "A work day sounds lovely. Maybe the first Saturday in April?",
+   "start_s": 54.353,
+   "end_s": 59.067
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Hector",
+   "text": "I'd come, but my back might not.",
+   "start_s": 59.7,
+   "end_s": 62.596
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Mina",
+   "text": "I'll email the next seven people on the waitlist this week and offer them the plots.",
+   "start_s": 63.558,
+   "end_s": 69.558
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Ruth",
+   "text": "Lovely. Will they pay the full fee, joining this late?",
+   "start_s": 69.76,
+   "end_s": 74.046
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Mina",
+   "text": "The fee's forty-five for the year. We've always charged it in full.",
+   "start_s": 74.691,
+   "end_s": 79.191
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Sam",
+   "text": "Forty-five is pretty cheap honestly, for a whole season.",
+   "start_s": 80.113,
+   "end_s": 83.289
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Ruth",
+   "text": "Then the seven abandoned plots go to the next seven on the waitlist, full fee. That's settled.",
+   "start_s": 83.718,
+   "end_s": 91.003
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Mina",
+   "text": "Great.",
+   "start_s": 92.148,
+   "end_s": 92.523
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Ruth",
+   "text": "Now then, water. Hector?",
+   "start_s": 93.624,
+   "end_s": 95.339
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Hector",
+   "text": "The thing with water is, it's our biggest cost. Last year the bill was eighteen seventy.",
+   "start_s": 95.57,
+   "end_s": 102.19
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Sam",
+   "text": "And it's going up this year?",
+   "start_s": 102.415,
+   "end_s": 104.533
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Hector",
+   "text": "The city put the rate up about twenty percent.",
+   "start_s": 105.274,
+   "end_s": 108.999
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Ruth",
+   "text": "Twenty percent. Goodness.",
+   "start_s": 110.138,
+   "end_s": 111.424
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Mina",
+   "text": "So basically, the plot fees don't even cover the water anymore.",
+   "start_s": 112.005,
+   "end_s": 116.13
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Hector",
+   "text": "And the main line is leaking near the shed. Every drip is money.",
+   "start_s": 116.547,
+   "end_s": 121.926
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Sam",
+   "text": "How much would it cost to fix the leak properly?",
+   "start_s": 122.548,
+   "end_s": 126.078
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Hector",
+   "text": "A plumber quoted me a few hundred. I could do it myself for less, with a helper.",
+   "start_s": 126.307,
+   "end_s": 133.342
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Ruth",
+   "text": "Do we have the money for that?",
+   "start_s": 133.764,
+   "end_s": 136.764
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Sam",
+   "text": "Super quick, the bank balance is forty-one fifty. So yes, we can cover a repair.",
+   "start_s": 137.402,
+   "end_s": 142.696
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Ruth",
+   "text": "Then let's not wait. It would be good if somebody found Hector a helper.",
+   "start_s": 143.392,
+   "end_s": 149.392
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Mina",
+   "text": "My neighbor is a retired plumber, actually. He's very bored.",
+   "start_s": 149.825,
+   "end_s": 153.575
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Hector",
+   "text": "A bored plumber is the best kind of plumber.",
+   "start_s": 154.006,
+   "end_s": 157.73
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Ruth",
+   "text": "Mina, could you ask your neighbor if he'd help Hector on the main line?",
+   "start_s": 158.149,
+   "end_s": 164.149
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Mina",
+   "text": "Of course. I'll ask him tonight and put him in touch with Hector.",
+   "start_s": 164.809,
+   "end_s": 169.684
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Ruth",
+   "text": "Lovely. Then we fix the main line before the season starts, and the garden pays for parts. Agreed.",
+   "start_s": 170.174,
+   "end_s": 177.888
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Hector",
+   "text": "Thank you. I've been buying the washers myself, honestly.",
+   "start_s": 178.109,
+   "end_s": 181.834
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Ruth",
+   "text": "Hector! You should have said.",
+   "start_s": 182.872,
+   "end_s": 185.014
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Hector",
+   "text": "It's only a few dollars here and there.",
+   "start_s": 185.77,
+   "end_s": 189.081
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Sam",
+   "text": "Has anyone looked at whether rain barrels would help with the bill?",
+   "start_s": 189.923,
+   "end_s": 194.159
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Ruth",
+   "text": "Now then, the fair.",
+   "start_s": 194.545,
+   "end_s": 196.259
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Sam",
+   "text": "Super quick, so, the fair. It's Saturday, April twenty-sixth.",
+   "start_s": 197.452,
+   "end_s": 200.628
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Ruth",
+   "text": "Lovely. And the vendors?",
+   "start_s": 201.688,
+   "end_s": 203.402
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Sam",
+   "text": "We have eighteen vendor slots, and fourteen are already taken.",
+   "start_s": 203.723,
+   "end_s": 207.252
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Mina",
+   "text": "That's great for this early.",
+   "start_s": 207.785,
+   "end_s": 209.66
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Sam",
+   "text": "I also had an idea. What if we had a food truck this year? The taco place on Fifth said they'd come.",
+   "start_s": 210.581,
+   "end_s": 218.346
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Hector",
+   "text": "A food truck in a garden?",
+   "start_s": 219.257,
+   "end_s": 221.74
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Ruth",
+   "text": "Hm. I'd want to think about that. The bake sale has always been the food.",
+   "start_s": 222.876,
+   "end_s": 229.305
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Mina",
+   "text": "Honestly, people would love tacos. The bake sale sells out by noon anyway.",
+   "start_s": 229.927,
+   "end_s": 234.802
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Sam",
+   "text": "They'd pay a vendor fee, too, like everyone else.",
+   "start_s": 235.832,
+   "end_s": 239.009
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Ruth",
+   "text": "Maybe we try it this year and see.",
+   "start_s": 239.879,
+   "end_s": 243.308
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Hector",
+   "text": "My grandson's team made the playoffs, by the way. The game's that same weekend.",
+   "start_s": 243.811,
+   "end_s": 249.604
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Mina",
+   "text": "Oh, congratulations! Is he still playing quarterback?",
+   "start_s": 250.392,
+   "end_s": 253.017
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Hector",
+   "text": "Linebacker now. He likes hitting people more than throwing, apparently.",
+   "start_s": 254.099,
+   "end_s": 258.237
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Ruth",
+   "text": "Now then, we were on the fair.",
+   "start_s": 259.283,
+   "end_s": 262.283
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Sam",
+   "text": "So, food truck or no food truck?",
+   "start_s": 262.988,
+   "end_s": 265.459
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Ruth",
+   "text": "Food truck, this year, as a trial. If the bake sale people are upset, we revisit. Decided.",
+   "start_s": 266.248,
+   "end_s": 273.534
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Sam",
+   "text": "Totally. I'll confirm with the taco place and send them the vendor form this week.",
+   "start_s": 273.769,
+   "end_s": 279.063
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Mina",
+   "text": "Do we need more volunteers for the day?",
+   "start_s": 279.506,
+   "end_s": 282.506
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Sam",
+   "text": "Probably four or five more, for setup and the plant sale table.",
+   "start_s": 283.503,
+   "end_s": 287.739
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Mina",
+   "text": "We could really use a sign-up sheet on the shed door.",
+   "start_s": 288.353,
+   "end_s": 292.478
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Ruth",
+   "text": "Last item. The rules. The unattended plots, and the tools.",
+   "start_s": 292.851,
+   "end_s": 297.137
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Mina",
+   "text": "So basically, we should say what counts as abandoned. Last year it was a judgment call.",
+   "start_s": 297.886,
+   "end_s": 303.886
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Hector",
+   "text": "Six weeks with no watering. That's what most gardens use.",
+   "start_s": 304.789,
+   "end_s": 308.927
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Ruth",
+   "text": "Six weeks feels fair. Should we put it in the rules?",
+   "start_s": 309.801,
+   "end_s": 314.516
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Sam",
+   "text": "Totally. And send a warning email at four weeks, so it's not a surprise.",
+   "start_s": 315.091,
+   "end_s": 320.032
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Mina",
+   "text": "Could we vote on it at the spring members' meeting rather than deciding here?",
+   "start_s": 320.671,
+   "end_s": 325.921
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Ruth",
+   "text": "That's probably right. It affects everyone.",
+   "start_s": 326.629,
+   "end_s": 329.201
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Sam",
+   "text": "Sorry, my phone's buzzing, it's my sister. Ignore me.",
+   "start_s": 330.179,
+   "end_s": 333.356
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Hector",
+   "text": "The tools. Somebody keeps leaving the good shovel out in the rain.",
+   "start_s": 334.077,
+   "end_s": 339.042
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Sam",
+   "text": "It's not me, for the record.",
+   "start_s": 339.635,
+   "end_s": 341.753
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Mina",
+   "text": "It's absolutely not me.",
+   "start_s": 342.443,
+   "end_s": 343.943
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Hector",
+   "text": "I'm not accusing anybody. I'd just like a hook by the door with a sign.",
+   "start_s": 344.173,
+   "end_s": 350.379
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Ruth",
+   "text": "Hector, would you put up a hook and a sign?",
+   "start_s": 350.622,
+   "end_s": 354.908
+  },
+  {
+   "turn_index": 74,
+   "speaker": "Hector",
+   "text": "Happy to. I'll put up the hook and a sign by the shed door this weekend.",
+   "start_s": 355.811,
+   "end_s": 362.432
+  },
+  {
+   "turn_index": 75,
+   "speaker": "Ruth",
+   "text": "Lovely. And the lease. The city renewal is due June thirtieth.",
+   "start_s": 363.615,
+   "end_s": 368.329
+  },
+  {
+   "turn_index": 76,
+   "speaker": "Mina",
+   "text": "Have we heard anything from the city about it?",
+   "start_s": 369.122,
+   "end_s": 372.497
+  },
+  {
+   "turn_index": 77,
+   "speaker": "Ruth",
+   "text": "Now then, I think that's everything for tonight. Thank you, everyone.",
+   "start_s": 373.091,
+   "end_s": 377.805
+  },
+  {
+   "turn_index": 78,
+   "speaker": "Sam",
+   "text": "Thanks, Ruth.",
+   "start_s": 378.175,
+   "end_s": 378.881
+  },
+  {
+   "turn_index": 79,
+   "speaker": "Hector",
+   "text": "Goodnight.",
+   "start_s": 379.583,
+   "end_s": 379.997
+  }
+ ]
+}

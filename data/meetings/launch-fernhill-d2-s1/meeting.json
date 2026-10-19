@@ -1,0 +1,2152 @@
+{
+ "meeting_id": "launch-fernhill-d2-s1",
+ "config": {
+  "theme": "Go/no-go for the Aurora mobile app launch",
+  "domain_pack": "product_launch",
+  "drama": 0.2,
+  "seed": 1,
+  "duration_min": 6.5,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   1,
+   2,
+   21,
+   23,
+   48,
+   54,
+   69,
+   70
+  ],
+  "reviewed_noclaim": [
+   2,
+   23
+  ]
+ },
+ "cast": {
+  "theme": "Go/no-go for the Aurora mobile app launch",
+  "personas": [
+   {
+    "name": "Helen",
+    "role": "Director of digital services, chairs the review",
+    "goals": "A launch the agency won't have to apologize for",
+    "hidden_agenda": "The board chair rides the 14 bus and will try the app on day one",
+    "verbosity": 3,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Sipho",
+    "role": "QA lead",
+    "goals": "No surprises after launch",
+    "hidden_agenda": "Wants one more regression pass he hasn't asked for yet",
+    "verbosity": 2,
+    "wpm": 150,
+    "catchphrases": [
+     "for completeness"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Marta",
+    "role": "Accessibility and research lead",
+    "goals": "Riders with disabilities can use it from day one",
+    "hidden_agenda": "Ran some test sessions informally and counts them",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Jonah",
+    "role": "Engineering manager",
+    "goals": "Launch on time",
+    "hidden_agenda": "The real-time feed vendor has been flaky and he's nervous",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [
+     "so"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Aurora trip planner - go/no-go",
+   "org": "Fernhill Transit Authority (fictional)",
+   "agenda": [
+    {
+     "id": "quality",
+     "title": "Quality",
+     "goal": "Review stability",
+     "timebox_min": 2.36
+    },
+    {
+     "id": "accessibility",
+     "title": "Accessibility",
+     "goal": "Confirm the audit status and remaining issues",
+     "timebox_min": 1.61
+    },
+    {
+     "id": "operations",
+     "title": "Operations readiness",
+     "goal": "Support",
+     "timebox_min": 1.5
+    },
+    {
+     "id": "decision",
+     "title": "Go/no-go",
+     "goal": "Make the call for March 3",
+     "timebox_min": 0.99
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "crash_free_users",
+     "statement": "Crash-free users in beta = 99.6%",
+     "value": "99.6%"
+    },
+    {
+     "id": "F2",
+     "key": "crash_free_target",
+     "statement": "Crash-free target for launch = 99.5%",
+     "value": "99.5%"
+    },
+    {
+     "id": "F3",
+     "key": "open_sev2_bugs",
+     "statement": "Open severity-2 bugs = 5",
+     "value": "5"
+    },
+    {
+     "id": "F4",
+     "key": "wcag_issues_open",
+     "statement": "Open WCAG issues = 4",
+     "value": "4"
+    },
+    {
+     "id": "F5",
+     "key": "beta_riders",
+     "statement": "Beta riders = 2,800",
+     "value": "2,800"
+    },
+    {
+     "id": "F6",
+     "key": "trip_plan_accuracy",
+     "statement": "Trip plans matching actual arrivals within 2 minutes = 96%",
+     "value": "96%"
+    },
+    {
+     "id": "F7",
+     "key": "beta_rating",
+     "statement": "Beta store rating = 4.4",
+     "value": "4.4"
+    },
+    {
+     "id": "F8",
+     "key": "support_staff_trained",
+     "statement": "Customer service staff trained = 22",
+     "value": "22"
+    },
+    {
+     "id": "F9",
+     "key": "launch_date",
+     "statement": "Planned launch = March 3",
+     "value": "March 3"
+    },
+    {
+     "id": "F10",
+     "key": "realtime_feed_uptime",
+     "statement": "Real-time feed uptime last 30 days = 99.1%",
+     "value": "99.1%"
+    },
+    {
+     "id": "F11",
+     "key": "press_release_date",
+     "statement": "Press release = February 27",
+     "value": "February 27"
+    },
+    {
+     "id": "F12",
+     "key": "screen_reader_sessions",
+     "statement": "Screen-reader test sessions run = 9",
+     "value": "9"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "quality",
+    "summary": "Stability, bugs and accuracy; Jonah undercounts the bugs and Sipho corrects him",
+    "n_turns": 25,
+    "events": []
+   },
+   {
+    "agenda_item": "accessibility",
+    "summary": "Audit status; Marta's session count is higher than the record and stays that way",
+    "n_turns": 18,
+    "events": []
+   },
+   {
+    "agenda_item": "operations",
+    "summary": "Support, the real-time feed and the press release date",
+    "n_turns": 18,
+    "events": []
+   },
+   {
+    "agenda_item": "decision",
+    "summary": "The call",
+    "n_turns": 11,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Helen",
+   "text": "Thank you all for coming. We'll go through quality, accessibility and operations, and then make the call. Sipho, would you start with stability?",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Sipho",
+   "text": "Crash-free users in the beta are at ninety-nine point six percent.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Helen",
+   "text": "Against a target of ninety-nine point five.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Sipho",
+   "text": "Yes. Just above. For completeness, the beta is small, so I'd treat that as encouraging rather than proven.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Helen",
+   "text": "How many riders are in the beta now?",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Jonah",
+   "text": "Twenty-eight hundred. Mostly on the busier routes.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Marta",
+   "text": "Which skews toward commuters. We have fewer older riders than I'd like.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Helen",
+   "text": "That's worth noting. What about bugs?",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Jonah",
+   "text": "So, we're down to two severity-two bugs, which I'm pleased about.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Sipho",
+   "text": "I have five open in the tracker. Two were fixed this week, which might be what you're thinking of.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Jonah",
+   "text": "Ah, yes. Five open, two fixed. You're right.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Helen",
+   "text": "What are the five?",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E010",
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Sipho",
+   "text": "Three are display issues on older Android phones. One is a timetable that doesn't refresh after midnight. One is the fare calculator rounding.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Helen",
+   "text": "The fare calculator rounding sounds like the kind of thing that ends up in the newspaper.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Jonah",
+   "text": "It's a few cents in edge cases, but I agree it's visible.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Sipho",
+   "text": "For completeness, the midnight timetable one worries me more. Night riders depend on it.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Jonah",
+   "text": "The midnight refresh is a small fix. I'll have someone on it tomorrow and aim to close it this week.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Helen",
+   "text": "And accuracy? Are trip plans matching reality?",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Jonah",
+   "text": "Ninety-six percent of trip plans match actual arrivals within two minutes.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Marta",
+   "text": "Riders in the interviews said it felt more accurate than the old app.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Helen",
+   "text": "That's encouraging. And the store rating in beta?",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Sipho",
+   "text": "Four point four, from about three hundred reviews.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Helen",
+   "text": "All right. Quality looks reasonable, with the midnight timetable and the fare rounding as the two to watch.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Jonah",
+   "text": "It snowed so much on the north side this morning that the 22 didn't run at all.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Sipho",
+   "text": "My street still hasn't been plowed. I walked to the train in hiking boots.",
+   "agenda_item": "quality",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Helen",
+   "text": "Let's move on. Marta, accessibility?",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Marta",
+   "text": "We've closed most of the audit. Four WCAG issues are still open.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Helen",
+   "text": "Are any of them blockers?",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Marta",
+   "text": "One is. The route map can't be explored with a screen reader. The other three are contrast and labels.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Jonah",
+   "text": "The route map is the hardest one. It's a custom component.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Marta",
+   "text": "We've run twelve screen-reader test sessions so far, and the map came up in almost every one.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Helen",
+   "text": "Then the map matters. What would it take to fix it?",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Jonah",
+   "text": "A text alternative for the map, listing the stops in order, is about a week of work.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Marta",
+   "text": "That would actually be better for a lot of people, not just screen-reader users.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Sipho",
+   "text": "I can put that alternative through a regression pass once it's ready.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Helen",
+   "text": "Thank you, Sipho. Jonah, would a week fit before March third?",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [
+    "E024",
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Jonah",
+   "text": "It would be tight, but yes, if we start Monday.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Helen",
+   "text": "Then the text alternative for the route map is a launch requirement.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Marta",
+   "text": "I'll sit with the developers on Monday and go through what the text version needs to say.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Jonah",
+   "text": "Could we ship the contrast fixes in the first update instead of at launch?",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [
+    "E028",
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Marta",
+   "text": "I'd prefer launch, but the contrast issues are minor. I can live with the first update.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Helen",
+   "text": "Let's look at how the week goes before we decide on the contrast fixes.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Jonah",
+   "text": "Fair.",
+   "agenda_item": "accessibility",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Helen",
+   "text": "Operations. Who's ready on the support side?",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Marta",
+   "text": "Customer service has trained twenty-two people on the new app.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Sipho",
+   "text": "Is that enough for launch week?",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Helen",
+   "text": "It's more than we had for the last app. I think it's enough.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Jonah",
+   "text": "The thing that worries me is the real-time feed. Uptime was ninety-nine point one percent over the last month.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Sipho",
+   "text": "For completeness, that's about six or seven hours of the feed being down in a month.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Helen",
+   "text": "What happens in the app when the feed is down?",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Jonah",
+   "text": "It falls back to the timetable, with a little banner. Riders can still plan trips.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Marta",
+   "text": "The banner needs to be read out by a screen reader too. I'll check that it is.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Jonah",
+   "text": "Sorry, my connection dropped for a second. What did I miss?",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [
+    "E037",
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Helen",
+   "text": "Only Marta checking the banner. Nothing else.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Jonah",
+   "text": "Got it, thanks.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Helen",
+   "text": "And the press release goes out on the twenty-fifth, I believe.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Jonah",
+   "text": "I'll ask the vendor for their maintenance calendar, so nothing's planned for launch week.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Sipho",
+   "text": "It might be worth having someone from engineering on call that first weekend.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Marta",
+   "text": "Communications sent the schedule this morning. The press release is the twenty-seventh, not the twenty-fifth.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Helen",
+   "text": "The twenty-seventh. Thank you, Marta.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Sipho",
+   "text": "Good catch.",
+   "agenda_item": "operations",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Helen",
+   "text": "So. Are we ready to go on March third?",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E044",
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Sipho",
+   "text": "With the midnight timetable fixed and the route map alternative in, I'm comfortable.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Marta",
+   "text": "Same conditions for me. The map has to be in.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Jonah",
+   "text": "Agreed. We can do both.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Helen",
+   "text": "Then it's a go for March third, on those two conditions.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E046",
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Sipho",
+   "text": "For completeness, I'd like one more full regression pass the week before. Is that possible?",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Jonah",
+   "text": "Yes. We'll freeze the code on the twenty-fourth to make room for it.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E049"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Sipho",
+   "text": "Then I'll run the full regression pass starting on the twenty-fifth.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Helen",
+   "text": "Who will tell the board chair? He'll be on the 14 bus on day one.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E051"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Jonah",
+   "text": "Has anyone checked how the app behaves on the old tablets in the bus shelters?",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [
+    "E052"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Helen",
+   "text": "Thank you, everyone. A careful review. We'll meet again the week before launch.",
+   "agenda_item": "decision",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Helen",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Sipho",
+   "agenda_item": "quality",
+   "fact_id": "F1",
+   "claimed_value": "99.6%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Helen",
+   "agenda_item": "quality",
+   "fact_id": "F2",
+   "claimed_value": "99.5%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Helen",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 5,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Jonah",
+   "agenda_item": "quality",
+   "fact_id": "F5",
+   "claimed_value": "2,800",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 7,
+   "speaker": "Helen",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 8,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 8,
+   "speaker": "Jonah",
+   "agenda_item": "quality",
+   "fact_id": "F3",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Sipho",
+   "agenda_item": "quality",
+   "fact_id": "F3",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 10,
+   "speaker": "Jonah",
+   "agenda_item": "quality",
+   "fact_id": "F3",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Helen",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 12,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Helen",
+   "agenda_item": "quality",
+   "fact_id": "F3",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 16,
+   "speaker": "Jonah",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Helen",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 18,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Jonah",
+   "agenda_item": "quality",
+   "fact_id": "F6",
+   "claimed_value": "96%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Helen",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 21,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 21,
+   "speaker": "Sipho",
+   "agenda_item": "quality",
+   "fact_id": "F7",
+   "claimed_value": "4.4",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 23,
+   "speaker": "Jonah",
+   "agenda_item": "quality",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Helen",
+   "agenda_item": "accessibility",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 26,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Marta",
+   "agenda_item": "accessibility",
+   "fact_id": "F4",
+   "claimed_value": "4",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Helen",
+   "agenda_item": "accessibility",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 28,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 30,
+   "speaker": "Marta",
+   "agenda_item": "accessibility",
+   "fact_id": "F12",
+   "claimed_value": "12",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Helen",
+   "agenda_item": "accessibility",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 32,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 34,
+   "speaker": "Sipho",
+   "agenda_item": "accessibility",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Helen",
+   "agenda_item": "accessibility",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 36,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Helen",
+   "agenda_item": "accessibility",
+   "fact_id": "F9",
+   "claimed_value": "March 3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 37,
+   "speaker": "Helen",
+   "agenda_item": "accessibility",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 38,
+   "speaker": "Marta",
+   "agenda_item": "accessibility",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Jonah",
+   "agenda_item": "accessibility",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 40,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 39,
+   "speaker": "Jonah",
+   "agenda_item": "accessibility",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Helen",
+   "agenda_item": "accessibility",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 43,
+   "speaker": "Helen",
+   "agenda_item": "operations",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 44,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Marta",
+   "agenda_item": "operations",
+   "fact_id": "F8",
+   "claimed_value": "22",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Sipho",
+   "agenda_item": "operations",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 46,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Jonah",
+   "agenda_item": "operations",
+   "fact_id": "F10",
+   "claimed_value": "99.1%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Helen",
+   "agenda_item": "operations",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 50,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 51,
+   "speaker": "Marta",
+   "agenda_item": "operations",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Jonah",
+   "agenda_item": "operations",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Jonah",
+   "agenda_item": "operations",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 53,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 55,
+   "speaker": "Helen",
+   "agenda_item": "operations",
+   "fact_id": "F11",
+   "claimed_value": "February 25",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 56,
+   "speaker": "Jonah",
+   "agenda_item": "operations",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 57,
+   "speaker": "Sipho",
+   "agenda_item": "operations",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 58,
+   "speaker": "Marta",
+   "agenda_item": "operations",
+   "fact_id": "F11",
+   "claimed_value": "February 27",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 59,
+   "speaker": "Helen",
+   "agenda_item": "operations",
+   "fact_id": "F11",
+   "claimed_value": "February 27",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 61,
+   "speaker": "Helen",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 64,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 61,
+   "speaker": "Helen",
+   "agenda_item": "decision",
+   "fact_id": "F9",
+   "claimed_value": "March 3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 65,
+   "speaker": "Helen",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 65,
+   "speaker": "Helen",
+   "agenda_item": "decision",
+   "fact_id": "F9",
+   "claimed_value": "March 3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 66,
+   "speaker": "Sipho",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 67,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 67,
+   "speaker": "Jonah",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 68,
+   "speaker": "Sipho",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 69,
+   "speaker": "Helen",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 70,
+   "speaker": "Jonah",
+   "agenda_item": "decision",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Helen",
+   "text": "Thank you all for coming. We'll go through quality, accessibility and operations, and then make the call. Sipho, would you start with stability?",
+   "start_s": 0.5,
+   "end_s": 10.017
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Sipho",
+   "text": "Crash-free users in the beta are at ninety-nine point six percent.",
+   "start_s": 10.351,
+   "end_s": 14.751
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Helen",
+   "text": "Against a target of ninety-nine point five.",
+   "start_s": 15.798,
+   "end_s": 18.695
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Sipho",
+   "text": "Yes. Just above. For completeness, the beta is small, so I'd treat that as encouraging rather than proven.",
+   "start_s": 19.659,
+   "end_s": 26.859
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Helen",
+   "text": "How many riders are in the beta now?",
+   "start_s": 27.314,
+   "end_s": 30.624
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Jonah",
+   "text": "Twenty-eight hundred. Mostly on the busier routes.",
+   "start_s": 31.319,
+   "end_s": 33.944
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Marta",
+   "text": "Which skews toward commuters. We have fewer older riders than I'd like.",
+   "start_s": 34.593,
+   "end_s": 39.239
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Helen",
+   "text": "That's worth noting. What about bugs?",
+   "start_s": 40.091,
+   "end_s": 42.573
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Jonah",
+   "text": "So, we're down to two severity-two bugs, which I'm pleased about.",
+   "start_s": 43.562,
+   "end_s": 47.687
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Sipho",
+   "text": "I have five open in the tracker. Two were fixed this week, which might be what you're thinking of.",
+   "start_s": 47.981,
+   "end_s": 55.581
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Jonah",
+   "text": "Ah, yes. Five open, two fixed. You're right.",
+   "start_s": 55.809,
+   "end_s": 58.809
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Helen",
+   "text": "What are the five?",
+   "start_s": 59.845,
+   "end_s": 61.5
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Sipho",
+   "text": "Three are display issues on older Android phones. One is a timetable that doesn't refresh after midnight. One is the fare calculator rounding.",
+   "start_s": 62.133,
+   "end_s": 71.333
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Helen",
+   "text": "The fare calculator rounding sounds like the kind of thing that ends up in the newspaper.",
+   "start_s": 72.295,
+   "end_s": 78.916
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Jonah",
+   "text": "It's a few cents in edge cases, but I agree it's visible.",
+   "start_s": 79.118,
+   "end_s": 83.618
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Sipho",
+   "text": "For completeness, the midnight timetable one worries me more. Night riders depend on it.",
+   "start_s": 84.263,
+   "end_s": 89.863
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Jonah",
+   "text": "The midnight refresh is a small fix. I'll have someone on it tomorrow and aim to close it this week.",
+   "start_s": 90.785,
+   "end_s": 98.285
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Helen",
+   "text": "And accuracy? Are trip plans matching reality?",
+   "start_s": 98.714,
+   "end_s": 101.61
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Jonah",
+   "text": "Ninety-six percent of trip plans match actual arrivals within two minutes.",
+   "start_s": 102.755,
+   "end_s": 106.88
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Marta",
+   "text": "Riders in the interviews said it felt more accurate than the old app.",
+   "start_s": 107.981,
+   "end_s": 113.014
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Helen",
+   "text": "That's encouraging. And the store rating in beta?",
+   "start_s": 113.245,
+   "end_s": 116.555
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Sipho",
+   "text": "Four point four, from about three hundred reviews.",
+   "start_s": 116.78,
+   "end_s": 119.98
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Helen",
+   "text": "All right. Quality looks reasonable, with the midnight timetable and the fare rounding as the two to watch.",
+   "start_s": 120.721,
+   "end_s": 128.17
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Jonah",
+   "text": "It snowed so much on the north side this morning that the 22 didn't run at all.",
+   "start_s": 129.309,
+   "end_s": 135.684
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Sipho",
+   "text": "My street still hasn't been plowed. I walked to the train in hiking boots.",
+   "start_s": 136.265,
+   "end_s": 141.865
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Helen",
+   "text": "Let's move on. Marta, accessibility?",
+   "start_s": 142.282,
+   "end_s": 144.351
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Marta",
+   "text": "We've closed most of the audit. Four WCAG issues are still open.",
+   "start_s": 144.973,
+   "end_s": 149.618
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Helen",
+   "text": "Are any of them blockers?",
+   "start_s": 149.847,
+   "end_s": 151.916
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Marta",
+   "text": "One is. The route map can't be explored with a screen reader. The other three are contrast and labels.",
+   "start_s": 152.338,
+   "end_s": 159.693
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Jonah",
+   "text": "The route map is the hardest one. It's a custom component.",
+   "start_s": 160.331,
+   "end_s": 164.456
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Marta",
+   "text": "We've run twelve screen-reader test sessions so far, and the map came up in almost every one.",
+   "start_s": 165.152,
+   "end_s": 171.732
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Helen",
+   "text": "Then the map matters. What would it take to fix it?",
+   "start_s": 172.165,
+   "end_s": 176.717
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Jonah",
+   "text": "A text alternative for the map, listing the stops in order, is about a week of work.",
+   "start_s": 177.148,
+   "end_s": 183.523
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Marta",
+   "text": "That would actually be better for a lot of people, not just screen-reader users.",
+   "start_s": 183.942,
+   "end_s": 189.361
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Sipho",
+   "text": "I can put that alternative through a regression pass once it's ready.",
+   "start_s": 190.021,
+   "end_s": 194.821
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Helen",
+   "text": "Thank you, Sipho. Jonah, would a week fit before March third?",
+   "start_s": 195.311,
+   "end_s": 199.863
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Jonah",
+   "text": "It would be tight, but yes, if we start Monday.",
+   "start_s": 200.084,
+   "end_s": 203.834
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Helen",
+   "text": "Then the text alternative for the route map is a launch requirement.",
+   "start_s": 204.872,
+   "end_s": 209.837
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Marta",
+   "text": "I'll sit with the developers on Monday and go through what the text version needs to say.",
+   "start_s": 210.593,
+   "end_s": 217.174
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Jonah",
+   "text": "Could we ship the contrast fixes in the first update instead of at launch?",
+   "start_s": 218.016,
+   "end_s": 223.266
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Marta",
+   "text": "I'd prefer launch, but the contrast issues are minor. I can live with the first update.",
+   "start_s": 223.652,
+   "end_s": 229.845
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Helen",
+   "text": "Let's look at how the week goes before we decide on the contrast fixes.",
+   "start_s": 231.038,
+   "end_s": 236.831
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Jonah",
+   "text": "Fair.",
+   "start_s": 237.891,
+   "end_s": 238.266
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Helen",
+   "text": "Operations. Who's ready on the support side?",
+   "start_s": 238.587,
+   "end_s": 241.483
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Marta",
+   "text": "Customer service has trained twenty-two people on the new app.",
+   "start_s": 242.016,
+   "end_s": 245.887
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Sipho",
+   "text": "Is that enough for launch week?",
+   "start_s": 246.808,
+   "end_s": 249.208
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Helen",
+   "text": "It's more than we had for the last app. I think it's enough.",
+   "start_s": 250.119,
+   "end_s": 255.499
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Jonah",
+   "text": "The thing that worries me is the real-time feed. Uptime was ninety-nine point one percent over the last month.",
+   "start_s": 256.635,
+   "end_s": 263.76
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Sipho",
+   "text": "For completeness, that's about six or seven hours of the feed being down in a month.",
+   "start_s": 264.382,
+   "end_s": 270.782
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Helen",
+   "text": "What happens in the app when the feed is down?",
+   "start_s": 271.812,
+   "end_s": 275.95
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Jonah",
+   "text": "It falls back to the timetable, with a little banner. Riders can still plan trips.",
+   "start_s": 276.82,
+   "end_s": 282.445
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Marta",
+   "text": "The banner needs to be read out by a screen reader too. I'll check that it is.",
+   "start_s": 282.948,
+   "end_s": 289.529
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Jonah",
+   "text": "Sorry, my connection dropped for a second. What did I miss?",
+   "start_s": 290.317,
+   "end_s": 294.442
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Helen",
+   "text": "Only Marta checking the banner. Nothing else.",
+   "start_s": 295.524,
+   "end_s": 298.421
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Jonah",
+   "text": "Got it, thanks.",
+   "start_s": 299.467,
+   "end_s": 300.592
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Helen",
+   "text": "And the press release goes out on the twenty-fifth, I believe.",
+   "start_s": 301.297,
+   "end_s": 305.849
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Jonah",
+   "text": "I'll ask the vendor for their maintenance calendar, so nothing's planned for launch week.",
+   "start_s": 306.638,
+   "end_s": 311.888
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Sipho",
+   "text": "It might be worth having someone from engineering on call that first weekend.",
+   "start_s": 312.123,
+   "end_s": 317.323
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Marta",
+   "text": "Communications sent the schedule this morning. The press release is the twenty-seventh, not the twenty-fifth.",
+   "start_s": 317.766,
+   "end_s": 323.572
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Helen",
+   "text": "The twenty-seventh. Thank you, Marta.",
+   "start_s": 324.569,
+   "end_s": 326.638
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Sipho",
+   "text": "Good catch.",
+   "start_s": 327.252,
+   "end_s": 328.052
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Helen",
+   "text": "So. Are we ready to go on March third?",
+   "start_s": 328.425,
+   "end_s": 332.149
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Sipho",
+   "text": "With the midnight timetable fixed and the route map alternative in, I'm comfortable.",
+   "start_s": 332.898,
+   "end_s": 338.098
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Marta",
+   "text": "Same conditions for me. The map has to be in.",
+   "start_s": 339.001,
+   "end_s": 342.872
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Jonah",
+   "text": "Agreed. We can do both.",
+   "start_s": 343.746,
+   "end_s": 345.621
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Helen",
+   "text": "Then it's a go for March third, on those two conditions.",
+   "start_s": 346.196,
+   "end_s": 350.747
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Sipho",
+   "text": "For completeness, I'd like one more full regression pass the week before. Is that possible?",
+   "start_s": 351.386,
+   "end_s": 357.386
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Jonah",
+   "text": "Yes. We'll freeze the code on the twenty-fourth to make room for it.",
+   "start_s": 358.094,
+   "end_s": 362.969
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Sipho",
+   "text": "Then I'll run the full regression pass starting on the twenty-fifth.",
+   "start_s": 363.947,
+   "end_s": 368.347
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Helen",
+   "text": "Who will tell the board chair? He'll be on the 14 bus on day one.",
+   "start_s": 369.068,
+   "end_s": 375.275
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Jonah",
+   "text": "Has anyone checked how the app behaves on the old tablets in the bus shelters?",
+   "start_s": 375.868,
+   "end_s": 381.493
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Helen",
+   "text": "Thank you, everyone. A careful review. We'll meet again the week before launch.",
+   "start_s": 382.183,
+   "end_s": 387.562
+  }
+ ]
+}

@@ -1,0 +1,1589 @@
+{
+ "meeting_id": "gala-landtrust-d2-s2",
+ "config": {
+  "theme": "Planning committee for a nonprofit's annual fundraising gala",
+  "domain_pack": "nonprofit_events",
+  "drama": 0.2,
+  "seed": 2,
+  "duration_min": 3.8,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   5,
+   10,
+   33
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "Planning committee for a nonprofit's annual fundraising gala",
+  "personas": [
+   {
+    "name": "Beatrice",
+    "role": "Committee chair",
+    "goals": "A warm evening that beats last year",
+    "hidden_agenda": "Promised the board a record year",
+    "verbosity": 3,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Joanna",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Oren",
+    "role": "Development director",
+    "goals": "More auction revenue",
+    "hidden_agenda": "Counts promised items before they arrive",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Arthur",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Fumiko",
+    "role": "Volunteer logistics lead",
+    "goals": "Enough hands on the night",
+    "hidden_agenda": "Recruits the same retirees every year and worries about burning them out",
+    "verbosity": 2,
+    "wpm": 150,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Niamh",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Desmond",
+    "role": "Treasurer",
+    "goals": "Keep costs predictable",
+    "hidden_agenda": "Local history buff",
+    "verbosity": 2,
+    "wpm": 135,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Brian",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Harvest dinner committee",
+   "org": "Greenway Land Trust (fictional)",
+   "agenda": [
+    {
+     "id": "venue_menu",
+     "title": "Venue and menu",
+     "goal": "Confirm numbers for the hall and the caterer",
+     "timebox_min": 1.07
+    },
+    {
+     "id": "auction",
+     "title": "Silent auction",
+     "goal": "Review items and the bidding plan",
+     "timebox_min": 1.0
+    },
+    {
+     "id": "sponsors",
+     "title": "Sponsors",
+     "goal": "Check commitments against the goal",
+     "timebox_min": 0.95
+    },
+    {
+     "id": "volunteers",
+     "title": "Volunteers",
+     "goal": "Fill the remaining volunteer spots",
+     "timebox_min": 0.78
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "dinner_date",
+     "statement": "Harvest dinner = Saturday, October 4",
+     "value": "October 4"
+    },
+    {
+     "id": "F2",
+     "key": "tickets_sold",
+     "statement": "Tickets sold = 112",
+     "value": "112"
+    },
+    {
+     "id": "F3",
+     "key": "hall_capacity",
+     "statement": "Hall capacity = 180",
+     "value": "180"
+    },
+    {
+     "id": "F4",
+     "key": "ticket_price",
+     "statement": "Ticket price = $125",
+     "value": "$125"
+    },
+    {
+     "id": "F5",
+     "key": "goal",
+     "statement": "Fundraising goal = $60,000",
+     "value": "$60,000"
+    },
+    {
+     "id": "F6",
+     "key": "auction_items",
+     "statement": "Auction items = 31",
+     "value": "31"
+    },
+    {
+     "id": "F7",
+     "key": "sponsors",
+     "statement": "Sponsors = 5",
+     "value": "5"
+    },
+    {
+     "id": "F8",
+     "key": "sponsor_total",
+     "statement": "Sponsorship total = $14,500",
+     "value": "$14,500"
+    },
+    {
+     "id": "F9",
+     "key": "volunteers_needed",
+     "statement": "Volunteers needed = 20",
+     "value": "20"
+    },
+    {
+     "id": "F10",
+     "key": "volunteers_signed",
+     "statement": "Volunteers signed up = 13",
+     "value": "13"
+    },
+    {
+     "id": "F11",
+     "key": "menu_cost",
+     "statement": "Menu cost = $48 per head",
+     "value": "$48"
+    },
+    {
+     "id": "F12",
+     "key": "last_year_raised",
+     "statement": "Last year's dinner raised $52,300",
+     "value": "$52,300"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "venue_menu",
+    "summary": "Numbers for the hall and caterer",
+    "n_turns": 12,
+    "events": []
+   },
+   {
+    "agenda_item": "auction",
+    "summary": "Items and bidding; Oren counts items that haven't arrived",
+    "n_turns": 13,
+    "events": []
+   },
+   {
+    "agenda_item": "sponsors",
+    "summary": "Commitments and the goal; Beatrice's memory of last year goes unchecked",
+    "n_turns": 11,
+    "events": []
+   },
+   {
+    "agenda_item": "volunteers",
+    "summary": "Filling the gaps",
+    "n_turns": 10,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Beatrice",
+   "text": "Good evening. Let's start with the hall and the menu. Oren, how are tickets?",
+   "agenda_item": "venue_menu",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Oren",
+   "text": "A hundred and twelve sold, at a hundred and twenty-five each.",
+   "agenda_item": "venue_menu",
+   "direction": null,
+   "event_ids": [
+    "E002",
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Beatrice",
+   "text": "And the hall holds a hundred and eighty, so there's room.",
+   "agenda_item": "venue_menu",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Desmond",
+   "text": "The menu is forty-eight a head. The caterer needs a final number two weeks out.",
+   "agenda_item": "venue_menu",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Fumiko",
+   "text": "Do we order for the tickets sold, or for the hall?",
+   "agenda_item": "venue_menu",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Desmond",
+   "text": "For the tickets sold, plus ten percent. That's what we did last year.",
+   "agenda_item": "venue_menu",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Oren",
+   "text": "The hall used to be a cannery, you know. My grandfather worked the line there in the fifties.",
+   "agenda_item": "venue_menu",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Beatrice",
+   "text": "I didn't know that. How lovely.",
+   "agenda_item": "venue_menu",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Fumiko",
+   "text": "Is there a vegetarian option this year? Several people asked.",
+   "agenda_item": "venue_menu",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Desmond",
+   "text": "The squash risotto. The caterer says it's popular.",
+   "agenda_item": "venue_menu",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Beatrice",
+   "text": "Then we'll order on tickets sold plus ten percent, with the risotto as the vegetarian main.",
+   "agenda_item": "venue_menu",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Fumiko",
+   "text": "Good.",
+   "agenda_item": "venue_menu",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Beatrice",
+   "text": "The auction. Oren?",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Oren",
+   "text": "We're at about forty items. Some lovely ones, too.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Fumiko",
+   "text": "I have the intake sheet here. It's thirty-one that have actually arrived.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Oren",
+   "text": "Thirty-one in hand, and about nine more promised. Fair point.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Desmond",
+   "text": "What's the best item so far?",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Oren",
+   "text": "The guided canoe trip on the reserve. And the hand-made quilt from the Hendersons.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Beatrice",
+   "text": "Should we put the quilt in a live auction instead of the silent one?",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E015",
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Oren",
+   "text": "It might do better live. One live item is a nice moment in the evening.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Desmond",
+   "text": "Who'd run the live part? We don't have an auctioneer.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Beatrice",
+   "text": "I could do it. I've done it at the school before.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Oren",
+   "text": "That would be perfect.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Fumiko",
+   "text": "It might help if someone chased the nine promised items this week.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Oren",
+   "text": "I'll call the nine donors on Monday and confirm drop-off dates.",
+   "agenda_item": "auction",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Beatrice",
+   "text": "Sponsors. Desmond?",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Desmond",
+   "text": "Five sponsors, fourteen thousand five hundred in total.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E022",
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Oren",
+   "text": "The goal for the evening is sixty thousand.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Beatrice",
+   "text": "Last year we raised fifty-eight thousand, so sixty is within reach.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E025",
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Fumiko",
+   "text": "My neighbor just put solar panels on her whole roof. She says her bill is nearly zero.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Desmond",
+   "text": "My brother-in-law is thinking about it. The installers are booked for months.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Oren",
+   "text": "Could we ask the solar company to sponsor? It fits what we do.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Beatrice",
+   "text": "That's a good thought. Let's think about it for next year, since the program is printed already.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Desmond",
+   "text": "Has anyone heard back from the bank about renewing their sponsorship?",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Oren",
+   "text": "The brewery wants to donate the beer instead of cash. Is that okay?",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Desmond",
+   "text": "That's fine. In-kind counts, I just record it differently.",
+   "agenda_item": "sponsors",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Beatrice",
+   "text": "Volunteers. Fumiko?",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Fumiko",
+   "text": "We need twenty and we have thirteen.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E034",
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Oren",
+   "text": "Seven short. Where are the gaps?",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Fumiko",
+   "text": "Setup in the afternoon, and cleanup at the end. Nobody wants cleanup.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Desmond",
+   "text": "I'll do cleanup. I'm always last to leave anyway.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Beatrice",
+   "text": "Could we ask the high school's environmental club? They need service hours.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Fumiko",
+   "text": "That's a good idea. I'll email their teacher tomorrow.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Beatrice",
+   "text": "Then Desmond has cleanup, and we ask the club to cover setup.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Oren",
+   "text": "And the date's still October fourth for everyone, right? A sponsor asked me.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E041",
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Beatrice",
+   "text": "October fourth. Nothing's changed. Thank you, everyone. A lovely meeting.",
+   "agenda_item": "volunteers",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Beatrice",
+   "agenda_item": "venue_menu",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Oren",
+   "agenda_item": "venue_menu",
+   "fact_id": "F2",
+   "claimed_value": "112",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Oren",
+   "agenda_item": "venue_menu",
+   "fact_id": "F4",
+   "claimed_value": "$125",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Beatrice",
+   "agenda_item": "venue_menu",
+   "fact_id": "F3",
+   "claimed_value": "180",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Desmond",
+   "agenda_item": "venue_menu",
+   "fact_id": "F11",
+   "claimed_value": "$48",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Fumiko",
+   "agenda_item": "venue_menu",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 5,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Oren",
+   "agenda_item": "venue_menu",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Fumiko",
+   "agenda_item": "venue_menu",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 9,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 10,
+   "speaker": "Beatrice",
+   "agenda_item": "venue_menu",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Beatrice",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 13,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 13,
+   "speaker": "Oren",
+   "agenda_item": "auction",
+   "fact_id": "F6",
+   "claimed_value": "40",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Fumiko",
+   "agenda_item": "auction",
+   "fact_id": "F6",
+   "claimed_value": "31",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 15,
+   "speaker": "Oren",
+   "agenda_item": "auction",
+   "fact_id": "F6",
+   "claimed_value": "31",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Desmond",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 17,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Beatrice",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 19,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 18,
+   "speaker": "Beatrice",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 20,
+   "speaker": "Desmond",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 21,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 21,
+   "speaker": "Beatrice",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Fumiko",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 24,
+   "speaker": "Oren",
+   "agenda_item": "auction",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Beatrice",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 26,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Desmond",
+   "agenda_item": "sponsors",
+   "fact_id": "F7",
+   "claimed_value": "5",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 26,
+   "speaker": "Desmond",
+   "agenda_item": "sponsors",
+   "fact_id": "F8",
+   "claimed_value": "$14,500",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Oren",
+   "agenda_item": "sponsors",
+   "fact_id": "F5",
+   "claimed_value": "$60,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 28,
+   "speaker": "Beatrice",
+   "agenda_item": "sponsors",
+   "fact_id": "F12",
+   "claimed_value": "$58,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Beatrice",
+   "agenda_item": "sponsors",
+   "fact_id": "F5",
+   "claimed_value": "$60,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 29,
+   "speaker": "Fumiko",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Oren",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 32,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 32,
+   "speaker": "Beatrice",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 33,
+   "speaker": "Desmond",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Oren",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 35,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 35,
+   "speaker": "Desmond",
+   "agenda_item": "sponsors",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 36,
+   "speaker": "Beatrice",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 37,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Fumiko",
+   "agenda_item": "volunteers",
+   "fact_id": "F9",
+   "claimed_value": "20",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Fumiko",
+   "agenda_item": "volunteers",
+   "fact_id": "F10",
+   "claimed_value": "13",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Oren",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 39,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 40,
+   "speaker": "Desmond",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Beatrice",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 42,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 42,
+   "speaker": "Fumiko",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 43,
+   "speaker": "Beatrice",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Oren",
+   "agenda_item": "volunteers",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 45,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Oren",
+   "agenda_item": "volunteers",
+   "fact_id": "F1",
+   "claimed_value": "October 4",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Beatrice",
+   "agenda_item": "volunteers",
+   "fact_id": "F1",
+   "claimed_value": "October 4",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Beatrice",
+   "text": "Good evening. Let's start with the hall and the menu. Oren, how are tickets?",
+   "start_s": 0.5,
+   "end_s": 6.293
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Oren",
+   "text": "A hundred and twelve sold, at a hundred and twenty-five each.",
+   "start_s": 7.449,
+   "end_s": 11.574
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Beatrice",
+   "text": "And the hall holds a hundred and eighty, so there's room.",
+   "start_s": 12.722,
+   "end_s": 17.274
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Desmond",
+   "text": "The menu is forty-eight a head. The caterer needs a final number two weeks out.",
+   "start_s": 17.531,
+   "end_s": 24.197
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Fumiko",
+   "text": "Do we order for the tickets sold, or for the hall?",
+   "start_s": 24.482,
+   "end_s": 28.882
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Desmond",
+   "text": "For the tickets sold, plus ten percent. That's what we did last year.",
+   "start_s": 29.917,
+   "end_s": 35.695
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Oren",
+   "text": "The hall used to be a cannery, you know. My grandfather worked the line there in the fifties.",
+   "start_s": 36.631,
+   "end_s": 43.381
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Beatrice",
+   "text": "I didn't know that. How lovely.",
+   "start_s": 44.251,
+   "end_s": 46.733
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Fumiko",
+   "text": "Is there a vegetarian option this year? Several people asked.",
+   "start_s": 47.241,
+   "end_s": 51.241
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Desmond",
+   "text": "The squash risotto. The caterer says it's popular.",
+   "start_s": 52.047,
+   "end_s": 55.602
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Beatrice",
+   "text": "Then we'll order on tickets sold plus ten percent, with the risotto as the vegetarian main.",
+   "start_s": 56.409,
+   "end_s": 63.029
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Fumiko",
+   "text": "Good.",
+   "start_s": 63.81,
+   "end_s": 64.21
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Beatrice",
+   "text": "The auction. Oren?",
+   "start_s": 64.568,
+   "end_s": 65.81
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Oren",
+   "text": "We're at about forty items. Some lovely ones, too.",
+   "start_s": 66.441,
+   "end_s": 69.816
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Fumiko",
+   "text": "I have the intake sheet here. It's thirty-one that have actually arrived.",
+   "start_s": 70.41,
+   "end_s": 75.21
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Oren",
+   "text": "Thirty-one in hand, and about nine more promised. Fair point.",
+   "start_s": 76.133,
+   "end_s": 79.883
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Desmond",
+   "text": "What's the best item so far?",
+   "start_s": 81.078,
+   "end_s": 83.744
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Oren",
+   "text": "The guided canoe trip on the reserve. And the hand-made quilt from the Hendersons.",
+   "start_s": 84.893,
+   "end_s": 90.143
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Beatrice",
+   "text": "Should we put the quilt in a live auction instead of the silent one?",
+   "start_s": 90.887,
+   "end_s": 96.68
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Oren",
+   "text": "It might do better live. One live item is a nice moment in the evening.",
+   "start_s": 97.325,
+   "end_s": 102.95
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Desmond",
+   "text": "Who'd run the live part? We don't have an auctioneer.",
+   "start_s": 103.418,
+   "end_s": 107.863
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Beatrice",
+   "text": "I could do it. I've done it at the school before.",
+   "start_s": 108.099,
+   "end_s": 112.651
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Oren",
+   "text": "That would be perfect.",
+   "start_s": 112.878,
+   "end_s": 114.378
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Fumiko",
+   "text": "It might help if someone chased the nine promised items this week.",
+   "start_s": 115.043,
+   "end_s": 119.843
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Oren",
+   "text": "I'll call the nine donors on Monday and confirm drop-off dates.",
+   "start_s": 120.361,
+   "end_s": 124.486
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Beatrice",
+   "text": "Sponsors. Desmond?",
+   "start_s": 125.066,
+   "end_s": 125.894
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Desmond",
+   "text": "Five sponsors, fourteen thousand five hundred in total.",
+   "start_s": 126.986,
+   "end_s": 130.541
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Oren",
+   "text": "The goal for the evening is sixty thousand.",
+   "start_s": 131.267,
+   "end_s": 134.267
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Beatrice",
+   "text": "Last year we raised fifty-eight thousand, so sixty is within reach.",
+   "start_s": 135.028,
+   "end_s": 139.579
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Fumiko",
+   "text": "My neighbor just put solar panels on her whole roof. She says her bill is nearly zero.",
+   "start_s": 140.015,
+   "end_s": 146.815
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Desmond",
+   "text": "My brother-in-law is thinking about it. The installers are booked for months.",
+   "start_s": 147.039,
+   "end_s": 152.372
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Oren",
+   "text": "Could we ask the solar company to sponsor? It fits what we do.",
+   "start_s": 152.897,
+   "end_s": 157.772
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Beatrice",
+   "text": "That's a good thought. Let's think about it for next year, since the program is printed already.",
+   "start_s": 158.109,
+   "end_s": 165.143
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Desmond",
+   "text": "Has anyone heard back from the bank about renewing their sponsorship?",
+   "start_s": 165.853,
+   "end_s": 170.742
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Oren",
+   "text": "The brewery wants to donate the beer instead of cash. Is that okay?",
+   "start_s": 171.941,
+   "end_s": 176.816
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Desmond",
+   "text": "That's fine. In-kind counts, I just record it differently.",
+   "start_s": 177.69,
+   "end_s": 181.69
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Beatrice",
+   "text": "Volunteers. Fumiko?",
+   "start_s": 182.072,
+   "end_s": 182.899
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Fumiko",
+   "text": "We need twenty and we have thirteen.",
+   "start_s": 183.993,
+   "end_s": 186.793
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Oren",
+   "text": "Seven short. Where are the gaps?",
+   "start_s": 187.79,
+   "end_s": 190.04
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Fumiko",
+   "text": "Setup in the afternoon, and cleanup at the end. Nobody wants cleanup.",
+   "start_s": 190.974,
+   "end_s": 195.774
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Desmond",
+   "text": "I'll do cleanup. I'm always last to leave anyway.",
+   "start_s": 196.881,
+   "end_s": 200.881
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Beatrice",
+   "text": "Could we ask the high school's environmental club? They need service hours.",
+   "start_s": 201.844,
+   "end_s": 206.809
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Fumiko",
+   "text": "That's a good idea. I'll email their teacher tomorrow.",
+   "start_s": 207.799,
+   "end_s": 211.399
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Beatrice",
+   "text": "Then Desmond has cleanup, and we ask the club to cover setup.",
+   "start_s": 211.953,
+   "end_s": 216.918
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Oren",
+   "text": "And the date's still October fourth for everyone, right? A sponsor asked me.",
+   "start_s": 218.099,
+   "end_s": 222.974
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Beatrice",
+   "text": "October fourth. Nothing's changed. Thank you, everyone. A lovely meeting.",
+   "start_s": 224.136,
+   "end_s": 228.274
+  }
+ ]
+}

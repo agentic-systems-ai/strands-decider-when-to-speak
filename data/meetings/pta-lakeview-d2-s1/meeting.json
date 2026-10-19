@@ -1,0 +1,1741 @@
+{
+ "meeting_id": "pta-lakeview-d2-s1",
+ "config": {
+  "theme": "School PTA budget meeting for next year",
+  "domain_pack": "community_budget",
+  "drama": 0.2,
+  "seed": 1,
+  "duration_min": 4.9,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   1,
+   21,
+   26,
+   33,
+   34,
+   36,
+   45,
+   49,
+   53
+  ],
+  "reviewed_noclaim": []
+ },
+ "cast": {
+  "theme": "School PTA budget meeting for next year",
+  "personas": [
+   {
+    "name": "Margaret",
+    "role": "PTA president",
+    "goals": "A simple, fair budget",
+    "hidden_agenda": "Wants to finish her term without a fuss",
+    "verbosity": 3,
+    "wpm": 145,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Tunde",
+    "role": "Treasurer",
+    "goals": "Accurate books and a healthy reserve",
+    "hidden_agenda": "Training a successor and wants the process documented",
+    "verbosity": 2,
+    "wpm": 140,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Ines",
+    "role": "Teacher representative",
+    "goals": "Classroom grants that actually cover supplies",
+    "hidden_agenda": "The library is her real priority",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Craig",
+    "role": "Parent volunteer, runs the book fair",
+    "goals": "A bigger book fair next year",
+    "hidden_agenda": "Remembers the good parts of every event",
+    "verbosity": 3,
+    "wpm": 165,
+    "catchphrases": [],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "PTA budget meeting",
+   "org": "Lakeview Primary School PTA (fictional)",
+   "agenda": [
+    {
+     "id": "review",
+     "title": "The year in review",
+     "goal": "Agree last year's income",
+     "timebox_min": 1.22
+    },
+    {
+     "id": "income",
+     "title": "Income plan",
+     "goal": "Choose next year's fundraisers",
+     "timebox_min": 1.24
+    },
+    {
+     "id": "grants",
+     "title": "Grants and requests",
+     "goal": "Set the classroom grants and decide on the library and assembly requests",
+     "timebox_min": 1.59
+    },
+    {
+     "id": "timeline",
+     "title": "Timeline",
+     "goal": "Agree the steps to the membership vote",
+     "timebox_min": 0.85
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "income_last_year",
+     "statement": "Income last year = $22,700",
+     "value": "$22,700"
+    },
+    {
+     "id": "F2",
+     "key": "spending_last_year",
+     "statement": "Spending last year = $21,150",
+     "value": "$21,150"
+    },
+    {
+     "id": "F3",
+     "key": "reserve",
+     "statement": "Reserve = $6,400",
+     "value": "$6,400"
+    },
+    {
+     "id": "F4",
+     "key": "book_fair_profit",
+     "statement": "Book fair profit = $2,950",
+     "value": "$2,950"
+    },
+    {
+     "id": "F5",
+     "key": "students",
+     "statement": "Students enrolled = 268",
+     "value": "268"
+    },
+    {
+     "id": "F6",
+     "key": "teachers",
+     "statement": "Classroom teachers = 14",
+     "value": "14"
+    },
+    {
+     "id": "F7",
+     "key": "classroom_grant",
+     "statement": "Classroom grant = $150 per teacher",
+     "value": "$150"
+    },
+    {
+     "id": "F8",
+     "key": "library_request",
+     "statement": "Library request = $3,000",
+     "value": "$3,000"
+    },
+    {
+     "id": "F9",
+     "key": "movie_night_profit",
+     "statement": "Movie night profit = $640",
+     "value": "$640"
+    },
+    {
+     "id": "F10",
+     "key": "membership_rate",
+     "statement": "Families who are PTA members = 58%",
+     "value": "58%"
+    },
+    {
+     "id": "F11",
+     "key": "assembly_cost",
+     "statement": "Science assembly cost = $1,200",
+     "value": "$1,200"
+    },
+    {
+     "id": "F12",
+     "key": "vote_date",
+     "statement": "Membership vote = June 3",
+     "value": "June 3"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "review",
+    "summary": "Last year's numbers; Craig's book fair memory is generous",
+    "n_turns": 15,
+    "events": []
+   },
+   {
+    "agenda_item": "income",
+    "summary": "Next year's fundraisers; a quick detour about the new caretaker's dog",
+    "n_turns": 16,
+    "events": []
+   },
+   {
+    "agenda_item": "grants",
+    "summary": "Classroom grants and two requests; the teacher count nobody checks",
+    "n_turns": 17,
+    "events": []
+   },
+   {
+    "agenda_item": "timeline",
+    "summary": "Steps to the vote; one question left open",
+    "n_turns": 9,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Margaret",
+   "text": "Good evening, everyone. Let's start with last year, then work forward. Tunde, could you give us the summary?",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Tunde",
+   "text": "Of course. Income was twenty-two thousand seven hundred, and we spent twenty-one thousand one hundred and fifty.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E002",
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Margaret",
+   "text": "So a small surplus.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Tunde",
+   "text": "Yes. The reserve is now six thousand four hundred.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Craig",
+   "text": "And the book fair did well, didn't it? I think it made about four thousand.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E005",
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Tunde",
+   "text": "It made two thousand nine hundred and fifty. Sales were close to four thousand, but that's before the publisher's share.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Craig",
+   "text": "Ah, that's right. The publisher takes their cut.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Ines",
+   "text": "It's still the best fundraiser we have.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Margaret",
+   "text": "And movie night?",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Tunde",
+   "text": "Six hundred and forty. Small, but the families enjoy it.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Craig",
+   "text": "The popcorn machine nearly caught fire, if I remember correctly.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Ines",
+   "text": "The popcorn machine is fine now. The caretaker replaced the element.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Margaret",
+   "text": "How many families are members at the moment?",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Tunde",
+   "text": "Fifty-eight percent of families. Up a little from last year.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Ines",
+   "text": "That's good for a school our size.",
+   "agenda_item": "review",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Margaret",
+   "text": "Income for next year. I'd suggest we keep what works.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Craig",
+   "text": "The book fair, certainly. I'd like to try two book fairs, one in autumn and one in spring.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Tunde",
+   "text": "Would the publisher agree to two in one year?",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Craig",
+   "text": "They offer it to every school. We've just never asked.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Ines",
+   "text": "Two book fairs would mean more volunteers.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Craig",
+   "text": "I'll ask the publisher about a spring date and check how many volunteers they recommend.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Tunde",
+   "text": "Does the publisher pay for delivery, or do we?",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Margaret",
+   "text": "Thank you, Craig. And movie night stays.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Tunde",
+   "text": "Movie night stays. It's low effort.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Ines",
+   "text": "Has everyone met Pepper? The caretaker brings her in on Fridays now.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [
+    "E016",
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Craig",
+   "text": "The children adore her. She sat through a whole assembly last week.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Margaret",
+   "text": "Shall we add a sponsored walk? Other schools do very well with them.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Tunde",
+   "text": "It would need a permit for the park, I think.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Ines",
+   "text": "The children would enjoy it, and it gets families outside.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Margaret",
+   "text": "Let's think about the walk over the summer and decide in September.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Tunde",
+   "text": "That seems sensible.",
+   "agenda_item": "income",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Margaret",
+   "text": "Grants. The classroom grant is a hundred and fifty per teacher at the moment.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Ines",
+   "text": "Which is not much. A box of good markers costs a fortune.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Margaret",
+   "text": "With eighteen teachers, that's two thousand seven hundred.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Tunde",
+   "text": "Could we raise it to two hundred?",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E022",
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Ines",
+   "text": "That would make a real difference to the younger classes.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Tunde",
+   "text": "Then the classroom grant goes up to two hundred per teacher. We can afford it.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Ines",
+   "text": "Thank you. And the library request. Three thousand, for new books and two reading chairs.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E025"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Craig",
+   "text": "Three thousand is more than the book fair makes.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Ines",
+   "text": "The library hasn't had new chairs since before I started here.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Craig",
+   "text": "It would be lovely if somebody looked into the council's library grants.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Tunde",
+   "text": "The reserve could cover part of it. Perhaps half from the reserve and half from next year's income.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Margaret",
+   "text": "I like that. It doesn't touch the classroom grants. And the science assembly? The company quoted twelve hundred.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E029",
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Ines",
+   "text": "The children talked about last year's for weeks. The exploding pumpkin.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Craig",
+   "text": "Twelve hundred for one morning is a lot, though.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Ines",
+   "text": "It's two hundred and sixty-eight children for one morning. That's under five dollars each.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Margaret",
+   "text": "Then the library gets its three thousand, half from the reserve, and the assembly stays.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E033",
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Tunde",
+   "text": "I'll update the draft budget with those changes this week.",
+   "agenda_item": "grants",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Margaret",
+   "text": "Timeline. The vote is on June third.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Tunde",
+   "text": "The draft should go to families two weeks before, so around the twentieth of May.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Ines",
+   "text": "Could it be shared in the school newsletter as well? More people read that than the emails.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Margaret",
+   "text": "That's a good idea. The newsletter goes out every other Friday.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Craig",
+   "text": "I'll write a short piece about the book fairs for the same newsletter.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Tunde",
+   "text": "Should we explain why the reserve is going down? Some families watch it closely.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Ines",
+   "text": "Who prints the voting slips this year? Last year we ran short.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Margaret",
+   "text": "The school office has offered. I'll confirm with them. That's everything. Thank you all, and good night.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Tunde",
+   "text": "Good night.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 0,
+   "speaker": "Margaret",
+   "agenda_item": "review",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 1,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Tunde",
+   "agenda_item": "review",
+   "fact_id": "F1",
+   "claimed_value": "$22,700",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 1,
+   "speaker": "Tunde",
+   "agenda_item": "review",
+   "fact_id": "F2",
+   "claimed_value": "$21,150",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Tunde",
+   "agenda_item": "review",
+   "fact_id": "F3",
+   "claimed_value": "$6,400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 4,
+   "speaker": "Craig",
+   "agenda_item": "review",
+   "fact_id": "F4",
+   "claimed_value": "$4,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 4,
+   "speaker": "Craig",
+   "agenda_item": "review",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 5,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Tunde",
+   "agenda_item": "review",
+   "fact_id": "F4",
+   "claimed_value": "$2,950",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Margaret",
+   "agenda_item": "review",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 9,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 9,
+   "speaker": "Tunde",
+   "agenda_item": "review",
+   "fact_id": "F9",
+   "claimed_value": "$640",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 12,
+   "speaker": "Margaret",
+   "agenda_item": "review",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 13,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Tunde",
+   "agenda_item": "review",
+   "fact_id": "F10",
+   "claimed_value": "58%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 17,
+   "speaker": "Tunde",
+   "agenda_item": "income",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 18,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 20,
+   "speaker": "Craig",
+   "agenda_item": "income",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 21,
+   "speaker": "Tunde",
+   "agenda_item": "income",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 23,
+   "speaker": "Tunde",
+   "agenda_item": "income",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 24,
+   "speaker": "Ines",
+   "agenda_item": "income",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 2,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 24,
+   "speaker": "Ines",
+   "agenda_item": "income",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 25,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 26,
+   "speaker": "Margaret",
+   "agenda_item": "income",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Margaret",
+   "agenda_item": "income",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Margaret",
+   "agenda_item": "grants",
+   "fact_id": "F7",
+   "claimed_value": "$150",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 33,
+   "speaker": "Margaret",
+   "agenda_item": "grants",
+   "fact_id": "F6",
+   "claimed_value": "18",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Tunde",
+   "agenda_item": "grants",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 35,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 34,
+   "speaker": "Tunde",
+   "agenda_item": "grants",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 36,
+   "speaker": "Tunde",
+   "agenda_item": "grants",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Ines",
+   "agenda_item": "grants",
+   "fact_id": "F8",
+   "claimed_value": "$3,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Craig",
+   "agenda_item": "grants",
+   "fact_id": "F8",
+   "claimed_value": "$3,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 40,
+   "speaker": "Craig",
+   "agenda_item": "grants",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Tunde",
+   "agenda_item": "grants",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Margaret",
+   "agenda_item": "grants",
+   "fact_id": "F11",
+   "claimed_value": "$1,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Margaret",
+   "agenda_item": "grants",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 44,
+   "speaker": "Craig",
+   "agenda_item": "grants",
+   "fact_id": "F11",
+   "claimed_value": "$1,200",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Ines",
+   "agenda_item": "grants",
+   "fact_id": "F5",
+   "claimed_value": "268",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 46,
+   "speaker": "Margaret",
+   "agenda_item": "grants",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 46,
+   "speaker": "Margaret",
+   "agenda_item": "grants",
+   "fact_id": "F8",
+   "claimed_value": "$3,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 47,
+   "speaker": "Tunde",
+   "agenda_item": "grants",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 48,
+   "speaker": "Margaret",
+   "agenda_item": "timeline",
+   "fact_id": "F12",
+   "claimed_value": "June 3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Ines",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 51,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 52,
+   "speaker": "Craig",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 53,
+   "speaker": "Tunde",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Ines",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 55,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 55,
+   "speaker": "Margaret",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Margaret",
+   "text": "Good evening, everyone. Let's start with last year, then work forward. Tunde, could you give us the summary?",
+   "start_s": 0.5,
+   "end_s": 7.948
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Tunde",
+   "text": "Of course. Income was twenty-two thousand seven hundred, and we spent twenty-one thousand one hundred and fifty.",
+   "start_s": 8.282,
+   "end_s": 15.568
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Margaret",
+   "text": "So a small surplus.",
+   "start_s": 16.615,
+   "end_s": 18.271
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Tunde",
+   "text": "Yes. The reserve is now six thousand four hundred.",
+   "start_s": 19.235,
+   "end_s": 23.092
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Craig",
+   "text": "And the book fair did well, didn't it? I think it made about four thousand.",
+   "start_s": 23.547,
+   "end_s": 29.002
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Tunde",
+   "text": "It made two thousand nine hundred and fifty. Sales were close to four thousand, but that's before the publisher's share.",
+   "start_s": 29.697,
+   "end_s": 38.269
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Craig",
+   "text": "Ah, that's right. The publisher takes their cut.",
+   "start_s": 38.918,
+   "end_s": 41.828
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Ines",
+   "text": "It's still the best fundraiser we have.",
+   "start_s": 42.68,
+   "end_s": 45.389
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Margaret",
+   "text": "And movie night?",
+   "start_s": 46.378,
+   "end_s": 47.619
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Tunde",
+   "text": "Six hundred and forty. Small, but the families enjoy it.",
+   "start_s": 47.913,
+   "end_s": 52.199
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Craig",
+   "text": "The popcorn machine nearly caught fire, if I remember correctly.",
+   "start_s": 52.427,
+   "end_s": 56.064
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Ines",
+   "text": "The popcorn machine is fine now. The caretaker replaced the element.",
+   "start_s": 57.1,
+   "end_s": 61.358
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Margaret",
+   "text": "How many families are members at the moment?",
+   "start_s": 61.991,
+   "end_s": 65.301
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Tunde",
+   "text": "Fifty-eight percent of families. Up a little from last year.",
+   "start_s": 66.263,
+   "end_s": 70.549
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Ines",
+   "text": "That's good for a school our size.",
+   "start_s": 70.751,
+   "end_s": 73.461
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Margaret",
+   "text": "Income for next year. I'd suggest we keep what works.",
+   "start_s": 74.106,
+   "end_s": 78.244
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Craig",
+   "text": "The book fair, certainly. I'd like to try two book fairs, one in autumn and one in spring.",
+   "start_s": 79.166,
+   "end_s": 85.711
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Tunde",
+   "text": "Would the publisher agree to two in one year?",
+   "start_s": 86.14,
+   "end_s": 89.997
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Craig",
+   "text": "They offer it to every school. We've just never asked.",
+   "start_s": 91.142,
+   "end_s": 94.779
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Ines",
+   "text": "Two book fairs would mean more volunteers.",
+   "start_s": 95.88,
+   "end_s": 98.59
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Craig",
+   "text": "I'll ask the publisher about a spring date and check how many volunteers they recommend.",
+   "start_s": 98.821,
+   "end_s": 104.275
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Tunde",
+   "text": "Does the publisher pay for delivery, or do we?",
+   "start_s": 104.5,
+   "end_s": 108.358
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Margaret",
+   "text": "Thank you, Craig. And movie night stays.",
+   "start_s": 109.099,
+   "end_s": 111.996
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Tunde",
+   "text": "Movie night stays. It's low effort.",
+   "start_s": 113.135,
+   "end_s": 115.707
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Ines",
+   "text": "Has everyone met Pepper? The caretaker brings her in on Fridays now.",
+   "start_s": 116.288,
+   "end_s": 120.933
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Craig",
+   "text": "The children adore her. She sat through a whole assembly last week.",
+   "start_s": 121.35,
+   "end_s": 125.713
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Margaret",
+   "text": "Shall we add a sponsored walk? Other schools do very well with them.",
+   "start_s": 126.335,
+   "end_s": 131.714
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Tunde",
+   "text": "It would need a permit for the park, I think.",
+   "start_s": 131.943,
+   "end_s": 136.229
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Ines",
+   "text": "The children would enjoy it, and it gets families outside.",
+   "start_s": 136.651,
+   "end_s": 140.522
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Margaret",
+   "text": "Let's think about the walk over the summer and decide in September.",
+   "start_s": 141.16,
+   "end_s": 146.125
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Tunde",
+   "text": "That seems sensible.",
+   "start_s": 146.821,
+   "end_s": 148.107
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Margaret",
+   "text": "Grants. The classroom grant is a hundred and fifty per teacher at the moment.",
+   "start_s": 148.54,
+   "end_s": 154.333
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Ines",
+   "text": "Which is not much. A box of good markers costs a fortune.",
+   "start_s": 154.764,
+   "end_s": 159.409
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Margaret",
+   "text": "With eighteen teachers, that's two thousand seven hundred.",
+   "start_s": 159.828,
+   "end_s": 163.138
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Tunde",
+   "text": "Could we raise it to two hundred?",
+   "start_s": 163.798,
+   "end_s": 166.798
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Ines",
+   "text": "That would make a real difference to the younger classes.",
+   "start_s": 167.288,
+   "end_s": 171.159
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Tunde",
+   "text": "Then the classroom grant goes up to two hundred per teacher. We can afford it.",
+   "start_s": 171.38,
+   "end_s": 177.809
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Ines",
+   "text": "Thank you. And the library request. Three thousand, for new books and two reading chairs.",
+   "start_s": 178.847,
+   "end_s": 184.653
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Craig",
+   "text": "Three thousand is more than the book fair makes.",
+   "start_s": 185.409,
+   "end_s": 188.682
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Ines",
+   "text": "The library hasn't had new chairs since before I started here.",
+   "start_s": 189.524,
+   "end_s": 193.782
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Craig",
+   "text": "It would be lovely if somebody looked into the council's library grants.",
+   "start_s": 194.168,
+   "end_s": 198.532
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Tunde",
+   "text": "The reserve could cover part of it. Perhaps half from the reserve and half from next year's income.",
+   "start_s": 199.725,
+   "end_s": 207.439
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Margaret",
+   "text": "I like that. It doesn't touch the classroom grants. And the science assembly? The company quoted twelve hundred.",
+   "start_s": 208.499,
+   "end_s": 215.947
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Ines",
+   "text": "The children talked about last year's for weeks. The exploding pumpkin.",
+   "start_s": 216.268,
+   "end_s": 220.526
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Craig",
+   "text": "Twelve hundred for one morning is a lot, though.",
+   "start_s": 221.059,
+   "end_s": 224.331
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Ines",
+   "text": "It's two hundred and sixty-eight children for one morning. That's under five dollars each.",
+   "start_s": 225.252,
+   "end_s": 230.672
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Margaret",
+   "text": "Then the library gets its three thousand, half from the reserve, and the assembly stays.",
+   "start_s": 231.583,
+   "end_s": 237.79
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Tunde",
+   "text": "I'll update the draft budget with those changes this week.",
+   "start_s": 238.926,
+   "end_s": 243.212
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Margaret",
+   "text": "Timeline. The vote is on June third.",
+   "start_s": 243.834,
+   "end_s": 246.731
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Tunde",
+   "text": "The draft should go to families two weeks before, so around the twentieth of May.",
+   "start_s": 247.761,
+   "end_s": 254.19
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Ines",
+   "text": "Could it be shared in the school newsletter as well? More people read that than the emails.",
+   "start_s": 255.06,
+   "end_s": 261.641
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Margaret",
+   "text": "That's a good idea. The newsletter goes out every other Friday.",
+   "start_s": 262.144,
+   "end_s": 266.696
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Craig",
+   "text": "I'll write a short piece about the book fairs for the same newsletter.",
+   "start_s": 267.484,
+   "end_s": 272.211
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Tunde",
+   "text": "Should we explain why the reserve is going down? Some families watch it closely.",
+   "start_s": 273.293,
+   "end_s": 279.293
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Ines",
+   "text": "Who prints the voting slips this year? Last year we ran short.",
+   "start_s": 280.339,
+   "end_s": 284.984
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Margaret",
+   "text": "The school office has offered. I'll confirm with them. That's everything. Thank you all, and good night.",
+   "start_s": 285.689,
+   "end_s": 292.724
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Tunde",
+   "text": "Good night.",
+   "start_s": 293.513,
+   "end_s": 294.37
+  }
+ ]
+}

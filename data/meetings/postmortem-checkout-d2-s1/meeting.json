@@ -1,0 +1,2901 @@
+{
+ "meeting_id": "postmortem-checkout-d2-s1",
+ "config": {
+  "theme": "Incident postmortem: the checkout outage last Tuesday",
+  "domain_pack": "incident_review",
+  "drama": 0.2,
+  "seed": 1,
+  "duration_min": 8.6,
+  "participants": 4,
+  "source": "authored",
+  "author": "claude-opus-5-5 (Claude Code session)",
+  "reviewed_untagged": [
+   3,
+   6,
+   29,
+   43,
+   51,
+   60,
+   74,
+   75,
+   78,
+   100
+  ],
+  "reviewed_noclaim": [
+   6,
+   43
+  ]
+ },
+ "cast": {
+  "theme": "Incident postmortem: the checkout outage last Tuesday",
+  "personas": [
+   {
+    "name": "Ana",
+    "role": "SRE manager, facilitates the postmortem",
+    "goals": "A blameless review with real follow-ups",
+    "hidden_agenda": "Wants budget for a config validation service",
+    "verbosity": 3,
+    "wpm": 150,
+    "catchphrases": [
+     "let's stay blameless",
+     "okay"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Olivia",
+    "avatar_color": "#E4572E"
+   },
+   {
+    "name": "Ben",
+    "role": "On-call engineer during the incident",
+    "goals": "Explain what he saw without being blamed",
+    "hidden_agenda": "Felt alone on the call for the first ten minutes",
+    "verbosity": 2,
+    "wpm": 145,
+    "catchphrases": [
+     "from what I saw"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Kevin",
+    "avatar_color": "#17BEBB"
+   },
+   {
+    "name": "Kofi",
+    "role": "Payments engineering lead",
+    "goals": "Fix the deploy path for payment config",
+    "hidden_agenda": "His team approved the change",
+    "verbosity": 3,
+    "wpm": 155,
+    "catchphrases": [
+     "in fairness",
+     "the short version"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Gregory",
+    "avatar_color": "#FFC914"
+   },
+   {
+    "name": "Mei",
+    "role": "Customer support lead",
+    "goals": "Get customers a clear answer and a goodwill gesture",
+    "hidden_agenda": "Her team was blindsided by the outage",
+    "verbosity": 3,
+    "wpm": 160,
+    "catchphrases": [
+     "from the customer side"
+    ],
+    "knows": [],
+    "doesnt_know": [],
+    "polly_voice": "Ruth",
+    "avatar_color": "#76B041"
+   }
+  ],
+  "pack": {
+   "title": "Postmortem - checkout outage (Tuesday)",
+   "org": "Larkspur Goods (fictional online retailer)",
+   "agenda": [
+    {
+     "id": "timeline",
+     "title": "Incident timeline",
+     "goal": "Agree what happened and when",
+     "timebox_min": 2.24
+    },
+    {
+     "id": "root_cause",
+     "title": "Root cause and contributing factors",
+     "goal": "Understand why the bad config reached production",
+     "timebox_min": 2.38
+    },
+    {
+     "id": "customer_impact",
+     "title": "Customer impact and comms",
+     "goal": "Size the impact and decide on customer follow-up",
+     "timebox_min": 2.05
+    },
+    {
+     "id": "remediation",
+     "title": "Remediation and follow-ups",
+     "goal": "Agree owners for the fixes",
+     "timebox_min": 1.96
+    }
+   ],
+   "facts": [
+    {
+     "id": "F1",
+     "key": "outage_duration",
+     "statement": "Checkout outage lasted 47 minutes",
+     "value": "47 minutes"
+    },
+    {
+     "id": "F2",
+     "key": "outage_start",
+     "statement": "Outage started at 14:12 UTC",
+     "value": "14:12 UTC"
+    },
+    {
+     "id": "F3",
+     "key": "page_fired",
+     "statement": "On-call was paged at 14:21 UTC",
+     "value": "14:21 UTC"
+    },
+    {
+     "id": "F4",
+     "key": "failed_checkouts",
+     "statement": "Failed checkout attempts = 18,400",
+     "value": "18,400"
+    },
+    {
+     "id": "F5",
+     "key": "revenue_at_risk",
+     "statement": "Estimated revenue at risk = $212,000",
+     "value": "$212,000"
+    },
+    {
+     "id": "F6",
+     "key": "error_rate_peak",
+     "statement": "Peak checkout error rate = 64%",
+     "value": "64%"
+    },
+    {
+     "id": "F7",
+     "key": "support_tickets",
+     "statement": "Support tickets about the outage = 1,130",
+     "value": "1,130"
+    },
+    {
+     "id": "F8",
+     "key": "config_change_id",
+     "statement": "The bad change was CHG-4471",
+     "value": "CHG-4471"
+    },
+    {
+     "id": "F9",
+     "key": "rollback_duration",
+     "statement": "Rollback took 6 minutes once started",
+     "value": "6 minutes"
+    },
+    {
+     "id": "F10",
+     "key": "affected_regions",
+     "statement": "Regions affected = 2 (us-east, eu-west)",
+     "value": "2"
+    },
+    {
+     "id": "F11",
+     "key": "monthly_sla_target",
+     "statement": "Monthly checkout availability target = 99.95%",
+     "value": "99.95%"
+    },
+    {
+     "id": "F12",
+     "key": "previous_same_cause",
+     "statement": "A previous incident with the same cause happened on March 3",
+     "value": "March 3"
+    }
+   ]
+  }
+ },
+ "beats": {
+  "beats": [
+   {
+    "agenda_item": "timeline",
+    "summary": "Reconstruct the timeline; Ben misremembers the duration",
+    "n_turns": 27,
+    "events": []
+   },
+   {
+    "agenda_item": "root_cause",
+    "summary": "The bad config change, why review missed it, and the repeat incident",
+    "n_turns": 27,
+    "events": []
+   },
+   {
+    "agenda_item": "customer_impact",
+    "summary": "Size the impact; Mei overstates the tickets; decide on goodwill credits",
+    "n_turns": 26,
+    "events": []
+   },
+   {
+    "agenda_item": "remediation",
+    "summary": "Owners for the fixes; one parked question",
+    "n_turns": 25,
+    "events": []
+   }
+  ]
+ },
+ "turns": [
+  {
+   "index": 0,
+   "speaker": "Ana",
+   "text": "Okay, thanks for making time. Let's stay blameless, we're here to fix the system, not find a person.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 1,
+   "speaker": "Kofi",
+   "text": "Appreciated.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 2,
+   "speaker": "Ana",
+   "text": "Let's start with the timeline. Ben, you were on call, can you walk us through it?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E001"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 3,
+   "speaker": "Ben",
+   "text": "Sure. From what I saw, errors started at twelve past two UTC.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E002"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 4,
+   "speaker": "Kofi",
+   "text": "And the alert didn't go to Ben first, it went to the old payments rotation.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 5,
+   "speaker": "Ana",
+   "text": "Okay, so when did you actually get paged?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E003"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 6,
+   "speaker": "Ben",
+   "text": "The page fired at fourteen twenty-one. So about nine minutes after it started.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E004"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 7,
+   "speaker": "Mei",
+   "text": "Support saw it before that, for what it's worth. The chat queue spiked almost immediately.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 8,
+   "speaker": "Ana",
+   "text": "That's useful. Did support have a way to tell engineering?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E005"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 9,
+   "speaker": "Mei",
+   "text": "Not really. We posted in the incidents channel but nobody was watching it yet.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 10,
+   "speaker": "Ana",
+   "text": "Okay, noting that as a gap.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 11,
+   "speaker": "Kofi",
+   "text": "Sorry, someone's at my door, one second.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E006"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 12,
+   "speaker": "Ben",
+   "text": "Once I was on, the error rate was obviously way up. Dashboards were all red.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 13,
+   "speaker": "Kofi",
+   "text": "In fairness, the dashboard was red for both regions, so it wasn't a single bad host.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E007"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 14,
+   "speaker": "Ana",
+   "text": "And how long was checkout down overall?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E008"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 15,
+   "speaker": "Ben",
+   "text": "About half an hour, start to finish.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E009"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 16,
+   "speaker": "Ana",
+   "text": "I have forty-seven minutes in the incident doc.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E010"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 17,
+   "speaker": "Ben",
+   "text": "Oh, right, I was counting from when I joined, not from the start.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 18,
+   "speaker": "Kofi",
+   "text": "That's fair, it felt shorter from inside the call.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 19,
+   "speaker": "Ana",
+   "text": "When did we decide to roll back?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E011"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 20,
+   "speaker": "Ben",
+   "text": "Once Kofi joined. He spotted the config change pretty fast.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 21,
+   "speaker": "Kofi",
+   "text": "The short version is, the change was the only deploy in that window, so it was the obvious suspect.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 22,
+   "speaker": "Ana",
+   "text": "And the rollback itself was quick?",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E012"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 23,
+   "speaker": "Kofi",
+   "text": "Six minutes once we started it.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E013"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 24,
+   "speaker": "Mei",
+   "text": "From the customer side, it was a bit longer, because carts had to be retried.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 25,
+   "speaker": "Ana",
+   "text": "Okay. So, the timeline is roughly agreed, with the paging gap as the first thing to dig into.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [
+    "E014"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 26,
+   "speaker": "Ben",
+   "text": "Yeah, that's accurate.",
+   "agenda_item": "timeline",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 27,
+   "speaker": "Ana",
+   "text": "Root cause. Kofi, what was in the change?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E015"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 28,
+   "speaker": "Kofi",
+   "text": "CHG-4471. It updated the payment provider timeout from milliseconds to seconds, but the value wasn't converted.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E016"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 29,
+   "speaker": "Ben",
+   "text": "So it was set to five thousand seconds instead of five seconds?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E017"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 30,
+   "speaker": "Kofi",
+   "text": "Effectively, yes. Every checkout call waited until the gateway gave up.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 31,
+   "speaker": "Ana",
+   "text": "How did that get through review?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E018"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 32,
+   "speaker": "Kofi",
+   "text": "In fairness, the diff looked tiny. One line. The reviewer approved it in a couple of minutes.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 33,
+   "speaker": "Mei",
+   "text": "Is there any validation on those config values at all?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E019"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 34,
+   "speaker": "Kofi",
+   "text": "Type checks, yes. Range checks, no.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 35,
+   "speaker": "Ana",
+   "text": "And this isn't the first time, right? We had something similar before.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E020"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 36,
+   "speaker": "Kofi",
+   "text": "Yeah, there was the one in February with the retry config, same kind of thing.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E021"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 37,
+   "speaker": "Ana",
+   "text": "I think that was March third, actually. The retry limit one.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E022"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 38,
+   "speaker": "Kofi",
+   "text": "You're right, March. Early March.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E023"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 39,
+   "speaker": "Ben",
+   "text": "So we've had the same root cause twice in a few months.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 40,
+   "speaker": "Ana",
+   "text": "Which is exactly why this matters. Let's stay blameless, but that's a pattern.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 41,
+   "speaker": "Kofi",
+   "text": "Agreed. And in fairness, the fix from March was a wiki page, not a guardrail.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E024"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 42,
+   "speaker": "Mei",
+   "text": "Out of curiosity, did the new office badge readers ever get fixed? Mine still doesn't work.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E025",
+    "E026"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 43,
+   "speaker": "Ben",
+   "text": "Mine works on the second floor but not the third.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 44,
+   "speaker": "Kofi",
+   "text": "Facilities said next week, but they've been saying that for a month.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 45,
+   "speaker": "Ana",
+   "text": "Okay, let's get back to it. Was there a staged rollout for this change?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E027"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 46,
+   "speaker": "Kofi",
+   "text": "No. Payment config goes to all regions at once. That's the deeper problem.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 47,
+   "speaker": "Ana",
+   "text": "So two regions went down together instead of one.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E028"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 48,
+   "speaker": "Ben",
+   "text": "Which is why there was nothing healthy to fail over to.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 49,
+   "speaker": "Ana",
+   "text": "Okay. Should we require staged rollouts for payment config?",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E029"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 50,
+   "speaker": "Kofi",
+   "text": "I think we have to. Maybe one region first with a fifteen-minute bake.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E030"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 51,
+   "speaker": "Ben",
+   "text": "Fifteen minutes would have caught this one easily.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 52,
+   "speaker": "Ana",
+   "text": "Let's hold that thought for remediation, but I think everyone agrees on the direction.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E031"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 53,
+   "speaker": "Kofi",
+   "text": "Someone should really audit the other payment config values too, there might be more unit mismatches.",
+   "agenda_item": "root_cause",
+   "direction": null,
+   "event_ids": [
+    "E032"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 54,
+   "speaker": "Ana",
+   "text": "Okay, customer impact. Mei, what does it look like from your side?",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E033"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 55,
+   "speaker": "Mei",
+   "text": "From the customer side, it was rough. We had about two thousand tickets in the first day.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E034"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 56,
+   "speaker": "Ana",
+   "text": "The support dashboard I have says eleven thirty.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E035"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 57,
+   "speaker": "Mei",
+   "text": "Let me check. Oh, yes. Eleven thirty tickets, two thousand was chats plus tickets.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E036"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 58,
+   "speaker": "Kofi",
+   "text": "How many checkouts actually failed?",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E037"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 59,
+   "speaker": "Ana",
+   "text": "Eighteen thousand four hundred attempts. Some of those are the same customers retrying.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E038"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 60,
+   "speaker": "Ben",
+   "text": "Do we know how many unique customers that is?",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E039"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 61,
+   "speaker": "Mei",
+   "text": "And revenue? Finance asked me yesterday and I didn't have a number.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E040"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 62,
+   "speaker": "Ana",
+   "text": "Estimated revenue at risk is two hundred and twelve thousand.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E041"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 63,
+   "speaker": "Kofi",
+   "text": "At risk, not lost. A lot of those people came back and bought later.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 64,
+   "speaker": "Mei",
+   "text": "Some did. Some told us they went to a competitor.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 65,
+   "speaker": "Ana",
+   "text": "What did the error rate peak at? I want it in the doc.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E042"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 66,
+   "speaker": "Kofi",
+   "text": "Around forty percent, I think.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E043"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 67,
+   "speaker": "Ben",
+   "text": "It was higher than that. Sixty-four at the peak. I have the screenshot.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E044"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 68,
+   "speaker": "Kofi",
+   "text": "Sixty-four. Okay, that's worse than I remembered.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E045"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 69,
+   "speaker": "Ana",
+   "text": "And for the monthly availability target, we're over budget now, right?",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E046"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 70,
+   "speaker": "Kofi",
+   "text": "Way over. The target's ninety-nine point nine five, and one outage like this blows the month.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E047"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 71,
+   "speaker": "Mei",
+   "text": "Can we do something for affected customers? A credit, a discount code?",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E048"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 72,
+   "speaker": "Kofi",
+   "text": "Finance will have opinions.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 73,
+   "speaker": "Ana",
+   "text": "Finance always does. But I think a goodwill code is reasonable here.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 74,
+   "speaker": "Mei",
+   "text": "Maybe ten percent off the next order?",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E049",
+    "E050"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 75,
+   "speaker": "Ana",
+   "text": "That sounds right to me. Kofi, Ben, any objections?",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E051"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 76,
+   "speaker": "Kofi",
+   "text": "None.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 77,
+   "speaker": "Ben",
+   "text": "None from me.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 78,
+   "speaker": "Ana",
+   "text": "Okay. We're sending a ten percent goodwill code to every customer with a failed checkout. That's agreed.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E052"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 79,
+   "speaker": "Mei",
+   "text": "Thank you. I'll draft the customer email today and send it to Ana for review.",
+   "agenda_item": "customer_impact",
+   "direction": null,
+   "event_ids": [
+    "E053"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 80,
+   "speaker": "Ana",
+   "text": "Okay, remediation. Let's get owners on these.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 81,
+   "speaker": "Kofi",
+   "text": "First one's mine. I'll add range validation for every payment timeout and retry value, starting this sprint.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [
+    "E054"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 82,
+   "speaker": "Ana",
+   "text": "Great. And staged rollouts for payment config?",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [
+    "E055"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 83,
+   "speaker": "Kofi",
+   "text": "I think we said yes in principle.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 84,
+   "speaker": "Ana",
+   "text": "Then let's make it official. Payment config changes go to one region first, with a fifteen-minute bake, starting Monday.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [
+    "E056"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 85,
+   "speaker": "Ben",
+   "text": "Good. That would have saved us.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 86,
+   "speaker": "Ana",
+   "text": "Paging. Ben, can you fix the rotation so payment alerts go to the current on-call?",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [
+    "E057"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 87,
+   "speaker": "Ben",
+   "text": "Yes. I'll move the payment alerts to the main on-call rotation by Thursday.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [
+    "E058"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 88,
+   "speaker": "Mei",
+   "text": "And support needs a way to escalate. The channel didn't work.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 89,
+   "speaker": "Ana",
+   "text": "What would work for your team?",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [
+    "E059"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 90,
+   "speaker": "Mei",
+   "text": "Honestly, a button in the support tool that pages on-call directly.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 91,
+   "speaker": "Kofi",
+   "text": "That's probably a quick integration. Maybe we look at it next quarter?",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [
+    "E060",
+    "E061"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 92,
+   "speaker": "Ana",
+   "text": "Let's not commit to a quarter yet. We can pick it up offline.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [
+    "E062"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 93,
+   "speaker": "Mei",
+   "text": "That's fair.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 94,
+   "speaker": "Ben",
+   "text": "Should we also add an alert on checkout latency, not just errors?",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [
+    "E063"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 95,
+   "speaker": "Kofi",
+   "text": "Yes, the latency went crazy minutes before the errors did.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 96,
+   "speaker": "Ana",
+   "text": "I'll add the latency alert to our SLO dashboard work and own that one.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [
+    "E064"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 97,
+   "speaker": "Kofi",
+   "text": "Someone should probably write up the unit conversion gotcha for the wiki too.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [
+    "E065"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 98,
+   "speaker": "Ana",
+   "text": "We have a wiki page already, that's part of the problem.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 99,
+   "speaker": "Kofi",
+   "text": "Fair point.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 100,
+   "speaker": "Ana",
+   "text": "Do we need an exec summary for this, or is the doc enough?",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [
+    "E066"
+   ],
+   "interrupted": false
+  },
+  {
+   "index": 101,
+   "speaker": "Ben",
+   "text": "I'm just glad we got through it.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 102,
+   "speaker": "Ana",
+   "text": "Okay. I think we've got good owners. Thanks everyone, this was a really good review.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 103,
+   "speaker": "Mei",
+   "text": "Thanks, Ana.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  },
+  {
+   "index": 104,
+   "speaker": "Kofi",
+   "text": "Thanks all.",
+   "agenda_item": "remediation",
+   "direction": null,
+   "event_ids": [],
+   "interrupted": false
+  }
+ ],
+ "gold": [
+  {
+   "event_id": "E001",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 2,
+   "speaker": "Ana",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 3,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E002",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 3,
+   "speaker": "Ben",
+   "agenda_item": "timeline",
+   "fact_id": "F2",
+   "claimed_value": "14:12 UTC",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E003",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 5,
+   "speaker": "Ana",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 6,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E004",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 6,
+   "speaker": "Ben",
+   "agenda_item": "timeline",
+   "fact_id": "F3",
+   "claimed_value": "14:21 UTC",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E005",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 8,
+   "speaker": "Ana",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 9,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E006",
+   "category": "off_topic_drift",
+   "polarity": "neg",
+   "turn_index": 11,
+   "speaker": "Kofi",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E007",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 13,
+   "speaker": "Kofi",
+   "agenda_item": "timeline",
+   "fact_id": "F10",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E008",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 14,
+   "speaker": "Ana",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 15,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E009",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 15,
+   "speaker": "Ben",
+   "agenda_item": "timeline",
+   "fact_id": "F1",
+   "claimed_value": "half an hour",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E010",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 16,
+   "speaker": "Ana",
+   "agenda_item": "timeline",
+   "fact_id": "F1",
+   "claimed_value": "47 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E011",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 19,
+   "speaker": "Ana",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 20,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E012",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 22,
+   "speaker": "Ana",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 23,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E013",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 23,
+   "speaker": "Kofi",
+   "agenda_item": "timeline",
+   "fact_id": "F9",
+   "claimed_value": "6 minutes",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E014",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 25,
+   "speaker": "Ana",
+   "agenda_item": "timeline",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E015",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 27,
+   "speaker": "Ana",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 28,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E016",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 28,
+   "speaker": "Kofi",
+   "agenda_item": "root_cause",
+   "fact_id": "F8",
+   "claimed_value": "CHG-4471",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E017",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 29,
+   "speaker": "Ben",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 30,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E018",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 31,
+   "speaker": "Ana",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 32,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E019",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 33,
+   "speaker": "Mei",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 34,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E020",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 35,
+   "speaker": "Ana",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 36,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E021",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 36,
+   "speaker": "Kofi",
+   "agenda_item": "root_cause",
+   "fact_id": "F12",
+   "claimed_value": "February",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E022",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 37,
+   "speaker": "Ana",
+   "agenda_item": "root_cause",
+   "fact_id": "F12",
+   "claimed_value": "March 3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E023",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 38,
+   "speaker": "Kofi",
+   "agenda_item": "root_cause",
+   "fact_id": "F12",
+   "claimed_value": "March 3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E024",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 41,
+   "speaker": "Kofi",
+   "agenda_item": "root_cause",
+   "fact_id": "F12",
+   "claimed_value": "March 3",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E025",
+   "category": "off_topic_drift",
+   "polarity": "pos",
+   "turn_index": 42,
+   "speaker": "Mei",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 3,
+   "source": "plan"
+  },
+  {
+   "event_id": "E026",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 42,
+   "speaker": "Mei",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 43,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E027",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 45,
+   "speaker": "Ana",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 46,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E028",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 47,
+   "speaker": "Ana",
+   "agenda_item": "root_cause",
+   "fact_id": "F10",
+   "claimed_value": "2",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E029",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 49,
+   "speaker": "Ana",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 50,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E030",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 50,
+   "speaker": "Kofi",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E031",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 52,
+   "speaker": "Ana",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E032",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 53,
+   "speaker": "Kofi",
+   "agenda_item": "root_cause",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E033",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 54,
+   "speaker": "Ana",
+   "agenda_item": "customer_impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 55,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E034",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 55,
+   "speaker": "Mei",
+   "agenda_item": "customer_impact",
+   "fact_id": "F7",
+   "claimed_value": "2,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E035",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 56,
+   "speaker": "Ana",
+   "agenda_item": "customer_impact",
+   "fact_id": "F7",
+   "claimed_value": "1,130",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E036",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 57,
+   "speaker": "Mei",
+   "agenda_item": "customer_impact",
+   "fact_id": "F7",
+   "claimed_value": "1,130",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E037",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 58,
+   "speaker": "Kofi",
+   "agenda_item": "customer_impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 59,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E038",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 59,
+   "speaker": "Ana",
+   "agenda_item": "customer_impact",
+   "fact_id": "F4",
+   "claimed_value": "18,400",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E039",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 60,
+   "speaker": "Ben",
+   "agenda_item": "customer_impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E040",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 61,
+   "speaker": "Mei",
+   "agenda_item": "customer_impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 62,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E041",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 62,
+   "speaker": "Ana",
+   "agenda_item": "customer_impact",
+   "fact_id": "F5",
+   "claimed_value": "$212,000",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E042",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 65,
+   "speaker": "Ana",
+   "agenda_item": "customer_impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 66,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E043",
+   "category": "factual_claim",
+   "polarity": "pos",
+   "turn_index": 66,
+   "speaker": "Kofi",
+   "agenda_item": "customer_impact",
+   "fact_id": "F6",
+   "claimed_value": "40%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E044",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 67,
+   "speaker": "Ben",
+   "agenda_item": "customer_impact",
+   "fact_id": "F6",
+   "claimed_value": "64%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E045",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 68,
+   "speaker": "Kofi",
+   "agenda_item": "customer_impact",
+   "fact_id": "F6",
+   "claimed_value": "64%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E046",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 69,
+   "speaker": "Ana",
+   "agenda_item": "customer_impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 70,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E047",
+   "category": "factual_claim",
+   "polarity": "neg",
+   "turn_index": 70,
+   "speaker": "Kofi",
+   "agenda_item": "customer_impact",
+   "fact_id": "F11",
+   "claimed_value": "99.95%",
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E048",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 71,
+   "speaker": "Mei",
+   "agenda_item": "customer_impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 73,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E049",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 74,
+   "speaker": "Mei",
+   "agenda_item": "customer_impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E050",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 74,
+   "speaker": "Mei",
+   "agenda_item": "customer_impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 75,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E051",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 75,
+   "speaker": "Ana",
+   "agenda_item": "customer_impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 76,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E052",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 78,
+   "speaker": "Ana",
+   "agenda_item": "customer_impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E053",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 79,
+   "speaker": "Mei",
+   "agenda_item": "customer_impact",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E054",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 81,
+   "speaker": "Kofi",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E055",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 82,
+   "speaker": "Ana",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 83,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E056",
+   "category": "decision_made",
+   "polarity": "pos",
+   "turn_index": 84,
+   "speaker": "Ana",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E057",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 86,
+   "speaker": "Ana",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 87,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E058",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 87,
+   "speaker": "Ben",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E059",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 89,
+   "speaker": "Ana",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 90,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E060",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 91,
+   "speaker": "Kofi",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E061",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 91,
+   "speaker": "Kofi",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 92,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E062",
+   "category": "decision_made",
+   "polarity": "neg",
+   "turn_index": 92,
+   "speaker": "Ana",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E063",
+   "category": "unanswered_question",
+   "polarity": "neg",
+   "turn_index": 94,
+   "speaker": "Ben",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": 95,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E064",
+   "category": "action_item",
+   "polarity": "pos",
+   "turn_index": 96,
+   "speaker": "Ana",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E065",
+   "category": "action_item",
+   "polarity": "neg",
+   "turn_index": 97,
+   "speaker": "Kofi",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  },
+  {
+   "event_id": "E066",
+   "category": "unanswered_question",
+   "polarity": "pos",
+   "turn_index": 100,
+   "speaker": "Ana",
+   "agenda_item": "remediation",
+   "fact_id": null,
+   "claimed_value": null,
+   "resolution_turn": null,
+   "span_turns": 1,
+   "source": "plan"
+  }
+ ],
+ "timeline": [
+  {
+   "turn_index": 0,
+   "speaker": "Ana",
+   "text": "Okay, thanks for making time. Let's stay blameless, we're here to fix the system, not find a person.",
+   "start_s": 0.5,
+   "end_s": 7.7
+  },
+  {
+   "turn_index": 1,
+   "speaker": "Kofi",
+   "text": "Appreciated.",
+   "start_s": 8.034,
+   "end_s": 8.421
+  },
+  {
+   "turn_index": 2,
+   "speaker": "Ana",
+   "text": "Let's start with the timeline. Ben, you were on call, can you walk us through it?",
+   "start_s": 9.468,
+   "end_s": 15.868
+  },
+  {
+   "turn_index": 3,
+   "speaker": "Ben",
+   "text": "Sure. From what I saw, errors started at twelve past two UTC.",
+   "start_s": 16.832,
+   "end_s": 21.797
+  },
+  {
+   "turn_index": 4,
+   "speaker": "Kofi",
+   "text": "And the alert didn't go to Ben first, it went to the old payments rotation.",
+   "start_s": 22.252,
+   "end_s": 28.059
+  },
+  {
+   "turn_index": 5,
+   "speaker": "Ana",
+   "text": "Okay, so when did you actually get paged?",
+   "start_s": 28.754,
+   "end_s": 31.954
+  },
+  {
+   "turn_index": 6,
+   "speaker": "Ben",
+   "text": "The page fired at fourteen twenty-one. So about nine minutes after it started.",
+   "start_s": 32.603,
+   "end_s": 37.983
+  },
+  {
+   "turn_index": 7,
+   "speaker": "Mei",
+   "text": "Support saw it before that, for what it's worth. The chat queue spiked almost immediately.",
+   "start_s": 38.835,
+   "end_s": 44.46
+  },
+  {
+   "turn_index": 8,
+   "speaker": "Ana",
+   "text": "That's useful. Did support have a way to tell engineering?",
+   "start_s": 45.449,
+   "end_s": 49.449
+  },
+  {
+   "turn_index": 9,
+   "speaker": "Mei",
+   "text": "Not really. We posted in the incidents channel but nobody was watching it yet.",
+   "start_s": 49.743,
+   "end_s": 54.993
+  },
+  {
+   "turn_index": 10,
+   "speaker": "Ana",
+   "text": "Okay, noting that as a gap.",
+   "start_s": 55.221,
+   "end_s": 57.621
+  },
+  {
+   "turn_index": 11,
+   "speaker": "Kofi",
+   "text": "Sorry, someone's at my door, one second.",
+   "start_s": 58.657,
+   "end_s": 61.366
+  },
+  {
+   "turn_index": 12,
+   "speaker": "Ben",
+   "text": "Once I was on, the error rate was obviously way up. Dashboards were all red.",
+   "start_s": 61.999,
+   "end_s": 68.206
+  },
+  {
+   "turn_index": 13,
+   "speaker": "Kofi",
+   "text": "In fairness, the dashboard was red for both regions, so it wasn't a single bad host.",
+   "start_s": 69.168,
+   "end_s": 75.362
+  },
+  {
+   "turn_index": 14,
+   "speaker": "Ana",
+   "text": "And how long was checkout down overall?",
+   "start_s": 75.564,
+   "end_s": 78.364
+  },
+  {
+   "turn_index": 15,
+   "speaker": "Ben",
+   "text": "About half an hour, start to finish.",
+   "start_s": 79.009,
+   "end_s": 81.906
+  },
+  {
+   "turn_index": 16,
+   "speaker": "Ana",
+   "text": "I have forty-seven minutes in the incident doc.",
+   "start_s": 82.828,
+   "end_s": 86.028
+  },
+  {
+   "turn_index": 17,
+   "speaker": "Ben",
+   "text": "Oh, right, I was counting from when I joined, not from the start.",
+   "start_s": 86.457,
+   "end_s": 91.836
+  },
+  {
+   "turn_index": 18,
+   "speaker": "Kofi",
+   "text": "That's fair, it felt shorter from inside the call.",
+   "start_s": 92.981,
+   "end_s": 96.465
+  },
+  {
+   "turn_index": 19,
+   "speaker": "Ana",
+   "text": "When did we decide to roll back?",
+   "start_s": 97.566,
+   "end_s": 100.366
+  },
+  {
+   "turn_index": 20,
+   "speaker": "Ben",
+   "text": "Once Kofi joined. He spotted the config change pretty fast.",
+   "start_s": 100.597,
+   "end_s": 104.735
+  },
+  {
+   "turn_index": 21,
+   "speaker": "Kofi",
+   "text": "The short version is, the change was the only deploy in that window, so it was the obvious suspect.",
+   "start_s": 104.96,
+   "end_s": 112.315
+  },
+  {
+   "turn_index": 22,
+   "speaker": "Ana",
+   "text": "And the rollback itself was quick?",
+   "start_s": 113.056,
+   "end_s": 115.456
+  },
+  {
+   "turn_index": 23,
+   "speaker": "Kofi",
+   "text": "Six minutes once we started it.",
+   "start_s": 116.595,
+   "end_s": 118.918
+  },
+  {
+   "turn_index": 24,
+   "speaker": "Mei",
+   "text": "From the customer side, it was a bit longer, because carts had to be retried.",
+   "start_s": 119.499,
+   "end_s": 125.124
+  },
+  {
+   "turn_index": 25,
+   "speaker": "Ana",
+   "text": "Okay. So, the timeline is roughly agreed, with the paging gap as the first thing to dig into.",
+   "start_s": 125.541,
+   "end_s": 132.741
+  },
+  {
+   "turn_index": 26,
+   "speaker": "Ben",
+   "text": "Yeah, that's accurate.",
+   "start_s": 133.363,
+   "end_s": 134.604
+  },
+  {
+   "turn_index": 27,
+   "speaker": "Ana",
+   "text": "Root cause. Kofi, what was in the change?",
+   "start_s": 134.833,
+   "end_s": 138.033
+  },
+  {
+   "turn_index": 28,
+   "speaker": "Kofi",
+   "text": "CHG-4471. It updated the payment provider timeout from milliseconds to seconds, but the value wasn't converted.",
+   "start_s": 138.455,
+   "end_s": 144.648
+  },
+  {
+   "turn_index": 29,
+   "speaker": "Ben",
+   "text": "So it was set to five thousand seconds instead of five seconds?",
+   "start_s": 145.286,
+   "end_s": 150.251
+  },
+  {
+   "turn_index": 30,
+   "speaker": "Kofi",
+   "text": "Effectively, yes. Every checkout call waited until the gateway gave up.",
+   "start_s": 150.947,
+   "end_s": 155.205
+  },
+  {
+   "turn_index": 31,
+   "speaker": "Ana",
+   "text": "How did that get through review?",
+   "start_s": 155.638,
+   "end_s": 158.038
+  },
+  {
+   "turn_index": 32,
+   "speaker": "Kofi",
+   "text": "In fairness, the diff looked tiny. One line. The reviewer approved it in a couple of minutes.",
+   "start_s": 158.469,
+   "end_s": 165.05
+  },
+  {
+   "turn_index": 33,
+   "speaker": "Mei",
+   "text": "Is there any validation on those config values at all?",
+   "start_s": 165.469,
+   "end_s": 169.219
+  },
+  {
+   "turn_index": 34,
+   "speaker": "Kofi",
+   "text": "Type checks, yes. Range checks, no.",
+   "start_s": 169.879,
+   "end_s": 172.201
+  },
+  {
+   "turn_index": 35,
+   "speaker": "Ana",
+   "text": "And this isn't the first time, right? We had something similar before.",
+   "start_s": 172.691,
+   "end_s": 177.491
+  },
+  {
+   "turn_index": 36,
+   "speaker": "Kofi",
+   "text": "Yeah, there was the one in February with the retry config, same kind of thing.",
+   "start_s": 177.712,
+   "end_s": 183.519
+  },
+  {
+   "turn_index": 37,
+   "speaker": "Ana",
+   "text": "I think that was March third, actually. The retry limit one.",
+   "start_s": 184.557,
+   "end_s": 188.957
+  },
+  {
+   "turn_index": 38,
+   "speaker": "Kofi",
+   "text": "You're right, March. Early March.",
+   "start_s": 189.713,
+   "end_s": 191.649
+  },
+  {
+   "turn_index": 39,
+   "speaker": "Ben",
+   "text": "So we've had the same root cause twice in a few months.",
+   "start_s": 192.491,
+   "end_s": 197.457
+  },
+  {
+   "turn_index": 40,
+   "speaker": "Ana",
+   "text": "Which is exactly why this matters. Let's stay blameless, but that's a pattern.",
+   "start_s": 197.843,
+   "end_s": 203.043
+  },
+  {
+   "turn_index": 41,
+   "speaker": "Kofi",
+   "text": "Agreed. And in fairness, the fix from March was a wiki page, not a guardrail.",
+   "start_s": 204.236,
+   "end_s": 210.042
+  },
+  {
+   "turn_index": 42,
+   "speaker": "Mei",
+   "text": "Out of curiosity, did the new office badge readers ever get fixed? Mine still doesn't work.",
+   "start_s": 211.102,
+   "end_s": 217.102
+  },
+  {
+   "turn_index": 43,
+   "speaker": "Ben",
+   "text": "Mine works on the second floor but not the third.",
+   "start_s": 217.423,
+   "end_s": 221.561
+  },
+  {
+   "turn_index": 44,
+   "speaker": "Kofi",
+   "text": "Facilities said next week, but they've been saying that for a month.",
+   "start_s": 222.094,
+   "end_s": 226.739
+  },
+  {
+   "turn_index": 45,
+   "speaker": "Ana",
+   "text": "Okay, let's get back to it. Was there a staged rollout for this change?",
+   "start_s": 227.66,
+   "end_s": 233.26
+  },
+  {
+   "turn_index": 46,
+   "speaker": "Kofi",
+   "text": "No. Payment config goes to all regions at once. That's the deeper problem.",
+   "start_s": 234.171,
+   "end_s": 239.203
+  },
+  {
+   "turn_index": 47,
+   "speaker": "Ana",
+   "text": "So two regions went down together instead of one.",
+   "start_s": 240.339,
+   "end_s": 243.939
+  },
+  {
+   "turn_index": 48,
+   "speaker": "Ben",
+   "text": "Which is why there was nothing healthy to fail over to.",
+   "start_s": 244.561,
+   "end_s": 249.113
+  },
+  {
+   "turn_index": 49,
+   "speaker": "Ana",
+   "text": "Okay. Should we require staged rollouts for payment config?",
+   "start_s": 250.143,
+   "end_s": 253.743
+  },
+  {
+   "turn_index": 50,
+   "speaker": "Kofi",
+   "text": "I think we have to. Maybe one region first with a fifteen-minute bake.",
+   "start_s": 254.613,
+   "end_s": 259.646
+  },
+  {
+   "turn_index": 51,
+   "speaker": "Ben",
+   "text": "Fifteen minutes would have caught this one easily.",
+   "start_s": 260.149,
+   "end_s": 263.46
+  },
+  {
+   "turn_index": 52,
+   "speaker": "Ana",
+   "text": "Let's hold that thought for remediation, but I think everyone agrees on the direction.",
+   "start_s": 264.248,
+   "end_s": 269.848
+  },
+  {
+   "turn_index": 53,
+   "speaker": "Kofi",
+   "text": "Someone should really audit the other payment config values too, there might be more unit mismatches.",
+   "start_s": 270.93,
+   "end_s": 277.124
+  },
+  {
+   "turn_index": 54,
+   "speaker": "Ana",
+   "text": "Okay, customer impact. Mei, what does it look like from your side?",
+   "start_s": 278.17,
+   "end_s": 282.97
+  },
+  {
+   "turn_index": 55,
+   "speaker": "Mei",
+   "text": "From the customer side, it was rough. We had about two thousand tickets in the first day.",
+   "start_s": 283.675,
+   "end_s": 290.05
+  },
+  {
+   "turn_index": 56,
+   "speaker": "Ana",
+   "text": "The support dashboard I have says eleven thirty.",
+   "start_s": 290.839,
+   "end_s": 294.039
+  },
+  {
+   "turn_index": 57,
+   "speaker": "Mei",
+   "text": "Let me check. Oh, yes. Eleven thirty tickets, two thousand was chats plus tickets.",
+   "start_s": 294.274,
+   "end_s": 299.524
+  },
+  {
+   "turn_index": 58,
+   "speaker": "Kofi",
+   "text": "How many checkouts actually failed?",
+   "start_s": 299.967,
+   "end_s": 301.902
+  },
+  {
+   "turn_index": 59,
+   "speaker": "Ana",
+   "text": "Eighteen thousand four hundred attempts. Some of those are the same customers retrying.",
+   "start_s": 302.899,
+   "end_s": 308.099
+  },
+  {
+   "turn_index": 60,
+   "speaker": "Ben",
+   "text": "Do we know how many unique customers that is?",
+   "start_s": 308.713,
+   "end_s": 312.437
+  },
+  {
+   "turn_index": 61,
+   "speaker": "Mei",
+   "text": "And revenue? Finance asked me yesterday and I didn't have a number.",
+   "start_s": 312.81,
+   "end_s": 317.31
+  },
+  {
+   "turn_index": 62,
+   "speaker": "Ana",
+   "text": "Estimated revenue at risk is two hundred and twelve thousand.",
+   "start_s": 318.059,
+   "end_s": 322.059
+  },
+  {
+   "turn_index": 63,
+   "speaker": "Kofi",
+   "text": "At risk, not lost. A lot of those people came back and bought later.",
+   "start_s": 322.962,
+   "end_s": 328.381
+  },
+  {
+   "turn_index": 64,
+   "speaker": "Mei",
+   "text": "Some did. Some told us they went to a competitor.",
+   "start_s": 329.255,
+   "end_s": 333.005
+  },
+  {
+   "turn_index": 65,
+   "speaker": "Ana",
+   "text": "What did the error rate peak at? I want it in the doc.",
+   "start_s": 333.58,
+   "end_s": 338.78
+  },
+  {
+   "turn_index": 66,
+   "speaker": "Kofi",
+   "text": "Around forty percent, I think.",
+   "start_s": 339.419,
+   "end_s": 341.354
+  },
+  {
+   "turn_index": 67,
+   "speaker": "Ben",
+   "text": "It was higher than that. Sixty-four at the peak. I have the screenshot.",
+   "start_s": 342.062,
+   "end_s": 347.442
+  },
+  {
+   "turn_index": 68,
+   "speaker": "Kofi",
+   "text": "Sixty-four. Okay, that's worse than I remembered.",
+   "start_s": 348.42,
+   "end_s": 351.13
+  },
+  {
+   "turn_index": 69,
+   "speaker": "Ana",
+   "text": "And for the monthly availability target, we're over budget now, right?",
+   "start_s": 351.851,
+   "end_s": 356.251
+  },
+  {
+   "turn_index": 70,
+   "speaker": "Kofi",
+   "text": "Way over. The target's ninety-nine point nine five, and one outage like this blows the month.",
+   "start_s": 356.844,
+   "end_s": 363.038
+  },
+  {
+   "turn_index": 71,
+   "speaker": "Mei",
+   "text": "Can we do something for affected customers? A credit, a discount code?",
+   "start_s": 363.728,
+   "end_s": 368.228
+  },
+  {
+   "turn_index": 72,
+   "speaker": "Kofi",
+   "text": "Finance will have opinions.",
+   "start_s": 368.458,
+   "end_s": 370.006
+  },
+  {
+   "turn_index": 73,
+   "speaker": "Ana",
+   "text": "Finance always does. But I think a goodwill code is reasonable here.",
+   "start_s": 370.249,
+   "end_s": 375.049
+  },
+  {
+   "turn_index": 74,
+   "speaker": "Mei",
+   "text": "Maybe ten percent off the next order?",
+   "start_s": 375.952,
+   "end_s": 378.577
+  },
+  {
+   "turn_index": 75,
+   "speaker": "Ana",
+   "text": "That sounds right to me. Kofi, Ben, any objections?",
+   "start_s": 379.76,
+   "end_s": 383.36
+  },
+  {
+   "turn_index": 76,
+   "speaker": "Kofi",
+   "text": "None.",
+   "start_s": 384.153,
+   "end_s": 384.54
+  },
+  {
+   "turn_index": 77,
+   "speaker": "Ben",
+   "text": "None from me.",
+   "start_s": 385.134,
+   "end_s": 386.375
+  },
+  {
+   "turn_index": 78,
+   "speaker": "Ana",
+   "text": "Okay. We're sending a ten percent goodwill code to every customer with a failed checkout. That's agreed.",
+   "start_s": 386.745,
+   "end_s": 393.545
+  },
+  {
+   "turn_index": 79,
+   "speaker": "Mei",
+   "text": "Thank you. I'll draft the customer email today and send it to Ana for review.",
+   "start_s": 394.247,
+   "end_s": 399.872
+  },
+  {
+   "turn_index": 80,
+   "speaker": "Ana",
+   "text": "Okay, remediation. Let's get owners on these.",
+   "start_s": 401.054,
+   "end_s": 403.854
+  },
+  {
+   "turn_index": 81,
+   "speaker": "Kofi",
+   "text": "First one's mine. I'll add range validation for every payment timeout and retry value, starting this sprint.",
+   "start_s": 404.825,
+   "end_s": 411.405
+  },
+  {
+   "turn_index": 82,
+   "speaker": "Ana",
+   "text": "Great. And staged rollouts for payment config?",
+   "start_s": 412.145,
+   "end_s": 414.945
+  },
+  {
+   "turn_index": 83,
+   "speaker": "Kofi",
+   "text": "I think we said yes in principle.",
+   "start_s": 416.005,
+   "end_s": 418.715
+  },
+  {
+   "turn_index": 84,
+   "speaker": "Ana",
+   "text": "Then let's make it official. Payment config changes go to one region first, with a fifteen-minute bake, starting Monday.",
+   "start_s": 419.147,
+   "end_s": 426.747
+  },
+  {
+   "turn_index": 85,
+   "speaker": "Ben",
+   "text": "Good. That would have saved us.",
+   "start_s": 427.461,
+   "end_s": 429.944
+  },
+  {
+   "turn_index": 86,
+   "speaker": "Ana",
+   "text": "Paging. Ben, can you fix the rotation so payment alerts go to the current on-call?",
+   "start_s": 431.096,
+   "end_s": 437.096
+  },
+  {
+   "turn_index": 87,
+   "speaker": "Ben",
+   "text": "Yes. I'll move the payment alerts to the main on-call rotation by Thursday.",
+   "start_s": 437.874,
+   "end_s": 443.253
+  },
+  {
+   "turn_index": 88,
+   "speaker": "Mei",
+   "text": "And support needs a way to escalate. The channel didn't work.",
+   "start_s": 443.912,
+   "end_s": 448.037
+  },
+  {
+   "turn_index": 89,
+   "speaker": "Ana",
+   "text": "What would work for your team?",
+   "start_s": 448.506,
+   "end_s": 450.906
+  },
+  {
+   "turn_index": 90,
+   "speaker": "Mei",
+   "text": "Honestly, a button in the support tool that pages on-call directly.",
+   "start_s": 451.654,
+   "end_s": 455.779
+  },
+  {
+   "turn_index": 91,
+   "speaker": "Kofi",
+   "text": "That's probably a quick integration. Maybe we look at it next quarter?",
+   "start_s": 456.936,
+   "end_s": 461.581
+  },
+  {
+   "turn_index": 92,
+   "speaker": "Ana",
+   "text": "Let's not commit to a quarter yet. We can pick it up offline.",
+   "start_s": 461.787,
+   "end_s": 466.987
+  },
+  {
+   "turn_index": 93,
+   "speaker": "Mei",
+   "text": "That's fair.",
+   "start_s": 467.971,
+   "end_s": 468.721
+  },
+  {
+   "turn_index": 94,
+   "speaker": "Ben",
+   "text": "Should we also add an alert on checkout latency, not just errors?",
+   "start_s": 469.741,
+   "end_s": 474.707
+  },
+  {
+   "turn_index": 95,
+   "speaker": "Kofi",
+   "text": "Yes, the latency went crazy minutes before the errors did.",
+   "start_s": 475.793,
+   "end_s": 479.664
+  },
+  {
+   "turn_index": 96,
+   "speaker": "Ana",
+   "text": "I'll add the latency alert to our SLO dashboard work and own that one.",
+   "start_s": 480.605,
+   "end_s": 486.205
+  },
+  {
+   "turn_index": 97,
+   "speaker": "Kofi",
+   "text": "Someone should probably write up the unit conversion gotcha for the wiki too.",
+   "start_s": 487.214,
+   "end_s": 492.246
+  },
+  {
+   "turn_index": 98,
+   "speaker": "Ana",
+   "text": "We have a wiki page already, that's part of the problem.",
+   "start_s": 492.965,
+   "end_s": 497.365
+  },
+  {
+   "turn_index": 99,
+   "speaker": "Kofi",
+   "text": "Fair point.",
+   "start_s": 498.126,
+   "end_s": 498.901
+  },
+  {
+   "turn_index": 100,
+   "speaker": "Ana",
+   "text": "Do we need an exec summary for this, or is the doc enough?",
+   "start_s": 499.527,
+   "end_s": 504.727
+  },
+  {
+   "turn_index": 101,
+   "speaker": "Ben",
+   "text": "I'm just glad we got through it.",
+   "start_s": 504.983,
+   "end_s": 507.88
+  },
+  {
+   "turn_index": 102,
+   "speaker": "Ana",
+   "text": "Okay. I think we've got good owners. Thanks everyone, this was a really good review.",
+   "start_s": 508.95,
+   "end_s": 514.95
+  },
+  {
+   "turn_index": 103,
+   "speaker": "Mei",
+   "text": "Thanks, Ana.",
+   "start_s": 515.72,
+   "end_s": 516.47
+  },
+  {
+   "turn_index": 104,
+   "speaker": "Kofi",
+   "text": "Thanks all.",
+   "start_s": 516.87,
+   "end_s": 517.644
+  }
+ ]
+}
